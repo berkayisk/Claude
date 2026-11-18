@@ -8,7 +8,7 @@ Röportaj serisinin adı: **"Berkay Işık ile İLK AĞIZDAN"**
 | `berkay-isik-profil.png` | Sunucunun yuvarlak kesilmiş profil fotoğrafı (şeffaf arka plan). Abone Ol animasyonu, jenerik, bitiş ekranı için | 1254x1254 PNG, alfa kanallı |
 | `kanal-jenerigi-2sn.mp4` | Açılış jeneriği: "Sıfırdan / Satışa" yazısı + fotoğraf + YouTube butonu animasyonla gelir. "Az Sonra" fragmanından sonra kullanılır | 3840x2160, 30fps, 1.95 sn, sesli |
 | `bitis-ekrani-9sn.mp4` | Bitiş ekranı: "SıfırdanSatışa" logosu ve etkinlik kolajı. YouTube bitiş kartları bu sürede eklenir | 3840x2160, 30fps, 9.5 sn, sesli |
-| `ilk-agizdan-baslik-2sn.mov` | "İlk Ağızdan" başlık kartı (bu bölümün konuk + sunucu fotoğraflarıyla). Yeni bölümlerde aynı tasarımı yeni konukla Remotion'da yeniden üretmek gerekir | 1920x1080, 30fps, 2 sn, sessiz |
+| `ilk-agizdan-baslik-2sn.mov` | "İlk Ağızdan" **soru geçiş kartı**: her yeni sorudan önce girer (sert kesme + punch-in + whoosh efekti, crossfade ile geniş plana çıkış). Bu dosyada bu bölümün konuğu var; yeni bölümlerde aynı tasarım yeni konukla Remotion'da yeniden üretilir | 1920x1080, 30fps, 2 sn, sessiz |
 
 ## Başlık kartı tasarımı ("İlk Ağızdan")
 - Arka plan: koyu lacivert (`#0B1A33` civarı), köşelerde turuncu fırça darbeleri ve turuncu halftone (nokta) dokusu
