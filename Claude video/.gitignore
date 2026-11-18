@@ -8,3 +8,7 @@ kanal-referanslari/**/*.mov
 kanal-referanslari/**/*.mp4
 marka/**/*.mp4
 marka/**/*.mov
+projeler/*/calisma/*
+!projeler/*/calisma/*.py
+!projeler/*/calisma/transkript.txt
+!projeler/*/calisma/transkript.json

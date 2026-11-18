@@ -9,3 +9,4 @@ if (fs.existsSync(yerelChrome)) {
 
 Config.setVideoImageFormat("jpeg");
 Config.setOverwriteOutput(true);
+Config.setDelayRenderTimeoutInMilliseconds(120000);

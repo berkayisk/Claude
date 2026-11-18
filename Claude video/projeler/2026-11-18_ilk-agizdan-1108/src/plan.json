@@ -1,0 +1,376 @@
+{
+ "fps": 30,
+ "fragman": [
+  {
+   "bas": 544.95,
+   "son": 548.75,
+   "aci": "konuk"
+  },
+  {
+   "bas": 143.75,
+   "son": 152.1,
+   "aci": "konuk"
+  },
+  {
+   "bas": 580.0,
+   "son": 587.4,
+   "aci": "genis"
+  },
+  {
+   "bas": 299.75,
+   "son": 306.45,
+   "aci": "konuk"
+  },
+  {
+   "bas": 313.95,
+   "son": 317.7,
+   "aci": "genis"
+  }
+ ],
+ "cekimler": [
+  {
+   "bas": 0.0,
+   "son": 12.1,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 12.1,
+   "son": 18.62,
+   "aci": "genis"
+  },
+  {
+   "bas": 18.62,
+   "son": 30.74,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 30.74,
+   "son": 36.0,
+   "aci": "genis"
+  },
+  {
+   "bas": 36.0,
+   "son": 49.02,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 49.02,
+   "son": 54.07,
+   "aci": "genis"
+  },
+  {
+   "bas": 54.07,
+   "son": 56.07,
+   "aci": "genis"
+  },
+  {
+   "bas": 56.07,
+   "son": 69.76,
+   "aci": "konuk"
+  },
+  {
+   "bas": 69.76,
+   "son": 82.0,
+   "aci": "genis"
+  },
+  {
+   "bas": 82.0,
+   "son": 89.52,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 89.52,
+   "son": 102.84,
+   "aci": "genis"
+  },
+  {
+   "bas": 102.84,
+   "son": 112.15,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 112.15,
+   "son": 134.1,
+   "aci": "konuk"
+  },
+  {
+   "bas": 134.1,
+   "son": 140.14,
+   "aci": "genis"
+  },
+  {
+   "bas": 140.14,
+   "son": 157.58,
+   "aci": "konuk"
+  },
+  {
+   "bas": 157.58,
+   "son": 164.82,
+   "aci": "genis"
+  },
+  {
+   "bas": 164.82,
+   "son": 190.5,
+   "aci": "konuk"
+  },
+  {
+   "bas": 190.5,
+   "son": 196.74,
+   "aci": "genis"
+  },
+  {
+   "bas": 196.74,
+   "son": 210.84,
+   "aci": "konuk"
+  },
+  {
+   "bas": 210.84,
+   "son": 218.04,
+   "aci": "genis"
+  },
+  {
+   "bas": 218.04,
+   "son": 233.5,
+   "aci": "konuk"
+  },
+  {
+   "bas": 233.5,
+   "son": 240.6,
+   "aci": "genis"
+  },
+  {
+   "bas": 240.6,
+   "son": 255.48,
+   "aci": "konuk"
+  },
+  {
+   "bas": 255.48,
+   "son": 264.06,
+   "aci": "genis"
+  },
+  {
+   "bas": 264.06,
+   "son": 279.12,
+   "aci": "konuk"
+  },
+  {
+   "bas": 279.12,
+   "son": 285.28,
+   "aci": "genis"
+  },
+  {
+   "bas": 285.28,
+   "son": 299.82,
+   "aci": "konuk"
+  },
+  {
+   "bas": 299.82,
+   "son": 306.4,
+   "aci": "genis"
+  },
+  {
+   "bas": 306.4,
+   "son": 321.44,
+   "aci": "konuk"
+  },
+  {
+   "bas": 321.44,
+   "son": 328.82,
+   "aci": "genis"
+  },
+  {
+   "bas": 328.82,
+   "son": 344.0,
+   "aci": "konuk"
+  },
+  {
+   "bas": 344.0,
+   "son": 350.04,
+   "aci": "genis"
+  },
+  {
+   "bas": 350.04,
+   "son": 364.54,
+   "aci": "konuk"
+  },
+  {
+   "bas": 364.54,
+   "son": 371.36,
+   "aci": "genis"
+  },
+  {
+   "bas": 371.36,
+   "son": 385.46,
+   "aci": "konuk"
+  },
+  {
+   "bas": 385.46,
+   "son": 392.56,
+   "aci": "genis"
+  },
+  {
+   "bas": 392.56,
+   "son": 409.44,
+   "aci": "konuk"
+  },
+  {
+   "bas": 409.44,
+   "son": 419.0,
+   "aci": "genis"
+  },
+  {
+   "bas": 419.0,
+   "son": 433.44,
+   "aci": "konuk"
+  },
+  {
+   "bas": 433.44,
+   "son": 439.48,
+   "aci": "genis"
+  },
+  {
+   "bas": 439.48,
+   "son": 445.6,
+   "aci": "konuk"
+  },
+  {
+   "bas": 445.6,
+   "son": 457.84,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 457.84,
+   "son": 463.2,
+   "aci": "genis"
+  },
+  {
+   "bas": 463.2,
+   "son": 470.5,
+   "aci": "konuk"
+  },
+  {
+   "bas": 470.5,
+   "son": 488.3,
+   "aci": "genis"
+  },
+  {
+   "bas": 488.3,
+   "son": 503.42,
+   "aci": "konuk"
+  },
+  {
+   "bas": 503.42,
+   "son": 510.86,
+   "aci": "genis"
+  },
+  {
+   "bas": 510.86,
+   "son": 525.12,
+   "aci": "konuk"
+  },
+  {
+   "bas": 525.12,
+   "son": 533.14,
+   "aci": "genis"
+  },
+  {
+   "bas": 533.14,
+   "son": 548.62,
+   "aci": "konuk"
+  },
+  {
+   "bas": 548.62,
+   "son": 557.42,
+   "aci": "genis"
+  },
+  {
+   "bas": 557.42,
+   "son": 571.96,
+   "aci": "konuk"
+  },
+  {
+   "bas": 571.96,
+   "son": 579.92,
+   "aci": "genis"
+  },
+  {
+   "bas": 579.92,
+   "son": 594.74,
+   "aci": "konuk"
+  },
+  {
+   "bas": 594.74,
+   "son": 605.52,
+   "aci": "genis"
+  },
+  {
+   "bas": 605.52,
+   "son": 620.32,
+   "aci": "konuk"
+  },
+  {
+   "bas": 620.32,
+   "son": 629.7,
+   "aci": "genis"
+  },
+  {
+   "bas": 629.7,
+   "son": 642.4,
+   "aci": "genis"
+  },
+  {
+   "bas": 642.4,
+   "son": 656.42,
+   "aci": "konuk"
+  },
+  {
+   "bas": 656.42,
+   "son": 674.4,
+   "aci": "genis"
+  },
+  {
+   "bas": 674.4,
+   "son": 685.0,
+   "aci": "sunucu"
+  },
+  {
+   "bas": 685.0,
+   "son": 692.4,
+   "aci": "konuk"
+  },
+  {
+   "bas": 692.4,
+   "son": 701.6,
+   "aci": "sunucu"
+  }
+ ],
+ "kartlar": [
+  54.07,
+  89.52,
+  470.5,
+  629.7
+ ],
+ "altBant": {
+  "bas": 55.6,
+  "sure": 9.0,
+  "isim": "Kamer Değer",
+  "unvan": "Mağazan Olsun",
+  "rol": "Pazarlama Direktörü"
+ },
+ "aboneOl": {
+  "bas": 693.6,
+  "sure": 3.4
+ },
+ "instagram": {
+  "bas": 696.7,
+  "sure": 4.9,
+  "hesaplar": [
+   {
+    "kullanici": "sifirdansatisa",
+    "x": 1100,
+    "y": 760
+   }
+  ]
+ },
+ "son": 701.6
+}
