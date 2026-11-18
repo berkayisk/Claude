@@ -72,7 +72,7 @@ for k in kartlar:
 
 # kart sonrası ilk 2 sn kesin geniş, açılış 2.4 sn geniş
 for k in kartlar: cekimler = uygula_zorunlu(cekimler, k, k + 2.0, "genis")
-cekimler = uygula_zorunlu(cekimler, 0.0, 2.4, "genis")
+cekimler = uygula_zorunlu(cekimler, 0.0, 3.2, "genis")
 # 2.5 sn'den kısa parçaları komşusuna kat (sert, rahatsız edici kesmeleri önle)
 degisti = True
 while degisti:
