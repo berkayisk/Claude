@@ -56,4 +56,4 @@ Dosyalar: `parca1.mov` (5:00, videonun başı), `parca2.mov` (6:51, orta kısım
 - `InstagramEtiketi`
 - `BitisEkrani`
 
-> Not: Kanal jeneriği ve bitiş ekranı için sunucu fotoğrafı ve etkinlik fotoğrafları lazım. Gerektiğinde bu fotoğrafları ya da orijinal jenerik dosyasını iste.
+> Orijinal jenerik, bitiş ekranı, İlk Ağızdan başlık kartı ve sunucu fotoğrafı: `marka/sifirdan-satisa/` (bkz. MARKA.md). Jenerik ve bitiş ekranını yeniden üretme, orijinal dosyaları kullan.

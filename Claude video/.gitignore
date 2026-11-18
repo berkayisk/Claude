@@ -6,3 +6,5 @@ projeler/*/referanslar/*
 !projeler/*/*/.gitkeep
 kanal-referanslari/**/*.mov
 kanal-referanslari/**/*.mp4
+marka/**/*.mp4
+marka/**/*.mov

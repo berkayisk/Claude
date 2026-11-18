@@ -13,6 +13,7 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 Kullanıcının kendi kanal stili: `kanal-referanslari/yunus-emre-kocaoglu/STIL.md`
 Yeni videolarda, aksi söylenmedikçe bu stili (renkler, fontlar, "Az Sonra" fragmanı, alt bant, Abone Ol, bitiş ekranı) uygula.
 Örnek kareler: `kanal-referanslari/yunus-emre-kocaoglu/kareler/`
+Marka dosyaları (jenerik, bitiş ekranı, İlk Ağızdan kartı, sunucu fotoğrafı): `marka/sifirdan-satisa/` → `MARKA.md`
 
 ## Proje yapısı
 ```
