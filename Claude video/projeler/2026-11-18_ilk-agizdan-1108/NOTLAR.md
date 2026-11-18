@@ -17,3 +17,8 @@
 ## Açık sorular
 - Konuğun adının yazımı "Kamer Değer" doğru mu?
 - Konuğun Instagram hesabı (referansta iki etiket vardı)
+
+## Teslim
+- `ciktilar/Ilk-Agizdan_Kamer-Deger_FINAL_v3.mp4`: 1080p, 12:28 (22437 kare), -14.4 LUFS, video 3.8 Mbps, 361 MiB (sohbet yükleme sınırı 400 MiB)
+- Kart kaldırma, tam render yerine yamayla yapıldı: eski final [0,2571) + yeni render [2571,3064) + eski final [3120,son), ses baştan render edildi
+- Ders: iki Remotion render'ını aynı anda çalıştırma (bellek yetmiyor); ffmpeg'de aynı girişi iki trim dalına bölme (bellek patlıyor), parçaları ayrı dosyalara çıkarıp birleştir
