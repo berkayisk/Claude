@@ -140,8 +140,8 @@ export const Video: React.FC = () => {
             <Solma cikis={KART_CIKIS} sure={KART}>
               <IlkAgizdanKart konuk={staticFile("konuk_kontur.png")} sunucu={staticFile("sunucu_kontur.png")} />
             </Solma>
-            {/* kanal müziğinin sözsüz kısmı (jenerik sesi) + hafif whoosh */}
-            <Audio src={staticFile("kanal-jenerigi-2sn.mp4")} volume={(fr) => interpolate(fr, [KART - 10, KART], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+            {/* kanal müziğinin sözsüz kısmı (tam müzikte 5.19–7.35 sn) + hafif whoosh */}
+            <Audio src={staticFile("kart-muzigi-sozsuz.wav")} />
             <Audio src={staticFile("whoosh.wav")} volume={0.35} />
           </Sequence>
         );

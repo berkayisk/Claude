@@ -12,3 +12,4 @@ projeler/*/calisma/*
 !projeler/*/calisma/*.py
 !projeler/*/calisma/transkript.txt
 !projeler/*/calisma/transkript.json
+!marka/**/*.wav

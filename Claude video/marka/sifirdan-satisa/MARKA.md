@@ -10,6 +10,11 @@ Röportaj serisinin adı: **"Berkay Işık ile İLK AĞIZDAN"**
 | `bitis-ekrani-9sn.mp4` | Bitiş ekranı: "SıfırdanSatışa" logosu ve etkinlik kolajı. YouTube bitiş kartları bu sürede eklenir | 3840x2160, 30fps, 9.5 sn, sesli |
 | `ilk-agizdan-baslik-2sn.mov` | "İlk Ağızdan" **soru geçiş kartı**: her yeni sorudan önce girer (sert kesme + punch-in + whoosh efekti, crossfade ile geniş plana çıkış). Bu dosyada bu bölümün konuğu var; yeni bölümlerde aynı tasarım yeni konukla Remotion'da yeniden üretilir | 1920x1080, 30fps, 2 sn, sessiz |
 
+| `kanal-muzigi-tam.wav` | Kanal müziğinin tam hali (9.85 sn). **1.6–3.48 sn arası "Sıfırdan Satışa" sözlü kısım** | 44.1 kHz stereo WAV |
+| `kart-muzigi-sozsuz.wav` | İlk Ağızdan kartı için müzik: tam müzikte 5.19–7.35 sn (5.2 sn'deki vuruşla başlar, sözsüz) | 2.16 sn |
+
+> Not: Jenerik sesi (`kanal-jenerigi-2sn.mp4`) "Sıfırdan Satışa" sözünü içeriyor; kartta KULLANMA. Bitiş ekranı sesi = tam müziğin 0.4. saniyesinden itibaren.
+
 ## Başlık kartı tasarımı ("İlk Ağızdan")
 - Arka plan: koyu lacivert (`#0B1A33` civarı), köşelerde turuncu fırça darbeleri ve turuncu halftone (nokta) dokusu
 - Sol: konuk dekupe (kesilmiş) fotoğrafı, krem + turuncu dış kontur
