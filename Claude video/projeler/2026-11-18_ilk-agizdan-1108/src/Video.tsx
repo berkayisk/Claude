@@ -1,7 +1,7 @@
 import React from "react";
 import { AbsoluteFill, Audio, OffthreadVideo, Sequence, interpolate, staticFile, useCurrentFrame } from "remotion";
 import plan from "./plan.json";
-import { Vizor, AzSonraYazi, IsikGecisi } from "../../../bilesenler/AzSonra";
+import { AzSonraYazi, IsikGecisi } from "../../../bilesenler/AzSonra";
 import { AltBant } from "../../../bilesenler/AltBant";
 import { IlkAgizdanKart } from "../../../bilesenler/IlkAgizdanKart";
 import { AboneOl, InstagramEtiketi } from "../../../bilesenler/AboneOl";
@@ -28,11 +28,13 @@ const ROP_BAS = FRAGMAN + JENERIK - JENERIK_GECIS; // röportajın başladığı
 type Kosu = { kaynakBas: number; kaynakSon: number; tlBas: number };
 const kosular: Kosu[] = [];
 {
-  const sinirlar = [0, ...plan.kartlar, plan.son];
+  // her kart: cik = kartın girdiği kaynak an, gir = röportajın döndüğü kaynak an (arası atlanır)
+  const baslar = [0, ...plan.kartlar.map((k) => k.gir)];
+  const sonlar = [...plan.kartlar.map((k) => k.cik), plan.son];
   let tl = ROP_BAS;
-  for (let i = 0; i < sinirlar.length - 1; i++) {
-    const a = sinirlar[i];
-    const b = sinirlar[i + 1];
+  for (let i = 0; i < baslar.length; i++) {
+    const a = baslar[i];
+    const b = sonlar[i];
     kosular.push({ kaynakBas: a, kaynakSon: b, tlBas: tl });
     tl += f(b) - f(a);
     if (i < plan.kartlar.length) tl += KART - KART_CIKIS; // kart araya girer, son 7 karesi sonraki koşuyla örtüşür
@@ -71,7 +73,6 @@ const Fragman: React.FC = () => {
       })}
       {/* gerilim müziği (kodla üretildi: araclar/gerilim_muzigi.py) */}
       <Audio src={staticFile("gerilim.wav")} volume={0.28} />
-      <Vizor />
       <AzSonraYazi />
       {/* klipler arası ışık geçişleri */}
       {fragmanKareler.slice(0, -1).map((_, i) => {
@@ -94,15 +95,21 @@ const Roportaj: React.FC = () => (
         <Audio src={staticFile("genis.mp4")} startFrom={f(k.kaynakBas)} />
       </Sequence>
     ))}
-    {plan.cekimler.map((c, i) => {
-      const bas = kaynaktanTl(c.bas);
-      const sure = f(c.son) - f(c.bas);
-      return (
-        <Sequence key={`c${i}`} from={bas} durationInFrames={sure}>
-          <OffthreadVideo src={staticFile(KAYNAK[c.aci])} startFrom={f(c.bas)} muted />
-        </Sequence>
-      );
-    })}
+    {kosular.flatMap((k, j) =>
+      plan.cekimler
+        .filter((c) => c.son > k.kaynakBas && c.bas < k.kaynakSon) // kart aralarındaki atlanan kaynak çizilmez
+        .map((c, i) => {
+          const a = Math.max(c.bas, k.kaynakBas);
+          const b = Math.min(c.son, k.kaynakSon);
+          const sure = f(b) - f(a);
+          if (sure <= 0) return null;
+          return (
+            <Sequence key={`c${j}_${i}`} from={k.tlBas + f(a) - f(k.kaynakBas)} durationInFrames={sure}>
+              <OffthreadVideo src={staticFile(KAYNAK[c.aci])} startFrom={f(a)} muted />
+            </Sequence>
+          );
+        }),
+    )}
   </>
 );
 

@@ -73,25 +73,25 @@ export const Vizor: React.FC = () => {
 };
 
 // "AZ SONRA" yazısı: aşağıdan kayarak gelir
-export const AzSonraYazi: React.FC = () => {
+export const AzSonraYazi: React.FC<{ boyut?: number }> = ({ boyut = 130 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = spring({ frame, fps, config: { damping: 14, stiffness: 120 } });
-  const y = interpolate(s, [0, 1], [140, 0]);
+  const y = interpolate(s, [0, 1], [boyut * 0.7, 0]);
   const op = interpolate(frame, [0, 8], [0, 1], { extrapolateRight: "clamp" });
-  const golge = "6px 6px 0 rgba(0,0,0,0.55), 0 0 24px rgba(0,0,0,0.35)";
+  const golge = `${boyut * 0.03}px ${boyut * 0.03}px 0 rgba(0,0,0,0.55), 0 0 ${boyut * 0.12}px rgba(0,0,0,0.35)`;
   return (
-    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 150 }}>
+    <AbsoluteFill style={{ justifyContent: "flex-end", alignItems: "center", paddingBottom: 90 }}>
       <div
         style={{
           transform: `translateY(${y}px)`,
           opacity: op,
           fontFamily: FONT.baslik,
-          fontSize: 200,
+          fontSize: boyut,
           lineHeight: 1,
           letterSpacing: 2,
           display: "flex",
-          gap: 28,
+          gap: boyut * 0.14,
         }}
       >
         <span style={{ color: RENK.krem, textShadow: golge }}>AZ</span>

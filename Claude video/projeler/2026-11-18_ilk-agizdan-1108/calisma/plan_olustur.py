@@ -12,9 +12,13 @@ bloklar = [
     (642.4, 674.4, "K"), (674.4, 678.5, "S"), (678.5, 679.7, "K"), (679.7, 685.0, "S"), (685.0, 692.4, "K"), (692.4, SON, "S"),
 ]
 # Gülme anları -> geniş plan zorunlu
-genis_zorunlu = [(316.0, 318.3), (414.5, 419.0)]
-# Soru kartlarının girdiği kaynak zamanlar
-kartlar = [89.52, 470.5, 629.7]  # 54.07 (tanıyabilir miyiz) kullanıcı isteğiyle kaldırıldı
+genis_zorunlu = [(316.0, 318.3), (414.5, 419.0), (692.4, SON)]  # son: Abone Ol yüzü kapatmasın diye geniş
+# Soru kartları: (cik, gir) = kartın girdiği kaynak an, röportajın döndüğü kaynak an.
+# Aradaki kaynak atlanır. gir = soru başlangıcı (ses enerjisinden) - 0.23 sn, böylece kartın çıkış geçişi soruyla biter.
+# 54.07 (tanıyabilir miyiz) kullanıcı isteğiyle kaldırıldı. 470.47-471.10 ham çekimde eski kart + sessizlik var, atlanıyor.
+kart_ciftleri = [(89.52, 89.52), (470.40, 471.12), (629.60, 630.07)]
+kartlar = sorted({a for a, b in kart_ciftleri} | {b for a, b in kart_ciftleri})  # bölme noktaları
+kart_girisleri = [b for a, b in kart_ciftleri]
 
 # cümle sınırları (kesmeler buralara oturur)
 sinirlar = sorted({round(s["start"], 2) for s in d} | {round(s["end"], 2) for s in d})
@@ -71,7 +75,7 @@ for k in kartlar:
     cekimler = yeni
 
 # kart sonrası ilk 2 sn kesin geniş, açılış 2.4 sn geniş
-for k in kartlar: cekimler = uygula_zorunlu(cekimler, k, k + 2.0, "genis")
+for k in kart_girisleri: cekimler = uygula_zorunlu(cekimler, k, k + 2.0, "genis")
 cekimler = uygula_zorunlu(cekimler, 0.0, 3.2, "genis")
 # 2.5 sn'den kısa parçaları komşusuna kat (sert, rahatsız edici kesmeleri önle)
 degisti = True
@@ -80,9 +84,9 @@ while degisti:
     for i, (x, y, c) in enumerate(cekimler):
         if y - x < 2.5 and len(cekimler) > 1:
             j = i - 1 if i > 0 else i + 1
-            if any(abs(x - k) < 0.01 for k in kartlar) and i + 1 < len(cekimler): j = i + 1
+            if any(abs(x - k) < 0.01 for k in kart_girisleri) and i + 1 < len(cekimler): j = i + 1
             a2, b2, c2 = cekimler[j]
-            if j == i + 1 and any(abs(x - k) < 0.01 for k in kartlar): c2 = c  # kart sonrası açıyı koru (geniş)
+            if j == i + 1 and any(abs(x - k) < 0.01 for k in kart_girisleri): c2 = c  # kart sonrası açıyı koru (geniş)
             cekimler[j] = (min(a2, x), max(b2, y), c2); del cekimler[i]; degisti = True; break
 # kart zamanlarında son kez böl
 for k in kartlar:
@@ -108,7 +112,7 @@ plan = {
         {"bas": 313.95, "son": 317.70, "aci": "genis"},
     ],
     "cekimler": [{"bas": round(a, 3), "son": round(b, 3), "aci": c} for (a, b, c) in cekimler],
-    "kartlar": kartlar,
+    "kartlar": [{"cik": a, "gir": b} for a, b in kart_ciftleri],
     "altBant": {"bas": 55.6, "sure": 9.0, "isim": "Kamer Değer", "unvan": "Mağazan Olsun", "rol": "Pazarlama Direktörü"},
     "aboneOl": {"bas": 693.6, "sure": 3.4},
     "instagram": {"bas": 696.7, "sure": 4.9, "hesaplar": [{"kullanici": "sifirdansatisa", "x": 1100, "y": 760}]},
