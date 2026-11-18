@@ -12,7 +12,7 @@ bloklar = [
     (642.4, 674.4, "K"), (674.4, 678.5, "S"), (678.5, 679.7, "K"), (679.7, 685.0, "S"), (685.0, 692.4, "K"), (692.4, SON, "S"),
 ]
 # Gülme anları -> geniş plan zorunlu
-genis_zorunlu = [(316.0, 318.3), (414.5, 419.0), (692.4, SON)]  # son: Abone Ol yüzü kapatmasın diye geniş
+genis_zorunlu = [(316.0, 318.3), (414.5, 419.0)]
 # Soru kartları: (cik, gir) = kartın girdiği kaynak an, röportajın döndüğü kaynak an.
 # Aradaki kaynak atlanır. gir = soru başlangıcı (ses enerjisinden) - 0.23 sn, böylece kartın çıkış geçişi soruyla biter.
 # 54.07 (tanıyabilir miyiz) kullanıcı isteğiyle kaldırıldı. 470.47-471.10 ham çekimde eski kart + sessizlik var, atlanıyor.
@@ -65,6 +65,8 @@ def uygula_zorunlu(cek, a, b, aci):
         else: m.append(c)
     return m
 for (a, b) in genis_zorunlu: cekimler = uygula_zorunlu(cekimler, a, b, "genis")
+# kapanış (Abone Ol + Instagram): sunucu yakın plan, grafikler sol tarafta
+cekimler = uygula_zorunlu(cekimler, 692.4, SON, "sunucu")
 
 # kart sınırlarında çekimleri böl ki kart doğru yere girsin
 for k in kartlar:
@@ -114,8 +116,8 @@ plan = {
     "cekimler": [{"bas": round(a, 3), "son": round(b, 3), "aci": c} for (a, b, c) in cekimler],
     "kartlar": [{"cik": a, "gir": b} for a, b in kart_ciftleri],
     "altBant": {"bas": 55.6, "sure": 9.0, "isim": "Kamer Değer", "unvan": "Mağazan Olsun", "rol": "Pazarlama Direktörü"},
-    "aboneOl": {"bas": 693.6, "sure": 3.4},
-    "instagram": {"bas": 696.7, "sure": 4.9, "hesaplar": [{"kullanici": "sifirdansatisa", "x": 1100, "y": 760}]},
+    "aboneOl": {"bas": 693.6, "sure": 3.4, "x": 560, "y": 160},
+    "instagram": {"bas": 696.7, "sure": 4.9, "hesaplar": [{"kullanici": "sifirdansatisa", "x": 90, "y": 820}]},
     "son": SON,
 }
 json.dump(plan, open("src/plan.json", "w"), ensure_ascii=False, indent=1)

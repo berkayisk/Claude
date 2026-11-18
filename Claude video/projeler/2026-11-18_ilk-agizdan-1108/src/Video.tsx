@@ -156,7 +156,7 @@ export const Video: React.FC = () => {
 
       {/* 6) Abone Ol + Instagram */}
       <Sequence from={kaynaktanTl(plan.aboneOl.bas)} durationInFrames={f(plan.aboneOl.sure)}>
-        <AboneOl foto={staticFile("berkay-isik-profil.png")} sure={f(plan.aboneOl.sure)} />
+        <AboneOl foto={staticFile("berkay-isik-profil.png")} sure={f(plan.aboneOl.sure)} x={plan.aboneOl.x} y={plan.aboneOl.y} />
       </Sequence>
       <Sequence from={kaynaktanTl(plan.instagram.bas)} durationInFrames={f(plan.instagram.sure)}>
         <AbsoluteFill>

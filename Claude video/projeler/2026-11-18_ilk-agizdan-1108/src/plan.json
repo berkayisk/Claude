@@ -351,7 +351,7 @@
   {
    "bas": 692.4,
    "son": 701.6,
-   "aci": "genis"
+   "aci": "sunucu"
   }
  ],
  "kartlar": [
@@ -377,7 +377,9 @@
  },
  "aboneOl": {
   "bas": 693.6,
-  "sure": 3.4
+  "sure": 3.4,
+  "x": 560,
+  "y": 160
  },
  "instagram": {
   "bas": 696.7,
@@ -385,8 +387,8 @@
   "hesaplar": [
    {
     "kullanici": "sifirdansatisa",
-    "x": 1100,
-    "y": 760
+    "x": 90,
+    "y": 820
    }
   ]
  },

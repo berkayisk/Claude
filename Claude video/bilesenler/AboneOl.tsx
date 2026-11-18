@@ -2,8 +2,9 @@ import React from "react";
 import { AbsoluteFill, Img, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { RENK, FONT } from "./marka";
 
-// Üst ortada turuncu "▶ ABONE OL" butonu, üstünden sunucu fotoğrafı iner, butona "tıklanır"
-export const AboneOl: React.FC<{ foto: string; sure: number }> = ({ foto, sure }) => {
+// Turuncu "▶ ABONE OL" butonu, üstünden sunucu fotoğrafı iner, butona "tıklanır".
+// x: butonun yatay merkezi (varsayılan ekran ortası). Yakın planda konuşmacının olmadığı tarafa kaydır.
+export const AboneOl: React.FC<{ foto: string; sure: number; x?: number; y?: number }> = ({ foto, sure, x = 960, y = 120 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const giris = spring({ frame, fps, config: { damping: 12, stiffness: 140 } });
@@ -13,8 +14,8 @@ export const AboneOl: React.FC<{ foto: string; sure: number }> = ({ foto, sure }
   const cikis = interpolate(frame, [sure - 10, sure], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const olcek = giris * (1 - 0.08 * Math.sin(Math.min(tik, 1) * Math.PI));
   return (
-    <AbsoluteFill style={{ alignItems: "center", opacity: cikis }}>
-      <div style={{ position: "absolute", top: 120, display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <AbsoluteFill style={{ opacity: cikis }}>
+      <div style={{ position: "absolute", top: y, left: x, transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center" }}>
         <div style={{ height: 170, overflow: "hidden", display: "flex", alignItems: "flex-end" }}>
           <Img
             src={foto}
