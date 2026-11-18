@@ -1,0 +1,6 @@
+node_modules/
+# Büyük medya dosyaları git'e girmesin (klasör yapısı .gitkeep ile korunur)
+projeler/*/girdiler/*
+projeler/*/ciktilar/*
+projeler/*/referanslar/*
+!projeler/*/*/.gitkeep

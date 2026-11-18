@@ -1,0 +1,26 @@
+{
+  "name": "claude-video",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "yeni": "./scripts/yeni-proje.sh",
+    "render": "./scripts/render.sh",
+    "studio": "./scripts/studio.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@remotion/cli": "^4.0.545",
+    "@remotion/media-utils": "^4.0.545",
+    "@remotion/transitions": "^4.0.545",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.545"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^7.0.2"
+  },
+  "private": true
+}
