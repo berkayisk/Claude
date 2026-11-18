@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Img, interpolate, useCurrentFrame, Easing } from "remotion";
+import { AbsoluteFill, Img, interpolate, random, useCurrentFrame, Easing } from "remotion";
 import { RENK, FONT } from "./marka";
 
 // Kontur efekti: krem iç + turuncu dış çizgi (drop-shadow zinciri)
@@ -19,12 +19,14 @@ const FircaDarbesi: React.FC<{ style: React.CSSProperties; ters?: boolean }> = (
   </svg>
 );
 
-const Yarimton: React.FC<{ style: React.CSSProperties }> = ({ style }) => (
+const Yarimton: React.FC<{ style: React.CSSProperties; adim?: number }> = ({ style, adim = 0 }) => (
   <div
     style={{
       position: "absolute",
       backgroundImage: `radial-gradient(circle, ${RENK.turuncu} 38%, transparent 42%)`,
       backgroundSize: "26px 26px",
+      backgroundPosition: `${(adim * 7) % 26}px ${(adim * 5) % 26}px`,
+      opacity: 0.8 + 0.2 * random(`y${adim}${style.left ?? style.right}`),
       WebkitMaskImage: "radial-gradient(ellipse at center, black 10%, transparent 70%)",
       maskImage: "radial-gradient(ellipse at center, black 10%, transparent 70%)",
       ...style,
@@ -38,27 +40,34 @@ export const IlkAgizdanKart: React.FC<{ konuk: string; sunucu: string; sunucuAdi
   const olcek = interpolate(frame, [0, 5], [1.12, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
   const kisiFiltre = "drop-shadow(0 18px 30px rgba(0,0,0,0.5))"; // kontur PNG'de hazır (araclar/kontur.py)
   const golge = "5px 6px 0 rgba(0,0,0,0.75)";
+  // stop-motion "kaynama" animasyonu: saniyede 12 adım
+  const adim = Math.floor(frame / 2.5);
+  const r = (k: string, a: number) => (random(`${k}${adim}`) * 2 - 1) * a;
+  const nefes = Math.sin(frame / 9);
+  const tirnakSol = `translate(${r("tx1", 5)}px, ${r("ty1", 6)}px) rotate(${r("tr1", 5)}deg)`;
+  const tirnakSag = `translate(${r("tx2", 5)}px, ${r("ty2", 6)}px) rotate(${r("tr2", 5)}deg)`;
+  const baslik = `translateX(-20px) rotate(${-3 + r("br", 0.7)}deg) scale(${1 + r("bs", 0.012)})`;
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 40%, #12284a 0%, ${RENK.kartLacivert} 55%, #050d1c 100%)`, transform: `scale(${olcek})`, overflow: "hidden" }}>
       {/* doku */}
-      <AbsoluteFill style={{ opacity: 0.12, backgroundImage: "repeating-linear-gradient(115deg, rgba(255,255,255,0.15) 0 2px, transparent 2px 9px)" }} />
-      <Yarimton style={{ left: -60, top: 180, width: 520, height: 520 }} />
-      <Yarimton style={{ right: -40, top: -60, width: 600, height: 520 }} />
-      <Yarimton style={{ right: 80, bottom: -120, width: 460, height: 420 }} />
-      <FircaDarbesi style={{ left: -60, top: 330, width: 820, height: 560 }} />
-      <FircaDarbesi style={{ right: -80, top: 120, width: 820, height: 560 }} ters />
-      <FircaDarbesi style={{ right: -40, bottom: -160, width: 700, height: 480 }} ters />
+      <AbsoluteFill style={{ opacity: 0.12, backgroundImage: "repeating-linear-gradient(115deg, rgba(255,255,255,0.15) 0 2px, transparent 2px 9px)", backgroundPosition: `${adim * 3}px 0` }} />
+      <Yarimton style={{ left: -60, top: 180, width: 520, height: 520 }} adim={adim} />
+      <Yarimton style={{ right: -40, top: -60, width: 600, height: 520 }} adim={adim} />
+      <Yarimton style={{ right: 80, bottom: -120, width: 460, height: 420 }} adim={adim} />
+      <FircaDarbesi style={{ left: -60 + r("f1", 6), top: 330 + r("f1y", 4), width: 820, height: 560 }} />
+      <FircaDarbesi style={{ right: -80 + r("f2", 6), top: 120 + r("f2y", 4), width: 820, height: 560 }} ters />
+      <FircaDarbesi style={{ right: -40 + r("f3", 6), bottom: -160 + r("f3y", 4), width: 700, height: 480 }} ters />
 
       {/* kişiler */}
-      <Img src={konuk} style={{ position: "absolute", left: 20, bottom: -30, height: 960, filter: kisiFiltre }} />
-      <Img src={sunucu} style={{ position: "absolute", right: 10, bottom: -40, height: 900, filter: kisiFiltre }} />
+      <Img src={konuk} style={{ position: "absolute", left: 20, bottom: -30, height: 960, filter: kisiFiltre, transformOrigin: "50% 100%", transform: `scale(${1 + 0.008 * nefes}) rotate(${0.3 * nefes}deg)` }} />
+      <Img src={sunucu} style={{ position: "absolute", right: 10, bottom: -40, height: 900, filter: kisiFiltre, transformOrigin: "50% 100%", transform: `scale(${1 - 0.008 * nefes}) rotate(${-0.3 * nefes}deg)` }} />
 
       {/* tırnaklar */}
-      <div style={{ position: "absolute", left: 40, top: -30, fontFamily: FONT.serif, fontWeight: 700, fontStyle: "italic", fontSize: 330, color: RENK.krem, textShadow: golge }}>“</div>
-      <div style={{ position: "absolute", right: 60, top: 40, fontFamily: FONT.serif, fontWeight: 700, fontStyle: "italic", fontSize: 330, color: RENK.krem, textShadow: golge }}>”</div>
+      <div style={{ position: "absolute", left: 40, top: -30, fontFamily: FONT.serif, fontWeight: 700, fontStyle: "italic", fontSize: 330, color: RENK.krem, textShadow: golge, transform: tirnakSol }}>“</div>
+      <div style={{ position: "absolute", right: 60, top: 40, fontFamily: FONT.serif, fontWeight: 700, fontStyle: "italic", fontSize: 330, color: RENK.krem, textShadow: golge, transform: tirnakSag }}>”</div>
 
       {/* başlık */}
-      <div style={{ position: "absolute", left: 0, right: 0, top: 120, display: "flex", flexDirection: "column", alignItems: "center", transform: "translateX(-20px) rotate(-3deg)" }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: 120, display: "flex", flexDirection: "column", alignItems: "center", transform: baslik }}>
         <div style={{ fontFamily: FONT.serif, fontWeight: 700, fontStyle: "italic", fontSize: 76, color: RENK.krem, textShadow: golge }}>{sunucuAdi} ile</div>
         <svg width="520" height="26" viewBox="0 0 520 26" style={{ marginTop: -4 }}>
           <path d="M5 18 C120 6 300 4 515 10 L512 20 C300 16 140 18 8 24 Z" fill={RENK.turuncu} />

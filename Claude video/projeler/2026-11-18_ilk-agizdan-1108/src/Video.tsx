@@ -8,7 +8,7 @@ import { AboneOl, InstagramEtiketi } from "../../../bilesenler/AboneOl";
 
 const FPS = plan.fps;
 const f = (s: number) => Math.round(s * FPS);
-const KAYNAK: Record<string, string> = { genis: "genis.mp4", konuk: "konuk.mp4", sunucu: "sunucu.mp4" };
+const KAYNAK: Record<string, string> = { genis: "genis.mp4", konuk: "konuk160.mp4", sunucu: "sunucu160.mp4" }; // yakın planlar %160
 
 // Süreler (kare)
 const FLAS = 12; // ışık geçişi
@@ -69,6 +69,8 @@ const Fragman: React.FC = () => {
           </Sequence>
         );
       })}
+      {/* gerilim müziği (kodla üretildi: araclar/gerilim_muzigi.py) */}
+      <Audio src={staticFile("gerilim.wav")} volume={0.28} />
       <Vizor />
       <AzSonraYazi />
       {/* klipler arası ışık geçişleri */}
@@ -138,7 +140,9 @@ export const Video: React.FC = () => {
             <Solma cikis={KART_CIKIS} sure={KART}>
               <IlkAgizdanKart konuk={staticFile("konuk_kontur.png")} sunucu={staticFile("sunucu_kontur.png")} />
             </Solma>
-            <Audio src={staticFile("whoosh.wav")} volume={0.8} />
+            {/* kanal müziğinin sözsüz kısmı (jenerik sesi) + hafif whoosh */}
+            <Audio src={staticFile("kanal-jenerigi-2sn.mp4")} volume={(fr) => interpolate(fr, [KART - 10, KART], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" })} />
+            <Audio src={staticFile("whoosh.wav")} volume={0.35} />
           </Sequence>
         );
       })}
