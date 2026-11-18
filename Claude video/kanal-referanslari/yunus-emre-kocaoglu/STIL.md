@@ -27,10 +27,11 @@ Dosyalar: `parca1.mov` (5:00, videonun başı), `parca2.mov` (6:51, orta kısım
    - Satır 2: Unvan (krem, regular): "YTÜ'de Öğrenci"
    - Kısa turuncu çizgi + Satır 3 (turuncu, bold): "E-ticaret Mentörü"
    - Soldan kayarak girer, ~10 sn ekranda kalır.
-5. **"İlk Ağızdan" soru geçiş kartı:** Jenerikte DEĞİL, **her yeni sorudan önce** girer ve sorular arasında köprü kurar.
+5. **"İlk Ağızdan" soru geçiş kartı:** Jenerikte DEĞİL, **her ana sorudan önce** girer ve sorular arasında köprü kurar. Tanışma / ısınma sorularında ("biraz sizi tanıyabilir miyiz" gibi) kart KULLANILMAZ.
    - Örnekler: parça 1'de 1:09.6–1:11.7, parça 2'de 4:09.8–4:11.8
    - Süre: ~2 sn (kartın ekranda kalma süresi)
    - Giriş: Önceki planın son karesinde hafif zoom/hareket bulanıklığı, sonra **sert kesme**. Kart ilk karede biraz büyük gelip hemen normal boyuta oturur (punch-in/zoom-out vuruşu).
+   - Müzik: kanal müziğinin SÖZSÜZ kısmı (`marka/sifirdan-satisa/kart-muzigi-sozsuz.wav`). Jenerik sesinde "Sıfırdan Satışa" sözü var, kartta kullanma.
    - Giriş anında **vuruş/whoosh ses efekti** var (ses seviyesi -25 dB'den -8 dB'ye sıçrıyor). Kart dosyası sessiz, efekt ayrıca ekleniyor.
    - Çıkış: ~0.15–0.25 sn **çapraz geçiş (crossfade)** ile genellikle **geniş ikili plana** döner. Ardından sunucu yeni soruyu sorar.
 6. **Kapanış (~son 30 sn):**

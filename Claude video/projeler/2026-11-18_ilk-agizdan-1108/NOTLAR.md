@@ -9,7 +9,7 @@
 - Transkript: faster-whisper large-v3-turbo → `calisma/transkript.txt/json`
 - Plan: `calisma/plan_olustur.py` → `src/plan.json` (konuşmacı blokları elle etiketli; kamera açıları otomatik)
 - Az Sonra (30 sn): ısmarlama/cinayet (9:05) → satış dans gibidir (2:24) → duygularıyla satın alırlar (9:40) → "hangi oda?" (5:00) → "tuvalet" + kahkaha (5:14)
-- İlk Ağızdan kartları: 0:54.07 (tanıyabilir miyiz), 1:29.52 (1. soru), 7:50.5 (2. soru), 10:29.7 (3. soru)
+- İlk Ağızdan kartları: 1:29.52 (1. soru), 7:50.5 (2. soru), 10:29.7 (3. soru). Kural: kart sadece ANA sorulardan önce girer (tanışma sorusunda kart yok)
 - Alt bant: 0:55.6, 9 sn. Abone Ol: 11:33.6. Instagram (sifirdansatisa): 11:36.7
 - Ses efektleri kodla üretildi: `whoosh.wav` (kart), `flas.wav` (ışık geçişi)
 - Final ses: loudnorm -14 LUFS (render sonrası ffmpeg)

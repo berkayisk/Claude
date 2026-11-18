@@ -14,7 +14,7 @@ bloklar = [
 # Gülme anları -> geniş plan zorunlu
 genis_zorunlu = [(316.0, 318.3), (414.5, 419.0)]
 # Soru kartlarının girdiği kaynak zamanlar
-kartlar = [54.07, 89.52, 470.5, 629.7]
+kartlar = [89.52, 470.5, 629.7]  # 54.07 (tanıyabilir miyiz) kullanıcı isteğiyle kaldırıldı
 
 # cümle sınırları (kesmeler buralara oturur)
 sinirlar = sorted({round(s["start"], 2) for s in d} | {round(s["end"], 2) for s in d})
