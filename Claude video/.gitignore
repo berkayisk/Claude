@@ -4,3 +4,5 @@ projeler/*/girdiler/*
 projeler/*/ciktilar/*
 projeler/*/referanslar/*
 !projeler/*/*/.gitkeep
+kanal-referanslari/**/*.mov
+kanal-referanslari/**/*.mp4

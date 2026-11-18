@@ -9,6 +9,11 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 4. Sonuçlar → `ciktilar/`
 5. Kararları ve ayarları `NOTLAR.md` dosyasına yaz.
 
+## Kanal stili (ÖNEMLİ)
+Kullanıcının kendi kanal stili: `kanal-referanslari/yunus-emre-kocaoglu/STIL.md`
+Yeni videolarda, aksi söylenmedikçe bu stili (renkler, fontlar, "Az Sonra" fragmanı, alt bant, Abone Ol, bitiş ekranı) uygula.
+Örnek kareler: `kanal-referanslari/yunus-emre-kocaoglu/kareler/`
+
 ## Proje yapısı
 ```
 projeler/<proje>/
