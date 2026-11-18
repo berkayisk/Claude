@@ -22,3 +22,10 @@
 - `ciktilar/Ilk-Agizdan_Kamer-Deger_FINAL_v3.mp4`: 1080p, 12:28 (22437 kare), -14.4 LUFS, video 3.8 Mbps, 361 MiB (sohbet yükleme sınırı 400 MiB)
 - Kart kaldırma, tam render yerine yamayla yapıldı: eski final [0,2571) + yeni render [2571,3064) + eski final [3120,son), ses baştan render edildi
 - Ders: iki Remotion render'ını aynı anda çalıştırma (bellek yetmiyor); ffmpeg'de aynı girişi iki trim dalına bölme (bellek patlıyor), parçaları ayrı dosyalara çıkarıp birleştir
+
+## v4 (son teslim)
+- `ciktilar/Ilk-Agizdan_Kamer-Deger_FINAL_v4.mp4`: 22401 kare, -14.4 LUFS, 378 MB. Üretim: `calisma/final_uret.sh`
+- Ham çekimde 470.47–471.10 arası eski Yunus Emre kartı + dijital sessizlik vardı → atlandı
+- Kart zamanları ses enerjisinden: (çık, gir) = (89.52, 89.52), (470.40, 471.12), (629.60, 630.07); gir = soru başı − 0.23 sn
+- Fragmanda vizör yok, AZ SONRA 130 px
+- Kapanış sunucu yakın planda; Abone Ol x=560 (sol), Instagram sol alt

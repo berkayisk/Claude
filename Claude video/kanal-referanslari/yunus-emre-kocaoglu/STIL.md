@@ -64,3 +64,11 @@ Dosyalar: `parca1.mov` (5:00, videonun başı), `parca2.mov` (6:51, orta kısım
 - `BitisEkrani`
 
 > Orijinal jenerik, bitiş ekranı, İlk Ağızdan başlık kartı ve sunucu fotoğrafı: `marka/sifirdan-satisa/` (bkz. MARKA.md). Jenerik ve bitiş ekranını yeniden üretme, orijinal dosyaları kullan.
+
+## Kullanıcı tercihleri (ilk bölümden öğrenilenler)
+- Fragmanda kamera vizörü efekti KULLANMA; "AZ SONRA" yazısı ~130 px (büyük değil)
+- Fragmanda gerilim müziği olmalı (araclar/gerilim_muzigi.py)
+- Yakın planlar %160 (4K'dan 2400x1350 kesit)
+- Kartlar sadece ana sorulardan önce; kart çıkışı sorunun ilk hecesiyle bitmeli (ses enerjisinden ölç, kelime zamanları şaşabiliyor)
+- Kapanışta Abone Ol sunucu yakın planda, butonu sunucunun olmadığı tarafa koy (yüzü kapatmasın)
+- Ham çekimde eski kurgu kalıntısı olabilir (eski kart vb.): referans kartla kare benzerliği taraması yap
