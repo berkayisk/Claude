@@ -11,8 +11,10 @@ for i, p in enumerate(v["parcalar"]):
     n = p["src"].replace("_dikey.mp4", ""); a = p["bas"]; b = a + p["kare"] / 30
     once, ilk, son, sonra = db(n, a - 0.08, 0.08), db(n, a, 0.04), db(n, b - 0.04, 0.04), db(n, b, 0.08)
     isaret = []
-    if ilk > -32 or once > -34: isaret.append(f"BAŞ? (önce {once:.0f}, ilk {ilk:.0f})")
-    if son > -32 or sonra > -34: isaret.append(f"SON? (son {son:.0f}, sonra {sonra:.0f})")
+    # sıkı kurgu: sadece ATILAN tarafta konuşma varsa sorun (kelime kırpılmış ya da önceki denemenin kalıntısı)
+    once, sonra = db(n, a - 0.03, 0.03), db(n, b, 0.03)
+    if once > -30: isaret.append(f"BAŞ KIRPIK? (atılan taraf {once:.0f} dB)")
+    if sonra > -30: isaret.append(f"SON KIRPIK? (atılan taraf {sonra:.0f} dB)")
     sorun += bool(isaret)
     kel = " ".join(w["w"] for w in v["altyazi"] if tl <= w["s"] < tl + p["kare"] / 30)
     print(f"{i:2d} {tl:5.2f}s {n} {a:6.2f}-{b:6.2f} | {kel[:60]:60s} {' '.join(isaret)}")

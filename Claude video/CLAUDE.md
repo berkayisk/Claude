@@ -42,6 +42,6 @@ projeler/<proje>/
 
 ## Reels / talking-head kuralları (öğrenildi)
 - Ses temizliği: Demucs `htdemucs_ft --two-stems=vocals` → highpass 80, afftdn, hafif agate, compressor, presence EQ (`projeler/2026-11-19_reels-1` örneği). Videoyu `muted`, temiz sesi ayrı `Audio` olarak çal.
-- Kesmeler: temiz ses üzerinde Silero VAD (faster_whisper.vad); sadece >=0.35 sn boşluk kes; önce 0.10 / arka 0.16 sn pay; parça sonu ses sönene kadar (-34 dB) uzar; kelimesiz parça at; birim sınırları (önceki deneme, "evet/dur/kayıtta mı") kesin alt/üst sınır. Her render öncesi `calisma/kesme_kontrol.py` ile doğrula.
+- Kesmeler (kullanıcının kendi kurgusundan ölçüldü): cümle arası boşluk ~0.07 sn (en fazla 0.10). Temiz seste -38 dB altı >=0.12 sn her sessizliği kes, iki yanda 0.035 sn bırak; kelimesiz bölgeleri (nefes, ıı) at; yarıda kalan denemeleri HARIC ile çıkar (whisper bunları birleştirebilir, kelime kelime kontrol et); kare yuvarlama: baş floor, son ceil. Açı değişimi sadece konu değişince. Final tempo 1.1x (setpts=PTS/1.1 + atempo=1.1). `calisma/kesme_kontrol.py` ile doğrula (sadece atılan tarafta ses varsa sorun).
 - Kartlarda `backdrop-filter` KULLANMA (render'da titriyor) → düz yarı saydam zemin.
 - Ses efektleri: `marka/sfx/` (araclar/sfx_uret.py), grafik türüne göre giriş/çıkış.

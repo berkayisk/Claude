@@ -9,6 +9,10 @@ KEL["IMG_6183_son"] = [{"w": w, "s": s, "e": e} for w, s, e in [
     ("Cebinde", 18.95, 19.36), ("500", 19.36, 19.62), ("bin", 19.62, 19.88), ("1", 19.88, 20.02), ("milyon", 20.02, 20.30),
     ("sermayen", 20.30, 20.78), ("yoksa", 20.78, 21.14), ("geleneksel", 21.14, 21.82), ("modelle", 21.82, 22.12),
     ("de", 22.12, 22.24), ("işin", 22.24, 22.50), ("yok.", 22.50, 22.70)]]
+# 6187: ilk "Klasik trop..." denemesi atılır, ikinci denemenin kelimeleri (temiz sesten yeniden çözümlendi)
+KEL["IMG_6187"] = [w for w in KEL["IMG_6187"] if not (2.3 <= w["s"] < 4.75)] + [
+    {"w": "klasik", "s": 3.90, "e": 4.20}, {"w": "dropshipping'de", "s": 4.20, "e": 4.80}]
+KEL["IMG_6187"].sort(key=lambda w: w["s"])
 # "E" + "-ticaret" gibi bölünmüş kelimeleri birleştir
 for k, ws in KEL.items():
     m = []
@@ -57,7 +61,7 @@ BIRIMLER = [
     ("m3b", "IMG_6188", "IMG_6188", 10.4, 12.6),
     ("m3c", "IMG_6188", "IMG_6188", 19.5, 21.6),
     ("m3d", "IMG_6188", "IMG_6188", 30.4, 33.8),
-    ("sonuc", "IMG_6189", "IMG_6189", 0.0, 4.62),  # 4.96 sonrası nefes
+    ("sonuc", "IMG_6189", "IMG_6189", 0.0, 5.3),
     ("cagri", "IMG_6190", "IMG_6190", 0.10, 6.3),
 ]
 
@@ -70,26 +74,39 @@ def konusma_bolgeleri(n):
         VAD[n] = [(t["start"] / 16000, t["end"] / 16000) for t in ts]
     return VAD[n]
 
-ON_PAY, ARKA_PAY, MIN_BOSLUK = 0.10, 0.16, 0.35
-def alt_araliklar(n, a, b, ks):
-    """Silero VAD bölgeleri; sadece >=0.35 sn boşlukları kes, kelimelerin önüne 0.10 arkasına 0.16 sn pay bırak"""
-    bolg = [(max(s_, a - 0.05), min(e_, b + 0.05)) for s_, e_ in konusma_bolgeleri(n) if e_ > a + 0.05 and s_ < b - 0.05]
-    # kelimeler de konuşma sayılır (VAD kaçırırsa)
-    for w in ks: bolg.append((w["s"], w["e"]))
-    bolg.sort(); m = []
+# Sıkı kurgu (kullanıcının kendi kurgusundan ölçüldü: cümle arası boşluk ort. 0.07 sn, en fazla 0.10 sn)
+SES_ESIK = -38        # temiz seste bunun altı sessizlik
+MIN_KES = 0.12        # bundan uzun her sessizlik kesilir
+KALAN = 0.035         # kesimin iki yanında kalan sessizlik (toplam ~0.07 sn)
+HARIC = {"m2a": [(2.40, 3.86)], "sonuc": [(4.86, 6.0)]}   # sonuc: "seçeceksin" sonrası nefes   # yarıda kalan deneme: "Klasik trop..." (3.90'da baştan alınıyor)
+
+def alt_araliklar(n, a, b, ks, anahtar=""):
+    ts = np.arange(a, b, 0.01)
+    konusma = np.array([db(n, t, 0.01) > SES_ESIK for t in ts])
+    for x, y in HARIC.get(anahtar, []):
+        konusma[(ts >= x) & (ts < y)] = False
+    # konuşma bölgeleri
+    bolg = []; i = 0
+    while i < len(ts):
+        if konusma[i]:
+            j = i
+            while j < len(ts) and konusma[j]: j += 1
+            bolg.append([ts[i], ts[j - 1] + 0.01]); i = j
+        else: i += 1
+    # 0.12 sn'den kısa sessizlikleri birleştir (kelime içi duraklar, patlamalı ünsüzler)
+    m = []
     for x, y in bolg:
-        if m and x - m[-1][1] < MIN_BOSLUK: m[-1] = (m[-1][0], max(m[-1][1], y))
-        else: m.append((x, y))
+        if m and x - m[-1][1] < MIN_KES: m[-1][1] = y
+        else: m.append([x, y])
+    # içinde kelime olmayan bölgeler (nefes, "ıı") atılır
+    def kelimeli(x, y): return any(x - 0.05 <= (w["s"] + w["e"]) / 2 <= y + 0.05 or (w["s"] < y and w["e"] > x and min(y, w["e"]) - max(x, w["s"]) > 0.08) for w in ks)
+    m = [(x, y) for x, y in m if kelimeli(x, y)]
     out = []
     for x, y in m:
-        x2 = max(a, x - ON_PAY)              # güvenli alt sınırı asla aşma (önceki deneme / çekim öncesi ses)
-        y2 = min(b + 0.30, y + ARKA_PAY)
-        while y2 < b + 0.30 and db(n, y2, 0.03) > -34: y2 += 0.01   # ses sönene kadar uzat (nefesi katma)
+        x2, y2 = max(a, x - KALAN), min(b + 0.2, y + KALAN)
         if out and x2 <= out[-1][1]: out[-1] = (out[-1][0], y2)
         else: out.append((x2, y2))
-    # içinde kelime olmayan parçaları at (nefes, "ıı", "evet" gibi)
-    out = [(x, y) for x, y in out if y - x >= MIN_PARCA and any(x <= (w["s"] + w["e"]) / 2 < y for w in ks)]
-    return out
+    return [(x, y) for x, y in out if y - x >= 0.15]
 
 parcalar, altyazi, birim_zaman, tl, zs = [], [], {}, 0.0, 0
 for (anahtar, n, kk, a, b) in BIRIMLER:
@@ -97,17 +114,23 @@ for (anahtar, n, kk, a, b) in BIRIMLER:
     ks = [kelime_duzelt(n, w) for w in KEL[kk] if a2 <= (w["s"] + w["e"]) / 2 < b2]
     if anahtar == "m3c":  # "Ürüne" kelimesi uzun ölçülmüş
         ks = [kelime_duzelt(n, w) for w in ks]
-    araliklar = alt_araliklar(n, a2, b2, ks)
+    araliklar = alt_araliklar(n, a2, b2, ks, anahtar)
     birim_bas = tl
+    # her kelime en çok örtüştüğü TEK parçaya atanır (örtüşme yoksa en yakına)
+    hedef = []
+    for w in ks:
+        ort = [min(y, w["e"]) - max(x, w["s"]) for (x, y) in araliklar]
+        if ort and max(ort) > 0: hedef.append(int(np.argmax(ort)))
+        elif araliklar:
+            orta = (w["s"] + w["e"]) / 2; hedef.append(int(np.argmin([min(abs(orta - x), abs(orta - y)) for x, y in araliklar])))
+        else: hedef.append(-1)
     for j, (x, y) in enumerate(araliklar):
-        fa, fb = round(x * FPS), round(y * FPS)
+        fa, fb = int(np.floor(x * FPS)), int(np.ceil(y * FPS))   # baş aşağı, son yukarı: sesi asla kırpma
         if fb - fa < 6: continue
         bas, son = fa / FPS, fb / FPS
-        onceki_son = araliklar[j - 1][1] if j else -1
-        for w in ks:
-            orta = (w["s"] + w["e"]) / 2
-            if bas <= orta < son or (onceki_son <= orta < bas and w["e"] > bas):
-                s2 = max(bas, w["s"]) - bas + tl; e2 = min(son, w["e"]) - bas + tl
+        for w, h in zip(ks, hedef):
+            if h == j:
+                s2 = min(max(bas, w["s"]), son - 0.1) - bas + tl; e2 = min(son, w["e"]) - bas + tl
                 altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "birim": anahtar})
         parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_ses.wav", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
         tl += (fb - fa) / FPS; zs += 1
