@@ -1,4 +1,5 @@
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
+import { ThumbA, ThumbB, ThumbC } from "./Thumbnails";
 import { Video, TOPLAM_KARE } from "./Video";
 import { SHORTLAR, ShortKomp } from "./Shorts";
 import { KartTest, OverlayTest, AzSonraTest, InstaTest } from "./Test";
@@ -9,6 +10,9 @@ export const RemotionRoot: React.FC = () => (
     {SHORTLAR.map((sh, i) => (
       <Composition key={sh.id} id={sh.id} component={ShortKomp} defaultProps={{ i }} durationInFrames={sh.toplamKare} fps={30} width={1080} height={1920} />
     ))}
+    <Still id="Thumb-A-Duygusal" component={ThumbA} width={1920} height={1080} />
+    <Still id="Thumb-B-Tuvalet" component={ThumbB} width={1920} height={1080} />
+    <Still id="Thumb-C-TurkAmerikan" component={ThumbC} width={1920} height={1080} />
     <Composition id="KartTest" component={KartTest} durationInFrames={60} fps={30} width={1920} height={1080} />
     <Composition id="OverlayTest" component={OverlayTest} durationInFrames={120} fps={30} width={1920} height={1080} />
     <Composition id="AzSonraTest" component={AzSonraTest} durationInFrames={90} fps={30} width={1920} height={1080} />

@@ -35,3 +35,8 @@
 - Dikey kaynak: 4K'dan crop 1215x2160 (konuk x=350, sunucu x=2560) → konuk_dikey.mp4 / sunucu_dikey.mp4
 - Short1-Tuvalet 45 sn, Short2-Dans 28 sn, Short3-TurkAmerikan 44 sn, Short4-Duygusal 42 sn; hepsi Drive'a yüklendi
 - Müzik: `araclar/arka_muzik.py` (lo-fi, 88 bpm), volume 0.1
+
+## Thumbnail (2026-11-19)
+- Bileşen: `bilesenler/Thumbnail.tsx`; projede `src/Thumbnails.tsx` (Still: Thumb-A/B/C)
+- Kişiler: konuk 118 sn (kahkaha), sunucu 317.5 sn (kahkaha) → dekupe + kontur (`girdiler/thumb_*.png`)
+- A: %95 DUYGUSALIZ, B: MÜŞTERİ "TUVALET" DEDİ, C: TÜRKLER vs AMERİKALILAR. JPG 1920x1080 ~390 KB, Drive'a yüklendi
