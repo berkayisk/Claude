@@ -10,6 +10,8 @@
 ## Açıklama
 Satış eğitimle mi öğrenilir? Türk müşteri ile Amerikalı müşteri arasındaki fark ne? Ve neden satın alma kararlarımızın %95'i duygusal?
 
+🔗 Tüm linklerimiz: https://linktr.ee/sifirdansatisa
+
 İlk Ağızdan'ın bu bölümünde Mağazan Olsun Pazarlama Direktörü Kamer Değer ile satışı konuştuk. Holdinglerde yöneticilik, yurt dışında satış deneyimi ve yüzlerce eğitimden süzülmüş tecrübeler… Emlakçı arkadaşının "tuvalet" hikâyesini kaçırmayın!
 
 ⏱️ Bölümler
@@ -24,6 +26,7 @@ Satış eğitimle mi öğrenilir? Türk müşteri ile Amerikalı müşteri aras�
 🎤 Sunucu: Berkay Işık
 
 📲 Instagram: @sifirdansatisa
+🔗 Tüm linkler: https://linktr.ee/sifirdansatisa
 🔔 E-ticaret ve girişimcilik üzerine yeni bölümler için kanala abone olmayı unutmayın!
 
 #satış #eticaret #girişimcilik #pazarlama #nöropazarlama #satışteknikleri #mağazanolsun #ilkağızdan #sıfırdansatışa
