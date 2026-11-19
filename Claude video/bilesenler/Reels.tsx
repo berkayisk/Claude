@@ -158,7 +158,7 @@ const Baslik: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
     <AbsoluteFill style={{ opacity: cik }}>
       <div style={{ position: "absolute", top: KART_Y + 40, left: 60, right: 60, display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
         <div style={{ overflow: "hidden" }}>
-          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 74, color: "white", letterSpacing: -1.5, textAlign: "center", textShadow: "0 6px 24px rgba(0,0,0,0.6)", transform: `translateY(${interpolate(g1, [0, 1], [90, 0])}px)` }}>{o.satir1}</div>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: o.buyuk ? 130 : 74, color: "white", letterSpacing: o.buyuk ? 2 : -1.5, textAlign: "center", textShadow: "0 6px 24px rgba(0,0,0,0.6)", transform: `translateY(${interpolate(g1, [0, 1], [90, 0])}px)` }}>{o.satir1}</div>
         </div>
         <div style={{ fontFamily: INTER, fontWeight: 600, fontStyle: "italic", fontSize: 50, color: "white", background: RENK.turuncu, borderRadius: 14, padding: "4px 22px", opacity: g2, transform: `scale(${interpolate(g2, [0, 1], [0.6, 1])}) rotate(-2deg)` }}>{o.satir2}</div>
       </div>
@@ -365,6 +365,147 @@ const TakipEt: React.FC<{ o: Olay; sure: number; foto: string; kanal: string }> 
   );
 };
 
+
+// ---------------- Reklam / etkinlik grafikleri ----------------
+const SoruCevap: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const cik = useCikis(sure);
+  const cevapK = o.cevap ? Math.round((o.cevap - o.s) * 30) : 99999;
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 30, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: cik }}>
+      {o.ogeler.map((og: any[], i: number) => {
+        const gk = Math.round((og[1] - o.s) * 30);
+        const g = spring({ frame: f - gk, fps: 30, config: { damping: 12, stiffness: 190 } });
+        const c = spring({ frame: f - cevapK - i * 5, fps: 30, config: { damping: 11, stiffness: 220 } });
+        const cevaplandi = f >= cevapK + i * 5;
+        return (
+          <div key={i} style={{ ...cam, borderRadius: 24, padding: "14px 30px 14px 16px", display: "flex", alignItems: "center", gap: 18, opacity: g, transform: `translateX(${interpolate(g, [0, 1], [i % 2 ? 260 : -260, 0])}px) scale(${1 + 0.05 * Math.sin(Math.min(c, 1) * Math.PI)})`, border: cevaplandi ? `2px solid ${YESIL}` : cam.border }}>
+            <div style={{ width: 56, height: 56, borderRadius: 28, background: cevaplandi ? YESIL : "rgba(255,77,77,0.9)", color: "white", fontFamily: INTER, fontWeight: 800, fontSize: 34, display: "flex", alignItems: "center", justifyContent: "center" }}>{cevaplandi ? "✓" : "?"}</div>
+            <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 46, color: "white" }}>{og[0]}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const Rozet: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const g = useGiris(0, 14);
+  const cik = useCikis(sure, 8);
+  return (
+    <div style={{ position: "absolute", top: 205, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik), transform: `translateY(${interpolate(g, [0, 1], [-40, 0])}px)` }}>
+      <div style={{ ...cam, borderRadius: 50, padding: "12px 32px", fontFamily: `${INTER}, ${EMOJI}`, fontWeight: 800, fontSize: 34, color: "white", letterSpacing: 2, border: `2px solid ${RENK.turuncu}` }}>{o.metin}</div>
+    </div>
+  );
+};
+
+const Etkinlik: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const g = useGiris(0, 13);
+  const cik = useCikis(sure);
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 40, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
+      <div style={{ ...cam, padding: "26px 40px", minWidth: 780, display: "flex", flexDirection: "column", gap: 14, transform: `scale(${interpolate(g, [0, 1], [0.85, 1])})`, borderTop: `6px solid ${RENK.turuncu}` }}>
+        {o.satirlar.map((st: any[], i: number) => {
+          const gk = Math.round((st[2] - o.s) * 30);
+          const gi = spring({ frame: f - gk, fps: 30, config: { damping: 12, stiffness: 200 } });
+          return (
+            <div key={i} style={{ display: "flex", alignItems: "center", gap: 20, opacity: gi, transform: `translateX(${interpolate(gi, [0, 1], [-50, 0])}px)` }}>
+              <div style={{ fontSize: 56, fontFamily: EMOJI, width: 70, textAlign: "center" }}>{st[0]}</div>
+              <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 54, color: "white", letterSpacing: -0.5 }}>{st[1]}</div>
+            </div>
+          );
+        })}
+        {o.alt ? <div style={{ marginLeft: 90, fontFamily: INTER, fontWeight: 600, fontSize: 36, color: RENK.turuncu, opacity: interpolate(f, [30, 40], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>{o.alt}</div> : null}
+      </div>
+    </div>
+  );
+};
+
+const BRollKirlilik: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const carpi = Math.round(sure * 0.6);
+  const cg = spring({ frame: f - carpi, fps: 30, config: { damping: 9, stiffness: 200 } });
+  const yer = [[90, 380, -6], [420, 560, 5], [120, 760, 4], [460, 940, -5], [200, 1120, 3]];
+  return (
+    <BRollZemin sure={sure}>
+      <div style={{ position: "absolute", top: 230, left: 0, right: 0, textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 64, color: "white", letterSpacing: -1 }}>BİLGİ KİRLİLİĞİ</div>
+      {o.basliklar.map((b: string, i: number) => {
+        const g = spring({ frame: f - i * 3, fps: 30, config: { damping: 11, stiffness: 180 } });
+        const [x, y, r] = yer[i % yer.length];
+        return (
+          <div key={i} style={{ position: "absolute", left: x, top: y, width: 560, display: "flex", alignItems: "center", gap: 14, background: "rgba(255,255,255,0.95)", borderRadius: 22, padding: "16px 20px", boxShadow: "0 14px 40px rgba(0,0,0,0.45)", transform: `rotate(${r}deg) scale(${interpolate(g, [0, 1], [0.3, 1])})`, opacity: g * (f >= carpi ? 0.55 : 1), filter: f >= carpi ? "grayscale(1)" : "none" }}>
+            <div style={{ width: 54, height: 54, borderRadius: 27, background: "linear-gradient(135deg,#F58529,#DD2A7B)" }} />
+            <div style={{ fontFamily: `${INTER}, ${EMOJI}`, fontWeight: 800, fontSize: 34, color: "#111" }}>{b}</div>
+          </div>
+        );
+      })}
+      {f >= carpi && <div style={{ position: "absolute", left: 0, right: 0, top: 720, display: "flex", justifyContent: "center", transform: `scale(${interpolate(cg, [0, 1], [3, 1])}) rotate(-8deg)`, opacity: cg }}><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 260, color: KIRMIZI, textShadow: "0 10px 40px rgba(0,0,0,0.6)" }}>✕</div></div>}
+    </BRollZemin>
+  );
+};
+
+const Davetiye: React.FC<{ o: Olay; sure: number }> = ({ sure }) => {
+  const f = useCurrentFrame();
+  const g = useGiris(0, 12);
+  const cik = useCikis(sure);
+  const damgaK = 16;
+  const dg = spring({ frame: f - damgaK, fps: 30, config: { damping: 9, stiffness: 200 } });
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 20, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
+      <div style={{ position: "relative", width: 800, height: 280, borderRadius: 30, background: `linear-gradient(135deg, ${RENK.turuncu} 0%, #c94f00 100%)`, display: "flex", alignItems: "center", boxShadow: "0 20px 50px rgba(0,0,0,0.5)", transform: `rotate(${interpolate(g, [0, 1], [-12, -3])}deg) scale(${interpolate(g, [0, 1], [0.6, 1])})` }}>
+        <div style={{ width: 210, height: "100%", borderRight: "4px dashed rgba(255,255,255,0.6)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 120, fontFamily: EMOJI }}>🎟️</div>
+        <div style={{ paddingLeft: 34 }}>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, letterSpacing: 6, color: "rgba(255,255,255,0.85)" }}>DAVETLİSİN</div>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 64, color: "white", letterSpacing: -1, lineHeight: 1.05 }}>Mağazanolsun<br />Eskişehir</div>
+        </div>
+        {f >= damgaK && <div style={{ position: "absolute", right: -30, bottom: -40, transform: `scale(${interpolate(dg, [0, 1], [2.5, 1])}) rotate(-12deg)`, opacity: dg, fontFamily: INTER, fontWeight: 800, fontSize: 46, color: YESIL, background: "white", border: `6px solid ${YESIL}`, borderRadius: 16, padding: "6px 18px", boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>KATILIM ÜCRETSİZ</div>}
+      </div>
+    </div>
+  );
+};
+
+const Cagri2: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const g = useGiris(0, 13);
+  const cik = useCikis(sure);
+  const yk = Math.round((o.yorum_t - o.s) * 30);
+  const yg = spring({ frame: f - yk + 6, fps: 30, config: { damping: 12, stiffness: 190 } });
+  const yazi = "Eskişehir";
+  const harf = Math.max(0, Math.min(yazi.length, Math.floor((f - yk + 4) / 1.6)));
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 40, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 18, opacity: cik }}>
+      <div style={{ ...cam, borderRadius: 60, padding: "16px 36px", display: "flex", alignItems: "center", gap: 16, opacity: g, transform: `scale(${interpolate(g, [0, 1], [0.6, 1])})`, background: RENK.turuncu, border: "2px solid rgba(255,255,255,0.4)" }}>
+        <span style={{ fontSize: 50, fontFamily: EMOJI }}>💬</span>
+        <span style={{ fontFamily: INTER, fontWeight: 800, fontSize: 46, color: "white" }}>Bana mesaj at</span>
+      </div>
+      <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 32, color: "rgba(255,255,255,0.8)", letterSpacing: 4, opacity: yg }}>VEYA</div>
+      <div style={{ width: 820, display: "flex", alignItems: "center", gap: 18, background: "rgba(255,255,255,0.96)", borderRadius: 26, padding: "16px 22px", boxShadow: "0 14px 40px rgba(0,0,0,0.35)", opacity: yg, transform: `translateY(${interpolate(yg, [0, 1], [60, 0])}px)` }}>
+        <div style={{ width: 70, height: 70, borderRadius: 35, background: "linear-gradient(135deg,#4F5BD5,#962FBF)", color: "white", fontFamily: INTER, fontWeight: 800, fontSize: 30, display: "flex", alignItems: "center", justifyContent: "center" }}>S</div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 28, color: "#111" }}>sen <span style={{ fontWeight: 400, color: "#888", fontSize: 22 }}>· şimdi</span></div>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 44, color: "#111" }}>{yazi.slice(0, harf)}<span style={{ opacity: Math.floor(f / 8) % 2 ? 1 : 0, color: RENK.turuncu }}>|</span></div>
+        </div>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, color: harf >= yazi.length ? "#3897F0" : "#bbb" }}>Paylaş</div>
+      </div>
+    </div>
+  );
+};
+
+const KapanisKarti: React.FC<{ o: Olay; sure: number }> = ({ sure }) => {
+  const g = useGiris(0, 12);
+  const cik = useCikis(sure, 4);
+  return (
+    <div style={{ position: "absolute", top: KART_Y + 50, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
+      <div style={{ ...cam, padding: "22px 36px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, transform: `scale(${interpolate(g, [0, 1], [0.8, 1])})`, borderTop: `6px solid ${RENK.turuncu}` }}>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 56, color: "white" }}>28 Kasım · 14.00</div>
+        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 34, color: "rgba(255,255,255,0.85)" }}>Taşbaşı Kültür Merkezi · Odunpazarı</div>
+        <div style={{ marginTop: 8, fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "white", background: YESIL, borderRadius: 12, padding: "4px 18px" }}>KATILIM ÜCRETSİZ</div>
+      </div>
+    </div>
+  );
+};
+
 const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
   const sure = Math.max(1, Math.round((o.son - o.s) * 30));
   const props = { o, sure };
@@ -382,6 +523,13 @@ const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "takipet": return <TakipEt {...props} foto={k.foto} kanal={k.kanal ?? "Sıfırdan Satışa"} />;
     case "broll_stok": return <BRollStok {...props} />;
     case "broll_dropship": return <BRollDropship {...props} />;
+    case "sorucevap": return <SoruCevap {...props} />;
+    case "rozet": return <Rozet {...props} />;
+    case "etkinlik": return <Etkinlik {...props} />;
+    case "broll_kirlilik": return <BRollKirlilik {...props} />;
+    case "davetiye": return <Davetiye {...props} />;
+    case "cagri2": return <Cagri2 {...props} />;
+    case "kapanis": return <KapanisKarti {...props} />;
     default: return null;
   }
 };
@@ -414,6 +562,18 @@ const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "sonraki": giris("cagri", 0.45); cikis("pop_cikis"); break;
     case "takipet": giris("pop", 0.35); e.push({ t: o.tik, ad: "tik", v: 0.7 }); e.push({ t: o.tik + 0.05, ad: "basari", v: 0.45 }); break;
     case "broll_stok": case "broll_dropship": giris("broll", 0.5); cikis("whoosh_cikis", 0.3); break;
+    case "sorucevap":
+      o.ogeler.forEach((og: any[]) => e.push({ t: og[1], ad: "pop", v: 0.4 }));
+      if (o.cevap) o.ogeler.forEach((_: any, i: number) => e.push({ t: o.cevap + (i * 5) / 30, ad: `onay${i + 1}`, v: 0.45 }));
+      cikis(); break;
+    case "rozet": giris("secim", 0.35); break;
+    case "etkinlik": o.satirlar.forEach((st: any[], i: number) => e.push({ t: st[2], ad: `blip${i + 1}`, v: 0.45 })); cikis(); break;
+    case "broll_kirlilik":
+      giris("broll", 0.5); o.basliklar.forEach((_: any, i: number) => e.push({ t: o.s + (i * 3) / 30, ad: "bildirim", v: 0.22 }));
+      e.push({ t: o.s + (o.son - o.s) * 0.6, ad: "damga", v: 0.7 }); cikis("whoosh_cikis", 0.3); break;
+    case "davetiye": giris("baslik", 0.45); e.push({ t: o.s + 16 / 30, ad: "damga", v: 0.6 }); e.push({ t: o.s + 18 / 30, ad: "basari", v: 0.35 }); cikis(); break;
+    case "cagri2": giris("pop", 0.4); e.push({ t: o.yorum_t - 0.2, ad: "bildirim", v: 0.35 }); e.push({ t: o.yorum_t + 0.4, ad: "tik", v: 0.6 }); cikis("pop_cikis"); break;
+    case "kapanis": giris("cagri", 0.45); break;
   }
   return (
     <>

@@ -1,0 +1,989 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 7.366666666666666,
+   "kare": 156,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 12.9,
+   "kare": 92,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 16.333333333333332,
+   "kare": 108,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 20.233333333333334,
+   "kare": 57,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 22.333333333333332,
+   "kare": 92,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7269_dikey.mp4",
+   "ses": "IMG_7269_ses.wav",
+   "bas": 25.633333333333333,
+   "kare": 59,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 10.8,
+   "kare": 96,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 14.2,
+   "kare": 61,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 16.466666666666665,
+   "kare": 60,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 18.533333333333335,
+   "kare": 75,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 21.233333333333334,
+   "kare": 103,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 24.966666666666665,
+   "kare": 126,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 29.433333333333334,
+   "kare": 99,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 32.93333333333333,
+   "kare": 36,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 34.333333333333336,
+   "kare": 59,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7274_dikey.mp4",
+   "ses": "IMG_7274_ses.wav",
+   "bas": 36.36666666666667,
+   "kare": 20,
+   "zoom": true
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "E-ticarete",
+   "s": 0.0,
+   "e": 0.473,
+   "birim": "problem"
+  },
+  {
+   "w": "başlamak",
+   "s": 0.473,
+   "e": 0.873,
+   "birim": "problem"
+  },
+  {
+   "w": "istiyorsun",
+   "s": 0.873,
+   "e": 1.253,
+   "birim": "problem"
+  },
+  {
+   "w": "ama",
+   "s": 1.253,
+   "e": 1.513,
+   "birim": "problem"
+  },
+  {
+   "w": "ne",
+   "s": 1.513,
+   "e": 1.673,
+   "birim": "problem"
+  },
+  {
+   "w": "satacağını,",
+   "s": 1.653,
+   "e": 2.213,
+   "birim": "problem"
+  },
+  {
+   "w": "müşteriyi",
+   "s": 2.293,
+   "e": 2.673,
+   "birim": "problem"
+  },
+  {
+   "w": "nereden",
+   "s": 2.673,
+   "e": 3.013,
+   "birim": "problem"
+  },
+  {
+   "w": "bulacağını",
+   "s": 3.013,
+   "e": 3.473,
+   "birim": "problem"
+  },
+  {
+   "w": "şirketi",
+   "s": 3.473,
+   "e": 3.973,
+   "birim": "problem"
+  },
+  {
+   "w": "nasıl",
+   "s": 3.973,
+   "e": 4.133,
+   "birim": "problem"
+  },
+  {
+   "w": "kuracağını",
+   "s": 4.133,
+   "e": 4.593,
+   "birim": "problem"
+  },
+  {
+   "w": "bilmiyorsun.",
+   "s": 4.593,
+   "e": 5.033,
+   "birim": "problem"
+  },
+  {
+   "w": "İşte",
+   "s": 5.2,
+   "e": 5.38,
+   "birim": "cozum"
+  },
+  {
+   "w": "biz",
+   "s": 5.38,
+   "e": 5.56,
+   "birim": "cozum"
+  },
+  {
+   "w": "de",
+   "s": 5.56,
+   "e": 5.68,
+   "birim": "cozum"
+  },
+  {
+   "w": "tam",
+   "s": 5.68,
+   "e": 5.86,
+   "birim": "cozum"
+  },
+  {
+   "w": "bu",
+   "s": 5.86,
+   "e": 6.0,
+   "birim": "cozum"
+  },
+  {
+   "w": "sebeple",
+   "s": 6.0,
+   "e": 6.36,
+   "birim": "cozum"
+  },
+  {
+   "w": "Eskişehir'de",
+   "s": 6.36,
+   "e": 6.84,
+   "birim": "cozum"
+  },
+  {
+   "w": "bir",
+   "s": 6.84,
+   "e": 6.94,
+   "birim": "cozum"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 6.92,
+   "e": 7.32,
+   "birim": "cozum"
+  },
+  {
+   "w": "etkinliği",
+   "s": 7.32,
+   "e": 7.7,
+   "birim": "cozum"
+  },
+  {
+   "w": "düzenliyoruz.",
+   "s": 7.7,
+   "e": 8.267,
+   "birim": "cozum"
+  },
+  {
+   "w": "Sıfırdan",
+   "s": 8.267,
+   "e": 8.633,
+   "birim": "sorular"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 8.633,
+   "e": 9.133,
+   "birim": "sorular"
+  },
+  {
+   "w": "nasıl",
+   "s": 9.133,
+   "e": 9.293,
+   "birim": "sorular"
+  },
+  {
+   "w": "başlayabilirim?",
+   "s": 9.293,
+   "e": 9.933,
+   "birim": "sorular"
+  },
+  {
+   "w": "Şirket",
+   "s": 9.993,
+   "e": 10.293,
+   "birim": "sorular"
+  },
+  {
+   "w": "kurmadan",
+   "s": 10.293,
+   "e": 10.633,
+   "birim": "sorular"
+  },
+  {
+   "w": "nasıl",
+   "s": 10.633,
+   "e": 10.873,
+   "birim": "sorular"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 10.873,
+   "e": 11.293,
+   "birim": "sorular"
+  },
+  {
+   "w": "yapabilirim?",
+   "s": 11.293,
+   "e": 11.867,
+   "birim": "sorular"
+  },
+  {
+   "w": "Ürün,",
+   "s": 11.867,
+   "e": 12.093,
+   "birim": "sorular"
+  },
+  {
+   "w": "kargo",
+   "s": 12.173,
+   "e": 12.433,
+   "birim": "sorular"
+  },
+  {
+   "w": "gibi",
+   "s": 12.433,
+   "e": 12.533,
+   "birim": "sorular"
+  },
+  {
+   "w": "süreçlerle",
+   "s": 12.533,
+   "e": 13.073,
+   "birim": "sorular"
+  },
+  {
+   "w": "uğraşmadan",
+   "s": 13.073,
+   "e": 13.613,
+   "birim": "sorular"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 13.767,
+   "e": 14.233,
+   "birim": "sorular"
+  },
+  {
+   "w": "yaparak",
+   "s": 14.233,
+   "e": 14.573,
+   "birim": "sorular"
+  },
+  {
+   "w": "gelir",
+   "s": 14.573,
+   "e": 14.833,
+   "birim": "sorular"
+  },
+  {
+   "w": "sağlayabilir",
+   "s": 14.833,
+   "e": 15.413,
+   "birim": "sorular"
+  },
+  {
+   "w": "miyim?",
+   "s": 15.413,
+   "e": 15.593,
+   "birim": "sorular"
+  },
+  {
+   "w": "Bu",
+   "s": 15.593,
+   "e": 15.713,
+   "birim": "cevap"
+  },
+  {
+   "w": "soruların",
+   "s": 15.713,
+   "e": 16.133,
+   "birim": "cevap"
+  },
+  {
+   "w": "cevaplarını",
+   "s": 16.133,
+   "e": 16.753,
+   "birim": "cevap"
+  },
+  {
+   "w": "Eskişehir'deki",
+   "s": 16.833,
+   "e": 17.1,
+   "birim": "cevap"
+  },
+  {
+   "w": "bu",
+   "s": 17.46,
+   "e": 17.58,
+   "birim": "cevap"
+  },
+  {
+   "w": "etkinliğimizde",
+   "s": 17.58,
+   "e": 18.08,
+   "birim": "cevap"
+  },
+  {
+   "w": "buluyor",
+   "s": 18.08,
+   "e": 18.32,
+   "birim": "cevap"
+  },
+  {
+   "w": "olacaksın.",
+   "s": 18.32,
+   "e": 18.68,
+   "birim": "cevap"
+  },
+  {
+   "w": "28",
+   "s": 18.8,
+   "e": 19.16,
+   "birim": "tarih"
+  },
+  {
+   "w": "Kasım",
+   "s": 19.16,
+   "e": 19.58,
+   "birim": "tarih"
+  },
+  {
+   "w": "Cumartesi",
+   "s": 19.58,
+   "e": 20.1,
+   "birim": "tarih"
+  },
+  {
+   "w": "günü",
+   "s": 20.1,
+   "e": 20.38,
+   "birim": "tarih"
+  },
+  {
+   "w": "Taşbaşı",
+   "s": 20.38,
+   "e": 20.84,
+   "birim": "tarih"
+  },
+  {
+   "w": "Kültür",
+   "s": 20.84,
+   "e": 21.1,
+   "birim": "tarih"
+  },
+  {
+   "w": "Merkezi'nde",
+   "s": 21.1,
+   "e": 21.54,
+   "birim": "tarih"
+  },
+  {
+   "w": "olacağız.",
+   "s": 21.54,
+   "e": 21.84,
+   "birim": "tarih"
+  },
+  {
+   "w": "İnternette",
+   "s": 22.0,
+   "e": 22.38,
+   "birim": "tarih"
+  },
+  {
+   "w": "ne",
+   "s": 22.38,
+   "e": 22.52,
+   "birim": "tarih"
+  },
+  {
+   "w": "yazık",
+   "s": 22.52,
+   "e": 22.76,
+   "birim": "tarih"
+  },
+  {
+   "w": "ki",
+   "s": 22.76,
+   "e": 22.86,
+   "birim": "tarih"
+  },
+  {
+   "w": "birçok",
+   "s": 22.82,
+   "e": 23.08,
+   "birim": "tarih"
+  },
+  {
+   "w": "bilgi",
+   "s": 23.08,
+   "e": 23.32,
+   "birim": "tarih"
+  },
+  {
+   "w": "kirliliği",
+   "s": 23.32,
+   "e": 23.72,
+   "birim": "tarih"
+  },
+  {
+   "w": "var.",
+   "s": 23.72,
+   "e": 23.9,
+   "birim": "tarih"
+  },
+  {
+   "w": "Biz",
+   "s": 24.033,
+   "e": 24.167,
+   "birim": "davet"
+  },
+  {
+   "w": "de",
+   "s": 24.167,
+   "e": 24.327,
+   "birim": "davet"
+  },
+  {
+   "w": "seni",
+   "s": 24.327,
+   "e": 24.667,
+   "birim": "davet"
+  },
+  {
+   "w": "bu",
+   "s": 24.667,
+   "e": 24.787,
+   "birim": "davet"
+  },
+  {
+   "w": "bilgi",
+   "s": 24.787,
+   "e": 25.047,
+   "birim": "davet"
+  },
+  {
+   "w": "kirliliğinden",
+   "s": 25.047,
+   "e": 25.547,
+   "birim": "davet"
+  },
+  {
+   "w": "kurtarıp",
+   "s": 25.547,
+   "e": 26.027,
+   "birim": "davet"
+  },
+  {
+   "w": "gerçekten",
+   "s": 26.033,
+   "e": 26.46,
+   "birim": "davet"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 26.46,
+   "e": 26.96,
+   "birim": "davet"
+  },
+  {
+   "w": "nasıl",
+   "s": 26.96,
+   "e": 27.12,
+   "birim": "davet"
+  },
+  {
+   "w": "başlayabileceğini",
+   "s": 27.12,
+   "e": 27.84,
+   "birim": "davet"
+  },
+  {
+   "w": "öğreneceğin",
+   "s": 27.84,
+   "e": 28.44,
+   "birim": "davet"
+  },
+  {
+   "w": "ve",
+   "s": 28.433,
+   "e": 28.533,
+   "birim": "davet"
+  },
+  {
+   "w": "sorularını",
+   "s": 28.62,
+   "e": 29.12,
+   "birim": "davet"
+  },
+  {
+   "w": "sorup",
+   "s": 29.12,
+   "e": 29.52,
+   "birim": "davet"
+  },
+  {
+   "w": "hepsine",
+   "s": 29.52,
+   "e": 30.0,
+   "birim": "davet"
+  },
+  {
+   "w": "cevap",
+   "s": 30.0,
+   "e": 30.28,
+   "birim": "davet"
+  },
+  {
+   "w": "bulabileceğin",
+   "s": 30.28,
+   "e": 30.76,
+   "birim": "davet"
+  },
+  {
+   "w": "bir",
+   "s": 30.76,
+   "e": 30.86,
+   "birim": "davet"
+  },
+  {
+   "w": "etkinliğe",
+   "s": 30.86,
+   "e": 31.24,
+   "birim": "davet"
+  },
+  {
+   "w": "davet",
+   "s": 31.24,
+   "e": 31.58,
+   "birim": "davet"
+  },
+  {
+   "w": "ediyoruz.",
+   "s": 31.58,
+   "e": 31.86,
+   "birim": "davet"
+  },
+  {
+   "w": "Eğer",
+   "s": 31.967,
+   "e": 32.16,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "gerçekten",
+   "s": 32.16,
+   "e": 32.6,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 32.6,
+   "e": 33.06,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "başlayıp",
+   "s": 33.06,
+   "e": 33.44,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "bir",
+   "s": 33.44,
+   "e": 33.56,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "adım",
+   "s": 33.56,
+   "e": 33.76,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "atmayı",
+   "s": 33.76,
+   "e": 34.0,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "düşünüyorsan",
+   "s": 34.0,
+   "e": 34.5,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "mutlaka",
+   "s": 34.5,
+   "e": 34.88,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "bu",
+   "s": 34.88,
+   "e": 35.02,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "etkinliği",
+   "s": 35.02,
+   "e": 35.4,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "değerlendir.",
+   "s": 35.4,
+   "e": 36.02,
+   "birim": "mutlaka"
+  },
+  {
+   "w": "Etkinliğe",
+   "s": 36.167,
+   "e": 36.633,
+   "birim": "cagri"
+  },
+  {
+   "w": "kaydolmak",
+   "s": 36.633,
+   "e": 37.253,
+   "birim": "cagri"
+  },
+  {
+   "w": "ve",
+   "s": 37.253,
+   "e": 37.433,
+   "birim": "cagri"
+  },
+  {
+   "w": "gelip",
+   "s": 37.433,
+   "e": 37.693,
+   "birim": "cagri"
+  },
+  {
+   "w": "katılıp",
+   "s": 37.693,
+   "e": 38.053,
+   "birim": "cagri"
+  },
+  {
+   "w": "e-ticareti",
+   "s": 38.053,
+   "e": 38.653,
+   "birim": "cagri"
+  },
+  {
+   "w": "öğrenmek",
+   "s": 38.653,
+   "e": 39.073,
+   "birim": "cagri"
+  },
+  {
+   "w": "için",
+   "s": 39.073,
+   "e": 39.353,
+   "birim": "cagri"
+  },
+  {
+   "w": "şimdi",
+   "s": 39.467,
+   "e": 39.673,
+   "birim": "cagri"
+  },
+  {
+   "w": "bana",
+   "s": 39.673,
+   "e": 39.873,
+   "birim": "cagri"
+  },
+  {
+   "w": "mesaj",
+   "s": 39.873,
+   "e": 40.173,
+   "birim": "cagri"
+  },
+  {
+   "w": "atabilir",
+   "s": 40.173,
+   "e": 40.553,
+   "birim": "cagri"
+  },
+  {
+   "w": "veya",
+   "s": 40.667,
+   "e": 40.853,
+   "birim": "cagri"
+  },
+  {
+   "w": "yorumlara",
+   "s": 40.853,
+   "e": 41.373,
+   "birim": "cagri"
+  },
+  {
+   "w": "Eskişehir",
+   "s": 41.373,
+   "e": 41.913,
+   "birim": "cagri"
+  },
+  {
+   "w": "yazabilirsin.",
+   "s": 41.913,
+   "e": 42.453,
+   "birim": "cagri"
+  },
+  {
+   "w": "Görüşmek",
+   "s": 42.633,
+   "e": 42.967,
+   "birim": "kapanis"
+  },
+  {
+   "w": "üzere.",
+   "s": 42.967,
+   "e": 43.207,
+   "birim": "kapanis"
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "sorucevap",
+   "s": 1.5030000000000001,
+   "son": 5.083,
+   "ogeler": [
+    [
+     "Ne satacağım?",
+     1.653
+    ],
+    [
+     "Müşteri nereden?",
+     2.293
+    ],
+    [
+     "Şirket nasıl kurulur?",
+     3.473
+    ]
+   ],
+   "cevap": null
+  },
+  {
+   "tip": "baslik",
+   "s": 6.260000000000001,
+   "son": 8.317,
+   "satir1": "ESKİŞEHİR",
+   "satir2": "e-ticaret etkinliği",
+   "buyuk": true
+  },
+  {
+   "tip": "rozet",
+   "s": 8.017,
+   "son": 43.257,
+   "metin": "📍 ESKİŞEHİR · 28 KASIM"
+  },
+  {
+   "tip": "sorucevap",
+   "s": 8.217,
+   "son": 18.73,
+   "ogeler": [
+    [
+     "Sıfırdan nasıl başlarım?",
+     8.267
+    ],
+    [
+     "Şirketsiz e-ticaret?",
+     9.993
+    ],
+    [
+     "Ürün & kargo derdi olmadan?",
+     11.867
+    ]
+   ],
+   "cevap": 16.133
+  },
+  {
+   "tip": "etkinlik",
+   "s": 18.75,
+   "son": 21.95,
+   "satirlar": [
+    [
+     "📅",
+     "28 Kasım Cumartesi",
+     18.8
+    ],
+    [
+     "🕒",
+     "14.00 – 17.00",
+     19.58
+    ],
+    [
+     "📍",
+     "Taşbaşı Kültür Merkezi",
+     20.38
+    ]
+   ],
+   "alt": "Kırmızı Salon"
+  },
+  {
+   "tip": "broll_kirlilik",
+   "s": 22.0,
+   "son": 24.099999999999998,
+   "basliklar": [
+    "10 günde zengin ol! 💸",
+    "Dropshipping öldü ☠️",
+    "Sermayesiz milyoner ol",
+    "Bu ürün kesin patlar 🚀",
+    "E-ticaret bitti!"
+   ]
+  },
+  {
+   "tip": "davetiye",
+   "s": 30.18,
+   "son": 31.867
+  },
+  {
+   "tip": "liste",
+   "s": 31.917,
+   "son": 36.07,
+   "ogeler": [
+    [
+     "Kendi alan adınla mağaza",
+     32.117000000000004
+    ],
+    [
+     "Hazır tedarikçi ekosistemi",
+     33.017
+    ],
+    [
+     "Ücretsiz eğitimler",
+     33.917
+    ],
+    [
+     "Mentor desteği",
+     34.817
+    ]
+   ]
+  },
+  {
+   "tip": "cagri2",
+   "s": 36.533,
+   "son": 42.503,
+   "yorum_t": 41.373
+  },
+  {
+   "tip": "kapanis",
+   "s": 42.382999999999996,
+   "son": 43.257
+  }
+ ],
+ "vurgu": [
+  "e-ticarete",
+  "satacağını",
+  "müşteriyi",
+  "şirketi",
+  "bilmiyorsun",
+  "eskişehir'de",
+  "etkinliği",
+  "sıfırdan",
+  "kurmadan",
+  "uğraşmadan",
+  "gelir",
+  "cevaplarını",
+  "28",
+  "kasım",
+  "cumartesi",
+  "taşbaşı",
+  "kirliliği",
+  "kirliliğinden",
+  "davet",
+  "mutlaka",
+  "mesaj",
+  "eskişehir",
+  "ücretsiz"
+ ],
+ "toplamKare": 1299
+}
