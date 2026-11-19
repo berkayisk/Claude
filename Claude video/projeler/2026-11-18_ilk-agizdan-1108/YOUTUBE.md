@@ -1,18 +1,20 @@
 # YouTube metinleri — İlk Ağızdan: Kamer Değer
 
-## Başlık önerileri
-1. Müşteri "Tuvalet" Dedi, Satış Uzmanı Dondu! | Kamer Değer | İlk Ağızdan  (önerilen, Thumbnail B ile)
-2. Satın Alırken %95 Duygusalız! Satışın Gerçek Sırrı | Kamer Değer
-3. Türkler vs Amerikalılar: Satış Neden Bu Kadar Farklı? | İlk Ağızdan
-4. Satış Bir Danstır: Mağazan Olsun Pazarlama Direktörü Anlatıyor
-5. Eğitim Satış Getirir mi? Kamer Değer ile Satışın Psikolojisi
+## Başlık önerileri (seri: İlk Ağızdan Ansiklopedi)
+1. Müşteri "Tuvalet" Dedi, Satış Uzmanı Dondu! | İlk Ağızdan Ansiklopedi: Satış  (önerilen, Thumbnail B ile)
+2. Satın Alırken %95 Duygusalız! | İlk Ağızdan Ansiklopedi: Satış | Kamer Değer
+3. Türkler vs Amerikalılar: Satış Neden Farklı? | İlk Ağızdan Ansiklopedi
+4. İlk Ağızdan Ansiklopedi #3: SATIŞ | Kamer Değer (Mağazan Olsun)
+5. Satış Bir Danstır | İlk Ağızdan Ansiklopedi | Kamer Değer
 
 ## Açıklama
 Satış eğitimle mi öğrenilir? Türk müşteri ile Amerikalı müşteri arasındaki fark ne? Ve neden satın alma kararlarımızın %95'i duygusal?
 
 🔗 Tüm linklerimiz: https://linktr.ee/sifirdansatisa
 
-İlk Ağızdan'ın bu bölümünde Mağazan Olsun Pazarlama Direktörü Kamer Değer ile satışı konuştuk. Holdinglerde yöneticilik, yurt dışında satış deneyimi ve yüzlerce eğitimden süzülmüş tecrübeler… Emlakçı arkadaşının "tuvalet" hikâyesini kaçırmayın!
+İlk Ağızdan Ansiklopedi serisinde e-ticaretin konu başlıklarını adım adım, uzmanların ağzından işliyoruz. Bu bölümün konusu: SATIŞ.
+
+Mağazan Olsun Pazarlama Direktörü Kamer Değer ile satışı konuştuk. Holdinglerde yöneticilik, yurt dışında satış deneyimi ve yüzlerce eğitimden süzülmüş tecrübeler… Emlakçı arkadaşının "tuvalet" hikâyesini kaçırmayın!
 
 ⏱️ Bölümler
 0:00 Fragman
@@ -29,7 +31,7 @@ Satış eğitimle mi öğrenilir? Türk müşteri ile Amerikalı müşteri aras�
 🔗 Tüm linkler: https://linktr.ee/sifirdansatisa
 🔔 E-ticaret ve girişimcilik üzerine yeni bölümler için kanala abone olmayı unutmayın!
 
-#satış #eticaret #girişimcilik #pazarlama #nöropazarlama #satışteknikleri #mağazanolsun #ilkağızdan #sıfırdansatışa
+#satış #eticaret #girişimcilik #pazarlama #nöropazarlama #satışteknikleri #mağazanolsun #ilkağızdan #ilkağızdanansiklopedi #sıfırdansatışa
 
 ## Etiketler (YouTube "Etiketler" alanı)
-satış, satış teknikleri, e-ticaret, girişimcilik, pazarlama, nöropazarlama, satış eğitimi, müşteri psikolojisi, tüketici davranışı, Mağazan Olsun, Kamer Değer, İlk Ağızdan, Sıfırdan Satışa, Berkay Işık, e-ticaret kampı
+satış, satış teknikleri, e-ticaret, girişimcilik, pazarlama, nöropazarlama, satış eğitimi, müşteri psikolojisi, tüketici davranışı, Mağazan Olsun, Kamer Değer, İlk Ağızdan, İlk Ağızdan Ansiklopedi, e-ticaret ansiklopedisi, Sıfırdan Satışa, Berkay Işık, e-ticaret kampı
