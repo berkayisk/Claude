@@ -33,7 +33,7 @@ projeler/<proje>/
 ## Teslim
 - Sohbete dosya gönderme sınırı ~400 MiB; iPad'de sohbetten indirme butonu YOK. Finali kullanıcının Google Drive'ına yükle:
   kullanıcı OAuth Playground'dan `drive.file` kapsamlı access token alır → request_credential (host www.googleapis.com) →
-  resumable upload (`/upload/drive/v3/files?uploadType=resumable`), sonra boyut + md5 kontrolü. Token ~1 saat geçerli.
+  `araclar/drive_yukle.sh dosya...` (resumable upload + boyut/md5 kontrolü). Token ~1 saat geçerli.
 
 ## Notlar
 - node_modules kökte tek sefer kurulu; projeler onu paylaşır.

@@ -29,3 +29,9 @@
 - Kart zamanları ses enerjisinden: (çık, gir) = (89.52, 89.52), (470.40, 471.12), (629.60, 630.07); gir = soru başı − 0.23 sn
 - Fragmanda vizör yok, AZ SONRA 130 px
 - Kapanış sunucu yakın planda; Abone Ol x=560 (sol), Instagram sol alt
+
+## Shorts (2026-11-19)
+- Plan: `calisma/shorts_plan.py` → `src/shorts.json`; bileşen: `bilesenler/Short.tsx`; üretim: `calisma/shorts_uret.sh`
+- Dikey kaynak: 4K'dan crop 1215x2160 (konuk x=350, sunucu x=2560) → konuk_dikey.mp4 / sunucu_dikey.mp4
+- Short1-Tuvalet 45 sn, Short2-Dans 28 sn, Short3-TurkAmerikan 44 sn, Short4-Duygusal 42 sn; hepsi Drive'a yüklendi
+- Müzik: `araclar/arka_muzik.py` (lo-fi, 88 bpm), volume 0.1
