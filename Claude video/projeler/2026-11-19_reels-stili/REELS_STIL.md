@@ -33,3 +33,13 @@ Referanslar: `referanslar/ref1..ref4` (720x1280 / 360x640, 20–84 sn, hepsi -14
 - Grafik kütüphanesi: yorum kartı, çizgi grafik, yüzde/istatistik kartı, tarayıcı/telefon mockup, glass arka plan ara sahne, ikon zinciri, 3D emoji pop, PIP modu, arka plan bulanıklaştırma.
 - Kanca ilk 1.5 sn'de ekranda (yorum kartı veya büyük kalın yazı).
 - Kapanışta çağrı: profil / takip / Linktree.
+
+## Kullanıcının örneği: "Sıfırdan başlasan hangisini satardın?" (girdiler/ornek_parca1-4.mov, sıra 1→4, ~25 sn, 4K dikey)
+Format: "Bu mu şu mu?" (kozmetik/giyim, doğal taş/ayakkabı, online eğitim/elektronik, takviye/ev yaşam, final: anne bebek/evcil hayvan → yorumlara)
+- İyi: format, 4K görüntü, ışık, dokulu duvar, AI ürün görselleri, yorum çağrısı
+- Geliştir: sarı CapCut altyazı el/mikrofon üstünde → beyaz premium + kalın vurgu, yüzün altında
+- Seçim animasyonu yok → kazanan kart büyür + turuncu glow + ✓, kaybeden soluk + ✕, pop sesi
+- Kanca zayıf → büyük kinetik soru + "5 TUR" sayacı; kartlar arası VS rozeti, "TUR 2/5"
+- Final: A/B etiketli kartlar + "A mı B mi? Yorumlara yaz" + beliren yorum kartları (ref4)
+- Ses parçalar arası -14.7…-17.6 LUFS → -14'e eşitle; nefes boşluklarını kes
+- Yeniden kurgu için grafiksiz ham çekim gerekli
