@@ -142,7 +142,7 @@ for sh in SHORTS:
         toplam_kesilen += (b2 - a2)
     # B-roll: tetikleyici kelimenin yeni zamanı
     for (kelime, sonra, emoji, etiket, sure) in sh["broll"]:
-        aday = [w for w in altyazi if w["w"].strip(".,?!").lower().startswith(kelime)]
+        aday = [w for w in altyazi if w["w"].strip(".,?!").lower().startswith(kelime) and w["s"] >= 3.4]  # büyük başlık bitmeden girmesin
         if aday:
             s = aday[0]["s"]
             broll.append({"s": round(max(0, s - 0.1), 3), "sure": sure, "emoji": emoji, "etiket": etiket})
