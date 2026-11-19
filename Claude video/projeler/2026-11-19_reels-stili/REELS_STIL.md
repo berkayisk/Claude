@@ -43,3 +43,12 @@ Format: "Bu mu şu mu?" (kozmetik/giyim, doğal taş/ayakkabı, online eğitim/e
 - Final: A/B etiketli kartlar + "A mı B mi? Yorumlara yaz" + beliren yorum kartları (ref4)
 - Ses parçalar arası -14.7…-17.6 LUFS → -14'e eşitle; nefes boşluklarını kes
 - Yeniden kurgu için grafiksiz ham çekim gerekli
+
+## Kullanıcının 2. örneği: "Battınız: 5 hata" (girdiler/ornek2_parca1-4.mov, sıra 1→4, ~28 sn, 4K dikey, çok açılı)
+- İyi: çok güçlü kanca ("Geçmiş olsun, battınız."), 5 madde vaadi, açı çeşitliliği, hızlı tempo, net DM çağrısı
+- Geliştir: kadrajda üst yarı boş duvar → 4K'dan yakınlaştır, yüz üst 1/3; eğik koltuk açısı anlaşılmıyor
+- Madde numarası yok → "#1…#5" rozet + kısa başlık + üstte 5 noktalı ilerleme
+- "Battınız!" 1 sn → en az 2 sn, hareketli giriş / damga efekti
+- Sarı CapCut altyazı → beyaz premium
+- Ses -11 LUFS, LRA 1.3 (aşırı sıkıştırılmış) → -14
+- DM çağrısı ekranda yok → "DM'den YOL HARİTASI yaz" kartı
