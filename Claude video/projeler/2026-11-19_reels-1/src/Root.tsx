@@ -7,10 +7,7 @@ const k = {
   dosya: (ad: string) => staticFile(ad),
   foto: staticFile("berkay-isik-profil.png"),
   muzik: staticFile("muzik.wav"),
-  pop: staticFile("pop.wav"),
-  damga: staticFile("damga.wav"),
-  tik: staticFile("tik.wav"),
-  whoosh: staticFile("whoosh.wav"),
+  sfx: (ad: string) => staticFile(`sfx/${ad}.wav`),
   kanal: "Sıfırdan Satışa",
 };
 const ReelsKomp: React.FC = () => <Reels v={v} k={k} />;

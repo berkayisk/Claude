@@ -19,18 +19,17 @@ const ALTYAZI_Y = 1250;
 type Olay = { tip: string; s: number; son: number; [k: string]: any };
 export type ReelsVeri = {
   fps: number;
-  parcalar: { src: string; bas: number; kare: number; zoom: boolean }[];
+  parcalar: { src: string; ses?: string; bas: number; kare: number; zoom: boolean }[];
   altyazi: { w: string; s: number; e: number }[];
   olaylar: Olay[];
   vurgu: string[];
   toplamKare: number;
 };
-type Kaynak = { dosya: (ad: string) => string; foto: string; muzik?: string; pop?: string; damga?: string; tik?: string; whoosh?: string; kanal?: string };
+type Kaynak = { dosya: (ad: string) => string; foto: string; muzik?: string; sfx: (ad: string) => string; kanal?: string };
 
+// NOT: backdrop-filter kullanma — headless render'da karede bir uygulanıp bir uygulanmıyor (titreme)
 const cam: React.CSSProperties = {
-  background: "rgba(12,18,34,0.58)",
-  backdropFilter: "blur(18px)",
-  WebkitBackdropFilter: "blur(18px)",
+  background: "linear-gradient(160deg, rgba(22,30,52,0.90) 0%, rgba(10,14,28,0.88) 100%)",
   border: "1.5px solid rgba(255,255,255,0.18)",
   borderRadius: 30,
   boxShadow: "0 18px 50px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.12)",
@@ -57,8 +56,10 @@ const Goruntu: React.FC<{ v: ReelsVeri; k: Kaynak }> = ({ v, k }) => {
         return (
           <Sequence key={i} from={from} durationInFrames={p.kare}>
             <AbsoluteFill style={{ overflow: "hidden" }}>
-              <OffthreadVideo src={k.dosya(p.src)} startFrom={Math.round(p.bas * 30)} style={{ width: 1080, height: 1920, transform: `scale(${p.zoom ? 1.06 : 1})`, transformOrigin: "540px 650px" }} />
+              <OffthreadVideo src={k.dosya(p.src)} startFrom={Math.round(p.bas * 30)} muted={!!p.ses} style={{ width: 1080, height: 1920, transform: `scale(${p.zoom ? 1.06 : 1})`, transformOrigin: "540px 650px" }} />
             </AbsoluteFill>
+            {/* temizlenmiş ses (müzik/gürültü ayrılmış) */}
+            {p.ses ? <Audio src={k.dosya(p.ses)} startFrom={Math.round(p.bas * 30)} /> : null}
           </Sequence>
         );
       })}
@@ -177,7 +178,7 @@ const Takipci: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
         const a = i === aktif;
         const bitti = i < aktif;
         return (
-          <div key={i} style={{ ...cam, borderRadius: 40, padding: "12px 26px", display: "flex", alignItems: "center", gap: 12, background: a ? RENK.turuncu : "rgba(12,18,34,0.58)", border: a ? "1.5px solid rgba(255,255,255,0.5)" : cam.border, transform: `scale(${a ? 1.06 : 0.94})`, transition: "none" }}>
+          <div key={i} style={{ ...cam, borderRadius: 40, padding: "12px 26px", display: "flex", alignItems: "center", gap: 12, background: a ? RENK.turuncu : "linear-gradient(160deg, rgba(22,30,52,0.90), rgba(10,14,28,0.88))", border: a ? "1.5px solid rgba(255,255,255,0.5)" : cam.border, transform: `scale(${a ? 1.06 : 0.94})`, transition: "none" }}>
             <div style={{ width: 42, height: 42, borderRadius: 21, background: a ? "white" : bitti ? YESIL : "rgba(255,255,255,0.15)", color: a ? RENK.turuncu : "white", fontFamily: INTER, fontWeight: 800, fontSize: 24, display: "flex", alignItems: "center", justifyContent: "center" }}>{bitti ? "✓" : i + 1}</div>
             <span style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, color: "white", letterSpacing: 1 }}>{ad}</span>
           </div>
@@ -379,26 +380,115 @@ const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "adimlar": return <Adimlar {...props} />;
     case "sonraki": return <Sonraki {...props} />;
     case "takipet": return <TakipEt {...props} foto={k.foto} kanal={k.kanal ?? "Sıfırdan Satışa"} />;
+    case "broll_stok": return <BRollStok {...props} />;
+    case "broll_dropship": return <BRollDropship {...props} />;
     default: return null;
   }
 };
 
+// Her grafik türüne göre giriş / çıkış / iç olay sesleri (marka/sfx kütüphanesi)
 const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
-  const efektler: { t: number; src?: string; v: number }[] = [];
-  if (o.tip === "takipci") (o.gecisler as number[]).forEach((g) => efektler.push({ t: g, src: k.whoosh, v: 0.25 }));
-  else efektler.push({ t: o.s, src: k.pop, v: 0.35 });
-  if (o.tip === "yorumlar") { o.yorumlar.forEach((_: any, i: number) => efektler.push({ t: o.s + (i * 7) / 30, src: k.pop, v: 0.3 })); efektler.push({ t: o.carpi, src: k.damga, v: 0.7 }); }
-  if (o.tip === "zincir") o.ogeler.forEach((og: any[]) => efektler.push({ t: og[2], src: k.pop, v: 0.3 }));
-  if (o.tip === "liste") o.ogeler.forEach((og: any[]) => og[1] && efektler.push({ t: og[1], src: k.tik, v: 0.5 }));
-  if (o.tip === "takipet") efektler.push({ t: o.tik, src: k.tik, v: 0.8 });
+  const e: { t: number; ad: string; v: number }[] = [];
+  const giris = (ad: string, v = 0.4) => e.push({ t: o.s, ad, v });
+  const cikis = (ad = "whoosh_cikis", v = 0.25) => e.push({ t: Math.max(o.s, o.son - 0.22), ad, v });
+  switch (o.tip) {
+    case "yorumlar":
+      o.yorumlar.forEach((_: any, i: number) => e.push({ t: o.s + (i * 7) / 30, ad: "bildirim", v: 0.32 }));
+      e.push({ t: o.carpi, ad: "damga", v: 0.8 }); cikis(); break;
+    case "baslik": giris("baslik", 0.45); cikis(); break;
+    case "takipci":
+      giris("whoosh_giris", 0.3);
+      (o.gecisler as number[]).slice(1).forEach((g) => e.push({ t: g, ad: "secim", v: 0.45 }));
+      cikis("pop_cikis", 0.25); break;
+    case "stat": giris(o.ses ?? "para", o.ses === "boom" ? 0.5 : 0.45); cikis(); break;
+    case "zincir":
+      o.ogeler.forEach((og: any[], i: number) => e.push({ t: og[2], ad: `blip${i + 1}`, v: 0.45 }));
+      e.push({ t: o.ogeler[2][2] + 8 / 30, ad: "uyari", v: 0.35 }); cikis(); break;
+    case "akis": giris("whoosh_giris", 0.35); e.push({ t: o.s + 14 / 30, ad: "pop", v: 0.35 }); cikis("pop_cikis"); break;
+    case "liste":
+      o.ogeler.forEach((og: any[], i: number) => og[1] && e.push({ t: og[1], ad: `onay${i + 1}`, v: 0.45 }));
+      if (!o.ogeler[0][1]) giris("pop", 0.3);
+      cikis(); break;
+    case "panel": giris("arayuz", 0.45); cikis("pop_cikis"); break;
+    case "adimlar": [0, 1, 2].forEach((i) => e.push({ t: o.s + (4 + i * 9) / 30, ad: `blip${i + 1}`, v: 0.45 })); cikis(); break;
+    case "sonraki": giris("cagri", 0.45); cikis("pop_cikis"); break;
+    case "takipet": giris("pop", 0.35); e.push({ t: o.tik, ad: "tik", v: 0.7 }); e.push({ t: o.tik + 0.05, ad: "basari", v: 0.45 }); break;
+    case "broll_stok": case "broll_dropship": giris("broll", 0.5); cikis("whoosh_cikis", 0.3); break;
+  }
   return (
     <>
-      {efektler.filter((e) => e.src).map((e, i) => (
-        <Sequence key={i} from={Math.max(0, Math.round(e.t * 30))} durationInFrames={30}>
-          <Audio src={e.src!} volume={e.v} />
+      {e.map((x, i) => (
+        <Sequence key={i} from={Math.max(0, Math.round(x.t * 30))} durationInFrames={45}>
+          <Audio src={k.sfx(x.ad)} volume={x.v} />
         </Sequence>
       ))}
     </>
+  );
+};
+
+// ---------------- B-roll: tam ekran motion graphic ara sahneler (ses devam eder) ----------------
+const BRollZemin: React.FC<{ children: React.ReactNode; sure: number }> = ({ children, sure }) => {
+  const f = useCurrentFrame();
+  const op = interpolate(f, [0, 5, sure - 5, sure], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const zoom = interpolate(f, [0, sure], [1.08, 1.0]);
+  return (
+    <AbsoluteFill style={{ opacity: op, overflow: "hidden", background: "radial-gradient(ellipse at 50% 35%, #2a1d4f 0%, #120c2a 50%, #06050f 100%)" }}>
+      {/* cam daireler (ref1 dili) */}
+      {[[540, 420, 360], [200, 1300, 520], [900, 1500, 420]].map(([x, y, r], i) => (
+        <div key={i} style={{ position: "absolute", left: x - r / 2, top: y - r / 2 + Math.sin((f + i * 20) / 18) * 12, width: r, height: r, borderRadius: r, border: "2px solid rgba(255,255,255,0.14)", background: "radial-gradient(circle at 30% 30%, rgba(255,255,255,0.10), rgba(255,255,255,0.02))" }} />
+      ))}
+      <AbsoluteFill style={{ transform: `scale(${zoom})` }}>{children}</AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+const BRollStok: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const kutular = [0, 1, 2, 3, 4, 5];
+  const deger = Math.round(interpolate(f, [4, sure - 8], [0, 200], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }));
+  return (
+    <BRollZemin sure={sure}>
+      <div style={{ position: "absolute", top: 380, left: 0, right: 0, textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 40, letterSpacing: 8, color: "rgba(255,255,255,0.7)" }}>{o.ust}</div>
+      {kutular.map((i) => {
+        const g = spring({ frame: f - i * 3, fps: 30, config: { damping: 10, stiffness: 160 } });
+        const x = 300 + (i % 3) * 170; const y = 1080 - Math.floor(i / 3) * 165;
+        return <div key={i} style={{ position: "absolute", left: x, top: y - (1 - g) * 700, fontSize: 150, fontFamily: EMOJI, transform: `rotate(${(i % 2 ? 6 : -5) * (1 - g)}deg)` }}>📦</div>;
+      })}
+      {[0, 1, 2, 3].map((i) => {
+        const t = (f - 6 - i * 4) / 30;
+        return t > 0 ? <div key={`p${i}`} style={{ position: "absolute", left: 460 + (i - 1.5) * 150 + t * (i - 1.5) * 220, top: 900 - t * 900 + t * t * 500, fontSize: 90, fontFamily: EMOJI, transform: `rotate(${t * 200 * (i % 2 ? 1 : -1)}deg)` }}>💸</div> : null;
+      })}
+      <div style={{ position: "absolute", top: 520, left: 0, right: 0, textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 130, color: "white", letterSpacing: -3, textShadow: "0 10px 40px rgba(0,0,0,0.6)" }}>
+        ₺{deger} <span style={{ fontSize: 80 }}>BİN</span>
+      </div>
+    </BRollZemin>
+  );
+};
+
+const BRollDropship: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const rota = interpolate(f, [4, sure - 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+  const P0 = [230, 880], P1 = [540, 560], P2 = [850, 900];
+  const bez = (t: number) => [(1 - t) ** 2 * P0[0] + 2 * (1 - t) * t * P1[0] + t * t * P2[0], (1 - t) ** 2 * P0[1] + 2 * (1 - t) * t * P1[1] + t * t * P2[1]];
+  const [ux, uy] = bez(rota);
+  const yol = `M ${P0[0]} ${P0[1]} Q ${P1[0]} ${P1[1]} ${P2[0]} ${P2[1]}`;
+  const g = spring({ frame: f, fps: 30, config: { damping: 12 } });
+  return (
+    <BRollZemin sure={sure}>
+      <div style={{ position: "absolute", top: 300, left: 0, right: 0, textAlign: "center", fontFamily: INTER, fontWeight: 800, fontSize: 96, color: "white", letterSpacing: -2, opacity: g }}>{o.baslik}</div>
+      <div style={{ position: "absolute", left: 340, top: 600, fontSize: 400, fontFamily: EMOJI, opacity: 0.22 }}>🌍</div>
+      <svg width={1080} height={1920} style={{ position: "absolute", left: 0, top: 0 }}>
+        <path d={yol} stroke={RENK.turuncu} strokeWidth={8} fill="none" strokeDasharray="22 18" pathLength={1} style={{ strokeDasharray: `${rota} 1` }} />
+      </svg>
+      <div style={{ position: "absolute", left: P0[0] - 80, top: P0[1] - 20, fontSize: 130, fontFamily: EMOJI }}>🏭</div>
+      <div style={{ position: "absolute", left: P2[0] - 70, top: P2[1] - 20, fontSize: 130, fontFamily: EMOJI, opacity: rota > 0.95 ? 1 : 0.35 }}>🏠</div>
+      <div style={{ position: "absolute", left: ux - 55, top: uy - 70, fontSize: 110, fontFamily: EMOJI }}>✈️</div>
+      <div style={{ position: "absolute", top: 1080, left: 0, right: 0, display: "flex", justifyContent: "center", gap: 24 }}>
+        {o.etiketler.map((x: string, i: number) => (
+          <div key={x} style={{ ...cam, borderRadius: 40, padding: "12px 28px", fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "white", opacity: interpolate(f, [8 + i * 6, 14 + i * 6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }) }}>{x}</div>
+        ))}
+      </div>
+    </BRollZemin>
   );
 };
 

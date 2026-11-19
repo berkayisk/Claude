@@ -39,3 +39,9 @@ projeler/<proje>/
 - node_modules kökte tek sefer kurulu; projeler onu paylaşır.
 - `remotion.config.ts` kısıtlı ağda hazır Chromium'u kullanır.
 - Medya dosyaları .gitignore'da; git'e sadece kod ve notlar girer.
+
+## Reels / talking-head kuralları (öğrenildi)
+- Ses temizliği: Demucs `htdemucs_ft --two-stems=vocals` → highpass 80, afftdn, hafif agate, compressor, presence EQ (`projeler/2026-11-19_reels-1` örneği). Videoyu `muted`, temiz sesi ayrı `Audio` olarak çal.
+- Kesmeler: temiz ses üzerinde Silero VAD (faster_whisper.vad); sadece >=0.35 sn boşluk kes; önce 0.10 / arka 0.16 sn pay; parça sonu ses sönene kadar (-34 dB) uzar; kelimesiz parça at; birim sınırları (önceki deneme, "evet/dur/kayıtta mı") kesin alt/üst sınır. Her render öncesi `calisma/kesme_kontrol.py` ile doğrula.
+- Kartlarda `backdrop-filter` KULLANMA (render'da titriyor) → düz yarı saydam zemin.
+- Ses efektleri: `marka/sfx/` (araclar/sfx_uret.py), grafik türüne göre giriş/çıkış.

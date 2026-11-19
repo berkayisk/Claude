@@ -19,7 +19,7 @@ for k, ws in KEL.items():
 SESLER = {}
 def ses(n):
     if n not in SESLER:
-        w = wave.open(f"calisma/{n}.wav"); SESLER[n] = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
+        w = wave.open(f"calisma/ses_temiz/{n}_16k.wav"); SESLER[n] = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
     return SESLER[n]
 def db(n, t, win=0.02):
     a = ses(n)[max(0, int(t * 16000)): int((t + win) * 16000)]
@@ -48,38 +48,52 @@ def kelime_duzelt(n, w):
 # (anahtar, kaynak dosya, kelime listesi anahtarı, başlangıç, bitiş)
 BIRIMLER = [
     ("kanca1", "IMG_6181", "IMG_6181", 2.9, 5.35),
-    ("kanca2", "IMG_6181", "IMG_6181", 9.5, 11.85),
+    ("kanca2", "IMG_6181", "IMG_6181", 9.50, 11.85),  # 9.45'e kadar 2. deneme var: sınır kesin
     ("m1a", "IMG_6183", "IMG_6183", 0.9, 8.55),
     ("m1b", "IMG_6183", "IMG_6183_son", 18.8, 22.95),
     ("m2a", "IMG_6187", "IMG_6187", 0.0, 7.2),
     ("m2b", "IMG_6187", "IMG_6187", 16.5, 22.95),
-    ("m3a", "IMG_6188", "IMG_6188", 1.15, 5.5),
+    ("m3a", "IMG_6188", "IMG_6188", 1.60, 5.72),  # 0.9'daki "Evet." çekim öncesi
     ("m3b", "IMG_6188", "IMG_6188", 10.4, 12.6),
     ("m3c", "IMG_6188", "IMG_6188", 19.5, 21.6),
     ("m3d", "IMG_6188", "IMG_6188", 30.4, 33.8),
-    ("sonuc", "IMG_6189", "IMG_6189", 0.0, 4.85),
-    ("cagri", "IMG_6190", "IMG_6190", 0.0, 6.4),
+    ("sonuc", "IMG_6189", "IMG_6189", 0.0, 4.62),  # 4.96 sonrası nefes
+    ("cagri", "IMG_6190", "IMG_6190", 0.10, 6.3),
 ]
 
+from faster_whisper.vad import get_speech_timestamps, VadOptions
+VAD = {}
+def konusma_bolgeleri(n):
+    if n not in VAD:
+        x = ses(n)
+        ts = get_speech_timestamps(x, VadOptions(threshold=0.45, min_silence_duration_ms=250, speech_pad_ms=0, min_speech_duration_ms=120))
+        VAD[n] = [(t["start"] / 16000, t["end"] / 16000) for t in ts]
+    return VAD[n]
+
+ON_PAY, ARKA_PAY, MIN_BOSLUK = 0.10, 0.16, 0.35
 def alt_araliklar(n, a, b, ks):
-    ts = np.arange(a, b, 0.01); sessiz = [db(n, t) < SESSIZ_DB for t in ts]; kes = []; i = 0
-    while i < len(ts):
-        if sessiz[i]:
-            j = i
-            while j < len(ts) and sessiz[j]: j += 1
-            if (j - i) * 0.01 >= MIN_SESSIZ: kes.append((ts[i] + PAY, ts[j - 1] + 0.01 - PAY))
-            i = j
-        else: i += 1
-    out, cur = [], a
-    for x, y in kes:
-        if x - cur >= MIN_PARCA: out.append((cur, x))
-        cur = max(cur, y)
-    if b - cur >= MIN_PARCA: out.append((cur, b))
+    """Silero VAD bölgeleri; sadece >=0.35 sn boşlukları kes, kelimelerin önüne 0.10 arkasına 0.16 sn pay bırak"""
+    bolg = [(max(s_, a - 0.05), min(e_, b + 0.05)) for s_, e_ in konusma_bolgeleri(n) if e_ > a + 0.05 and s_ < b - 0.05]
+    # kelimeler de konuşma sayılır (VAD kaçırırsa)
+    for w in ks: bolg.append((w["s"], w["e"]))
+    bolg.sort(); m = []
+    for x, y in bolg:
+        if m and x - m[-1][1] < MIN_BOSLUK: m[-1] = (m[-1][0], max(m[-1][1], y))
+        else: m.append((x, y))
+    out = []
+    for x, y in m:
+        x2 = max(a, x - ON_PAY)              # güvenli alt sınırı asla aşma (önceki deneme / çekim öncesi ses)
+        y2 = min(b + 0.30, y + ARKA_PAY)
+        while y2 < b + 0.30 and db(n, y2, 0.03) > -34: y2 += 0.01   # ses sönene kadar uzat (nefesi katma)
+        if out and x2 <= out[-1][1]: out[-1] = (out[-1][0], y2)
+        else: out.append((x2, y2))
+    # içinde kelime olmayan parçaları at (nefes, "ıı", "evet" gibi)
+    out = [(x, y) for x, y in out if y - x >= MIN_PARCA and any(x <= (w["s"] + w["e"]) / 2 < y for w in ks)]
     return out
 
 parcalar, altyazi, birim_zaman, tl, zs = [], [], {}, 0.0, 0
 for (anahtar, n, kk, a, b) in BIRIMLER:
-    a2 = round(sessiz_nokta(n, a - 0.2, a + 0.1), 3); b2 = round(sessiz_nokta(n, b - 0.1, b + 0.25), 3)
+    a2, b2 = a, b
     ks = [kelime_duzelt(n, w) for w in KEL[kk] if a2 <= (w["s"] + w["e"]) / 2 < b2]
     if anahtar == "m3c":  # "Ürüne" kelimesi uzun ölçülmüş
         ks = [kelime_duzelt(n, w) for w in ks]
@@ -95,7 +109,7 @@ for (anahtar, n, kk, a, b) in BIRIMLER:
             if bas <= orta < son or (onceki_son <= orta < bas and w["e"] > bas):
                 s2 = max(bas, w["s"]) - bas + tl; e2 = min(son, w["e"]) - bas + tl
                 altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "birim": anahtar})
-        parcalar.append({"src": f"{n}_dikey.mp4", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
+        parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_ses.wav", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
         tl += (fb - fa) / FPS; zs += 1
     birim_zaman[anahtar] = (round(birim_bas, 3), round(tl, 3))
     zs = 0  # yeni çekim: zoomsuz başla
@@ -114,11 +128,13 @@ olaylar = [
      "yorumlar": [["ayse.kaya", "e-ticaret"], ["mert_34", "e-ticaret 🙏"], ["zeynep.shop", "e-ticaret"], ["can.ozdemir", "E-TİCARET"]]},
     {"tip": "baslik", "s": B("kanca2"), "son": E("kanca2") + 0.3, "satir1": "E-TİCARETE NASIL BAŞLANIR?", "satir2": "babalar gibi anlatıyorum"},
     {"tip": "takipci", "s": B("m1a"), "son": E("m3d"), "gecisler": [B("m1a"), B("m2a"), B("m3a")], "adlar": ["GELENEKSEL", "STOKSUZ", "YENİ NESİL"]},
-    {"tip": "stat", "s": kz("m1a", "150"), "son": E("m1a") - 0.1, "ust": "MALİYET", "deger": "₺150-200 BİN", "renk": "kirmizi"},
-    {"tip": "stat", "s": kz("m1b", "500"), "son": E("m1b"), "ust": "GEREKEN SERMAYE", "deger": "₺500 BİN – 1 MİLYON", "renk": "kirmizi"},
+    {"tip": "broll_stok", "s": kz("m1a", "gideyim"), "son": kz("m1a", "150") - 0.05, "ust": "STOĞA YATAN PARA"},
+    {"tip": "stat", "s": kz("m1a", "150"), "son": E("m1a") - 0.1, "ust": "MALİYET", "deger": "₺150-200 BİN", "renk": "kirmizi", "ses": "para"},
+    {"tip": "stat", "s": kz("m1b", "500"), "son": E("m1b"), "ust": "GEREKEN SERMAYE", "deger": "₺500 BİN – 1 MİLYON", "renk": "kirmizi", "ses": "boom"},
+    {"tip": "broll_dropship", "s": kz("m2a", "klasik"), "son": kz("m2a", "tedarik") - 0.05, "baslik": "DROPSHIPPING", "etiketler": ["Tedarikçi", "→", "Müşteri"]},
     {"tip": "zincir", "s": kz("m2a", "tedarik"), "son": E("m2a"), "ogeler": [["🏭", "Tedarikçi", kz("m2a", "tedarik")], ["🚚", "Kargo", kz("m2a", "kargo")], ["🧾", "Sipariş", kz("m2a", "sipariş")]], "alt": "AYRI AYRI YÖNETİM"},
     {"tip": "akis", "s": kz("m2b", "ödemeyi"), "son": kz("m2b", "burada"), "sol": "Sen ödersin", "sag": "Müşteri öder", "ust": "ÖNCE", "ust2": "SONRA"},
-    {"tip": "stat", "s": kz("m2b", "500"), "son": E("m2b"), "ust": "GEREKEN SERMAYE", "deger": "₺500 BİN", "renk": "kirmizi"},
+    {"tip": "stat", "s": kz("m2b", "500"), "son": E("m2b"), "ust": "GEREKEN SERMAYE", "deger": "₺500 BİN", "renk": "kirmizi", "ses": "boom"},
     {"tip": "liste", "s": kz("m3a", "şirket"), "son": E("m3a"), "ogeler": [["Şirket gerekmez", kz("m3a", "şirket")], ["Stok gerekmez", kz("m3a", "stok")]]},
     {"tip": "liste", "s": B("m3c"), "son": E("m3c") + 0.2, "ogeler": [["Şirket gerekmez", 0], ["Stok gerekmez", 0], ["Önceden para yok", kz("m3c", "önceden")]]},
     {"tip": "panel", "s": kz("m3b", "tek"), "son": E("m3b")},
