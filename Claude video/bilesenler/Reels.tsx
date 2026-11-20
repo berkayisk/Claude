@@ -13,8 +13,9 @@ const INTER = "'Inter', sans-serif";
 const EMOJI = "'Noto Color Emoji', sans-serif";
 const KIRMIZI = "#FF4D4D";
 const YESIL = "#2ED47A";
-const KART_Y = 880;
-const ALTYAZI_Y = 1250;
+// Kart / altyazı yüksekliği: varsayılan 880/1250; yüzü yukarıda olan çekimlerde veri.kartY / veri.altyaziY ile aşağı alınır
+let KART_Y = 880;
+let ALTYAZI_Y = 1250;
 
 type Olay = { tip: string; s: number; son: number; [k: string]: any };
 export type ReelsVeri = {
@@ -24,6 +25,8 @@ export type ReelsVeri = {
   olaylar: Olay[];
   vurgu: string[];
   toplamKare: number;
+  kartY?: number;
+  altyaziY?: number;
 };
 type Kaynak = { dosya: (ad: string) => string; foto: string; muzik?: string; sfx: (ad: string) => string; kanal?: string };
 
@@ -707,7 +710,10 @@ const BRollDropship: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   );
 };
 
-export const Reels: React.FC<{ v: ReelsVeri; k: Kaynak }> = ({ v, k }) => (
+export const Reels: React.FC<{ v: ReelsVeri; k: Kaynak }> = ({ v, k }) => {
+  KART_Y = v.kartY ?? 880;
+  ALTYAZI_Y = v.altyaziY ?? 1250;
+  return (
   <AbsoluteFill style={{ background: "black" }}>
     <Goruntu v={v} k={k} />
     {/* hafif sinematik karartma: alt ve üst */}
@@ -721,4 +727,5 @@ export const Reels: React.FC<{ v: ReelsVeri; k: Kaynak }> = ({ v, k }) => (
     {v.olaylar.map((o, i) => <Sesler key={`s${i}`} o={o} k={k} />)}
     {k.muzik ? <Audio src={k.muzik} volume={0.07} /> : null}
   </AbsoluteFill>
-);
+  );
+};

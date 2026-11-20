@@ -4,7 +4,9 @@ import json, wave, numpy as np
 FPS = 30
 KEL = json.load(open("calisma/kelimeler2.json"))
 # 7287: "ODTÜ Teknokent COZONE'da 6 Aralık'ta buluşalım" ikinci deneme (29.15) kullanılır
-KEL["IMG_7287"] = [w for w in KEL["IMG_7287"] if w["s"] < 24.95 or w["s"] >= 31.5] + [{"w": w, "s": s, "e": e} for w, s, e in [
+# 7287: "Sen de her geç..." yarım deneme (18.05-19.9) atılır, ikinci "Sen de eğer gerçekten" (19.95) kullanılır
+KEL["IMG_7287"] = [w for w in KEL["IMG_7287"] if (w["s"] < 24.95 or w["s"] >= 31.5) and not (18.0 <= w["s"] < 20.7)] + [{"w": w, "s": s, "e": e} for w, s, e in [
+    ("Sen", 19.95, 20.17), ("de", 20.17, 20.33), ("eğer", 20.33, 20.45), ("gerçekten", 20.45, 20.85),
     ("ODTÜ", 29.15, 29.38), ("Teknokent,", 29.38, 29.86), ("COZONE'da", 29.90, 30.40), ("6", 30.40, 30.72), ("Aralık'ta", 30.72, 31.14), ("buluşalım.", 31.14, 31.50)]]
 for k in KEL:
     m = []
@@ -25,7 +27,9 @@ def db(n, t, win=0.02):
     return 20 * np.log10(float(np.sqrt((a ** 2).mean())) + 1e-9) if len(a) else -99
 
 SES_ESIK, MIN_KES, KALAN = -38, 0.12, 0.035
-HARIC = {}
+HARIC = {"IMG_7287": [(18.0, 19.92)]}
+# 7286 sonunda nefes/yankı -38 dB üstünde kalıyor: açı geçişi seri olsun diye eşik yükseltildi
+ESIK_SABIT = {"IMG_7286": -30.0}
 BIRIMLER = [
     ("problem", "IMG_7286", 0.0, 6.3), ("soru", "IMG_7287", 0.0, 3.1), ("evet", "IMG_7287", 3.1, 4.4), ("etkinlik", "IMG_7287", 4.4, 7.3),
     ("nasil", "IMG_7287", 7.3, 12.85), ("yol", "IMG_7287", 12.85, 17.9), ("cagri", "IMG_7287", 17.9, 24.95), ("tarih", "IMG_7287", 29.0, 31.54),
@@ -49,6 +53,7 @@ def kelime_duzelt(n, w):
 ESIK = {}
 def esik(n, a, b):
     """çekime uyarlanır: zemin gürültüsü (10. yüzdelik) + 7 dB, en az -38 dB"""
+    if n not in ESIK and n in ESIK_SABIT: ESIK[n] = ESIK_SABIT[n]
     if n not in ESIK:
         e = [db(n, t, 0.01) for t in np.arange(a, b, 0.01)]
         ESIK[n] = max(-38.0, float(np.percentile(e, 10)) + 7)
@@ -139,7 +144,7 @@ olaylar = [
 ]
 vurgu = ["sıfırdan", "ürün", "şirketin", "satacağını", "rağmen", "evet", "başlayabilirsin", "ankara'da", "etkinliği", "kurmadan", "tutmadan", "adım",
          "net", "yol", "haritası", "gerçekten", "şimdi", "mesaj", "ankara", "odtü", "teknokent", "6", "aralık'ta"]
-json.dump({"fps": FPS, "parcalar": parcalar, "altyazi": altyazi, "olaylar": olaylar, "vurgu": vurgu, "toplamKare": sum(p["kare"] for p in parcalar)},
+json.dump({"fps": FPS, "kartY": 1060, "altyaziY": 1440, "parcalar": parcalar, "altyazi": altyazi, "olaylar": olaylar, "vurgu": vurgu, "toplamKare": sum(p["kare"] for p in parcalar)},
           open("src/reels_berkay.json", "w"), ensure_ascii=False, indent=1)
 print(f"toplam {tl:.1f} sn, {len(parcalar)} parça")
 for k, (a, b) in BZ.items(): print(f"  {k}: {a:.2f}-{b:.2f}")
