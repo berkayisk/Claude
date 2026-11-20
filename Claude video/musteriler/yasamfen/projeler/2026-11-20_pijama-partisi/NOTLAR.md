@@ -22,3 +22,11 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
 - Hoca görüşleri → kısa "hocalar ne dedi" röportaj kesiti (veya genel videoya serpiştirme)
+
+## Kurgu kuralları (kullanıcı, 2026-11-20)
+- Çekimler TAMAMEN HAM: atılacak çok kısım var. Tekrarlanan denemeler/cümleler (en iyi/son temiz olan kalır),
+  boşluklar, nefesler, kamera ayarlama, çekim dışı konuşmalar dikkatle kesilir (kök CLAUDE.md sıkı kesme kuralları).
+- Geçişler: gerektiğinde YUMUŞAK ve SADE (kısa crossfade / dip-to-white-black / hafif blur-zoom). Gösterişli
+  wipe, glitch, spin vb. YOK. Konuşma içi kesmeler düz kesme (jump cut) kalır; geçiş sadece sahne/bölüm değişiminde.
+- B-roll: çekimde B-roll olarak kullanılabilecek çok görüntü var → önce tüm hamlar sınıflandırılıp
+  `calisma/broll_katalog` (dosya, zaman aralığı, içerik, kalite) çıkarılacak; konuşma üstü ve geçişlerde kullanılacak.
