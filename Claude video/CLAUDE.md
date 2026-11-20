@@ -52,3 +52,6 @@ projeler/<proje>/
 - Türkçe eşleştirmede `İ`/`I` küçültmesine dikkat (Python lower() 'İ'yi 'i̇' yapar).
 - Kartlarda `backdrop-filter` KULLANMA (render'da titriyor) → düz yarı saydam zemin.
 - Ses efektleri: `marka/sfx/` (araclar/sfx_uret.py), grafik türüne göre giriş/çıkış.
+- Stok B-roll: Mixkit (ücretsiz, ticari/reklam kullanımı serbest, anahtar gerekmez; ortamda mixkit.co + assets.mixkit.co izinli). Arama: `https://mixkit.co/free-stock-video/<konu>/`, dosya: `https://assets.mixkit.co/videos/<id>/<id>-720.mp4` (sadece 720p yatay). Şablonda `broll_video` olayı: bulanık arka + keskin çerçeve (top, yukseklik ayarlanır). Dosyalar `girdiler/broll/`.
+- Video konuşma bitince biter; sona sessiz kuyruk ekleme. Kapanış kartı son cümlede başlar, `son: tl + 0.5` ile son karede sönmez.
+- Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).

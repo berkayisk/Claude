@@ -110,11 +110,7 @@ for (n, a, b) in CEKIMLER:
                 altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "birim": birim_bul(n, (w["s"] + w["e"]) / 2)})
         parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_ses.wav", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
         tl += (fb - fa) / FPS; zs += 1
-# kapanış kartı için konuşmasız kuyruk (çekim devam ediyor)
-KUYRUK = ("IMG_7287", 32.45, 33.65)
-fa, fb = int(np.floor(KUYRUK[1] * FPS)), int(np.ceil(KUYRUK[2] * FPS))
-parcalar.append({"src": f"{KUYRUK[0]}_dikey.mp4", "ses": f"{KUYRUK[0]}_ses.wav", "bas": fa / FPS, "kare": fb - fa, "zoom": False})
-tl_konusma = tl; tl += (fb - fa) / FPS
+# Video ses bitince biter (kuyruk yok)
 BZ = {}
 for k, *_ in BIRIMLER:
     ws = [w for w in altyazi if w["birim"] == k]
@@ -133,14 +129,17 @@ olaylar = [
     {"tip": "liste", "isaret": "carpi", "s": kz("problem", "elinde") - 0.05, "son": E("problem"), "ogeler": [["Ürün yok", kz("problem", "ürün")], ["Şirket yok", kz("problem", "şirketin")], ["Satış bilgisi yok", kz("problem", "satacağını")]]},
     {"tip": "baslik", "s": B("soru"), "son": E("soru"), "satir1": "BAŞLAYABİLİR MİYİM?", "satir2": "bunlara rağmen..."},
     {"tip": "baslik", "s": B("evet"), "son": E("evet") + 0.1, "satir1": "EVET!", "satir2": "başlayabilirsin", "buyuk": True},
-    {"tip": "rozet", "s": kz("etkinlik", "ankara"), "son": tl, "metin": "📍 ANKARA · 6 ARALIK · 100 KİŞİ"},
-    {"tip": "koltuk", "s": kz("etkinlik", "ankara") + 0.1, "son": E("etkinlik") + 0.1, "ust": "ANKARA E-TİCARET ETKİNLİĞİ", "baslik": "SADECE 100 KİŞİ", "fiyat": "250 TL"},
-    {"tip": "liste", "isaret": "carpi", "s": kz("nasil", "şirket") - 0.1, "son": E("nasil"), "ogeler": [["Şirket kurmadan", kz("nasil", "şirket")], ["Stok tutmadan", kz("nasil", "stok")]]},
+    {"tip": "rozet", "s": kz("etkinlik", "ankara"), "son": tl + 0.5, "metin": "📍 ANKARA · 6 ARALIK · 100 KİŞİ"},
+    {"tip": "broll_video", "s": kz("etkinlik", "biz") - 0.05, "son": kz("etkinlik", "etkinliği") - 0.1, "dosya": "broll/6372.mp4", "bas": 3.0, "top": 300, "yukseklik": 900},
+    {"tip": "koltuk", "s": kz("etkinlik", "etkinliği") - 0.1, "son": E("etkinlik") + 0.1, "ust": "ANKARA E-TİCARET ETKİNLİĞİ", "baslik": "SADECE 100 KİŞİ", "fiyat": "250 TL"},
+    {"tip": "liste", "isaret": "carpi", "s": kz("nasil", "şirket") - 0.1, "son": kz("nasil", "işi") - 0.25, "ogeler": [["Şirket kurmadan", kz("nasil", "şirket")], ["Stok tutmadan", kz("nasil", "stok")]]},
+    {"tip": "broll_video", "s": kz("nasil", "işi") - 0.25, "son": E("nasil"), "dosya": "broll/23200.mp4", "bas": 4.0, "top": 390, "yukseklik": 900, "etiket": "🛠️ Adım adım uygulama"},
     {"tip": "adimlar", "s": kz("yol", "etkinlik"), "son": E("yol"), "baslik": "NET YOL HARİTASI"},
     {"tip": "baslik", "s": B("cagri"), "son": kz("cagri", "şimdi") - 0.1, "satir1": "YERLER DOLMADAN", "satir2": "kontenjan 100 kişi"},
+    {"tip": "broll_video", "s": kz("cagri", "şimdi") - 0.1, "son": E("cagri") + 0.1, "dosya": "broll/41173.mp4", "bas": 2.0, "top": 300, "yukseklik": 660},
     {"tip": "cagri2", "s": kz("cagri", "şimdi") - 0.1, "son": E("cagri") + 0.1, "yorum_t": kz("cagri", "ankara"), "yorum": "Ankara"},
-    {"tip": "etkinlik", "s": B("tarih"), "son": E("tarih") + 0.05, "satirlar": [["📍", "COZONE · ODTÜ Teknokent", kz("tarih", "odtü")], ["📅", "6 Aralık Pazar", kz("tarih", "6")], ["🕑", "14.00 – 17.00", kz("tarih", "buluşalım")]], "alt": "🎟️ 250 TL · sadece 100 kişi"},
-    {"tip": "kapanis", "s": B("kapanis"), "son": tl, "satir1": "6 Aralık · 14.00", "satir2": "COZONE · ODTÜ Teknokent", "etiket": "SADECE 100 KİŞİ · 250 TL", "etiketRenk": "turuncu"},
+    {"tip": "etkinlik", "s": B("tarih"), "son": kz("tarih", "buluşalım") - 0.05, "satirlar": [["📍", "COZONE · ODTÜ Teknokent", kz("tarih", "odtü")], ["📅", "6 Aralık Pazar", kz("tarih", "6")], ["🕑", "14.00 – 17.00", kz("tarih", "aralık") + 0.3]], "alt": "🎟️ 250 TL · sadece 100 kişi"},
+    {"tip": "kapanis", "s": kz("tarih", "buluşalım") - 0.05, "son": tl + 0.5, "satir1": "6 Aralık · 14.00", "satir2": "COZONE · ODTÜ Teknokent", "etiket": "SADECE 100 KİŞİ · 250 TL", "etiketRenk": "turuncu"},
 ]
 vurgu = ["sıfırdan", "ürün", "şirketin", "satacağını", "rağmen", "evet", "başlayabilirsin", "ankara'da", "etkinliği", "kurmadan", "tutmadan", "adım",
          "net", "yol", "haritası", "gerçekten", "şimdi", "mesaj", "ankara", "odtü", "teknokent", "6", "aralık'ta"]

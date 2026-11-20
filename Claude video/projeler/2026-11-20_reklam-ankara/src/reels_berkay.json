@@ -100,13 +100,6 @@
    "bas": 31.7,
    "kare": 20,
    "zoom": false
-  },
-  {
-   "src": "IMG_7287_dikey.mp4",
-   "ses": "IMG_7287_ses.wav",
-   "bas": 32.43333333333333,
-   "kare": 37,
-   "zoom": false
   }
  ],
  "altyazi": [
@@ -693,12 +686,21 @@
   {
    "tip": "rozet",
    "s": 9.687,
-   "son": 31.200000000000003,
+   "son": 30.46666666666667,
    "metin": "📍 ANKARA · 6 ARALIK · 100 KİŞİ"
   },
   {
+   "tip": "broll_video",
+   "s": 9.376999999999999,
+   "son": 11.087,
+   "dosya": "broll/6372.mp4",
+   "bas": 3.0,
+   "top": 300,
+   "yukseklik": 900
+  },
+  {
    "tip": "koltuk",
-   "s": 9.786999999999999,
+   "s": 11.087,
    "son": 12.317,
    "ust": "ANKARA E-TİCARET ETKİNLİĞİ",
    "baslik": "SADECE 100 KİŞİ",
@@ -708,7 +710,7 @@
    "tip": "liste",
    "isaret": "carpi",
    "s": 13.38,
-   "son": 17.23,
+   "son": 14.89,
    "ogeler": [
     [
      "Şirket kurmadan",
@@ -719,6 +721,16 @@
      14.38
     ]
    ]
+  },
+  {
+   "tip": "broll_video",
+   "s": 14.89,
+   "son": 17.23,
+   "dosya": "broll/23200.mp4",
+   "bas": 4.0,
+   "top": 390,
+   "yukseklik": 900,
+   "etiket": "🛠️ Adım adım uygulama"
   },
   {
    "tip": "adimlar",
@@ -734,6 +746,15 @@
    "satir2": "kontenjan 100 kişi"
   },
   {
+   "tip": "broll_video",
+   "s": 24.232999999999997,
+   "son": 26.997,
+   "dosya": "broll/41173.mp4",
+   "bas": 2.0,
+   "top": 300,
+   "yukseklik": 660
+  },
+  {
    "tip": "cagri2",
    "s": 24.232999999999997,
    "son": 26.997,
@@ -743,7 +764,7 @@
   {
    "tip": "etkinlik",
    "s": 26.833,
-   "son": 29.3,
+   "son": 28.79,
    "satirlar": [
     [
      "📍",
@@ -758,15 +779,15 @@
     [
      "🕑",
      "14.00 – 17.00",
-     28.84
+     28.720000000000002
     ]
    ],
    "alt": "🎟️ 250 TL · sadece 100 kişi"
   },
   {
    "tip": "kapanis",
-   "s": 29.25,
-   "son": 31.200000000000003,
+   "s": 28.79,
+   "son": 30.46666666666667,
    "satir1": "6 Aralık · 14.00",
    "satir2": "COZONE · ODTÜ Teknokent",
    "etiket": "SADECE 100 KİŞİ · 250 TL",
@@ -798,5 +819,5 @@
   "6",
   "aralık'ta"
  ],
- "toplamKare": 936
+ "toplamKare": 899
 }

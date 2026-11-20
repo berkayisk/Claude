@@ -560,6 +560,33 @@ const Koltuk: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   );
 };
 
+
+// Gerçek stok B-roll (yatay 720p): arkada aynı videonun bulanık hali, önde keskin yuvarlak çerçeve (dikeye kırpıp bulanıklaştırmamak için)
+const BRollVideo: React.FC<{ o: Olay; sure: number; src: string }> = ({ o, sure, src }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const g = spring({ frame: f, fps, config: { damping: 18, stiffness: 160 } });
+  const cik = interpolate(f, [sure - 3, sure], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const zoom = interpolate(f, [0, sure], [1.0, 1.09]);
+  const bas = Math.round((o.bas ?? 0) * fps);
+  const W = 1000, H = o.yukseklik ?? 563, TOP = o.top ?? 400;
+  return (
+    <AbsoluteFill style={{ opacity: Math.min(interpolate(f, [0, 4], [0, 1], { extrapolateRight: "clamp" }), cik) }}>
+      <AbsoluteFill style={{ background: "#05070c" }} />
+      <OffthreadVideo src={src} startFrom={bas} muted style={{ position: "absolute", width: 1080 * 1.9, left: -1080 * 0.45, top: 0, height: 1920, objectFit: "cover", filter: "blur(36px) brightness(0.42) saturate(1.2)" }} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.6) 100%)" }} />
+      <div style={{ position: "absolute", left: (1080 - W) / 2, top: TOP, width: W, height: H, borderRadius: 34, overflow: "hidden", border: "2px solid rgba(255,255,255,0.22)", boxShadow: "0 30px 80px rgba(0,0,0,0.6)", transform: `translateY(${interpolate(g, [0, 1], [60, 0])}px) scale(${interpolate(g, [0, 1], [0.9, 1])})` }}>
+        <OffthreadVideo src={src} startFrom={bas} muted style={{ width: W, height: H, objectFit: "cover", transform: `scale(${zoom})` }} />
+      </div>
+      {o.etiket ? (
+        <div style={{ position: "absolute", top: TOP - 76, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: g }}>
+          <div style={{ ...cam, borderRadius: 40, padding: "10px 26px", fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "white", letterSpacing: 1 }}>{o.etiket}</div>
+        </div>
+      ) : null}
+    </AbsoluteFill>
+  );
+};
+
 const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
   const sure = Math.max(1, Math.round((o.son - o.s) * 30));
   const props = { o, sure };
@@ -586,6 +613,7 @@ const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "kapanis": return <KapanisKarti {...props} />;
     case "defter": return <Defter {...props} />;
     case "koltuk": return <Koltuk {...props} />;
+    case "broll_video": return <BRollVideo {...props} src={k.dosya(o.dosya)} />;
     default: return null;
   }
 };
@@ -617,7 +645,7 @@ const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "adimlar": [0, 1, 2].forEach((i) => e.push({ t: o.s + (4 + i * 9) / 30, ad: `blip${i + 1}`, v: 0.45 })); cikis(); break;
     case "sonraki": giris("cagri", 0.45); cikis("pop_cikis"); break;
     case "takipet": giris("pop", 0.35); e.push({ t: o.tik, ad: "tik", v: 0.7 }); e.push({ t: o.tik + 0.05, ad: "basari", v: 0.45 }); break;
-    case "broll_stok": case "broll_dropship": giris("broll", 0.5); cikis("whoosh_cikis", 0.3); break;
+    case "broll_stok": case "broll_dropship": case "broll_video": giris("broll", 0.5); cikis("whoosh_cikis", 0.3); break;
     case "sorucevap":
       o.ogeler.forEach((og: any[]) => e.push({ t: og[1], ad: "pop", v: 0.4 }));
       if (o.cevap) o.ogeler.forEach((_: any, i: number) => e.push({ t: o.cevap + (i * 5) / 30, ad: `onay${i + 1}`, v: 0.45 }));
@@ -718,7 +746,8 @@ export const Reels: React.FC<{ v: ReelsVeri; k: Kaynak }> = ({ v, k }) => {
     <Goruntu v={v} k={k} />
     {/* hafif sinematik karartma: alt ve üst */}
     <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 18%, rgba(0,0,0,0) 42%, rgba(0,0,0,0.55) 100%)" }} />
-    {v.olaylar.map((o, i) => (
+    {/* B-roll videolar önce (kartlar ve altyazı üstte kalsın) */}
+    {[...v.olaylar.filter((o) => o.tip === "broll_video"), ...v.olaylar.filter((o) => o.tip !== "broll_video")].map((o, i) => (
       <Sequence key={i} from={Math.round(o.s * 30)} durationInFrames={Math.max(1, Math.round((o.son - o.s) * 30))}>
         <OlayCiz o={o} k={k} />
       </Sequence>
