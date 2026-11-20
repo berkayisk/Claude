@@ -1,7 +1,7 @@
 # Yaşamfen marka rehberi
 
-- Sektör / ne satıyor:
-- Hedef kitle:
+- Sektör / ne satıyor: Eğitim kurumu (ortaokul, lise ve mezun seviyesi; muhtemelen LGS / YKS hazırlık — teyit edilecek)
+- Hedef kitle: Ortaokul ve lise öğrencileri, mezunlar (sınava hazırlanan) ve velileri
 - Ton (resmi / samimi / eğlenceli…):
 - Renkler (hex):
 - Fontlar:
