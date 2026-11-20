@@ -9,9 +9,14 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 4. Sonuçlar → `ciktilar/`
 5. Kararları ve ayarları `NOTLAR.md` dosyasına yaz.
 
-## Kanal stili (ÖNEMLİ)
+## İki ayrı iş kolu (ÖNEMLİ — karıştırma)
+1. **Sıfırdan Satışa kanal işleri** → `projeler/` + aşağıdaki kanal stili
+2. **Firma (müşteri) sosyal medya / reklam işleri** → `musteriler/<firma>/` + o firmanın `MARKA.md`'si. Kanal stili, Berkay Işık
+   marka dosyaları ve kanal tonu burada KULLANILMAZ. Ayrıntı: `musteriler/README.md`
+
+## Kanal stili (sadece Sıfırdan Satışa projeleri)
 Kullanıcının kendi kanal stili: `kanal-referanslari/yunus-emre-kocaoglu/STIL.md`
-Yeni videolarda, aksi söylenmedikçe bu stili (renkler, fontlar, "Az Sonra" fragmanı, alt bant, Abone Ol, bitiş ekranı) uygula.
+Kanal videolarında, aksi söylenmedikçe bu stili (renkler, fontlar, "Az Sonra" fragmanı, alt bant, Abone Ol, bitiş ekranı) uygula.
 Örnek kareler: `kanal-referanslari/yunus-emre-kocaoglu/kareler/`
 Marka dosyaları (jenerik, bitiş ekranı, İlk Ağızdan kartı, sunucu fotoğrafı): `marka/sifirdan-satisa/` → `MARKA.md`
 

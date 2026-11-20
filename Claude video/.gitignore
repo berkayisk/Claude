@@ -13,3 +13,8 @@ projeler/*/calisma/*
 !projeler/*/calisma/transkript.txt
 !projeler/*/calisma/transkript.json
 !marka/**/*.wav
+musteriler/*/projeler/*/girdiler/*
+musteriler/*/projeler/*/ciktilar/*
+musteriler/*/projeler/*/referanslar/*
+musteriler/*/projeler/*/calisma/*
+!musteriler/**/.gitkeep
