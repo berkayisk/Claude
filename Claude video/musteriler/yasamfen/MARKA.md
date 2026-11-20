@@ -13,4 +13,7 @@
 - Sosyal medya hesapları:
 - İletişim / CTA (telefon, web, DM, WhatsApp):
 - Yapılmayacaklar / dikkat edilecekler:
+  - ORTAOKUL ÖĞRENCİLERİNİN YÜZLERİ BLURLANIR (tüm Yaşamfen videoları). Varsayılan güvenli taraf: tüm yüzler blurlu,
+    sadece kullanıcının onayladığı kişiler (lise/mezun öğrenciler, hocalar) açık. Kimlik ayrımı için yüz kümeleme →
+    yüz paftası → kullanıcı seçer. Profil/arkası dönük/hızlı hareket karelerinde kare kare kontrol; şüphede blurla.
 - Referans içerikler:
