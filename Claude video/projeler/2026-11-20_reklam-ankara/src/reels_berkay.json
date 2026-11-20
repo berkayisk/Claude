@@ -693,8 +693,8 @@
    "tip": "broll_video",
    "s": 9.376999999999999,
    "son": 11.087,
-   "dosya": "broll/6372.mp4",
-   "bas": 3.0,
+   "dosya": "broll/IMG_5445.mp4",
+   "bas": 1.0,
    "top": 300,
    "yukseklik": 900
   },
@@ -726,11 +726,10 @@
    "tip": "broll_video",
    "s": 14.89,
    "son": 17.23,
-   "dosya": "broll/23200.mp4",
-   "bas": 4.0,
+   "dosya": "broll/IMG_0492.mp4",
+   "bas": 2.0,
    "top": 390,
-   "yukseklik": 900,
-   "etiket": "🛠️ Adım adım uygulama"
+   "yukseklik": 900
   },
   {
    "tip": "adimlar",
