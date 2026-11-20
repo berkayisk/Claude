@@ -151,8 +151,8 @@ const Yorumlar: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
 };
 
 const Baslik: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
-  const g1 = useGiris(0, 13);
-  const g2 = useGiris(8, 13);
+  const g1 = useGiris(o.anlik ? -20 : 0, 13);   // anlik: kanca ilk karede tam görünür
+  const g2 = useGiris(o.anlik ? -20 : 8, 13);
   const cik = useCikis(sure);
   return (
     <AbsoluteFill style={{ opacity: cik }}>
@@ -267,7 +267,7 @@ const Liste: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
           const gi = spring({ frame: f - gk, fps: 30, config: { damping: 12, stiffness: 200 } });
           return (
             <div key={i} style={{ display: "flex", alignItems: "center", gap: 18, opacity: Math.max(0.0, gi), transform: `translateX(${interpolate(gi, [0, 1], [-40, 0])}px)` }}>
-              <div style={{ width: 64, height: 64, borderRadius: 32, background: YESIL, color: "white", fontFamily: INTER, fontWeight: 800, fontSize: 32, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${interpolate(gi, [0, 1], [0.2, 1])})`, boxShadow: "0 0 18px rgba(46,212,122,0.6)" }}>✓</div>
+              <div style={{ width: 64, height: 64, borderRadius: 32, background: o.isaret === "carpi" ? KIRMIZI : YESIL, color: "white", fontFamily: INTER, fontWeight: 800, fontSize: 32, display: "flex", alignItems: "center", justifyContent: "center", transform: `scale(${interpolate(gi, [0, 1], [0.2, 1])})`, boxShadow: o.isaret === "carpi" ? "0 0 18px rgba(255,77,77,0.6)" : "0 0 18px rgba(46,212,122,0.6)" }}>{o.isaret === "carpi" ? "✕" : "✓"}</div>
               <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 54, color: "white" }}>{og[0]}</div>
             </div>
           );
@@ -471,7 +471,7 @@ const Cagri2: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   const cik = useCikis(sure);
   const yk = Math.round((o.yorum_t - o.s) * 30);
   const yg = spring({ frame: f - yk + 6, fps: 30, config: { damping: 12, stiffness: 190 } });
-  const yazi = "Eskişehir";
+  const yazi = o.yorum ?? "Eskişehir";
   const harf = Math.max(0, Math.min(yazi.length, Math.floor((f - yk + 4) / 1.6)));
   return (
     <div style={{ position: "absolute", top: KART_Y - 40, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 18, opacity: cik }}>
@@ -492,15 +492,66 @@ const Cagri2: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   );
 };
 
-const KapanisKarti: React.FC<{ o: Olay; sure: number }> = ({ sure }) => {
+const KapanisKarti: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   const g = useGiris(0, 12);
   const cik = useCikis(sure, 4);
   return (
     <div style={{ position: "absolute", top: KART_Y + 50, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
       <div style={{ ...cam, padding: "22px 36px", display: "flex", flexDirection: "column", alignItems: "center", gap: 6, transform: `scale(${interpolate(g, [0, 1], [0.8, 1])})`, borderTop: `6px solid ${RENK.turuncu}` }}>
-        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 56, color: "white" }}>28 Kasım · 14.00</div>
-        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 34, color: "rgba(255,255,255,0.85)" }}>Taşbaşı Kültür Merkezi · Odunpazarı</div>
-        <div style={{ marginTop: 8, fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "white", background: YESIL, borderRadius: 12, padding: "4px 18px" }}>KATILIM ÜCRETSİZ</div>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 56, color: "white" }}>{o.satir1 ?? "28 Kasım · 14.00"}</div>
+        <div style={{ fontFamily: INTER, fontWeight: 600, fontSize: 34, color: "rgba(255,255,255,0.85)" }}>{o.satir2 ?? "Taşbaşı Kültür Merkezi · Odunpazarı"}</div>
+        <div style={{ marginTop: 8, fontFamily: INTER, fontWeight: 800, fontSize: 34, color: "white", background: o.etiketRenk === "turuncu" ? RENK.turuncu : YESIL, borderRadius: 12, padding: "4px 18px" }}>{o.etiket ?? "KATILIM ÜCRETSİZ"}</div>
+      </div>
+    </div>
+  );
+};
+
+const Defter: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const g = useGiris(0, 12);
+  const cik = useCikis(sure);
+  const kapK = Math.round((o.kapat - o.s) * 30);
+  const kap = interpolate(f, [kapK - 4, kapK + 3], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.in(Easing.cubic) });
+  const dg = spring({ frame: f - kapK - 2, fps: 30, config: { damping: 9, stiffness: 220 } });
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 40, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
+      <div style={{ position: "relative", width: 520, height: 300, perspective: 1200, transform: `translateX(${130 * kap * 1.35}px) scale(${interpolate(g, [0, 1], [0.8, 1.35])})`, transformOrigin: "50% 0%" }}>
+        {/* sol sayfa (sabit) + sağ kapak (kapanır) */}
+        <div style={{ position: "absolute", left: 0, top: 0, width: 260, height: 300, background: "#f4efe2", borderRadius: "16px 0 0 16px", boxShadow: "0 18px 40px rgba(0,0,0,0.5)", padding: 26, boxSizing: "border-box" }}>
+          {[0, 1, 2, 3, 4, 5].map((i) => <div key={i} style={{ height: 6, background: "rgba(0,0,0,0.12)", borderRadius: 3, marginBottom: 28, width: `${90 - (i % 3) * 15}%` }} />)}
+        </div>
+        <div style={{ position: "absolute", left: 260, top: 0, width: 260, height: 300, transformOrigin: "0 50%", transform: `rotateY(${-180 * kap}deg)`, transformStyle: "preserve-3d", zIndex: 2 }}>
+          <div style={{ position: "absolute", inset: 0, background: "#f4efe2", borderRadius: "0 16px 16px 0", padding: 26, boxSizing: "border-box", backfaceVisibility: "hidden" }}>
+            <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, color: "#333" }}>E-TİCARET</div>
+            {[0, 1, 2, 3].map((i) => <div key={i} style={{ height: 6, background: "rgba(0,0,0,0.12)", borderRadius: 3, marginTop: 28, width: `${85 - i * 10}%` }} />)}
+          </div>
+          <div style={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${RENK.turuncu}, #b84600)`, borderRadius: "16px 0 0 16px", transform: "rotateY(180deg)", backfaceVisibility: "hidden", display: "flex", alignItems: "flex-start", paddingTop: 50, justifyContent: "center", fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "white" }}>{o.kapakYazi ?? "ANKARA"}</div>
+        </div>
+        {f >= kapK + 2 && <div style={{ position: "absolute", left: 0, width: 260, top: 160, display: "flex", justifyContent: "center", transform: `scale(${interpolate(dg, [0, 1], [2.4, 1])}) rotate(-8deg)`, opacity: dg, zIndex: 3 }}><div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 56, color: YESIL, background: "white", border: `8px solid ${YESIL}`, borderRadius: 16, padding: "4px 24px", boxShadow: "0 10px 30px rgba(0,0,0,0.4)" }}>{o.damga ?? "KAPANDI"}</div></div>}
+      </div>
+    </div>
+  );
+};
+
+const Koltuk: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
+  const f = useCurrentFrame();
+  const g = useGiris(0, 13);
+  const cik = useCikis(sure);
+  return (
+    <div style={{ position: "absolute", top: KART_Y - 50, left: 0, right: 0, display: "flex", justifyContent: "center", opacity: Math.min(g, cik) }}>
+      <div style={{ ...cam, padding: "22px 30px", display: "flex", flexDirection: "column", alignItems: "center", gap: 14, transform: `scale(${interpolate(g, [0, 1], [0.85, 1])})` }}>
+        <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 30, letterSpacing: 5, color: "rgba(255,255,255,0.8)" }}>{o.ust ?? "KONTENJAN"}</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(20, 28px)", gap: 7 }}>
+          {Array.from({ length: 100 }).map((_, i) => {
+            const k = 3 + i * 0.35;
+            const a = interpolate(f, [k, k + 4], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+            return <div key={i} style={{ width: 28, height: 24, boxSizing: "border-box", borderRadius: "8px 8px 4px 4px", border: `3px solid ${RENK.turuncu}`, background: "rgba(246,113,2,0.12)", opacity: a, transform: `scale(${0.4 + 0.6 * a})` }} />;
+          })}
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 60, color: "white", letterSpacing: -1 }}>{o.baslik ?? "SADECE 100 KİŞİ"}</div>
+          {o.fiyat ? <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 40, color: "white", background: RENK.turuncu, borderRadius: 12, padding: "4px 16px" }}>{o.fiyat}</div> : null}
+        </div>
       </div>
     </div>
   );
@@ -530,6 +581,8 @@ const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "davetiye": return <Davetiye {...props} />;
     case "cagri2": return <Cagri2 {...props} />;
     case "kapanis": return <KapanisKarti {...props} />;
+    case "defter": return <Defter {...props} />;
+    case "koltuk": return <Koltuk {...props} />;
     default: return null;
   }
 };
@@ -554,7 +607,7 @@ const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
       e.push({ t: o.ogeler[2][2] + 8 / 30, ad: "uyari", v: 0.35 }); cikis(); break;
     case "akis": giris("whoosh_giris", 0.35); e.push({ t: o.s + 14 / 30, ad: "pop", v: 0.35 }); cikis("pop_cikis"); break;
     case "liste":
-      o.ogeler.forEach((og: any[], i: number) => og[1] && e.push({ t: og[1], ad: `onay${i + 1}`, v: 0.45 }));
+      o.ogeler.forEach((og: any[], i: number) => og[1] && e.push({ t: og[1], ad: o.isaret === "carpi" ? "pop" : `onay${i + 1}`, v: 0.45 }));
       if (!o.ogeler[0][1]) giris("pop", 0.3);
       cikis(); break;
     case "panel": giris("arayuz", 0.45); cikis("pop_cikis"); break;
@@ -574,6 +627,8 @@ const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "davetiye": giris("baslik", 0.45); e.push({ t: o.s + 16 / 30, ad: "damga", v: 0.6 }); e.push({ t: o.s + 18 / 30, ad: "basari", v: 0.35 }); cikis(); break;
     case "cagri2": giris("pop", 0.4); e.push({ t: o.yorum_t - 0.2, ad: "bildirim", v: 0.35 }); e.push({ t: o.yorum_t + 0.4, ad: "tik", v: 0.6 }); cikis("pop_cikis"); break;
     case "kapanis": giris("cagri", 0.45); break;
+    case "defter": giris("pop", 0.35); e.push({ t: o.kapat, ad: "damga", v: 0.75 }); cikis(); break;
+    case "koltuk": giris("arayuz", 0.4); [0, 1, 2, 3].forEach((i) => e.push({ t: o.s + (3 + i * 9) / 30, ad: `blip${i + 1}`, v: 0.3 })); cikis(); break;
   }
   return (
     <>

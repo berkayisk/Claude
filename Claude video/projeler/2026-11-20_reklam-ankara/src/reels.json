@@ -1,0 +1,568 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "IMG_7278_dikey.mp4",
+   "ses": "IMG_7278_ses.wav",
+   "bas": 1.5666666666666667,
+   "kare": 60,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7279_dikey.mp4",
+   "ses": "IMG_7279_ses.wav",
+   "bas": 0.1,
+   "kare": 154,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7279_dikey.mp4",
+   "ses": "IMG_7279_ses.wav",
+   "bas": 5.433333333333334,
+   "kare": 35,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7280_dikey.mp4",
+   "ses": "IMG_7280_ses.wav",
+   "bas": 10.2,
+   "kare": 77,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7285_dikey.mp4",
+   "ses": "IMG_7285_ses.wav",
+   "bas": 10.3,
+   "kare": 130,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7285_dikey.mp4",
+   "ses": "IMG_7285_ses.wav",
+   "bas": 35.1,
+   "kare": 138,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7285_dikey.mp4",
+   "ses": "IMG_7285_ses.wav",
+   "bas": 39.7,
+   "kare": 42,
+   "zoom": false
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Ankara",
+   "s": 0.043,
+   "e": 0.373,
+   "birim": "kanca"
+  },
+  {
+   "w": "için",
+   "s": 0.373,
+   "e": 0.493,
+   "birim": "kanca"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 0.493,
+   "e": 0.953,
+   "birim": "kanca"
+  },
+  {
+   "w": "defterini",
+   "s": 0.953,
+   "e": 1.273,
+   "birim": "kanca"
+  },
+  {
+   "w": "kapatıyoruz.",
+   "s": 1.273,
+   "e": 1.753,
+   "birim": "kanca"
+  },
+  {
+   "w": "Şirket",
+   "s": 2.0,
+   "e": 2.42,
+   "birim": "vaat"
+  },
+  {
+   "w": "kurmadan,",
+   "s": 2.42,
+   "e": 2.82,
+   "birim": "vaat"
+  },
+  {
+   "w": "stok",
+   "s": 2.9,
+   "e": 3.16,
+   "birim": "vaat"
+  },
+  {
+   "w": "tutmadan",
+   "s": 3.16,
+   "e": 3.54,
+   "birim": "vaat"
+  },
+  {
+   "w": "ya",
+   "s": 3.54,
+   "e": 3.7,
+   "birim": "vaat"
+  },
+  {
+   "w": "da",
+   "s": 3.7,
+   "e": 3.8,
+   "birim": "vaat"
+  },
+  {
+   "w": "ürüne",
+   "s": 3.78,
+   "e": 4.0,
+   "birim": "vaat"
+  },
+  {
+   "w": "sermaye",
+   "s": 4.0,
+   "e": 4.46,
+   "birim": "vaat"
+  },
+  {
+   "w": "bağlamadan",
+   "s": 4.46,
+   "e": 4.86,
+   "birim": "vaat"
+  },
+  {
+   "w": "en",
+   "s": 4.86,
+   "e": 5.08,
+   "birim": "vaat"
+  },
+  {
+   "w": "kolay",
+   "s": 5.08,
+   "e": 5.34,
+   "birim": "vaat"
+  },
+  {
+   "w": "şekilde",
+   "s": 5.34,
+   "e": 5.68,
+   "birim": "vaat"
+  },
+  {
+   "w": "nasıl",
+   "s": 5.68,
+   "e": 5.82,
+   "birim": "vaat"
+  },
+  {
+   "w": "sıfırdan",
+   "s": 5.82,
+   "e": 6.24,
+   "birim": "vaat"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 6.24,
+   "e": 6.6,
+   "birim": "vaat"
+  },
+  {
+   "w": "yapabilirim",
+   "s": 6.6,
+   "e": 7.06,
+   "birim": "vaat"
+  },
+  {
+   "w": "bu",
+   "s": 7.033,
+   "e": 7.133,
+   "birim": "vaat"
+  },
+  {
+   "w": "toplantıda",
+   "s": 7.2,
+   "e": 7.64,
+   "birim": "vaat"
+  },
+  {
+   "w": "göreceksiniz.",
+   "s": 7.64,
+   "e": 8.12,
+   "birim": "vaat"
+  },
+  {
+   "w": "6",
+   "s": 8.34,
+   "e": 8.5,
+   "birim": "tarih"
+  },
+  {
+   "w": "Aralık",
+   "s": 8.5,
+   "e": 8.82,
+   "birim": "tarih"
+  },
+  {
+   "w": "Pazar",
+   "s": 8.82,
+   "e": 9.08,
+   "birim": "tarih"
+  },
+  {
+   "w": "günü",
+   "s": 9.08,
+   "e": 9.24,
+   "birim": "tarih"
+  },
+  {
+   "w": "ODTÜ",
+   "s": 9.24,
+   "e": 9.54,
+   "birim": "tarih"
+  },
+  {
+   "w": "Teknokent,",
+   "s": 9.54,
+   "e": 9.9,
+   "birim": "tarih"
+  },
+  {
+   "w": "COZONE'da",
+   "s": 9.96,
+   "e": 10.26,
+   "birim": "tarih"
+  },
+  {
+   "w": "buluşacağız.",
+   "s": 10.26,
+   "e": 10.66,
+   "birim": "tarih"
+  },
+  {
+   "w": "Sen",
+   "s": 10.867,
+   "e": 10.987,
+   "birim": "davet"
+  },
+  {
+   "w": "de",
+   "s": 10.987,
+   "e": 11.147,
+   "birim": "davet"
+  },
+  {
+   "w": "artık",
+   "s": 11.147,
+   "e": 11.307,
+   "birim": "davet"
+  },
+  {
+   "w": "defteri",
+   "s": 11.307,
+   "e": 11.667,
+   "birim": "davet"
+  },
+  {
+   "w": "kapat,",
+   "s": 11.667,
+   "e": 11.967,
+   "birim": "davet"
+  },
+  {
+   "w": "gel",
+   "s": 12.047,
+   "e": 12.167,
+   "birim": "davet"
+  },
+  {
+   "w": "sorularını",
+   "s": 12.137,
+   "e": 12.577,
+   "birim": "davet"
+  },
+  {
+   "w": "yüz",
+   "s": 12.577,
+   "e": 12.717,
+   "birim": "davet"
+  },
+  {
+   "w": "yüze",
+   "s": 12.717,
+   "e": 12.837,
+   "birim": "davet"
+  },
+  {
+   "w": "sor,",
+   "s": 12.837,
+   "e": 13.037,
+   "birim": "davet"
+  },
+  {
+   "w": "Ankara'da",
+   "s": 13.197,
+   "e": 13.557,
+   "birim": "davet"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 13.557,
+   "e": 14.017,
+   "birim": "davet"
+  },
+  {
+   "w": "başlamak",
+   "s": 14.017,
+   "e": 14.397,
+   "birim": "davet"
+  },
+  {
+   "w": "için",
+   "s": 14.397,
+   "e": 14.517,
+   "birim": "davet"
+  },
+  {
+   "w": "ilk",
+   "s": 14.517,
+   "e": 14.717,
+   "birim": "davet"
+  },
+  {
+   "w": "adımını",
+   "s": 14.717,
+   "e": 15.017,
+   "birim": "davet"
+  },
+  {
+   "w": "at.",
+   "s": 15.017,
+   "e": 15.197,
+   "birim": "davet"
+  },
+  {
+   "w": "Kontenjanlar",
+   "s": 15.2,
+   "e": 15.82,
+   "birim": "cagri"
+  },
+  {
+   "w": "sınırlı,",
+   "s": 15.82,
+   "e": 16.22,
+   "birim": "cagri"
+  },
+  {
+   "w": "yerler",
+   "s": 16.34,
+   "e": 16.66,
+   "birim": "cagri"
+  },
+  {
+   "w": "dolmadan",
+   "s": 16.66,
+   "e": 16.96,
+   "birim": "cagri"
+  },
+  {
+   "w": "yerini",
+   "s": 16.96,
+   "e": 17.2,
+   "birim": "cagri"
+  },
+  {
+   "w": "ayırtmak",
+   "s": 17.2,
+   "e": 17.48,
+   "birim": "cagri"
+  },
+  {
+   "w": "için",
+   "s": 17.48,
+   "e": 17.6,
+   "birim": "cagri"
+  },
+  {
+   "w": "bana",
+   "s": 17.6,
+   "e": 17.78,
+   "birim": "cagri"
+  },
+  {
+   "w": "mesaj",
+   "s": 17.78,
+   "e": 18.06,
+   "birim": "cagri"
+  },
+  {
+   "w": "atmayı",
+   "s": 18.06,
+   "e": 18.34,
+   "birim": "cagri"
+  },
+  {
+   "w": "veya",
+   "s": 18.34,
+   "e": 18.56,
+   "birim": "cagri"
+  },
+  {
+   "w": "yorumlara",
+   "s": 18.56,
+   "e": 18.92,
+   "birim": "cagri"
+  },
+  {
+   "w": "Ankara",
+   "s": 18.92,
+   "e": 19.16,
+   "birim": "cagri"
+  },
+  {
+   "w": "yazmayı",
+   "s": 19.16,
+   "e": 19.4,
+   "birim": "cagri"
+  },
+  {
+   "w": "unutma.",
+   "s": 19.4,
+   "e": 19.72,
+   "birim": "cagri"
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "s": 0.0,
+   "son": 0.9029999999999999,
+   "satir1": "ANKARA",
+   "satir2": "6 Aralık · sadece 100 kişi",
+   "buyuk": true,
+   "anlik": true
+  },
+  {
+   "tip": "defter",
+   "s": 0.9029999999999999,
+   "son": 2.153,
+   "kapat": 1.4229999999999998,
+   "kapakYazi": "ANKARA",
+   "damga": "KAPANDI"
+  },
+  {
+   "tip": "rozet",
+   "s": 2.003,
+   "son": 21.199999999999996,
+   "metin": "📍 ANKARA · 6 ARALIK · 100 KİŞİ"
+  },
+  {
+   "tip": "liste",
+   "isaret": "carpi",
+   "s": 1.9,
+   "son": 8.17,
+   "ogeler": [
+    [
+     "Şirket kurmadan",
+     2.0
+    ],
+    [
+     "Stok tutmadan",
+     2.9
+    ],
+    [
+     "Sermaye bağlamadan",
+     4.0
+    ]
+   ]
+  },
+  {
+   "tip": "etkinlik",
+   "s": 8.29,
+   "son": 10.860000000000001,
+   "satirlar": [
+    [
+     "📅",
+     "6 Aralık Pazar",
+     8.34
+    ],
+    [
+     "🕑",
+     "14.00 – 17.00",
+     8.82
+    ],
+    [
+     "📍",
+     "COZONE · ODTÜ Teknokent",
+     9.24
+    ]
+   ],
+   "alt": "🎟️ Katılım 250 TL"
+  },
+  {
+   "tip": "koltuk",
+   "s": 10.817,
+   "son": 15.347,
+   "ust": "KONTENJAN",
+   "baslik": "SADECE 100 KİŞİ",
+   "fiyat": "250 TL"
+  },
+  {
+   "tip": "baslik",
+   "s": 15.15,
+   "son": 16.91,
+   "satir1": "YERLER DOLMADAN",
+   "satir2": "kontenjan sınırlı"
+  },
+  {
+   "tip": "cagri2",
+   "s": 16.91,
+   "son": 19.9,
+   "yorum_t": 18.92,
+   "yorum": "Ankara"
+  },
+  {
+   "tip": "kapanis",
+   "s": 19.849999999999998,
+   "son": 21.199999999999996,
+   "satir1": "6 Aralık · 14.00",
+   "satir2": "COZONE · ODTÜ Teknokent",
+   "etiket": "SADECE 100 KİŞİ · 250 TL",
+   "etiketRenk": "turuncu"
+  }
+ ],
+ "vurgu": [
+  "ankara",
+  "defterini",
+  "kapatıyoruz",
+  "şirket",
+  "kurmadan",
+  "stok",
+  "tutmadan",
+  "sermaye",
+  "bağlamadan",
+  "sıfırdan",
+  "6",
+  "aralık",
+  "pazar",
+  "odtü",
+  "teknokent",
+  "defteri",
+  "kapat",
+  "yüz",
+  "yüze",
+  "ankara'da",
+  "ilk",
+  "adımını",
+  "kontenjanlar",
+  "sınırlı",
+  "dolmadan",
+  "mesaj"
+ ],
+ "toplamKare": 636
+}
