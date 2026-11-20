@@ -1,8 +1,10 @@
 import { Composition, staticFile } from "remotion";
 import veri from "./reels.json";
+import veriB from "./reels_berkay.json";
 import { Reels, ReelsVeri } from "../../../bilesenler/Reels";
 
 const v = veri as ReelsVeri;
+const vB = veriB as ReelsVeri;
 const k = {
   dosya: (ad: string) => staticFile(ad),
   foto: staticFile("berkay-isik-profil.png"),
@@ -11,6 +13,10 @@ const k = {
   kanal: "Sıfırdan Satışa",
 };
 const ReelsKomp: React.FC = () => <Reels v={v} k={k} />;
+const ReelsKompB: React.FC = () => <Reels v={vB} k={k} />;
 export const RemotionRoot: React.FC = () => (
+  <>
   <Composition id="ReklamAnkara" component={ReelsKomp} durationInFrames={v.toplamKare} fps={30} width={1080} height={1920} />
+  <Composition id="ReklamAnkaraBerkay" component={ReelsKompB} durationInFrames={vB.toplamKare} fps={30} width={1080} height={1920} />
+  </>
 );

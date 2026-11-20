@@ -1,0 +1,800 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "IMG_7286_dikey.mp4",
+   "ses": "IMG_7286_ses.wav",
+   "bas": 0.6,
+   "kare": 173,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 0.1,
+   "kare": 92,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 3.3666666666666667,
+   "kare": 92,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 6.433333333333334,
+   "kare": 25,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 7.533333333333333,
+   "kare": 115,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 11.566666666666666,
+   "kare": 39,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 13.066666666666666,
+   "kare": 81,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 15.766666666666667,
+   "kare": 59,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 18.1,
+   "kare": 25,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 19.933333333333334,
+   "kare": 69,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 22.466666666666665,
+   "kare": 76,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 29.133333333333333,
+   "kare": 40,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 30.5,
+   "kare": 33,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 31.7,
+   "kare": 20,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7287_dikey.mp4",
+   "ses": "IMG_7287_ses.wav",
+   "bas": 32.43333333333333,
+   "kare": 37,
+   "zoom": false
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Sıfırdan",
+   "s": 0.05,
+   "e": 0.42,
+   "birim": "problem"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 0.42,
+   "e": 0.88,
+   "birim": "problem"
+  },
+  {
+   "w": "başlamak",
+   "s": 0.88,
+   "e": 1.28,
+   "birim": "problem"
+  },
+  {
+   "w": "istiyorsun?",
+   "s": 1.28,
+   "e": 1.68,
+   "birim": "problem"
+  },
+  {
+   "w": "Ne",
+   "s": 1.8,
+   "e": 1.9,
+   "birim": "problem"
+  },
+  {
+   "w": "elinde",
+   "s": 1.86,
+   "e": 2.16,
+   "birim": "problem"
+  },
+  {
+   "w": "ürün",
+   "s": 2.16,
+   "e": 2.42,
+   "birim": "problem"
+  },
+  {
+   "w": "var,",
+   "s": 2.42,
+   "e": 2.64,
+   "birim": "problem"
+  },
+  {
+   "w": "ne",
+   "s": 2.76,
+   "e": 2.92,
+   "birim": "problem"
+  },
+  {
+   "w": "şirketin",
+   "s": 2.92,
+   "e": 3.42,
+   "birim": "problem"
+  },
+  {
+   "w": "var,",
+   "s": 3.42,
+   "e": 3.64,
+   "birim": "problem"
+  },
+  {
+   "w": "ne",
+   "s": 3.8,
+   "e": 4.1,
+   "birim": "problem"
+  },
+  {
+   "w": "de",
+   "s": 4.1,
+   "e": 4.24,
+   "birim": "problem"
+  },
+  {
+   "w": "nasıl",
+   "s": 4.24,
+   "e": 4.52,
+   "birim": "problem"
+  },
+  {
+   "w": "satacağını",
+   "s": 4.52,
+   "e": 5.02,
+   "birim": "problem"
+  },
+  {
+   "w": "biliyorsun.",
+   "s": 5.02,
+   "e": 5.38,
+   "birim": "problem"
+  },
+  {
+   "w": "Peki",
+   "s": 5.767,
+   "e": 5.927,
+   "birim": "soru"
+  },
+  {
+   "w": "bunlara",
+   "s": 5.927,
+   "e": 6.267,
+   "birim": "soru"
+  },
+  {
+   "w": "rağmen",
+   "s": 6.267,
+   "e": 6.507,
+   "birim": "soru"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 6.507,
+   "e": 6.967,
+   "birim": "soru"
+  },
+  {
+   "w": "başlayabilir",
+   "s": 6.967,
+   "e": 7.507,
+   "birim": "soru"
+  },
+  {
+   "w": "miyim",
+   "s": 7.507,
+   "e": 7.687,
+   "birim": "soru"
+  },
+  {
+   "w": "diye",
+   "s": 7.687,
+   "e": 7.847,
+   "birim": "soru"
+  },
+  {
+   "w": "düşünüp",
+   "s": 7.847,
+   "e": 8.247,
+   "birim": "soru"
+  },
+  {
+   "w": "duruyorsun.",
+   "s": 8.247,
+   "e": 8.627,
+   "birim": "soru"
+  },
+  {
+   "w": "Evet",
+   "s": 8.833,
+   "e": 8.987,
+   "birim": "evet"
+  },
+  {
+   "w": "başlayabilirsin.",
+   "s": 8.987,
+   "e": 9.727,
+   "birim": "evet"
+  },
+  {
+   "w": "Biz",
+   "s": 9.927,
+   "e": 10.067,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "de",
+   "s": 10.067,
+   "e": 10.187,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "Ankara'da",
+   "s": 10.187,
+   "e": 10.667,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "bununla",
+   "s": 10.667,
+   "e": 10.947,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "ilgili",
+   "s": 10.947,
+   "e": 11.147,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "bir",
+   "s": 11.147,
+   "e": 11.287,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "e-ticaret",
+   "s": 11.287,
+   "e": 11.687,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "etkinliği",
+   "s": 11.687,
+   "e": 11.9,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "düzenliyoruz.",
+   "s": 12.107,
+   "e": 12.667,
+   "birim": "etkinlik"
+  },
+  {
+   "w": "Sıfırdan",
+   "s": 12.733,
+   "e": 13.12,
+   "birim": "nasil"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 13.12,
+   "e": 13.58,
+   "birim": "nasil"
+  },
+  {
+   "w": "başlarken",
+   "s": 13.58,
+   "e": 13.98,
+   "birim": "nasil"
+  },
+  {
+   "w": "şirket",
+   "s": 13.98,
+   "e": 14.44,
+   "birim": "nasil"
+  },
+  {
+   "w": "kurmadan,",
+   "s": 14.44,
+   "e": 14.8,
+   "birim": "nasil"
+  },
+  {
+   "w": "stok",
+   "s": 14.88,
+   "e": 15.1,
+   "birim": "nasil"
+  },
+  {
+   "w": "tutmadan",
+   "s": 15.1,
+   "e": 15.48,
+   "birim": "nasil"
+  },
+  {
+   "w": "bu",
+   "s": 15.48,
+   "e": 15.64,
+   "birim": "nasil"
+  },
+  {
+   "w": "işi",
+   "s": 15.64,
+   "e": 15.8,
+   "birim": "nasil"
+  },
+  {
+   "w": "nasıl",
+   "s": 15.8,
+   "e": 15.98,
+   "birim": "nasil"
+  },
+  {
+   "w": "yaparsın",
+   "s": 15.98,
+   "e": 16.48,
+   "birim": "nasil"
+  },
+  {
+   "w": "adım",
+   "s": 16.567,
+   "e": 16.78,
+   "birim": "nasil"
+  },
+  {
+   "w": "adım",
+   "s": 16.78,
+   "e": 16.9,
+   "birim": "nasil"
+  },
+  {
+   "w": "gösteriyor",
+   "s": 16.9,
+   "e": 17.38,
+   "birim": "nasil"
+  },
+  {
+   "w": "olacağız.",
+   "s": 17.38,
+   "e": 17.68,
+   "birim": "nasil"
+  },
+  {
+   "w": "Aynı",
+   "s": 17.867,
+   "e": 18.06,
+   "birim": "yol"
+  },
+  {
+   "w": "zamanda",
+   "s": 18.06,
+   "e": 18.42,
+   "birim": "yol"
+  },
+  {
+   "w": "etkinlik",
+   "s": 18.42,
+   "e": 18.82,
+   "birim": "yol"
+  },
+  {
+   "w": "sona",
+   "s": 18.82,
+   "e": 19.14,
+   "birim": "yol"
+  },
+  {
+   "w": "erdiğinde",
+   "s": 19.14,
+   "e": 19.48,
+   "birim": "yol"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 19.48,
+   "e": 20.1,
+   "birim": "yol"
+  },
+  {
+   "w": "başlamakla",
+   "s": 20.1,
+   "e": 20.567,
+   "birim": "yol"
+  },
+  {
+   "w": "ilgili",
+   "s": 20.62,
+   "e": 20.86,
+   "birim": "yol"
+  },
+  {
+   "w": "elinde",
+   "s": 20.86,
+   "e": 21.22,
+   "birim": "yol"
+  },
+  {
+   "w": "net",
+   "s": 21.22,
+   "e": 21.4,
+   "birim": "yol"
+  },
+  {
+   "w": "bir",
+   "s": 21.4,
+   "e": 21.52,
+   "birim": "yol"
+  },
+  {
+   "w": "yol",
+   "s": 21.52,
+   "e": 21.66,
+   "birim": "yol"
+  },
+  {
+   "w": "haritası",
+   "s": 21.66,
+   "e": 21.92,
+   "birim": "yol"
+  },
+  {
+   "w": "olmuş",
+   "s": 21.92,
+   "e": 22.12,
+   "birim": "yol"
+  },
+  {
+   "w": "olacak.",
+   "s": 22.12,
+   "e": 22.46,
+   "birim": "yol"
+  },
+  {
+   "w": "Sen",
+   "s": 22.533,
+   "e": 22.693,
+   "birim": "cagri"
+  },
+  {
+   "w": "de",
+   "s": 22.693,
+   "e": 22.813,
+   "birim": "cagri"
+  },
+  {
+   "w": "eğer",
+   "s": 22.813,
+   "e": 22.933,
+   "birim": "cagri"
+  },
+  {
+   "w": "gerçekten",
+   "s": 23.383,
+   "e": 24.213,
+   "birim": "cagri"
+  },
+  {
+   "w": "e-ticarete",
+   "s": 24.213,
+   "e": 24.753,
+   "birim": "cagri"
+  },
+  {
+   "w": "başlamak",
+   "s": 24.753,
+   "e": 25.113,
+   "birim": "cagri"
+  },
+  {
+   "w": "istiyorsan",
+   "s": 25.113,
+   "e": 25.593,
+   "birim": "cagri"
+  },
+  {
+   "w": "şimdi",
+   "s": 25.667,
+   "e": 25.92,
+   "birim": "cagri"
+  },
+  {
+   "w": "bana",
+   "s": 25.92,
+   "e": 26.12,
+   "birim": "cagri"
+  },
+  {
+   "w": "mesaj",
+   "s": 26.12,
+   "e": 26.48,
+   "birim": "cagri"
+  },
+  {
+   "w": "at",
+   "s": 26.48,
+   "e": 26.62,
+   "birim": "cagri"
+  },
+  {
+   "w": "veya",
+   "s": 26.62,
+   "e": 26.9,
+   "birim": "cagri"
+  },
+  {
+   "w": "yorumlara",
+   "s": 26.9,
+   "e": 27.44,
+   "birim": "cagri"
+  },
+  {
+   "w": "Ankara",
+   "s": 27.44,
+   "e": 27.96,
+   "birim": "cagri"
+  },
+  {
+   "w": "yaz.",
+   "s": 27.96,
+   "e": 28.18,
+   "birim": "cagri"
+  },
+  {
+   "w": "ODTÜ",
+   "s": 28.217,
+   "e": 28.447,
+   "birim": "tarih"
+  },
+  {
+   "w": "Teknokent,",
+   "s": 28.447,
+   "e": 28.927,
+   "birim": "tarih"
+  },
+  {
+   "w": "COZONE'da",
+   "s": 28.967,
+   "e": 29.467,
+   "birim": "tarih"
+  },
+  {
+   "w": "6",
+   "s": 29.533,
+   "e": 29.753,
+   "birim": "tarih"
+  },
+  {
+   "w": "Aralık'ta",
+   "s": 29.753,
+   "e": 30.173,
+   "birim": "tarih"
+  },
+  {
+   "w": "buluşalım.",
+   "s": 30.173,
+   "e": 30.533,
+   "birim": "tarih"
+  },
+  {
+   "w": "Görüşmek",
+   "s": 30.633,
+   "e": 30.943,
+   "birim": "kapanis"
+  },
+  {
+   "w": "üzere.",
+   "s": 30.943,
+   "e": 31.203,
+   "birim": "kapanis"
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "s": 0.0,
+   "son": 1.76,
+   "satir1": "ANKARA",
+   "satir2": "6 Aralık · sadece 100 kişi",
+   "buyuk": true,
+   "anlik": true
+  },
+  {
+   "tip": "liste",
+   "isaret": "carpi",
+   "s": 1.81,
+   "son": 5.43,
+   "ogeler": [
+    [
+     "Ürün yok",
+     2.16
+    ],
+    [
+     "Şirket yok",
+     2.92
+    ],
+    [
+     "Satış bilgisi yok",
+     4.52
+    ]
+   ]
+  },
+  {
+   "tip": "baslik",
+   "s": 5.717,
+   "son": 8.677,
+   "satir1": "BAŞLAYABİLİR MİYİM?",
+   "satir2": "bunlara rağmen..."
+  },
+  {
+   "tip": "baslik",
+   "s": 8.783,
+   "son": 9.876999999999999,
+   "satir1": "EVET!",
+   "satir2": "başlayabilirsin",
+   "buyuk": true
+  },
+  {
+   "tip": "rozet",
+   "s": 10.187,
+   "son": 32.53333333333333,
+   "metin": "📍 ANKARA · 6 ARALIK · 100 KİŞİ"
+  },
+  {
+   "tip": "koltuk",
+   "s": 10.286999999999999,
+   "son": 12.817,
+   "ust": "ANKARA E-TİCARET ETKİNLİĞİ",
+   "baslik": "SADECE 100 KİŞİ",
+   "fiyat": "250 TL"
+  },
+  {
+   "tip": "liste",
+   "isaret": "carpi",
+   "s": 13.88,
+   "son": 17.73,
+   "ogeler": [
+    [
+     "Şirket kurmadan",
+     13.98
+    ],
+    [
+     "Stok tutmadan",
+     14.88
+    ]
+   ]
+  },
+  {
+   "tip": "adimlar",
+   "s": 18.42,
+   "son": 22.51,
+   "baslik": "NET YOL HARİTASI"
+  },
+  {
+   "tip": "baslik",
+   "s": 22.483,
+   "son": 25.567,
+   "satir1": "YERLER DOLMADAN",
+   "satir2": "kontenjan 100 kişi"
+  },
+  {
+   "tip": "cagri2",
+   "s": 25.567,
+   "son": 28.330000000000002,
+   "yorum_t": 27.44,
+   "yorum": "Ankara"
+  },
+  {
+   "tip": "etkinlik",
+   "s": 28.167,
+   "son": 30.633,
+   "satirlar": [
+    [
+     "📍",
+     "COZONE · ODTÜ Teknokent",
+     28.217
+    ],
+    [
+     "📅",
+     "6 Aralık Pazar",
+     29.533
+    ],
+    [
+     "🕑",
+     "14.00 – 17.00",
+     30.173
+    ]
+   ],
+   "alt": "🎟️ 250 TL · sadece 100 kişi"
+  },
+  {
+   "tip": "kapanis",
+   "s": 30.583,
+   "son": 32.53333333333333,
+   "satir1": "6 Aralık · 14.00",
+   "satir2": "COZONE · ODTÜ Teknokent",
+   "etiket": "SADECE 100 KİŞİ · 250 TL",
+   "etiketRenk": "turuncu"
+  }
+ ],
+ "vurgu": [
+  "sıfırdan",
+  "ürün",
+  "şirketin",
+  "satacağını",
+  "rağmen",
+  "evet",
+  "başlayabilirsin",
+  "ankara'da",
+  "etkinliği",
+  "kurmadan",
+  "tutmadan",
+  "adım",
+  "net",
+  "yol",
+  "haritası",
+  "gerçekten",
+  "şimdi",
+  "mesaj",
+  "ankara",
+  "odtü",
+  "teknokent",
+  "6",
+  "aralık'ta"
+ ],
+ "toplamKare": 976
+}
