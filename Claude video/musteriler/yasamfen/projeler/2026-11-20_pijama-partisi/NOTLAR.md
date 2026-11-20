@@ -30,3 +30,6 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
   wipe, glitch, spin vb. YOK. Konuşma içi kesmeler düz kesme (jump cut) kalır; geçiş sadece sahne/bölüm değişiminde.
 - B-roll: çekimde B-roll olarak kullanılabilecek çok görüntü var → önce tüm hamlar sınıflandırılıp
   `calisma/broll_katalog` (dosya, zaman aralığı, içerik, kalite) çıkarılacak; konuşma üstü ve geçişlerde kullanılacak.
+- Zoom: gerektiğinde zoom-in / zoom-out kullan. Vurgu anında (punchline, cevap açıklanması, tepki) hızlı ama
+  yumuşak (easing) punch-in ~%110–120; jump cut'ları gizlemek için kesme başına dönüşümlü hafif ölçek farkı;
+  B-roll'da yavaş Ken Burns. Her cümlede değil, anlamlı anlarda. 4K kaynak → zoomda kalite kaybı yok.
