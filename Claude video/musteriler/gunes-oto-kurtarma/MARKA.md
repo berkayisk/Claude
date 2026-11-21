@@ -13,7 +13,8 @@
 - Fontlar: logoda kalın, eğik (italik), geniş blok başlık + kalın sans alt yazı. Yakın Google Fonts: başlık için Russo One / Saira Condensed ExtraBold Italic, metin için Montserrat ExtraBold (kesinleşmedi)
 - Logo dosyaları: marka/logo.png (2172×724, şeffaf zeminli PNG; logo siyah konturlu, koyu VE açık zeminde kullanılabilir). Logoda sarı çekici kasasında beyaz TIR çekici var; slogan "AĞIR TİCARİ OTO KURTARMA"
 - Araç / iş fotoğrafları ve videoları: marka/
-- Sosyal medya hesapları: ?
+- Sosyal medya: Instagram @gunesforkliftotokurtarma
+- Web: gunesforkliftotokurtarma.com
 - İletişim / CTA: Telefon + WhatsApp 0544 397 87 96 (videoda bu biçimde yaz; WhatsApp linki wa.me/905443978796)
 - 7/24 hizmet var mı: ?
 - Yapılmayacaklar / dikkat edilecekler: Binek araç çekici görselleri/ifadeleri kullanılmaz (iş ağır ticari kurtarma). Sıfırdan Satışa kanal stili, turuncu tema, "babalar gibi" tonu KULLANILMAZ.
