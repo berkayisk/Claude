@@ -14,7 +14,7 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | # | Video | Composition | Durum |
 |---|-------|-------------|-------|
 | 1 | Etkinlik genel video | Genel | ham bekleniyor |
-| 2 | Bilgi yarışması #1 | Yarisma1 | ham bekleniyor |
+| 2 | Bilgi yarışması #1 | Yarisma1 | taslak gönderildi (82 sn) |
 | 3 | Bilgi yarışması #2 | Yarisma2 | ham bekleniyor |
 | 4 | Vampir köylü #1 | Vampir1 | ham bekleniyor |
 | 5 | Vampir köylü #2 | Vampir2 | ham bekleniyor |
