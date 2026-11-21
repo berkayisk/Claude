@@ -19,6 +19,9 @@ rec = cv2.FaceRecognizerSF.create(hf_hub_download("opencv/face_recognition_sface
 K = json.load(open("calisma/yuz/kisiler.json"))["kisiler"]
 M = np.array([k["merkez"] for k in K], np.float32); NO = [k["no"] for k in K]
 KLIP = {k["no"]: set(k["dosyalar"]) for k in K}   # kişi hangi kliplerde kümelendi
+for grup in [(59, 62)]:   # aynı kişinin farklı kümeleri (pembe göz bantlı küçük kız: önden / profil)
+    birlesik = set().union(*(KLIP[g] for g in grup))
+    for g in grup: KLIP[g] = birlesik
 kural = json.load(open("calisma/yuz/blur.json")) if os.path.exists("calisma/yuz/blur.json") else {"acik": [], "varsayilan": "blur"}
 ACIK = set(kural.get("acik", [])); BLUR = set(kural.get("blur", [])); VARS = kural.get("varsayilan", "blur")
 os.makedirs("girdiler/vekil", exist_ok=True); os.makedirs("calisma/yuz/iz", exist_ok=True)
