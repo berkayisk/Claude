@@ -33,3 +33,8 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 - Zoom: gerektiğinde zoom-in / zoom-out kullan. Vurgu anında (punchline, cevap açıklanması, tepki) hızlı ama
   yumuşak (easing) punch-in ~%110–120; jump cut'ları gizlemek için kesme başına dönüşümlü hafif ölçek farkı;
   B-roll'da yavaş Ken Burns. Her cümlede değil, anlamlı anlarda. 4K kaynak → zoomda kalite kaybı yok.
+
+## Oyun grafikleri (kullanıcı, 2026-11-21)
+- Bilgi yarışması: sayaç, soru kartı, doğru cevap kartı (+ gerekirse yanlış/süre bitti)
+- Vampir köylü: rol kartları (vampir, doktor, köylü, …), gece/gündüz bandı, elendi damgası
+- Bileşenler: `musteriler/yasamfen/bilesenler/OyunGrafikleri.tsx` (marka renkleri; doğru=yeşil anlamsal istisna)

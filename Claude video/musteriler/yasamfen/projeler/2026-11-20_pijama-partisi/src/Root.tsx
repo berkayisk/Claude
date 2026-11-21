@@ -1,15 +1,11 @@
 import { Composition } from "remotion";
-import { Video } from "./Video";
+import { Onizleme, ONIZLEME_SURE } from "./Onizleme";
 
 export const RemotionRoot: React.FC = () => {
   return (
-    <Composition
-      id="Video"
-      component={Video}
-      durationInFrames={150}
-      fps={30}
-      width={1920}
-      height={1080}
-    />
+    <>
+      {/* Grafik önizlemesi (ham çekim gelmeden önce) */}
+      <Composition id="Onizleme" component={Onizleme} durationInFrames={ONIZLEME_SURE} fps={30} width={1080} height={1920} />
+    </>
   );
 };
