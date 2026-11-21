@@ -18,6 +18,8 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | 3 | Bilgi yarışması #2 | Yarisma2 | ham bekleniyor |
 | 4 | Vampir köylü #1 | Vampir1 | ham bekleniyor |
 | 5 | Vampir köylü #2 | Vampir2 | ham bekleniyor |
+| 6 | Pijama kombinleri (ekstra) | Kombin | ham bekleniyor |
+| 7 | Hocalar ne dedi (ekstra) | Hocalar | ham bekleniyor |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
@@ -66,3 +68,5 @@ Ayrıntı: `calisma/katalog.json` (süre, ses, tür), kare şeritleri `calisma/s
 - #8, #40, #50 VAMPİR (#8 kırmızı kazaklı hanım, #40 genç erkek, #50 kıvırcık saçlı kız)
 - Diğer vampir(ler) ve soytarı/deli bilinmiyor (oyunda 4 vampir seçildi) — sorulacak
 - Blur listesi kullanıcıdan ayrıca gelecek (açık kalanlar değil, blurlanacaklar yazılacak)
+- Soytarı kim bilinmiyor → soytarı rol kartı kişiye bağlanmaz (sadece rol tanıtımında). 4. vampir boşver.
+- Blur tarzı: YUMUŞAK BLUR (gaussian, kenarı yumuşak oval). Ekstra videolar ONAYLANDI: kombin geçidi + hocalar ne dedi.
