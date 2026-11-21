@@ -40,7 +40,7 @@ const Sfx: React.FC<{ ad: string; kare?: number; ses?: number }> = ({ ad, kare =
 // ───────────────────────── BİLGİ YARIŞMASI ─────────────────────────
 
 export type SoruProps = {
-  no: number;
+  no: number | string;
   toplam?: number;
   soru: string;
   siklar?: string[]; // en fazla 4
@@ -61,7 +61,7 @@ export const SoruKarti: React.FC<SoruProps> = ({ no, toplam, soru, siklar = [], 
       <div style={{ position: "absolute", top: y, left: 70, right: 70, transform: `scale(${olcek})`, opacity: opak, transformOrigin: "50% 0%" }}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: -34, position: "relative", zIndex: 2 }}>
           <div style={{ background: YF.kirmizi, color: YF.beyaz, fontFamily: YF.baslik, fontWeight: 900, fontSize: 44, letterSpacing: 4, padding: "14px 40px", borderRadius: 999, boxShadow: golge }}>
-            SORU {no}{toplam ? <span style={{ fontWeight: 600, opacity: 0.8 }}> / {toplam}</span> : null}
+            {typeof no === "string" ? no : `SORU ${no}`}{toplam && typeof no !== "string" ? <span style={{ fontWeight: 600, opacity: 0.8 }}> / {toplam}</span> : null}
           </div>
         </div>
         <div style={{ background: YF.beyaz, borderRadius: 40, padding: "70px 56px 48px", boxShadow: golge, borderBottom: `10px solid ${YF.kirmizi}` }}>
@@ -158,11 +158,12 @@ export const CevapKarti: React.FC<CevapProps> = ({ cevap, baslik, dogruMu = true
 
 // ───────────────────────── VAMPİR KÖYLÜ ─────────────────────────
 
-export type Rol = "vampir" | "doktor" | "koylu" | "gozcu";
+export type Rol = "vampir" | "doktor" | "koylu" | "gozcu" | "soytari";
 const ROLLER: Record<Rol, { ad: string; emoji: string; aciklama: string; zemin: string; yazi: string; vurgu: string }> = {
   vampir: { ad: "VAMPİR", emoji: "🧛", aciklama: "Geceleri köylüleri avlar", zemin: "linear-gradient(160deg,#3A0606 0%,#140000 100%)", yazi: YF.beyaz, vurgu: YF.kirmiziAcik },
   doktor: { ad: "DOKTOR", emoji: "🩺", aciklama: "Her gece bir kişiyi kurtarır", zemin: "linear-gradient(160deg,#FFFFFF 0%,#E9F5F1 100%)", yazi: YF.antrasit, vurgu: "#14967A" },
   koylu: { ad: "KÖYLÜ", emoji: "🧑‍🌾", aciklama: "Vampiri bul, köyü kurtar", zemin: "linear-gradient(160deg,#FFF6E6 0%,#F4E2C2 100%)", yazi: YF.antrasit, vurgu: "#B5651D" },
+  soytari: { ad: "SOYTARI", emoji: "🃏", aciklama: "Kendini astırırsa kazanır", zemin: "linear-gradient(160deg,#FFF3C4 0%,#FFD45C 100%)", yazi: YF.antrasit, vurgu: "#7A3DB8" },
   gozcu: { ad: "GÖZCÜ", emoji: "🔮", aciklama: "Her gece birinin rolünü öğrenir", zemin: "linear-gradient(160deg,#241A3D 0%,#0E0A1C 100%)", yazi: YF.beyaz, vurgu: "#9C7BFF" },
 };
 

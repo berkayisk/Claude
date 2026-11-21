@@ -15,6 +15,7 @@ export type Parca = {
   odak?: [number, number]; // zoom merkezi (0–1)
   gecis?: "yumusak" | "beyaz" | "siyah"; // parça başında sade geçiş
   sessiz?: boolean; // B-roll: ses yok
+  kaplama?: { src: string; bas: number; kare: number; sure: number; zoom?: [number, number] }[]; // konuşma sürerken üstte B-roll (parça içi kare)
 };
 export type Kelime = { w: string; s: number; e: number };
 export type Olay = { tip: string; s: number; son: number; [k: string]: any };
@@ -31,6 +32,21 @@ export type KurguVeri = {
 };
 
 const kl = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+// ───────── Konuşma üstü B-roll ─────────
+const Kaplama: React.FC<{ k: NonNullable<Parca["kaplama"]>[number] }> = ({ k }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const [z0, z1] = k.zoom ?? [1.04, 1.12];
+  const o = interpolate(f, [0, 5, k.sure - 5, k.sure], [0, 1, 1, 0], kl);
+  return (
+    <AbsoluteFill style={{ opacity: o, overflow: "hidden" }}>
+      <AbsoluteFill style={{ transform: `scale(${interpolate(f, [0, k.sure], [z0, z1], kl)})` }}>
+        <OffthreadVideo src={staticFile(k.src)} startFrom={Math.round(k.bas * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
 
 // ───────── Arka plan parçası ─────────
 const ParcaGorunum: React.FC<{ p: Parca }> = ({ p }) => {
@@ -55,6 +71,11 @@ const ParcaGorunum: React.FC<{ p: Parca }> = ({ p }) => {
       <AbsoluteFill style={{ transform: `scale(${olcek * ek})`, transformOrigin: `${ox * 100}% ${oy * 100}%`, filter: blur > 0.2 ? `blur(${blur}px)` : undefined }}>
         <OffthreadVideo src={staticFile(p.src)} startFrom={Math.round(p.bas * fps)} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
       </AbsoluteFill>
+      {(p.kaplama ?? []).map((k, i) => (
+        <Sequence key={i} from={k.kare} durationInFrames={k.sure} layout="none">
+          <Kaplama k={k} />
+        </Sequence>
+      ))}
       {ortu > 0 && <AbsoluteFill style={{ backgroundColor: ortuRenk, opacity: ortu * 0.85 }} />}
       {!p.sessiz && p.ses && (
         <Audio src={staticFile(p.ses)} startFrom={Math.round(p.bas * fps)} endAt={Math.round(p.bas * fps) + p.kare}
