@@ -103,6 +103,12 @@ def _isle(no, src, out):
                     if d < 1.6 * max(b[2], b2[2]) and d < enm: en, enm = t, d
         if en is not None:
             iz["blur"] = en["blur"]; iz["kim"] = f"={en['kim']}"
+    # Akşam/röportaj klipleri (>7392): yalnızca BU klipte gerçekten kümelenmiş blur-listesi kişileri blurlanır; geri kalan herkes açık.
+    # (Loş ışık / yakın çekimde hocalar çocuklara benzetiliyordu.)
+    if int(no) > kural.get("bilinmeyen_blur_klip_ust", 7392):
+        for iz in plan:
+            k = str(iz["kim"]).lstrip("~=")
+            iz["blur"] = k.isdigit() and int(k) in BLUR and f"IMG_{no}.MOV" in KLIP.get(int(k), ())
     sb = kural.get("sadece_blur", {}).get(str(no))
     if sb is not None:   # bu klipte yalnızca belirtilen kişiler blurlanır
         for iz in plan:

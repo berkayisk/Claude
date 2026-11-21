@@ -104,3 +104,6 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
   Matematik: çarpan (İS, yanlış), kök (PPG, doğru — turun tek doğrusu), EKOK (İS, yanlış).
 - Kombin geri bildirimi: kombin çekimlerinde (7380–7392) BLUR YOK — rastgele desen tespitleri, örümcek adam maskesi, arka odadaki hocalar,
   kıyafetteki ayıcık gereksiz blurlanmıştı. blur.json "blursuz_klipler" ile vekil blursuz üretildi (Genel/Hocalar'daki kombin anları da).
+- Akşam blur hatası (Hocalar/Vampir #2 ilk render, gönderilmedi): loş ışık ve yakın çekimde hocalar (#8 kırmızı kazak vb.) yarışma
+  öğrencilerine (#28, #59…) benzetilip blurlanıyordu. Kural: >7392 kliplerde yalnızca O KLİPTE kümelenmiş blur-listesi kişileri
+  blurlanır (akşam gerçekten görünenler: 3, 4, 10, 11, 23, 24, 29, 59, 62), diğer herkes açık. Akşam klipleri yeniden kodlandı.
