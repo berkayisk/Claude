@@ -51,6 +51,22 @@ def sikistir(no, bas, son, haric):
             if a < hb: yeni.append([a, hb])
             if hs < b: yeni.append([hs, b])
         bolge = yeni
+    # kelimesiz bölgeleri at (nefes, gürültü, ıı) — transkriptte kelime ortası düşmeyen bölge
+    kw = kelimeler(no)
+    bolge = [b for b in bolge if any(b[0] - 0.05 <= (ws + we) / 2 <= b[1] + 0.05 for ws, we, _ in kw)]
+    # bölgeyi içindeki kelimelerin tamamını kapsayacak şekilde genişlet (kelime kırpılmasın), sonra çakışanları birleştir
+    for b in bolge:
+        ic = [(ws, we) for ws, we, _ in kw if b[0] - 0.05 <= (ws + we) / 2 <= b[1] + 0.05]
+        if ic: b[0] = min(b[0], min(x[0] for x in ic) - 0.035); b[1] = max(b[1], max(x[1] for x in ic) + 0.035)
+    # whisper'ın duyduğu ama enerji eşiğinin kaçırdığı kelimeler de bölge olur
+    for ws, we, _ in kw:
+        if bas <= (ws + we) / 2 <= son and not any(b[0] <= (ws + we) / 2 <= b[1] for b in bolge):
+            bolge.append([ws - 0.035, we + 0.035])
+    bolge.sort(); bir = []
+    for b in bolge:
+        if bir and b[0] <= bir[-1][1] + 0.05: bir[-1][1] = max(bir[-1][1], b[1])
+        else: bir.append(list(b))
+    bolge = bir
     # kalan boşluklar ~0.07 sn olacak şekilde birleşir (kenar payları zaten 0.035+0.035)
     bolge = [[max(bas, a), min(son, b)] for a, b in bolge if min(son, b) - max(bas, a) > 0.05]
     return [(a, b) for a, b in bolge] or [(bas, son)]

@@ -32,6 +32,14 @@ def kimlik(vek):
 
 def isle(no):
     src = f"girdiler/ham/IMG_{no}.MOV"; out = f"girdiler/vekil/{no}.mp4"
+    kilit = f"girdiler/vekil/{no}.kilit"
+    if os.path.exists(out) and not os.path.exists(kilit) and "--zorla" not in sys.argv: return
+    if os.path.exists(kilit): return
+    open(kilit, "w").close()
+    try: _isle(no, src, out)
+    finally: os.remove(kilit)
+
+def _isle(no, src, out):
     fps = 30
     # 1) Algılama geçişi (her ADIM karede), izleri kur
     izler = []  # {kutular: {kare: box}, kimlikler: [(no, skor)], son: kare}
