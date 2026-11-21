@@ -103,6 +103,11 @@ def _isle(no, src, out):
                     if d < 1.6 * max(b[2], b2[2]) and d < enm: en, enm = t, d
         if en is not None:
             iz["blur"] = en["blur"]; iz["kim"] = f"={en['kim']}"
+    sb = kural.get("sadece_blur", {}).get(str(no))
+    if sb is not None:   # bu klipte yalnızca belirtilen kişiler blurlanır
+        for iz in plan:
+            k = str(iz["kim"]).lstrip("~=")
+            iz["blur"] = k.isdigit() and int(k) in sb
     for e in kural.get("elle", []):   # gözle doğrulanmış düzeltmeler
         if str(e["klip"]) == str(no):
             for iz in plan:
