@@ -38,3 +38,25 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 - Bilgi yarışması: sayaç, soru kartı, doğru cevap kartı (+ gerekirse yanlış/süre bitti)
 - Vampir köylü: rol kartları (vampir, doktor, köylü, …), gece/gündüz bandı, elendi damgası
 - Bileşenler: `musteriler/yasamfen/bilesenler/OyunGrafikleri.tsx` (marka renkleri; doğru=yeşil anlamsal istisna)
+
+## Ham çekim kataloğu (105 dosya Drive'dan, 104 video 4K HEVC dikey 30fps, toplam 35.8 dk; 1 HEIC foto)
+Ayrıntı: `calisma/katalog.json` (süre, ses, tür), kare şeritleri `calisma/seritler/`, transkript `calisma/transkript/`
+- 7351 poster B-roll (kitap karakteri çizimi)
+- 7353 tahtaya "Yaşamfen Geleneksel Bilgi Yarışması" yazılıyor → yarışma açılışı
+- 7354–7370 BİLGİ YARIŞMASI (gündüz, logo duvarı önünde 2 takım masası, 2 sunucu: kırmızı-beyaz kıyafetli ve siyah kıyafetli) 18.7 dk
+- 7380–7392 KOMBİN: pijama geçidi/dans (tekli, ikili, üçlü; örümcek adam maskeli, köpekbalığı kapşonlu) 0.8 dk
+- 7393–7467 VAMPİR KÖYLÜ (akşam, çember oturma, mor kapşonlu moderatör + siyah üst/ekose pijamalı moderatör) 12.7 dk
+- 7449 ayıcıklar B-roll
+- 7470–7485 HOCA GÖRÜŞLERİ (logo duvarı önünde, mikrofonla, 5 kişi) 3.1 dk
+
+## İçerik bulguları (transkriptten)
+- Yarışma: LGS öğrencileri (ortaokul 8) → yüz blur. Takım: "İsimsiz Savaşçılar" kazandı. Branşlar: fen, inkılap, Türkçe, İngilizce, matematik.
+  Fen soruları (7356–7357): safra→karaciğer (önce "pankreas" yanlış), dünya en çok bizde çıkan madde (bor), mitoz, eksen eğikliği
+  (transkript "23°11'" — doğrusu 23°27', sesten kontrol et), ekinoks 21 Mart/23 Eylül, sitoplazma, atardamar, protein sindirimi (mide).
+  İnkılap: ilk görev yeri Şam 5. Ordu, Trablusgarp, Muş-Bitlis, 19 Mayıs. Matematik (7366–7368): dönen ada, çarpan sayısı 3 (25, 49),
+  √320+√1280=24√5, EKOK(650,750); berabere → son soru: "Elektrikli tren güneye gidiyor, rüzgar kuzeyden… duman?" → kazanan.
+  7370: sunucu sonuç özeti. 7353: tahtaya başlık yazımı. 7355: hoca 12'lerle veda konuşması.
+- Vampir köylü: 4 vampir, 1 doktor, 1 soytarı/deli, köylüler. Moderatör "kapat gözünü / vampiri seçiyoruz / günaydın". Ses çok gürültülü,
+  kısa klipler; whisper "İzlediğiniz için teşekkür ederim" / "Altyazı M.K." = halüsinasyon (sessizlik). Savunma anları: 7424, 7441.
+- Hoca görüşleri: 7470 (kamp haftası, şarj), 7471 (ara tatil sonu parti), 7474 (5 günlük kamp), 7476 (rehber öğretmen: +100 soru),
+  7485 (özet + teşekkür; başında tekrar/hazırlık var, 37.4 sn'den itibaren temiz).
