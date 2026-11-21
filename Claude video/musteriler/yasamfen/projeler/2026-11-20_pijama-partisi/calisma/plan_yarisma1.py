@@ -1,7 +1,7 @@
 # Bilgi Yarışması #1 — "Sen kaç tanesini bilirdin?" (fen turu, 8 soru, takımlar sırayla)
 # Kullanıcı geri bildirimi: doğrudan soruyla başla + kanca başlık; B-roll yok; her takımın sorusu-cevabı sırayla; soru/cevap net;
 # geçiş sadece soru aralarında yumuşak crossfade.
-# Takımlar: T1 = logo duvarı önündeki masa, T2 = duvar resmi önündeki masa ("İsimsiz Savaşçılar", 7357 @27–30 sn).
+# Takımlar: T1 = logo duvarı önündeki masa, ortada erkek öğrenci = "Powerpuff Girls" (KAZANAN); T2 = duvar resmi önündeki masa = "İsimsiz Savaşçılar".
 # Sıra (çekimdeki gibi, dönüşümlü): safra T1 · bor T2 · mitoz T1 · eksen eğikliği T2 · ekinoks T1 · sitoplazma T2 · atardamar T1 · protein T2
 TOPLAM = 8
 Z = dict(zoom=[1.0, 1.05], odak=[0.5, 0.55])
@@ -56,7 +56,9 @@ HARIC = [
     (7357, 83.0, 84.2),     # "söyletirsiniz"
 ]
 
-def S(no): return dict(no=no, toplam=TOPLAM, y=230)
+PPG, IS = "Powerpuff Girls", "İsimsiz Savaşçılar"
+TAKIM = {1: PPG, 2: IS, 3: PPG, 4: IS, 5: PPG, 6: IS, 7: PPG, 8: IS}
+def S(no): return dict(no=no, toplam=TOPLAM, y=230, takim=TAKIM[no])
 OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.1, ust="YAŞAMFEN • LGS", metin="BİLGİ\nYARIŞMASI", vurguSatir=True, alt="Sen kaç tanesini bilirdin? 🧠", y=520, boyut=130),
     # S1
@@ -88,7 +90,7 @@ OLAYLAR = [
     olay("soru", kaynak=(7357, 182.0), sure=7.4, soru="Proteinlerin kimyasal sindirimi hangi organda başlar?", **S(8)),
     olay("cevap", kaynak=(7357, 211.25), sure=1.35, cevap="Mide", y=1450),
     olay("etiket", kaynak=(7370, 23.1), sure=2.6, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
-    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN TAKIM", y=420, boyut=60, ses="basari"),
+    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN: POWERPUFF GIRLS", y=420, boyut=52, ses="basari"),
     olay("cagri", kaynak=(7370, 30.2), sure=2.8, metin="Sen kaç tanesini bildin?", altMetin="Yorumlara yaz 👇", alt=480),
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri"]

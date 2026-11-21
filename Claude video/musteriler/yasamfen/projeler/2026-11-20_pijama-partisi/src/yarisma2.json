@@ -970,6 +970,7 @@
    "tip": "soru",
    "no": 1,
    "soru": "Çarpan sayısı 3 olan iki basamaklı sayılar nelerdir?",
+   "takim": "İsimsiz Savaşçılar",
    "y": 230,
    "s": 7.133,
    "son": 14.533
@@ -993,6 +994,7 @@
    "tip": "soru",
    "no": 2,
    "soru": "√320 + √1280 kaçtır?",
+   "takim": "Powerpuff Girls",
    "y": 230,
    "s": 22.267,
    "son": 30.067
@@ -1008,6 +1010,7 @@
    "tip": "soru",
    "no": 3,
    "soru": "650 ve 750'nin EKOK'u kaçtır?",
+   "takim": "İsimsiz Savaşçılar",
    "y": 230,
    "s": 30.133,
    "son": 38.133
@@ -1077,9 +1080,9 @@
   },
   {
    "tip": "etiket",
-   "metin": "🏆 KAZANAN TAKIM",
+   "metin": "🏆 KAZANAN: POWERPUFF GIRLS",
    "y": 420,
-   "boyut": 60,
+   "boyut": 52,
    "ses": "basari",
    "s": 61.05,
    "son": 65.65

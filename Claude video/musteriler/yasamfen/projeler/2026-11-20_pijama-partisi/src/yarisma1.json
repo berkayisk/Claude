@@ -1361,6 +1361,7 @@
    "no": 1,
    "toplam": 8,
    "y": 230,
+   "takim": "Powerpuff Girls",
    "s": 2.0,
    "son": 6.4
   },
@@ -1385,6 +1386,7 @@
    "no": 2,
    "toplam": 8,
    "y": 230,
+   "takim": "İsimsiz Savaşçılar",
    "s": 10.833,
    "son": 15.833
   },
@@ -1410,6 +1412,7 @@
    "no": 3,
    "toplam": 8,
    "y": 230,
+   "takim": "Powerpuff Girls",
    "s": 19.267,
    "son": 25.267
   },
@@ -1426,6 +1429,7 @@
    "no": 4,
    "toplam": 8,
    "y": 230,
+   "takim": "İsimsiz Savaşçılar",
    "s": 28.433,
    "son": 34.433
   },
@@ -1442,6 +1446,7 @@
    "no": 5,
    "toplam": 8,
    "y": 230,
+   "takim": "Powerpuff Girls",
    "s": 36.983,
    "son": 41.283
   },
@@ -1466,6 +1471,7 @@
    "no": 6,
    "toplam": 8,
    "y": 230,
+   "takim": "İsimsiz Savaşçılar",
    "s": 47.2,
    "son": 50.5
   },
@@ -1482,6 +1488,7 @@
    "no": 7,
    "toplam": 8,
    "y": 230,
+   "takim": "Powerpuff Girls",
    "s": 51.717,
    "son": 57.017
   },
@@ -1506,6 +1513,7 @@
    "no": 8,
    "toplam": 8,
    "y": 230,
+   "takim": "İsimsiz Savaşçılar",
    "s": 64.367,
    "son": 71.767
   },
@@ -1526,9 +1534,9 @@
   },
   {
    "tip": "etiket",
-   "metin": "🏆 KAZANAN TAKIM",
+   "metin": "🏆 KAZANAN: POWERPUFF GIRLS",
    "y": 420,
-   "boyut": 60,
+   "boyut": 52,
    "ses": "basari",
    "s": 77.75,
    "son": 82.35

@@ -26,7 +26,7 @@ OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.5, ust="YAŞAMFEN KURS", metin="PİJAMA\nPARTİSİ 🎉", vurguSatir=True, y=300, boyut=130),
     olay("baslik", kaynak=(7356, 52.8), sure=1.6, metin="BİLGİ\nYARIŞMASI 🧠", vurguSatir=True, y=240, boyut=90, sfx=False),
     olay("etiket", kaynak=(7357, 166.81), sure=1.2, metin="✅ DOĞRU!", y=420, boyut=60, ses="basari"),
-    olay("etiket", kaynak=(7370, 28.35), sure=2.4, metin="🏆 KAZANAN TAKIM", y=420, boyut=56, ses="basari"),
+    olay("etiket", kaynak=(7370, 28.35), sure=2.4, metin="🏆 POWERPUFF GIRLS", y=420, boyut=56, ses="basari"),
     olay("baslik", kaynak=(7380, 0.25), sure=1.6, metin="PİJAMA\nKOMBİNLERİ 💤", vurguSatir=True, y=240, boyut=90, sfx=False),
     olay("baslik", kaynak=(7397, 1.35), sure=1.6, metin="VAMPİR\nKÖYLÜ 🧛", vurguSatir=True, y=240, boyut=90, sfx=False),
     olay("etiket", kaynak=(7420, 21.3), sure=1.8, metin="🧛", kisi=(7420, 22.0, 50), boyut=70, ses="boom"),

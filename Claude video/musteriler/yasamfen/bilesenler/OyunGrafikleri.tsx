@@ -43,6 +43,7 @@ export type SoruProps = {
   no: number | string;
   toplam?: number;
   soru: string;
+  takim?: string; // soruyu cevaplayan takım (kart üstünde küçük etiket)
   siklar?: string[]; // en fazla 4
   dogru?: number; // doğru şık indeksi
   cevapKare?: number; // bu karede doğru şık yeşile döner
@@ -51,7 +52,7 @@ export type SoruProps = {
   sfx?: boolean;
 };
 
-export const SoruKarti: React.FC<SoruProps> = ({ no, toplam, soru, siklar = [], dogru, cevapKare, sure, y = 250, sfx = true }) => {
+export const SoruKarti: React.FC<SoruProps> = ({ no, toplam, soru, takim, siklar = [], dogru, cevapKare, sure, y = 250, sfx = true }) => {
   const { f, fps, olcek, opak } = useGirisCikis(sure);
   const acik = cevapKare !== undefined && f >= cevapKare;
   return (
@@ -65,6 +66,7 @@ export const SoruKarti: React.FC<SoruProps> = ({ no, toplam, soru, siklar = [], 
           </div>
         </div>
         <div style={{ background: YF.beyaz, borderRadius: 40, padding: "70px 56px 48px", boxShadow: golge, borderBottom: `10px solid ${YF.kirmizi}` }}>
+          {takim && <div style={{ fontFamily: YF.baslik, fontWeight: 800, fontSize: 30, letterSpacing: 3, color: YF.kirmizi, textAlign: "center", marginBottom: 12 }}>{takim.toLocaleUpperCase("tr-TR")}</div>}
           <div style={{ fontFamily: YF.baslik, fontWeight: 800, fontSize: 62, lineHeight: 1.18, color: YF.antrasit, textAlign: "center" }}>{soru}</div>
           {siklar.length > 0 && (
             <div style={{ display: "grid", gridTemplateColumns: siklar.some((s) => s.length > 14) ? "1fr" : "1fr 1fr", gap: 20, marginTop: 44 }}>

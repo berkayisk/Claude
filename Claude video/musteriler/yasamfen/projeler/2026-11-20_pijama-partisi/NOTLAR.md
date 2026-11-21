@@ -99,3 +99,6 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
   ("Matematikte tek bir doğru vardı, o da bu grubun yaptığı soruydu") → KAZANAN logo duvarı önündeki takım; 7370 @28–33 sn alkışlı kutlama.
 - Tüm videolarda kazanma kısmı = 7370 kutlaması ("🏆 KAZANAN TAKIM"). İsimsiz Savaşçılar kutlaması (7357 @218, 7368 @201, 7369) KULLANILMAZ.
 - Yarışma #2 kancası "Son soruyu bilen kazanır" → "Kazanan kim oldu?" (artık doğru değil).
+- Takım adları (kullanıcı): logo duvarı önündeki, ortada erkek öğrencinin oturduğu takım = POWERPUFF GIRLS (KAZANAN);
+  duvar resmi önündeki takım = İSİMSİZ SAVAŞÇILAR. Soru kartlarında cevaplayan takımın adı yazar.
+  Matematik: çarpan (İS, yanlış), kök (PPG, doğru — turun tek doğrusu), EKOK (İS, yanlış).

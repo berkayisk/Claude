@@ -32,15 +32,16 @@ PLAN = [
 ]
 HARIC = []
 S = dict(y=230)
+PPG, IS = "Powerpuff Girls", "İsimsiz Savaşçılar"  # matematikte tek doğru PPG'nin (7370)
 OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.6, ust="DURUM BERABERE 😱", metin="KAZANAN\nKİM OLDU?", vurguSatir=True, y=420, boyut=104),
     olay("baslik", kaynak=(7366, 0.1), sure=2.4, ust="BİRAZ ÖNCE…", metin="MATEMATİK\nTURU", vurguSatir=True, y=420, boyut=110),
-    olay("soru", kaynak=(7367, 6.5), sure=7.4, no=1, soru="Çarpan sayısı 3 olan iki basamaklı sayılar nelerdir?", **S),
+    olay("soru", kaynak=(7367, 6.5), sure=7.4, no=1, soru="Çarpan sayısı 3 olan iki basamaklı sayılar nelerdir?", takim=IS, **S),
     olay("cevap", kaynak=(7367, 92.0), sure=1.0, cevap="3'e bölünenler", dogruMu=False, y=1450),
     olay("cevap", kaynak=(7367, 97.5), sure=2.0, cevap="25 ve 49", y=1450),
-    olay("soru", kaynak=(7367, 123.5), sure=7.8, no=2, soru="√320 + √1280 kaçtır?", **S),
+    olay("soru", kaynak=(7367, 123.5), sure=7.8, no=2, soru="√320 + √1280 kaçtır?", takim=PPG, **S),
     olay("cevap", kaynak=(7368, 14.1), sure=2.5, cevap="24√5", y=1450),
-    olay("soru", kaynak=(7368, 43.4), sure=8.0, no=3, soru="650 ve 750'nin EKOK'u kaçtır?", **S),
+    olay("soru", kaynak=(7368, 43.4), sure=8.0, no=3, soru="650 ve 750'nin EKOK'u kaçtır?", takim=IS, **S),
     olay("cevap", kaynak=(7368, 120.9), sure=1.6, cevap="Doğrusu: 9750", dogruMu=False, baslik="YANLIŞ — 100 DEĞİL", y=1450),
     olay("etiket", kaynak=(7368, 154.1), sure=1.6, metin="İLK BİLEN KAZANIR 🏆", y=420, boyut=50),
     olay("soru", kaynak=(7368, 179.2), sure=10.6, no="SON SORU", soru="Elektrikli bir tren güneye gidiyor, rüzgâr kuzeyden esiyor. Trenin dumanı hangi yöne gider?", **S),
@@ -49,7 +50,7 @@ OLAYLAR = [
     olay("sayac", kaynak=(7368, 190.0), sure=3.4, saniye=3, y=1480),
     olay("cevap", kaynak=(7368, 193.5), sure=2.1, cevap="Elektrikli trenin dumanı olmaz! 😄", baslik="CEVAP", y=1300),
     olay("etiket", kaynak=(7370, 20.7), sure=2.4, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
-    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN TAKIM", y=420, boyut=60, ses="basari"),
+    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN: POWERPUFF GIRLS", y=420, boyut=52, ses="basari"),
     olay("cagri", kaynak=(7370, 30.2), sure=2.8, metin="Sen bilebilir miydin?", altMetin="Yorumlara yaz 👇", alt=480),
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri", "cevap"]
