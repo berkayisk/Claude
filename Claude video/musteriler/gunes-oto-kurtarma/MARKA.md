@@ -5,12 +5,13 @@
   - Nakliye
   - Forklift
   - Menlift (? — kullanıcının mesajı "menl" diye kesildi; netleştirilecek)
-- Hizmet bölgesi / şehir: ?
+- Hizmet bölgesi / şehir: Ankara
+- Adres: Saray Keresteciler Sanayi Sitesi, Adnan Menderes Bulvarı No: 76/B, Kahramankazan / Ankara
 - Hedef kitle: ?
 - Ton (resmi / samimi / eğlenceli…): ?
-- Renkler (hex): ? (logo gelince ondan çıkarılacak)
-- Fontlar: ?
-- Logo dosyaları: marka/
+- Renkler (hex, logodan ölçüldü): sarı #FDD301 (ana), siyah #000000 (zemin/kontur), beyaz #FFFFFF (ikincil yazı), gri #F0F0F0 / koyu gri vurgular. Sarı-siyah ikaz şeridi (/// çizgiler) logonun motifi
+- Fontlar: logoda kalın, eğik (italik), geniş blok başlık + kalın sans alt yazı. Yakın Google Fonts: başlık için Russo One / Saira Condensed ExtraBold Italic, metin için Montserrat ExtraBold (kesinleşmedi)
+- Logo dosyaları: marka/logo.png (2172×724, şeffaf zeminli PNG; logo siyah konturlu, koyu VE açık zeminde kullanılabilir). Logoda sarı çekici kasasında beyaz TIR çekici var; slogan "AĞIR TİCARİ OTO KURTARMA"
 - Araç / iş fotoğrafları ve videoları: marka/
 - Sosyal medya hesapları: ?
 - İletişim / CTA (telefon, web, DM, WhatsApp): ?
