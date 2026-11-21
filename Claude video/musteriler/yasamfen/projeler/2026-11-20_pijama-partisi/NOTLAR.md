@@ -102,3 +102,5 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Takım adları (kullanıcı): logo duvarı önündeki, ortada erkek öğrencinin oturduğu takım = POWERPUFF GIRLS (KAZANAN);
   duvar resmi önündeki takım = İSİMSİZ SAVAŞÇILAR. Soru kartlarında cevaplayan takımın adı yazar.
   Matematik: çarpan (İS, yanlış), kök (PPG, doğru — turun tek doğrusu), EKOK (İS, yanlış).
+- Kombin geri bildirimi: kombin çekimlerinde (7380–7392) BLUR YOK — rastgele desen tespitleri, örümcek adam maskesi, arka odadaki hocalar,
+  kıyafetteki ayıcık gereksiz blurlanmıştı. blur.json "blursuz_klipler" ile vekil blursuz üretildi (Genel/Hocalar'daki kombin anları da).

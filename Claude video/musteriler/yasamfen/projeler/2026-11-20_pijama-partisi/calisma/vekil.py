@@ -41,6 +41,8 @@ def isle(no):
     finally: os.remove(kilit)
 
 def _isle(no, src, out):
+    global BLURSUZ
+    BLURSUZ = ("--blursuz" in sys.argv) or int(no) in set(kural.get("blursuz_klipler", []))
     fps = 30
     # 1) Algılama geçişi (her ADIM karede), izleri kur
     izler = []  # {kutular: {kare: box}, kimlikler: [(no, skor)], son: kare}
