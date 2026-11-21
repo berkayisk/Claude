@@ -4,42 +4,40 @@ TOPLAM = 6
 Z = dict(zoom=[1.0, 1.06], odak=[0.5, 0.55])
 DOGRU = 1.13  # "Doğru" anında punch
 
-def dusun(no, bas, sn=2.7, gecis="yumusak"):
+def dusun(no, bas, sn=2.7):
     """Takım düşünürken B-roll + sayaç"""
-    return broll(no, bas, bas + sn, zoom=[1.08, 1.14], odak=[0.5, 0.5], gecis=gecis)
+    return broll(no, bas, bas + sn, zoom=[1.08, 1.14], odak=[0.5, 0.5])
 
 PLAN = [
-    # Kanca: tahtaya başlık yazılıyor
-    broll(7353, 13.0, 15.4, zoom=[1.15, 1.25], odak=[0.6, 0.4]),
     # S1 — safra (7356)
-    klip(7356, 52.75, 56.15, gecis="yumusak", **Z),
+    klip(7356, 52.75, 56.15, **Z),
     klip(7356, 60.85, 62.1, **Z),
     dusun(7360, 3.0),
     klip(7356, 72.0, 75.05, zoom=[1.04, 1.1], odak=[0.5, 0.55]),
     klip(7356, 80.0, 81.85, zoom=[1.1, 1.1], odak=[0.5, 0.55], punch=[{"t": 80.1, "olcek": 1.08, "sure": 5}]),
     klip(7356, 85.8, 87.2, zoom=[1.1, 1.12], odak=[0.5, 0.55]),
     # S2 — mitoz
-    klip(7357, 39.25, 44.05, gecis="yumusak", **Z),
+    klip(7357, 39.25, 44.05, **Z),
     klip(7357, 44.65, 45.85, **Z),
     dusun(7359, 5.0),
     klip(7357, 62.9, 64.95, zoom=[1.05, 1.08], odak=[0.5, 0.55], punch=[{"t": 64.39, "olcek": DOGRU}]),
     klip(7357, 70.3, 72.55, zoom=[1.0, 1.04], odak=[0.5, 0.55]),
     # S3 — ekinoks
-    klip(7357, 96.4, 99.6, gecis="yumusak", **Z),
+    klip(7357, 96.4, 99.6, **Z),
     klip(7357, 99.75, 100.85, **Z),
     dusun(7361, 1.0, 2.6),
     klip(7357, 102.7, 105.7, zoom=[1.05, 1.08], odak=[0.5, 0.55], punch=[{"t": 105.18, "olcek": DOGRU}]),
     # S4 — sitoplazma
-    klip(7357, 115.6, 121.4, gecis="yumusak", **Z),
+    klip(7357, 115.6, 121.4, **Z),
     dusun(7363, 0.2, 2.6),
     klip(7357, 124.2, 125.95, zoom=[1.05, 1.08], odak=[0.5, 0.55], punch=[{"t": 125.36, "olcek": DOGRU}]),
     # S5 — atardamar
-    klip(7357, 140.7, 144.5, gecis="yumusak", **Z),
+    klip(7357, 140.7, 144.5, **Z),
     klip(7357, 146.65, 148.2, **Z),
     dusun(7364, 1.0),
     klip(7357, 165.85, 167.3, zoom=[1.05, 1.08], odak=[0.5, 0.55], punch=[{"t": 166.81, "olcek": DOGRU}]),
     # S6 — protein (kazananı belirleyen soru)
-    klip(7357, 174.85, 180.8, gecis="yumusak", **Z),
+    klip(7357, 174.85, 180.8, **Z),
     klip(7357, 182.0, 187.1, **Z),
     klip(7357, 188.55, 190.45, **Z),
     dusun(7365, 4.0, 3.0),
@@ -57,9 +55,9 @@ HARIC = [
 
 S = dict(toplam=TOPLAM, y=230)
 OLAYLAR = [
-    olay("baslik", zaman=0.0, sure=2.4, ust="YAŞAMFEN • LGS", metin="BİLGİ\nYARIŞMASI", vurguSatir=True, alt="Sen kaç tanesini bilirdin? 🧠", y=560, boyut=130),
+    olay("baslik", zaman=0.0, sure=2.1, ust="YAŞAMFEN • LGS", metin="BİLGİ\nYARIŞMASI", vurguSatir=True, alt="Sen kaç tanesini bilirdin? 🧠", y=520, boyut=130),
     # S1
-    olay("soru", kaynak=(7356, 52.8), sure=7.6, no=1, soru="Safra sıvısını hangi organımız üretir?", **S),
+    olay("soru", kaynak=(7356, 52.8), kay=2.0, sure=5.6, no=1, soru="Safra sıvısını hangi organımız üretir?", **S),
     olay("sayac", kaynak=(7360, 3.0), sure=2.7, saniye=3, y=1480),
     olay("cevap", kaynak=(7356, 80.1), sure=1.8, cevap="Pankreas", dogruMu=False, y=1450),
     olay("cevap", kaynak=(7356, 85.85), sure=2.2, cevap="Karaciğer", y=1450),

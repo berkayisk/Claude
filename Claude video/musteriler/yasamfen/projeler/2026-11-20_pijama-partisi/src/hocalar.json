@@ -28,7 +28,6 @@
    "bas": 0.5,
    "kare": 161,
    "ses": "ses/7471_temiz.wav",
-   "gecis": "yumusak",
    "zoom": [
     1.0,
     1.035
@@ -65,7 +64,6 @@
    "bas": 2.4333,
    "kare": 198,
    "ses": "ses/7470_temiz.wav",
-   "gecis": "yumusak",
    "zoom": [
     1.0004,
     1.0792
@@ -132,7 +130,6 @@
    "bas": 49.0,
    "kare": 225,
    "ses": "ses/7485_temiz.wav",
-   "gecis": "yumusak",
    "zoom": [
     1.0,
     1.0632
@@ -169,7 +166,6 @@
    "bas": 1.8,
    "kare": 54,
    "ses": "ses/7474_temiz.wav",
-   "gecis": "yumusak",
    "zoom": [
     1.0,
     1.04
@@ -220,7 +216,6 @@
    "bas": 13.5333,
    "kare": 58,
    "ses": "ses/7476_temiz.wav",
-   "gecis": "yumusak",
    "zoom": [
     1.0503,
     1.07

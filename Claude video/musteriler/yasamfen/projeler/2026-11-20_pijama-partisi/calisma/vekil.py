@@ -44,7 +44,10 @@ def _isle(no, src, out):
     fps = 30
     # 1) Algılama geçişi (her ADIM karede), izleri kur
     izler = []  # {kutular: {kare: box}, kimlikler: [(no, skor)], son: kare}
-    if not BLURSUZ:
+    onbellek = f"calisma/yuz/iz/{no}_ham.json"
+    if os.path.exists(onbellek) and not BLURSUZ:
+        izler = [{"kutular": {int(k): v for k, v in iz["kutular"].items()}, "kimlikler": [tuple(x) for x in iz["kimlikler"]], "son": iz["son"]} for iz in json.load(open(onbellek))]
+    elif not BLURSUZ:
         p = subprocess.Popen(["ffmpeg", "-v", "error", "-i", src, "-vf", f"select='not(mod(n\\,{ADIM}))',scale={DW}:{DH}", "-vsync", "0", "-f", "rawvideo", "-pix_fmt", "bgr24", "-"], stdout=subprocess.PIPE)
         n = DW*DH*3; i = 0
         while True:
@@ -62,9 +65,15 @@ def _isle(no, src, out):
                     en["kimlikler"].append(kimlik(rec.feature(rec.alignCrop(img, fc))[0]))
             i += 1
         p.wait()
+        json.dump([{"kutular": iz["kutular"], "kimlikler": iz["kimlikler"], "son": iz["son"]} for iz in izler], open(onbellek, "w"))
     # 2) Her iz için karar
     plan = []
-    for iz in izler:
+    eski = f"calisma/yuz/iz/{no}.json"
+    if not izler and os.path.exists(eski) and "--yeniden" in sys.argv:
+        plan = json.load(open(eski))
+        for iz in plan:
+            if isinstance(iz["kim"], str) and iz["kim"].startswith("="): iz["kim"] = None; iz["blur"] = True
+    for iz in (izler if not plan else []):
         oy, zayif = {}, {}
         for k, s, en in iz["kimlikler"]:
             if k is not None: oy[k] = oy.get(k, 0) + s
@@ -80,6 +89,18 @@ def _isle(no, src, out):
         else:
             bl = True   # hiç tanınmayan iz → blur
         ks = sorted(iz["kutular"]); plan.append({"kim": kim, "blur": bl, "kareler": ks, "kutular": [iz["kutular"][k] for k in ks]})
+    tanin = [iz for iz in plan if isinstance(iz["kim"], int)]
+    for iz in plan:
+        if isinstance(iz["kim"], int): continue
+        en, enm = None, 1e9
+        for t in tanin:
+            for k, b in zip(iz["kareler"], iz["kutular"]):
+                for k2, b2 in zip(t["kareler"], t["kutular"]):
+                    if abs(k - k2) > 30: continue
+                    d = ((b[0]+b[2]/2 - b2[0]-b2[2]/2)**2 + (b[1]+b[3]/2 - b2[1]-b2[3]/2)**2) ** 0.5
+                    if d < 1.6 * max(b[2], b2[2]) and d < enm: en, enm = t, d
+        if en is not None:
+            iz["blur"] = en["blur"]; iz["kim"] = f"={en['kim']}"
     json.dump(plan, open(f"calisma/yuz/iz/{no}.json", "w"))
     # kare → blur kutuları (enterpolasyon + baş/son TUT kadar uzatma)
     kutu = {}

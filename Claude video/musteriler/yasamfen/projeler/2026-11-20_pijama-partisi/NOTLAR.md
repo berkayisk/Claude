@@ -77,3 +77,10 @@ Diğer tanınan herkes açık. Tanınmayan yüz izi: yarışma/kombin kliplerind
 Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Render sonrası kare kontrolü yapılacak.
 - Müzik (kullanıcı): trend müziğe uygun videolarda (Kombin, Genel) müzik YOK — Instagram'da trend ses eklenecek. Kombin tamamen sessiz
   (efekt de yok). Yarışma, Vampir, Hocalar: kodla üretilmiş telifsiz müzik gömülü.
+
+## Geri bildirim 1 (Yarışma #1 taslağı, 2026-11-21)
+- Hoca blurlanmış → uzakta küçük görünen sunucu yüzü tanınamayıp blurlanıyordu. Çözüm: tanınmayan iz, ±1 sn içinde
+  yakınındaki tanınmış izin kararını alır (komşu kimlik, vekil.py). Bitmiş klipler kayıtlı izlerden yeniden kodlandı.
+- Video doğrudan soruyla / konuşmayla başlasın (sessiz B-roll girişi yok), kanca başlık yine başta, ilk sözün üstünde.
+- Geçişler doğal: blur-zoom "yumusak" geçişler kaldırıldı → düz kesme. Sadece Vampir #1'de gece/sabah bandıyla siyah/beyaz dip kaldı.
+- Konuşmalı parçalar sesin girdiği yerde başlar (kelime başı − 0.035 sn).

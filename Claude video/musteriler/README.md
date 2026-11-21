@@ -18,3 +18,9 @@ musteriler/<firma-adi>/
 - Ses temizliği (Demucs), sıkı kesme kuralları, yüz takibi/kadraj, dekupe: `araclar/`, kurallar kök `CLAUDE.md`
 - Bileşenler `bilesenler/` (Reels, Short, Thumbnail…): renk/font/logo firma `MARKA.md`'sine göre PROP olarak verilir; kanalın turuncusu varsayılan olarak kalmamalı
 - SFX `marka/sfx/` telifsiz, ortak kullanılabilir
+
+## Kurgu tercihleri (kullanıcı geri bildirimi, tüm firma işleri)
+- Video doğrudan içerikle (soru / ilk söz) başlar; sessiz B-roll ile açılmaz. Kanca başlık ilk sözün üstüne biner.
+- Geçişler doğal: düz kesme; blur-zoom gibi efekt geçişlerden kaçın (tematik bir an dışında).
+- Konuşmalı parça sesin girdiği yerde başlar.
+- Çocuk yüzü blurunda öğretmen/sunucu açık kalmalı: uzakta küçük görünen yüzler komşu iz kimliğiyle doğrulanır.
