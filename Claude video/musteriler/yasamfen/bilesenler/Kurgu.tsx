@@ -104,8 +104,8 @@ const kucult = (s: string) => s.replace(/İ/g, "i").replace(/I/g, "ı").toLowerC
 const Altyazi: React.FC<{ v: KurguVeri }> = ({ v }) => {
   const f = useCurrentFrame();
   const t = f / v.fps;
-  if ((v.altyaziGizle ?? []).some(([a, b]) => t >= a && t < b)) return null;
   const sayfalar = React.useMemo(() => sayfala(v.altyazi), [v.altyazi]);
+  if ((v.altyaziGizle ?? []).some(([a, b]) => t >= a && t < b)) return null;
   const sy = sayfalar.find((p) => t >= p.s && t < p.e);
   if (!sy) return null;
   const vurgu = new Set((v.vurgu ?? []).map(kucult));
