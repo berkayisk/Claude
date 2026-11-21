@@ -70,3 +70,8 @@ Ayrıntı: `calisma/katalog.json` (süre, ses, tür), kare şeritleri `calisma/s
 - Blur listesi kullanıcıdan ayrıca gelecek (açık kalanlar değil, blurlanacaklar yazılacak)
 - Soytarı kim bilinmiyor → soytarı rol kartı kişiye bağlanmaz (sadece rol tanıtımında). 4. vampir boşver.
 - Blur tarzı: YUMUŞAK BLUR (gaussian, kenarı yumuşak oval). Ekstra videolar ONAYLANDI: kombin geçidi + hocalar ne dedi.
+
+## Blur (kullanıcı listesi, 2026-11-21) → calisma/yuz/blur.json
+Blurlanacak pafta numaraları: 1, 3, 4, 9, 10, 11, 12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 31, 59, 62.
+Diğer tanınan herkes açık. Tanınmayan yüz izi: yarışma/kombin kliplerinde (<=7392) her zaman blur; diğerlerinde en yakın kişiye göre.
+Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Render sonrası kare kontrolü yapılacak.

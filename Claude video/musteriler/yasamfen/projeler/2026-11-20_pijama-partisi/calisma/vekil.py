@@ -28,7 +28,7 @@ def iou(a, b):
 
 def kimlik(vek):
     v = np.array(vek, np.float32); v /= np.linalg.norm(v); s = M @ v; j = int(s.argmax())
-    return (NO[j], float(s[j])) if s[j] > 0.42 else (None, float(s[j]))
+    return (NO[j] if s[j] > 0.42 else None, float(s[j]), NO[j])
 
 def isle(no):
     src = f"girdiler/ham/IMG_{no}.MOV"; out = f"girdiler/vekil/{no}.mp4"
@@ -56,11 +56,18 @@ def isle(no):
     # 2) Her iz için karar
     plan = []
     for iz in izler:
-        oy = {}
-        for k, s in iz["kimlikler"]:
+        oy, zayif = {}, {}
+        for k, s, en in iz["kimlikler"]:
             if k is not None: oy[k] = oy.get(k, 0) + s
+            if s > 0.30: zayif[en] = zayif.get(en, 0) + s
         kim = max(oy, key=oy.get) if oy else None
-        bl = False if kim in ACIK else True if kim in BLUR else VARS == "blur"
+        if kim is not None:
+            bl = True if kim in BLUR else False if (kim in ACIK or VARS == "acik") else True
+        elif zayif:
+            kim = max(zayif, key=zayif.get)
+            bl = (kim in BLUR) or int(no) <= kural.get("bilinmeyen_blur_klip_ust", 0); kim = f"~{kim}"
+        else:
+            bl = int(no) <= kural.get("bilinmeyen_blur_klip_ust", 99999) if VARS == "acik" else True
         ks = sorted(iz["kutular"]); plan.append({"kim": kim, "blur": bl, "kareler": ks, "kutular": [iz["kutular"][k] for k in ks]})
     json.dump(plan, open(f"calisma/yuz/iz/{no}.json", "w"))
     # kare → blur kutuları (enterpolasyon + baş/son TUT kadar uzatma)
