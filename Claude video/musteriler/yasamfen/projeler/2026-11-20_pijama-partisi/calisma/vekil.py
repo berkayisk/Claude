@@ -101,6 +101,10 @@ def _isle(no, src, out):
                     if d < 1.6 * max(b[2], b2[2]) and d < enm: en, enm = t, d
         if en is not None:
             iz["blur"] = en["blur"]; iz["kim"] = f"={en['kim']}"
+    for e in kural.get("elle", []):   # gözle doğrulanmış düzeltmeler
+        if str(e["klip"]) == str(no):
+            for iz in plan:
+                if str(iz["kim"]) == e["kim"]: iz["blur"] = e["blur"]
     json.dump(plan, open(f"calisma/yuz/iz/{no}.json", "w"))
     # kare → blur kutuları (enterpolasyon + baş/son TUT kadar uzatma)
     kutu = {}
