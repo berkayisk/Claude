@@ -17,7 +17,7 @@ export type Parca = {
   sessiz?: boolean; // B-roll: ses yok
   kaplama?: { src: string; bas: number; kare: number; sure: number; zoom?: [number, number] }[]; // konuşma sürerken üstte B-roll (parça içi kare)
 };
-export type Kelime = { w: string; s: number; e: number };
+export type Kelime = { w: string; s: number; e: number; b?: number };
 export type Olay = { tip: string; s: number; son: number; [k: string]: any };
 export type KurguVeri = {
   fps: number;
@@ -92,7 +92,7 @@ const sayfala = (a: Kelime[]): Sayfa[] => {
   const bitir = () => { if (cur.length) out.push({ k: cur, s: cur[0].s, e: cur[cur.length - 1].e }); cur = []; };
   for (const w of a) {
     const onceki = cur[cur.length - 1];
-    if (cur.length && (cur.length >= 4 || w.s - onceki.e > 0.45 || /[.?!,]$/.test(onceki.w) && cur.length >= 2 || cur.map((x) => x.w).join(" ").length + w.w.length > 22)) bitir();
+    if (cur.length && (cur.length >= 4 || (w.b !== undefined && w.b !== onceki.b) || w.s - onceki.e > 0.45 || /[.?!,]$/.test(onceki.w) && cur.length >= 2 || cur.map((x) => x.w).join(" ").length + w.w.length > 22)) bitir();
     cur.push(w);
   }
   bitir();

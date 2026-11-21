@@ -13,8 +13,8 @@ args = [a for a in sys.argv[1:] if not a.startswith("--")]
 BLURSUZ = "--blursuz" in sys.argv
 OW, OH = 1440, 2560            # çıktı
 DW, DH = 1080, 1920            # algılama ölçeği
-ADIM, TUT = 2, 12
-det = cv2.FaceDetectorYN.create(hf_hub_download("opencv/face_detection_yunet", "face_detection_yunet_2023mar.onnx"), "", (DW, DH), 0.55, 0.3, 5000)
+ADIM, TUT = 2, 36   # yüz kaybolunca kutu 1.2 sn tutulur (profil dönüşleri)
+det = cv2.FaceDetectorYN.create(hf_hub_download("opencv/face_detection_yunet", "face_detection_yunet_2023mar.onnx"), "", (DW, DH), 0.45, 0.3, 5000)
 rec = cv2.FaceRecognizerSF.create(hf_hub_download("opencv/face_recognition_sface", "face_recognition_sface_2021dec.onnx"), "")
 K = json.load(open("calisma/yuz/kisiler.json"))["kisiler"]
 M = np.array([k["merkez"] for k in K], np.float32); NO = [k["no"] for k in K]
@@ -83,13 +83,14 @@ def _isle(no, src, out):
     for iz in plan:
         if not iz["blur"]: continue
         ks, bs = iz["kareler"], np.array(iz["kutular"])
-        for a in range(max(0, ks[0]-ADIM), ks[-1]+TUT//2):
+        for a in range(max(0, ks[0]-15), ks[-1]+TUT):
             j = np.searchsorted(ks, a)
             if j < len(ks) and ks[j] == a: bx = bs[j]
             elif 0 < j < len(ks) and ks[j]-ks[j-1] <= TUT:
                 r = (a-ks[j-1])/(ks[j]-ks[j-1]); bx = bs[j-1]*(1-r) + bs[j]*r
-            elif j == 0 and ks[0]-a <= ADIM: bx = bs[0]
-            elif j == len(ks) and a-ks[-1] <= TUT//2: bx = bs[-1]
+            elif j == 0 and ks[0]-a <= 15: bx = bs[0]
+            elif j == len(ks) and a-ks[-1] <= TUT: bx = bs[-1]
+            elif 0 < j < len(ks): bx = bs[j-1]   # uzun boşlukta son kutuyu tut
             else: continue
             kutu.setdefault(a, []).append(bx)
     # 3) Kodlama geçişi: tam karelerde blur uygula
@@ -105,16 +106,16 @@ def _isle(no, src, out):
         img = np.frombuffer(b, np.uint8).reshape(OH, OW, 3).copy()
         for bx in kutu.get(a, []):
             x, y, w, h = [v*sx for v in bx]
-            cx, cy = x + w/2, y + h*0.48; rw, rh = w*0.85, h*1.0          # yüz + saç/çene payı
+            cx, cy = x + w/2, y + h*0.45; rw, rh = w*1.0, h*1.2           # yüz + saç/çene + profil payı
             x0, y0, x1, y1 = int(max(0, cx-rw*1.25)), int(max(0, cy-rh*1.25)), int(min(OW, cx+rw*1.25)), int(min(OH, cy+rh*1.25))
             if x1-x0 < 4 or y1-y0 < 4: continue
             roi = img[y0:y1, x0:x1]
-            k = int(max(15, w*0.35)) | 1
-            bulanik = cv2.GaussianBlur(cv2.resize(roi, None, fx=0.25, fy=0.25), (k//4*2+1, k//4*2+1), 0)
-            bulanik = cv2.GaussianBlur(cv2.resize(bulanik, (x1-x0, y1-y0)), (0, 0), max(3, w*0.06))
+            kucuk = cv2.resize(roi, (max(2, (x1-x0)//10), max(2, (y1-y0)//10)), interpolation=cv2.INTER_AREA)
+            kucuk = cv2.GaussianBlur(kucuk, (0, 0), 1.5)
+            bulanik = cv2.GaussianBlur(cv2.resize(kucuk, (x1-x0, y1-y0), interpolation=cv2.INTER_LINEAR), (0, 0), max(5, w*0.10))
             mask = np.zeros((y1-y0, x1-x0), np.float32)
             cv2.ellipse(mask, (int(cx-x0), int(cy-y0)), (int(rw), int(rh)), 0, 0, 360, 1, -1)
-            mask = cv2.GaussianBlur(mask, (0, 0), max(4, w*0.12))[..., None]
+            mask = np.clip(cv2.GaussianBlur(mask, (0, 0), max(4, w*0.10)) * 1.35, 0, 1)[..., None]
             img[y0:y1, x0:x1] = (roi*(1-mask) + bulanik*mask).astype(np.uint8); say += 1
         wr.stdin.write(img.tobytes()); a += 1
     wr.stdin.close(); wr.wait(); rd.wait()

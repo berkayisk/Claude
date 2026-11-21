@@ -76,7 +76,7 @@ def main():
     haric = getattr(P, "HARIC", [])
     parcalar, harita, olaylar, altyazi, yazi_parca = [], [], [], [], []
     t = 0.0
-    for o in P.PLAN:
+    for oi, o in enumerate(P.PLAN):
         if o["tur"] in ("klip", "broll"):
             no = o["no"]
             araliklar = sikistir(no, o["bas"], o["son"], haric) if o["tur"] == "klip" and o.get("sik", True) else [(o["bas"], o["son"])]
@@ -113,7 +113,7 @@ def main():
                     for ws, we, w in kelimeler(no):
                         m = (ws + we) / 2
                         if fa <= m < fa + kare / FPS and not any(hn == no and hb <= m < hs for hn, hb, hs in haric):
-                            altyazi.append({"w": w, "s": round(t + max(0, ws - fa), 3), "e": round(t + min(kare / FPS, we - fa), 3)})
+                            altyazi.append({"w": w, "s": round(t + max(0, ws - fa), 3), "e": round(t + min(kare / FPS, we - fa), 3), "b": oi})
                 t += kare / FPS
     # elle yazı: aynı klibe ait ardışık parçaları birleştir, kelimeleri süreye eşit dağıt
     gruplar = {}
@@ -123,7 +123,7 @@ def main():
         for t0, d in pp:
             tt = t0
             while i < len(ks) and tt + adim <= t0 + d + 1e-6:
-                altyazi.append({"w": ks[i], "s": round(tt, 3), "e": round(tt + adim * 0.95, 3)}); tt += adim; i += 1
+                altyazi.append({"w": ks[i], "s": round(tt, 3), "e": round(tt + adim * 0.95, 3), "b": id(o) % 100000}); tt += adim; i += 1
         while i < len(ks): altyazi.append({"w": ks[i], "s": round(pp[-1][0] + pp[-1][1] - 0.2, 3), "e": round(pp[-1][0] + pp[-1][1], 3)}); i += 1
     altyazi.sort(key=lambda w: w["s"])
     def cevir(no, ts):
