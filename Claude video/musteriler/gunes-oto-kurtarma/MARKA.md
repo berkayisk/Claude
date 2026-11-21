@@ -1,7 +1,7 @@
 # Güneş Oto Kurtarma marka rehberi
 
 - Sektör / ne satıyor (hizmetler):
-  - Oto kurtarma (çekici, yol yardım)
+  - Ağır ticari araç kurtarma (TIR, kamyon, otobüs, iş makinesi vb.) — binek/normal oto çekici DEĞİL; görsel ve metinlerde binek araç çekici imajı kullanma
   - Nakliye
   - Forklift
   - Menlift (? — kullanıcının mesajı "menl" diye kesildi; netleştirilecek)
@@ -15,5 +15,5 @@
 - Sosyal medya hesapları: ?
 - İletişim / CTA (telefon, web, DM, WhatsApp): ?
 - 7/24 hizmet var mı: ?
-- Yapılmayacaklar / dikkat edilecekler: Sıfırdan Satışa kanal stili, turuncu tema, "babalar gibi" tonu KULLANILMAZ.
+- Yapılmayacaklar / dikkat edilecekler: Binek araç çekici görselleri/ifadeleri kullanılmaz (iş ağır ticari kurtarma). Sıfırdan Satışa kanal stili, turuncu tema, "babalar gibi" tonu KULLANILMAZ.
 - Referans içerikler: ?
