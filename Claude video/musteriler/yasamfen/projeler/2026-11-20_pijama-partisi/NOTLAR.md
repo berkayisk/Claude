@@ -84,3 +84,12 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Video doğrudan soruyla / konuşmayla başlasın (sessiz B-roll girişi yok), kanca başlık yine başta, ilk sözün üstünde.
 - Geçişler doğal: blur-zoom "yumusak" geçişler kaldırıldı → düz kesme. Sadece Vampir #1'de gece/sabah bandıyla siyah/beyaz dip kaldı.
 - Konuşmalı parçalar sesin girdiği yerde başlar (kelime başı − 0.035 sn).
+
+## Geri bildirim 2 (2026-11-21)
+- Hiçbir "merhaba(lar)" kısmı kullanılmaz (7471 0–6 sn, 7476 0–6 sn çıkarıldı). Genel artık 7470 "Çok güzel bir kamp haftasını..." ile başlar.
+- Geçişler: gerektiğinde YUMUŞAK efekt → gerçek 10 karelik crossfade (Kurgu.tsx XF), sadece soru/bölüm/konuşmacı değişiminde.
+- Soru ve cevaplar net: cevap parçalarında ses ×1.5, cevap anında altyazı da görünür (kart + altyazı). Belirsiz cevap sesi (eksen) → sadece kart.
+- Anlamsız B-roll yok: takım düşünürken araya giren görüntüler/sayaç kaldırıldı. Konuyla eşleşen kaplama B-roll'lar (hoca "bilgi yarışması"
+  derken yarışma görüntüsü) kaldı. Kapanış çağrıları son konuşmanın üstüne bindi.
+- Her takımın sorusu-cevabı sırayla (çekimdeki dönüşümlü sıra): Yarışma #1 = 8 soru (bor ve eksen eğikliği geri alındı; kartlarda doğru
+  bilgi: Bor, 23° 27').

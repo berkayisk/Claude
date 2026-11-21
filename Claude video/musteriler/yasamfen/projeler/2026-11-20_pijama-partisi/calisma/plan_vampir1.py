@@ -12,18 +12,17 @@ PLAN = [
     klip(7420, 10.5, 13.5, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Vampirleri görebilir miyiz?"),
     broll(7420, 21.0, 24.2, zoom=[1.0, 1.06], odak=[0.5, 0.45]),      # #50 gözü açık
     broll(7420, 15.0, 17.6, zoom=[1.0, 1.06], odak=[0.5, 0.5]),       # #40
-    klip(7399, 5.4, 8.4, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Doktoru seçiyoruz, doktoru seçiyoruz."),
+    klip(7399, 5.4, 8.4, gecis="yumusak", zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Doktoru seçiyoruz, doktoru seçiyoruz."),
     klip(7400, 0.2, 3.65, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Deliyi seçiyoruz. Evet. Deliyi de seçtik."),
     # SABAH
     klip(7420, 44.1, 45.2, gecis="beyaz", zoom=[1.0, 1.04], odak=[0.5, 0.5], yazi="Tamam, günaydın."),
-    klip(7404, 7.9, 13.4, zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Doktor kendini koruyarak doğru kişiyi koruduğu için bir kişi öldü. Normalde iki kişi ölmesi lazımdı."),
+    klip(7404, 7.9, 13.4, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Doktor kendini koruyarak doğru kişiyi koruduğu için bir kişi öldü. Normalde iki kişi ölmesi lazımdı."),
     klip(7402, 0.7, 1.6, zoom=[1.05, 1.1], odak=[0.5, 0.5], punch=[{"t": 0.8, "olcek": 1.12}], yazi="Ben öldüm."),
     # 2. GECE
     klip(7428, 2.9, 7.1, gecis="siyah", zoom=[1.0, 1.06], odak=[0.5, 0.5], yazi="Vampirler iki kişiyi öldürebilir mi? Vampirler iki kişiyi öldürüyor."),
     klip(7428, 23.3, 24.8, zoom=[1.06, 1.1], odak=[0.5, 0.5], punch=[{"t": 23.4, "olcek": 1.1}], yazi="Vampirler birbirini yiyor!"),
     klip(7439, 35.0, 36.1, gecis="beyaz", zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Sabah oldu."),
     klip(7412, 4.4, 5.9, zoom=[1.0, 1.06], odak=[0.5, 0.5], yazi="Ezgi Hocam ile Ömer gitti."),
-    broll(7412, 6.0, 9.2, zoom=[1.06, 1.12], odak=[0.5, 0.5]),
 ]
 OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.6, ust="YAŞAMFEN PİJAMA PARTİSİ", metin="VAMPİR\nKÖYLÜ", vurguSatir=True, alt="Hocalar vs öğrenciler 🧛", y=380, boyut=140),
@@ -42,7 +41,7 @@ OLAYLAR = [
     olay("etiket", kaynak=(7428, 23.4), sure=1.4, metin="😂", y=520, boyut=90, ses="pop"),
     olay("faz", kaynak=(7439, 35.0), sure=1.6, faz="gunduz", alt="Kim gitti?"),
     olay("elendi", kaynak=(7412, 4.5), sure=1.8, y=700),
-    olay("cagri", kaynak=(7412, 6.0), sure=3.2, metin="Sen olsan kimi asardın? 👀", altMetin="Vampirleri 2. videoda açıklıyoruz 🧛", alt=460),
+    olay("cagri", kaynak=(7412, 4.9), sure=1.0, metin="Sen olsan kimi asardın? 👀", altMetin="Vampirleri 2. videoda açıklıyoruz 🧛", alt=460),
 ]
 ALTYAZI_GIZLE_TIPLER = ["baslik", "faz", "cagri"]
 VURGU = ["vampir", "vampiri", "vampirler", "doktor", "doktoru", "soytarı", "deliyi", "öldüm", "günaydın", "öldü", "yiyor!", "sabah", "gitti"]

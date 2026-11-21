@@ -62,7 +62,7 @@ const ParcaGorunum: React.FC<{ p: Parca }> = ({ p }) => {
   let blur = 0, ek = 1, ortu = 0, ortuRenk = "#fff";
   if (p.gecis) {
     const g = interpolate(f, [0, 9], [1, 0], { ...kl, easing: Easing.out(Easing.cubic) });
-    if (p.gecis === "yumusak") { blur = 10 * g; ek = 1 + 0.06 * g; }
+    if (p.gecis === "yumusak") { /* crossfade Kurgu düzeyinde */ }
     else { ortu = g; ortuRenk = p.gecis === "beyaz" ? "#fff" : "#000"; }
   }
   const [ox, oy] = p.odak ?? [0.5, 0.45];
@@ -194,6 +194,25 @@ const OlayGorunum: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   }
 };
 
+const XF = 10; // crossfade kare
+const OncekiDevam: React.FC<{ p: Parca }> = ({ p }) => {
+  const f = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const z = (p.zoom ?? [1, 1])[1];
+  const [ox, oy] = p.odak ?? [0.5, 0.45];
+  return (
+    <AbsoluteFill style={{ overflow: "hidden", backgroundColor: "#000" }}>
+      <AbsoluteFill style={{ transform: `scale(${z})`, transformOrigin: `${ox * 100}% ${oy * 100}%` }}>
+        <OffthreadVideo src={staticFile(p.src)} startFrom={Math.round(p.bas * fps) + p.kare} muted style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+const Belir: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const f = useCurrentFrame();
+  return <AbsoluteFill style={{ opacity: interpolate(f, [0, XF], [0, 1], { ...kl, easing: Easing.inOut(Easing.sin) }) }}>{children}</AbsoluteFill>;
+};
+
 export const Kurgu: React.FC<{ v: KurguVeri }> = ({ v }) => {
   let bas = 0;
   const konusma = v.muzik?.konusmaSeviye;
@@ -201,7 +220,13 @@ export const Kurgu: React.FC<{ v: KurguVeri }> = ({ v }) => {
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {v.parcalar.map((p, i) => {
         const s = bas; bas += p.kare;
-        return <Sequence key={i} from={s} durationInFrames={p.kare}><ParcaGorunum p={p} /></Sequence>;
+        const xf = p.gecis === "yumusak" && i > 0;
+        return (
+          <React.Fragment key={i}>
+            {xf && <Sequence from={s} durationInFrames={Math.min(XF, p.kare)}><OncekiDevam p={v.parcalar[i - 1]} /></Sequence>}
+            <Sequence from={s} durationInFrames={p.kare}>{xf ? <Belir><ParcaGorunum p={p} /></Belir> : <ParcaGorunum p={p} />}</Sequence>
+          </React.Fragment>
+        );
       })}
       {v.olaylar.filter((o) => o.tip === "karart").map((o, i) => (
         <Sequence key={`k${i}`} from={Math.round(o.s * v.fps)} durationInFrames={Math.max(1, Math.round((o.son - o.s) * v.fps))}><OlayGorunum o={o} sure={Math.round((o.son - o.s) * v.fps)} /></Sequence>
