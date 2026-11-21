@@ -1,10 +1,10 @@
 # Güneş Oto Kurtarma marka rehberi
 
 - Sektör / ne satıyor (hizmetler):
-  - Ağır ticari araç kurtarma (TIR, kamyon, otobüs, iş makinesi vb.) — binek/normal oto çekici DEĞİL; görsel ve metinlerde binek araç çekici imajı kullanma
+  - Ağır ticari araç kurtarma: her türlü ağır araç (TIR, kamyon, otobüs, iş makinesi vb.) — binek/normal oto çekici DEĞİL; görsel ve metinlerde binek araç çekici imajı kullanma
   - Nakliye
   - Forklift
-  - Menlift (? — kullanıcının mesajı "menl" diye kesildi; netleştirilecek)
+  - Menlift (sepetli personel yükseltici)
 - Hizmet bölgesi / şehir: Ankara
 - Adres: Saray Keresteciler Sanayi Sitesi, Adnan Menderes Bulvarı No: 76/B, Kahramankazan / Ankara
 - Hedef kitle: ?
@@ -16,6 +16,6 @@
 - Sosyal medya: Instagram @gunesforkliftotokurtarma
 - Web: gunesforkliftotokurtarma.com
 - İletişim / CTA: Telefon + WhatsApp 0544 397 87 96 (videoda bu biçimde yaz; WhatsApp linki wa.me/905443978796)
-- 7/24 hizmet var mı: ?
+- 7/24 hizmet: EVET — videolarda/CTA'da "7/24" mutlaka vurgulanır
 - Yapılmayacaklar / dikkat edilecekler: Binek araç çekici görselleri/ifadeleri kullanılmaz (iş ağır ticari kurtarma). Sıfırdan Satışa kanal stili, turuncu tema, "babalar gibi" tonu KULLANILMAZ.
 - Referans içerikler: ?
