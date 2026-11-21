@@ -197,6 +197,7 @@
    "metin": "Favorin hangisi?",
    "altMetin": "Numarasını yorumlara yaz 👇",
    "alt": 460,
+   "sfx": false,
    "s": 22.35,
    "son": 23.5
   }

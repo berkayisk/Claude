@@ -173,7 +173,7 @@ const Cagri: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
         <div style={{ fontFamily: YF.baslik, fontWeight: 900, fontSize: 56, color: YF.antrasit, lineHeight: 1.1 }}>{o.metin}</div>
         {o.altMetin && <div style={{ fontFamily: YF.metin, fontWeight: 600, fontSize: 38, color: YF.kirmizi, marginTop: 8 }}>{o.altMetin}</div>}
       </div>
-      <Audio src={staticFile("sfx/cagri.wav")} volume={0.5} />
+      {o.sfx !== false && <Audio src={staticFile("sfx/cagri.wav")} volume={0.5} />}
     </AbsoluteFill>
   );
 };

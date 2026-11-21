@@ -14,11 +14,11 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | # | Video | Composition | Durum |
 |---|-------|-------------|-------|
 | 1 | Etkinlik genel video | Genel | ham bekleniyor |
-| 2 | Bilgi yarışması #1 | Yarisma1 | taslak gönderildi (82 sn) |
-| 3 | Bilgi yarışması #2 | Yarisma2 | ham bekleniyor |
+| 2 | Bilgi yarışması #1 | Yarisma1 | 2. taslak gönderildi (82 sn, geri bildirim 1–3) |
+| 3 | Bilgi yarışması #2 | Yarisma2 | taslak gönderildi (66 sn) |
 | 4 | Vampir köylü #1 | Vampir1 | ham bekleniyor |
 | 5 | Vampir köylü #2 | Vampir2 | ham bekleniyor |
-| 6 | Pijama kombinleri (ekstra) | Kombin | ham bekleniyor |
+| 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
 | 7 | Hocalar ne dedi (ekstra) | Hocalar | ham bekleniyor |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
