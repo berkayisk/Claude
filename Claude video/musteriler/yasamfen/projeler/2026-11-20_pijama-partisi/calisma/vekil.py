@@ -18,6 +18,7 @@ det = cv2.FaceDetectorYN.create(hf_hub_download("opencv/face_detection_yunet", "
 rec = cv2.FaceRecognizerSF.create(hf_hub_download("opencv/face_recognition_sface", "face_recognition_sface_2021dec.onnx"), "")
 K = json.load(open("calisma/yuz/kisiler.json"))["kisiler"]
 M = np.array([k["merkez"] for k in K], np.float32); NO = [k["no"] for k in K]
+KLIP = {k["no"]: set(k["dosyalar"]) for k in K}   # kişi hangi kliplerde kümelendi
 kural = json.load(open("calisma/yuz/blur.json")) if os.path.exists("calisma/yuz/blur.json") else {"acik": [], "varsayilan": "blur"}
 ACIK = set(kural.get("acik", [])); BLUR = set(kural.get("blur", [])); VARS = kural.get("varsayilan", "blur")
 os.makedirs("girdiler/vekil", exist_ok=True); os.makedirs("calisma/yuz/iz", exist_ok=True)
@@ -69,13 +70,15 @@ def _isle(no, src, out):
             if k is not None: oy[k] = oy.get(k, 0) + s
             if s > 0.30: zayif[en] = zayif.get(en, 0) + s
         kim = max(oy, key=oy.get) if oy else None
+        if kim is not None and kim not in BLUR and f"IMG_{no}.MOV" not in KLIP.get(kim, ()):
+            kim = None   # bu klipte hiç görülmemiş kişiye eşleşme → yanlış tanıma, güvenli taraf
         if kim is not None:
             bl = True if kim in BLUR else False if (kim in ACIK or VARS == "acik") else True
         elif zayif:
             kim = max(zayif, key=zayif.get)
-            bl = (kim in BLUR) or int(no) <= kural.get("bilinmeyen_blur_klip_ust", 0); kim = f"~{kim}"
+            bl = (kim in BLUR) or int(no) <= kural.get("bilinmeyen_blur_klip_ust", 0) or f"IMG_{no}.MOV" not in KLIP.get(kim, ()); kim = f"~{kim}"
         else:
-            bl = int(no) <= kural.get("bilinmeyen_blur_klip_ust", 99999) if VARS == "acik" else True
+            bl = True   # hiç tanınmayan iz → blur
         ks = sorted(iz["kutular"]); plan.append({"kim": kim, "blur": bl, "kareler": ks, "kutular": [iz["kutular"][k] for k in ks]})
     json.dump(plan, open(f"calisma/yuz/iz/{no}.json", "w"))
     # kare → blur kutuları (enterpolasyon + baş/son TUT kadar uzatma)
