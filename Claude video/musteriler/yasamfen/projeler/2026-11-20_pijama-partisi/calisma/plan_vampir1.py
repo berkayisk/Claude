@@ -2,22 +2,22 @@
 # Ses gürültülü: altyazılar elle (yazi=...). Roller (kullanıcı): #37 doktor, #8/#40/#50 vampir. Soytarı bilinmiyor.
 Z = dict(zoom=[1.0, 1.05], odak=[0.5, 0.5])
 PLAN = [
-    klip(7393, 0.0, 4.75, zoom=[1.08, 1.0], odak=[0.5, 0.45], yazi="Şimdi dört tane vampir seçeceğim. Dört vampir seçeceğiz."),
+    klip(7393, 0.0, 5.1, zoom=[1.08, 1.0], odak=[0.5, 0.45], yazi="Şimdi dört tane vampir seçeceğim. Dört vampir seçeceğiz."),
     klip(7393, 6.5, 7.95, **Z, yazi="Bir tane doktor seçiyoruz."),
     klip(7393, 13.3, 16.4, **Z, yazi="Bir tane de soytarı seçiyoruz. Soytarı kendini astırmaya çalışıyor."),
     klip(7395, 4.7, 8.0, **Z, yazi="Bazı turlar iki kişiyi öldürecek vampirler, haberiniz olsun."),
     # GECE
-    klip(7397, 1.3, 4.0, gecis="siyah", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Kapat gözünü, kapat, kapat gözünü"),
+    klip(7397, 1.3, 3.38, sabit=True, gecis="siyah", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Kapat gözünü, kapat, kapat gözünü"),
     klip(7397, 9.4, 12.1, zoom=[1.08, 1.12], odak=[0.5, 0.5], yazi="Evet, vampiri seçiyoruz, vampiri seçiyoruz."),
-    klip(7420, 10.5, 13.5, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Vampirleri görebilir miyiz?"),
+    klip(7420, 10.45, 13.9, sabit=True, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Vampirleri görebilir miyiz?"),
     broll(7420, 21.0, 24.2, zoom=[1.0, 1.06], odak=[0.5, 0.45]),      # #50 gözü açık
     broll(7420, 15.0, 17.6, zoom=[1.0, 1.06], odak=[0.5, 0.5]),       # #40
-    klip(7399, 5.4, 8.4, gecis="yumusak", zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Doktoru seçiyoruz, doktoru seçiyoruz."),
+    klip(7399, 5.4, 7.68, sabit=True, gecis="yumusak", zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Doktoru seçiyoruz, doktoru seçiyoruz."),
     klip(7400, 0.2, 3.65, zoom=[1.0, 1.05], odak=[0.5, 0.5], yazi="Deliyi seçiyoruz. Evet. Deliyi de seçtik."),
     # SABAH
     klip(7420, 44.1, 45.2, gecis="beyaz", zoom=[1.0, 1.04], odak=[0.5, 0.5], yazi="Tamam, günaydın."),
     klip(7404, 7.9, 13.4, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Doktor kendini koruyarak doğru kişiyi koruduğu için bir kişi öldü. Normalde iki kişi ölmesi lazımdı."),
-    klip(7402, 0.7, 1.6, zoom=[1.05, 1.1], odak=[0.5, 0.5], punch=[{"t": 0.8, "olcek": 1.12}], yazi="Ben öldüm."),
+    klip(7402, 0.7, 2.0, zoom=[1.05, 1.1], odak=[0.5, 0.5], punch=[{"t": 0.8, "olcek": 1.12}], yazi="Ben öldüm."),
     # 2. GECE
     klip(7428, 2.9, 7.1, gecis="siyah", zoom=[1.0, 1.06], odak=[0.5, 0.5], yazi="Vampirler iki kişiyi öldürebilir mi? Vampirler iki kişiyi öldürüyor."),
     klip(7428, 23.3, 24.8, zoom=[1.06, 1.1], odak=[0.5, 0.5], punch=[{"t": 23.4, "olcek": 1.1}], yazi="Vampirler birbirini yiyor!"),

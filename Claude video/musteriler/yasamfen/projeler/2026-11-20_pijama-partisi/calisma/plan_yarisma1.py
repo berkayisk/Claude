@@ -47,7 +47,7 @@ PLAN = [
     klip(7357, 207.6, 208.4, zoom=[1.08, 1.12], odak=[0.5, 0.55]),
     klip(7357, 211.2, 212.6, **C, punch=[{"t": 211.3, "olcek": 1.16, "sure": 6}]),
     # FİNAL: puanlar yeniden sayıldı → kazanan logo duvarı önündeki takım (7370), kutlama anı
-    klip(7370, 23.05, 27.2, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7370, 23.05, 28.3, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
     klip(7370, 28.3, 33.0, sik=False, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.6]),
 ]
 HARIC = [
@@ -95,6 +95,6 @@ OLAYLAR = [
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri"]
 VURGU = ["doğru", "doğru.", "yanlış", "karaciğer.", "mitoz", "berabere.", "kazananı", "tebrik", "sitoplazma.", "atar", "savaşçılar"]
-DUZELT = {"Anistoplazma": "Sitoplazma", "fücreli": "hücreli", "zanayım": "alayım", "Kıyasa": "Kıyasıya", "Ekinot": "Ekinoks", "Sıranız": "Süreniz", "Sürenin": "Süreniz", "Isimsiz": "İsimsiz", "ikili": "eğikliği", "eksene": "eksen"}
+DUZELT = {"Anistoplazma": "Sitoplazma", "fücreli": "hücreli", "zanayım": "alayım", "Kıyasa": "Kıyasıya", "Ekinot": "Ekinoks", "Sıranız": "Süreniz", "Sürenin": "Süreniz", "Isimsiz": "İsimsiz", "ikili": "eğikliği", "eksene": "eksen", "kazanın": "kazandı"}
 SFX = [{"ad": "uyari", "kaynak": (7356, 80.1), "seviye": 0.45}]
 MUZIK = {"src": "muzik/yarisma.wav", "seviye": 0.20, "konusmaSeviye": 0.06}

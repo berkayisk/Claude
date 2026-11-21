@@ -18,7 +18,7 @@ PLAN = [
     klip(7367, 123.4, 128.7, gecis="yumusak", **Z),
     klip(7368, 14.0, 16.65, zoom=[1.05, 1.08], odak=[0.5, 0.55], punch=[{"t": 16.3, "olcek": 1.13}]),
     # S3 EKOK
-    klip(7368, 43.3, 48.9, gecis="yumusak", **Z),
+    klip(7368, 41.95, 48.9, gecis="yumusak", **Z),
     klip(7368, 118.7, 121.3, zoom=[1.05, 1.1], odak=[0.5, 0.55], punch=[{"t": 120.9, "olcek": 1.07, "sure": 5}]),
     # Final: tren sorusu
     klip(7368, 143.6, 145.45, gecis="yumusak", zoom=[1.0, 1.05], odak=[0.5, 0.5]),
@@ -27,7 +27,7 @@ PLAN = [
     klip(7368, 179.1, 186.4, zoom=[1.0, 1.1], odak=[0.5, 0.5]),
     broll(7368, 190.0, 195.6, zoom=[1.12, 1.2], odak=[0.5, 0.5]),  # aynı sahnenin devamı: "sen ne derdin" duraklaması + cevap
     # FİNAL: puanlar yeniden sayıldı → kazanan logo duvarı önündeki takım (7370), kutlama anı
-    klip(7370, 20.65, 27.2, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7370, 20.65, 28.3, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
     klip(7370, 28.3, 33.0, sik=False, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.6]),
 ]
 HARIC = []
@@ -55,6 +55,6 @@ OLAYLAR = [
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri", "cevap"]
 VURGU = ["yanlış", "doğru", "berabere", "kazanır", "tebrik", "kazanıyor", "elektrikli", "dumanı"]
-DUZELT = {"İstipsiz": "İsimsiz", "fenasın": "fenasın", "Sürenizde": "Süreniz de", "ekokunu": "EKOK'unu", "Ekok": "EKOK"}
+DUZELT = {"İstipsiz": "İsimsiz", "fenasın": "fenasın", "Sürenizde": "Süreniz de", "ekokunu": "EKOK'unu", "Ekok": "EKOK", "kazanın": "kazandı"}
 SFX = [{"ad": "uyari", "kaynak": (7367, 92.0), "seviye": 0.4}, {"ad": "uyari", "kaynak": (7368, 120.9), "seviye": 0.4}]
 MUZIK = {"src": "muzik/yarisma.wav", "seviye": 0.22, "konusmaSeviye": 0.07}

@@ -14,12 +14,12 @@ PLAN = [
     broll(7383, 4.0, 5.9, zoom=[1.0, 1.05]),
     broll(7387, 0.3, 2.3, zoom=[1.0, 1.05]),
     # Vampir köylü
-    klip(7397, 1.3, 4.0, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Kapat gözünü, kapat, kapat gözünü"),
+    klip(7397, 1.3, 3.38, sabit=True, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Kapat gözünü, kapat, kapat gözünü"),
     klip(7428, 23.3, 24.8, zoom=[1.04, 1.1], odak=[0.5, 0.5], yazi="Vampirler birbirini yiyor!"),
-    klip(7441, 4.1, 8.3, zoom=[1.05, 1.12], odak=[0.5, 0.4], yazi="Neden onları öldüreyim yani, mantıken?"),
+    klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.12], odak=[0.5, 0.4], yazi="Neden onları öldüreyim yani, mantıken?"),
     broll(7420, 21.2, 23.2, zoom=[1.0, 1.06], odak=[0.5, 0.45]),
     # Kapanış
-    klip(7485, 75.3, 79.35, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.35]),
+    klip(7485, 75.3, 79.6, sabit=True, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.35]),
     broll(7392, 0.2, 3.4, zoom=[1.0, 1.06]),
 ]
 OLAYLAR = [

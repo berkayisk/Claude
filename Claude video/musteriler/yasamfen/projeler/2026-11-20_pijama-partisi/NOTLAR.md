@@ -107,3 +107,10 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Akşam blur hatası (Hocalar/Vampir #2 ilk render, gönderilmedi): loş ışık ve yakın çekimde hocalar (#8 kırmızı kazak vb.) yarışma
   öğrencilerine (#28, #59…) benzetilip blurlanıyordu. Kural: >7392 kliplerde yalnızca O KLİPTE kümelenmiş blur-listesi kişileri
   blurlanır (akşam gerçekten görünenler: 3, 4, 10, 11, 23, 24, 29, 59, 62), diğer herkes açık. Akşam klipleri yeniden kodlandı.
+
+## Geri bildirim 4: cümleler yarım kalmasın (2026-11-21)
+- Kesimler cümle sınırına yaslanır (kurgu_yap.py cumle_sinir): başlangıç cümle başına (en çok 3 sn geri), bitiş cümle sonuna (en çok 3 sn,
+  elle yazılı kliplerde 1.5 sn ileri); ses kuyruğu sönene kadar (en çok 0.45 sn) ama bir sonraki kelimeye taşmadan.
+- Sessizlik kesiminde kenar payları: baş 0.06, son 0.15–0.18 sn (eski 0.035 kelime kuyruklarını kırpıyordu).
+- calisma/cumle_kontrol.py: her plan bloğunun başı/sonu yarım cümle / kırpık kelime kontrolü. Kalan uyarılar yalnızca tekrarlı tezahürat
+  ("kapat, kapat…", "doktoru seçiyoruz…") — tam bir öbekten sonra kesiliyor.

@@ -27,6 +27,39 @@ def kelimeler(no):
     d = json.load(open(f"calisma/transkript/IMG_{no}.MOV.json"))
     return [(w[0], w[1], w[2]) for s in d for w in s["kelimeler"]]
 
+SON_NOKTA = (".", "?", "!", "…")
+def cumle_sinir(no, bas, son, sadece_kuyruk=False, ileri=3):
+    """bas'ı içine düştüğü cümlenin başına, son'u cümlenin sonuna yasla (en çok 3 sn); sonra sesin söndüğü yere kadar uzat (en çok 0.45 sn)"""
+    kw = [] if sadece_kuyruk else kelimeler(no)
+    # baş: bas'tan sonraki ilk kelime, önceki kelime cümle sonu değilse ve 3 sn içindeyse cümle başına geri git
+    ic = [i for i, (ws, we, w) in enumerate(kw) if (ws + we) / 2 >= bas]
+    if ic:
+        i = ic[0]; j = i
+        while j > 0 and not kw[j-1][2].endswith(SON_NOKTA) and kw[j][0] - kw[j-1][1] < 0.6 and bas - kw[j-1][0] < 3: j -= 1
+        if j < i: bas = kw[j][0] - 0.06
+        else: bas = min(bas, kw[i][0] - 0.06)
+    # son: son'dan önceki son kelime cümle sonu değilse, cümle bitene kadar ileri git (3 sn sınır)
+    ic = [i for i, (ws, we, w) in enumerate(kw) if (ws + we) / 2 <= son]
+    if ic:
+        i = ic[-1]; j = i
+        while j + 1 < len(kw) and not kw[j][2].endswith(SON_NOKTA) and kw[j+1][0] - kw[j][1] < 0.6 and kw[j+1][1] - son < ileri: j += 1
+        son = max(son, kw[j][1] + 0.18)
+    # ses kuyruğu — ama bir sonraki kelimeye taşmadan (yeni cümlenin ilk hecesi girmesin)
+    tum = kelimeler(no)
+    icerde = [we for ws, we, w in tum if (ws + we) / 2 <= son]
+    son_kelime_bitis = max(icerde) if icerde else son
+    sonraki = min((ws for ws, we, w in tum if ws > son_kelime_bitis - 0.01 and (ws + we) / 2 > son - 0.2), default=1e9)
+    son = min(son, sonraki - 0.03)
+    tavan = min(son + 0.45, sonraki - 0.03)
+    if os.path.exists(f"calisma/ses/{no}_16k.wav") and tavan > son:
+        db, esik = enerji(no); k = int(son * 100)
+        while k < len(db) and k < int(tavan * 100) and db[k] > esik - 3: k += 1
+        son = min(max(son, k / 100 + 0.05), tavan)
+    # baş da önceki kelimenin kuyruğunu almasın
+    onceki = max((we for ws, we, w in tum if we <= bas + 0.05), default=-1)
+    bas = max(bas, onceki + 0.02)
+    return max(0, bas), son
+
 def sikistir(no, bas, son, haric):
     """[bas,son] içinde konuşma bölgelerini döndür: >=0.12 sn sessizlik kesilir, kenarda 0.035 sn pay"""
     if not os.path.exists(f"calisma/ses/{no}_16k.wav"): return [(bas, son)]
@@ -38,7 +71,7 @@ def sikistir(no, bas, son, haric):
         if ses[i]:
             j = i
             while j < len(ses) and (ses[j] or (j + 12 < len(ses) and ses[j:j+12].any())): j += 1
-            bolge.append([bas + i / 100 - 0.035, bas + j / 100 + 0.035]); i = j
+            bolge.append([bas + i / 100 - 0.06, bas + j / 100 + 0.15]); i = j
         else: i += 1
     # çok kısa (<0.08 sn) gürültü patlamalarını at
     bolge = [b for b in bolge if b[1] - b[0] >= 0.12]
@@ -57,11 +90,11 @@ def sikistir(no, bas, son, haric):
     # bölgeyi içindeki kelimelerin tamamını kapsayacak şekilde genişlet (kelime kırpılmasın), sonra çakışanları birleştir
     for b in bolge:
         ic = [(ws, we) for ws, we, _ in kw if b[0] - 0.05 <= (ws + we) / 2 <= b[1] + 0.05]
-        if ic: b[0] = min(b[0], min(x[0] for x in ic) - 0.035); b[1] = max(b[1], max(x[1] for x in ic) + 0.035)
+        if ic: b[0] = min(b[0], min(x[0] for x in ic) - 0.06); b[1] = max(b[1], max(x[1] for x in ic) + 0.18)
     # whisper'ın duyduğu ama enerji eşiğinin kaçırdığı kelimeler de bölge olur
     for ws, we, _ in kw:
         if bas <= (ws + we) / 2 <= son and not any(b[0] <= (ws + we) / 2 <= b[1] for b in bolge):
-            bolge.append([ws - 0.035, we + 0.035])
+            bolge.append([ws - 0.06, we + 0.18])
     bolge.sort(); bir = []
     for b in bolge:
         if bir and b[0] <= bir[-1][1] + 0.05: bir[-1][1] = max(bir[-1][1], b[1])
@@ -79,11 +112,15 @@ def main():
     for oi, o in enumerate(P.PLAN):
         if o["tur"] in ("klip", "broll"):
             no = o["no"]
+            if o["tur"] == "klip" and not o.get("sabit") and not o.get("kelimesiz"):
+                o["bas"], o["son"] = cumle_sinir(no, o["bas"], o["son"], ileri=1.5 if o.get("yazi") else 3)
+            elif o["tur"] == "klip" and not o.get("sabit"):
+                _, o["son"] = cumle_sinir(no, o["bas"], o["son"], sadece_kuyruk=True)   # elle yazılı/kelimesiz: sadece ses kuyruğu
             araliklar = sikistir(no, o["bas"], o["son"], haric) if o["tur"] == "klip" and o.get("sik", True) else [(o["bas"], o["son"])]
             ayar = {k: v for k, v in o.items() if k not in ("tur", "no", "bas", "son", "sik", "kelimesiz", "yazi")}
             for k, (a, b) in enumerate(araliklar):
                 fa = math.floor(a * FPS) / FPS; kare = max(1, math.ceil(b * FPS) - math.floor(a * FPS))
-                p = {"src": f"vekil/{no}.mp4", "bas": round(fa, 4), "kare": kare}
+                p = {"src": f"vekil/{no}.mp4", "bas": round(fa, 4), "kare": kare, "blok": oi}
                 if o["tur"] == "klip": p["ses"] = f"ses/{no}_temiz.wav"
                 else: p["sessiz"] = True
                 pa = dict(ayar)
