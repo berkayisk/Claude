@@ -60,3 +60,9 @@ Ayrıntı: `calisma/katalog.json` (süre, ses, tür), kare şeritleri `calisma/s
   kısa klipler; whisper "İzlediğiniz için teşekkür ederim" / "Altyazı M.K." = halüsinasyon (sessizlik). Savunma anları: 7424, 7441.
 - Hoca görüşleri: 7470 (kamp haftası, şarj), 7471 (ara tatil sonu parti), 7474 (5 günlük kamp), 7476 (rehber öğretmen: +100 soru),
   7485 (özet + teşekkür; başında tekrar/hazırlık var, 37.4 sn'den itibaren temiz).
+
+## Vampir köylü rolleri (kullanıcı, pafta numaralarıyla — calisma/yuz/kisiler.json)
+- #37 DOKTOR (gözlüklü, sakallı bey — röportajda da var, 7485)
+- #8, #40, #50 VAMPİR (#8 kırmızı kazaklı hanım, #40 genç erkek, #50 kıvırcık saçlı kız)
+- Diğer vampir(ler) ve soytarı/deli bilinmiyor (oyunda 4 vampir seçildi) — sorulacak
+- Blur listesi kullanıcıdan ayrıca gelecek (açık kalanlar değil, blurlanacaklar yazılacak)
