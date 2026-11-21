@@ -36,4 +36,4 @@ OLAYLAR = [
 ALTYAZI_GIZLE_TIPLER = ["baslik", "cagri"]
 VURGU = ["partimiz", "kamp", "yanlış", "doğru.", "tebrik", "vampirler", "mantıken?", "teşekkür"]
 DUZELT = {}
-MUZIK = {"src": "muzik/parti.wav", "seviye": 0.30, "konusmaSeviye": 0.08}
+MUZIK = None  # trend müzik Instagram'da eklenecek

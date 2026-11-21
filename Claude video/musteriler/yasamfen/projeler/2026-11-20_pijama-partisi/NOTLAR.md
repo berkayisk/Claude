@@ -75,3 +75,5 @@ Ayrıntı: `calisma/katalog.json` (süre, ses, tür), kare şeritleri `calisma/s
 Blurlanacak pafta numaraları: 1, 3, 4, 9, 10, 11, 12, 13, 14, 16, 17, 19, 20, 21, 23, 24, 25, 27, 28, 29, 30, 31, 59, 62.
 Diğer tanınan herkes açık. Tanınmayan yüz izi: yarışma/kombin kliplerinde (<=7392) her zaman blur; diğerlerinde en yakın kişiye göre.
 Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Render sonrası kare kontrolü yapılacak.
+- Müzik (kullanıcı): trend müziğe uygun videolarda (Kombin, Genel) müzik YOK — Instagram'da trend ses eklenecek. Kombin tamamen sessiz
+  (efekt de yok). Yarışma, Vampir, Hocalar: kodla üretilmiş telifsiz müzik gömülü.
