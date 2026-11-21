@@ -25,14 +25,15 @@ PLAN = [
     klip(7368, 154.0, 155.6, zoom=[1.05, 1.1], odak=[0.5, 0.5]),
     klip(7368, 173.2, 174.2, zoom=[1.1, 1.12], odak=[0.5, 0.5]),
     klip(7368, 179.1, 186.4, zoom=[1.0, 1.1], odak=[0.5, 0.5]),
-    broll(7368, 190.0, 193.4, zoom=[1.12, 1.2], odak=[0.5, 0.5]),
-    klip(7368, 201.3, 203.3, zoom=[1.05, 1.1], odak=[0.5, 0.5], punch=[{"t": 201.4, "olcek": 1.12}]),
-    klip(7369, 9.7, 12.3, zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    broll(7368, 190.0, 195.6, zoom=[1.12, 1.2], odak=[0.5, 0.5]),  # aynı sahnenin devamı: "sen ne derdin" duraklaması + cevap
+    # FİNAL: puanlar yeniden sayıldı → kazanan logo duvarı önündeki takım (7370), kutlama anı
+    klip(7370, 20.65, 27.2, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7370, 28.3, 33.0, sik=False, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.6]),
 ]
 HARIC = []
 S = dict(y=230)
 OLAYLAR = [
-    olay("baslik", zaman=0.0, sure=2.6, ust="DURUM BERABERE 😱", metin="SON SORUYU\nBİLEN KAZANIR", vurguSatir=True, y=420, boyut=104),
+    olay("baslik", zaman=0.0, sure=2.6, ust="DURUM BERABERE 😱", metin="KAZANAN\nKİM OLDU?", vurguSatir=True, y=420, boyut=104),
     olay("baslik", kaynak=(7366, 0.1), sure=2.4, ust="BİRAZ ÖNCE…", metin="MATEMATİK\nTURU", vurguSatir=True, y=420, boyut=110),
     olay("soru", kaynak=(7367, 6.5), sure=7.4, no=1, soru="Çarpan sayısı 3 olan iki basamaklı sayılar nelerdir?", **S),
     olay("cevap", kaynak=(7367, 92.0), sure=1.0, cevap="3'e bölünenler", dogruMu=False, y=1450),
@@ -46,9 +47,10 @@ OLAYLAR = [
     olay("karart", kaynak=(7368, 190.0), sure=3.4, seviye=0.45),
     olay("etiket", kaynak=(7368, 190.1), sure=3.2, metin="SEN NE DERDİN? 🤔", y=1180, boyut=64, ses="bildirim"),
     olay("sayac", kaynak=(7368, 190.0), sure=3.4, saniye=3, y=1480),
-    olay("cevap", kaynak=(7368, 201.35), sure=3.0, cevap="Elektrikli trenin dumanı olmaz! 😄", baslik="CEVAP", y=1300),
-    olay("etiket", kaynak=(7369, 9.8), sure=2.4, metin="🏆 İSİMSİZ SAVAŞÇILAR", y=420, boyut=56, ses="basari"),
-    olay("cagri", kaynak=(7369, 10.6), sure=1.7, metin="Sen bilebilir miydin?", altMetin="Yorumlara yaz 👇", alt=480),
+    olay("cevap", kaynak=(7368, 193.5), sure=2.1, cevap="Elektrikli trenin dumanı olmaz! 😄", baslik="CEVAP", y=1300),
+    olay("etiket", kaynak=(7370, 20.7), sure=2.4, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
+    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN TAKIM", y=420, boyut=60, ses="basari"),
+    olay("cagri", kaynak=(7370, 30.2), sure=2.8, metin="Sen bilebilir miydin?", altMetin="Yorumlara yaz 👇", alt=480),
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri", "cevap"]
 VURGU = ["yanlış", "doğru", "berabere", "kazanır", "tebrik", "kazanıyor", "elektrikli", "dumanı"]

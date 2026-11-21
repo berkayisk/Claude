@@ -525,18 +525,32 @@
    ]
   },
   {
-   "src": "vekil/7357.mp4",
-   "bas": 218.5333,
-   "kare": 56,
-   "ses": "ses/7357_temiz.wav",
+   "src": "vekil/7370.mp4",
+   "bas": 23.0333,
+   "kare": 125,
+   "ses": "ses/7370_temiz.wav",
    "gecis": "yumusak",
    "zoom": [
-    1.0009,
-    1.05
+    0.9998,
+    1.06
    ],
    "odak": [
     0.5,
     0.5
+   ]
+  },
+  {
+   "src": "vekil/7370.mp4",
+   "bas": 28.3,
+   "kare": 141,
+   "ses": "ses/7370_temiz.wav",
+   "zoom": [
+    1.04,
+    1.12
+   ],
+   "odak": [
+    0.5,
+    0.6
    ]
   }
  ],
@@ -1208,27 +1222,69 @@
    "b": 26
   },
   {
-   "w": "kazanan",
-   "s": 73.58,
-   "e": 74.18,
+   "w": "Matematikte",
+   "s": 73.61,
+   "e": 74.25,
    "b": 27
   },
   {
-   "w": "grubumuzu",
-   "s": 74.18,
-   "e": 74.66,
+   "w": "tek",
+   "s": 74.25,
+   "e": 74.65,
    "b": 27
   },
   {
-   "w": "tebrik",
-   "s": 74.66,
-   "e": 74.92,
+   "w": "bir",
+   "s": 74.65,
+   "e": 74.87,
    "b": 27
   },
   {
-   "w": "ediyoruz.",
-   "s": 74.92,
-   "e": 75.26,
+   "w": "doğru",
+   "s": 74.87,
+   "e": 75.13,
+   "b": 27
+  },
+  {
+   "w": "vardı,",
+   "s": 75.13,
+   "e": 75.55,
+   "b": 27
+  },
+  {
+   "w": "o",
+   "s": 75.93,
+   "e": 76.03,
+   "b": 27
+  },
+  {
+   "w": "da",
+   "s": 76.03,
+   "e": 76.13,
+   "b": 27
+  },
+  {
+   "w": "bu",
+   "s": 76.13,
+   "e": 76.37,
+   "b": 27
+  },
+  {
+   "w": "grubun",
+   "s": 76.37,
+   "e": 76.69,
+   "b": 27
+  },
+  {
+   "w": "yaptığı",
+   "s": 76.69,
+   "e": 77.11,
+   "b": 27
+  },
+  {
+   "w": "soruydu.",
+   "s": 77.11,
+   "e": 77.63,
    "b": 27
   }
  ],
@@ -1283,8 +1339,8 @@
    71.767
   ],
   [
-   74.0,
-   75.4
+   79.6,
+   82.4
   ]
  ],
  "olaylar": [
@@ -1438,9 +1494,9 @@
   },
   {
    "tip": "etiket",
-   "metin": "BİLİRLERSE KAZANIYORLAR 🏆",
+   "metin": "FEN TURUNUN SON SORUSU",
    "y": 420,
-   "boyut": 46,
+   "boyut": 48,
    "s": 58.5,
    "son": 61.3
   },
@@ -1462,20 +1518,28 @@
   },
   {
    "tip": "etiket",
-   "metin": "🏆 İSİMSİZ SAVAŞÇILAR",
+   "metin": "FİNAL SONUCU 🏁",
    "y": 420,
-   "boyut": 54,
+   "boyut": 52,
+   "s": 73.6,
+   "son": 76.2
+  },
+  {
+   "tip": "etiket",
+   "metin": "🏆 KAZANAN TAKIM",
+   "y": 420,
+   "boyut": 60,
    "ses": "basari",
-   "s": 73.55,
-   "son": 75.4
+   "s": 77.75,
+   "son": 82.35
   },
   {
    "tip": "cagri",
    "metin": "Sen kaç tanesini bildin?",
    "altMetin": "Yorumlara yaz 👇",
    "alt": 480,
-   "s": 74.0,
-   "son": 75.4
+   "s": 79.6,
+   "son": 82.4
   }
  ],
  "sfx": [
@@ -1489,7 +1553,7 @@
    "s": 7.633
   }
  ],
- "toplamKare": 2262,
+ "toplamKare": 2472,
  "muzik": {
   "src": "muzik/yarisma.wav",
   "seviye": 0.2,

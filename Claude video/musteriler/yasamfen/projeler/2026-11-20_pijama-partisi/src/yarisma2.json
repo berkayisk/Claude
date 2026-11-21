@@ -282,7 +282,7 @@
   {
    "src": "vekil/7368.mp4",
    "bas": 190.0,
-   "kare": 102,
+   "kare": 168,
    "sessiz": true,
    "zoom": [
     1.12,
@@ -294,38 +294,46 @@
    ]
   },
   {
-   "src": "vekil/7368.mp4",
-   "bas": 201.3,
-   "kare": 60,
-   "ses": "ses/7368_temiz.wav",
+   "src": "vekil/7370.mp4",
+   "bas": 20.6667,
+   "kare": 68,
+   "ses": "ses/7370_temiz.wav",
+   "gecis": "yumusak",
    "zoom": [
-    1.05,
-    1.1
+    1.0002,
+    1.0209
    ],
    "odak": [
     0.5,
     0.5
-   ],
-   "punch": [
-    {
-     "kare": 3,
-     "olcek": 1.12,
-     "sure": 8
-    }
    ]
   },
   {
-   "src": "vekil/7369.mp4",
-   "bas": 9.7333,
-   "kare": 77,
-   "ses": "ses/7369_temiz.wav",
+   "src": "vekil/7370.mp4",
+   "bas": 23.0333,
+   "kare": 125,
+   "ses": "ses/7370_temiz.wav",
    "zoom": [
-    1.0008,
+    1.0218,
     1.06
    ],
    "odak": [
     0.5,
     0.5
+   ]
+  },
+  {
+   "src": "vekil/7370.mp4",
+   "bas": 28.3,
+   "kare": 141,
+   "ses": "ses/7370_temiz.wav",
+   "zoom": [
+    1.04,
+    1.12
+   ],
+   "odak": [
+    0.5,
+    0.6
    ]
   }
  ],
@@ -787,52 +795,94 @@
    "b": 15
   },
   {
-   "w": "Kazanan",
-   "s": 52.427,
-   "e": 53.347,
+   "w": "Geldik",
+   "s": 54.63,
+   "e": 55.27,
    "b": 17
   },
   {
-   "w": "grubu",
-   "s": 53.347,
-   "e": 53.727,
+   "w": "en",
+   "s": 55.27,
+   "e": 55.45,
    "b": 17
   },
   {
-   "w": "tebrik",
-   "s": 53.727,
-   "e": 54.167,
+   "w": "son",
+   "s": 55.45,
+   "e": 55.67,
    "b": 17
   },
   {
-   "w": "İsimsiz",
-   "s": 54.413,
-   "e": 55.133,
-   "b": 18
+   "w": "matematiğe.",
+   "s": 55.67,
+   "e": 56.65,
+   "b": 17
   },
   {
-   "w": "savaşçılar",
-   "s": 55.133,
-   "e": 55.713,
-   "b": 18
+   "w": "Matematikte",
+   "s": 56.91,
+   "e": 57.55,
+   "b": 17
   },
   {
-   "w": "kazanıyor.",
-   "s": 55.713,
-   "e": 56.213,
-   "b": 18
+   "w": "tek",
+   "s": 57.55,
+   "e": 57.95,
+   "b": 17
   },
   {
-   "w": "Çok",
-   "s": 56.333,
-   "e": 56.453,
-   "b": 18
+   "w": "bir",
+   "s": 57.95,
+   "e": 58.17,
+   "b": 17
   },
   {
-   "w": "teşekkür",
-   "s": 56.453,
-   "e": 56.813,
-   "b": 18
+   "w": "doğru",
+   "s": 58.17,
+   "e": 58.43,
+   "b": 17
+  },
+  {
+   "w": "vardı,",
+   "s": 58.43,
+   "e": 58.85,
+   "b": 17
+  },
+  {
+   "w": "o",
+   "s": 59.23,
+   "e": 59.33,
+   "b": 17
+  },
+  {
+   "w": "da",
+   "s": 59.33,
+   "e": 59.43,
+   "b": 17
+  },
+  {
+   "w": "bu",
+   "s": 59.43,
+   "e": 59.67,
+   "b": 17
+  },
+  {
+   "w": "grubun",
+   "s": 59.67,
+   "e": 59.99,
+   "b": 17
+  },
+  {
+   "w": "yaptığı",
+   "s": 59.99,
+   "e": 60.41,
+   "b": 17
+  },
+  {
+   "w": "soruydu.",
+   "s": 60.41,
+   "e": 60.93,
+   "b": 17
   }
  ],
  "vurgu": [
@@ -887,19 +937,19 @@
    52.367
   ],
   [
-   52.417,
-   55.417
+   52.467,
+   54.567
   ],
   [
-   55.233,
-   56.933
+   62.9,
+   65.7
   ]
  ],
  "olaylar": [
   {
    "tip": "baslik",
    "ust": "DURUM BERABERE 😱",
-   "metin": "SON SORUYU\nBİLEN KAZANIR",
+   "metin": "KAZANAN\nKİM OLDU?",
    "vurguSatir": true,
    "y": 420,
    "boyut": 104,
@@ -1014,25 +1064,33 @@
    "cevap": "Elektrikli trenin dumanı olmaz! 😄",
    "baslik": "CEVAP",
    "y": 1300,
-   "s": 52.417,
-   "son": 55.417
+   "s": 52.467,
+   "son": 54.567
   },
   {
    "tip": "etiket",
-   "metin": "🏆 İSİMSİZ SAVAŞÇILAR",
+   "metin": "FİNAL SONUCU 🏁",
    "y": 420,
-   "boyut": 56,
+   "boyut": 52,
+   "s": 54.6,
+   "son": 57.0
+  },
+  {
+   "tip": "etiket",
+   "metin": "🏆 KAZANAN TAKIM",
+   "y": 420,
+   "boyut": 60,
    "ses": "basari",
-   "s": 54.433,
-   "son": 56.833
+   "s": 61.05,
+   "son": 65.65
   },
   {
    "tip": "cagri",
    "metin": "Sen bilebilir miydin?",
    "altMetin": "Yorumlara yaz 👇",
    "alt": 480,
-   "s": 55.233,
-   "son": 56.933
+   "s": 62.9,
+   "son": 65.7
   }
  ],
  "sfx": [
@@ -1055,7 +1113,7 @@
    "s": 36.967
   }
  ],
- "toplamKare": 1708,
+ "toplamKare": 1971,
  "muzik": {
   "src": "muzik/yarisma.wav",
   "seviye": 0.22,

@@ -46,7 +46,9 @@ PLAN = [
     klip(7357, 188.55, 190.45, **Z),
     klip(7357, 207.6, 208.4, zoom=[1.08, 1.12], odak=[0.5, 0.55]),
     klip(7357, 211.2, 212.6, **C, punch=[{"t": 211.3, "olcek": 1.16, "sure": 6}]),
-    klip(7357, 218.5, 220.4, gecis="yumusak", zoom=[1.0, 1.05], odak=[0.5, 0.5]),
+    # FİNAL: puanlar yeniden sayıldı → kazanan logo duvarı önündeki takım (7370), kutlama anı
+    klip(7370, 23.05, 27.2, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7370, 28.3, 33.0, sik=False, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.6]),
 ]
 HARIC = [
     (7357, 112.0, 115.6),   # mikrofon uyarısı
@@ -82,11 +84,12 @@ OLAYLAR = [
     olay("soru", kaynak=(7357, 140.75), sure=5.3, soru="Temiz kanı taşıyan damarlara ne isim verilir?", **S(7)),
     olay("cevap", kaynak=(7357, 165.9), sure=1.4, cevap="Atardamar", y=1450),
     # S8
-    olay("etiket", kaynak=(7357, 174.9), sure=2.8, metin="BİLİRLERSE KAZANIYORLAR 🏆", y=420, boyut=46),
+    olay("etiket", kaynak=(7357, 174.9), sure=2.8, metin="FEN TURUNUN SON SORUSU", y=420, boyut=48),
     olay("soru", kaynak=(7357, 182.0), sure=7.4, soru="Proteinlerin kimyasal sindirimi hangi organda başlar?", **S(8)),
     olay("cevap", kaynak=(7357, 211.25), sure=1.35, cevap="Mide", y=1450),
-    olay("etiket", kaynak=(7357, 218.55), sure=2.2, metin="🏆 İSİMSİZ SAVAŞÇILAR", y=420, boyut=54, ses="basari"),
-    olay("cagri", kaynak=(7357, 219.0), sure=1.4, metin="Sen kaç tanesini bildin?", altMetin="Yorumlara yaz 👇", alt=480),
+    olay("etiket", kaynak=(7370, 23.1), sure=2.6, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
+    olay("etiket", kaynak=(7370, 28.35), sure=4.6, metin="🏆 KAZANAN TAKIM", y=420, boyut=60, ses="basari"),
+    olay("cagri", kaynak=(7370, 30.2), sure=2.8, metin="Sen kaç tanesini bildin?", altMetin="Yorumlara yaz 👇", alt=480),
 ]
 ALTYAZI_GIZLE_TIPLER = ["soru", "baslik", "cagri"]
 VURGU = ["doğru", "doğru.", "yanlış", "karaciğer.", "mitoz", "berabere.", "kazananı", "tebrik", "sitoplazma.", "atar", "savaşçılar"]

@@ -93,3 +93,9 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
   derken yarışma görüntüsü) kaldı. Kapanış çağrıları son konuşmanın üstüne bindi.
 - Her takımın sorusu-cevabı sırayla (çekimdeki dönüşümlü sıra): Yarışma #1 = 8 soru (bor ve eksen eğikliği geri alındı; kartlarda doğru
   bilgi: Bor, 23° 27').
+
+## Geri bildirim 3: kazanan takım (2026-11-21)
+- LGS yarışmasında kazanan değişti: 7368/7369'da önce "İsimsiz Savaşçılar" ilan ediliyor, 7370'te puanlar yeniden sayılıyor
+  ("Matematikte tek bir doğru vardı, o da bu grubun yaptığı soruydu") → KAZANAN logo duvarı önündeki takım; 7370 @28–33 sn alkışlı kutlama.
+- Tüm videolarda kazanma kısmı = 7370 kutlaması ("🏆 KAZANAN TAKIM"). İsimsiz Savaşçılar kutlaması (7357 @218, 7368 @201, 7369) KULLANILMAZ.
+- Yarışma #2 kancası "Son soruyu bilen kazanır" → "Kazanan kim oldu?" (artık doğru değil).
