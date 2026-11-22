@@ -185,3 +185,4 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - Viral kontrol düzeltmeleri: tren/musa cevap kartı y=760 (çağrı kartıyla çakışıyordu); sekiz başı 286.95 ("Aha" kuyruğu), musa başı 1511.8;
   7367'de soru okuyan hoca (~26) yanlışlıkla blurluydu → blur.json elle istisnası + vekil yeniden. Musa "Peki" uyarısı yanlış alarm (o anda konuşma yok).
 - Viral kapaklar (7) + aciklamalar.txt (17 videonun Instagram açıklaması) → Drive (Kapaklar / ana klasör).
+- Vampir2 kapağı: hocanın (#8) net karesi 7441 @5.5 sn, çocuk dışarıda kırpıldı. Drive'daki yeni dosyalar düzenli adlara çevrildi; açıklamalar 'Yaşamfen - Instagram Açıklamaları.txt'.
