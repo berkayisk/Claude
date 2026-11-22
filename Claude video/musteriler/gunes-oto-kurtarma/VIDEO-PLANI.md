@@ -2,21 +2,20 @@
 
 ## Kurallar (kullanıcı isteği)
 - Nefes boşlukları / sessizlikler MUTLAKA kesilir (kök CLAUDE.md sıkı kesme kuralları: ~0.07 sn cümle arası).
-- Her video doğrudan SÖZLE başlar: ilk karede konuşma var; önde logo/jenerik/sessiz giriş YOK (logo ve kartlar konuşmanın üstüne biner).
-- 7/24 ve 0544 397 87 96 kapanışta.
+- Her video doğrudan SÖZLE başlar: ilk karede konuşma var; önde logo/jenerik/sessiz giriş YOK.
+- Kapanışta 7/24 + 0544 397 87 96.
+- Ek video önerileri SADECE mevcut çekimlerden çıkanlar.
 
-## Kullanıcının listesi
-- [ ] Tırınız Çamura Saplanırsa
-- [ ] İşimiz Hafif Değil — Ağır Ticari Zorlukları
-- [ ] Kurtarma Ücretleri Nasıl Belirlenir
-- [ ] Tırınız Yolda Kaldıysa
-- [ ] Sadece Oto Kurtarma Yapmıyoruz (nakliye, forklift, menlift)
-- [ ] Güneşimizden Sonra Uzun Yolu Bıraktık
+## Çekim eşleştirmesi (projeler/2026-11-22_ilk-seri, 19 dikey 4K klip)
+| Video | Konuşma | B-roll |
+|---|---|---|
+| 1 Tırınız Çamura Saplanırsa | 7497 (kabin, 64 sn) + 7498 (gaz cümlesinin temiz tekrarı) | 7501 zemin/ayak, 7504 ıslak yol |
+| 2 İşimiz Hafif Değil | 7508 (0–35 sn; "Olmadı burası ya…" atılır) + 7509 kış arızaları (küfürlü son atılır) | 7499 kasa kontrolü, 7523 |
+| 3 Kurtarma Ücretleri | 7507 (soru + cevap; "Kurtarıcü neydi lan" atılır) | 7518/7520 çekici |
+| 4 Tırınız Yolda Kaldıysa | 7513 (emniyet şeridi → karayolları → bizi arayın) + 7512 ("numarayı bırakıyorum") | 7503/7504 yol POV |
+| 5 Sadece Oto Kurtarma Yapmıyoruz | 7511 (nakliye, tır, lowbed, forklift 3–15 ton) | 7517, 7526 forklift, 7520 |
+| 6 Güneşimizden Sonra Uzun Yolu Bıraktık | 7524 (0–21 sn: "iki oğlandan sonra Güneşimiz doğunca bıraktık") | 7523, 7518 |
 
-## Ek öneriler (onay bekliyor)
-- Kurtarma çağırırken söylemeniz gereken 5 bilgi (konum, araç/tonaj, yük durumu, araç durumu, yol durumu)
-- Kışa hazır mısınız? TIR şoförü için kış kontrol listesi (Kasım–Şubat, mevsimlik)
-- Devrilen bir TIR nasıl kaldırılır? (operasyon görüntüsüyle)
-- Gece 03.00'te telefon çaldı — 7/24 bir kurtarma gecesi (kamera arkası)
-- Kaza oldu, yük ne olacak? (yük aktarma + nakliye)
-- Forklift mi menlift mi? Hangi iş için hangisi
+## Ek öneriler (çekimlerden çıkan)
+- 7 Kamera arkası / bloopers: "Kurtarıcü neydi lan?", "Olmadı burası ya… kapat bir daha düşünelim", "Buraya mı bırakacaktık? Pardon", "Biz niye anlattık, biz çekici değil miyiz ya?" (küfür bip), "Abi beni aramayın, ben de batarım orada"
+- 8 5 tonluk forklifti yüklüyoruz (bir iş günü): 7524 ikinci yarısı (vinç kumandası arızalı, elle çekiyoruz, Berkay ve Onur, Sürat Kargo'ya yola çıkış) + 7526 forkliftin rampadan çıkışı + 7510 kabin içi çıkış anı
