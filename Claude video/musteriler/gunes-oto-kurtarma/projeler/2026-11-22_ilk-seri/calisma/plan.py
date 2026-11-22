@@ -7,11 +7,14 @@ FPS = 30
 KEL = json.load(open("calisma/kelimeler.json"))
 DUZELT = {"Kurtarcı": "Kurtarıcı", "hesabını?": "hesabı?", "ünitleri": "ücretleri", "sığcılık": "tırcılık", "güneşimiz": "Güneş'imiz", "tırf,": "tır,",
           "kokluyuz.": "forklift.", "güvenliliğini": "güvenliğini", "veliahtında": "evveliyatında", "hizmeleri.": "hizmetleri.",
-          "hizmit": "hizmet", "lobet": "lowbed", "çepçe": "kepçe", "eskavetör": "ekskavatör", "Kurtarıcı": "Kurtarıcı"}
+          "hizmit": "hizmet", "çağılmalısınız.": "çağırmalısınız.", "sağlamalısınız": "sağlamalısınız.", "mukavvetini": "mukavemetini", "Zorluk": "Zorlu", "hız": "kış", "baya": "bayağı", "sekman": "segman", "olabiliyoruz.": "olabiliyor.", "havallarda": "havalarda", "aminom": "***", "arzalandığı": "arızalandığı", "tamurumuzun": "tamburumuzun", "Onurumuz": "Onur'umuz", "ediyoruz.": "ediyor.", "sürat": "Sürat", "kargoya": "Kargo'ya", "Berkaycığımla": "Berkay'cığımla", "lobet": "lowbed", "çepçe": "kepçe", "eskavetör": "ekskavatör", "Kurtarıcı": "Kurtarıcı"}
 # Whisper'ın yanlış hizaladığı kelimeler (ikinci geçişten): (çekim, yanlış kelime başı) -> doğru (w, s, e)
 YAMA = {
     "IMG_7507": {0.82: ("Kurtarıcı", 0.02, 0.8), 1.5: ("ücretleri", 0.8, 2.0), 16.11: None, 16.33: None, 15.43: ("Kurtarıcı", 15.66, 16.10), 9.24: ("ki.", 9.22, 9.38), "ek": [("ücretleri", 16.10, 16.52)]},
     "IMG_7512": {0.0: ("Tırınız,", 1.08, 1.45)},
+    "IMG_7497": {44.78: ("basıp", 43.52, 43.95), "ek": [("lastiğinizi", 43.95, 46.62)]},
+    "IMG_7509": {11.68: ("diferansiyeli", 11.70, 12.18), 12.18: ("dağıtabiliyor.", 12.18, 12.84), 12.54: None},
+    "IMG_7511": {2.38: ("Biz", 5.0, 5.58), 10.6: ("4-5", 10.60, 11.52), 11.28: None},
 }
 
 S = {}
@@ -71,7 +74,13 @@ def alt_araliklar(n, a, b, ks, haric):
 def kurgu(cekimler, haric):
     """cekimler: [(çekim, baş, son)] -> parcalar, altyazi, eşleme (çekim, kaynak sn) -> zaman çizelgesi sn"""
     parcalar, altyazi, harita, tl, zs = [], [], [], 0.0, 0
-    for (n, a, b) in cekimler:
+    for c in cekimler:
+        n, a, b = c[:3]; opt = c[3] if len(c) > 3 else {}
+        if opt.get("dogal"):   # sözsüz çekim: kesmeden, kendi doğal sesiyle (B-roll sahnesi)
+            fa, fb = int(round(a * FPS)), int(round(b * FPS))
+            parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_dogal.wav", "bas": fa / FPS, "kare": fb - fa, "zoom": False, "sesSeviye": opt.get("seviye", 0.6)})
+            harita.append((n, fa / FPS, fb / FPS, tl)); tl += (fb - fa) / FPS; zs += 1
+            continue
         ks = [w for w in kelimeler(n) if a <= (w["s"] + w["e"]) / 2 < b and not any(x <= (w["s"] + w["e"]) / 2 < y for x, y in haric.get(n, []))]
         ar = alt_araliklar(n, a, b, ks, haric.get(n, []))
         hedef = []
@@ -83,10 +92,10 @@ def kurgu(cekimler, haric):
             if fb - fa < 6: continue
             bas, son = fa / FPS, fb / FPS
             for w, h in zip(ks, hedef):
-                if h == j:
+                if h == j and w["w"]:
                     s2 = min(max(bas, w["s"]), son - 0.1) - bas + tl; e2 = min(son, w["e"]) - bas + tl
                     altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "n": n, "ks": w["s"]})
-            parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_ses.wav", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
+            parcalar.append({"src": f"{n}_dikey.mp4", "ses": opt.get("ses", f"{n}_ses.wav"), "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
             harita.append((n, bas, son, tl))
             tl += (fb - fa) / FPS
         zs += 1   # açı (zoom) değişimi sadece çekim/konu değişince
@@ -115,6 +124,88 @@ def yap(vid):
 
 # ---------------- Videolar ----------------
 VIDEOLAR = {
+    # 1) Tırınız Çamura Saplanırsa — 7497 + 7498 (gaz cümlesinin temiz hali). Mesaj bilerek: "kurtarıcı değil kepçe/ekskavatör"
+    "v1": {
+        "cekimler": [("IMG_7497", 0.0, 34.3), ("IMG_7498", 8.4, 14.2), ("IMG_7497", 39.7, 64.7)],
+        "haric": {"IMG_7497": [(23.55, 24.22), (31.2, 31.97)]},   # "çağrılmalısını", "sağlamalısını" yarım denemeleri
+        "vurgu": ["çamura", "saplandığı", "yapmamalısınız", "dengesiz", "halat", "kepçe", "ekskavatör", "zeminin", "kontrolünü", "gaza", "zorlamayın", "batarsınız", "lastiğinizi", "zemin", "aramayın", "batarım"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("dengesiz") - 0.05, "satir1": "ÇAMURA SAPLANDINIZ", "satir2": "sakın bunları yapmayın"},
+            {"tip": "liste", "isaret": "carpi", "baslik": "YAPMAYIN", "s": kz("dengesiz") - 0.05, "son": kz("kurtarıcı") - 0.05, "ogeler": [["Dengesiz halatla çekim", kz("dengesiz")]]},
+            {"tip": "liste", "baslik": "BUNU YAPIN", "s": kz("kurtarıcı") - 0.05, "son": kz("bundan") - 0.05, "ogeler": [["Kepçe çağırın", kz("kepçe")], ["veya ekskavatör", kz("ekskavatör")]]},
+            {"tip": "uyari", "s": kz("gaza"), "son": kz("aracınız") - 0.05, "metin": "GAZA BASIP ZORLAMAYIN"},
+            {"tip": "liste", "isaret": "sayi", "baslik": "DOĞRU SIRA", "s": kz("önce", kz("yıpratmayın")) - 0.05, "son": kz("abi") - 0.05, "ogeler": [["Zemin kontrolü", kz("zemin", kz("yıpratmayın"))], ["Ne ile çekilecek?", kz("çekebiliriz")], ["Sonra kurtarma", kz("kurtarırız")]]},
+            {"tip": "uyari", "renk": "sari", "s": kz("ben", kz("aramayın")), "son": kz("sonra", kz("batarım")) - 0.05, "metin": "BEN DE BATARIM!"},
+            {"tip": "kapanis", "s": kz("sonra", kz("batarım")), "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("havalar"), "son": kz("tırınız") - 0.05},
+            {"dosya": "IMG_7501_dikey.mp4", "bas": 0.0, "s": kz("araçtan"), "son": kz("sağlamalısınız") + 0.3},
+            {"dosya": "IMG_7499_dikey.mp4", "bas": 4.0, "s": kz("çekebiliriz") - 0.4, "son": kz("onun") - 0.05},
+        ],
+    },
+    # 2) İşimiz Hafif Değil — Ağır Ticari Zorlukları: 7508 (yükleme, lastik, makas) + 7509 (kış arızaları; küfürlü son atılır)
+    "v2": {
+        "cekimler": [("IMG_7508", 0.0, 35.3), ("IMG_7509", 0.3, 19.2)],
+        "vurgu": ["ağır", "zorlukları", "dikkatli", "bilinçli", "sağlama", "mukavemetini", "lastiklerimiz", "makasları", "taklavatımız", "kış", "karlı", "kışın", "şanzımanı", "diferansiyeli", "piston", "segman"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("yükü") - 0.05, "satir1": "İŞİMİZ HAFİF DEĞİL", "satir2": "ağır ticarinin zorlukları"},
+            {"tip": "liste", "baslik": "YOLA ÇIKMADAN", "s": kz("yükü") - 0.05, "son": kz("zorlu") - 0.05, "boyut": 48, "ogeler": [
+                ["Bilinçli yükleme", kz("bilinçli")], ["Yük sağlama alınır", kz("sağlama")], ["Lastikler", kz("lastiklerimiz")], ["Makaslar", kz("makasları")], ["Takım taklavat tam", kz("takımımız")]]},
+            {"tip": "kanca", "s": kz("zorlu"), "son": kz("araçlar") - 0.05, "top": 900, "satir1": "KIŞ ŞARTLARI", "satir2": "yağmur · kar · buz"},
+            {"tip": "liste", "isaret": "carpi", "baslik": "KIŞIN YOLDA KALDIRAN ARIZALAR", "s": kz("araçlar") - 0.05, "son": kz("bunlar", kz("gümleyebiliyor")) - 0.05, "ogeler": [
+                ["Şanzıman", kz("şanzımanı")], ["Diferansiyel", kz("diferansiyeli")], ["Piston / segman", kz("piston")]]},
+            {"tip": "kapanis", "s": kz("bunlar", kz("gümleyebiliyor")), "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7499_dikey.mp4", "bas": 0.5, "s": kz("yükledikten"), "son": kz("lastiklerimiz") - 0.05},
+            {"dosya": "IMG_7523_dikey.mp4", "bas": 0.3, "s": kz("lastiklerimiz") - 0.05, "son": kz("zorlu") - 0.05},
+            {"dosya": "IMG_7504_dikey.mp4", "bas": 0.0, "s": kz("yağışlı"), "son": kz("araçlar") - 0.05},
+        ],
+    },
+    # 5) Sadece Oto Kurtarma Yapmıyoruz — 7511 + forklift görüntüleri (7517, 7526)
+    "v5": {
+        "cekimler": [("IMG_7511", 4.4, 34.6)],
+        "vurgu": ["sadece", "oto", "kurtarma", "nakliye", "şehir", "şehirler", "kamyon", "tır", "lowbed", "forklift", "3", "15", "ağır", "sanayide"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("oto", kz("yapmıyoruz")) - 0.05, "satir1": "SADECE KURTARMA DEĞİL", "boyut": 80, "satir2": "neler yapıyoruz?"},
+            {"tip": "liste", "baslik": "HİZMETLERİMİZ", "s": kz("bunun") - 0.05, "son": kz("3") - 0.05, "ogeler": [
+                ["Şehir içi nakliye", kz("şehir")], ["Şehirler arası nakliye", kz("şehirler")], ["Kamyon · Tır · Lowbed", kz("kamyon")], ["Forklift", kz("forklift")]]},
+            {"tip": "stat", "s": kz("3"), "son": kz("ağır") - 0.05, "ust": "FORKLİFT HİZMETİ", "deger": "3 – 15 TON"},
+            {"tip": "kapanis", "s": kz("ağır"), "son": tl + 0.5, "alt": "KURTARMA · NAKLİYE · FORKLİFT · MENLİFT"},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7518_dikey.mp4", "bas": 0.5, "s": kz("oto", kz("yapmıyoruz")) - 0.05, "son": kz("bunun") - 0.05},
+            {"dosya": "IMG_7517_dikey.mp4", "bas": 1.5, "s": kz("forklift") - 0.3, "son": kz("3") - 0.05},
+            {"dosya": "IMG_7526_dikey.mp4", "bas": 2.0, "s": kz("3") - 0.05, "son": kz("ağır") - 0.05},
+        ],
+    },
+    # 7) Kamera arkası — takılmalar (küfür bip'li)
+    "v7": {
+        "cekimler": [("IMG_7507", 7.5, 13.9), ("IMG_7508", 31.8, 41.0), ("IMG_7512", 7.9, 13.5), ("IMG_7509", 17.6, 23.5, {"ses": "IMG_7509_ses_bip.wav"}), ("IMG_7497", 58.8, 61.6)],
+        "vurgu": ["lan", "olmadı", "kapat", "pardon", "***", "çekici", "aramayın", "batarım"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("olmadı") - 0.05, "satir1": "KAMERA ARKASI", "satir2": "kurtarmak kolay, çekim zor"},
+            {"tip": "uyari", "renk": "sari", "s": kz("kapat"), "son": kz("şuraya") - 0.05, "metin": "TEKRAR!"},
+            {"tip": "uyari", "s": kz("***"), "son": kz("çekici") , "metin": "BİİİP", "boyut": 70},
+            {"tip": "kapanis", "s": kz("ben", kz("aramayın")), "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [],
+    },
+    # 8) 5 tonluk forklifti yüklüyoruz — 7524 (konuşma) + sözsüz forklift görüntüleri doğal sesiyle
+    "v8": {
+        "cekimler": [("IMG_7524", 67.2, 72.7), ("IMG_7517", 0.0, 4.5, {"dogal": True, "seviye": 0.5}), ("IMG_7524", 49.2, 55.0), ("IMG_7524", 58.6, 65.4),
+                     ("IMG_7526", 0.0, 10.3, {"dogal": True, "seviye": 0.6})],
+        "vurgu": ["5", "tonluk", "makinemizi", "Sürat", "tamburumuzun", "arızalandığı", "elimizle", "Berkay'cığımla", "Onur'umuz"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": ke("çıkacağız") + 0.2, "satir1": "5 TONLUK YÜK", "satir2": "bugün yola çıkıyoruz"},
+            {"tip": "stat", "s": ke("çıkacağız") + 0.3, "son": kz("abi") - 0.1, "ust": "FORKLİFT", "deger": "5 TON"},
+            {"tip": "uyari", "renk": "sari", "s": kz("elimizle"), "son": kz("işe") - 0.05, "metin": "KUMANDA ARIZALI: ELLE!", "boyut": 64},
+            {"tip": "kanca", "s": ke("ediyor") + 0.3, "son": tl - 3.0, "top": 900, "satir1": "YÜKLEME", "satir2": "rampadan kasaya"},
+            {"tip": "kapanis", "s": tl - 3.0, "son": tl + 0.5, "alt": "FORKLİFT · NAKLİYE · KURTARMA"},
+        ],
+        "broll": lambda kz, ke, tl: [],
+    },
     # 3) Kurtarma Ücretleri Nasıl Belirlenir — 7507 (soru + cevap). "Kurtarıcı... neydi lan?" atılır.
     "v3": {
         "cekimler": [("IMG_7507", 0.0, 38.8)],

@@ -12,6 +12,7 @@
 - Renkler (hex, logodan ölçüldü): sarı #FDD301 (ana), siyah #000000 (zemin/kontur), beyaz #FFFFFF (ikincil yazı), gri #F0F0F0 / koyu gri vurgular. Sarı-siyah ikaz şeridi (/// çizgiler) logonun motifi
 - Fontlar: logoda kalın, eğik (italik), geniş blok başlık + kalın sans alt yazı. Yakın Google Fonts: başlık için Russo One / Saira Condensed ExtraBold Italic, metin için Montserrat ExtraBold (kesinleşmedi)
 - Logo dosyaları: marka/logo.png (2172×724, şeffaf zeminli PNG; logo siyah konturlu, koyu VE açık zeminde kullanılabilir). Logoda sarı çekici kasasında beyaz TIR çekici var; slogan "AĞIR TİCARİ OTO KURTARMA"
+- Forklift (turuncu, 5 ton, üzerinde "Ali Acar Forklift Kiralama 0544 933 04 88" etiketi) FİRMANIN KENDİ forklifti — videolarda serbestçe kullanılır.
 - Araç / iş fotoğrafları ve videoları: marka/
 - Sosyal medya: Instagram @gunesforkliftotokurtarma
 - Web: gunesforkliftotokurtarma.com
