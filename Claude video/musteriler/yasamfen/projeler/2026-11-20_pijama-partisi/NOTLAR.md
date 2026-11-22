@@ -20,7 +20,7 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | 5 | Vampir köylü #2 | Vampir2 | taslak gönderildi (34 sn) |
 | 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
 | 7 | Hocalar ne dedi (ekstra) | Hocalar | yeni sürüm gönderildi (44 sn) |
-| 8 | YKS (TYT) bilgi yarışması | Yks | kurgu hazır, vekil bekleniyor |
+| 8 | YKS (TYT) bilgi yarışması | Yks | taslak gönderildi (89 sn, blursuz) |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
