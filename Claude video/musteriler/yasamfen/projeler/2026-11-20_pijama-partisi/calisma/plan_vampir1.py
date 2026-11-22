@@ -25,11 +25,11 @@ PLAN = [
     klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.14], odak=[0.5, 0.4], yazi="Ben onların tekrar üzerime geleceğini bile bile neden onları öldüreyim yani, mantıken?"),
     # 4) OYUN SONU: son oylamalar → köylüler kazandı
     klip(7431, 0.0, 4.65, sabit=True, kelimesiz=True, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.45]),
-    klip(7464, 0.0, 4.0, sabit=True, kelimesiz=True, zoom=[2.0, 2.1], odak=[1.0, 0.45]),  # 2x zoom sağa: çocuk kadraj dışında
+    klip(7431, 4.7, 9.0, sabit=True, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.45]),  # sadece yetişkinler
 ]
 OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.6, ust="YAŞAMFEN PİJAMA PARTİSİ", metin="VAMPİR\nKÖYLÜ", vurguSatir=True, alt="Hocalar vs öğrenciler 🧛", y=380, boyut=140),
-    olay("rol", kaynak=(7393, 0.9), sure=1.6, rol="vampir", cevirmeKare=5, genislik=400, y=1000),
+    olay("rol", kaynak=(7395, 4.8), sure=3.1, rol="vampir", cevirmeKare=5, genislik=400, y=1000),
     olay("rol", kaynak=(7393, 6.6), sure=1.4, rol="doktor", cevirmeKare=4, genislik=400, y=1000),
     olay("rol", kaynak=(7393, 13.4), sure=3.0, rol="soytari", cevirmeKare=6, genislik=400, y=1000),
     # Roller
@@ -44,8 +44,8 @@ OLAYLAR = [
     olay("etiket", kaynak=(7441, 7.3), sure=1.7, metin="🧛 (kendisi vampir 🤫)", y=1220, boyut=44, renk="#2A2A2A", sfx=False),
     # Oyun sonu
     olay("baslik", kaynak=(7431, 0.05), sure=1.5, metin="SON\nOYLAMA 🗳️", vurguSatir=True, y=240, boyut=86, sfx=False),
-    olay("etiket", kaynak=(7464, 0.4), sure=3.0, metin="🏆 KÖYLÜLER KAZANDI!", y=420, boyut=56, ses="basari"),
-    olay("cagri", kaynak=(7464, 1.5), sure=1.9, metin="Sen vampirleri bulabilir miydin? 👀", altMetin="Yorumlara yaz 👇", alt=460),
+    olay("etiket", kaynak=(7431, 5.0), sure=3.8, metin="🏆 KÖYLÜLER KAZANDI!", y=420, boyut=56, ses="basari"),
+    olay("cagri", kaynak=(7431, 6.6), sure=2.3, metin="Sen vampirleri bulabilir miydin? 👀", altMetin="Yorumlara yaz 👇", alt=460),
 ]
 ALTYAZI_GIZLE_TIPLER = ["baslik", "cagri"]
 VURGU = ["vampir", "vampirler,", "doktor", "soytarı", "öğrencilerden", "sessiz", "elemeye", "mantıken?", "dört!", "şok!"]
