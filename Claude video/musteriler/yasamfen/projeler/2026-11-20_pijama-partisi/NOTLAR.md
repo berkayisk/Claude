@@ -13,14 +13,14 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 ## İstenen videolar
 | # | Video | Composition | Durum |
 |---|-------|-------------|-------|
-| 1 | Etkinlik genel video | Genel | taslak gönderildi (41 sn, müziksiz) |
-| 2 | Bilgi yarışması #1 | Yarisma1 | 2. taslak gönderildi (82 sn, geri bildirim 1–3) |
+| 1 | Etkinlik genel video | Genel | ONAYLANDI (28 sn, müzikli, Drive’daki sürüm) |
+| 2 | Bilgi yarışması #1 | Yarisma1 | ONAYLANDI (94 sn, Drive’daki sürüm) |
 | 3 | Bilgi yarışması #2 | Yarisma2 | taslak gönderildi (66 sn) |
 | 4 | Vampir köylü #1 | Vampir1 | ONAYLANDI (51 sn, yeni akış) |
 | 5 | Vampir köylü #2 | Vampir2 | taslak gönderildi (34 sn) |
 | 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
 | 7 | Hocalar ne dedi (ekstra) | Hocalar | yeni sürüm gönderildi (44 sn) |
-| 8 | YKS (TYT) bilgi yarışması | Yks | taslak gönderildi (89 sn, blursuz) |
+| 8 | YKS (TYT) bilgi yarışması | Yks | ONAYLANDI (89 sn, Drive’daki sürüm) |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
@@ -158,3 +158,6 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - kurgu_yap.py dip_yasla: her blok başı/sonu komşu kelimeler arasındaki EN SESSİZ 10 ms'ye yaslanır (hece kırpılmaz).
 - cumle_kontrol.py: dolgu transkripti (daha doğru zaman) + kesim noktasında enerji kontrolü + blok kenarında ses uyarısı.
   KURAL: Her uyarı çözülmeden video gönderilmez. Kalan "BAŞTA/SONDA SES" uyarıları kalabalık sınıf sesi; cümleler tam (tek tek incelendi).
+- Kullanıcı: YKS, Genel ve Yarışma #1 ONAYLANDI — revize yok. Onaylı dosyalar ciktilar/ ve Drive'daki sürümler; sonradan yapılan plan
+  sınır düzeltmeleri bu üçü için render EDİLMEDİ (plan_yks.py'deki 3 hap → Türkçe değişikliği onaylı videoda yok).
+  Yeniden render: sadece Hocalar, Yarışma #2, Vampir #1, Vampir #2.
