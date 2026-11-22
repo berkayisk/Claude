@@ -10,7 +10,7 @@ OLAYLAR = [
     olay("karart", kaynak=(7368, 190.0), sure=3.0, seviye=0.5),
     olay("etiket", kaynak=(7368, 190.05), sure=2.9, metin="⏸️ DURDUR VE DÜŞÜN", y=900, boyut=60, ses="bildirim"),
     olay("sayac", kaynak=(7368, 190.0), sure=3.0, saniye=3, y=1300),
-    olay("cevap", kaynak=(7368, 193.0), sure=2.2, cevap="Elektrikli trenin dumanı olmaz! 😄", baslik="CEVAP", y=1200),
+    olay("cevap", kaynak=(7368, 193.0), sure=2.2, cevap="Elektrikli trenin dumanı olmaz! 😄", baslik="CEVAP", y=760),
     olay("cagri", kaynak=(7368, 193.6), sure=1.6, metin="Sen bilebildin mi? 🤔", altMetin="Yorumlara yaz 👇", alt=420),
 ]
 ALTYAZI_GIZLE_TIPLER = ["baslik", "soru", "cagri"]

@@ -11,7 +11,7 @@ OLAYLAR = [
     olay("karart", kaynak=(7372, 1508.0), sure=3.0, seviye=0.5),
     olay("etiket", kaynak=(7372, 1508.05), sure=2.9, metin="⏸️ DURDUR VE DÜŞÜN", y=900, boyut=60, ses="bildirim"),
     olay("sayac", kaynak=(7372, 1508.0), sure=3.0, saniye=3, y=1300),
-    olay("cevap", kaynak=(7372, 1513.3), sure=1.8, cevap="Gemiyi yapan Musa değil, Nuh! 🚢", baslik="CEVAP", y=1300),
+    olay("cevap", kaynak=(7372, 1513.3), sure=1.8, cevap="Gemiyi yapan Musa değil, Nuh! 🚢", baslik="CEVAP", y=760),
     olay("cagri", kaynak=(7372, 1513.9), sure=1.2, metin="Sen fark ettin mi? 🤔", altMetin="Yorumlara yaz 👇", alt=420),
 ]
 ALTYAZI_GIZLE_TIPLER = ["baslik", "soru", "cagri"]
