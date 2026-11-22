@@ -175,8 +175,8 @@ VIDEOLAR = {
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("yükü") - 0.05, "satir1": "İŞİMİZ HAFİF DEĞİL", "satir2": "ağır ticarinin zorlukları"},
             {"tip": "liste", "baslik": "YOLA ÇIKMADAN", "s": kz("yükü") - 0.05, "son": kz("zorlu", kz("taklavatımız")) - 0.05, "boyut": 48, "ogeler": [
                 ["Bilinçli yükleme", kz("bilinçli")], ["Yük sağlama alınır", kz("sağlama")], ["Lastikler", kz("lastiklerimiz")], ["Makaslar", kz("makasları")], ["Takım taklavat tam", kz("takımımız")]]},
-            {"tip": "kanca", "s": kz("zorlu", kz("taklavatımız")), "son": kz("araçlar") - 0.05, "top": 900, "satir1": "KIŞ ŞARTLARI", "satir2": "yağmur · kar · buz"},
-            {"tip": "liste", "isaret": "carpi", "baslik": "KIŞIN YOLDA KALDIRAN ARIZALAR", "s": kz("araçlar") - 0.05, "son": kz("bunlar", kz("gümleyebiliyor")) - 0.05, "ogeler": [
+            {"tip": "kanca", "s": kz("zorlu", kz("taklavatımız")), "son": kz("şanzımanı") - 0.35, "top": 900, "satir1": "KIŞ ŞARTLARI", "satir2": "yağmur · kar · buz"},
+            {"tip": "liste", "isaret": "carpi", "baslik": "KIŞIN YOLDA KALDIRAN ARIZALAR", "s": kz("şanzımanı") - 0.3, "son": kz("bunlar", kz("gümleyebiliyor")) - 0.05, "ogeler": [
                 ["Şanzıman", kz("şanzımanı")], ["Diferansiyel", kz("diferansiyeli")], ["Piston / segman", kz("piston")]]},
             {"tip": "kapanis", "s": kz("bunlar", kz("gümleyebiliyor")), "son": tl + 0.5},
         ],
