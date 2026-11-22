@@ -3,6 +3,7 @@
 ## Kurallar (kullanıcı isteği)
 - Nefes boşlukları / sessizlikler MUTLAKA kesilir (kök CLAUDE.md sıkı kesme kuralları: ~0.07 sn cümle arası).
 - Her video doğrudan SÖZLE başlar: ilk karede konuşma var; önde logo/jenerik/sessiz giriş YOK.
+- Tek ses: kamerada görünen kişi. Kamera arkasındaki sesler kullanılmaz (7507 0–9 sn soru, 7508 "Devam. Başka ne diyecekti?", 7524 58.9–72.5 "İşe gidiyoruz… / Birazdan 5 tonluk…" atıldı).
 - Kapanışta 7/24 + 0544 397 87 96.
 - Ek video önerileri SADECE mevcut çekimlerden çıkanlar.
 

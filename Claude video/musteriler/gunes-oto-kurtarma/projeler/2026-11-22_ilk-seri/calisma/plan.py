@@ -183,7 +183,8 @@ VIDEOLAR = {
     },
     # 7) Kamera arkası — takılmalar (küfür bip'li)
     "v7": {
-        "cekimler": [("IMG_7507", 7.5, 13.9), ("IMG_7508", 31.8, 41.0), ("IMG_7512", 7.9, 13.5), ("IMG_7509", 17.6, 23.5, {"ses": "IMG_7509_ses_bip.wav"}), ("IMG_7497", 58.8, 61.6)],
+        "haric": {"IMG_7508": [(38.8, 39.93)]},   # "Devam. Başka ne diyecekti?" kameranın arkasından
+        "cekimler": [("IMG_7507", 9.0, 13.9), ("IMG_7508", 31.8, 41.0), ("IMG_7512", 7.9, 12.75), ("IMG_7509", 17.6, 23.5, {"ses": "IMG_7509_ses_bip.wav"}), ("IMG_7497", 58.8, 61.6)],
         "vurgu": ["lan", "olmadı", "kapat", "pardon", "***", "çekici", "aramayın", "batarım"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("olmadı") - 0.05, "satir1": "KAMERA ARKASI", "satir2": "kurtarmak kolay, çekim zor"},
@@ -195,25 +196,23 @@ VIDEOLAR = {
     },
     # 8) 5 tonluk forklifti yüklüyoruz — 7524 (konuşma) + sözsüz forklift görüntüleri doğal sesiyle
     "v8": {
-        "cekimler": [("IMG_7524", 67.2, 72.7), ("IMG_7517", 0.0, 4.5, {"dogal": True, "seviye": 0.5}), ("IMG_7524", 49.2, 55.0), ("IMG_7524", 58.6, 65.4),
-                     ("IMG_7526", 0.0, 10.3, {"dogal": True, "seviye": 0.6})],
+        # 7524 58.9–72.5 ("İşe gidiyoruz…", "Birazdan 5 tonluk…") kameranın arkasından: KULLANILMAZ. Doğal seslerde konuşma ayrılmış (no_vocals).
+        "cekimler": [("IMG_7524", 49.2, 55.0), ("IMG_7526", 0.0, 10.3, {"dogal": True, "seviye": 0.7}), ("IMG_7517", 0.5, 5.5, {"dogal": True, "seviye": 0.6})],
         "vurgu": ["5", "tonluk", "makinemizi", "Sürat", "tamburumuzun", "arızalandığı", "elimizle", "Berkay'cığımla", "Onur'umuz"],
         "olaylar": lambda kz, ke, tl: [
-            {"tip": "kanca", "anlik": True, "s": 0.0, "son": ke("çıkacağız") + 0.2, "satir1": "5 TONLUK YÜK", "satir2": "bugün yola çıkıyoruz"},
-            {"tip": "stat", "s": ke("çıkacağız") + 0.3, "son": kz("abi") - 0.1, "ust": "FORKLİFT", "deger": "5 TON"},
-            {"tip": "uyari", "renk": "sari", "s": kz("elimizle"), "son": kz("işe") - 0.05, "metin": "KUMANDA ARIZALI: ELLE!", "boyut": 64},
-            {"tip": "kanca", "s": ke("ediyor") + 0.3, "son": tl - 3.0, "top": 900, "satir1": "YÜKLEME", "satir2": "rampadan kasaya"},
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": ke("çekiyoruz") + 0.1, "satir1": "5 TONLUK FORKLİFT", "boyut": 84, "satir2": "kasaya yüklüyoruz"},
+            {"tip": "uyari", "renk": "sari", "s": kz("elimizle"), "son": ke("çekiyoruz") + 0.1, "metin": "KUMANDA ARIZALI: ELLE!", "boyut": 64},
+            {"tip": "stat", "s": ke("çekiyoruz") + 0.3, "son": ke("çekiyoruz") + 4.0, "ust": "FORKLİFT", "deger": "5 TON"},
             {"tip": "kapanis", "s": tl - 3.0, "son": tl + 0.5, "alt": "FORKLİFT · NAKLİYE · KURTARMA"},
         ],
         "broll": lambda kz, ke, tl: [],
     },
     # 3) Kurtarma Ücretleri Nasıl Belirlenir — 7507 (soru + cevap). "Kurtarıcı... neydi lan?" atılır.
     "v3": {
-        "cekimler": [("IMG_7507", 0.0, 38.8)],
-        "haric": {"IMG_7507": [(9.36, 15.10)]},
+        "cekimler": [("IMG_7507", 15.1, 38.8)],   # 0–9 sn soru kameranın arkasından: KULLANILMAZ
         "vurgu": ["mazot", "yakıt", "mesafeye", "önemli", "sigortası", "kaskosu", "yıpranma", "lastiği", "kilometre", "tonajı", "fiyat", "sadece"],
         "olaylar": lambda kz, ke, tl: [
-            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("tabii") - 0.05, "satir1": "KURTARMA ÜCRETİ", "satir2": "nasıl belirlenir?"},
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("aracımızın") - 0.05, "satir1": "KURTARMA ÜCRETİ", "satir2": "nasıl belirlenir?"},
             {"tip": "uyari", "renk": "sari", "s": kz("hesaplanırken"), "son": kz("aracımızın") - 0.05, "metin": "SADECE YAKIT DEĞİL"},
             {"tip": "liste", "baslik": "FİYATI BELİRLEYENLER", "s": kz("aracımızın") - 0.05, "son": kz("bunları") - 0.05, "boyut": 46, "ogeler": [
                 ["Sigorta", kz("sigortası")], ["Kasko", kz("kaskosu")], ["Yıpranma payı", kz("yıpranma")], ["Lastik", kz("lastiği")],
@@ -221,8 +220,7 @@ VIDEOLAR = {
             {"tip": "kapanis", "s": kz("bunları"), "son": tl + 0.5},
         ],
         "broll": lambda kz, ke, tl: [
-            {"dosya": "IMG_7518_dikey.mp4", "bas": 1.0, "s": kz("tabii"), "son": kz("hesaplanırken") - 0.05},
-            {"dosya": "IMG_7499_dikey.mp4", "bas": 2.0, "s": kz("lastiği") - 0.1, "son": kz("kilometre") - 0.05},
+                        {"dosya": "IMG_7499_dikey.mp4", "bas": 2.0, "s": kz("lastiği") - 0.1, "son": kz("kilometre") - 0.05},
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("kilometre") - 0.05, "son": kz("üzerine") - 0.05},
             {"dosya": "IMG_7520_dikey.mp4", "bas": 0.5, "s": kz("üzerine") - 0.05, "son": kz("bunları") - 0.05},
         ],
