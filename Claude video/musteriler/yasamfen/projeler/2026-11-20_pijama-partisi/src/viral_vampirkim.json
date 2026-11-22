@@ -1,0 +1,282 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "vekil/7428.mp4",
+   "bas": 11.0,
+   "kare": 48,
+   "blok": 0,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7420.mp4",
+   "bas": 21.0,
+   "kare": 48,
+   "blok": 1,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7406.mp4",
+   "bas": 1.6,
+   "kare": 48,
+   "blok": 2,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7406.mp4",
+   "bas": 0.0,
+   "kare": 48,
+   "blok": 3,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7397.mp4",
+   "bas": 1.5,
+   "kare": 90,
+   "blok": 4,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7428.mp4",
+   "bas": 12.6,
+   "kare": 54,
+   "blok": 5,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7420.mp4",
+   "bas": 22.6,
+   "kare": 55,
+   "blok": 6,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.0815
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7406.mp4",
+   "bas": 3.2,
+   "kare": 54,
+   "blok": 7,
+   "sessiz": true,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  },
+  {
+   "src": "vekil/7441.mp4",
+   "bas": 9.0,
+   "kare": 54,
+   "blok": 8,
+   "sessiz": true,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "odak": [
+    0.5,
+    0.45
+   ]
+  }
+ ],
+ "altyazi": [],
+ "vurgu": [],
+ "altyaziGizle": [
+  [
+   0,
+   2.0
+  ],
+  [
+   6.45,
+   9.35
+  ],
+  [
+   15.233,
+   16.633
+  ]
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "ust": "VAMPİR KÖYLÜ",
+   "metin": "SENCE VAMPİR\nKİM? 🧛",
+   "vurguSatir": true,
+   "y": 1150,
+   "boyut": 100,
+   "s": 0,
+   "son": 2.0
+  },
+  {
+   "tip": "etiket",
+   "metin": "1",
+   "boyut": 80,
+   "ses": "pop",
+   "x": 614,
+   "y": 469,
+   "s": 0.05,
+   "son": 1.6
+  },
+  {
+   "tip": "etiket",
+   "metin": "2",
+   "boyut": 80,
+   "ses": "pop",
+   "x": 564,
+   "y": 201,
+   "s": 1.65,
+   "son": 3.2
+  },
+  {
+   "tip": "etiket",
+   "metin": "3",
+   "boyut": 80,
+   "ses": "pop",
+   "x": 837,
+   "y": 534,
+   "s": 3.25,
+   "son": 4.8
+  },
+  {
+   "tip": "etiket",
+   "metin": "4",
+   "boyut": 80,
+   "ses": "pop",
+   "x": 496,
+   "y": 638,
+   "s": 4.85,
+   "son": 6.4
+  },
+  {
+   "tip": "karart",
+   "seviye": 0.55,
+   "s": 6.4,
+   "son": 9.4
+  },
+  {
+   "tip": "baslik",
+   "metin": "TAHMİNİNİ\nYORUMA YAZ 👇",
+   "vurguSatir": true,
+   "y": 760,
+   "boyut": 96,
+   "sfx": false,
+   "s": 6.45,
+   "son": 9.35
+  },
+  {
+   "tip": "sayac",
+   "saniye": 3,
+   "y": 1350,
+   "s": 6.4,
+   "son": 9.4
+  },
+  {
+   "tip": "etiket",
+   "metin": "1 → 🧛 VAMPİR",
+   "y": 420,
+   "boyut": 58,
+   "ses": "boom",
+   "s": 9.45,
+   "son": 11.2
+  },
+  {
+   "tip": "etiket",
+   "metin": "2 → 🧛 VAMPİR",
+   "y": 420,
+   "boyut": 58,
+   "ses": "boom",
+   "s": 11.25,
+   "son": 13.0
+  },
+  {
+   "tip": "etiket",
+   "metin": "3 → 🩺 DOKTOR",
+   "y": 420,
+   "boyut": 58,
+   "renk": "#14967A",
+   "ses": "pop",
+   "s": 13.083,
+   "son": 14.833
+  },
+  {
+   "tip": "etiket",
+   "metin": "4 → 🧛 VAMPİR",
+   "y": 420,
+   "boyut": 58,
+   "ses": "boom",
+   "s": 14.883,
+   "son": 16.633
+  },
+  {
+   "tip": "cagri",
+   "metin": "Kaç tanesini bildin? 👀",
+   "altMetin": "Yorumlara yaz 👇",
+   "alt": 420,
+   "s": 15.233,
+   "son": 16.633
+  }
+ ],
+ "sfx": [],
+ "toplamKare": 499,
+ "muzik": {
+  "src": "muzik/gizem.wav",
+  "seviye": 0.45
+ }
+}

@@ -1,0 +1,383 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 286.1667,
+   "kare": 171,
+   "blok": 0,
+   "ses": "ses/7372_temiz.wav",
+   "sabit": true,
+   "zoom": [
+    1.0,
+    1.0593
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 299.6667,
+   "kare": 50,
+   "blok": 1,
+   "ses": "ses/7372_temiz.wav",
+   "sabit": true,
+   "zoom": [
+    1.0422,
+    1.0707
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 301.3667,
+   "kare": 51,
+   "blok": 1,
+   "ses": "ses/7372_temiz.wav",
+   "sabit": true,
+   "zoom": [
+    1.0713,
+    1.1005
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 303.9333,
+   "kare": 62,
+   "blok": 2,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.1017,
+    1.1202
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 306.2333,
+   "kare": 128,
+   "blok": 3,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0396,
+    1.1003
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 311.9333,
+   "kare": 193,
+   "blok": 4,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0599,
+    1.1401
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ],
+   "punch": [
+    {
+     "kare": 130,
+     "olcek": 1.1,
+     "sure": 6
+    }
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 319.2667,
+   "kare": 104,
+   "blok": 5,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0396,
+    1.0997
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "DNA",
+   "s": 0.0,
+   "e": 1.333,
+   "b": 0
+  },
+  {
+   "w": "molekülünün",
+   "s": 1.333,
+   "e": 2.053,
+   "b": 0
+  },
+  {
+   "w": "yapısında",
+   "s": 2.053,
+   "e": 2.553,
+   "b": 0
+  },
+  {
+   "w": "bulunan",
+   "s": 2.553,
+   "e": 2.993,
+   "b": 0
+  },
+  {
+   "w": "beş",
+   "s": 2.993,
+   "e": 3.533,
+   "b": 0
+  },
+  {
+   "w": "karbonlu",
+   "s": 3.533,
+   "e": 4.233,
+   "b": 0
+  },
+  {
+   "w": "şekerin",
+   "s": 4.233,
+   "e": 4.813,
+   "b": 0
+  },
+  {
+   "w": "adı",
+   "s": 4.813,
+   "e": 5.153,
+   "b": 0
+  },
+  {
+   "w": "nedir?",
+   "s": 5.153,
+   "e": 5.513,
+   "b": 0
+  },
+  {
+   "w": "Maalesef!",
+   "s": 9.133,
+   "e": 10.293,
+   "b": 2
+  },
+  {
+   "w": "Evet",
+   "s": 11.22,
+   "e": 11.68,
+   "b": 3
+  },
+  {
+   "w": "alalım.",
+   "s": 11.68,
+   "e": 12.22,
+   "b": 3
+  },
+  {
+   "w": "Sekizinci",
+   "s": 13.08,
+   "e": 14.24,
+   "b": 3
+  },
+  {
+   "w": "sınıf.",
+   "s": 14.24,
+   "e": 14.56,
+   "b": 3
+  },
+  {
+   "w": "Evet",
+   "s": 15.627,
+   "e": 16.787,
+   "b": 4
+  },
+  {
+   "w": "sekizinci",
+   "s": 18.107,
+   "e": 18.707,
+   "b": 4
+  },
+  {
+   "w": "sınıf",
+   "s": 18.707,
+   "e": 18.867,
+   "b": 4
+  },
+  {
+   "w": "öğrencimiz",
+   "s": 18.867,
+   "e": 19.447,
+   "b": 4
+  },
+  {
+   "w": "bize",
+   "s": 19.447,
+   "e": 19.727,
+   "b": 4
+  },
+  {
+   "w": "yargı",
+   "s": 19.727,
+   "e": 20.367,
+   "b": 4
+  },
+  {
+   "w": "dağıttı.",
+   "s": 20.367,
+   "e": 20.947,
+   "b": 4
+  },
+  {
+   "w": "Hocam",
+   "s": 22.087,
+   "e": 22.947,
+   "b": 5
+  },
+  {
+   "w": "bu",
+   "s": 22.947,
+   "e": 23.047,
+   "b": 5
+  },
+  {
+   "w": "bana",
+   "s": 23.047,
+   "e": 23.087,
+   "b": 5
+  },
+  {
+   "w": "sorulsa",
+   "s": 23.087,
+   "e": 23.447,
+   "b": 5
+  },
+  {
+   "w": "yanlış",
+   "s": 23.447,
+   "e": 23.667,
+   "b": 5
+  },
+  {
+   "w": "yiyecektim.",
+   "s": 23.667,
+   "e": 24.047,
+   "b": 5
+  },
+  {
+   "w": "Pentoz",
+   "s": 24.147,
+   "e": 24.447,
+   "b": 5
+  },
+  {
+   "w": "yiyecektim",
+   "s": 24.447,
+   "e": 24.887,
+   "b": 5
+  },
+  {
+   "w": "ya.",
+   "s": 24.887,
+   "e": 24.987,
+   "b": 5
+  }
+ ],
+ "vurgu": [
+  "maalesef!",
+  "sekizinci",
+  "yargı",
+  "yanlış"
+ ],
+ "altyaziGizle": [
+  [
+   0,
+   2.2
+  ],
+  [
+   2.1,
+   5.6
+  ],
+  [
+   23.167,
+   25.067
+  ]
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "ust": "TYT BİLGİ YARIŞMASI",
+   "metin": "LİSE SON BİLEMEDİ\n8. SINIF BİLDİ 😳",
+   "vurguSatir": true,
+   "y": 1100,
+   "boyut": 84,
+   "s": 0,
+   "son": 2.2
+  },
+  {
+   "tip": "soru",
+   "no": "BİYOLOJİ",
+   "soru": "DNA'nın yapısındaki beş karbonlu şekerin adı nedir?",
+   "y": 230,
+   "s": 2.1,
+   "son": 5.6
+  },
+  {
+   "tip": "cevap",
+   "cevap": "Bilemediler",
+   "dogruMu": false,
+   "baslik": "MAALESEF",
+   "y": 1450,
+   "s": 9.133,
+   "son": 10.333
+  },
+  {
+   "tip": "etiket",
+   "metin": "🙋 8. SINIF ÖĞRENCİSİ",
+   "y": 420,
+   "boyut": 52,
+   "ses": "pop",
+   "s": 13.1,
+   "son": 14.6
+  },
+  {
+   "tip": "cevap",
+   "cevap": "Deoksiriboz",
+   "baslik": "8. SINIF ÖĞRENCİSİ BİLDİ ✅",
+   "y": 1450,
+   "s": 15.667,
+   "son": 20.667
+  },
+  {
+   "tip": "cagri",
+   "metin": "Sen bilir miydin? 🧬",
+   "altMetin": "Yorumlara yaz 👇",
+   "alt": 420,
+   "s": 23.167,
+   "son": 25.067
+  }
+ ],
+ "sfx": [],
+ "toplamKare": 759,
+ "muzik": {
+  "src": "muzik/yarisma.wav",
+  "seviye": 0.2,
+  "konusmaSeviye": 0.06
+ }
+}

@@ -175,3 +175,10 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 ## Kapaklar (2026-11-22)
 - 10 Reels kapağı (1080x1920), bilesenler/Kapak.tsx (logo yok, kırmızı rozet + beyaz/kırmızı başlık + beyaz hap; metin 3:4 ızgara güvenli alanı).
   Arka plan kareleri blurlu vekillerden (girdiler/kapak/). Çıktı: ciktilar/kapaklar/. Drive: "Yaşamfen hazır videoları/Kapaklar".
+
+## Viral seri (2026-11-22) — kullanıcı seçimi: 1, 2, 3, 4, 6
+- 1a/1b/1c Şaşırtmaca (kanca "%90'I YANLIŞ CEVAPLIYOR 🤯"): tren (LGS), horoz (YKS), Musa/Nuh (YKS) — soru → "⏸️ DURDUR VE DÜŞÜN" + sayaç → cevap.
+- 2 "LİSE SON BİLEMEDİ, 8. SINIF BİLDİ 😳" (YKS; 8. sınıf öğrencisi kadrajda değil — kontrol edildi).
+- 3 "SEN KAÇ SANİYEDE ÇÖZERDİN? ⏱️" √320+√1280 (10 sn sayaç + çözüm kartı).
+- 4 "SENCE VAMPİR KİM? 🧛" 4 şüpheli numaralı → tahmin yaz → ifşa (1 #40, 2 #50 vampir, 3 #37 doktor, 4 #8 vampir).
+- 6 Kombin savaşı: ikiye bölünmüş ekran (bilesenler/Ikili.tsx), 7383 vs 7382, sessiz (trend ses).

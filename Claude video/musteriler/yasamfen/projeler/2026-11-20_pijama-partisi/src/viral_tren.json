@@ -1,0 +1,213 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "vekil/7368.mp4",
+   "bas": 179.1667,
+   "kare": 246,
+   "blok": 0,
+   "ses": "ses/7368_temiz.wav",
+   "zoom": [
+    1.0012,
+    1.0802
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7368.mp4",
+   "bas": 190.0,
+   "kare": 156,
+   "blok": 1,
+   "sessiz": true,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Elektrikli",
+   "s": 0.073,
+   "e": 0.833,
+   "b": 0
+  },
+  {
+   "w": "bir",
+   "s": 0.833,
+   "e": 0.993,
+   "b": 0
+  },
+  {
+   "w": "tren",
+   "s": 0.993,
+   "e": 1.333,
+   "b": 0
+  },
+  {
+   "w": "güneye",
+   "s": 1.333,
+   "e": 1.773,
+   "b": 0
+  },
+  {
+   "w": "doğru",
+   "s": 1.773,
+   "e": 2.013,
+   "b": 0
+  },
+  {
+   "w": "gidiyor.",
+   "s": 2.013,
+   "e": 2.533,
+   "b": 0
+  },
+  {
+   "w": "Rüzgar",
+   "s": 2.893,
+   "e": 3.333,
+   "b": 0
+  },
+  {
+   "w": "ise",
+   "s": 3.333,
+   "e": 3.593,
+   "b": 0
+  },
+  {
+   "w": "kuzeyden",
+   "s": 3.593,
+   "e": 4.193,
+   "b": 0
+  },
+  {
+   "w": "esiyor.",
+   "s": 4.193,
+   "e": 4.653,
+   "b": 0
+  },
+  {
+   "w": "Trenin",
+   "s": 4.873,
+   "e": 5.573,
+   "b": 0
+  },
+  {
+   "w": "dumanı",
+   "s": 5.573,
+   "e": 6.093,
+   "b": 0
+  },
+  {
+   "w": "hangi",
+   "s": 6.093,
+   "e": 6.553,
+   "b": 0
+  },
+  {
+   "w": "yöne",
+   "s": 6.553,
+   "e": 6.813,
+   "b": 0
+  },
+  {
+   "w": "doğru",
+   "s": 6.813,
+   "e": 7.053,
+   "b": 0
+  },
+  {
+   "w": "gider?",
+   "s": 7.053,
+   "e": 7.433,
+   "b": 0
+  }
+ ],
+ "vurgu": [],
+ "altyaziGizle": [
+  [
+   0,
+   2.0
+  ],
+  [
+   2.0,
+   7.4
+  ],
+  [
+   11.8,
+   13.4
+  ]
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "ust": "ŞAŞIRTMACA SORU",
+   "metin": "%90'I YANLIŞ\nCEVAPLIYOR 🤯",
+   "vurguSatir": true,
+   "y": 1120,
+   "boyut": 96,
+   "s": 0,
+   "son": 2.0
+  },
+  {
+   "tip": "soru",
+   "no": "ŞAŞIRTMACA",
+   "soru": "Elektrikli bir tren güneye gidiyor, rüzgâr kuzeyden esiyor. Trenin dumanı hangi yöne gider?",
+   "y": 230,
+   "s": 2.0,
+   "son": 7.4
+  },
+  {
+   "tip": "karart",
+   "seviye": 0.5,
+   "s": 8.2,
+   "son": 11.2
+  },
+  {
+   "tip": "etiket",
+   "metin": "⏸️ DURDUR VE DÜŞÜN",
+   "y": 900,
+   "boyut": 60,
+   "ses": "bildirim",
+   "s": 8.25,
+   "son": 11.15
+  },
+  {
+   "tip": "sayac",
+   "saniye": 3,
+   "y": 1300,
+   "s": 8.2,
+   "son": 11.2
+  },
+  {
+   "tip": "cevap",
+   "cevap": "Elektrikli trenin dumanı olmaz! 😄",
+   "baslik": "CEVAP",
+   "y": 1200,
+   "s": 11.2,
+   "son": 13.4
+  },
+  {
+   "tip": "cagri",
+   "metin": "Sen bilebildin mi? 🤔",
+   "altMetin": "Yorumlara yaz 👇",
+   "alt": 420,
+   "s": 11.8,
+   "son": 13.4
+  }
+ ],
+ "sfx": [],
+ "toplamKare": 402,
+ "muzik": {
+  "src": "muzik/gizem.wav",
+  "seviye": 0.24,
+  "konusmaSeviye": 0.07
+ }
+}

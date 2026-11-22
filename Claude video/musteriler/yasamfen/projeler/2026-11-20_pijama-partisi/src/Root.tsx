@@ -3,6 +3,7 @@ import { Composition, Still } from "remotion";
 import { Onizleme, ONIZLEME_SURE } from "./Onizleme";
 import { Kurgu, KurguVeri } from "../../../bilesenler/Kurgu";
 import { Kapak, KapakProps } from "../../../bilesenler/Kapak";
+import { Ikili } from "../../../bilesenler/Ikili";
 
 // Her video: src/<ad>.json (calisma/kurgu_yap.py üretir). Dosya yoksa atlanır.
 const VIDEOLAR: [string, string][] = [
@@ -16,6 +17,12 @@ const VIDEOLAR: [string, string][] = [
   ["Yks", "yks"],
   ["KomikYks", "komik_yks"],
   ["KomikParti", "komik_parti"],
+  ["ViralTren", "viral_tren"],
+  ["ViralHoroz", "viral_horoz"],
+  ["ViralMusa", "viral_musa"],
+  ["ViralSekiz", "viral_sekiz"],
+  ["ViralSaniye", "viral_saniye"],
+  ["ViralVampirKim", "viral_vampirkim"],
 ];
 // Reels kapakları (1080x1920): id → props
 const KAPAKLAR: [string, KapakProps][] = [
@@ -38,6 +45,8 @@ const yukle = (ad: string): KurguVeri | null => {
 export const RemotionRoot: React.FC = () => (
   <>
     <Composition id="Onizleme" component={Onizleme} durationInFrames={ONIZLEME_SURE} fps={30} width={1080} height={1920} />
+    <Composition id="KombinSavasi" component={() => <Ikili sol={{ src: "vekil/7383.mp4", bas: 3.6, odakX: 0.62 }} sag={{ src: "vekil/7382.mp4", bas: 0.3, odakX: 0.42 }}
+      ust="PİJAMA PARTİSİ" baslik={"HANGİSİ? 🤔"} alt="1 mi 2 mi? Yorumlara yaz 👇" />} durationInFrames={240} fps={30} width={1080} height={1920} />
     {KAPAKLAR.map(([id, p]) => <Still key={id} id={id} component={() => <Kapak {...p} />} width={1080} height={1920} />)}
     {VIDEOLAR.map(([id, ad]) => {
       const v = yukle(ad);

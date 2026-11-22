@@ -1,0 +1,299 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 709.3333,
+   "kare": 80,
+   "blok": 0,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0009,
+    1.0404
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 712.2333,
+   "kare": 68,
+   "blok": 0,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0438,
+    1.0773
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 715.0,
+   "kare": 90,
+   "blok": 1,
+   "sessiz": true,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 725.2333,
+   "kare": 68,
+   "blok": 2,
+   "ses": "ses/7372_temiz.wav",
+   "sabit": true,
+   "zoom": [
+    1.0999,
+    1.1404
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 822.1333,
+   "kare": 101,
+   "blok": 3,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    1.0398,
+    1.12
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ],
+   "punch": [
+    {
+     "kare": 60,
+     "olcek": 1.1,
+     "sure": 6
+    }
+   ]
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Bir",
+   "s": 0.187,
+   "e": 0.747,
+   "b": 0
+  },
+  {
+   "w": "horoz",
+   "s": 0.747,
+   "e": 1.167,
+   "b": 0
+  },
+  {
+   "w": "evin",
+   "s": 1.167,
+   "e": 1.487,
+   "b": 0
+  },
+  {
+   "w": "çatısına",
+   "s": 1.487,
+   "e": 1.967,
+   "b": 0
+  },
+  {
+   "w": "yumurtladı.",
+   "s": 1.967,
+   "e": 2.447,
+   "b": 0
+  },
+  {
+   "w": "Yumurta",
+   "s": 2.733,
+   "e": 3.293,
+   "b": 0
+  },
+  {
+   "w": "sağa",
+   "s": 3.293,
+   "e": 3.693,
+   "b": 0
+  },
+  {
+   "w": "mı",
+   "s": 3.693,
+   "e": 3.713,
+   "b": 0
+  },
+  {
+   "w": "düşer,",
+   "s": 3.713,
+   "e": 4.013,
+   "b": 0
+  },
+  {
+   "w": "sola",
+   "s": 4.113,
+   "e": 4.253,
+   "b": 0
+  },
+  {
+   "w": "mı",
+   "s": 4.253,
+   "e": 4.393,
+   "b": 0
+  },
+  {
+   "w": "düşer?",
+   "s": 4.393,
+   "e": 4.733,
+   "b": 0
+  },
+  {
+   "w": "Kırılır.",
+   "s": 7.94,
+   "e": 8.32,
+   "b": 2
+  },
+  {
+   "w": "Kırılır.",
+   "s": 8.4,
+   "e": 8.68,
+   "b": 2
+  },
+  {
+   "w": "Kırılır.",
+   "s": 9.12,
+   "e": 9.28,
+   "b": 2
+  },
+  {
+   "w": "Kırılır.",
+   "s": 9.44,
+   "e": 9.82,
+   "b": 2
+  },
+  {
+   "w": "Kırılır.",
+   "s": 9.9,
+   "e": 10.04,
+   "b": 2
+  },
+  {
+   "w": "Mantık,",
+   "s": 10.467,
+   "e": 11.207,
+   "b": 3
+  },
+  {
+   "w": "rezalet.",
+   "s": 11.387,
+   "e": 11.847,
+   "b": 3
+  },
+  {
+   "w": "Horozu",
+   "s": 12.187,
+   "e": 12.447,
+   "b": 3
+  },
+  {
+   "w": "yumurtlatıyoruz.",
+   "s": 12.447,
+   "e": 13.107,
+   "b": 3
+  }
+ ],
+ "vurgu": [
+  "horozu",
+  "kırılır."
+ ],
+ "altyaziGizle": [
+  [
+   0,
+   2.0
+  ],
+  [
+   1.9,
+   4.9
+  ],
+  [
+   11.067,
+   13.267
+  ]
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "ust": "ŞAŞIRTMACA SORU",
+   "metin": "%90'I YANLIŞ\nCEVAPLIYOR 🤯",
+   "vurguSatir": true,
+   "y": 1120,
+   "boyut": 96,
+   "s": 0,
+   "son": 2.0
+  },
+  {
+   "tip": "soru",
+   "no": "ŞAŞIRTMACA",
+   "soru": "Bir horoz evin çatısına yumurtladı. Yumurta sağa mı düşer, sola mı?",
+   "y": 230,
+   "s": 1.9,
+   "son": 4.9
+  },
+  {
+   "tip": "karart",
+   "seviye": 0.5,
+   "s": 4.933,
+   "son": 7.933
+  },
+  {
+   "tip": "etiket",
+   "metin": "⏸️ DURDUR VE DÜŞÜN",
+   "y": 900,
+   "boyut": 60,
+   "ses": "bildirim",
+   "s": 4.983,
+   "son": 7.883
+  },
+  {
+   "tip": "sayac",
+   "saniye": 3,
+   "y": 1300,
+   "s": 4.933,
+   "son": 7.933
+  },
+  {
+   "tip": "cevap",
+   "cevap": "Horoz yumurtlamaz! 🐓",
+   "baslik": "CEVAP",
+   "y": 1300,
+   "s": 7.95,
+   "son": 10.15
+  },
+  {
+   "tip": "cagri",
+   "metin": "Sen bilebildin mi? 🤔",
+   "altMetin": "Yorumlara yaz 👇",
+   "alt": 420,
+   "s": 11.067,
+   "son": 13.267
+  }
+ ],
+ "sfx": [],
+ "toplamKare": 407,
+ "muzik": {
+  "src": "muzik/gizem.wav",
+  "seviye": 0.24,
+  "konusmaSeviye": 0.07
+ }
+}

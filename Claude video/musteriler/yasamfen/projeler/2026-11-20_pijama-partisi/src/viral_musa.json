@@ -1,0 +1,251 @@
+{
+ "fps": 30,
+ "parcalar": [
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 1503.7667,
+   "kare": 118,
+   "blok": 0,
+   "ses": "ses/7372_temiz.wav",
+   "zoom": [
+    0.9997,
+    1.0774
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 1508.0,
+   "kare": 90,
+   "blok": 1,
+   "sessiz": true,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "src": "vekil/7372.mp4",
+   "bas": 1511.2,
+   "kare": 116,
+   "blok": 2,
+   "ses": "ses/7372_temiz.wav",
+   "sabit": true,
+   "zoom": [
+    1.05,
+    1.1203
+   ],
+   "odak": [
+    0.5,
+    0.5
+   ],
+   "punch": [
+    {
+     "kare": 86,
+     "olcek": 1.1,
+     "sure": 6
+    }
+   ]
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Musa",
+   "s": 0.113,
+   "e": 0.793,
+   "b": 0
+  },
+  {
+   "w": "'nın",
+   "s": 0.793,
+   "e": 1.113,
+   "b": 0
+  },
+  {
+   "w": "her",
+   "s": 1.113,
+   "e": 1.333,
+   "b": 0
+  },
+  {
+   "w": "hayvandan",
+   "s": 1.333,
+   "e": 1.753,
+   "b": 0
+  },
+  {
+   "w": "Gemisine",
+   "s": 1.753,
+   "e": 2.273,
+   "b": 0
+  },
+  {
+   "w": "kaç",
+   "s": 2.273,
+   "e": 2.533,
+   "b": 0
+  },
+  {
+   "w": "tane",
+   "s": 2.533,
+   "e": 2.933,
+   "b": 0
+  },
+  {
+   "w": "çift",
+   "s": 2.933,
+   "e": 3.253,
+   "b": 0
+  },
+  {
+   "w": "alıyordu?",
+   "s": 3.253,
+   "e": 3.713,
+   "b": 0
+  },
+  {
+   "w": "Musa",
+   "s": 6.933,
+   "e": 8.233,
+   "b": 2
+  },
+  {
+   "w": "'nın",
+   "s": 8.233,
+   "e": 8.353,
+   "b": 2
+  },
+  {
+   "w": "gemisi",
+   "s": 8.353,
+   "e": 8.793,
+   "b": 2
+  },
+  {
+   "w": "mi",
+   "s": 8.793,
+   "e": 8.933,
+   "b": 2
+  },
+  {
+   "w": "var",
+   "s": 8.933,
+   "e": 9.073,
+   "b": 2
+  },
+  {
+   "w": "Arkadaşlar",
+   "s": 9.073,
+   "e": 9.793,
+   "b": 2
+  },
+  {
+   "w": "Nuh",
+   "s": 9.793,
+   "e": 10.173,
+   "b": 2
+  },
+  {
+   "w": "olmasın",
+   "s": 10.173,
+   "e": 10.633,
+   "b": 2
+  },
+  {
+   "w": "o",
+   "s": 10.633,
+   "e": 10.773,
+   "b": 2
+  }
+ ],
+ "vurgu": [
+  "musa'nın",
+  "nuh"
+ ],
+ "altyaziGizle": [
+  [
+   0,
+   2.0
+  ],
+  [
+   1.9,
+   3.7
+  ],
+  [
+   9.633,
+   10.8
+  ]
+ ],
+ "olaylar": [
+  {
+   "tip": "baslik",
+   "ust": "ŞAŞIRTMACA SORU",
+   "metin": "%90'I YANLIŞ\nCEVAPLIYOR 🤯",
+   "vurguSatir": true,
+   "y": 1120,
+   "boyut": 96,
+   "s": 0,
+   "son": 2.0
+  },
+  {
+   "tip": "soru",
+   "no": "ŞAŞIRTMACA",
+   "soru": "Musa gemisine her hayvandan kaç çift aldı?",
+   "y": 230,
+   "s": 1.9,
+   "son": 3.7
+  },
+  {
+   "tip": "karart",
+   "seviye": 0.5,
+   "s": 3.933,
+   "son": 6.933
+  },
+  {
+   "tip": "etiket",
+   "metin": "⏸️ DURDUR VE DÜŞÜN",
+   "y": 900,
+   "boyut": 60,
+   "ses": "bildirim",
+   "s": 3.983,
+   "son": 6.883
+  },
+  {
+   "tip": "sayac",
+   "saniye": 3,
+   "y": 1300,
+   "s": 3.933,
+   "son": 6.933
+  },
+  {
+   "tip": "cevap",
+   "cevap": "Gemiyi yapan Musa değil, Nuh! 🚢",
+   "baslik": "CEVAP",
+   "y": 1300,
+   "s": 9.033,
+   "son": 10.8
+  },
+  {
+   "tip": "cagri",
+   "metin": "Sen fark ettin mi? 🤔",
+   "altMetin": "Yorumlara yaz 👇",
+   "alt": 420,
+   "s": 9.633,
+   "son": 10.8
+  }
+ ],
+ "sfx": [],
+ "toplamKare": 324,
+ "muzik": {
+  "src": "muzik/gizem.wav",
+  "seviye": 0.24,
+  "konusmaSeviye": 0.07
+ }
+}
