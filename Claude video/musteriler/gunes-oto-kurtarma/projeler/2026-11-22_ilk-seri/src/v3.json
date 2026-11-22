@@ -1,0 +1,490 @@
+{
+ "parcalar": [
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 0.0,
+   "kare": 64,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 2.2,
+   "kare": 20,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 2.9,
+   "kare": 41,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 4.8,
+   "kare": 69,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 7.533333333333333,
+   "kare": 56,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 15.633333333333333,
+   "kare": 116,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 20.1,
+   "kare": 99,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 23.433333333333334,
+   "kare": 14,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 24.333333333333332,
+   "kare": 39,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 27.2,
+   "kare": 92,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 31.333333333333332,
+   "kare": 62,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 33.43333333333333,
+   "kare": 45,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7507_dikey.mp4",
+   "ses": "IMG_7507_ses.wav",
+   "bas": 35.56666666666667,
+   "kare": 88,
+   "zoom": false
+  }
+ ],
+ "broll": [
+  {
+   "dosya": "IMG_7518_dikey.mp4",
+   "bas": 1.0,
+   "s": 8.013,
+   "son": 9.16
+  },
+  {
+   "dosya": "IMG_7499_dikey.mp4",
+   "bas": 2.0,
+   "s": 15.17,
+   "son": 15.933
+  },
+  {
+   "dosya": "IMG_7504_dikey.mp4",
+   "bas": 0.5,
+   "s": 15.933,
+   "son": 17.217
+  },
+  {
+   "dosya": "IMG_7520_dikey.mp4",
+   "bas": 0.5,
+   "s": 17.217,
+   "son": 23.913
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Kurtarıcı",
+   "s": 0.02,
+   "e": 0.8
+  },
+  {
+   "w": "ücretleri",
+   "s": 0.8,
+   "e": 2.0
+  },
+  {
+   "w": "sadece",
+   "s": 2.0,
+   "e": 2.133
+  },
+  {
+   "w": "mazot",
+   "s": 2.173,
+   "e": 2.793
+  },
+  {
+   "w": "mu",
+   "s": 2.8,
+   "e": 2.9
+  },
+  {
+   "w": "hesabı,",
+   "s": 2.84,
+   "e": 3.22
+  },
+  {
+   "w": "yakıt",
+   "s": 3.28,
+   "e": 3.54
+  },
+  {
+   "w": "mı",
+   "s": 3.54,
+   "e": 3.64
+  },
+  {
+   "w": "hesabı?",
+   "s": 3.64,
+   "e": 4.06
+  },
+  {
+   "w": "Yoksa",
+   "s": 4.167,
+   "e": 4.807
+  },
+  {
+   "w": "mesafeye",
+   "s": 4.807,
+   "e": 5.567
+  },
+  {
+   "w": "de",
+   "s": 5.567,
+   "e": 5.667
+  },
+  {
+   "w": "bakıyor",
+   "s": 5.607,
+   "e": 5.947
+  },
+  {
+   "w": "musunuz?",
+   "s": 5.947,
+   "e": 6.467
+  },
+  {
+   "w": "Aracın",
+   "s": 6.533,
+   "e": 6.853
+  },
+  {
+   "w": "ne",
+   "s": 6.853,
+   "e": 7.013
+  },
+  {
+   "w": "olduğu",
+   "s": 7.013,
+   "e": 7.293
+  },
+  {
+   "w": "da",
+   "s": 7.293,
+   "e": 7.453
+  },
+  {
+   "w": "önemli",
+   "s": 7.453,
+   "e": 7.733
+  },
+  {
+   "w": "mi?",
+   "s": 7.733,
+   "e": 7.953
+  },
+  {
+   "w": "Tabii",
+   "s": 8.013,
+   "e": 8.173
+  },
+  {
+   "w": "ki.",
+   "s": 8.153,
+   "e": 8.313
+  },
+  {
+   "w": "Kurtarıcı",
+   "s": 8.36,
+   "e": 8.8
+  },
+  {
+   "w": "ücretleri",
+   "s": 8.8,
+   "e": 9.22
+  },
+  {
+   "w": "hesaplanırken",
+   "s": 9.21,
+   "e": 9.97
+  },
+  {
+   "w": "sadece",
+   "s": 9.97,
+   "e": 10.69
+  },
+  {
+   "w": "yakıt",
+   "s": 10.69,
+   "e": 11.13
+  },
+  {
+   "w": "olarak",
+   "s": 11.13,
+   "e": 11.35
+  },
+  {
+   "w": "hesap",
+   "s": 11.35,
+   "e": 11.73
+  },
+  {
+   "w": "etmiyoruz.",
+   "s": 11.73,
+   "e": 12.19
+  },
+  {
+   "w": "Aracımızın",
+   "s": 12.23,
+   "e": 12.79
+  },
+  {
+   "w": "sigortası,",
+   "s": 12.79,
+   "e": 13.41
+  },
+  {
+   "w": "kaskosu,",
+   "s": 13.57,
+   "e": 14.15
+  },
+  {
+   "w": "yıpranma",
+   "s": 14.29,
+   "e": 14.77
+  },
+  {
+   "w": "payı,",
+   "s": 14.77,
+   "e": 15.11
+  },
+  {
+   "w": "lastiği,",
+   "s": 15.27,
+   "e": 15.5
+  },
+  {
+   "w": "kilometre",
+   "s": 15.983,
+   "e": 16.543
+  },
+  {
+   "w": "hesabı,",
+   "s": 16.543,
+   "e": 17.183
+  },
+  {
+   "w": "üzerine",
+   "s": 17.267,
+   "e": 17.947
+  },
+  {
+   "w": "alacağımız",
+   "s": 17.947,
+   "e": 19.047
+  },
+  {
+   "w": "yükün",
+   "s": 19.047,
+   "e": 19.587
+  },
+  {
+   "w": "tonajı",
+   "s": 19.587,
+   "e": 20.187
+  },
+  {
+   "w": "hafif",
+   "s": 20.333,
+   "e": 20.65
+  },
+  {
+   "w": "olursa",
+   "s": 20.65,
+   "e": 21.15
+  },
+  {
+   "w": "araç",
+   "s": 21.15,
+   "e": 21.47
+  },
+  {
+   "w": "daha",
+   "s": 21.47,
+   "e": 21.65
+  },
+  {
+   "w": "az",
+   "s": 21.65,
+   "e": 21.89
+  },
+  {
+   "w": "yakar,",
+   "s": 21.89,
+   "e": 22.27
+  },
+  {
+   "w": "tonajlı",
+   "s": 22.4,
+   "e": 22.777
+  },
+  {
+   "w": "olursa",
+   "s": 22.777,
+   "e": 23.077
+  },
+  {
+   "w": "daha",
+   "s": 23.077,
+   "e": 23.237
+  },
+  {
+   "w": "çok",
+   "s": 23.237,
+   "e": 23.457
+  },
+  {
+   "w": "yakar.",
+   "s": 23.457,
+   "e": 23.877
+  },
+  {
+   "w": "Bunları",
+   "s": 23.963,
+   "e": 24.723
+  },
+  {
+   "w": "hesap",
+   "s": 24.723,
+   "e": 25.083
+  },
+  {
+   "w": "ederek",
+   "s": 25.083,
+   "e": 25.423
+  },
+  {
+   "w": "müşterilerimize",
+   "s": 25.423,
+   "e": 26.103
+  },
+  {
+   "w": "fiyat",
+   "s": 26.103,
+   "e": 26.403
+  },
+  {
+   "w": "veriyoruz.",
+   "s": 26.403,
+   "e": 26.803
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "kanca",
+   "anlik": true,
+   "s": 0.0,
+   "son": 7.963,
+   "satir1": "KURTARMA ÜCRETİ",
+   "satir2": "nasıl belirlenir?"
+  },
+  {
+   "tip": "uyari",
+   "renk": "sari",
+   "s": 9.21,
+   "son": 12.18,
+   "metin": "SADECE YAKIT DEĞİL"
+  },
+  {
+   "tip": "liste",
+   "baslik": "FİYATI BELİRLEYENLER",
+   "s": 12.18,
+   "son": 23.913,
+   "boyut": 46,
+   "ogeler": [
+    [
+     "Sigorta",
+     12.79
+    ],
+    [
+     "Kasko",
+     13.57
+    ],
+    [
+     "Yıpranma payı",
+     14.29
+    ],
+    [
+     "Lastik",
+     15.27
+    ],
+    [
+     "Kilometre",
+     15.983
+    ],
+    [
+     "Yükün tonajı",
+     19.587
+    ]
+   ]
+  },
+  {
+   "tip": "kapanis",
+   "s": 23.963,
+   "son": 27.333333333333332
+  }
+ ],
+ "vurgu": [
+  "mazot",
+  "yakıt",
+  "mesafeye",
+  "önemli",
+  "sigortası",
+  "kaskosu",
+  "yıpranma",
+  "lastiği",
+  "kilometre",
+  "tonajı",
+  "fiyat",
+  "sadece"
+ ],
+ "toplamKare": 805,
+ "kartY": 1000,
+ "altyaziY": 1510
+}

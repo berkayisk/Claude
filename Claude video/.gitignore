@@ -18,3 +18,7 @@ musteriler/*/projeler/*/ciktilar/*
 musteriler/*/projeler/*/referanslar/*
 musteriler/*/projeler/*/calisma/*
 !musteriler/**/.gitkeep
+!musteriler/*/projeler/*/calisma/*.py
+!musteriler/*/projeler/*/calisma/*.sh
+!musteriler/*/projeler/*/calisma/transkript.txt
+!musteriler/*/projeler/*/calisma/kelimeler.json

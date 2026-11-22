@@ -1,0 +1,174 @@
+"""Güneş Oto Kurtarma ilk seri: video planı -> src/<id>.json (GunesReels şablonu).
+Sıkı kurgu: kök CLAUDE.md 'Reels / talking-head kuralları' (cümle arası ~0.07 sn, nefesler atılır, video sözle başlar).
+Kullanım: python3 calisma/plan.py v3 [v4 v6 ...]"""
+import json, sys, wave, numpy as np
+
+FPS = 30
+KEL = json.load(open("calisma/kelimeler.json"))
+DUZELT = {"Kurtarcı": "Kurtarıcı", "hesabını?": "hesabı?", "ünitleri": "ücretleri", "sığcılık": "tırcılık", "güneşimiz": "Güneş'imiz", "tırf,": "tır,",
+          "kokluyuz.": "forklift.", "güvenliliğini": "güvenliğini", "veliahtında": "evveliyatında", "hizmeleri.": "hizmetleri.",
+          "hizmit": "hizmet", "lobet": "lowbed", "çepçe": "kepçe", "eskavetör": "ekskavatör", "Kurtarıcı": "Kurtarıcı"}
+# Whisper'ın yanlış hizaladığı kelimeler (ikinci geçişten): (çekim, yanlış kelime başı) -> doğru (w, s, e)
+YAMA = {
+    "IMG_7507": {0.82: ("Kurtarıcı", 0.02, 0.8), 1.5: ("ücretleri", 0.8, 2.0), 16.11: None, 16.33: None, 15.43: ("Kurtarıcı", 15.66, 16.10), 9.24: ("ki.", 9.22, 9.38), "ek": [("ücretleri", 16.10, 16.52)]},
+    "IMG_7512": {0.0: ("Tırınız,", 1.08, 1.45)},
+}
+
+S = {}
+def ses(n):
+    if n not in S:
+        w = wave.open(f"calisma/ses_temiz/{n}_16k.wav"); S[n] = np.frombuffer(w.readframes(w.getnframes()), np.int16).astype(np.float32) / 32768
+    return S[n]
+def db(n, t, win=0.02):
+    a = ses(n)[max(0, int(t * 16000)): int((t + win) * 16000)]
+    return 20 * np.log10(float(np.sqrt((a ** 2).mean())) + 1e-9) if len(a) else -99
+
+MIN_KES, KALAN = 0.12, 0.035
+ESIK = {}
+def esik(n):
+    if n not in ESIK:
+        e = [db(n, t, 0.01) for t in np.arange(0, len(ses(n)) / 16000 - 0.01, 0.01)]
+        ESIK[n] = max(-38.0, float(np.percentile(e, 10)) + 7)
+        print(f"  {n}: konuşma eşiği {ESIK[n]:.1f} dB")
+    return ESIK[n]
+
+def kelimeler(n):
+    ks = []
+    y = YAMA.get(n, {})
+    for w in KEL[n]:
+        if w["s"] in y:
+            if y[w["s"]] is None: continue
+            a, s, e = y[w["s"]]; ks.append({"w": a, "s": s, "e": e}); continue
+        ks.append({"w": DUZELT.get(w["w"], w["w"]), "s": w["s"], "e": w["e"]})
+    for a, s, e in y.get("ek", []): ks.append({"w": a, "s": s, "e": e})
+    return sorted(ks, key=lambda w: w["s"])
+
+def alt_araliklar(n, a, b, ks, haric):
+    ts = np.arange(a, b, 0.01)
+    th = esik(n)
+    konusma = np.array([db(n, t, 0.01) > th for t in ts])
+    for x, y in haric: konusma[(ts >= x) & (ts < y)] = False
+    bolg = []; i = 0
+    while i < len(ts):
+        if konusma[i]:
+            j = i
+            while j < len(ts) and konusma[j]: j += 1
+            bolg.append([ts[i], ts[j - 1] + 0.01]); i = j
+        else: i += 1
+    m = []
+    for x, y in bolg:
+        if m and x - m[-1][1] < MIN_KES: m[-1][1] = y
+        else: m.append([x, y])
+    def kelimeli(x, y): return any(x - 0.05 <= (w["s"] + w["e"]) / 2 <= y + 0.05 or (w["s"] < y and w["e"] > x and min(y, w["e"]) - max(x, w["s"]) > 0.08) for w in ks)
+    m = [(x, y) for x, y in m if kelimeli(x, y)]
+    out = []
+    for x, y in m:
+        x2, y2 = max(a, x - KALAN), min(b, y + KALAN)
+        if out and x2 <= out[-1][1]: out[-1] = (out[-1][0], y2)
+        else: out.append((x2, y2))
+    return [(x, y) for x, y in out if y - x >= 0.15]
+
+def kurgu(cekimler, haric):
+    """cekimler: [(çekim, baş, son)] -> parcalar, altyazi, eşleme (çekim, kaynak sn) -> zaman çizelgesi sn"""
+    parcalar, altyazi, harita, tl, zs = [], [], [], 0.0, 0
+    for (n, a, b) in cekimler:
+        ks = [w for w in kelimeler(n) if a <= (w["s"] + w["e"]) / 2 < b and not any(x <= (w["s"] + w["e"]) / 2 < y for x, y in haric.get(n, []))]
+        ar = alt_araliklar(n, a, b, ks, haric.get(n, []))
+        hedef = []
+        for w in ks:
+            o = [min(y, w["e"]) - max(x, w["s"]) for (x, y) in ar]
+            hedef.append(int(np.argmax(o)) if o and max(o) > 0 else -1)
+        for j, (x, y) in enumerate(ar):
+            fa, fb = int(np.floor(x * FPS)), int(np.ceil(y * FPS))
+            if fb - fa < 6: continue
+            bas, son = fa / FPS, fb / FPS
+            for w, h in zip(ks, hedef):
+                if h == j:
+                    s2 = min(max(bas, w["s"]), son - 0.1) - bas + tl; e2 = min(son, w["e"]) - bas + tl
+                    altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "n": n, "ks": w["s"]})
+            parcalar.append({"src": f"{n}_dikey.mp4", "ses": f"{n}_ses.wav", "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
+            harita.append((n, bas, son, tl))
+            tl += (fb - fa) / FPS
+        zs += 1   # açı (zoom) değişimi sadece çekim/konu değişince
+    return parcalar, altyazi, harita, tl
+
+def kucuk(x): return x.replace("İ", "i").replace("I", "ı").lower()
+
+def yap(vid):
+    V = VIDEOLAR[vid]
+    parcalar, altyazi, harita, tl = kurgu(V["cekimler"], V.get("haric", {}))
+    def kz(parca, sonra=0.0, n=None):
+        for w in altyazi:
+            if kucuk(parca) in kucuk(w["w"]) and w["s"] >= sonra and (n is None or w["n"] == n): return w["s"]
+        raise SystemExit(f"bulunamadı: {parca}")
+    def ke(parca, sonra=0.0):
+        for w in altyazi:
+            if kucuk(parca) in kucuk(w["w"]) and w["s"] >= sonra: return w["e"]
+        raise SystemExit(f"bulunamadı: {parca}")
+    olaylar, broll = V["olaylar"](kz, ke, tl), V["broll"](kz, ke, tl)
+    for a in altyazi: a.pop("n"); a.pop("ks")
+    veri = {"parcalar": parcalar, "broll": broll, "altyazi": altyazi, "olaylar": olaylar, "vurgu": V["vurgu"],
+            "toplamKare": sum(p["kare"] for p in parcalar), "kartY": 1000, "altyaziY": 1510}
+    json.dump(veri, open(f"src/{vid}.json", "w"), ensure_ascii=False, indent=1)
+    print(f"{vid}: {tl:.1f} sn, {len(parcalar)} parça")
+    print("  " + " ".join(w["w"] for w in altyazi))
+
+# ---------------- Videolar ----------------
+VIDEOLAR = {
+    # 3) Kurtarma Ücretleri Nasıl Belirlenir — 7507 (soru + cevap). "Kurtarıcı... neydi lan?" atılır.
+    "v3": {
+        "cekimler": [("IMG_7507", 0.0, 38.8)],
+        "haric": {"IMG_7507": [(9.36, 15.10)]},
+        "vurgu": ["mazot", "yakıt", "mesafeye", "önemli", "sigortası", "kaskosu", "yıpranma", "lastiği", "kilometre", "tonajı", "fiyat", "sadece"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("tabii") - 0.05, "satir1": "KURTARMA ÜCRETİ", "satir2": "nasıl belirlenir?"},
+            {"tip": "uyari", "renk": "sari", "s": kz("hesaplanırken"), "son": kz("aracımızın") - 0.05, "metin": "SADECE YAKIT DEĞİL"},
+            {"tip": "liste", "baslik": "FİYATI BELİRLEYENLER", "s": kz("aracımızın") - 0.05, "son": kz("bunları") - 0.05, "boyut": 46, "ogeler": [
+                ["Sigorta", kz("sigortası")], ["Kasko", kz("kaskosu")], ["Yıpranma payı", kz("yıpranma")], ["Lastik", kz("lastiği")],
+                ["Kilometre", kz("kilometre")], ["Yükün tonajı", kz("tonajı")]]},
+            {"tip": "kapanis", "s": kz("bunları"), "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7518_dikey.mp4", "bas": 1.0, "s": kz("tabii"), "son": kz("hesaplanırken") - 0.05},
+            {"dosya": "IMG_7499_dikey.mp4", "bas": 2.0, "s": kz("lastiği") - 0.1, "son": kz("kilometre") - 0.05},
+            {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("kilometre") - 0.05, "son": kz("üzerine") - 0.05},
+            {"dosya": "IMG_7520_dikey.mp4", "bas": 0.5, "s": kz("üzerine") - 0.05, "son": kz("bunları") - 0.05},
+        ],
+    },
+    # 4) Tırınız Yolda Kaldıysa — 7512 kanca ("bu sefer beni arayabilirsiniz") + 7513 adımlar + 7512 "numarayı bırakıyorum"
+    "v4": {
+        "cekimler": [("IMG_7512", 1.0, 6.4), ("IMG_7513", 1.3, 24.2), ("IMG_7512", 7.9, 11.7)],
+        "haric": {"IMG_7513": [(2.88, 4.4)]},   # "beni aramandan önce" tekrarı
+        "vurgu": ["tırınız", "kamyonunuz", "otobüsünüz", "yolda", "emniyet", "şeridine", "karayollarına", "beni", "arıyorsunuz", "kısa", "yanınızda", "numarayı"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("numarayı") - 0.05, "satir1": "YOLDA MI KALDINIZ?", "satir2": "önce bunları yapın"},
+            {"tip": "liste", "isaret": "sayi", "baslik": "ARAMADAN ÖNCE", "s": kz("emniyet") - 0.05, "son": kz("trafik") - 0.05, "ogeler": [
+                ["Emniyet şeridine geçin", kz("emniyet")], ["Karayollarına haber verin", kz("karayollarına")], ["Sonra bizi arayın", kz("arıyorsunuz")]]},
+            {"tip": "stat", "s": kz("en", kz("aldıktan")), "son": kz("şuraya") - 0.05, "ust": "ANKARA · 7/24", "deger": "EN KISA SÜREDE"},
+            {"tip": "kapanis", "s": kz("şuraya"), "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7504_dikey.mp4", "bas": 0.0, "s": kz("trafik") - 0.05, "son": kz("aldıktan")},
+            {"dosya": "IMG_7503_dikey.mp4", "bas": 0.5, "s": kz("aldıktan"), "son": kz("şuraya") - 0.05},
+        ],
+    },
+    # 6) Güneşimizden Sonra Uzun Yolu Bıraktık — 7524
+    "v6": {
+        "cekimler": [("IMG_7524", 2.7, 21.3), ("IMG_7524", 37.0, 46.3)],
+        "vurgu": ["yıllarca", "tırcılık", "şehirleri", "güneş'imiz", "doğunca", "bıraktık", "sebebi", "tekrardan", "tır", "kamyon", "forklift"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("abi") - 0.05, "satir1": "UZUN YOLU", "satir2": "neden bıraktık?"},
+            {"tip": "stat", "s": kz("güneş") - 0.05, "son": kz("tek") - 0.05, "ust": "İKİ OĞLANDAN SONRA", "deger": "GÜNEŞ'İMİZ ☀"},
+            {"tip": "liste", "baslik": "ŞİMDİ ŞEHİR İÇİ", "s": kz("hem") - 0.05, "son": tl - 0.6, "ogeler": [
+                ["Tır", kz("tır")], ["Kamyon", kz("kamyon")], ["Ufak araç", kz("ufak")], ["Forklift", kz("forklift")]]},
+            {"tip": "kapanis", "s": tl - 0.6, "son": tl + 0.5},
+        ],
+        "broll": lambda kz, ke, tl: [
+            {"dosya": "IMG_7503_dikey.mp4", "bas": 0.3, "s": kz("şehir") - 0.05, "son": kz("abi") - 0.05},
+            {"dosya": "IMG_7518_dikey.mp4", "bas": 0.5, "s": kz("tekrardan") - 0.05, "son": kz("hem") - 0.05},
+        ],
+    },
+}
+
+if __name__ == "__main__":
+    for v in sys.argv[1:]: yap(v)
