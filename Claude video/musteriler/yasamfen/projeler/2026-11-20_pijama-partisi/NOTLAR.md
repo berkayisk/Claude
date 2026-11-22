@@ -16,7 +16,7 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | 1 | Etkinlik genel video | Genel | taslak gönderildi (41 sn, müziksiz) |
 | 2 | Bilgi yarışması #1 | Yarisma1 | 2. taslak gönderildi (82 sn, geri bildirim 1–3) |
 | 3 | Bilgi yarışması #2 | Yarisma2 | taslak gönderildi (66 sn) |
-| 4 | Vampir köylü #1 | Vampir1 | taslak gönderildi (47 sn) |
+| 4 | Vampir köylü #1 | Vampir1 | ONAYLANDI (51 sn, yeni akış) |
 | 5 | Vampir köylü #2 | Vampir2 | taslak gönderildi (34 sn) |
 | 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
 | 7 | Hocalar ne dedi (ekstra) | Hocalar | taslak gönderildi (54 sn) |
@@ -131,3 +131,4 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Vampir #1 geri bildirim 6: girişte "dört vampir" tek sefer; roller başlığı aşağıda (y=1240) — etiketle çakışmıyor; 0:35 çocuklu 7408
   yerine 7429 "Doktoru kim koruyor?" + 7460 "Ayşin Hoca neymiş?" (sadece yetişkinler); son oylama 7466/7465 yerine 7431 (yetişkinler)
   + 7464 2x zoom sağa (çocuk kadraj dışı) + "Köylüler kazandı".
+- Vampir #1 onaylandı; altyazı: "Ayfun Hoca" (Ayşin değil).

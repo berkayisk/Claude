@@ -19,7 +19,7 @@ PLAN = [
     klip(7404, 7.9, 13.4, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Doktor kendini koruyarak doğru kişiyi koruduğu için bir kişi öldü. Normalde iki kişi ölmesi lazımdı."),
     klip(7407, 1.75, 3.12, sabit=True, **Z, yazi="Bence öğrencilerden biri oyunda var."),
     klip(7429, 0.5, 2.2, zoom=[1.05, 1.12], odak=[0.6, 0.45], yazi="Doktoru kim koruyor?"),
-    klip(7460, 1.6, 2.95, zoom=[1.05, 1.1], odak=[0.6, 0.5], yazi="Ayşin Hoca neymiş?"),
+    klip(7460, 1.6, 2.95, zoom=[1.05, 1.1], odak=[0.6, 0.5], yazi="Ayfun Hoca neymiş?"),
     klip(7440, 3.6, 5.9, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Bu da sessiz sessiz duruyor valla."),
     klip(7424, 0.0, 2.53, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Siz beni elemeye çalışıyorsunuz, köylü oyunu dediğiniz için."),
     klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.14], odak=[0.5, 0.4], yazi="Ben onların tekrar üzerime geleceğini bile bile neden onları öldüreyim yani, mantıken?"),
