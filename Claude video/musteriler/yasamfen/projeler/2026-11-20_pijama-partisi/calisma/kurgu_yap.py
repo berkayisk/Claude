@@ -84,7 +84,7 @@ def dip_yasla(no, bas, son):
     b0, b1 = max(son_k, son - 0.1), min(sonraki, son + 0.25)
     i0, i1 = int(b0 * 100), min(len(db), int(b1 * 100) + 1)
     if b1 - b0 > 0.03 and i1 > i0:
-        son = min((i0 + int(np.argmin(db[i0:i1]))) / 100 + 0.01, sonraki - 0.02)
+        son = min((i0 + int(np.argmin(db[i0:i1]))) / 100 + 0.01, sonraki - 0.05)   # kare yuvarlaması (ceil) sonrakine taşmasın
     return bas, son
 
 def sikistir(no, bas, son, haric):
