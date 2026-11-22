@@ -13,7 +13,7 @@ YAMA = {
     "IMG_7507": {0.82: ("Kurtarıcı", 0.02, 0.8), 1.5: ("ücretleri", 0.8, 2.0), 16.11: None, 16.33: None, 15.43: ("Kurtarıcı", 15.66, 16.10), 9.24: ("ki.", 9.22, 9.38), "ek": [("ücretleri", 16.10, 16.52)]},
     "IMG_7512": {0.0: ("Tırınız,", 1.08, 1.45)},
     "IMG_7524": {6.08: ("içi", 6.08, 6.24), 6.40: ("şehirler", 6.40, 6.84)},
-    "IMG_7497": {44.78: ("basıp", 43.52, 43.95), "ek": [("lastiğinizi", 43.95, 46.62)]},
+    "IMG_7497": {31.23: None, 31.99: ("sağlamalısınız.", 31.32, 31.96), 23.6: None, 24.24: ("çağırmalısınız.", 24.38, 25.04), 44.78: ("basıp", 43.52, 43.95), "ek": [("lastiğinizi", 43.95, 46.62)]},
     "IMG_7509": {11.68: ("diferansiyeli", 11.70, 12.18), 12.18: ("dağıtabiliyor.", 12.18, 12.84), 12.54: None},
     "IMG_7511": {2.38: ("Biz", 5.0, 5.58), 10.6: ("4-5", 10.60, 11.52), 11.28: None},
 }
@@ -128,7 +128,7 @@ VIDEOLAR = {
     # 1) Tırınız Çamura Saplanırsa — 7497 + 7498 (gaz cümlesinin temiz hali). Mesaj bilerek: "kurtarıcı değil kepçe/ekskavatör"
     "v1": {
         "cekimler": [("IMG_7497", 0.0, 34.3), ("IMG_7498", 8.4, 14.2), ("IMG_7497", 39.7, 64.7)],
-        "haric": {"IMG_7497": [(23.55, 24.22), (31.2, 31.97)]},   # "çağrılmalısını", "sağlamalısını" yarım denemeleri
+        "haric": {"IMG_7497": [(23.46, 24.33)]},   # "çağrılmalısını", "sağlamalısını" yarım denemeleri
         "vurgu": ["çamura", "saplandığı", "yapmamalısınız", "dengesiz", "halat", "kepçe", "ekskavatör", "zeminin", "kontrolünü", "gaza", "zorlamayın", "batarsınız", "lastiğinizi", "zemin", "aramayın", "batarım"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("dengesiz") - 0.05, "satir1": "ÇAMURA SAPLANDINIZ", "satir2": "sakın bunları yapmayın"},
@@ -141,7 +141,7 @@ VIDEOLAR = {
         ],
         "broll": lambda kz, ke, tl: [
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("havalar"), "son": kz("tırınız") - 0.05},
-            {"dosya": "IMG_7501_dikey.mp4", "bas": 0.0, "s": kz("araçtan"), "son": kz("sağlamalısınız") + 0.3},
+            {"dosya": "IMG_7501_dikey.mp4", "bas": 0.0, "s": kz("araçtan"), "son": kz("aracınız") - 0.05},
             {"dosya": "IMG_7499_dikey.mp4", "bas": 4.0, "s": kz("çekebiliriz") - 0.4, "son": kz("onun") - 0.05},
         ],
     },

@@ -1,0 +1,744 @@
+{
+ "parcalar": [
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 0.8333333333333334,
+   "kare": 18,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 1.4333333333333333,
+   "kare": 34,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 3.3333333333333335,
+   "kare": 12,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 3.7666666666666666,
+   "kare": 17,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 4.466666666666667,
+   "kare": 21,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 5.433333333333334,
+   "kare": 43,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 7.4,
+   "kare": 32,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 12.033333333333333,
+   "kare": 19,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 12.733333333333333,
+   "kare": 26,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 15.2,
+   "kare": 35,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 18.8,
+   "kare": 34,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 20.466666666666665,
+   "kare": 37,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 22.466666666666665,
+   "kare": 31,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 24.333333333333332,
+   "kare": 23,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 26.7,
+   "kare": 32,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 28.533333333333335,
+   "kare": 35,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 30.2,
+   "kare": 55,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7498_dikey.mp4",
+   "ses": "IMG_7498_ses.wav",
+   "bas": 9.3,
+   "kare": 44,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7498_dikey.mp4",
+   "ses": "IMG_7498_ses.wav",
+   "bas": 10.866666666666667,
+   "kare": 21,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7498_dikey.mp4",
+   "ses": "IMG_7498_ses.wav",
+   "bas": 11.933333333333334,
+   "kare": 26,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7498_dikey.mp4",
+   "ses": "IMG_7498_ses.wav",
+   "bas": 13.066666666666666,
+   "kare": 29,
+   "zoom": true
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 40.3,
+   "kare": 38,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 41.6,
+   "kare": 19,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 43.233333333333334,
+   "kare": 23,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 46.0,
+   "kare": 41,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 48.733333333333334,
+   "kare": 18,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 49.5,
+   "kare": 33,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 51.0,
+   "kare": 35,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 53.13333333333333,
+   "kare": 89,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 56.766666666666666,
+   "kare": 50,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 59.06666666666667,
+   "kare": 75,
+   "zoom": false
+  },
+  {
+   "src": "IMG_7497_dikey.mp4",
+   "ses": "IMG_7497_ses.wav",
+   "bas": 62.86666666666667,
+   "kare": 51,
+   "zoom": false
+  }
+ ],
+ "broll": [
+  {
+   "dosya": "IMG_7504_dikey.mp4",
+   "bas": 0.5,
+   "s": 0.0,
+   "son": 1.683
+  },
+  {
+   "dosya": "IMG_7501_dikey.mp4",
+   "bas": 0.0,
+   "s": 13.8,
+   "son": 20.75
+  },
+  {
+   "dosya": "IMG_7499_dikey.mp4",
+   "bas": 4.0,
+   "s": 27.827,
+   "son": 2.097
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Havalar",
+   "s": 0.0,
+   "e": 0.427
+  },
+  {
+   "w": "malum",
+   "s": 0.6,
+   "e": 1.007
+  },
+  {
+   "w": "yağışlı,",
+   "s": 1.007,
+   "e": 1.567
+  },
+  {
+   "w": "tırınız,",
+   "s": 1.733,
+   "e": 2.04
+  },
+  {
+   "w": "kamyonunuz,",
+   "s": 2.147,
+   "e": 2.647
+  },
+  {
+   "w": "otobüsünüz",
+   "s": 2.7,
+   "e": 3.293
+  },
+  {
+   "w": "çamura",
+   "s": 3.4,
+   "e": 3.707
+  },
+  {
+   "w": "saplandığı",
+   "s": 3.707,
+   "e": 4.367
+  },
+  {
+   "w": "zaman",
+   "s": 4.367,
+   "e": 4.707
+  },
+  {
+   "w": "ne",
+   "s": 4.833,
+   "e": 4.993
+  },
+  {
+   "w": "yapmamalısınız?",
+   "s": 4.993,
+   "e": 5.873
+  },
+  {
+   "w": "Dengesiz",
+   "s": 5.9,
+   "e": 6.517
+  },
+  {
+   "w": "halat",
+   "s": 6.533,
+   "e": 6.85
+  },
+  {
+   "w": "bağlayıp",
+   "s": 6.85,
+   "e": 7.4
+  },
+  {
+   "w": "çekim",
+   "s": 7.4,
+   "e": 7.74
+  },
+  {
+   "w": "yapmamalısınız.",
+   "s": 7.74,
+   "e": 8.56
+  },
+  {
+   "w": "Kurtarıcı",
+   "s": 8.567,
+   "e": 9.047
+  },
+  {
+   "w": "değil",
+   "s": 9.047,
+   "e": 9.247
+  },
+  {
+   "w": "de",
+   "s": 9.247,
+   "e": 9.527
+  },
+  {
+   "w": "kepçe",
+   "s": 9.7,
+   "e": 10.013
+  },
+  {
+   "w": "çağırmalısınız.",
+   "s": 10.013,
+   "e": 10.933
+  },
+  {
+   "w": "Veyahut",
+   "s": 10.933,
+   "e": 11.267
+  },
+  {
+   "w": "da",
+   "s": 11.267,
+   "e": 11.427
+  },
+  {
+   "w": "ekskavatör",
+   "s": 11.427,
+   "e": 11.967
+  },
+  {
+   "w": "çağırmalısınız.",
+   "s": 12.013,
+   "e": 12.673
+  },
+  {
+   "w": "Bundan",
+   "s": 12.733,
+   "e": 13.233
+  },
+  {
+   "w": "önce",
+   "s": 13.233,
+   "e": 13.493
+  },
+  {
+   "w": "araçtan",
+   "s": 13.8,
+   "e": 14.237
+  },
+  {
+   "w": "aşağı",
+   "s": 14.237,
+   "e": 14.557
+  },
+  {
+   "w": "inip",
+   "s": 14.557,
+   "e": 14.917
+  },
+  {
+   "w": "zeminin",
+   "s": 14.967,
+   "e": 15.317
+  },
+  {
+   "w": "kontrolünü",
+   "s": 15.317,
+   "e": 15.997
+  },
+  {
+   "w": "sağlamalısınız.",
+   "s": 16.087,
+   "e": 16.727
+  },
+  {
+   "w": "Çamura",
+   "s": 16.8,
+   "e": 17.19
+  },
+  {
+   "w": "battığınız",
+   "s": 17.19,
+   "e": 17.75
+  },
+  {
+   "w": "zaman",
+   "s": 17.75,
+   "e": 18.11
+  },
+  {
+   "w": "gaza",
+   "s": 18.267,
+   "e": 18.53
+  },
+  {
+   "w": "basıp",
+   "s": 18.53,
+   "e": 18.93
+  },
+  {
+   "w": "zorlamayın,",
+   "s": 18.967,
+   "e": 19.723
+  },
+  {
+   "w": "iyice",
+   "s": 19.937,
+   "e": 20.117
+  },
+  {
+   "w": "batarsınız.",
+   "s": 20.117,
+   "e": 20.737
+  },
+  {
+   "w": "Aracınız",
+   "s": 20.8,
+   "e": 21.32
+  },
+  {
+   "w": "çamura",
+   "s": 21.32,
+   "e": 21.72
+  },
+  {
+   "w": "battığı",
+   "s": 21.72,
+   "e": 22.067
+  },
+  {
+   "w": "zaman",
+   "s": 22.247,
+   "e": 22.567
+  },
+  {
+   "w": "gaza",
+   "s": 22.7,
+   "e": 22.967
+  },
+  {
+   "w": "basıp",
+   "s": 22.987,
+   "e": 23.417
+  },
+  {
+   "w": "lastiğinizi",
+   "s": 23.467,
+   "e": 24.087
+  },
+  {
+   "w": "yıpratmayın.",
+   "s": 24.087,
+   "e": 24.707
+  },
+  {
+   "w": "Önce",
+   "s": 24.833,
+   "e": 25.22
+  },
+  {
+   "w": "zemin",
+   "s": 25.433,
+   "e": 25.733
+  },
+  {
+   "w": "kontrolü,",
+   "s": 25.733,
+   "e": 26.433
+  },
+  {
+   "w": "daha",
+   "s": 26.533,
+   "e": 26.693
+  },
+  {
+   "w": "sonrasında",
+   "s": 26.693,
+   "e": 27.373
+  },
+  {
+   "w": "da",
+   "s": 27.373,
+   "e": 27.593
+  },
+  {
+   "w": "ne",
+   "s": 27.7,
+   "e": 27.967
+  },
+  {
+   "w": "ile",
+   "s": 27.967,
+   "e": 28.227
+  },
+  {
+   "w": "çekebiliriz",
+   "s": 28.227,
+   "e": 28.887
+  },
+  {
+   "w": "de",
+   "s": 28.887,
+   "e": 29.007
+  },
+  {
+   "w": "oradan",
+   "s": 29.007,
+   "e": 29.287
+  },
+  {
+   "w": "kurtarırız",
+   "s": 29.287,
+   "e": 29.807
+  },
+  {
+   "w": "aracınızı.",
+   "s": 29.807,
+   "e": 30.507
+  },
+  {
+   "w": "Onun",
+   "s": 30.667,
+   "e": 30.84
+  },
+  {
+   "w": "hesabını",
+   "s": 30.84,
+   "e": 31.36
+  },
+  {
+   "w": "yapmalısınız.",
+   "s": 31.36,
+   "e": 32.04
+  },
+  {
+   "w": "Abi",
+   "s": 32.333,
+   "e": 32.457
+  },
+  {
+   "w": "bu",
+   "s": 32.457,
+   "e": 32.617
+  },
+  {
+   "w": "arada",
+   "s": 32.617,
+   "e": 32.857
+  },
+  {
+   "w": "beni",
+   "s": 32.857,
+   "e": 33.057
+  },
+  {
+   "w": "aramayın,",
+   "s": 33.057,
+   "e": 33.577
+  },
+  {
+   "w": "ben",
+   "s": 33.817,
+   "e": 33.937
+  },
+  {
+   "w": "de",
+   "s": 33.937,
+   "e": 34.077
+  },
+  {
+   "w": "batarım",
+   "s": 34.077,
+   "e": 34.437
+  },
+  {
+   "w": "orada.",
+   "s": 34.437,
+   "e": 34.657
+  },
+  {
+   "w": "Sonra",
+   "s": 34.833,
+   "e": 34.957
+  },
+  {
+   "w": "beraber",
+   "s": 34.957,
+   "e": 35.317
+  },
+  {
+   "w": "kontrol",
+   "s": 35.317,
+   "e": 35.737
+  },
+  {
+   "w": "ederiz",
+   "s": 35.737,
+   "e": 36.077
+  },
+  {
+   "w": "zemini.",
+   "s": 36.077,
+   "e": 36.397
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "kanca",
+   "anlik": true,
+   "s": 0.0,
+   "son": 5.8500000000000005,
+   "satir1": "ÇAMURA SAPLANDINIZ",
+   "satir2": "sakın bunları yapmayın"
+  },
+  {
+   "tip": "liste",
+   "isaret": "carpi",
+   "baslik": "YAPMAYIN",
+   "s": 5.8500000000000005,
+   "son": 8.517,
+   "ogeler": [
+    [
+     "Dengesiz halatla çekim",
+     5.9
+    ]
+   ]
+  },
+  {
+   "tip": "liste",
+   "baslik": "BUNU YAPIN",
+   "s": 8.517,
+   "son": 12.683,
+   "ogeler": [
+    [
+     "Kepçe çağırın",
+     9.7
+    ],
+    [
+     "veya ekskavatör",
+     11.427
+    ]
+   ]
+  },
+  {
+   "tip": "uyari",
+   "s": 18.267,
+   "son": 20.75,
+   "metin": "GAZA BASIP ZORLAMAYIN"
+  },
+  {
+   "tip": "liste",
+   "isaret": "sayi",
+   "baslik": "DOĞRU SIRA",
+   "s": 24.782999999999998,
+   "son": 32.283,
+   "ogeler": [
+    [
+     "Zemin kontrolü",
+     25.433
+    ],
+    [
+     "Ne ile çekilecek?",
+     28.227
+    ],
+    [
+     "Sonra kurtarma",
+     29.287
+    ]
+   ]
+  },
+  {
+   "tip": "uyari",
+   "renk": "sari",
+   "s": 33.817,
+   "son": 34.783,
+   "metin": "BEN DE BATARIM!"
+  },
+  {
+   "tip": "kapanis",
+   "s": 34.833,
+   "son": 37.03333333333333
+  }
+ ],
+ "vurgu": [
+  "çamura",
+  "saplandığı",
+  "yapmamalısınız",
+  "dengesiz",
+  "halat",
+  "kepçe",
+  "ekskavatör",
+  "zeminin",
+  "kontrolünü",
+  "gaza",
+  "zorlamayın",
+  "batarsınız",
+  "lastiğinizi",
+  "zemin",
+  "aramayın",
+  "batarım"
+ ],
+ "toplamKare": 1096,
+ "kartY": 1000,
+ "altyaziY": 1510
+}
