@@ -145,3 +145,6 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 Klasör: "Yaşamfen hazır videoları" (id 1QbUZl92KYgFArxN4BHkd6ZKK5Kto6WYn) — 8 video yüklendi, boyut+md5 doğrulandı:
 YKS TYT Bilgi Yarışması, LGS Bilgi Yarışması 1 & 2, Vampir Köylü 1 & 2, Pijama Partisi Genel, Pijama Kombinleri (sessiz), Hocalar Ne Dedi.
 araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantıları izler (stat -L).
+- Hocalar geri bildirim 8: tüm hocalar (#37 7485, #5 7471, #34 7470, #8 7476, #35 7474), başlık "HOCALARIMIZ NE DEDİ?", konuşma başı enerji
+  başlangıcına yaslanır (ilk kelimeyi geçmeden), "eee" dolguları calisma/transkript_dolgu (dolgu odaklı whisper) + enerjiyle bulunup HARIC.
+  kurgu_yap: HARIC artık en son da uygulanır (kelime ekleme adımı dolguları geri getirmesin).

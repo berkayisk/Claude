@@ -58,6 +58,12 @@ def cumle_sinir(no, bas, son, sadece_kuyruk=False, ileri=3):
     # baş da önceki kelimenin kuyruğunu almasın
     onceki = max((we for ws, we, w in tum if we <= bas + 0.05), default=-1)
     bas = max(bas, onceki + 0.02)
+    # konuşmaya doğrudan gir: sesin gerçekten başladığı yere (en çok 0.6 sn ileri) yasla
+    if os.path.exists(f"calisma/ses/{no}_16k.wav"):
+        db, esik = enerji(no); k = int(bas * 100)
+        while k < len(db) and k < int((bas + 0.6) * 100) and db[k] <= esik: k += 1
+        ilk_kelime = min((ws for ws, we, w in tum if (ws + we) / 2 >= bas), default=bas + 0.6)
+        if k < int((bas + 0.6) * 100): bas = max(bas, min(k / 100 - 0.03, ilk_kelime - 0.04))
     return max(0, bas), son
 
 PAY_BAS, PAY_SON = 0.06, 0.15
@@ -101,6 +107,15 @@ def sikistir(no, bas, son, haric):
         if bir and b[0] <= bir[-1][1] + 0.05: bir[-1][1] = max(bir[-1][1], b[1])
         else: bir.append(list(b))
     bolge = bir
+    # HARIC son kez (kelime ekleme adımı dolguları geri getirmesin)
+    for hn, hb, hs in haric:
+        if hn != no: continue
+        yeni = []
+        for a, b in bolge:
+            if hs <= a or hb >= b: yeni.append([a, b]); continue
+            if a < hb - 0.05: yeni.append([a, hb])
+            if hs < b - 0.05: yeni.append([hs, b])
+        bolge = yeni
     # kalan boşluklar ~0.07 sn olacak şekilde birleşir (kenar payları zaten 0.035+0.035)
     bolge = [[max(bas, a), min(son, b)] for a, b in bolge if min(son, b) - max(bas, a) > 0.05]
     return [(a, b) for a, b in bolge] or [(bas, son)]
