@@ -149,3 +149,12 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
   başlangıcına yaslanır (ilk kelimeyi geçmeden), "eee" dolguları calisma/transkript_dolgu (dolgu odaklı whisper) + enerjiyle bulunup HARIC.
   kurgu_yap: HARIC artık en son da uygulanır (kelime ekleme adımı dolguları geri getirmesin).
 - Drive: Hocalar dosyası yeni sürümle değiştirildi (aynı id/link), adı 'Yaşamfen - Hocalarımız Ne Dedi.mp4', md5 doğrulandı.
+
+## Geri bildirim 9: YARIM CÜMLE ASLA (2026-11-22) — tüm videolar yeniden denetlendi
+- Hocalar: 7471 "…parti düzenledik." son hecesi kesiliyordu (13.26'ya uzatıldı); 7474 cümle ortasından ("çocuklarla…") başlıyordu →
+  kendi başına tam cümle "Güzel oldu, motive olduk…" ile başlıyor (aradaki 6 sn belirsiz konuşma yüzünden temiz kesim yok).
+- Genel: 7485 "Katılım…" ilk hecesi kırpılıyordu (75.17). YKS: 3 hap sorusu (sınıf aynı anda konuşuyor, temiz kesim yok) → MF Türkçe
+  "Kapının kolu"; final "Bu arada kazananı açıklıyorum…" ile başlar. Yarışma #1: "Karaciğer." sonrası "Pankreası…" hecesi girmesin.
+- kurgu_yap.py dip_yasla: her blok başı/sonu komşu kelimeler arasındaki EN SESSİZ 10 ms'ye yaslanır (hece kırpılmaz).
+- cumle_kontrol.py: dolgu transkripti (daha doğru zaman) + kesim noktasında enerji kontrolü + blok kenarında ses uyarısı.
+  KURAL: Her uyarı çözülmeden video gönderilmez. Kalan "BAŞTA/SONDA SES" uyarıları kalabalık sınıf sesi; cümleler tam (tek tek incelendi).

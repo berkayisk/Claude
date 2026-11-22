@@ -9,7 +9,7 @@ PLAN = [
     b(7353, 13.0, 3, zoom=[1.15, 1.25], odak=[0.6, 0.4]),
     klip(7356, 80.0, 81.85, sabit=True, zoom=[1.08, 1.12], odak=[0.5, 0.55], punch=[{"t": 80.1, "olcek": 1.08, "sure": 5}]),
     b(7361, 1.0),
-    klip(7357, 165.85, 167.35, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.55], punch=[{"t": 166.81, "olcek": 1.13}]),
+    klip(7357, 165.9, 167.35, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.55], punch=[{"t": 166.81, "olcek": 1.13}]),
     klip(7370, 28.3, 30.8, sabit=True, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.6]),
     # Vampir köylü
     b(7397, 1.3, 3, gecis="yumusak"),
@@ -18,7 +18,7 @@ PLAN = [
     klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.14], odak=[0.5, 0.4], yazi="Ben onların tekrar üzerime geleceğini bile bile neden onları öldüreyim yani, mantıken?"),
     # Kapanış: dans + teşekkür
     b(7387, 0.3), b(7380, 0.2),
-    klip(7485, 75.3, 77.75, sabit=True, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.35]),
+    klip(7485, 75.17, 77.84, sabit=True, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.35]),
     b(7392, 1.5, 4),
 ]
 OLAYLAR = [

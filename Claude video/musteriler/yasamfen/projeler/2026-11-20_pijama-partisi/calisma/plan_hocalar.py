@@ -4,10 +4,10 @@ SIKI = True
 K = lambda t, no, bas, sure: {"t": t, "no": no, "bas": bas, "sure": sure}
 PLAN = [
     # AÇILIŞ — #37
-    klip(7485, 37.4, 47.7, zoom=[1.0, 1.1], odak=[0.5, 0.35],
+    klip(7485, 37.22, 48.1, sabit=True, zoom=[1.0, 1.1], odak=[0.5, 0.35],
          kaplama=[K(40.9, 7357, 124.0, 2.4), K(45.7, 7381, 1.0, 2.0)]),
     # #5
-    klip(7471, 6.57, 12.95, sabit=True, gecis="yumusak", zoom=[1.02, 1.1], odak=[0.5, 0.35], yazi="Kasım ara tatilini bitirirken çocukların da nefes alması adına derslerin sonunda küçük bir parti düzenledik.",
+    klip(7471, 6.57, 13.26, sabit=True, gecis="yumusak", zoom=[1.02, 1.1], odak=[0.5, 0.35], yazi="Kasım ara tatilini bitirirken çocukların da nefes alması adına derslerin sonunda küçük bir parti düzenledik.",
          kaplama=[K(10.0, 7383, 4.0, 2.4)]),
     # #34
     klip(7470, 2.4, 9.1, gecis="yumusak", zoom=[1.02, 1.1], odak=[0.5, 0.35],
@@ -16,8 +16,8 @@ PLAN = [
     klip(7476, 6.0, 12.8, gecis="yumusak", zoom=[1.04, 1.12], odak=[0.5, 0.35],
          kaplama=[K(8.2, 7357, 165.8, 1.6), K(10.9, 7370, 28.4, 1.9)]),
     # #35 — motivasyon
-    klip(7474, 12.03, 20.2, sabit=True, gecis="yumusak", zoom=[1.04, 1.1], odak=[0.5, 0.35], yazi="Çocuklarla çok güzel vakit geçirdik. Güzel oldu, motive olduk haftaya ve sonrası için tamamen hazır hissediyoruz artık.",
-         kaplama=[K(16.5, 7392, 0.2, 2.4)]),
+    klip(7474, 15.2, 20.2, sabit=True, gecis="yumusak", zoom=[1.04, 1.1], odak=[0.5, 0.35], yazi="Güzel oldu, motive olduk haftaya ve sonrası için tamamen hazır hissediyoruz artık.",
+         kaplama=[K(17.0, 7392, 0.2, 2.4)]),
     # KAPANIŞ — #8
     klip(7476, 13.5, 20.4, gecis="yumusak", zoom=[1.05, 1.14], odak=[0.5, 0.35],
          kaplama=[K(15.5, 7380, 0.2, 2.2)]),

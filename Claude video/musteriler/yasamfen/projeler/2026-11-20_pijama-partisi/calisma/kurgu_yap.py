@@ -67,6 +67,26 @@ def cumle_sinir(no, bas, son, sadece_kuyruk=False, ileri=3):
     return max(0, bas), son
 
 PAY_BAS, PAY_SON = 0.06, 0.15
+def dip_yasla(no, bas, son):
+    """Blok başı/sonu: komşu kelimeler arasındaki en sessiz 10 ms'ye yasla (kelime/hece kırpılmasın)."""
+    if not os.path.exists(f"calisma/ses/{no}_16k.wav"): return bas, son
+    db, esik = enerji(no); kw = kelimeler(no)
+    if os.path.exists(f"calisma/transkript_dolgu/{no}.json"):
+        kw = kw + [tuple(w) for w in json.load(open(f"calisma/transkript_dolgu/{no}.json"))]
+    onceki = max((we for ws, we, w in kw if we <= bas + 0.02), default=bas - 0.3)
+    ilk = min((ws for ws, we, w in kw if ws >= bas - 0.02), default=bas + 0.1)
+    a0, a1 = max(onceki, bas - 0.25), min(ilk, bas + 0.1)
+    i0, i1 = max(0, int(a0 * 100)), min(len(db), int(a1 * 100) + 1)
+    if a1 - a0 > 0.03 and i1 > i0:
+        bas = (i0 + int(np.argmin(db[i0:i1]))) / 100
+    son_k = max((we for ws, we, w in kw if we <= son + 0.02), default=son - 0.1)
+    sonraki = min((ws for ws, we, w in kw if ws >= son - 0.02), default=son + 0.3)
+    b0, b1 = max(son_k, son - 0.1), min(sonraki, son + 0.25)
+    i0, i1 = int(b0 * 100), min(len(db), int(b1 * 100) + 1)
+    if b1 - b0 > 0.03 and i1 > i0:
+        son = min((i0 + int(np.argmin(db[i0:i1]))) / 100 + 0.01, sonraki - 0.02)
+    return bas, son
+
 def sikistir(no, bas, son, haric):
     """[bas,son] içinde konuşma bölgelerini döndür: >=0.12 sn sessizlik kesilir, kenarda 0.035 sn pay"""
     if not os.path.exists(f"calisma/ses/{no}_16k.wav"): return [(bas, son)]
@@ -134,6 +154,7 @@ def main():
                 o["bas"], o["son"] = cumle_sinir(no, o["bas"], o["son"], ileri=1.5 if o.get("yazi") else 3)
             elif o["tur"] == "klip" and not o.get("sabit"):
                 _, o["son"] = cumle_sinir(no, o["bas"], o["son"], sadece_kuyruk=True)   # elle yazılı/kelimesiz: sadece ses kuyruğu
+            if o["tur"] == "klip": o["bas"], o["son"] = dip_yasla(no, o["bas"], o["son"])
             araliklar = sikistir(no, o["bas"], o["son"], haric) if o["tur"] == "klip" and o.get("sik", True) else [(o["bas"], o["son"])]
             ayar = {k: v for k, v in o.items() if k not in ("tur", "no", "bas", "son", "sik", "kelimesiz", "yazi")}
             for k, (a, b) in enumerate(araliklar):

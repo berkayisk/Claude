@@ -16,7 +16,7 @@ PLAN = [
     klip(7356, 60.85, 62.1, **Z),
     klip(7356, 72.0, 75.05, **C),
     klip(7356, 80.0, 81.85, zoom=[1.1, 1.1], odak=[0.5, 0.55], punch=[{"t": 80.1, "olcek": 1.07, "sure": 5}]),
-    klip(7356, 85.8, 87.2, **C),
+    klip(7356, 85.8, 87.22, sabit=True, **C),
     # S2 bor (T2)
     klip(7357, 0.15, 3.85, gecis="yumusak", **Z),
     klip(7357, 10.9, 14.8, **C, punch=dogru(13.94)),
@@ -30,8 +30,7 @@ PLAN = [
     klip(7357, 80.45, 82.35, **Z),
     klip(7357, 84.2, 86.7, **C, punch=dogru(86.2), kelimesiz=True),  # cevap sesi belirsiz: sadece kart
     # S5 ekinoks (T1)
-    klip(7357, 96.4, 99.6, gecis="yumusak", **Z),
-    klip(7357, 99.75, 100.85, **Z),
+    klip(7357, 96.4, 100.85, gecis="yumusak", **Z),
     klip(7357, 102.7, 105.7, **C, punch=dogru(105.18)),
     # S6 sitoplazma (T2)
     klip(7357, 115.6, 121.4, gecis="yumusak", **Z),

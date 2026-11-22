@@ -28,14 +28,14 @@ PLAN = [
     klip(7372, 286.17, 291.8, sabit=True, gecis="yumusak", **Z),
     klip(7372, 304.0, 305.2, zoom=[1.1, 1.1], odak=[0.5, 0.55], punch=[{"t": 304.0, "olcek": 1.07, "sure": 5}]),
     klip(7372, 312.1, 317.55, **C),
-    # S7 MF genel kültür
-    klip(7372, 654.7, 664.6, gecis="yumusak", **Z),
-    klip(7372, 686.95, 688.55, sabit=True, **C, punch=dogru(688.04), yazi="1 saat. Evet, doğru."),
+    # S7 MF Türkçe (3 hap sorusu çıkarıldı: cevap anında sınıf aynı anda konuşuyor, temiz kesim yok)
+    klip(7372, 589.72, 592.2, gecis="yumusak", **Z),
+    klip(7372, 596.33, 599.12, **C, punch=dogru(598.83)),
     # S8 TM genel kültür
     klip(7372, 829.9, 834.95, gecis="yumusak", **Z),
     klip(7372, 852.05, 858.3, **C, punch=dogru(857.93)),
     # FİNAL — kazanan TM
-    klip(7372, 1460.5, 1466.6, sabit=True, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7372, 1461.72, 1466.6, sabit=True, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5]),
     klip(7372, 1466.6, 1471.6, sabit=True, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.4, 0.55]),
 ]
 def S(no, grup, kat): return dict(no=no, toplam=TOPLAM, y=230, takim=f"{grup} grubu • {kat}")
@@ -54,11 +54,11 @@ OLAYLAR = [
     olay("soru", kaynak=(7372, 286.15), sure=5.6, soru="DNA'nın yapısındaki beş karbonlu şekerin adı nedir?", **S(6, "TM", "Biyoloji")),
     olay("cevap", kaynak=(7372, 304.0), sure=1.2, cevap="Bilemediler", dogruMu=False, baslik="MAALESEF", y=1450),
     olay("cevap", kaynak=(7372, 312.2), sure=5.0, cevap="Deoksiriboz", baslik="8. SINIF ÖĞRENCİSİ BİLDİ 😄", y=1450),
-    olay("soru", kaynak=(7372, 654.75), sure=9.8, soru="3 hap, yarım saat arayla alınacak. Kaç saat sonra biter?", **S(7, "MF", "Genel Kültür")),
-    olay("cevap", kaynak=(7372, 686.95), sure=1.6, cevap="1 saat", y=1450),
+    olay("soru", kaynak=(7372, 589.77), sure=2.4, soru="Belirtili isim tamlamasına bir örnek veriniz.", **S(7, "MF", "Türkçe")),
+    olay("cevap", kaynak=(7372, 597.9), sure=1.2, cevap="Kapının kolu", y=1450),
     olay("soru", kaynak=(7372, 829.95), sure=5.0, soru="100 kişilik yarışmada sonuncuyu geçersen kaçıncı olursun?", **S(8, "TM", "Genel Kültür")),
     olay("cevap", kaynak=(7372, 855.5), sure=2.8, cevap="Sonuncuyu geçemezsin! 😄", y=1450),
-    olay("etiket", kaynak=(7372, 1462.4), sure=4.2, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
+    olay("etiket", kaynak=(7372, 1461.8), sure=4.8, metin="FİNAL SONUCU 🏁", y=420, boyut=52),
     olay("etiket", kaynak=(7372, 1466.65), sure=4.9, metin="🏆 KAZANAN: TM GRUBU", y=420, boyut=56, ses="basari"),
     olay("cagri", kaynak=(7372, 1468.6), sure=3.0, metin="Sen kaç tanesini bildin?", altMetin="Yorumlara yaz 👇", alt=480),
 ]

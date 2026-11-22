@@ -24,8 +24,7 @@ PLAN = [
     klip(7424, 0.0, 2.53, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Siz beni elemeye çalışıyorsunuz, köylü oyunu dediğiniz için."),
     klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.14], odak=[0.5, 0.4], yazi="Ben onların tekrar üzerime geleceğini bile bile neden onları öldüreyim yani, mantıken?"),
     # 4) OYUN SONU: son oylamalar → köylüler kazandı
-    klip(7431, 0.0, 4.65, sabit=True, kelimesiz=True, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.45]),
-    klip(7431, 4.7, 9.0, sabit=True, kelimesiz=True, zoom=[1.04, 1.12], odak=[0.5, 0.45]),  # sadece yetişkinler
+    klip(7431, 0.0, 9.0, sabit=True, kelimesiz=True, gecis="yumusak", zoom=[1.0, 1.1], odak=[0.5, 0.45]),
 ]
 OLAYLAR = [
     olay("baslik", zaman=0.0, sure=2.6, ust="YAŞAMFEN PİJAMA PARTİSİ", metin="VAMPİR\nKÖYLÜ", vurguSatir=True, alt="Hocalar vs öğrenciler 🧛", y=380, boyut=140),
