@@ -111,7 +111,8 @@ def _isle(no, src, out):
     if int(no) > kural.get("bilinmeyen_blur_klip_ust", 7392):
         for iz in plan:
             k = str(iz["kim"]).lstrip("~=")
-            iz["blur"] = k.isdigit() and int(k) in BLUR and f"IMG_{no}.MOV" in KLIP.get(int(k), ())
+            iz["blur"] = k.isdigit() and int(k) in BLUR and (f"IMG_{no}.MOV" in KLIP.get(int(k), ()) or (int(k) in (59, 62) and int(no) < 7470))
+            # küçük kız (59/62): akşam oyun kliplerinde her eşleşme (doğrudan/komşu/zayıf) blur — en hassas kişi
     sb = kural.get("sadece_blur", {}).get(str(no))
     if sb is not None:   # bu klipte yalnızca belirtilen kişiler blurlanır
         for iz in plan:

@@ -125,3 +125,4 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Vampir #2 kalıyor (ifşa formatı), sadece blur ve kesim düzeltmesi.
 - Genel: DİNAMİK + MÜZİKLİ (parti, 124 bpm): vuruşa oturan 2–4 vuruşluk planlar + 4 kısa ses anı (~28 sn). Eski: plan_genel_eski.py
   (Önceki "trend müzik için müziksiz" kararı Genel için geçersiz; Kombin müziksiz kalıyor.)
+- Küçük kız (59/62) akşam oyun kliplerinde (7393–7467) her eşleşmede blurlanır (7465'te kümede olmadığı için açık kalmıştı).
