@@ -163,3 +163,9 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
   Yeniden render: sadece Hocalar, Yarışma #2, Vampir #1, Vampir #2.
 - Kullanıcı: Vampir #1 ve #2 için yeniden render gerekmiyor — Drive'daki/gönderilen sürümler geçerli (render durduruldu, dosyalar değişmedi).
 - Son güncellemeler Drive'a yüklendi: Hocalarımız Ne Dedi, Yarışma #2 (md5 doğrulandı).
+
+## Komik anlar videoları (2026-11-22)
+- Komik #1 (YKS, blursuz, 38 sn) kanca "BU YARIŞMADA KİMSE CİDDİ DEĞİLDİ 😂": Roma şakası, "hocam bilmiyoruz", "cevaplayacak insanlar
+  değiliz", "okuma yazma öğreniyorum", "kapının kolu", horoz sorusu + "horozu yumurtlatıyoruz", "toplamayı yapamazlar", Musa/Nuh. plan_komik_yks.py
+- Komik #2 (LGS + vampir, blurlu, 36 sn) kanca "GÜLMEDEN İZLEYEMEZSİN 😂": pankreas/bip, "ne fenasın", vampirler birbirini yiyor, dört vampir
+  az değil, "mantıken" + kendisi vampir, tren şaşırtmacası. plan_komik_parti.py
