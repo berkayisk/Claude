@@ -21,6 +21,8 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
 | 7 | Hocalar ne dedi (ekstra) | Hocalar | yeni sürüm gönderildi (44 sn) |
 | 8 | YKS (TYT) bilgi yarışması | Yks | ONAYLANDI (89 sn, Drive’daki sürüm) |
+| 9 | Komik Anlar #1 (TYT) | KomikYks | gönderildi + Drive (38 sn) |
+| 10 | Komik Anlar #2 (Pijama Partisi) | KomikParti | gönderildi + Drive (36 sn) |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
