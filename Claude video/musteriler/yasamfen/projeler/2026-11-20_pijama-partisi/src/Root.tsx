@@ -12,6 +12,7 @@ const VIDEOLAR: [string, string][] = [
   ["Genel", "genel"],
   ["Kombin", "kombin"],
   ["Hocalar", "hocalar"],
+  ["Yks", "yks"],
 ];
 const yukle = (ad: string): KurguVeri | null => {
   try { return require(`./${ad}.json`) as KurguVeri; } catch { return null; }

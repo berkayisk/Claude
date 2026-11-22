@@ -19,7 +19,8 @@ Marka: `musteriler/yasamfen/MARKA.md` (logo YOK, kırmızı #C00C0C / antrasit #
 | 4 | Vampir köylü #1 | Vampir1 | ONAYLANDI (51 sn, yeni akış) |
 | 5 | Vampir köylü #2 | Vampir2 | taslak gönderildi (34 sn) |
 | 6 | Pijama kombinleri (ekstra) | Kombin | taslak gönderildi (24 sn, sessiz) |
-| 7 | Hocalar ne dedi (ekstra) | Hocalar | taslak gönderildi (54 sn) |
+| 7 | Hocalar ne dedi (ekstra) | Hocalar | yeni sürüm gönderildi (44 sn) |
+| 8 | YKS (TYT) bilgi yarışması | Yks | kurgu hazır, vekil bekleniyor |
 
 ## Ekstra öneriler (hamlar izlendikten sonra netleşecek)
 - Kombin çekimleri → "pijama kombinleri" geçit/trend videosu
@@ -137,3 +138,5 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Hocalar yeniden: 44.5 sn, SIKI kesim (iç paylar 0.03/0.08 — nefes/ııı kalmaz), açılış 7485 "Kasım tatilinde kamp… pijama partisi yaptık",
   kapanış 7476 teşekkür + "Başarı burada başlar.", her konuşmada konuyla eşleşen kaplama B-roll, hafif parti müziği. Eski: plan_hocalar_eski.py
 - YKS yarışması: Drive'a 7372 eklendi (tek dosya, 4.8 GB, 4K). Blur YOK (blursuz_klipler). Transkript + vekil hazırlanıyor.
+- YKS: TYT yarışması, MF (logo duvarı) vs TM (duvar resmi) — kazanan TM. 8 soru dönüşümlü (tarih×4, biyoloji×2, genel kültür×2),
+  kartta "MF grubu • Tarih" gibi grup+kategori. Final: "Kazananı açıklıyorum, tabii ki TM grubu" + sevinç. calisma/plan_yks.py
