@@ -10,8 +10,7 @@ PLAN = [
          kaplama=[{"t": 38.0, "no": 7428, "bas": 23.0, "sure": 2.6}]),
     klip(7485, 49.0, 58.5, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.35],
          kaplama=[{"t": 52.2, "no": 7367, "bas": 40.0, "sure": 2.8}]),
-    klip(7474, 1.8, 4.1, sabit=True, gecis="yumusak", zoom=[1.0, 1.04], odak=[0.5, 0.35]),
-    klip(7474, 10.35, 19.8, zoom=[1.04, 1.1], odak=[0.5, 0.35],
+    klip(7474, 12.05, 20.2, sabit=True, gecis="yumusak", zoom=[1.04, 1.1], odak=[0.5, 0.35],  # duraksamalı "5 günlük kamp" kısmı çıkarıldı
          kaplama=[{"t": 12.0, "no": 7383, "bas": 4.0, "sure": 2.6}]),
     klip(7476, 13.5, 20.4, gecis="yumusak", zoom=[1.05, 1.12], odak=[0.5, 0.35]),
 ]

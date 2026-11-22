@@ -185,7 +185,7 @@ def main():
         return int(min(900, max(180, x))), int(min(1700, max(160, y)))
     for o in P.OLAYLAR:
         o = dict(o)
-        if "kisi" in o:
+        if isinstance(o.get("kisi"), (list, tuple)):
             kx, ky = kisi_konum(*o.pop("kisi")); o.setdefault("x", kx); o.setdefault("y", ky)
         s = cevir(*o.pop("kaynak")) if "kaynak" in o else o.pop("zaman")
         s += o.pop("kay", 0)

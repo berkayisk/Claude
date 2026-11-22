@@ -114,3 +114,14 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Sessizlik kesiminde kenar payları: baş 0.06, son 0.15–0.18 sn (eski 0.035 kelime kuyruklarını kırpıyordu).
 - calisma/cumle_kontrol.py: her plan bloğunun başı/sonu yarım cümle / kırpık kelime kontrolü. Kalan uyarılar yalnızca tekrarlı tezahürat
   ("kapat, kapat…", "doktoru seçiyoruz…") — tam bir öbekten sonra kesiliyor.
+
+## Geri bildirim 5 (2026-11-22)
+- Hocalar 0:41: 7474'teki duraksamalı "Evet 5 günlük kamp…" kısmı çıkarıldı; "çocuklarla çok güzel vakit geçirdik…" ile başlıyor.
+- Blur: kırmızı kazaklı hocanın (#8) önündeki küçük kızın blur kutusu yanlış tespitlerle dev lekeye dönüşüp hocanın yüzünü/bedenini
+  kaplıyordu → vekil.py: izin medyanının 1.7 katından / 360 px'ten büyük kutular ve tek seferlik dev komşu-izler atılır; yakın (büyük)
+  yüzde blur payı daraltıldı. Etkilenen akşam klipleri yeniden kodlandı.
+- Vampir #1 YENİ AKIŞ: oyun anlatımı → 4 vampir (#40, #50, #8, 4.'sü bilinmiyor → "?" kartı) + doktor (#37) → tartışmalar →
+  son oylama → "KÖYLÜLER KAZANDI" (kullanıcı). Soytarı bilinmiyor (sadece anlatımda kart). Eski: plan_vampir1_eski.py
+- Vampir #2 kalıyor (ifşa formatı), sadece blur ve kesim düzeltmesi.
+- Genel: DİNAMİK + MÜZİKLİ (parti, 124 bpm): vuruşa oturan 2–4 vuruşluk planlar + 4 kısa ses anı (~28 sn). Eski: plan_genel_eski.py
+  (Önceki "trend müzik için müziksiz" kararı Genel için geçersiz; Kombin müziksiz kalıyor.)

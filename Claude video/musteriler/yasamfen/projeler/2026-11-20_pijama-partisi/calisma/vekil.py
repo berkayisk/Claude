@@ -123,10 +123,15 @@ def _isle(no, src, out):
                 if str(iz["kim"]) == e["kim"]: iz["blur"] = e["blur"]
     json.dump(plan, open(f"calisma/yuz/iz/{no}.json", "w"))
     # kare → blur kutuları (enterpolasyon + baş/son TUT kadar uzatma)
+    # Aşırı büyük / tutarsız kutular (yanlış tespit: el, beden, desen) atılır → yetişkinin bedenini kaplayan dev leke olmasın
     kutu = {}
     for iz in plan:
         if not iz["blur"]: continue
-        ks, bs = iz["kareler"], np.array(iz["kutular"])
+        ws = [b[2] for b in iz["kutular"]]; med = float(np.median(ws))
+        tut = [(k, b) for k, b in zip(iz["kareler"], iz["kutular"]) if b[2] <= min(360, 1.7 * med)]
+        if not isinstance(iz["kim"], int) and len(tut) <= 3 and med > 240: tut = []   # tek seferlik dev komşu-iz → yanlış tespit
+        if not tut: continue
+        ks, bs = [k for k, b in tut], np.array([b for k, b in tut])
         for a in range(max(0, ks[0]-15), ks[-1]+TUT):
             j = np.searchsorted(ks, a)
             if j < len(ks) and ks[j] == a: bx = bs[j]
@@ -150,7 +155,8 @@ def _isle(no, src, out):
         img = np.frombuffer(b, np.uint8).reshape(OH, OW, 3).copy()
         for bx in kutu.get(a, []):
             x, y, w, h = [v*sx for v in bx]
-            cx, cy = x + w/2, y + h*0.45; rw, rh = w*1.0, h*1.2           # yüz + saç/çene + profil payı
+            pay = 1.0 if w < 180 * sx else 0.8                             # büyük (yakın) yüzde pay daralır
+            cx, cy = x + w/2, y + h*0.45; rw, rh = w*pay, h*1.2*pay        # yüz + saç/çene + profil payı
             x0, y0, x1, y1 = int(max(0, cx-rw*1.25)), int(max(0, cy-rh*1.25)), int(min(OW, cx+rw*1.25)), int(min(OH, cy+rh*1.25))
             if x1-x0 < 4 or y1-y0 < 4: continue
             roi = img[y0:y1, x0:x1]
