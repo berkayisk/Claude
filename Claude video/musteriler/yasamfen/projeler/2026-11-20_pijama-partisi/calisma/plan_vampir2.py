@@ -9,8 +9,7 @@ PLAN = [
     klip(7440, 3.6, 5.9, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Bu da sessiz sessiz duruyor valla."),
     klip(7424, 0.0, 2.53, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Siz beni elemeye çalışıyorsunuz!"),
     klip(7461, 0.0, 2.05, zoom=[1.0, 1.08], odak=[0.5, 0.45], yazi="Neyse, gözünü kapasana. Doktor demiş."),
-    klip(7459, 1.5, 2.6, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Kızım ölüyorum, ölüyorum!"),
-    klip(7459, 5.2, 8.05, zoom=[1.1, 1.14], odak=[0.5, 0.45], punch=[{"t": 7.0, "olcek": 1.1}], yazi="Dört oldu, dört! Gerçek şok!"),
+    klip(7409, 5.45, 7.38, sabit=True, zoom=[1.05, 1.12], odak=[0.5, 0.4], punch=[{"t": 6.5, "olcek": 1.08}], yazi="Dört vampir de az değil hocam ya!"),
     klip(7428, 23.3, 24.8, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.5], yazi="Vampirler birbirini yiyor!"),
     broll(7420, 21.0, 24.4, gecis="yumusak", zoom=[1.0, 1.06], odak=[0.5, 0.45]),
     broll(7428, 11.0, 13.2, zoom=[1.0, 1.05], odak=[0.5, 0.5]),
@@ -22,7 +21,7 @@ OLAYLAR = [
     olay("etiket", kaynak=(7441, 9.2), sure=2.0, metin="KENDİSİ VAMPİR 🤫", y=1360, boyut=56),
     olay("baslik", kaynak=(7407, 1.8), sure=1.6, metin="SUÇLAMALAR\nBAŞLADI 🔥", vurguSatir=True, y=260, boyut=84, sfx=False),
     olay("etiket", kaynak=(7461, 0.1), sure=1.9, metin="🧛 VAMPİR", kisi=(7461, 1.0, 50), ses="boom"),
-    olay("etiket", kaynak=(7459, 7.0), sure=0.8, metin="😱", y=520, boyut=90),
+    olay("etiket", kaynak=(7409, 6.6), sure=1.0, metin="😱", y=520, boyut=90),
     olay("etiket", kaynak=(7428, 23.4), sure=1.4, metin="😂", y=520, boyut=90),
     olay("baslik", kaynak=(7420, 21.0), sure=3.3, ust="İFŞA 🧛", metin="VAMPİRLER", y=260, boyut=110, vurguSatir=False),
     olay("etiket", kaynak=(7420, 21.1), sure=3.2, metin="🧛", kisi=(7420, 22.0, 50), boyut=70, sfx=False),
@@ -32,5 +31,5 @@ OLAYLAR = [
     olay("cagri", kaynak=(7406, 0.6), sure=2.4, metin="Sen tahmin edebilir miydin? 👀", altMetin="Yorumlara yaz 👇", alt=380),
 ]
 ALTYAZI_GIZLE_TIPLER = ["baslik", "cagri"]
-VURGU = ["mantıken?", "öğrencilerden", "sessiz", "elemeye", "doktor", "ölüyorum,", "ölüyorum!", "dört!", "şok!", "yiyor!"]
+VURGU = ["mantıken?", "öğrencilerden", "sessiz", "elemeye", "doktor", "dört", "vampir", "yiyor!"]
 MUZIK = {"src": "muzik/gizem.wav", "seviye": 0.24, "konusmaSeviye": 0.08}

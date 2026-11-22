@@ -23,8 +23,7 @@ PLAN = [
     klip(7424, 0.0, 2.53, sabit=True, zoom=[1.05, 1.1], odak=[0.5, 0.45], yazi="Siz beni elemeye çalışıyorsunuz, köylü oyunu dediğiniz için."),
     klip(7441, 4.17, 9.0, sabit=True, zoom=[1.05, 1.14], odak=[0.5, 0.4], yazi="Ben onların tekrar üzerime geleceğini bile bile neden onları öldüreyim yani, mantıken?"),
     # 4) OYUN SONU: son oylamalar → köylüler kazandı
-    klip(7459, 5.2, 8.05, gecis="yumusak", zoom=[1.08, 1.14], odak=[0.5, 0.45], punch=[{"t": 7.0, "olcek": 1.1}], yazi="Dört oldu, dört! Gerçek şok!"),
-    klip(7466, 9.7, 13.6, sabit=True, zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Bir, iki, üç."),
+    klip(7466, 9.7, 13.6, sabit=True, gecis="yumusak", zoom=[1.0, 1.08], odak=[0.5, 0.5], yazi="Bir, iki, üç."),
     broll(7465, 0.5, 3.4, zoom=[1.0, 1.08], odak=[0.5, 0.5]),
 ]
 OLAYLAR = [
@@ -43,7 +42,7 @@ OLAYLAR = [
     olay("baslik", kaynak=(7404, 7.95), sure=1.5, metin="TARTIŞMA\nBAŞLADI 🔥", vurguSatir=True, y=240, boyut=86, sfx=False),
     olay("etiket", kaynak=(7441, 7.3), sure=1.7, metin="🧛 (kendisi vampir 🤫)", y=1220, boyut=44, renk="#2A2A2A", sfx=False),
     # Oyun sonu
-    olay("baslik", kaynak=(7459, 5.25), sure=1.5, metin="SON\nOYLAMA 🗳️", vurguSatir=True, y=240, boyut=86, sfx=False),
+    olay("baslik", kaynak=(7466, 9.75), sure=1.5, metin="SON\nOYLAMA 🗳️", vurguSatir=True, y=240, boyut=86, sfx=False),
     olay("etiket", kaynak=(7465, 0.55), sure=2.8, metin="🏆 KÖYLÜLER KAZANDI!", y=420, boyut=56, ses="basari"),
     olay("cagri", kaynak=(7465, 1.6), sure=1.8, metin="Sen vampirleri bulabilir miydin? 👀", altMetin="Yorumlara yaz 👇", alt=460),
 ]

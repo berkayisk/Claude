@@ -126,3 +126,5 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Genel: DİNAMİK + MÜZİKLİ (parti, 124 bpm): vuruşa oturan 2–4 vuruşluk planlar + 4 kısa ses anı (~28 sn). Eski: plan_genel_eski.py
   (Önceki "trend müzik için müziksiz" kararı Genel için geçersiz; Kombin müziksiz kalıyor.)
 - Küçük kız (59/62) akşam oyun kliplerinde (7393–7467) her eşleşmede blurlanır (7465'te kümede olmadığı için açık kalmıştı).
+- 7459 çekim hatası (sallanan kamera, yer/sırt): Vampir #2 0:22 ve Vampir #1 oyun sonundan çıkarıldı. Vampir #2'ye 7409 "Dört vampir de
+  az değil hocam ya!" (moderatör yakın plan); Vampir #1 son oylama doğrudan 7466 el kaldırma ile başlar.
