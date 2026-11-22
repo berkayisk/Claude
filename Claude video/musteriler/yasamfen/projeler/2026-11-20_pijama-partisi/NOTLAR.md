@@ -171,3 +171,7 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
   değiliz", "okuma yazma öğreniyorum", "kapının kolu", horoz sorusu + "horozu yumurtlatıyoruz", "toplamayı yapamazlar", Musa/Nuh. plan_komik_yks.py
 - Komik #2 (LGS + vampir, blurlu, 36 sn) kanca "GÜLMEDEN İZLEYEMEZSİN 😂": pankreas/bip, "ne fenasın", vampirler birbirini yiyor, dört vampir
   az değil, "mantıken" + kendisi vampir, tren şaşırtmacası. plan_komik_parti.py
+
+## Kapaklar (2026-11-22)
+- 10 Reels kapağı (1080x1920), bilesenler/Kapak.tsx (logo yok, kırmızı rozet + beyaz/kırmızı başlık + beyaz hap; metin 3:4 ızgara güvenli alanı).
+  Arka plan kareleri blurlu vekillerden (girdiler/kapak/). Çıktı: ciktilar/kapaklar/. Drive: "Yaşamfen hazır videoları/Kapaklar".
