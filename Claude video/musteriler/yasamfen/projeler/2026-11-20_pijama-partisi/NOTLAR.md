@@ -161,3 +161,5 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - Kullanıcı: YKS, Genel ve Yarışma #1 ONAYLANDI — revize yok. Onaylı dosyalar ciktilar/ ve Drive'daki sürümler; sonradan yapılan plan
   sınır düzeltmeleri bu üçü için render EDİLMEDİ (plan_yks.py'deki 3 hap → Türkçe değişikliği onaylı videoda yok).
   Yeniden render: sadece Hocalar, Yarışma #2, Vampir #1, Vampir #2.
+- Kullanıcı: Vampir #1 ve #2 için yeniden render gerekmiyor — Drive'daki/gönderilen sürümler geçerli (render durduruldu, dosyalar değişmedi).
+- Son güncellemeler Drive'a yüklendi: Hocalarımız Ne Dedi, Yarışma #2 (md5 doğrulandı).
