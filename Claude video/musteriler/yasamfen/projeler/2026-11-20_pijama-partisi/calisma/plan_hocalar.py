@@ -13,7 +13,7 @@ PLAN = [
          kaplama=[K(55.4, 7365, 4.0, 3.0)]),
     # Bilgi yarışması sevinci
     klip(7476, 6.0, 12.8, gecis="yumusak", zoom=[1.04, 1.12], odak=[0.5, 0.35],
-         kaplama=[K(7.0, 7357, 165.8, 1.6), K(10.9, 7370, 28.4, 1.9)]),
+         kaplama=[K(8.2, 7357, 165.8, 1.6), K(10.9, 7370, 28.4, 1.9)]),
     # Enerji / motivasyon
     klip(7470, 36.4, 43.7, gecis="yumusak", zoom=[1.06, 1.12], odak=[0.5, 0.35],
          kaplama=[K(37.0, 7428, 23.0, 2.2), K(40.6, 7392, 0.2, 2.6)]),
