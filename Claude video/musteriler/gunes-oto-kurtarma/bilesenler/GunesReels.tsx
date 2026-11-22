@@ -229,6 +229,25 @@ const Kapanis: React.FC<{ o: Olay; sure: number; logo: string }> = ({ o, logo })
   );
 };
 
+
+// Numara etiketi: konuşmacının "şuraya bırakıyorum" diye gösterdiği yere yapışır (o.top / o.left)
+const Numara: React.FC<{ o: Olay; sure: number }> = ({ o }) => {
+  const f = useCurrentFrame();
+  const g = spring({ frame: f, fps: 30, config: { damping: 9, stiffness: 220 } });
+  const g2 = useGiris(8, 12);
+  const nabiz = 1 + 0.03 * Math.sin(f / 4);
+  return (
+    <div style={{ position: "absolute", top: o.top ?? 560, left: o.left ?? 430, display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 10, transform: `scale(${interpolate(g, [0, 1], [0.2, 1]) * nabiz}) rotate(${interpolate(g, [0, 1], [-14, -4])}deg)`, transformOrigin: "0% 100%", opacity: Math.min(1, g * 1.5) }}>
+      <div style={{ background: SARI, padding: "10px 30px 6px", transform: "skewX(-10deg)", border: `6px solid ${SIYAH}`, boxShadow: "0 16px 40px rgba(0,0,0,0.55)" }}>
+        <div style={{ transform: "skewX(10deg)", fontFamily: F, fontWeight: 900, fontStyle: "italic", fontSize: 74, color: SIYAH, lineHeight: 1, whiteSpace: "nowrap" }}>0544 397 87 96</div>
+      </div>
+      <div style={{ marginLeft: 26, background: SIYAH, padding: "4px 18px", transform: "skewX(-10deg)", opacity: g2 }}>
+        <div style={{ transform: "skewX(10deg)", fontFamily: F, fontWeight: 800, fontStyle: "italic", fontSize: 36, color: "white", whiteSpace: "nowrap" }}>7/24 · ARA · WHATSAPP</div>
+      </div>
+    </div>
+  );
+};
+
 const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
   const sure = Math.max(1, Math.round((o.son - o.s) * 30));
   switch (o.tip) {
@@ -237,6 +256,7 @@ const OlayCiz: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "stat": return <Stat o={o} sure={sure} />;
     case "uyari": return <Uyari o={o} sure={sure} />;
     case "kapanis": return <Kapanis o={o} sure={sure} logo={k.logo} />;
+    case "numara": return <Numara o={o} sure={sure} />;
     default: return null;
   }
 };
@@ -250,6 +270,7 @@ const Sesler: React.FC<{ o: Olay; k: Kaynak }> = ({ o, k }) => {
     case "stat": e.push({ t: o.s, ad: "boom", v: 0.4 }); cikis(); break;
     case "uyari": e.push({ t: o.s, ad: "damga", v: 0.6 }); break;
     case "kapanis": e.push({ t: o.s, ad: "cagri", v: 0.45 }); break;
+    case "numara": e.push({ t: o.s, ad: "damga", v: 0.5 }); e.push({ t: o.s + 0.1, ad: "basari", v: 0.35 }); break;
   }
   return (
     <>

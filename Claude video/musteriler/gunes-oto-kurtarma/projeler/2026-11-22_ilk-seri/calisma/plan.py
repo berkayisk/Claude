@@ -235,7 +235,7 @@ VIDEOLAR = {
             {"tip": "liste", "isaret": "sayi", "baslik": "ARAMADAN ÖNCE", "s": kz("emniyet") - 0.05, "son": kz("trafik") - 0.05, "ogeler": [
                 ["Emniyet şeridine geçin", kz("emniyet")], ["Karayollarına haber verin", kz("karayollarına")], ["Sonra bizi arayın", kz("arıyorsunuz")]]},
             {"tip": "stat", "s": kz("en", kz("aldıktan")), "son": kz("şuraya") - 0.05, "ust": "ANKARA · 7/24", "deger": "EN KISA SÜREDE"},
-            {"tip": "kapanis", "s": kz("şuraya"), "son": tl + 0.5},
+            {"tip": "numara", "s": kz("şuraya") + 0.15, "son": tl + 0.5, "top": 470, "left": 380},   # parmağıyla gösterdiği yere
         ],
         "broll": lambda kz, ke, tl: [
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.0, "s": kz("trafik") - 0.05, "son": kz("aldıktan")},
