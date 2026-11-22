@@ -60,6 +60,7 @@ def cumle_sinir(no, bas, son, sadece_kuyruk=False, ileri=3):
     bas = max(bas, onceki + 0.02)
     return max(0, bas), son
 
+PAY_BAS, PAY_SON = 0.06, 0.15
 def sikistir(no, bas, son, haric):
     """[bas,son] içinde konuşma bölgelerini döndür: >=0.12 sn sessizlik kesilir, kenarda 0.035 sn pay"""
     if not os.path.exists(f"calisma/ses/{no}_16k.wav"): return [(bas, son)]
@@ -71,7 +72,7 @@ def sikistir(no, bas, son, haric):
         if ses[i]:
             j = i
             while j < len(ses) and (ses[j] or (j + 12 < len(ses) and ses[j:j+12].any())): j += 1
-            bolge.append([bas + i / 100 - 0.06, bas + j / 100 + 0.15]); i = j
+            bolge.append([bas + i / 100 - PAY_BAS, bas + j / 100 + PAY_SON]); i = j
         else: i += 1
     # çok kısa (<0.08 sn) gürültü patlamalarını at
     bolge = [b for b in bolge if b[1] - b[0] >= 0.12]
@@ -105,7 +106,9 @@ def sikistir(no, bas, son, haric):
     return [(a, b) for a, b in bolge] or [(bas, son)]
 
 def main():
+    global PAY_BAS, PAY_SON
     spec.loader.exec_module(P)
+    if getattr(P, "SIKI", False): PAY_BAS, PAY_SON = 0.03, 0.08
     haric = getattr(P, "HARIC", [])
     parcalar, harita, olaylar, altyazi, yazi_parca = [], [], [], [], []
     t = 0.0

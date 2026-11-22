@@ -132,3 +132,8 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
   yerine 7429 "Doktoru kim koruyor?" + 7460 "Ayşin Hoca neymiş?" (sadece yetişkinler); son oylama 7466/7465 yerine 7431 (yetişkinler)
   + 7464 2x zoom sağa (çocuk kadraj dışı) + "Köylüler kazandı".
 - Vampir #1 onaylandı; altyazı: "Ayfun Hoca" (Ayşin değil).
+
+## Geri bildirim 7 (Hocalar) + YKS başlangıcı
+- Hocalar yeniden: 44.5 sn, SIKI kesim (iç paylar 0.03/0.08 — nefes/ııı kalmaz), açılış 7485 "Kasım tatilinde kamp… pijama partisi yaptık",
+  kapanış 7476 teşekkür + "Başarı burada başlar.", her konuşmada konuyla eşleşen kaplama B-roll, hafif parti müziği. Eski: plan_hocalar_eski.py
+- YKS yarışması: Drive'a 7372 eklendi (tek dosya, 4.8 GB, 4K). Blur YOK (blursuz_klipler). Transkript + vekil hazırlanıyor.
