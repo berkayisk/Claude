@@ -173,7 +173,7 @@ VIDEOLAR = {
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("dengesiz") - 0.05, "satir1": "ÇAMURA SAPLANDINIZ", "satir2": "sakın bunları yapmayın"},
             {"tip": "liste", "isaret": "carpi", "baslik": "YAPMAYIN", "s": kz("dengesiz") - 0.05, "son": kz("kurtarıcı") - 0.05, "ogeler": [["Dengesiz halatla çekim", kz("dengesiz")]]},
             {"tip": "liste", "baslik": "BUNU YAPIN", "s": kz("kurtarıcı") - 0.05, "son": kz("bundan") - 0.05, "ogeler": [["Kepçe çağırın", kz("kepçe")], ["veya ekskavatör", kz("ekskavatör")]]},
-            {"tip": "uyari", "s": kz("gaza"), "son": kz("aracınız") - 0.05, "metin": "GAZA BASIP ZORLAMAYIN"},
+            {"tip": "uyari", "s": kz("gaza"), "son": kz("aracınız") - 0.05, "metin": "GAZA BASIP ZORLAMAYIN", "boyut": 60},
             {"tip": "liste", "isaret": "sayi", "baslik": "DOĞRU SIRA", "s": kz("önce", kz("yıpratmayın")) - 0.05, "son": kz("abi") - 0.05, "ogeler": [["Zemin kontrolü", kz("zemin", kz("yıpratmayın"))], ["Ne ile çekilecek?", kz("çekebiliriz")], ["Sonra kurtarma", kz("kurtarırız")]]},
             {"tip": "uyari", "renk": "sari", "s": kz("ben", kz("aramayın")), "son": kz("sonra", kz("batarım")) - 0.05, "metin": "BEN DE BATARIM!"},
             {"tip": "kapanis", "s": kz("sonra", kz("batarım")), "son": tl + 0.5},
