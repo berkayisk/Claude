@@ -140,3 +140,8 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - YKS yarışması: Drive'a 7372 eklendi (tek dosya, 4.8 GB, 4K). Blur YOK (blursuz_klipler). Transkript + vekil hazırlanıyor.
 - YKS: TYT yarışması, MF (logo duvarı) vs TM (duvar resmi) — kazanan TM. 8 soru dönüşümlü (tarih×4, biyoloji×2, genel kültür×2),
   kartta "MF grubu • Tarih" gibi grup+kategori. Final: "Kazananı açıklıyorum, tabii ki TM grubu" + sevinç. calisma/plan_yks.py
+
+## Drive teslimi (2026-11-22)
+Klasör: "Yaşamfen hazır videoları" (id 1QbUZl92KYgFArxN4BHkd6ZKK5Kto6WYn) — 8 video yüklendi, boyut+md5 doğrulandı:
+YKS TYT Bilgi Yarışması, LGS Bilgi Yarışması 1 & 2, Vampir Köylü 1 & 2, Pijama Partisi Genel, Pijama Kombinleri (sessiz), Hocalar Ne Dedi.
+araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantıları izler (stat -L).
