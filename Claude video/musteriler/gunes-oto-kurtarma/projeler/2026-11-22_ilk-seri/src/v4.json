@@ -5,105 +5,91 @@
    "ses": "IMG_7512_ses.wav",
    "bas": 1.0666666666666667,
    "kare": 52,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7512_dikey.mp4",
    "ses": "IMG_7512_ses.wav",
    "bas": 3.2333333333333334,
    "kare": 38,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7512_dikey.mp4",
    "ses": "IMG_7512_ses.wav",
    "bas": 4.833333333333333,
    "kare": 35,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 1.6666666666666667,
    "kare": 38,
-   "zoom": true
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 4.933333333333334,
    "kare": 36,
-   "zoom": true
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 7.2,
    "kare": 46,
-   "zoom": true
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 9.133333333333333,
    "kare": 97,
-   "zoom": true
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 14.066666666666666,
    "kare": 27,
-   "zoom": true
+   "zoom": 1.13
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 16.133333333333333,
-   "kare": 28,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7513_dikey.mp4",
-   "ses": "IMG_7513_ses.wav",
-   "bas": 17.233333333333334,
-   "kare": 24,
-   "zoom": true
+   "kare": 57,
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 18.5,
    "kare": 75,
-   "zoom": true
+   "zoom": 1.07
   },
   {
    "src": "IMG_7513_dikey.mp4",
    "ses": "IMG_7513_ses.wav",
    "bas": 21.7,
-   "kare": 29,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7513_dikey.mp4",
-   "ses": "IMG_7513_ses.wav",
-   "bas": 22.966666666666665,
-   "kare": 25,
-   "zoom": true
+   "kare": 63,
+   "zoom": 1.07
   },
   {
    "src": "IMG_7512_dikey.mp4",
    "ses": "IMG_7512_ses.wav",
    "bas": 8.6,
    "kare": 42,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7512_dikey.mp4",
    "ses": "IMG_7512_ses.wav",
    "bas": 10.933333333333334,
    "kare": 20,
-   "zoom": false
+   "zoom": 1.13
   }
  ],
  "broll": [
@@ -111,13 +97,13 @@
    "dosya": "IMG_7504_dikey.mp4",
    "bas": 0.0,
    "s": 12.25,
-   "son": 15.623
+   "son": 15.79
   },
   {
    "dosya": "IMG_7503_dikey.mp4",
    "bas": 0.5,
-   "s": 15.623,
-   "son": 18.282999999999998
+   "s": 15.79,
+   "son": 18.75
   }
  ],
  "altyazi": [
@@ -273,93 +259,93 @@
   },
   {
    "w": "karayolları,",
-   "s": 13.27,
-   "e": 13.85
+   "s": 13.437,
+   "e": 14.017
   },
   {
    "w": "sizin",
-   "s": 14.043,
-   "e": 14.143
+   "s": 14.21,
+   "e": 14.31
   },
   {
    "w": "güvenliğinizi,",
-   "s": 14.143,
-   "e": 14.843
+   "s": 14.31,
+   "e": 15.01
   },
   {
    "w": "yol",
-   "s": 15.043,
-   "e": 15.223
+   "s": 15.21,
+   "e": 15.39
   },
   {
    "w": "güvenliğini",
-   "s": 15.223,
-   "e": 15.623
+   "s": 15.39,
+   "e": 15.79
   },
   {
    "w": "aldıktan",
-   "s": 15.623,
-   "e": 16.063
+   "s": 15.79,
+   "e": 16.23
   },
   {
    "w": "sonra",
-   "s": 16.063,
-   "e": 16.363
+   "s": 16.23,
+   "e": 16.53
   },
   {
    "w": "en",
-   "s": 16.363,
-   "e": 16.533
+   "s": 16.53,
+   "e": 16.7
   },
   {
    "w": "kısa",
-   "s": 16.663,
-   "e": 16.883
+   "s": 16.83,
+   "e": 17.05
   },
   {
    "w": "sürede",
-   "s": 16.883,
-   "e": 17.403
+   "s": 17.05,
+   "e": 17.57
   },
   {
    "w": "sizin",
-   "s": 17.4,
-   "e": 17.5
+   "s": 17.57,
+   "e": 18.05
   },
   {
    "w": "yanınızda",
-   "s": 17.583,
-   "e": 17.983
+   "s": 18.05,
+   "e": 18.45
   },
   {
    "w": "oluyoruz.",
-   "s": 17.983,
-   "e": 18.333
+   "s": 18.45,
+   "e": 18.8
   },
   {
    "w": "Şuraya",
-   "s": 18.333,
-   "e": 18.633
+   "s": 18.8,
+   "e": 19.1
   },
   {
    "w": "numarayı",
-   "s": 18.633,
-   "e": 19.113
+   "s": 19.1,
+   "e": 19.58
   },
   {
    "w": "bırakıyorum.",
-   "s": 19.113,
-   "e": 19.593
+   "s": 19.58,
+   "e": 20.06
   },
   {
    "w": "Oradan",
-   "s": 19.733,
-   "e": 20.02
+   "s": 20.2,
+   "e": 20.487
   },
   {
    "w": "arayın.",
-   "s": 20.02,
-   "e": 20.4
+   "s": 20.487,
+   "e": 20.867
   }
  ],
  "olaylar": [
@@ -394,15 +380,15 @@
   },
   {
    "tip": "stat",
-   "s": 16.363,
-   "son": 18.282999999999998,
+   "s": 16.53,
+   "son": 18.75,
    "ust": "ANKARA · 7/24",
    "deger": "EN KISA SÜREDE"
   },
   {
    "tip": "numara",
-   "s": 18.482999999999997,
-   "son": 20.900000000000002,
+   "s": 18.95,
+   "son": 21.36666666666667,
    "top": 470,
    "left": 380
   }
@@ -421,7 +407,7 @@
   "yanınızda",
   "numarayı"
  ],
- "toplamKare": 612,
+ "toplamKare": 626,
  "kartY": 1000,
  "altyaziY": 1510
 }

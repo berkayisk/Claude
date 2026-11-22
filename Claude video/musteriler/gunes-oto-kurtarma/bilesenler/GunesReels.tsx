@@ -19,7 +19,7 @@ const SERIT = `repeating-linear-gradient(-45deg, ${SARI} 0 22px, ${SIYAH} 22px 4
 
 type Olay = { tip: string; s: number; son: number; [k: string]: any };
 export type GunesVeri = {
-  parcalar: { src: string; ses: string; bas: number; kare: number; zoom: boolean; sesSeviye?: number }[];
+  parcalar: { src: string; ses: string; bas: number; kare: number; zoom: boolean | number; sesSeviye?: number }[];
   broll: { dosya: string; bas: number; s: number; son: number; zoom?: number }[];
   altyazi: { w: string; s: number; e: number }[];
   olaylar: Olay[];
@@ -59,7 +59,7 @@ const Goruntu: React.FC<{ v: GunesVeri; k: Kaynak }> = ({ v, k }) => {
         return (
           <Sequence key={i} from={from} durationInFrames={p.kare}>
             <AbsoluteFill style={{ overflow: "hidden" }}>
-              <OffthreadVideo src={k.dosya(p.src)} startFrom={Math.round(p.bas * 30)} muted style={{ width: 1080, height: 1920, transform: `scale(${p.zoom ? 1.07 : 1})`, transformOrigin: "540px 600px" }} />
+              <OffthreadVideo src={k.dosya(p.src)} startFrom={Math.round(p.bas * 30)} muted style={{ width: 1080, height: 1920, transform: `scale(${typeof p.zoom === "number" ? p.zoom : p.zoom ? 1.07 : 1})`, transformOrigin: "540px 600px" }} />
             </AbsoluteFill>
             <Audio src={k.dosya(p.ses)} startFrom={Math.round(p.bas * 30)} volume={p.sesSeviye ?? 1} />
           </Sequence>

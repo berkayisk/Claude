@@ -3,73 +3,16 @@
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
-   "bas": 67.5,
-   "kare": 55,
-   "zoom": false
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 70.8,
-   "kare": 53,
-   "zoom": false
-  },
-  {
-   "src": "IMG_7517_dikey.mp4",
-   "ses": "IMG_7517_dogal.wav",
-   "bas": 0.0,
-   "kare": 135,
-   "zoom": false,
-   "sesSeviye": 0.5
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
    "bas": 49.833333333333336,
-   "kare": 13,
-   "zoom": false
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 50.4,
-   "kare": 61,
-   "zoom": false
+   "kare": 78,
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 53.53333333333333,
    "kare": 40,
-   "zoom": false
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 59.233333333333334,
-   "kare": 49,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 61.93333333333333,
-   "kare": 32,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 63.5,
-   "kare": 16,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 64.63333333333334,
-   "kare": 22,
-   "zoom": true
+   "zoom": 1.0
   },
   {
    "src": "IMG_7526_dikey.mp4",
@@ -77,150 +20,58 @@
    "bas": 0.0,
    "kare": 309,
    "zoom": false,
+   "sesSeviye": 0.7
+  },
+  {
+   "src": "IMG_7517_dikey.mp4",
+   "ses": "IMG_7517_dogal.wav",
+   "bas": 0.5,
+   "kare": 150,
+   "zoom": false,
    "sesSeviye": 0.6
   }
  ],
  "broll": [],
  "altyazi": [
   {
-   "w": "Birazdan",
-   "s": 0.0,
-   "e": 0.37
-  },
-  {
-   "w": "5",
-   "s": 0.37,
-   "e": 0.59
-  },
-  {
-   "w": "tonluk",
-   "s": 0.59,
-   "e": 0.93
-  },
-  {
-   "w": "makinemizi",
-   "s": 0.93,
-   "e": 1.41
-  },
-  {
-   "w": "yükleyip",
-   "s": 1.41,
-   "e": 1.833
-  },
-  {
-   "w": "Sürat",
-   "s": 1.833,
-   "e": 2.033
-  },
-  {
-   "w": "Kargo'ya",
-   "s": 2.033,
-   "e": 2.433
-  },
-  {
-   "w": "doğru",
-   "s": 2.433,
-   "e": 2.693
-  },
-  {
-   "w": "yola",
-   "s": 2.693,
-   "e": 3.133
-  },
-  {
-   "w": "çıkacağız.",
-   "s": 3.133,
-   "e": 3.473
-  },
-  {
    "w": "Abi,",
-   "s": 8.1,
-   "e": 8.317
+   "s": 0.0,
+   "e": 0.217
   },
   {
    "w": "tamburumuzun",
-   "s": 8.563,
-   "e": 9.103
+   "s": 0.597,
+   "e": 1.137
   },
   {
    "w": "kumandası",
-   "s": 9.103,
-   "e": 9.623
+   "s": 1.137,
+   "e": 1.657
   },
   {
    "w": "arızalandığı",
-   "s": 9.623,
-   "e": 10.203
+   "s": 1.657,
+   "e": 2.237
   },
   {
    "w": "için",
-   "s": 10.203,
-   "e": 10.463
+   "s": 2.237,
+   "e": 2.497
   },
   {
    "w": "mecbur",
-   "s": 10.567,
-   "e": 10.843
+   "s": 2.6,
+   "e": 2.877
   },
   {
    "w": "elimizle",
-   "s": 10.843,
-   "e": 11.343
+   "s": 2.877,
+   "e": 3.377
   },
   {
    "w": "çekiyoruz.",
-   "s": 11.343,
-   "e": 11.803
-  },
-  {
-   "w": "İşe",
-   "s": 11.9,
-   "e": 12.157
-  },
-  {
-   "w": "gidiyoruz",
-   "s": 12.157,
-   "e": 12.497
-  },
-  {
-   "w": "Berkay'cığımla",
-   "s": 12.497,
-   "e": 13.197
-  },
-  {
-   "w": "bugün.",
-   "s": 13.197,
-   "e": 13.417
-  },
-  {
-   "w": "Onur'umuz",
-   "s": 13.533,
-   "e": 13.99
-  },
-  {
-   "w": "da",
-   "s": 13.99,
-   "e": 14.15
-  },
-  {
-   "w": "burada.",
-   "s": 14.15,
-   "e": 14.39
-  },
-  {
-   "w": "Sağolsun",
-   "s": 14.6,
-   "e": 15.05
-  },
-  {
-   "w": "yardım",
-   "s": 15.133,
-   "e": 15.39
-  },
-  {
-   "w": "ediyor.",
-   "s": 15.39,
-   "e": 15.81
+   "s": 3.377,
+   "e": 3.837
   }
  ],
  "olaylar": [
@@ -228,37 +79,30 @@
    "tip": "kanca",
    "anlik": true,
    "s": 0.0,
-   "son": 3.673,
-   "satir1": "5 TONLUK YÜK",
-   "satir2": "bugün yola çıkıyoruz"
-  },
-  {
-   "tip": "stat",
-   "s": 3.7729999999999997,
-   "son": 8.0,
-   "ust": "FORKLİFT",
-   "deger": "5 TON"
+   "son": 3.9370000000000003,
+   "satir1": "5 TONLUK FORKLİFT",
+   "boyut": 84,
+   "satir2": "kasaya yüklüyoruz"
   },
   {
    "tip": "uyari",
    "renk": "sari",
-   "s": 10.843,
-   "son": 11.85,
+   "s": 2.877,
+   "son": 3.9370000000000003,
    "metin": "KUMANDA ARIZALI: ELLE!",
    "boyut": 64
   },
   {
-   "tip": "kanca",
-   "s": 16.11,
-   "son": 23.166666666666664,
-   "top": 900,
-   "satir1": "YÜKLEME",
-   "satir2": "rampadan kasaya"
+   "tip": "stat",
+   "s": 4.1370000000000005,
+   "son": 7.837,
+   "ust": "FORKLİFT",
+   "deger": "5 TON"
   },
   {
    "tip": "kapanis",
-   "s": 23.166666666666664,
-   "son": 26.666666666666664,
+   "s": 16.233333333333334,
+   "son": 19.733333333333334,
    "alt": "FORKLİFT · NAKLİYE · KURTARMA"
   }
  ],
@@ -273,7 +117,7 @@
   "Berkay'cığımla",
   "Onur'umuz"
  ],
- "toplamKare": 785,
+ "toplamKare": 577,
  "kartY": 1000,
  "altyaziY": 1510
 }

@@ -5,84 +5,63 @@
    "ses": "IMG_7524_ses.wav",
    "bas": 3.3333333333333335,
    "kare": 39,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 5.833333333333333,
    "kare": 46,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 9.733333333333333,
    "kare": 43,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 12.733333333333333,
    "kare": 33,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 15.8,
    "kare": 24,
-   "zoom": false
+   "zoom": 1.13
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 19.866666666666667,
    "kare": 37,
-   "zoom": false
+   "zoom": 1.0
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 37.6,
-   "kare": 47,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 39.3,
-   "kare": 20,
-   "zoom": true
+   "kare": 71,
+   "zoom": 1.07
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 40.93333333333333,
-   "kare": 14,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 41.7,
-   "kare": 21,
-   "zoom": true
-  },
-  {
-   "src": "IMG_7524_dikey.mp4",
-   "ses": "IMG_7524_ses.wav",
-   "bas": 42.86666666666667,
-   "kare": 28,
-   "zoom": true
+   "kare": 86,
+   "zoom": 1.07
   },
   {
    "src": "IMG_7524_dikey.mp4",
    "ses": "IMG_7524_ses.wav",
    "bas": 45.3,
    "kare": 22,
-   "zoom": true
+   "zoom": 1.13
   }
  ],
  "broll": [
@@ -96,7 +75,7 @@
    "dosya": "IMG_7518_dikey.mp4",
    "bas": 0.5,
    "s": 7.3500000000000005,
-   "son": 9.582999999999998
+   "son": 9.716999999999999
   }
  ],
  "altyazi": [
@@ -217,58 +196,58 @@
   },
   {
    "w": "şehir",
-   "s": 8.967,
-   "e": 9.197
+   "s": 8.93,
+   "e": 9.33
   },
   {
    "w": "işine.",
-   "s": 9.197,
-   "e": 9.497
+   "s": 9.33,
+   "e": 9.63
   },
   {
    "w": "Hem",
-   "s": 9.633,
-   "e": 9.79
+   "s": 9.767,
+   "e": 9.923
   },
   {
    "w": "tır,",
-   "s": 9.79,
-   "e": 10.1
+   "s": 9.923,
+   "e": 10.343
   },
   {
    "w": "hem",
-   "s": 10.15,
-   "e": 10.25
+   "s": 10.583,
+   "e": 10.683
   },
   {
    "w": "kamyon,",
-   "s": 10.23,
-   "e": 10.71
+   "s": 10.663,
+   "e": 11.143
   },
   {
    "w": "hem",
-   "s": 10.8,
-   "e": 10.943
+   "s": 11.403,
+   "e": 11.843
   },
   {
    "w": "ufak",
-   "s": 10.943,
-   "e": 11.283
+   "s": 11.843,
+   "e": 12.183
   },
   {
    "w": "araba,",
-   "s": 11.283,
-   "e": 11.703
+   "s": 12.183,
+   "e": 12.603
   },
   {
    "w": "hem",
-   "s": 11.733,
-   "e": 11.923
+   "s": 12.633,
+   "e": 12.823
   },
   {
    "w": "forklift.",
-   "s": 11.923,
-   "e": 12.467
+   "s": 12.823,
+   "e": 13.367
   }
  ],
  "olaylar": [
@@ -290,8 +269,8 @@
   {
    "tip": "liste",
    "baslik": "ŞİMDİ ŞEHİR İÇİ",
-   "s": 9.582999999999998,
-   "son": 11.866666666666665,
+   "s": 9.716999999999999,
+   "son": 12.766666666666667,
    "ogeler": [
     [
      "Tır",
@@ -299,22 +278,22 @@
     ],
     [
      "Kamyon",
-     10.23
+     10.663
     ],
     [
      "Ufak araç",
-     10.943
+     11.843
     ],
     [
      "Forklift",
-     11.923
+     12.823
     ]
    ]
   },
   {
    "tip": "kapanis",
-   "s": 11.866666666666665,
-   "son": 12.966666666666665
+   "s": 12.766666666666667,
+   "son": 13.866666666666667
   }
  ],
  "vurgu": [
@@ -330,7 +309,7 @@
   "kamyon",
   "forklift"
  ],
- "toplamKare": 374,
+ "toplamKare": 401,
  "kartY": 1000,
  "altyaziY": 1510
 }

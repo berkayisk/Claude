@@ -72,6 +72,25 @@ def alt_araliklar(n, a, b, ks, haric):
         else: out.append((x2, y2))
     return [(x, y) for x, y in out if y - x >= 0.15]
 
+MIN_SAHNE, MAX_ARA = 1.0, 0.6
+def sahne_birlestir(ar, haric):
+    """Saliselik sahne olmasın: 1 sn'den kısa parça, arası 0.6 sn'den kısa komşusuyla birleştirilir (aradaki kısa boşluk kalır).
+    Arada HARIC (atılan deneme) varsa birleştirilmez."""
+    ar = [list(x) for x in ar]
+    def engel(x, y): return any(hx < y and hy > x for hx, hy in haric)
+    degisti = True
+    while degisti:
+        degisti = False
+        for i, (x, y) in enumerate(ar):
+            if y - x >= MIN_SAHNE: continue
+            sol = x - ar[i - 1][1] if i > 0 and not engel(ar[i - 1][1], x) else 9
+            sag = ar[i + 1][0] - y if i + 1 < len(ar) and not engel(y, ar[i + 1][0]) else 9
+            if min(sol, sag) > MAX_ARA: continue
+            if sol <= sag: ar[i - 1][1] = y; ar.pop(i)
+            else: ar[i + 1][0] = x; ar.pop(i)
+            degisti = True; break
+    return [tuple(x) for x in ar]
+
 def kurgu(cekimler, haric):
     """cekimler: [(çekim, baş, son)] -> parcalar, altyazi, eşleme (çekim, kaynak sn) -> zaman çizelgesi sn"""
     parcalar, altyazi, harita, tl, zs = [], [], [], 0.0, 0
@@ -83,7 +102,7 @@ def kurgu(cekimler, haric):
             harita.append((n, fa / FPS, fb / FPS, tl)); tl += (fb - fa) / FPS; zs += 1
             continue
         ks = [w for w in kelimeler(n) if a <= (w["s"] + w["e"]) / 2 < b and not any(x <= (w["s"] + w["e"]) / 2 < y for x, y in haric.get(n, []))]
-        ar = alt_araliklar(n, a, b, ks, haric.get(n, []))
+        ar = sahne_birlestir(alt_araliklar(n, a, b, ks, haric.get(n, [])), haric.get(n, []))
         hedef = []
         for w in ks:
             o = [min(y, w["e"]) - max(x, w["s"]) for (x, y) in ar]
@@ -96,7 +115,7 @@ def kurgu(cekimler, haric):
                 if h == j and w["w"]:
                     s2 = min(max(bas, w["s"]), son - 0.1) - bas + tl; e2 = min(son, w["e"]) - bas + tl
                     altyazi.append({"w": w["w"], "s": round(s2, 3), "e": round(max(e2, s2 + 0.1), 3), "n": n, "ks": w["s"]})
-            parcalar.append({"src": f"{n}_dikey.mp4", "ses": opt.get("ses", f"{n}_ses.wav"), "bas": bas, "kare": fb - fa, "zoom": zs % 2 == 1})
+            parcalar.append({"src": f"{n}_dikey.mp4", "ses": opt.get("ses", f"{n}_ses.wav"), "bas": bas, "kare": fb - fa, "zoom": (1.13 if (fb - fa) < 30 else (1.07 if zs % 2 else 1.0))})   # birleştirilemeyen kısa parça: vurgu yakınlaştırması
             harita.append((n, bas, son, tl))
             tl += (fb - fa) / FPS
         zs += 1   # açı (zoom) değişimi sadece çekim/konu değişince
@@ -116,6 +135,9 @@ def yap(vid):
             if kucuk(parca) in kucuk(w["w"]) and w["s"] >= sonra: return w["e"]
         raise SystemExit(f"bulunamadı: {parca}")
     olaylar, broll = V["olaylar"](kz, ke, tl), V["broll"](kz, ke, tl)
+    for b_ in broll:
+        if b_["son"] - b_["s"] < 1.2: print(f"  UYARI kısa/ters B-roll atıldı: {b_}")
+    broll = [b_ for b_ in broll if b_["son"] - b_["s"] >= 1.2]
     for a in altyazi: a.pop("n"); a.pop("ks")
     veri = {"parcalar": parcalar, "broll": broll, "altyazi": altyazi, "olaylar": olaylar, "vurgu": V["vurgu"],
             "toplamKare": sum(p["kare"] for p in parcalar), "kartY": 1000, "altyaziY": 1510}
@@ -142,7 +164,7 @@ VIDEOLAR = {
         "broll": lambda kz, ke, tl: [
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("havalar"), "son": kz("tırınız") - 0.05},
             {"dosya": "IMG_7501_dikey.mp4", "bas": 0.0, "s": kz("araçtan"), "son": kz("aracınız") - 0.05},
-            {"dosya": "IMG_7499_dikey.mp4", "bas": 4.0, "s": kz("çekebiliriz") - 0.4, "son": kz("onun") - 0.05},
+            {"dosya": "IMG_7499_dikey.mp4", "bas": 4.0, "s": kz("çekebiliriz") - 0.4, "son": kz("onun", kz("çekebiliriz")) - 0.05},
         ],
     },
     # 2) İşimiz Hafif Değil — Ağır Ticari Zorlukları: 7508 (yükleme, lastik, makas) + 7509 (kış arızaları; küfürlü son atılır)
@@ -220,7 +242,7 @@ VIDEOLAR = {
             {"tip": "kapanis", "s": kz("bunları"), "son": tl + 0.5},
         ],
         "broll": lambda kz, ke, tl: [
-                        {"dosya": "IMG_7499_dikey.mp4", "bas": 2.0, "s": kz("lastiği") - 0.1, "son": kz("kilometre") - 0.05},
+                        {"dosya": "IMG_7499_dikey.mp4", "bas": 2.0, "s": kz("yıpranma") - 0.05, "son": kz("kilometre") - 0.05},
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.5, "s": kz("kilometre") - 0.05, "son": kz("üzerine") - 0.05},
             {"dosya": "IMG_7520_dikey.mp4", "bas": 0.5, "s": kz("üzerine") - 0.05, "son": kz("bunları") - 0.05},
         ],

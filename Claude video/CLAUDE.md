@@ -56,3 +56,4 @@ projeler/<proje>/
 - Video konuşma bitince biter; sona sessiz kuyruk ekleme. Kapanış kartı son cümlede başlar, `son: tl + 0.5` ile son karede sönmez.
 - Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).
 - Ses: SADECE kamerada görünen kişinin konuşması kullanılır. Kamera arkasından gelen sesler (soru soran, yönlendiren, anlatan) atılır. Doğrulama: cümle başına ses izi (speechbrain ECAPA, `calisma/konusmaci.py`) + o anın karelerinde dudak hareketi. Sözsüz/doğal sesli B-roll'da konuşma demucs ile ayrılır (`no_vocals`).
+- Saliselik sahne YOK: 1 sn'den kısa konuşma parçası, arası ≤0.6 sn olan komşusuyla birleştirilir (kısa boşluk kalır); birleşemeyen kısa parçaya vurgu yakınlaştırması (1.13). 1.2 sn'den kısa B-roll kullanılmaz.
