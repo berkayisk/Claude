@@ -57,3 +57,6 @@ projeler/<proje>/
 - Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).
 - Ses: SADECE kamerada görünen kişinin konuşması kullanılır. Kamera arkasından gelen sesler (soru soran, yönlendiren, anlatan) atılır. Doğrulama: cümle başına ses izi (speechbrain ECAPA, `calisma/konusmaci.py`) + o anın karelerinde dudak hareketi. Sözsüz/doğal sesli B-roll'da konuşma demucs ile ayrılır (`no_vocals`).
 - Saliselik sahne YOK: 1 sn'den kısa konuşma parçası, arası ≤0.6 sn olan komşusuyla birleştirilir (kısa boşluk kalır); birleşemeyen kısa parçaya vurgu yakınlaştırması (1.13). 1.2 sn'den kısa B-roll kullanılmaz.
+- Ses boğukluğu: çalınan seste Demucs ve gürültü kapısı KULLANMA (boğuk yapıyor, kelime sonunu kırpıyor). Çalma = orijinal ses + hafif zincir (highpass 100, afftdn nr15, 250Hz -2, 4kHz +3, yumuşak kompresör, -14 LUFS). Demucs vokali SADECE kesme analizi için (`calisma/ses_temiz/<n>_16k.wav`).
+- Kesme payı: başta 0.05, sonda 0.10 sn (cümle/kelime yarım kalmasın); pay atılan denemeye (HARIC) taşmaz. 0.2 sn altı boşluk kesilmez.
+- B-roll: sert kesme (fade yok — geçişte yüz sızıyor), sınırları konuşma kesmelerine yapışır, kaynak klip süresini aşamaz (donma olmasın).

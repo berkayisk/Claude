@@ -72,9 +72,9 @@ const Goruntu: React.FC<{ v: GunesVeri; k: Kaynak }> = ({ v, k }) => {
 const BRoll: React.FC<{ b: GunesVeri["broll"][number]; sure: number; k: Kaynak }> = ({ b, sure, k }) => {
   const f = useCurrentFrame();
   const z = interpolate(f, [0, sure], [1.0, b.zoom ?? 1.08]);
-  const op = interpolate(f, [0, 3, sure - 3, sure], [0, 1, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  // sert kesme: geçişte (fade) alttaki konuşma yüzü 2-3 kare sızıyordu
   return (
-    <AbsoluteFill style={{ overflow: "hidden", opacity: op }}>
+    <AbsoluteFill style={{ overflow: "hidden" }}>
       <OffthreadVideo src={k.dosya(b.dosya)} startFrom={Math.round(b.bas * 30)} muted style={{ width: 1080, height: 1920, transform: `scale(${z})` }} />
     </AbsoluteFill>
   );
