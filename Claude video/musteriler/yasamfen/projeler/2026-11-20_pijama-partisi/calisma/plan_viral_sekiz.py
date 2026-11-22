@@ -2,7 +2,7 @@
 SIKI = True
 Z = dict(zoom=[1.04, 1.1], odak=[0.5, 0.5])
 PLAN = [
-    klip(7372, 286.17, 291.8, sabit=True, zoom=[1.0, 1.06], odak=[0.5, 0.5]),
+    klip(7372, 286.95, 291.8, sabit=True, zoom=[1.0, 1.06], odak=[0.5, 0.5]),
     klip(7372, 299.7, 302.8, sabit=True, kelimesiz=True, **Z),
     klip(7372, 304.0, 305.2, zoom=[1.1, 1.12], odak=[0.5, 0.5]),
     klip(7372, 306.3, 309.7, **Z),

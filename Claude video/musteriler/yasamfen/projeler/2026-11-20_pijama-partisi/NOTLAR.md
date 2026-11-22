@@ -182,3 +182,5 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - 3 "SEN KAÇ SANİYEDE ÇÖZERDİN? ⏱️" √320+√1280 (10 sn sayaç + çözüm kartı).
 - 4 "SENCE VAMPİR KİM? 🧛" 4 şüpheli numaralı → tahmin yaz → ifşa (1 #40, 2 #50 vampir, 3 #37 doktor, 4 #8 vampir).
 - 6 Kombin savaşı: ikiye bölünmüş ekran (bilesenler/Ikili.tsx), 7383 vs 7382, sessiz (trend ses).
+- Viral kontrol düzeltmeleri: tren/musa cevap kartı y=760 (çağrı kartıyla çakışıyordu); sekiz başı 286.95 ("Aha" kuyruğu), musa başı 1511.8;
+  7367'de soru okuyan hoca (~26) yanlışlıkla blurluydu → blur.json elle istisnası + vekil yeniden. Musa "Peki" uyarısı yanlış alarm (o anda konuşma yok).
