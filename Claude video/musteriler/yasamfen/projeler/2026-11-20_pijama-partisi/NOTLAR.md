@@ -128,3 +128,6 @@ Yumuşak oval gaussian blur, vekil üretiminde gömülü (calisma/vekil.py). Ren
 - Küçük kız (59/62) akşam oyun kliplerinde (7393–7467) her eşleşmede blurlanır (7465'te kümede olmadığı için açık kalmıştı).
 - 7459 çekim hatası (sallanan kamera, yer/sırt): Vampir #2 0:22 ve Vampir #1 oyun sonundan çıkarıldı. Vampir #2'ye 7409 "Dört vampir de
   az değil hocam ya!" (moderatör yakın plan); Vampir #1 son oylama doğrudan 7466 el kaldırma ile başlar.
+- Vampir #1 geri bildirim 6: girişte "dört vampir" tek sefer; roller başlığı aşağıda (y=1240) — etiketle çakışmıyor; 0:35 çocuklu 7408
+  yerine 7429 "Doktoru kim koruyor?" + 7460 "Ayşin Hoca neymiş?" (sadece yetişkinler); son oylama 7466/7465 yerine 7431 (yetişkinler)
+  + 7464 2x zoom sağa (çocuk kadraj dışı) + "Köylüler kazandı".
