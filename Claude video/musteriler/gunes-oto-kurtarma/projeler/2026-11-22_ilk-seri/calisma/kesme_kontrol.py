@@ -10,6 +10,7 @@ for vid in sys.argv[1:]:
     v = json.load(open(f"src/{vid}.json")); tl = 0; sorun = 0
     for i, p in enumerate(v["parcalar"]):
         n = p["src"].replace("_dikey.mp4", ""); a = p["bas"]; b = a + p["kare"] / 30
+        if "_dogal" in p["ses"]: print(f"{i:2d} {tl:5.2f}s {n} doğal sesli B-roll"); tl += p["kare"] / 30; continue
         isaret = []
         once, sonra = db(n, a - 0.03, 0.03), db(n, b, 0.03)
         if a > 0.03 and once > -24: isaret.append(f"BAŞ KIRPIK? ({once:.0f} dB)")
