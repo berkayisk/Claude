@@ -192,7 +192,7 @@ VIDEOLAR = {
         "vurgu": ["sadece", "oto", "kurtarma", "nakliye", "şehir", "şehirler", "kamyon", "tır", "lowbed", "forklift", "3", "15", "ağır", "sanayide"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("oto", kz("yapmıyoruz")) - 0.05, "satir1": "SADECE KURTARMA DEĞİL", "boyut": 80, "satir2": "neler yapıyoruz?"},
-            {"tip": "liste", "baslik": "HİZMETLERİMİZ", "s": kz("bunun") - 0.05, "son": kz("3") - 0.05, "ogeler": [
+            {"tip": "liste", "baslik": "HİZMETLERİMİZ", "s": kz("şehir") - 0.3, "son": kz("3") - 0.05, "ogeler": [
                 ["Şehir içi nakliye", kz("şehir")], ["Şehirler arası nakliye", kz("şehirler")], ["Kamyon · Tır · Lowbed", kz("kamyon")], ["Forklift", kz("forklift")]]},
             {"tip": "stat", "s": kz("3"), "son": kz("ağır") - 0.05, "ust": "FORKLİFT HİZMETİ", "deger": "3 – 15 TON"},
             {"tip": "kapanis", "s": kz("ağır"), "son": tl + 0.5, "alt": "KURTARMA · NAKLİYE · FORKLİFT · MENLİFT"},

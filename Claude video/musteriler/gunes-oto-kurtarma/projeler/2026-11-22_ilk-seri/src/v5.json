@@ -1,0 +1,363 @@
+{
+ "parcalar": [
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 5.466666666666667,
+   "kare": 77,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 8.733333333333333,
+   "kare": 62,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 11.1,
+   "kare": 32,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 12.633333333333333,
+   "kare": 72,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 17.533333333333335,
+   "kare": 80,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 21.1,
+   "kare": 49,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 23.733333333333334,
+   "kare": 61,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 27.366666666666667,
+   "kare": 58,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 31.166666666666668,
+   "kare": 32,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7511_dikey.mp4",
+   "ses": "IMG_7511_ses.wav",
+   "bas": 33.53333333333333,
+   "kare": 21,
+   "zoom": 1.13
+  }
+ ],
+ "broll": [
+  {
+   "dosya": "IMG_7518_dikey.mp4",
+   "bas": 0.5,
+   "s": 2.603,
+   "son": 5.737
+  },
+  {
+   "dosya": "IMG_7517_dikey.mp4",
+   "bas": 1.5,
+   "s": 12.927,
+   "son": 14.383
+  },
+  {
+   "dosya": "IMG_7526_dikey.mp4",
+   "bas": 2.0,
+   "s": 14.383,
+   "son": 16.317
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Biz",
+   "s": 0.0,
+   "e": 0.113
+  },
+  {
+   "w": "sadece",
+   "s": 0.153,
+   "e": 0.633
+  },
+  {
+   "w": "oto",
+   "s": 0.633,
+   "e": 1.253
+  },
+  {
+   "w": "kurtarma",
+   "s": 1.253,
+   "e": 1.733
+  },
+  {
+   "w": "işi",
+   "s": 1.733,
+   "e": 1.913
+  },
+  {
+   "w": "yapmıyoruz.",
+   "s": 1.913,
+   "e": 2.493
+  },
+  {
+   "w": "Oto",
+   "s": 2.653,
+   "e": 3.293
+  },
+  {
+   "w": "kurtarmaya",
+   "s": 3.293,
+   "e": 3.893
+  },
+  {
+   "w": "başlayalı",
+   "s": 3.893,
+   "e": 4.433
+  },
+  {
+   "w": "4-5",
+   "s": 4.633,
+   "e": 5.053
+  },
+  {
+   "w": "ay",
+   "s": 5.053,
+   "e": 5.233
+  },
+  {
+   "w": "oldu.",
+   "s": 5.233,
+   "e": 5.513
+  },
+  {
+   "w": "Bunun",
+   "s": 5.787,
+   "e": 6.267
+  },
+  {
+   "w": "daha",
+   "s": 6.267,
+   "e": 6.767
+  },
+  {
+   "w": "öncesinde",
+   "s": 6.767,
+   "e": 7.367
+  },
+  {
+   "w": "evveliyatında",
+   "s": 7.367,
+   "e": 7.927
+  },
+  {
+   "w": "şehir",
+   "s": 8.1,
+   "e": 8.577
+  },
+  {
+   "w": "içi",
+   "s": 8.577,
+   "e": 8.797
+  },
+  {
+   "w": "ve",
+   "s": 8.797,
+   "e": 8.897
+  },
+  {
+   "w": "şehirler",
+   "s": 8.857,
+   "e": 9.197
+  },
+  {
+   "w": "arası",
+   "s": 9.197,
+   "e": 9.537
+  },
+  {
+   "w": "nakliye",
+   "s": 9.537,
+   "e": 9.977
+  },
+  {
+   "w": "hizmeti",
+   "s": 9.977,
+   "e": 10.297
+  },
+  {
+   "w": "sunuyoruz.",
+   "s": 10.297,
+   "e": 10.767
+  },
+  {
+   "w": "Kamyon,",
+   "s": 10.767,
+   "e": 11.177
+  },
+  {
+   "w": "tır,",
+   "s": 11.317,
+   "e": 11.577
+  },
+  {
+   "w": "lowbed",
+   "s": 11.857,
+   "e": 12.317
+  },
+  {
+   "w": "ve",
+   "s": 12.3,
+   "e": 12.4
+  },
+  {
+   "w": "ayrıyeten",
+   "s": 12.547,
+   "e": 13.227
+  },
+  {
+   "w": "forklift",
+   "s": 13.227,
+   "e": 13.687
+  },
+  {
+   "w": "hizmetleri.",
+   "s": 13.687,
+   "e": 14.247
+  },
+  {
+   "w": "3",
+   "s": 14.433,
+   "e": 14.617
+  },
+  {
+   "w": "tondan",
+   "s": 14.617,
+   "e": 15.077
+  },
+  {
+   "w": "15",
+   "s": 15.077,
+   "e": 15.657
+  },
+  {
+   "w": "tona",
+   "s": 15.657,
+   "e": 16.037
+  },
+  {
+   "w": "kadar",
+   "s": 16.037,
+   "e": 16.317
+  },
+  {
+   "w": "ağır",
+   "s": 16.367,
+   "e": 16.67
+  },
+  {
+   "w": "sanayide",
+   "s": 16.67,
+   "e": 17.19
+  },
+  {
+   "w": "hizmet",
+   "s": 17.19,
+   "e": 17.433
+  },
+  {
+   "w": "veriyoruz.",
+   "s": 17.69,
+   "e": 18.07
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "kanca",
+   "anlik": true,
+   "s": 0.0,
+   "son": 2.603,
+   "satir1": "SADECE KURTARMA DEĞİL",
+   "boyut": 80,
+   "satir2": "neler yapıyoruz?"
+  },
+  {
+   "tip": "liste",
+   "baslik": "HİZMETLERİMİZ",
+   "s": 7.8,
+   "son": 14.383,
+   "ogeler": [
+    [
+     "Şehir içi nakliye",
+     8.1
+    ],
+    [
+     "Şehirler arası nakliye",
+     8.857
+    ],
+    [
+     "Kamyon · Tır · Lowbed",
+     10.767
+    ],
+    [
+     "Forklift",
+     13.227
+    ]
+   ]
+  },
+  {
+   "tip": "stat",
+   "s": 14.433,
+   "son": 16.317,
+   "ust": "FORKLİFT HİZMETİ",
+   "deger": "3 – 15 TON"
+  },
+  {
+   "tip": "kapanis",
+   "s": 16.367,
+   "son": 18.63333333333333,
+   "alt": "KURTARMA · NAKLİYE · FORKLİFT · MENLİFT"
+  }
+ ],
+ "vurgu": [
+  "sadece",
+  "oto",
+  "kurtarma",
+  "nakliye",
+  "şehir",
+  "şehirler",
+  "kamyon",
+  "tır",
+  "lowbed",
+  "forklift",
+  "3",
+  "15",
+  "ağır",
+  "sanayide"
+ ],
+ "toplamKare": 544,
+ "kartY": 1000,
+ "altyaziY": 1510
+}
