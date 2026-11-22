@@ -5,7 +5,7 @@ import json, sys, wave, numpy as np
 
 FPS = 30
 KEL = json.load(open("calisma/kelimeler.json"))
-DUZELT = {"Kurtarcı": "Kurtarıcı", "hesabını?": "hesabı?", "ünitleri": "ücretleri", "sığcılık": "tırcılık", "güneşimiz": "Güneş'imiz", "tırf,": "tır,",
+DUZELT = {"Kurtarıcü": "Kurtarıcı...", "Kurtarcı": "Kurtarıcı", "hesabını?": "hesabı?", "ünitleri": "ücretleri", "sığcılık": "tırcılık", "güneşimiz": "Güneş'imiz", "tırf,": "tır,",
           "kokluyuz.": "forklift.", "güvenliliğini": "güvenliğini", "veliahtında": "evveliyatında", "hizmeleri.": "hizmetleri.",
           "hizmit": "hizmet", "çağılmalısınız.": "çağırmalısınız.", "sağlamalısınız": "sağlamalısınız.", "mukavvetini": "mukavemetini", "Zorluk": "Zorlu", "hız": "kış", "baya": "bayağı", "sekman": "segman", "olabiliyoruz.": "olabiliyor.", "havallarda": "havalarda", "aminom": "***", "arzalandığı": "arızalandığı", "tamurumuzun": "tamburumuzun", "Onurumuz": "Onur'umuz", "ediyoruz.": "ediyor.", "sürat": "Sürat", "kargoya": "Kargo'ya", "Berkaycığımla": "Berkay'cığımla", "lobet": "lowbed", "çepçe": "kepçe", "eskavetör": "ekskavatör", "Kurtarıcı": "Kurtarıcı"}
 # Whisper'ın yanlış hizaladığı kelimeler (ikinci geçişten): (çekim, yanlış kelime başı) -> doğru (w, s, e)
@@ -173,16 +173,16 @@ VIDEOLAR = {
         "vurgu": ["ağır", "zorlukları", "dikkatli", "bilinçli", "sağlama", "mukavemetini", "lastiklerimiz", "makasları", "taklavatımız", "kış", "karlı", "kışın", "şanzımanı", "diferansiyeli", "piston", "segman"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("yükü") - 0.05, "satir1": "İŞİMİZ HAFİF DEĞİL", "satir2": "ağır ticarinin zorlukları"},
-            {"tip": "liste", "baslik": "YOLA ÇIKMADAN", "s": kz("yükü") - 0.05, "son": kz("zorlu") - 0.05, "boyut": 48, "ogeler": [
+            {"tip": "liste", "baslik": "YOLA ÇIKMADAN", "s": kz("yükü") - 0.05, "son": kz("zorlu", kz("taklavatımız")) - 0.05, "boyut": 48, "ogeler": [
                 ["Bilinçli yükleme", kz("bilinçli")], ["Yük sağlama alınır", kz("sağlama")], ["Lastikler", kz("lastiklerimiz")], ["Makaslar", kz("makasları")], ["Takım taklavat tam", kz("takımımız")]]},
-            {"tip": "kanca", "s": kz("zorlu"), "son": kz("araçlar") - 0.05, "top": 900, "satir1": "KIŞ ŞARTLARI", "satir2": "yağmur · kar · buz"},
+            {"tip": "kanca", "s": kz("zorlu", kz("taklavatımız")), "son": kz("araçlar") - 0.05, "top": 900, "satir1": "KIŞ ŞARTLARI", "satir2": "yağmur · kar · buz"},
             {"tip": "liste", "isaret": "carpi", "baslik": "KIŞIN YOLDA KALDIRAN ARIZALAR", "s": kz("araçlar") - 0.05, "son": kz("bunlar", kz("gümleyebiliyor")) - 0.05, "ogeler": [
                 ["Şanzıman", kz("şanzımanı")], ["Diferansiyel", kz("diferansiyeli")], ["Piston / segman", kz("piston")]]},
             {"tip": "kapanis", "s": kz("bunlar", kz("gümleyebiliyor")), "son": tl + 0.5},
         ],
         "broll": lambda kz, ke, tl: [
             {"dosya": "IMG_7499_dikey.mp4", "bas": 0.5, "s": kz("yükledikten"), "son": kz("lastiklerimiz") - 0.05},
-            {"dosya": "IMG_7523_dikey.mp4", "bas": 0.3, "s": kz("lastiklerimiz") - 0.05, "son": kz("zorlu") - 0.05},
+            {"dosya": "IMG_7523_dikey.mp4", "bas": 0.3, "s": kz("lastiklerimiz") - 0.05, "son": kz("zorlu", kz("taklavatımız")) - 0.05},
             {"dosya": "IMG_7504_dikey.mp4", "bas": 0.0, "s": kz("yağışlı"), "son": kz("araçlar") - 0.05},
         ],
     },

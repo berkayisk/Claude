@@ -1,0 +1,583 @@
+{
+ "parcalar": [
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 0.6,
+   "kare": 74,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 4.333333333333333,
+   "kare": 38,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 5.7,
+   "kare": 38,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 7.266666666666667,
+   "kare": 50,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 12.933333333333334,
+   "kare": 63,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 15.366666666666667,
+   "kare": 38,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 18.433333333333334,
+   "kare": 70,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 20.833333333333332,
+   "kare": 46,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 23.866666666666667,
+   "kare": 84,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 28.333333333333332,
+   "kare": 67,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 31.966666666666665,
+   "kare": 42,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7508_dikey.mp4",
+   "ses": "IMG_7508_ses.wav",
+   "bas": 34.233333333333334,
+   "kare": 30,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 0.9333333333333333,
+   "kare": 99,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 4.866666666666666,
+   "kare": 54,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 7.333333333333333,
+   "kare": 57,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 10.4,
+   "kare": 77,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 13.9,
+   "kare": 41,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 15.533333333333333,
+   "kare": 42,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7509_dikey.mp4",
+   "ses": "IMG_7509_ses.wav",
+   "bas": 17.733333333333334,
+   "kare": 38,
+   "zoom": 1.07
+  }
+ ],
+ "broll": [
+  {
+   "dosya": "IMG_7499_dikey.mp4",
+   "bas": 0.5,
+   "s": 6.667,
+   "son": 13.85
+  },
+  {
+   "dosya": "IMG_7523_dikey.mp4",
+   "bas": 0.3,
+   "s": 13.85,
+   "son": 18.883
+  },
+  {
+   "dosya": "IMG_7504_dikey.mp4",
+   "bas": 0.0,
+   "s": 21.333,
+   "son": 26.58
+  }
+ ],
+ "altyazi": [
+  {
+   "w": "Ağır",
+   "s": 0.0,
+   "e": 0.37
+  },
+  {
+   "w": "ticarenin",
+   "s": 0.37,
+   "e": 1.05
+  },
+  {
+   "w": "zorlukları,",
+   "s": 1.05,
+   "e": 2.11
+  },
+  {
+   "w": "yükü",
+   "s": 2.467,
+   "e": 2.913
+  },
+  {
+   "w": "her",
+   "s": 2.913,
+   "e": 3.213
+  },
+  {
+   "w": "zaman",
+   "s": 3.213,
+   "e": 3.593
+  },
+  {
+   "w": "dikkatli",
+   "s": 3.733,
+   "e": 4.653
+  },
+  {
+   "w": "ve",
+   "s": 4.653,
+   "e": 4.873
+  },
+  {
+   "w": "bilinçli",
+   "s": 5.0,
+   "e": 5.393
+  },
+  {
+   "w": "şekilde",
+   "s": 5.393,
+   "e": 5.753
+  },
+  {
+   "w": "yüklememiz",
+   "s": 5.753,
+   "e": 6.313
+  },
+  {
+   "w": "gerek.",
+   "s": 6.313,
+   "e": 6.533
+  },
+  {
+   "w": "Yükledikten",
+   "s": 6.667,
+   "e": 7.253
+  },
+  {
+   "w": "sonra",
+   "s": 7.253,
+   "e": 7.493
+  },
+  {
+   "w": "tabii",
+   "s": 7.493,
+   "e": 7.753
+  },
+  {
+   "w": "ki",
+   "s": 7.753,
+   "e": 8.073
+  },
+  {
+   "w": "yükümüzü",
+   "s": 8.073,
+   "e": 8.767
+  },
+  {
+   "w": "sağlama",
+   "s": 9.3,
+   "e": 9.72
+  },
+  {
+   "w": "alıp",
+   "s": 9.72,
+   "e": 10.033
+  },
+  {
+   "w": "mukavemetini",
+   "s": 10.033,
+   "e": 10.7
+  },
+  {
+   "w": "daha",
+   "s": 10.7,
+   "e": 11.48
+  },
+  {
+   "w": "yüksekte",
+   "s": 11.48,
+   "e": 11.92
+  },
+  {
+   "w": "tutup",
+   "s": 11.92,
+   "e": 12.3
+  },
+  {
+   "w": "o",
+   "s": 12.367,
+   "e": 12.493
+  },
+  {
+   "w": "şekilde",
+   "s": 12.493,
+   "e": 12.793
+  },
+  {
+   "w": "yola",
+   "s": 12.793,
+   "e": 13.033
+  },
+  {
+   "w": "çıkmamız",
+   "s": 13.033,
+   "e": 13.453
+  },
+  {
+   "w": "lazım.",
+   "s": 13.453,
+   "e": 13.753
+  },
+  {
+   "w": "Lastiklerimiz,",
+   "s": 13.9,
+   "e": 14.683
+  },
+  {
+   "w": "aracımızın",
+   "s": 15.143,
+   "e": 15.823
+  },
+  {
+   "w": "makasları,",
+   "s": 15.823,
+   "e": 16.523
+  },
+  {
+   "w": "takımımız,",
+   "s": 16.7,
+   "e": 17.097
+  },
+  {
+   "w": "taklavatımız",
+   "s": 17.157,
+   "e": 17.777
+  },
+  {
+   "w": "tam",
+   "s": 17.777,
+   "e": 18.097
+  },
+  {
+   "w": "olması",
+   "s": 18.097,
+   "e": 18.477
+  },
+  {
+   "w": "lazım.",
+   "s": 18.477,
+   "e": 18.797
+  },
+  {
+   "w": "Zorlu",
+   "s": 18.933,
+   "e": 19.397
+  },
+  {
+   "w": "kış",
+   "s": 19.397,
+   "e": 19.537
+  },
+  {
+   "w": "şartlarında",
+   "s": 19.537,
+   "e": 20.117
+  },
+  {
+   "w": "bayağı",
+   "s": 20.117,
+   "e": 20.333
+  },
+  {
+   "w": "zorlanıyoruz.",
+   "s": 20.57,
+   "e": 21.27
+  },
+  {
+   "w": "Yağışlı",
+   "s": 21.333,
+   "e": 21.93
+  },
+  {
+   "w": "havalarda,",
+   "s": 21.93,
+   "e": 22.37
+  },
+  {
+   "w": "karlı",
+   "s": 22.55,
+   "e": 22.83
+  },
+  {
+   "w": "havalarda",
+   "s": 22.83,
+   "e": 23.35
+  },
+  {
+   "w": "özellikle",
+   "s": 23.35,
+   "e": 24.11
+  },
+  {
+   "w": "kışın",
+   "s": 24.11,
+   "e": 24.55
+  },
+  {
+   "w": "çok",
+   "s": 24.633,
+   "e": 25.077
+  },
+  {
+   "w": "dikkat",
+   "s": 25.077,
+   "e": 25.477
+  },
+  {
+   "w": "etmeniz",
+   "s": 25.477,
+   "e": 25.957
+  },
+  {
+   "w": "lazım.",
+   "s": 25.957,
+   "e": 26.277
+  },
+  {
+   "w": "Araçlar",
+   "s": 26.63,
+   "e": 27.43
+  },
+  {
+   "w": "yolda",
+   "s": 27.43,
+   "e": 27.71
+  },
+  {
+   "w": "kalabiliyor,",
+   "s": 27.71,
+   "e": 28.19
+  },
+  {
+   "w": "şanzımanı",
+   "s": 28.333,
+   "e": 28.893
+  },
+  {
+   "w": "dağıtabiliyor.",
+   "s": 28.893,
+   "e": 29.433
+  },
+  {
+   "w": "diferansiyeli",
+   "s": 29.633,
+   "e": 30.113
+  },
+  {
+   "w": "dağıtabiliyor.",
+   "s": 30.113,
+   "e": 30.773
+  },
+  {
+   "w": "Piston",
+   "s": 30.9,
+   "e": 31.06
+  },
+  {
+   "w": "segman",
+   "s": 31.06,
+   "e": 32.18
+  },
+  {
+   "w": "patlayıp",
+   "s": 32.267,
+   "e": 32.693
+  },
+  {
+   "w": "gümleyebiliyor.",
+   "s": 32.693,
+   "e": 33.453
+  },
+  {
+   "w": "Bunlar",
+   "s": 33.667,
+   "e": 34.053
+  },
+  {
+   "w": "her",
+   "s": 34.053,
+   "e": 34.193
+  },
+  {
+   "w": "şey",
+   "s": 34.193,
+   "e": 34.333
+  },
+  {
+   "w": "olabiliyor.",
+   "s": 34.333,
+   "e": 34.933
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "kanca",
+   "anlik": true,
+   "s": 0.0,
+   "son": 2.4170000000000003,
+   "satir1": "İŞİMİZ HAFİF DEĞİL",
+   "satir2": "ağır ticarinin zorlukları"
+  },
+  {
+   "tip": "liste",
+   "baslik": "YOLA ÇIKMADAN",
+   "s": 2.4170000000000003,
+   "son": 18.883,
+   "boyut": 48,
+   "ogeler": [
+    [
+     "Bilinçli yükleme",
+     5.0
+    ],
+    [
+     "Yük sağlama alınır",
+     9.3
+    ],
+    [
+     "Lastikler",
+     13.9
+    ],
+    [
+     "Makaslar",
+     15.823
+    ],
+    [
+     "Takım taklavat tam",
+     16.7
+    ]
+   ]
+  },
+  {
+   "tip": "kanca",
+   "s": 18.933,
+   "son": 26.58,
+   "top": 900,
+   "satir1": "KIŞ ŞARTLARI",
+   "satir2": "yağmur · kar · buz"
+  },
+  {
+   "tip": "liste",
+   "isaret": "carpi",
+   "baslik": "KIŞIN YOLDA KALDIRAN ARIZALAR",
+   "s": 26.58,
+   "son": 33.617000000000004,
+   "ogeler": [
+    [
+     "Şanzıman",
+     28.333
+    ],
+    [
+     "Diferansiyel",
+     29.633
+    ],
+    [
+     "Piston / segman",
+     30.9
+    ]
+   ]
+  },
+  {
+   "tip": "kapanis",
+   "s": 33.667,
+   "son": 35.43333333333333
+  }
+ ],
+ "vurgu": [
+  "ağır",
+  "zorlukları",
+  "dikkatli",
+  "bilinçli",
+  "sağlama",
+  "mukavemetini",
+  "lastiklerimiz",
+  "makasları",
+  "taklavatımız",
+  "kış",
+  "karlı",
+  "kışın",
+  "şanzımanı",
+  "diferansiyeli",
+  "piston",
+  "segman"
+ ],
+ "toplamKare": 1048,
+ "kartY": 1000,
+ "altyaziY": 1510
+}
