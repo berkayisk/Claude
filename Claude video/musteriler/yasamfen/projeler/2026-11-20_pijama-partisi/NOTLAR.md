@@ -148,3 +148,4 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - Hocalar geri bildirim 8: tüm hocalar (#37 7485, #5 7471, #34 7470, #8 7476, #35 7474), başlık "HOCALARIMIZ NE DEDİ?", konuşma başı enerji
   başlangıcına yaslanır (ilk kelimeyi geçmeden), "eee" dolguları calisma/transkript_dolgu (dolgu odaklı whisper) + enerjiyle bulunup HARIC.
   kurgu_yap: HARIC artık en son da uygulanır (kelime ekleme adımı dolguları geri getirmesin).
+- Drive: Hocalar dosyası yeni sürümle değiştirildi (aynı id/link), adı 'Yaşamfen - Hocalarımız Ne Dedi.mp4', md5 doğrulandı.
