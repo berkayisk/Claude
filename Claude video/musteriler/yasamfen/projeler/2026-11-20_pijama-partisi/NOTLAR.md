@@ -184,3 +184,4 @@ araclar/drive_yukle.sh: KLASOR=<id> ile klasöre yükler; sembolik bağlantılar
 - 6 Kombin savaşı: ikiye bölünmüş ekran (bilesenler/Ikili.tsx), 7383 vs 7382, sessiz (trend ses).
 - Viral kontrol düzeltmeleri: tren/musa cevap kartı y=760 (çağrı kartıyla çakışıyordu); sekiz başı 286.95 ("Aha" kuyruğu), musa başı 1511.8;
   7367'de soru okuyan hoca (~26) yanlışlıkla blurluydu → blur.json elle istisnası + vekil yeniden. Musa "Peki" uyarısı yanlış alarm (o anda konuşma yok).
+- Viral kapaklar (7) + aciklamalar.txt (17 videonun Instagram açıklaması) → Drive (Kapaklar / ana klasör).

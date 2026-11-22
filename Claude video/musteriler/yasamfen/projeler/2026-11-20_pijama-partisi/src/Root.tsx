@@ -36,6 +36,13 @@ const KAPAKLAR: [string, KapakProps][] = [
   ["Kapak-yks", { arka: "kapak/yks.jpg", ust: "TYT BİLGİ YARIŞMASI", satir1: "MF mi", satir2: "TM mi? 🏆", alt: "Sen kaç tanesini bilirdin?" }],
   ["Kapak-komik-yks", { arka: "kapak/komik_yks.jpg", ust: "TYT YARIŞMASI", satir1: "KİMSE CİDDİ", satir2: "DEĞİLDİ 😂", alt: "En komik anlar", boyut: 130 }],
   ["Kapak-komik-parti", { arka: "kapak/komik_parti.jpg", ust: "PİJAMA PARTİSİ", satir1: "GÜLMEDEN", satir2: "İZLEYEMEZSİN 😂", alt: "En komik anlar", odakY: 0.25, boyut: 120 }],
+  ["Kapak-viral-tren", { arka: "kapak/viral_tren.jpg", ust: "ŞAŞIRTMACA SORU", satir1: "%90'I 🤯", satir2: "YANLIŞ BİLİYOR", alt: "Elektrikli tren sorusu 🚂", boyut: 100 }],
+  ["Kapak-viral-horoz", { arka: "kapak/viral_horoz.jpg", ust: "ŞAŞIRTMACA SORU", satir1: "HOROZ", satir2: "YUMURTLADI 🐓", alt: "Yumurta sağa mı düşer, sola mı?", boyut: 108 }],
+  ["Kapak-viral-musa", { arka: "kapak/viral_musa.jpg", ust: "ŞAŞIRTMACA SORU", satir1: "DİKKATLİ", satir2: "DİNLE! 🚢", alt: "Musa gemisine kaç hayvan aldı?" }],
+  ["Kapak-viral-sekiz", { arka: "kapak/viral_sekiz.jpg", ust: "TYT BİLGİ YARIŞMASI", satir1: "LİSE SON BİLEMEDİ", satir2: "8. SINIF BİLDİ 😳", alt: "DNA sorusu 🧬", boyut: 90 }],
+  ["Kapak-viral-saniye", { arka: "kapak/viral_saniye.jpg", ust: "LGS MATEMATİK", satir1: "KAÇ SANİYEDE", satir2: "ÇÖZERSİN? ⏱️", alt: "√320 + √1280 = ?", boyut: 108 }],
+  ["Kapak-viral-vampirkim", { arka: "kapak/viral_vampirkim.jpg", ust: "VAMPİR KÖYLÜ", satir1: "SENCE", satir2: "VAMPİR KİM? 🧛", alt: "Tahminini yoruma yaz 👇", odakY: 0.3, boyut: 108 }],
+  ["Kapak-kombin-savasi", { arka: "kapak/kombin_savasi.jpg", ust: "PİJAMA PARTİSİ", satir1: "HANGİSİ?", satir2: "1 mi 2 mi? 🤔", alt: "Kombin savaşı 💤", odakY: 0.3, boyut: 130 }],
 ];
 
 const yukle = (ad: string): KurguVeri | null => {
