@@ -34,7 +34,7 @@ export const kirp = (f: number, periyot = 84, ofset = 0) => {
 export const AhmetBas: React.FC<{ id: string; ifade?: Ifade; isik: Isik; kirpma?: number; govde?: boolean }> = ({ id, ifade = {}, isik, kirpma = 1, govde = true }) => {
   const { kasY = 0, kasAci = 0, gozX = 0, gozY = 0, gozAcik = 1, gulum = 0, dudakBas = 0 } = ifade;
   const ac = Math.max(0.06, gozAcik * kirpma);
-  const yon = { sol: ["0", "0.5", "1", "0.5"], sag: ["1", "0.5", "0", "0.5"], alt: ["0.5", "1", "0.5", "0"], on: ["0.5", "0.6", "0.5", "0"] }[isik.yon];
+  const yon = { sol: ["0", "0.5", "1", "0.5"], sag: ["1", "0.5", "0", "0.5"], alt: ["0.5", "1", "0.5", "0"], on: ["0.3", "0.85", "0.8", "0.15"] }[isik.yon];
   const goz = (cx: number, sag: boolean) => {
     const ix = cx + gozX * 7, iy = 222 + gozY * 4;
     return (
@@ -62,8 +62,8 @@ export const AhmetBas: React.FC<{ id: string; ifade?: Ifade; isik: Isik; kirpma?
     <g>
       <defs>
         <linearGradient id={`${id}isik`} x1={yon[0]} y1={yon[1]} x2={yon[2]} y2={yon[3]}>
-          <stop offset="0" stopColor={isik.renk} stopOpacity={0.55 * isik.guc} />
-          <stop offset="0.45" stopColor={isik.renk} stopOpacity={0.12 * isik.guc} />
+          <stop offset="0" stopColor={isik.renk} stopOpacity={0.36 * isik.guc} />
+          <stop offset="0.45" stopColor={isik.renk} stopOpacity={0.05 * isik.guc} />
           <stop offset="1" stopColor="#000" stopOpacity={0.55} />
         </linearGradient>
         <radialGradient id={`${id}yanak`} cx="0.5" cy="0.6" r="0.5">

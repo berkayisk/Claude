@@ -6,3 +6,9 @@
 - Seslendirme: Piper TTS `tr_TR-dfki-medium` (HF rhasspy/piper-voices), satır satır `calisma/vo/`; iç ses pitch +7%, kuru.
 - Müzik + SFX tamamen sentez: `calisma/ses.py` -> `calisma/ana_ses_ham.wav` -> loudnorm -> `girdiler/ana_ses.wav`. 0:19'da müzik durur, 0:32 umutlu tema.
 - Çıktı: `ciktilar/Ahmet_Bolum1_Stilize.mp4`.
+
+## v2 (referans: referanslar/ref_kas.mp4 — "Kaslar neden büyür?" açıklayıcı video)
+- Referanstan alınanlar: soruyla kanca, merak köprüleri ("Ama…", "Peki sonra ne oldu?"), sonda izleyiciye dönen soru;
+  üstte 2 satır başlık (beyaz + renkli), altta cümle altyazısı (anahtar kelimeler turuncu), seslendirmenin ~15-20 dB altında kesintisiz müzik zemini, köprülerde vurgu sesi.
+- Metin, başlıklar ve vurgular `src/plan.json` (ses.py ve Film.tsx aynı dosyayı okur).
+- Yüzün önündeki mavi hare: karakterin üstüne çizilen ekran/telefon ışığı elipsleri kaldırıldı, yüz ışık geçişi yumuşatıldı.

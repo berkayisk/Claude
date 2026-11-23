@@ -38,8 +38,8 @@ def reverb(x, sure=2.2, mix=0.25):
 
 # ---------------- SESLENDİRME ----------------
 vo = np.zeros(N)
-VO = [("n1", 0.5), ("n2", 1.5), ("n3", 4.7), ("n4", 9.0), ("n5", 11.6), ("n6", 12.9), ("n7", 14.8), ("n8", 16.4),
-      ("i1", 22.6), ("i2", 25.4), ("n9", 30.3), ("n10", 33.0), ("n11", 43.0), ("n12", 47.4)]
+PLAN = json.load(open("src/plan.json"))
+VO = [(v["k"], v["bas"]) for v in PLAN["vo"]]
 for k, t in VO:
     s = oku(f"calisma/vo/{k}.wav")
     if k.startswith("i"):   # iç ses: biraz daha genç/yakın, kuru, kısık
@@ -97,6 +97,14 @@ for k, (a, b) in enumerate([(8.0, 11.4), (11.4, 14.9), (14.9, 19.0)]):
 muz += pad
 muz[int(19.0 * SR):int(19.17 * SR)] *= np.linspace(1, 0, int(0.17 * SR))  # 0:19 tam durur (4 kare kuyruk)
 muz[int(19.17 * SR):int(32.0 * SR)] = 0
+# kesintisiz zemin: 19.2-32 arası alçak, karanlık drone (akış kopmasın), 26'dan gerilim nabzı
+dr = np.zeros(N)
+ekle(dr, yayli([38, 45, 50], 13.6, 0.5, 2.5), 19.0)
+tt = 26.2
+while tt < 31.6:
+    n = int(0.5 * SR); tn = np.arange(n) / SR
+    ekle(dr, np.sin(2 * np.pi * 55 * tn) * np.exp(-tn * 7) * 0.5, tt); tt += 60 / 70
+muz += lp(dr, 900) * 0.8
 # Tema B: re majör 32-60 sn (D - A - Bm - G)
 akorB = [[50, 57, 62, 66, 69], [45, 52, 57, 61, 64], [47, 54, 59, 62, 66], [43, 50, 55, 59, 62]]
 muzB = np.zeros(N)
@@ -142,7 +150,7 @@ muz = muz / (np.abs(muz).max() + 1e-9)
 # seviye otomasyonu (seslendirme altında ~-20 dB görece, araları biraz yukarı)
 otom = np.interp(np.arange(N) / SR,
                  [0, 0.5, 8, 16, 19, 32, 33, 36, 41.5, 42.5, 54, 54.6, 58, 60],
-                 [0, .18, .18, .14, .14, .14, .16, .18, .30, .20, .20, .34, .34, .30])
+                 [0, .18, .18, .14, .14, .14, .16, .18, .30, .20, .20, .21, .26, .30])
 muz *= otom
 
 # ---------------- SES EFEKTLERİ ----------------
@@ -203,6 +211,12 @@ tt = 42.4
 while tt < 59.5:
     ekle(fx, kus(), tt); tt += 0.25 + rng.exponential(1.4)
 # olaylar
+def wav(ad):
+    return oku(f"../../marka/sfx/{ad}.wav")
+for bsl in PLAN["basliklar"][1:]:
+    ekle(fx, wav("whoosh_giris"), max(0, bsl["bas"] - 0.12), 0.18)
+ekle(fx, wav("boom"), 29.55, 0.22)       # "Ama..." köprüsü
+ekle(fx, wav("boom"), 38.45, 0.28)       # "Peki sonra ne oldu?"
 for t in (1.2, 2.4, 3.6): ekle(fx, kaydir(), t)
 ekle(fx, sandalye_otur(), 8.25)
 ekle(fx, kapak_ac(), 8.95)

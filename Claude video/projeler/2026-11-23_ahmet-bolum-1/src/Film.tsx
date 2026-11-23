@@ -90,16 +90,57 @@ const Kapanis: React.FC<{ f: number }> = ({ f }) => {
   );
 };
 
-const Yazilar: React.FC<{ f: number }> = ({ f }) => {
-  // 54.5 sn ve 56.5 sn; 58'de görüntüyle birlikte kararır
-  const t = f / FPS;
-  const y1 = interpolate(t, [54.5, 55.1, 57.6, 58.0], [0, 1, 1, 0], kl);
-  const y2 = interpolate(t, [56.5, 57.1, 57.6, 58.0], [0, 1, 1, 0], kl);
-  if (t < 54.4 || t > 58.1) return null;
+import plan from "./plan.json";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+const POP = "'Poppins', sans-serif";
+type VO = { k: string; metin: string; bas: number; son: number; ic: boolean };
+type Bsl = { bas: number; son: number; s1: string; s2: string; renk: string; orta?: boolean };
+const kucuk = (x: string) => x.replace(/İ/g, "i").replace(/I/g, "ı").toLowerCase().replace(/[.,?!:'’]/g, "");
+
+// Üst başlık (referans stili): beyaz satır + renkli anahtar satır
+const Baslik: React.FC<{ t: number }> = ({ t }) => {
+  const b = (plan.basliklar as Bsl[]).find((x) => t >= x.bas && t < x.son);
+  if (!b) return null;
+  const g = interpolate(t, [b.bas, b.bas + 0.35], [0, 1], { ...kl, easing: Easing.out(Easing.back(1.6)) });
+  const c = interpolate(t, [b.son - 0.25, b.son], [1, 0], kl);
+  const op = Math.min(g, c);
+  if (b.orta) {
+    return (
+      <AbsoluteFill style={{ background: `rgba(0,0,0,${0.55 * op})`, justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
+        <div style={{ opacity: op, transform: `scale(${0.85 + 0.15 * g})`, textAlign: "center", fontFamily: POP, fontWeight: 800, lineHeight: 1.05 }}>
+          <div style={{ fontSize: 104, color: "white", letterSpacing: -2 }}>{b.s1}</div>
+          <div style={{ fontSize: 104, color: b.renk, letterSpacing: -2 }}>{b.s2}</div>
+        </div>
+      </AbsoluteFill>
+    );
+  }
   return (
-    <AbsoluteFill style={{ alignItems: "center", fontFamily: INTER, color: "white", textShadow: "0 4px 30px rgba(0,0,0,0.55)" }}>
-      <div style={{ position: "absolute", top: 330, opacity: y1, fontWeight: 500, fontSize: 54, textAlign: "center", width: 900 }}>Ahmet'in hikâyesi burada başlıyor.</div>
-      <div style={{ position: "absolute", top: 430, opacity: y2, fontWeight: 700, fontSize: 64, textAlign: "center", width: 900 }}>Peki ya seninki?</div>
+    <AbsoluteFill style={{ alignItems: "center" }}>
+      <div style={{ position: "absolute", top: 150, width: 980, textAlign: "center", fontFamily: POP, fontWeight: 800, lineHeight: 1.04, opacity: op, transform: `translateY(${(1 - g) * -30}px)`, textShadow: "0 6px 30px rgba(0,0,0,0.6)" }}>
+        <div style={{ fontSize: 68, color: "white", letterSpacing: -1 }}>{b.s1}</div>
+        <div style={{ fontSize: 78, color: b.renk, letterSpacing: -1 }}>{b.s2}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+// Alt altyazı: seslendirme cümlesi, anahtar kelimeler turuncu
+const Altyazi: React.FC<{ t: number }> = ({ t }) => {
+  const vo = plan.vo as VO[];
+  const i = vo.findIndex((v, j) => t >= v.bas - 0.05 && t < Math.min(v.son + 0.35, vo[j + 1] ? vo[j + 1].bas - 0.05 : 99));
+  if (i < 0) return null;
+  const v = vo[i];
+  const g = interpolate(t, [v.bas - 0.05, v.bas + 0.15], [0, 1], kl);
+  const kelimeler = v.metin.split(" ");
+  return (
+    <AbsoluteFill style={{ alignItems: "center" }}>
+      <div style={{ position: "absolute", top: 1500, width: 940, display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0 14px", opacity: g, transform: `translateY(${(1 - g) * 14}px)` }}>
+        {kelimeler.map((w, j) => {
+          const vurgu = (plan.vurgu as string[]).some((k) => kucuk(w).startsWith(k));
+          return <span key={j} style={{ fontFamily: POP, fontWeight: 700, fontStyle: v.ic ? "italic" : "normal", fontSize: 50, lineHeight: 1.25, color: vurgu ? "#FF9A3C" : "white", textShadow: "0 3px 18px rgba(0,0,0,0.85), 0 0 3px rgba(0,0,0,0.9)" }}>{w}</span>;
+        })}
+      </div>
     </AbsoluteFill>
   );
 };
@@ -114,7 +155,9 @@ export const Film: React.FC = () => {
         </Sequence>
       ))}
       <Sequence from={s(58)} durationInFrames={s(2)} name="6B"><KapanisSar /></Sequence>
-      <Yazilar f={f} />
+      <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 16%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.6) 92%)" }} />
+      <Baslik t={f / FPS} />
+      <Altyazi t={f / FPS} />
       <Vinyet guc={0.8} />
       <Gren f={f} />
       <Audio src={staticFile("ana_ses.wav")} />

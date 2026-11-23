@@ -144,7 +144,6 @@ const Oda: React.FC<{ z: Zaman; f: number; ahmet: "kanepe" | "masa" | "yok"; lap
           <rect x={1624} y={1086} width={38} height={74} rx={5} fill="#cfe1ff" opacity={0.85 * telefonIsik + 0.1} transform="rotate(8 1643 1123)" />
           <El x={1612} y={1170} aci={-10} olcek={0.48} renk={RENKLER.tenKoyu} />
           <El x={1676} y={1168} aci={14} olcek={0.48} ayna renk={RENKLER.tenKoyu} />
-          {gece ? <ellipse cx={1640} cy={1000} rx={170} ry={150} fill="url(#ekranIsik)" opacity={0.7 * telefonIsik} /> : null}
         </g>
       ) : null}
       {/* sehpa + halı */}
@@ -245,7 +244,6 @@ export const MasaOn: React.FC<{
               <rect x={540} y={1150} width={110} height={210} rx={18} fill="#0d0d10" transform="rotate(-12 595 1255)" />
               <rect x={549} y={1162} width={92} height={186} rx={12} fill="#cfe1ff" opacity={0.15 + 0.85 * telefonIsik} transform="rotate(-12 595 1255)" />
               <El x={620} y={1390} aci={-20} olcek={1.15} ayna renk={RENKLER.ten} golge={0.4} />
-              {gece ? <ellipse cx={560} cy={1000} rx={360} ry={330} fill="url(#moEkran)" opacity={0.6 * telefonIsik} /> : null}
             </g>
           ) : null}
           {/* laptop kapağı (arkası, kameraya dönük) */}
@@ -256,7 +254,6 @@ export const MasaOn: React.FC<{
           </g>
           <rect x={300} y={1496} width={480} height={22} rx={6} fill="#8e9097" />
           {/* ekran ışığı halesi */}
-          {gece ? <ellipse cx={540} cy={900} rx={480} ry={420} fill="url(#moEkran)" opacity={0.55 * ekranIsik * laptopAcik} /> : null}
           {/* lamba (sol kenar) */}
           {lamba ? (
             <g>
