@@ -66,3 +66,9 @@
 - Şüpheli bulunup yeniden üretilen: var, başlayacağım, ürününü (3 deneme reddedildi), adımı, Ahmet'in, doğuruyor, aynı.
 - Rubberband perde kaydırma ünsüzleri bozuyordu ("kaçırmamak"→"kaçınmamak", "başlayacağım") → %3,5 altı farkta kaydırma yok.
 - Kabul kontrolü artık son işlenmiş (netlik) ses üzerinde. 22/22 satır denetimden geçti.
+
+## v11 — Senaryo v2 (senarist) + telaffuz/vurgu denetimli klon (67,9 sn)
+- Metin: seriler/ahmet-e-ticaret/bolum1_senaryo_v2.md, satırlar senaryo/satirlar.json (n2: "e-ticaretti" 16 denemede okunamadı → "Ahmet'in fikri ise, e-ticaret.").
+- Seslendirme yazımları ("yazim" alanı): "Ama, …", "Önce, …" virgülleri vurguyu başa çekmek için.
+- calisma/plan_v2.py zamanlama; telefon titreşimi 56,3 sn ("…titreyene kadar" bitişi), final kartı 60,25 sn.
+- Dinleme listesi: n2 "Ahmet'in" (GOP -0,51, cümle başı ölçüm etkisi olabilir), n10 "Ama" (aMA), n16 "sonra", n8 "cevap", n21 "kaçırmamak".

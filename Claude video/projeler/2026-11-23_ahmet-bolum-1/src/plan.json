@@ -2,65 +2,58 @@
  "vo": [
   {
    "k": "n1",
-   "metin": "Bu Ahmet.",
+   "metin": "Herkesin bir gece yarısı fikri vardır.",
    "bas": 0.4,
-   "son": 1.28,
+   "son": 2.44,
    "ic": false
   },
   {
    "k": "n2",
-   "metin": "Ve bu gece, hayatını değiştirebilecek bir kararın eşiğinde.",
-   "bas": 1.4,
-   "son": 4.79,
+   "metin": "Ahmet'in fikri ise, e-ticaret.",
+   "bas": 3.0,
+   "son": 5.34,
    "ic": false
   },
   {
    "k": "n3",
-   "metin": "Aylardır aklında tek bir fikir var: e-ticaret.",
-   "bas": 5.15,
-   "son": 8.17,
+   "metin": "O gece, sonunda başlamaya karar verdi.",
+   "bas": 5.6,
+   "son": 7.82,
    "ic": false
   },
   {
    "k": "n4",
-   "metin": "Araştırmaya başlıyor.",
+   "metin": "İlk arama masum görünüyordu.",
    "bas": 8.7,
-   "son": 10.04,
+   "son": 10.44,
    "ic": false
   },
   {
    "k": "n5",
-   "metin": "Ne satacak?",
+   "metin": "Sonra sekmeler çoğaldı.",
    "bas": 10.6,
-   "son": 11.43,
+   "son": 12.11,
    "ic": false
   },
   {
    "k": "n6",
-   "metin": "Ürünleri nereden bulacak?",
-   "bas": 11.95,
-   "son": 13.59,
+   "metin": "Ne satacaktı? Ürünü nereden bulacaktı?",
+   "bas": 12.26,
+   "son": 14.9,
    "ic": false
   },
   {
    "k": "n7",
-   "metin": "Şirket kurmak şart mı?",
-   "bas": 13.95,
-   "son": 15.56,
+   "metin": "Şirket şart mıydı? Stokları nereye koyacaktı?",
+   "bas": 15.05,
+   "son": 17.93,
    "ic": false
   },
   {
    "k": "n8",
-   "metin": "Stokları nereye koyacak?",
-   "bas": 15.75,
-   "son": 17.71,
-   "ic": false
-  },
-  {
-   "k": "n9",
-   "metin": "Her cevap, yeni bir soru doğuruyor.",
-   "bas": 17.85,
-   "son": 19.9,
+   "metin": "Her cevap, iki yeni soru getiriyordu.",
+   "bas": 18.08,
+   "son": 20.39,
    "ic": false
   },
   {
@@ -72,86 +65,100 @@
   },
   {
    "k": "i2",
-   "metin": "Nasıl başlayacağım ki?",
-   "bas": 24.4,
-   "son": 25.88,
+   "metin": "Belki de bu iş bana göre değil.",
+   "bas": 24.0,
+   "son": 25.75,
    "ic": true
   },
   {
-   "k": "n10",
-   "metin": "Çoğu insan, tam bu noktada vazgeçiyor.",
+   "k": "n9",
+   "metin": "Çoğu insanın hikâyesi, tam burada biter.",
    "bas": 26.2,
-   "son": 28.38,
+   "son": 28.73,
+   "ic": false
+  },
+  {
+   "k": "n10",
+   "metin": "Ama Ahmet, o gece uyuyamadı.",
+   "bas": 29.6,
+   "son": 32.01,
    "ic": false
   },
   {
    "k": "n11",
-   "metin": "Ama Ahmet'in gözünden kaçan bir şey vardı.",
-   "bas": 29.6,
-   "son": 31.89,
+   "metin": "Ve karşısına, aklına hiç gelmeyen bir soru çıktı.",
+   "bas": 32.4,
+   "son": 35.18,
    "ic": false
   },
   {
    "k": "n12",
-   "metin": "Kendi ürününü üretmeden, stok tutmadan da e-ticarete başlamak mümkündü.",
-   "bas": 32.9,
-   "son": 37.27,
+   "metin": "Ya ürün üretmeden, stok tutmadan da başlamak mümkünse?",
+   "bas": 35.33,
+   "son": 38.46,
    "ic": false
   },
   {
    "k": "n13",
    "metin": "Peki sonra ne oldu?",
    "bas": 38.85,
-   "son": 40.02,
+   "son": 40.16,
    "ic": false
   },
   {
    "k": "n14",
-   "metin": "Ahmet, her şeyi aynı anda bilmek zorunda olmadığını fark etti.",
+   "metin": "Sabah olduğunda, masasında bir liste vardı.",
    "bas": 42.8,
-   "son": 46.54,
+   "son": 45.6,
    "ic": false
   },
   {
    "k": "n15",
-   "metin": "Önce doğru modeli öğrenecek, sonra ilk adımı atacaktı.",
-   "bas": 47.1,
-   "son": 50.29,
+   "metin": "Her şeyi bilmesi gerekmiyordu.",
+   "bas": 45.75,
+   "son": 47.37,
    "ic": false
   },
   {
    "k": "n16",
-   "metin": "Her şey yolunda gibiydi.",
-   "bas": 51.0,
-   "son": 52.29,
+   "metin": "Önce doğru modeli öğrenecek, sonra ilk adımı atacaktı.",
+   "bas": 47.52,
+   "son": 50.88,
    "ic": false
   },
   {
    "k": "n17",
-   "metin": "Ta ki birkaç gün sonra, telefonuna o mesaj gelene kadar.",
-   "bas": 52.75,
-   "son": 55.93,
+   "metin": "Aylar sonra ilk kez, içi rahattı.",
+   "bas": 51.03,
+   "son": 53.05,
    "ic": false
   },
   {
    "k": "n18",
-   "metin": "O mesajda ne yazıyordu?",
-   "bas": 57.8,
-   "son": 59.19,
+   "metin": "Ta ki üç gün sonra, telefonu titreyene kadar.",
+   "bas": 53.2,
+   "son": 56.24,
    "ic": false
   },
   {
    "k": "n19",
-   "metin": "Cevabı, ikinci bölümde.",
-   "bas": 60.1,
-   "son": 62.09,
+   "metin": "Mesajı okudu. Ve olduğu yerde kaldı.",
+   "bas": 57.5,
+   "son": 60.22,
    "ic": false
   },
   {
    "k": "n20",
-   "metin": "Ahmet'in bu soruya ne cevap verdiğini kaçırmamak için beni takip etmeyi unutma.",
-   "bas": 62.4,
-   "son": 67.01,
+   "metin": "O mesajda ne yazıyordu? Cevabı, ikinci bölümde.",
+   "bas": 60.37,
+   "son": 64.06,
+   "ic": false
+  },
+  {
+   "k": "n21",
+   "metin": "Ahmet'in ne yapacağını kaçırmamak için takip et.",
+   "bas": 64.41,
+   "son": 67.32,
    "ic": false
   }
  ],
@@ -159,8 +166,8 @@
   {
    "bas": 0.0,
    "son": 8.0,
-   "s1": "E-TİCARETE",
-   "s2": "BAŞLAMAK MI?",
+   "s1": "HERKESİN BİR",
+   "s2": "GECE YARISI FİKRİ",
    "renk": "#F67102"
   },
   {
@@ -173,15 +180,15 @@
   {
    "bas": 26.2,
    "son": 29.3,
-   "s1": "ÇOĞU İNSAN",
-   "s2": "BURADA BIRAKIR",
+   "s1": "ÇOĞU HİKÂYE",
+   "s2": "BURADA BİTER",
    "renk": "#FF5A5A"
   },
   {
    "bas": 29.6,
    "son": 38.3,
-   "s1": "GÖZDEN KAÇAN",
-   "s2": "BİR DETAY",
+   "s1": "AKLINA GELMEYEN",
+   "s2": "BİR SORU",
    "renk": "#5AB4FF"
   },
   {
@@ -202,54 +209,59 @@
   {
    "bas": 52.75,
    "son": 55.3,
-   "s1": "TA Kİ",
-   "s2": "O MESAJ GELENE KADAR",
+   "s1": "ÜÇ GÜN SONRA",
+   "s2": "O MESAJ",
    "renk": "#FF5A5A"
   },
   {
-   "bas": 57.8,
-   "son": 59.65,
+   "bas": 57.5,
+   "son": 60.2,
    "s1": "O MESAJDA",
    "s2": "NE YAZIYORDU?",
    "renk": "#F67102"
   }
  ],
  "vurgu": [
-  "adımı",
-  "ahmet",
-  "anda",
-  "aynı",
-  "başlayacağım",
-  "bilmiyorum",
-  "bulacak",
-  "bölümde",
-  "cevap",
-  "doğru",
-  "e-ticaret",
-  "gözünden",
-  "ikinci",
-  "ilk",
-  "kararın",
-  "kaçan",
-  "mesaj",
-  "mesajda",
-  "modeli",
-  "mümkündü",
-  "olacak",
-  "satacak",
-  "seninki",
-  "sonra",
-  "soru",
-  "stok",
+  "gece",
+  "fikri",
+  "karar",
+  "masum",
+  "sekmeler",
+  "satacaktı",
+  "bulacaktı",
+  "şart",
   "stokları",
-  "takip",
-  "tutmadan",
-  "unutma",
-  "vazgeçiyor",
-  "yolunda",
+  "iki",
+  "yeni",
+  "bilmiyorum",
+  "göre",
+  "değil",
+  "hikâyesi",
+  "biter",
+  "uyuyamadı",
+  "soru",
   "üretmeden",
-  "şart"
+  "stok",
+  "tutmadan",
+  "mümkünse",
+  "sonra",
+  "liste",
+  "gerekmiyordu",
+  "doğru",
+  "modeli",
+  "ilk",
+  "adımı",
+  "rahattı",
+  "üç",
+  "titreyene",
+  "mesajı",
+  "kaldı",
+  "mesajda",
+  "ikinci",
+  "takip",
+  "fikri",
+  "e-ticaret"
  ],
- "takipTik": 65.76,
- "bitis": 67.61
+ "takipTik": 66.47,
+ "bitis": 67.92
 }

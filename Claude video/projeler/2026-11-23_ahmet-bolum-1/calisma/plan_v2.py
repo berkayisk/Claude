@@ -27,7 +27,7 @@ P["basliklar"] = [
  {"bas": 38.5, "son": 41.7, "s1": "PEKİ SONRA", "s2": "NE OLDU?", "renk": "#F67102", "orta": True},
  {"bas": 42.8, "son": 50.9, "s1": "ÖNCE DOĞRU MODEL", "s2": "SONRA İLK ADIM", "renk": "#2ED47A"},
  {"bas": 52.75, "son": 55.3, "s1": "ÜÇ GÜN SONRA", "s2": "O MESAJ", "renk": "#FF5A5A"},
- {"bas": 57.5, "son": 59.65, "s1": "O MESAJDA", "s2": "NE YAZIYORDU?", "renk": "#F67102"}]
+ {"bas": 57.5, "son": 60.2, "s1": "O MESAJDA", "s2": "NE YAZIYORDU?", "renk": "#F67102"}]
 P["vurgu"] = ["gece", "fikri", "e-ticaretti", "karar", "masum", "sekmeler", "satacaktı", "bulacaktı", "şart", "stokları", "iki", "yeni",
               "bilmiyorum", "göre", "değil", "hikâyesi", "biter", "uyuyamadı", "soru", "üretmeden", "stok", "tutmadan", "mümkünse",
               "sonra", "liste", "gerekmiyordu", "doğru", "modeli", "ilk", "adımı", "rahattı", "üç", "titreyene", "mesajı", "kaldı",

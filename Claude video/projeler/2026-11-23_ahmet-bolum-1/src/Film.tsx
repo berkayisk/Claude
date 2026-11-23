@@ -75,12 +75,12 @@ const CEKIMLER: Cekim[] = [
   { id: "6A", bas: 54, sure: 1.3, C: ({ f, d }) => (
     <OdaPlan z="sabah" f={f} cx={ara(f, [0, d], [620, 760], yavas)} cy={1060} s={ara(f, [0, d], [1.12, 0.98], yavas)} ahmet="masa" kupa lambaAcik={false} toz />
   ) },
-  { id: "6C", bas: 55.3, sure: 4.4, C: ({ f, d }) => <MasadakiTelefon f={f} d={d} /> },
+  { id: "6C", bas: 55.3, sure: 4.95, C: ({ f, d }) => <MasadakiTelefon f={f} d={d} /> },
 ];
 
 // 6C — masadaki telefon titreşir, bildirim gelir (yazısı okunmaz: merak)
 const MasadakiTelefon: React.FC<{ f: number; d: number }> = ({ f, d }) => {
-  const t0 = s(0.3); // 55.6 sn
+  const t0 = s(1.0); // 56.3 sn: "…titreyene kadar" biter bitmez
   const yan = f >= t0 ? 1 : 0;
   const titre = (f >= t0 && f < t0 + 6) || (f >= t0 + 12 && f < t0 + 18) ? Math.sin(f * 3.1) * 7 : 0;
   const zoom = ara(f, [0, d], [1.0, 1.28], yavas);
@@ -123,7 +123,7 @@ const MasadakiTelefon: React.FC<{ f: number; d: number }> = ({ f, d }) => {
 const Bolum2: React.FC<{ f: number }> = ({ f }) => {
   const g = interpolate(f, [2, 12], [0, 1], { ...kl, easing: Easing.out(Easing.back(1.5)) });
   const t2 = interpolate(f, [16, 26], [0, 1], kl);
-  const tk = s((plan as any).takipTik - 59.7);
+  const tk = s((plan as any).takipTik - 60.25);
   const tik = f >= tk;
   const bas = interpolate(f, [tk - 3, tk, tk + 3], [1, 0.92, 1], kl);
   return (
@@ -207,7 +207,7 @@ export const Film: React.FC = () => {
           <CekimSar c={c} />
         </Sequence>
       ))}
-      <Sequence from={s(59.7)} durationInFrames={s((plan as any).bitis - 59.7) + 2} name="6B"><KapanisSar /></Sequence>
+      <Sequence from={s(60.25)} durationInFrames={s((plan as any).bitis - 60.25) + 2} name="6B"><KapanisSar /></Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 16%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.6) 92%)" }} />
       <Baslik t={f / FPS} />
       <Altyazi t={f / FPS} />
