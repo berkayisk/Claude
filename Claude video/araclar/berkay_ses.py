@@ -112,8 +112,8 @@ def main(girdi, cikti):
             beklenen = 0.075 * len(metin) + 0.4
             if len(w) / m.sr > beklenen * 1.45: sk -= 0.5; tr += f"  [çok uzun {len(w)/m.sr:.1f}s > {beklenen:.1f}s]"
             # telaffuz (GOP): her kelime Berkay'ın gerçek okuma düzeyinde mi?
-            w16 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(m.sr), "-ac", "1", "-i", "-", "-ar", "16000", "-f", "f32le", "-"],
-                                 input=w.astype(np.float32).tobytes(), capture_output=True).stdout
+            w16 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(m.sr), "-ac", "1", "-i", "-", "-af", f"aresample=48000,{NETLIK}", "-ar", "16000", "-f", "f32le", "-"],
+                                 input=w.astype(np.float32).tobytes(), capture_output=True).stdout   # son işlenmiş hali denetlenir
             pu = dn.kelime_puanlari(np.frombuffer(w16, np.float32).copy(), metin)
             minw = min(o for _, o, _ in pu); kotu = [f"{x}({o:.2f})" for x, o, _ in pu if o < SUPHE]
             if kotu: sk -= 0.2 + 0.3 * (SUPHE - minw); tr += "  [telaffuz: " + " ".join(kotu) + "]"
@@ -127,7 +127,7 @@ def main(girdi, cikti):
         json.dump(d, open(yol, "w"), ensure_ascii=False, indent=1)
     # perde: tüm satırların medyan perdesi Berkay'ın kaydına eşitlenir (tek oran -> tonlama korunur), ±10% sınır
     oran = float(np.clip(HEDEF_F0 / np.median([v[4] for v in d.values()]), 0.9, 1.1))
-    filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.015 else ""
+    filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.035 else ""  # küçük farklarda kaydırma yapma: rubberband ünsüzleri bozabiliyor ("kaçırmamak"→"kaçınmamak")
     for k in d:
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{cikti}/{k}_ham.wav", "-af", f"{filt}aresample=48000,{NETLIK}", "-ac", "1", f"{cikti}/{k}.wav"])
         d[k][1] = round(sf.info(f"{cikti}/{k}.wav").duration, 2)
@@ -138,7 +138,7 @@ def sadece_son_islem(cikti):
     """mevcut <k>_ham.wav dosyalarından perde + netlik adımını yeniden uygular (yeniden üretmeden)"""
     yol = os.path.join(cikti, "sureler.json"); d = json.load(open(yol))
     oran = float(np.clip(HEDEF_F0 / np.median([v[4] for v in d.values()]), 0.9, 1.1))
-    filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.015 else ""
+    filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.035 else ""  # küçük farklarda kaydırma yapma: rubberband ünsüzleri bozabiliyor ("kaçırmamak"→"kaçınmamak")
     for k in d:
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{cikti}/{k}_ham.wav", "-af", f"{filt}aresample=48000,{NETLIK}", "-ac", "1", f"{cikti}/{k}.wav"])
         d[k][1] = round(sf.info(f"{cikti}/{k}.wav").duration, 2)

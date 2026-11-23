@@ -60,3 +60,9 @@
 - Kullanıcı: "sesimi klonla, tüm bölümler için bu klonu kullanacağız". Referans artık anlatım kaydından (eski klon Ankara reklamından → 1,5 yarım ton pes/kalın).
 - `araclar/berkay_ses.py` + `calisma/satirlar.json` (senaryonun doğru hali: vardı / mümkündü / Peki sonra ne oldu? / fark etti + n20 takip çağrısı).
 - Gerçek kayda benzerlik 0,88–0,91; perde oranı x1.03. calisma/vo_klon/.
+
+## v10 — Türkçe telaffuz denetimi (/turkce-seslendirme)
+- GOP denetçisi (araclar/telaffuz.py, wav2vec2 Türkçe CTC, dil modelsiz), eşik Berkay'ın gerçek okumasıyla kalibre.
+- Şüpheli bulunup yeniden üretilen: var, başlayacağım, ürününü (3 deneme reddedildi), adımı, Ahmet'in, doğuruyor, aynı.
+- Rubberband perde kaydırma ünsüzleri bozuyordu ("kaçırmamak"→"kaçınmamak", "başlayacağım") → %3,5 altı farkta kaydırma yok.
+- Kabul kontrolü artık son işlenmiş (netlik) ses üzerinde. 22/22 satır denetimden geçti.

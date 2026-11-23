@@ -60,7 +60,7 @@
    "k": "n9",
    "metin": "Her cevap, yeni bir soru doğuruyor.",
    "bas": 17.85,
-   "son": 19.98,
+   "son": 19.9,
    "ic": false
   },
   {
@@ -74,7 +74,7 @@
    "k": "i2",
    "metin": "Nasıl başlayacağım ki?",
    "bas": 24.4,
-   "son": 25.43,
+   "son": 25.88,
    "ic": true
   },
   {
@@ -95,7 +95,7 @@
    "k": "n12",
    "metin": "Kendi ürününü üretmeden, stok tutmadan da e-ticarete başlamak mümkündü.",
    "bas": 32.9,
-   "son": 37.2,
+   "son": 37.27,
    "ic": false
   },
   {
@@ -109,14 +109,14 @@
    "k": "n14",
    "metin": "Ahmet, her şeyi aynı anda bilmek zorunda olmadığını fark etti.",
    "bas": 42.8,
-   "son": 46.49,
+   "son": 46.54,
    "ic": false
   },
   {
    "k": "n15",
    "metin": "Önce doğru modeli öğrenecek, sonra ilk adımı atacaktı.",
    "bas": 47.1,
-   "son": 50.62,
+   "son": 50.29,
    "ic": false
   },
   {
@@ -151,7 +151,7 @@
    "k": "n20",
    "metin": "Ahmet'in bu soruya ne cevap verdiğini kaçırmamak için beni takip etmeyi unutma.",
    "bas": 62.4,
-   "son": 66.81,
+   "son": 67.01,
    "ic": false
   }
  ],
@@ -250,6 +250,6 @@
   "üretmeden",
   "şart"
  ],
- "takipTik": 65.64,
- "bitis": 67.41
+ "takipTik": 65.76,
+ "bitis": 67.61
 }
