@@ -71,7 +71,7 @@ class Denetci:
             ids.append(self.vocab["|"])
         ids = ids[:-1]
         lp = self.logp(a)
-        if lp.shape[0] < len(ids) * 2: return [(w, -9.0) for w in ws]
+        if lp.shape[0] < len(ids) * 2: return [(w, -9.0, -9.0) for w in ws]
         kar = self.hizala(lp, ids)
         out = []
         for w, (b, e) in zip(ws, sinir):
@@ -81,6 +81,27 @@ class Denetci:
                 if fr: sk.append(float(np.mean(lp[fr, ids[j]])))  # harfin tüm karelerinin ortalaması (ünlü kalitesi/aksan)
                 else: sk.append(-9.0)
             out.append((w, float(np.mean(sk)) if sk else -9.0, float(np.min(sk)) if sk else -9.0))
+        return out
+
+    def harf_zamanlari(self, a, metin):
+        """her kelime için [(harf, başlangıç_sn, bitiş_sn)] — wav2vec2 karesi 20 ms (vurgu/tonlama ölçümü için)"""
+        ws = kelimeler(metin)
+        ids, sinir, harfler = [], [], []
+        for w in ws:
+            bas = len(ids); hs = [ch for ch in w if ch in self.vocab]
+            ids += [self.vocab[ch] for ch in hs]; harfler += hs
+            sinir.append((bas, len(ids))); ids.append(self.vocab["|"]); harfler.append("|")
+        ids = ids[:-1]; harfler = harfler[:-1]
+        lp = self.logp(a)
+        if lp.shape[0] < len(ids) * 2: return [(w, []) for w in ws]
+        kar = self.hizala(lp, ids)
+        out = []
+        for w, (b, e) in zip(ws, sinir):
+            hz = []
+            for j in range(b, e):
+                fr = kar.get(j, [])
+                if fr: hz.append((harfler[j], min(fr) * 0.02, (max(fr) + 1) * 0.02))
+            out.append((w, hz))
         return out
 
 def oku16(p):

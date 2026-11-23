@@ -68,4 +68,6 @@ projeler/<proje>/
 - Perde kaydırma sonrası da bağlam içinde (satırları birleştirerek) yeniden doğrula: bir kez "kaçırmamak" → "kaçınmamak" oldu.
 - Kurulum (yeni oturum): `pip install --no-deps chatterbox-tts torchaudio==2.11.1` + librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0
   resemble-perth conformer==0.3.2 pyloudnorm omegaconf pykakasi==2.3.0 "setuptools<81"; ilk çalıştırmada HF'den model iner (HF_HUB_DISABLE_XET=1).
+- Telaffuz: `/turkce-seslendirme` (araclar/telaffuz.py GOP + telaffuz_sozluk.json). Vurgu/tonlama: `/vurgu-tonlama` (araclar/vurgu.py,
+  Berkay'ın gerçek okumasından öğrenilmiş vurgu profili; klonun tipik hatası vurguyu sona kaydırmak: sonRA, kaDAR, aMA, önCE).
 - ElevenLabs anahtarı da ortamda kayıtlı (ücretsiz plan: kütüphane sesleri API'de yok). Başka kişilerin/kanalların sesi klonlanmaz.

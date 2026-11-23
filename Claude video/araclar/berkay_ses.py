@@ -10,6 +10,7 @@ satirlar.json: [{"k": "n1", "metin": "Bu Ahmet."}, {"k": "i1", "metin": "...", "
 Her satır için:
   1. en fazla 8 deneme üretilir; Whisper metni birebir okumalı VE her kelimenin telaffuz puanı (araclar/telaffuz.py, GOP) eşiğin üstünde olmalı;
      seslendirmeye giden yazım araclar/telaffuz_sozluk.json ile düzeltilir (altyazıda asıl yazım kalır)
+  1b. metni doğru okuyan adaylar arasında vurgu/tonlaması Berkay'ın okumasına en yakın olan seçilir (araclar/vurgu.py)
   2. enerji tabanlı kırpma (baş: ilk -50 dB üstü - 50 ms, son: -42 dB altına 120 ms inene kadar)
   3. son kelimeden sonraki ilk sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir
   5. netlik zinciri (NETLIK) uygulanır: boğukluğu giderir
@@ -69,7 +70,8 @@ def seslendirme_yazimi(metin):
 def main(girdi, cikti):
     sys.path.insert(0, os.path.join(KOK, "araclar"))
     from telaffuz import Denetci
-    dn = Denetci()
+    from vurgu import Olcer
+    dn = Denetci(); ol = Olcer(dn)
     from chatterbox.mtl_tts import ChatterboxMultilingualTTS
     from faster_whisper import WhisperModel
     os.makedirs(cikti, exist_ok=True)
@@ -118,9 +120,15 @@ def main(girdi, cikti):
             minw = min(o for _, o, _ in pu); kotu = [f"{x}({o:.2f})" for x, o, _ in pu if o < SUPHE]
             if kotu: sk -= 0.2 + 0.3 * (SUPHE - minw); tr += "  [telaffuz: " + " ".join(kotu) + "]"
             print(f"  {k} deneme {i}: {sk:.3f} | {tr}", flush=True)
-            if sk > en[0]: en = (sk, w, tr)
-            if sk >= 0.999: break
+            # vurgu/tonlama: Berkay'ın okuma alışkanlığına uygunluk (araclar/vurgu.py) — metni doğru okuyan adaylar arasında seçim ölçütü
+            vp = ol.olc(np.frombuffer(w16, np.float32).copy(), metin) if sk >= 0.999 else {"puan": 0.0, "sorunlar": []}
+            toplam = sk + 0.5 * vp["puan"]
+            if vp["sorunlar"]: tr += "  [vurgu " + f"{vp['puan']:.2f}: " + "; ".join(x.split(" (")[0] for x in vp["sorunlar"][:3]) + "]"
+            print(f"     vurgu puanı {vp['puan']:.2f}", flush=True)
+            if toplam > en[0]: en = (toplam, w, tr)
+            if sk >= 0.999 and vp["puan"] >= 0.85: break
         sk, w, tr = en
+        sk = min(1.0, sk)   # (whisper + 0.5×vurgu birleşik puanı; raporda 1'e kırpılır)
         sf.write(f"{cikti}/{k}_ham.wav", w, m.sr)
         d[k] = [metin, round(len(w) / m.sr, 2), round(sk, 3), tr, round(f0(w, m.sr), 1)]
         print(f"{k} {len(w)/m.sr:.2f} sn  skor {sk:.3f}", flush=True)

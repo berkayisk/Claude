@@ -29,9 +29,11 @@ Her satır için ≤ 8 deneme; bir deneme ancak şunları geçerse kabul edilir:
 - süre metne göre makul (fazladan üretilen ses son kelimeden sonraki sessizlikte kesilir).
 Seslendirmeye giden metne `araclar/telaffuz_sozluk.json` uygulanır (altyazıda asıl yazım kalır).
 
+- **Vurgu/tonlama** (`/vurgu-tonlama`, `araclar/vurgu.py`): doğru okuyan adaylar arasında vurgusu Berkay'ın okumasına en yakın olan seçilir.
+
 ## 3. Rapor ver
 Üretim sonunda kullanıcıya: kaç satır ilk denemede geçti, hangi kelimeler şüpheli kaldı (GOP değerleriyle), en düşük puanlı
-3–5 kelimenin zaman kodu → "bunları bir dinler misin" listesi. Asla "hepsi doğru" deme; ölçüm vurguyu/tonlamayı yakalamaz.
+3–5 kelimenin zaman kodu → "bunları bir dinler misin" listesi. Asla "hepsi doğru" deme; vurgu/tonlama ölçümü (`/vurgu-tonlama`) yaklaşık bir göstergedir, kulak kontrolü gerekir.
 Denetim: `python3 ../../araclar/telaffuz.py denetle senaryo/satirlar.json calisma/vo_klon`
 
 ## 4. Kulak geri bildirimi → kalıcı düzeltme
