@@ -3,7 +3,7 @@ Zamanlar prodüksiyon planındaki seslendirme ve müzik tablosundan."""
 import numpy as np, subprocess, wave, json
 
 SR = 48000
-DUR = 60.0
+DUR = 61.0
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 
@@ -140,17 +140,26 @@ while t < 57.5:
 sw = np.ones(N); a, b = int(39.5 * SR), int(42.5 * SR)
 sw[a:b] = 1 + 0.8 * np.sin(np.linspace(0, np.pi, b - a))
 muzB *= sw
-# son: 58'de akor söner, 58.3 tek nota
-fo = np.ones(N); fo[int(58.0 * SR):] = np.linspace(1, 0, N - int(58.0 * SR))
+# son: 52.8'de umutlu tema çekilir -> 53-58.3 gerilim (cliffhanger), 58.3 vurgu, final kartında tek nota
+fo = np.interp(np.arange(N) / SR, [0, 52.6, 53.6, 57.6, 58.2, 61], [1, 1, 0.12, 0.08, 0, 0])
 muzB *= fo
-ekle(muzB, piyano(62 + 12, 1.6, 0.4), 58.3)
+gr = np.zeros(N)
+ekle(gr, yayli([38, 45, 49], 5.4, 0.55, 1.2), 53.0)          # karanlık re minör (fa naturel)
+ekle(gr, yayli([61, 62], 3.0, 0.25, 2.0), 55.4)               # disonant gerilim
+tt = 53.0
+while tt < 58.0:
+    n = int(0.45 * SR); tn = np.arange(n) / SR
+    ekle(gr, np.sin(2 * np.pi * 52 * tn) * np.exp(-tn * 8) * (0.6 + 0.4 * (tt - 53) / 5), tt); tt += 60 / (70 + (tt - 53) * 14)
+gr[int(58.2 * SR):] = 0
+muzB += lp(gr, 1500) * 1.4
+ekle(muzB, piyano(50, 3.0, 0.5), 58.35); ekle(muzB, piyano(57 + 12, 2.5, 0.35), 58.35)
 muz += muzB
 muz = reverb(muz, 2.6, 0.32)
 muz = muz / (np.abs(muz).max() + 1e-9)
 # seviye otomasyonu (seslendirme altında ~-20 dB görece, araları biraz yukarı)
 otom = np.interp(np.arange(N) / SR,
-                 [0, 0.5, 8, 16, 19, 32, 33, 36, 41.5, 42.5, 54, 54.6, 58, 60],
-                 [0, .18, .18, .14, .14, .14, .16, .18, .30, .20, .20, .21, .26, .30])
+                 [0, 0.5, 8, 16, 19, 32, 33, 36, 41.5, 42.5, 52.6, 53.2, 58.2, 58.4, 61],
+                 [0, .18, .18, .14, .14, .14, .16, .18, .30, .20, .20, .24, .26, .22, .22])
 muz *= otom
 
 # ---------------- SES EFEKTLERİ ----------------
@@ -233,8 +242,16 @@ ekle(fx, kapak_ac(), 39.4); ekle(fx, trackpad(2, 0.5), 40.6)
 ekle(fx, kalem(2.6), 45.2); ekle(fx, tik(0.05, 400, 3000, 0.6), 47.6)   # sayfa
 ekle(fx, klavye(2.4, 7, 0.28), 48.3); ekle(fx, trackpad(2, 0.8), 49.2)
 ekle(fx, seramik(), 52.5)
-ekle(fx, klavye(3.5, 6, 0.18), 54.2)
-fx[int(58.0 * SR):] *= np.linspace(1, 0, N - int(58.0 * SR)) ** 2
+ekle(fx, klavye(1.2, 6, 0.18), 54.0)
+# telefon titreşimi + bildirim (55.6), 58.3 kesme vurgusu, takip et tıklaması
+def titresim(sure=0.35):
+    n = int(sure * SR); tn = np.arange(n) / SR
+    return (np.sign(np.sin(2 * np.pi * 160 * tn)) * 0.4 + np.sin(2 * np.pi * 320 * tn) * 0.2) * np.sin(np.linspace(0, np.pi, n)) * 0.25
+ekle(fx, titresim(), 55.55); ekle(fx, titresim(), 56.05)
+ekle(fx, wav("bildirim"), 55.6, 0.5)
+fx[int(58.25 * SR):] *= 0.0
+ekle(fx, wav("boom"), 58.28, 0.35)
+ekle(fx, wav("tik"), 60.15, 0.6); ekle(fx, wav("basari"), 60.2, 0.3)
 
 # ---------------- MİKS ----------------
 mix = voR * 1.0 + muz * 0.9 + fx * 0.9

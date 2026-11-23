@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, interpolate, Easing } from "remotion";
+import { AbsoluteFill, Audio, Img, Sequence, staticFile, useCurrentFrame, interpolate, Easing } from "remotion";
 import { OdaPlan, MasaOn, YuzYakin, TelefonYakin, EkranAkis, EkranMarka, LaptopYakin, EkranArastirma, EkranKurulum, Defter, Gren, Vinyet, INTER, ara } from "./sahneler";
 import { Isik } from "./ahmet";
 
@@ -72,20 +72,72 @@ const CEKIMLER: Cekim[] = [
       ifade={{ gozX: -0.3, gozY: 0.4, gulum: ara(f, [6, 36], [0, 0.9]), kasY: ara(f, [6, 36], [0, -3]) }} kupa={ara(f, [48, 70], [0, 0.55])} />
   ) },
   // SAHNE 6 — Kapanış (sabah)
-  { id: "6A", bas: 54, sure: 4, C: ({ f, d }) => (
-    <OdaPlan z="sabah" f={f} cx={ara(f, [0, d], [620, 1000], yavas)} cy={ara(f, [0, d], [1050, 1150], yavas)} s={ara(f, [0, d], [1.12, 0.8], yavas)} ahmet="masa" kupa lambaAcik={false} toz
-      karartma={ara(f, [d - 12, d], [0, 1], Easing.in(Easing.quad))} />
+  { id: "6A", bas: 54, sure: 1.3, C: ({ f, d }) => (
+    <OdaPlan z="sabah" f={f} cx={ara(f, [0, d], [620, 760], yavas)} cy={1060} s={ara(f, [0, d], [1.12, 0.98], yavas)} ahmet="masa" kupa lambaAcik={false} toz />
   ) },
+  { id: "6C", bas: 55.3, sure: 3.0, C: ({ f, d }) => <MasadakiTelefon f={f} d={d} /> },
 ];
 
-const Kapanis: React.FC<{ f: number }> = ({ f }) => {
-  const g = interpolate(f, [7, 19], [0, 1], kl);
+// 6C — masadaki telefon titreşir, bildirim gelir (yazısı okunmaz: merak)
+const MasadakiTelefon: React.FC<{ f: number; d: number }> = ({ f, d }) => {
+  const t0 = s(0.3); // 55.6 sn
+  const yan = f >= t0 ? 1 : 0;
+  const titre = (f >= t0 && f < t0 + 6) || (f >= t0 + 12 && f < t0 + 18) ? Math.sin(f * 3.1) * 7 : 0;
+  const zoom = ara(f, [0, d], [1.0, 1.28], yavas);
+  const banner = interpolate(f, [t0, t0 + 6], [0, 1], kl);
   return (
-    <AbsoluteFill style={{ background: "#000", justifyContent: "center", alignItems: "center", flexDirection: "column" }}>
-      <div style={{ opacity: g, fontFamily: INTER, fontWeight: 800, fontSize: 92, letterSpacing: 4, color: "white" }}>
-        SIFIRDAN <span style={{ color: "#F67102" }}>SATIŞA</span>
+    <AbsoluteFill style={{ background: "#c49d74", overflow: "hidden" }}>
+      <AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: "540px 900px" }}>
+        <svg width={1080} height={1920} style={{ position: "absolute" }}>
+          <defs><radialGradient id="tmIsik" cx="0.25" cy="0.15" r="0.9"><stop offset="0" stopColor="#fff2cc" stopOpacity={0.55} /><stop offset="1" stopColor="#5a3a1a" stopOpacity={0.35} /></radialGradient></defs>
+          <rect width={1080} height={1920} fill="#c49d74" />
+          {Array.from({ length: 12 }).map((_, i) => <line key={i} x1={0} y1={i * 170 + 40} x2={1080} y2={i * 170 + 70} stroke="rgba(0,0,0,0.07)" strokeWidth={6} />)}
+          {/* defter köşesi ve kupa (bulanık kenarlar) */}
+          <rect x={-120} y={1350} width={520} height={700} rx={10} fill="#f6f3ea" transform="rotate(-10 140 1700)" />
+          <circle cx={900} cy={380} r={120} fill="#f3efe7" /><circle cx={900} cy={380} r={92} fill="#6b4226" />
+          <rect width={1080} height={1920} fill="url(#tmIsik)" />
+        </svg>
+        <div style={{ position: "absolute", left: 300, top: 520, width: 480, height: 980, borderRadius: 70, background: "#0b0b0e", transform: `rotate(-8deg) translateX(${titre}px)`, boxShadow: yan ? "0 0 120px rgba(170,200,255,0.45), 0 30px 60px rgba(0,0,0,0.35)" : "0 30px 60px rgba(0,0,0,0.35)" }}>
+          <div style={{ position: "absolute", left: 18, top: 18, right: 18, bottom: 18, borderRadius: 54, background: yan ? "linear-gradient(170deg, #1d2a4a 0%, #0c1222 100%)" : "#050506", overflow: "hidden" }}>
+            {yan ? (
+              <>
+                <div style={{ position: "absolute", top: 120, width: "100%", textAlign: "center", fontFamily: INTER, fontWeight: 300, fontSize: 120, color: "white" }}>09:41</div>
+                <div style={{ position: "absolute", left: 22, right: 22, top: 330, height: 150, borderRadius: 30, background: "rgba(255,255,255,0.88)", opacity: banner, transform: `translateY(${(1 - banner) * -40}px)`, display: "flex", alignItems: "center", gap: 18, padding: "0 22px" }}>
+                  <div style={{ width: 70, height: 70, borderRadius: 18, background: "#F67102", flexShrink: 0 }} />
+                  <div style={{ flex: 1, filter: "blur(7px)" }}>
+                    <div style={{ height: 22, width: "60%", borderRadius: 11, background: "#222", marginBottom: 14 }} />
+                    <div style={{ height: 18, width: "90%", borderRadius: 9, background: "#555" }} />
+                  </div>
+                </div>
+              </>
+            ) : null}
+          </div>
+        </div>
+      </AbsoluteFill>
+      <Vinyet guc={0.9} />
+    </AbsoluteFill>
+  );
+};
+
+// Final kartı: Bölüm 2 + takip et (referans stili)
+const Bolum2: React.FC<{ f: number }> = ({ f }) => {
+  const g = interpolate(f, [2, 12], [0, 1], { ...kl, easing: Easing.out(Easing.back(1.5)) });
+  const t2 = interpolate(f, [16, 26], [0, 1], kl);
+  const tik = f >= s(1.85);
+  const bas = interpolate(f, [s(1.8), s(1.85), s(1.95)], [1, 0.92, 1], kl);
+  return (
+    <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1a1f33 0%, #05060a 70%)", alignItems: "center", fontFamily: POP }}>
+      <div style={{ position: "absolute", top: 300, opacity: g * 0.7, fontWeight: 600, fontSize: 34, letterSpacing: 8, color: "white" }}>AHMET E-TİCARETE BAŞLAMAK İSTİYOR</div>
+      <div style={{ position: "absolute", top: 400, opacity: g, transform: `scale(${0.8 + 0.2 * g})`, textAlign: "center", lineHeight: 1 }}>
+        <div style={{ fontWeight: 800, fontSize: 170, color: "white", letterSpacing: -4 }}>BÖLÜM 2</div>
+        <div style={{ fontWeight: 800, fontSize: 64, color: "#F67102", marginTop: 14 }}>ÇOK YAKINDA</div>
       </div>
-      <div style={{ opacity: g * 0.75, marginTop: 22, fontFamily: INTER, fontWeight: 500, fontSize: 36, letterSpacing: 10, color: "white" }}>BÖLÜM 1</div>
+      <div style={{ position: "absolute", top: 820, opacity: t2, display: "flex", flexDirection: "column", alignItems: "center", gap: 22 }}>
+        <Img src={staticFile("berkay-isik-profil.png")} style={{ width: 230, height: 230, borderRadius: 115, objectFit: "cover", border: "6px solid #F67102" }} />
+        <div style={{ fontWeight: 700, fontSize: 54, color: "white" }}>@sifirdansatisa</div>
+        <div style={{ fontWeight: 500, fontSize: 38, color: "rgba(255,255,255,0.75)" }}>Kaçırmamak için takip et</div>
+        <div style={{ marginTop: 10, transform: `scale(${bas})`, background: tik ? "#2a2d36" : "#F67102", color: "white", fontWeight: 800, fontSize: 54, padding: "22px 80px", borderRadius: 18 }}>{tik ? "TAKİPTESİN ✓" : "TAKİP ET"}</div>
+      </div>
     </AbsoluteFill>
   );
 };
@@ -154,7 +206,7 @@ export const Film: React.FC = () => {
           <CekimSar c={c} />
         </Sequence>
       ))}
-      <Sequence from={s(58)} durationInFrames={s(2)} name="6B"><KapanisSar /></Sequence>
+      <Sequence from={s(58.3)} durationInFrames={s(2.7)} name="6B"><KapanisSar /></Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 16%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.6) 92%)" }} />
       <Baslik t={f / FPS} />
       <Altyazi t={f / FPS} />
@@ -169,4 +221,4 @@ const CekimSar: React.FC<{ c: Cekim }> = ({ c }) => {
   const C = c.C;
   return <C f={f} d={s(c.sure)} />;
 };
-const KapanisSar: React.FC = () => <Kapanis f={useCurrentFrame()} />;
+const KapanisSar: React.FC = () => <Bolum2 f={useCurrentFrame()} />;

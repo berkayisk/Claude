@@ -121,16 +121,30 @@
   },
   {
    "k": "n16",
-   "metin": "Ahmet'in hikâyesi burada başlıyor.",
-   "bas": 54.3,
-   "son": 56.56,
+   "metin": "Her şey yolunda gibiydi.",
+   "bas": 51.1,
+   "son": 52.7,
    "ic": false
   },
   {
    "k": "n17",
-   "metin": "Peki ya seninki?",
+   "metin": "Ta ki birkaç gün sonra, telefonuna o mesaj gelene kadar.",
+   "bas": 53.0,
+   "son": 56.51,
+   "ic": false
+  },
+  {
+   "k": "n18",
+   "metin": "O mesajda ne yazıyordu?",
    "bas": 56.8,
-   "son": 57.94,
+   "son": 58.41,
+   "ic": false
+  },
+  {
+   "k": "n19",
+   "metin": "Cevabı, ikinci bölümde.",
+   "bas": 58.9,
+   "son": 60.32,
    "ic": false
   }
  ],
@@ -173,23 +187,23 @@
   },
   {
    "bas": 42.8,
-   "son": 54.0,
+   "son": 50.9,
    "s1": "ÖNCE DOĞRU MODEL",
    "s2": "SONRA İLK ADIM",
    "renk": "#2ED47A"
   },
   {
-   "bas": 54.3,
-   "son": 56.7,
-   "s1": "AHMET'İN HİKÂYESİ",
-   "s2": "BURADA BAŞLIYOR",
-   "renk": "#F67102"
+   "bas": 53.0,
+   "son": 55.25,
+   "s1": "TA Kİ",
+   "s2": "O MESAJ GELENE KADAR",
+   "renk": "#FF5A5A"
   },
   {
    "bas": 56.8,
-   "son": 58.0,
-   "s1": "PEKİ YA",
-   "s2": "SENİNKİ?",
+   "son": 58.25,
+   "s1": "O MESAJDA",
+   "s2": "NE YAZIYORDU?",
    "renk": "#F67102"
   }
  ],
@@ -218,6 +232,11 @@
   "modeli",
   "ilk",
   "adımı",
-  "seninki"
+  "seninki",
+  "yolunda",
+  "mesaj",
+  "mesajda",
+  "ikinci",
+  "bölümde"
  ]
 }

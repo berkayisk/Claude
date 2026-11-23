@@ -12,3 +12,9 @@
   üstte 2 satır başlık (beyaz + renkli), altta cümle altyazısı (anahtar kelimeler turuncu), seslendirmenin ~15-20 dB altında kesintisiz müzik zemini, köprülerde vurgu sesi.
 - Metin, başlıklar ve vurgular `src/plan.json` (ses.py ve Film.tsx aynı dosyayı okur).
 - Yüzün önündeki mavi hare: karakterin üstüne çizilen ekran/telefon ışığı elipsleri kaldırıldı, yüz ışık geçişi yumuşatıldı.
+
+## v3 — Bölüm 2 bağlantısı (61 sn)
+- Final: "Her şey yolunda gibiydi." → "Ta ki birkaç gün sonra, telefonuna o mesaj gelene kadar." (masadaki telefon titrer, bildirim yazısı bulanık)
+  → "O mesajda ne yazıyordu?" → final kartı "BÖLÜM 2 · ÇOK YAKINDA" + @sifirdansatisa TAKİP ET → TAKİPTESİN, VO "Cevabı, ikinci bölümde."
+- Mesaj içeriği bilinçli olarak gizli (kolay para / sipariş imasından kaçınıldı). Bölüm 2 bu mesajla açılmalı.
+- 52.8 sn'de umutlu tema çekilir, 53–58.3 gerilim (hızlanan nabız + disonans), 58.3 vurgu.
