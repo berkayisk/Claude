@@ -75,7 +75,7 @@ const CEKIMLER: Cekim[] = [
   { id: "6A", bas: 54, sure: 1.3, C: ({ f, d }) => (
     <OdaPlan z="sabah" f={f} cx={ara(f, [0, d], [620, 760], yavas)} cy={1060} s={ara(f, [0, d], [1.12, 0.98], yavas)} ahmet="masa" kupa lambaAcik={false} toz />
   ) },
-  { id: "6C", bas: 55.3, sure: 3.0, C: ({ f, d }) => <MasadakiTelefon f={f} d={d} /> },
+  { id: "6C", bas: 55.3, sure: 4.4, C: ({ f, d }) => <MasadakiTelefon f={f} d={d} /> },
 ];
 
 // 6C — masadaki telefon titreşir, bildirim gelir (yazısı okunmaz: merak)
@@ -206,7 +206,7 @@ export const Film: React.FC = () => {
           <CekimSar c={c} />
         </Sequence>
       ))}
-      <Sequence from={s(58.3)} durationInFrames={s(2.7)} name="6B"><KapanisSar /></Sequence>
+      <Sequence from={s(59.7)} durationInFrames={s(2.8)} name="6B"><KapanisSar /></Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 16%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.6) 92%)" }} />
       <Baslik t={f / FPS} />
       <Altyazi t={f / FPS} />

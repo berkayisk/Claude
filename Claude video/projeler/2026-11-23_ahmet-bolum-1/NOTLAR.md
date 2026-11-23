@@ -18,3 +18,12 @@
   → "O mesajda ne yazıyordu?" → final kartı "BÖLÜM 2 · ÇOK YAKINDA" + @sifirdansatisa TAKİP ET → TAKİPTESİN, VO "Cevabı, ikinci bölümde."
 - Mesaj içeriği bilinçli olarak gizli (kolay para / sipariş imasından kaçınıldı). Bölüm 2 bu mesajla açılmalı.
 - 52.8 sn'de umutlu tema çekilir, 53–58.3 gerilim (hızlanan nabız + disonans), 58.3 vurgu.
+
+## v4 — ElevenLabs seslendirme + dramatik müzik (62,6 sn)
+- Ses: ElevenLabs `eleven_v3`, language_code=tr. Ücretsiz plan: kütüphane (Türk) sesleri API'de kullanılamıyor, hazır sesler kullanıldı:
+  anlatıcı **Brian**, iç ses **Liam** ([whispers]/[sighs]). Duygu etiketleri: [dramatic], [serious]. Çıkış formatı mp3_44100_128 (192 ücretli).
+- Her satır Whisper ile birebir doğrulandı; uymayan satırlar otomatik yeniden üretildi (calisma/vo_el/).
+- Anahtar ortamda kayıtlı (api.elevenlabs.io, xi-api-key, proxy enjekte eder) — kodda `xi-api-key: proxy-injected` yeter.
+- Müzik: `calisma/muzik_dramatik.py` (ses.py içine gömülü) — 100 BPM re minör fragman tarzı: braam, boom, tom, ostinato, riser,
+  0:19 düşüş + kalp atışı, 0:29,6 büyük vuruş, 0:42 patlama + majör sabah teması, 52,75–59,7 hızlanan tik cliffhanger. Seslendirme altında ducking.
+- Final kaydı: 6C telefon 55,3–59,7, Bölüm 2 kartı 59,7–62,5.

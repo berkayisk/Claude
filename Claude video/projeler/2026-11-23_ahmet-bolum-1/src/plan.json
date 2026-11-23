@@ -4,147 +4,147 @@
    "k": "n1",
    "metin": "Bu Ahmet.",
    "bas": 0.4,
-   "son": 1.14,
+   "son": 1.02,
    "ic": false
   },
   {
    "k": "n2",
    "metin": "Ve bu gece, hayatını değiştirebilecek bir kararın eşiğinde.",
    "bas": 1.4,
-   "son": 4.93,
+   "son": 5.04,
    "ic": false
   },
   {
    "k": "n3",
    "metin": "Aylardır aklında tek bir fikir var: e-ticaret.",
    "bas": 5.15,
-   "son": 8.27,
+   "son": 8.4,
    "ic": false
   },
   {
    "k": "n4",
    "metin": "Araştırmaya başlıyor.",
    "bas": 8.7,
-   "son": 10.3,
+   "son": 10.24,
    "ic": false
   },
   {
    "k": "n5",
    "metin": "Ne satacak?",
    "bas": 10.6,
-   "son": 11.68,
+   "son": 11.38,
    "ic": false
   },
   {
    "k": "n6",
    "metin": "Ürünleri nereden bulacak?",
    "bas": 11.95,
-   "son": 13.7,
+   "son": 13.79,
    "ic": false
   },
   {
    "k": "n7",
    "metin": "Şirket kurmak şart mı?",
    "bas": 13.95,
-   "son": 15.49,
+   "son": 15.47,
    "ic": false
   },
   {
    "k": "n8",
    "metin": "Stokları nereye koyacak?",
    "bas": 15.75,
-   "son": 17.33,
+   "son": 17.58,
    "ic": false
   },
   {
    "k": "n9",
    "metin": "Her cevap, yeni bir soru doğuruyor.",
-   "bas": 17.6,
-   "son": 19.83,
+   "bas": 17.85,
+   "son": 19.91,
    "ic": false
   },
   {
    "k": "i1",
-   "metin": "Ben daha ne satacağımı bile bilmiyorum.",
-   "bas": 21.4,
-   "son": 23.57,
+   "metin": "Ben daha ne satacağımı bile bilmiyorum...",
+   "bas": 21.3,
+   "son": 23.74,
    "ic": true
   },
   {
    "k": "i2",
    "metin": "Nasıl başlayacağım ki?",
-   "bas": 24.0,
-   "son": 25.47,
+   "bas": 24.4,
+   "son": 25.68,
    "ic": true
   },
   {
    "k": "n10",
    "metin": "Çoğu insan, tam bu noktada vazgeçiyor.",
    "bas": 26.2,
-   "son": 28.83,
+   "son": 28.88,
    "ic": false
   },
   {
    "k": "n11",
    "metin": "Ama Ahmet'in gözünden kaçan bir şey vardı.",
    "bas": 29.6,
-   "son": 32.4,
+   "son": 32.02,
    "ic": false
   },
   {
    "k": "n12",
    "metin": "Kendi ürününü üretmeden, stok tutmadan da e-ticarete başlamak mümkündü.",
    "bas": 32.9,
-   "son": 37.58,
+   "son": 38.03,
    "ic": false
   },
   {
    "k": "n13",
    "metin": "Peki sonra ne oldu?",
    "bas": 38.6,
-   "son": 39.87,
+   "son": 40.36,
    "ic": false
   },
   {
    "k": "n14",
    "metin": "Ahmet, her şeyi aynı anda bilmek zorunda olmadığını fark etti.",
    "bas": 42.8,
-   "son": 46.64,
+   "son": 46.4,
    "ic": false
   },
   {
    "k": "n15",
    "metin": "Önce doğru modeli öğrenecek, sonra ilk adımı atacaktı.",
    "bas": 47.1,
-   "son": 50.65,
+   "son": 50.55,
    "ic": false
   },
   {
    "k": "n16",
    "metin": "Her şey yolunda gibiydi.",
-   "bas": 51.1,
-   "son": 52.7,
+   "bas": 51.0,
+   "son": 52.64,
    "ic": false
   },
   {
    "k": "n17",
    "metin": "Ta ki birkaç gün sonra, telefonuna o mesaj gelene kadar.",
-   "bas": 53.0,
-   "son": 56.51,
+   "bas": 52.75,
+   "son": 57.67,
    "ic": false
   },
   {
    "k": "n18",
    "metin": "O mesajda ne yazıyordu?",
-   "bas": 56.8,
-   "son": 58.41,
+   "bas": 57.8,
+   "son": 59.64,
    "ic": false
   },
   {
    "k": "n19",
    "metin": "Cevabı, ikinci bölümde.",
-   "bas": 58.9,
-   "son": 60.32,
+   "bas": 60.1,
+   "son": 61.63,
    "ic": false
   }
  ],
@@ -193,15 +193,15 @@
    "renk": "#2ED47A"
   },
   {
-   "bas": 53.0,
-   "son": 55.25,
+   "bas": 52.75,
+   "son": 55.3,
    "s1": "TA Kİ",
    "s2": "O MESAJ GELENE KADAR",
    "renk": "#FF5A5A"
   },
   {
-   "bas": 56.8,
-   "son": 58.25,
+   "bas": 57.8,
+   "son": 59.65,
    "s1": "O MESAJDA",
    "s2": "NE YAZIYORDU?",
    "renk": "#F67102"
