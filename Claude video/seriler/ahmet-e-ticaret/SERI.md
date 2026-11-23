@@ -23,7 +23,7 @@ doğru yolunu anlatır; her bölüm bir cliffhanger ile biter → takip.
 ## Bölümler
 | # | Başlık | Engel / tema | Cliffhanger | Durum |
 |---|---|---|---|---|
-| 1 | Karar Gecesi | Bilgi kirliliği, "nereden başlayacağım?" → şirketsiz/stoksuz model fikri, önce doğru model sonra ilk adım | "Birkaç gün sonra telefonuna o mesaj geldi. O mesajda ne yazıyordu?" | Yayına hazır (v9) |
+| 1 | Karar Gecesi | Bilgi kirliliği, "nereden başlayacağım?" → şirketsiz/stoksuz model fikri, önce doğru model sonra ilk adım | "Ta ki üç gün sonra telefonu titreyene kadar. Mesajı okudu ve olduğu yerde kaldı. O mesajda ne yazıyordu?" | Senaryo v2 yazıldı (bolum1_senaryo_v2.md), onay bekliyor |
 | 2 | (yazılacak) | — | — | — |
 
 ## Açık sorular (sonraki bölümlerde cevaplanacak)
