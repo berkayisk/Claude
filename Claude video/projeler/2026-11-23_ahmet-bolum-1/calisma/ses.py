@@ -45,9 +45,7 @@ for k, t in VO:
     s = oku(f"{VO_DIR}/{k}.wav")
     s = hp(s, 70)
     if k.startswith("i"):   # iç ses: yakın, yumuşak, biraz kısık
-        s = lp(s, 6500) * 0.8
-    else:
-        s = s + 0.12 * lp(s, 250)
+        s = lp(s, 11000) * 0.85
     ekle(vo, s, t)
 vo = vo / (np.abs(vo).max() + 1e-9) * 0.9
 voR = reverb(vo, 0.6, 0.06)

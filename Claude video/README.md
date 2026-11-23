@@ -14,6 +14,9 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 2. **Firma (müşteri) sosyal medya / reklam işleri** → `musteriler/<firma>/` + o firmanın `MARKA.md`'si. Kanal stili, Berkay Işık
    marka dosyaları ve kanal tonu burada KULLANILMAZ. Ayrıntı: `musteriler/README.md`
 
+## Senaryo
+- Senaryo/metin işleri `/senarist` yeteneğiyle (`/home/user/Claude/.claude/skills/senarist/SKILL.md`); dizi kitapları `seriler/<dizi>/SERI.md`.
+
 ## Kanal stili (sadece Sıfırdan Satışa projeleri)
 Kullanıcının kendi kanal stili: `kanal-referanslari/yunus-emre-kocaoglu/STIL.md`
 Kanal videolarında, aksi söylenmedikçe bu stili (renkler, fontlar, "Az Sonra" fragmanı, alt bant, Abone Ol, bitiş ekranı) uygula.
@@ -59,7 +62,9 @@ projeler/<proje>/
 ## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
 - Araç: `araclar/berkay_ses.py satirlar.json cikti/` — Chatterbox Multilingual (MIT, ticari serbest), Türkçe, referans `marka/sifirdan-satisa/berkay_ses_referans.wav`
   (Berkay'ın kendi anlatım kaydından 10 sn). Her satır Whisper ile birebir doğrulanır (≤6 deneme, TOHUM ortam değişkeni ile farklı denemeler),
-  son kelimeden sonraki sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir, tüm satırların medyan perdesi 176 Hz'e eşitlenir.
+  son kelimeden sonraki sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir, tüm satırların medyan perdesi 176 Hz'e eşitlenir,
+  NETLIK zinciri uygulanır (model 24 kHz → boğuk; Berkay'ın kaydının bant profiline göre EQ + exciter + de-esser). Sadece son işlem: `--son-islem cikti/`.
+  Filmde VO'ya ayrıca bas takviyesi EKLEME (boğuklaştırıyor).
 - Perde kaydırma sonrası da bağlam içinde (satırları birleştirerek) yeniden doğrula: bir kez "kaçırmamak" → "kaçınmamak" oldu.
 - Kurulum (yeni oturum): `pip install --no-deps chatterbox-tts torchaudio==2.11.1` + librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0
   resemble-perth conformer==0.3.2 pyloudnorm omegaconf pykakasi==2.3.0 "setuptools<81"; ilk çalıştırmada HF'den model iner (HF_HUB_DISABLE_XET=1).

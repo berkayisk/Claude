@@ -11,6 +11,7 @@ Her satır için:
   1. en fazla 6 deneme üretilir; Whisper metni birebir okuyana kadar (kırpılmış hali bağlam içinde doğrulanır)
   2. enerji tabanlı kırpma (baş: ilk -50 dB üstü - 50 ms, son: -42 dB altına 120 ms inene kadar)
   3. son kelimeden sonraki ilk sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir
+  5. netlik zinciri (NETLIK) uygulanır: boğukluğu giderir
   4. tüm satırların medyan perdesi Berkay'ın kaydına (HEDEF_F0) tek oranla eşitlenir: rubberband, formant korunarak
 Çıktı: <k>.wav (48 kHz mono) + sureler.json {k: [metin, süre, skor, whisper]}
 """
@@ -19,6 +20,10 @@ import sys, os, json, re, difflib, subprocess, numpy as np, soundfile as sf, tor
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(KOK, "marka/sifirdan-satisa/berkay_ses_referans.wav")
 HEDEF_F0 = 176.0   # Berkay'ın anlatım kaydının medyan perdesi (Hz)
+# Netlik: model 24 kHz üretiyor (12 kHz üstü yok) ve 4 kHz üstü zayıf -> "boğuk". Berkay'ın gerçek kaydının bant profiline göre ayarlandı
+# (2–12 kHz arası bantlar ±1.6 dB içinde), exciter ile 12 kHz üstüne doğal harmonik, hafif de-esser.
+NETLIK = ("equalizer=f=3000:t=q:w=1:g=1,equalizer=f=5000:t=q:w=1:g=2,equalizer=f=7000:t=q:w=1:g=1,highshelf=f=10000:g=11,"
+          "aexciter=amount=8:drive=9:blend=0:freq=11500:ceil=18000,deesser=i=0.3")
 
 def _load(p, *a, **k):
     x, sr = sf.read(p, dtype="float32", always_2d=True); return torch.from_numpy(x.T.copy()), sr
@@ -106,10 +111,22 @@ def main(girdi, cikti):
     oran = float(np.clip(HEDEF_F0 / np.median([v[4] for v in d.values()]), 0.9, 1.1))
     filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.015 else ""
     for k in d:
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{cikti}/{k}_ham.wav", "-af", f"{filt}aresample=48000", "-ac", "1", f"{cikti}/{k}.wav"])
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{cikti}/{k}_ham.wav", "-af", f"{filt}aresample=48000,{NETLIK}", "-ac", "1", f"{cikti}/{k}.wav"])
         d[k][1] = round(sf.info(f"{cikti}/{k}.wav").duration, 2)
     print(f"perde oranı x{oran:.3f}", flush=True)
     json.dump(d, open(yol, "w"), ensure_ascii=False, indent=1)
 
+def sadece_son_islem(cikti):
+    """mevcut <k>_ham.wav dosyalarından perde + netlik adımını yeniden uygular (yeniden üretmeden)"""
+    yol = os.path.join(cikti, "sureler.json"); d = json.load(open(yol))
+    oran = float(np.clip(HEDEF_F0 / np.median([v[4] for v in d.values()]), 0.9, 1.1))
+    filt = f"rubberband=pitch={oran:.4f}:formant=preserved," if abs(oran - 1) > 0.015 else ""
+    for k in d:
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", f"{cikti}/{k}_ham.wav", "-af", f"{filt}aresample=48000,{NETLIK}", "-ac", "1", f"{cikti}/{k}.wav"])
+        d[k][1] = round(sf.info(f"{cikti}/{k}.wav").duration, 2)
+    json.dump(d, open(yol, "w"), ensure_ascii=False, indent=1)
+    print(f"son işlem tamam: perde x{oran:.3f} + netlik, {len(d)} satır")
+
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    if sys.argv[1] == "--son-islem": sadece_son_islem(sys.argv[2])
+    else: main(sys.argv[1], sys.argv[2])
