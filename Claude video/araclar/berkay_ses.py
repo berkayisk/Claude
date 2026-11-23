@@ -33,7 +33,8 @@ def _save(p, w, sr, *a, **k): sf.write(p, w.detach().cpu().numpy().T, sr)
 ta.load = _load; ta.save = _save   # torchcodec yok: soundfile ile
 
 def norm(x):
-    x = x.replace("İ", "i").replace("I", "ı").lower().replace("-", " ")
+    x = x.replace("İ", "i").replace("I", "ı").lower().replace("-", " ").replace("â", "a").replace("î", "i").replace("û", "u")
+    for r, y in (("3", "üç"), ("2", "iki"), ("1", "bir"), ("4", "dört"), ("5", "beş"), ("6", "altı")): x = re.sub(rf"\b{r}\b", y, x)
     return re.sub(r"[^a-zçğıöşü ]", "", x).split()
 def rms(a, sr, t, w=0.01):
     s = a[max(0, int(t * sr)):int((t + w) * sr)]
