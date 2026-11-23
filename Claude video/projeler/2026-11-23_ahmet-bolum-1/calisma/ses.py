@@ -3,7 +3,7 @@ Zamanlar prodüksiyon planındaki seslendirme ve müzik tablosundan."""
 import numpy as np, subprocess, wave, json
 
 SR = 48000
-DUR = 62.5
+DUR = 67.9
 N = int(SR * DUR)
 rng = np.random.default_rng(7)
 
@@ -40,7 +40,7 @@ def reverb(x, sure=2.2, mix=0.25):
 vo = np.zeros(N)
 PLAN = json.load(open("src/plan.json"))
 VO = [(v["k"], v["bas"]) for v in PLAN["vo"]]
-VO_DIR = "calisma/vo_berkay"   # Berkay'ın kendi sesi (onaylı), Chatterbox ile üretildi
+VO_DIR = "calisma/vo_kayit"   # Berkay'ın kendi okuması (girdiler/kayit), Demucs + temizlik, satır satır
 for k, t in VO:
     s = oku(f"{VO_DIR}/{k}.wav")
     s = hp(s, 70)
@@ -198,14 +198,14 @@ while t < 59.6:
 ekle(dr, riser(2.6, 1.0), 57.0)
 cut = int(59.66 * SR); muz[cut:] = 0; dr[cut:] = 0
 ekle(dr, boom(2.6, 1.3), 59.7); ekle(muz, braam(38, 3.0, 1.0), 59.7)
-ekle(muz, pad([50, 57, 62], 2.8, 0.35, 0.8), 59.75)
+ekle(muz, pad([50, 57, 62], 8.0, 0.35, 0.8), 59.75); ekle(muz, pad([62, 66, 69], 4.0, 0.2, 1.5), 63.6)
 
 muz = reverb(muz, 2.2, 0.28); dr = reverb(dr, 1.2, 0.12)
 muz = muz / (np.abs(muz).max() + 1e-9); dr = dr / (np.abs(dr).max() + 1e-9)
 muz = muz * 0.75 + dr * 0.9
 # bölüm seviyeleri + seslendirme altında otomatik kısma (ducking)
-otom = np.interp(np.arange(N) / SR, [0, 0.3, 8, 19, 19.05, 26, 29.6, 38.5, 40, 42.6, 43.2, 51, 52.7, 59.6, 59.7, 62.5],
-                 [.35, .42, .42, .48, .40, .36, .50, .50, .62, .70, .52, .50, .42, .55, .58, .45])
+otom = np.interp(np.arange(N) / SR, [0, 0.3, 8, 19, 19.05, 26, 29.6, 38.5, 40, 42.6, 43.2, 51, 52.7, 59.6, 59.7, 62.5, 67.9],
+                 [.35, .42, .42, .48, .40, .36, .50, .50, .62, .70, .52, .50, .42, .55, .58, .45, .40])
 from scipy.ndimage import maximum_filter1d, uniform_filter1d
 venv = uniform_filter1d(maximum_filter1d(np.abs(vo), int(0.08 * SR)), int(0.15 * SR))
 venv = np.clip(venv / (np.percentile(venv[venv > 1e-3], 60) + 1e-9), 0, 1)
@@ -298,7 +298,7 @@ def titresim(sure=0.35):
 ekle(fx, titresim(), 55.55); ekle(fx, titresim(), 56.05)
 ekle(fx, wav("bildirim"), 55.6, 0.5)
 fx[int(59.65 * SR):] *= 0.0
-ekle(fx, wav("tik"), 61.55, 0.6); ekle(fx, wav("basari"), 61.6, 0.3)
+ekle(fx, wav("tik"), PLAN["takipTik"], 0.6); ekle(fx, wav("basari"), PLAN["takipTik"] + 0.05, 0.3)
 
 # ---------------- MİKS ----------------
 mix = voR * 1.0 + muz * 0.55 + fx * 0.8

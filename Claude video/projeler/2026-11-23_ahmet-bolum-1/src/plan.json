@@ -4,147 +4,154 @@
    "k": "n1",
    "metin": "Bu Ahmet.",
    "bas": 0.4,
-   "son": 1.15,
+   "son": 1.14,
    "ic": false
   },
   {
    "k": "n2",
    "metin": "Ve bu gece, hayatını değiştirebilecek bir kararın eşiğinde.",
    "bas": 1.4,
-   "son": 4.51,
+   "son": 4.5,
    "ic": false
   },
   {
    "k": "n3",
    "metin": "Aylardır aklında tek bir fikir var: e-ticaret.",
    "bas": 5.15,
-   "son": 8.57,
+   "son": 8.3,
    "ic": false
   },
   {
    "k": "n4",
    "metin": "Araştırmaya başlıyor.",
    "bas": 8.7,
-   "son": 10.41,
+   "son": 9.85,
    "ic": false
   },
   {
    "k": "n5",
    "metin": "Ne satacak?",
    "bas": 10.6,
-   "son": 11.4,
+   "son": 11.53,
    "ic": false
   },
   {
    "k": "n6",
    "metin": "Ürünleri nereden bulacak?",
    "bas": 11.95,
-   "son": 13.54,
+   "son": 13.2,
    "ic": false
   },
   {
    "k": "n7",
    "metin": "Şirket kurmak şart mı?",
    "bas": 13.95,
-   "son": 15.43,
+   "son": 15.48,
    "ic": false
   },
   {
    "k": "n8",
    "metin": "Stokları nereye koyacak?",
    "bas": 15.75,
-   "son": 17.22,
+   "son": 17.29,
    "ic": false
   },
   {
    "k": "n9",
    "metin": "Her cevap, yeni bir soru doğuruyor.",
    "bas": 17.85,
-   "son": 19.69,
+   "son": 19.51,
    "ic": false
   },
   {
    "k": "i1",
    "metin": "Ben daha ne satacağımı bile bilmiyorum...",
    "bas": 21.3,
-   "son": 22.97,
+   "son": 23.09,
    "ic": true
   },
   {
    "k": "i2",
    "metin": "Nasıl başlayacağım ki?",
    "bas": 24.4,
-   "son": 25.99,
+   "son": 25.58,
    "ic": true
   },
   {
    "k": "n10",
    "metin": "Çoğu insan, tam bu noktada vazgeçiyor.",
    "bas": 26.2,
-   "son": 28.38,
+   "son": 28.52,
    "ic": false
   },
   {
    "k": "n11",
-   "metin": "Ama Ahmet'in gözünden kaçan bir şey vardı.",
+   "metin": "Ama Ahmet'in gözünden kaçan bir şey daha var.",
    "bas": 29.6,
-   "son": 31.69,
+   "son": 32.29,
    "ic": false
   },
   {
    "k": "n12",
-   "metin": "Kendi ürününü üretmeden, stok tutmadan da e-ticarete başlamak mümkündü.",
+   "metin": "Kendi ürününü üretmeden, stok tutmadan da e-ticarete başlamak mümkün.",
    "bas": 32.9,
-   "son": 37.44,
+   "son": 38.47,
    "ic": false
   },
   {
    "k": "n13",
-   "metin": "Peki sonra ne oldu?",
+   "metin": "Peki ya sonra ne olacak?",
    "bas": 38.85,
-   "son": 41.54,
+   "son": 40.17,
    "ic": false
   },
   {
    "k": "n14",
-   "metin": "Ahmet, her şeyi aynı anda bilmek zorunda olmadığını fark etti.",
+   "metin": "Ahmet, her şeyi aynı anda bilmek zorunda olmadığını fark etmişti.",
    "bas": 42.8,
-   "son": 46.28,
+   "son": 46.76,
    "ic": false
   },
   {
    "k": "n15",
    "metin": "Önce doğru modeli öğrenecek, sonra ilk adımı atacaktı.",
    "bas": 47.1,
-   "son": 50.07,
+   "son": 50.51,
    "ic": false
   },
   {
    "k": "n16",
    "metin": "Her şey yolunda gibiydi.",
    "bas": 51.0,
-   "son": 52.54,
+   "son": 52.53,
    "ic": false
   },
   {
    "k": "n17",
    "metin": "Ta ki birkaç gün sonra, telefonuna o mesaj gelene kadar.",
    "bas": 52.75,
-   "son": 56.6,
+   "son": 56.22,
    "ic": false
   },
   {
    "k": "n18",
    "metin": "O mesajda ne yazıyordu?",
    "bas": 57.8,
-   "son": 59.79,
+   "son": 59.09,
    "ic": false
   },
   {
    "k": "n19",
    "metin": "Cevabı, ikinci bölümde.",
    "bas": 60.1,
-   "son": 61.63,
+   "son": 61.92,
+   "ic": false
+  },
+  {
+   "k": "n20",
+   "metin": "Ahmet'in bu soruya ne cevap verdiğini kaçırmamak için beni takip etmeyi unutma.",
+   "bas": 62.3,
+   "son": 67.26,
    "ic": false
   }
  ],
@@ -180,8 +187,8 @@
   {
    "bas": 38.5,
    "son": 41.7,
-   "s1": "PEKİ SONRA",
-   "s2": "NE OLDU?",
+   "s1": "PEKİ YA SONRA",
+   "s2": "NE OLACAK?",
    "renk": "#F67102",
    "orta": true
   },
@@ -208,35 +215,41 @@
   }
  ],
  "vurgu": [
-  "ahmet",
-  "kararın",
-  "e-ticaret",
-  "satacak",
-  "bulacak",
-  "şart",
-  "stokları",
-  "soru",
-  "bilmiyorum",
-  "başlayacağım",
-  "vazgeçiyor",
-  "gözünden",
-  "kaçan",
-  "üretmeden",
-  "stok",
-  "tutmadan",
-  "mümkündü",
-  "sonra",
-  "aynı",
-  "anda",
-  "doğru",
-  "modeli",
-  "ilk",
   "adımı",
-  "seninki",
-  "yolunda",
+  "ahmet",
+  "anda",
+  "aynı",
+  "başlayacağım",
+  "bilmiyorum",
+  "bulacak",
+  "bölümde",
+  "cevap",
+  "doğru",
+  "e-ticaret",
+  "gözünden",
+  "ikinci",
+  "ilk",
+  "kararın",
+  "kaçan",
   "mesaj",
   "mesajda",
-  "ikinci",
-  "bölümde"
- ]
+  "modeli",
+  "mümkündü",
+  "olacak",
+  "satacak",
+  "seninki",
+  "sonra",
+  "soru",
+  "stok",
+  "stokları",
+  "takip",
+  "tutmadan",
+  "unutma",
+  "vazgeçiyor",
+  "yolunda",
+  "üretmeden",
+  "şart"
+ ],
+ "takipTik": 65.39,
+ "bitis": 67.81
 }

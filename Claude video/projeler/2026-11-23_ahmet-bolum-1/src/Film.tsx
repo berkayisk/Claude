@@ -123,8 +123,9 @@ const MasadakiTelefon: React.FC<{ f: number; d: number }> = ({ f, d }) => {
 const Bolum2: React.FC<{ f: number }> = ({ f }) => {
   const g = interpolate(f, [2, 12], [0, 1], { ...kl, easing: Easing.out(Easing.back(1.5)) });
   const t2 = interpolate(f, [16, 26], [0, 1], kl);
-  const tik = f >= s(1.85);
-  const bas = interpolate(f, [s(1.8), s(1.85), s(1.95)], [1, 0.92, 1], kl);
+  const tk = s((plan as any).takipTik - 59.7);
+  const tik = f >= tk;
+  const bas = interpolate(f, [tk - 3, tk, tk + 3], [1, 0.92, 1], kl);
   return (
     <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 40%, #1a1f33 0%, #05060a 70%)", alignItems: "center", fontFamily: POP }}>
       <div style={{ position: "absolute", top: 300, opacity: g * 0.7, fontWeight: 600, fontSize: 34, letterSpacing: 8, color: "white" }}>AHMET E-TİCARETE BAŞLAMAK İSTİYOR</div>
@@ -206,7 +207,7 @@ export const Film: React.FC = () => {
           <CekimSar c={c} />
         </Sequence>
       ))}
-      <Sequence from={s(59.7)} durationInFrames={s(2.8)} name="6B"><KapanisSar /></Sequence>
+      <Sequence from={s(59.7)} durationInFrames={s((plan as any).bitis - 59.7) + 2} name="6B"><KapanisSar /></Sequence>
       <AbsoluteFill style={{ background: "linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 16%, rgba(0,0,0,0) 26%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.35) 78%, rgba(0,0,0,0.6) 92%)" }} />
       <Baslik t={f / FPS} />
       <Altyazi t={f / FPS} />

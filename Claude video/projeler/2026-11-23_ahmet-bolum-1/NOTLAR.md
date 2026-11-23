@@ -41,3 +41,11 @@
 - calisma/vo_berkay.py: her satır ≤5 deneme, Whisper birebir eşleşene kadar; sonra enerji tabanlı kırpma (son: -42 dB altına 120 ms düşene kadar).
   Kırpılmış dosyalar da Whisper ile tekrar doğrulanmalı (n13'te baş kırpma "Pe"yi yemişti → yeniden üretildi).
 - Ses benzerliği (Resemblyzer, Berkay'ın başka kaydıyla): ~0.78–0.80.
+
+## v6 — Berkay'ın kendi okuması (girdiler/kayit/berkay_kayit.m4a, 66 sn) — 67,8 sn
+- Temizlik: Demucs htdemucs_ft vocals → highpass/afftdn/agate/compressor/EQ → calisma/vo_kayit/temiz.wav (zemin -69 dB).
+- `calisma/kayit_kes.py`: Whisper kelime zamanları + komşu satırlar arası enerji minimumu ile 22 satıra bölme; eşik -30 dB
+  (nefesler -36/-40 dB), yumuşak satırlar (n3, n5) -40 dB. "Cevabı ikinci bölümde" iki kez okunmuş → ikinci okuma.
+- Kısa klipleri Whisper tek başına uyduruyor (0,9 sn "ne satacak" → "İzlediğiniz için..."): doğrulamayı komşu satırlarla birleştirip yap.
+- Metin kullanıcının okuduğu hale uyarlandı (…bir şey daha var / …mümkün / Peki ya sonra ne olacak? / fark etmişti) + yeni son satır n20 (takip çağrısı).
+- Final kartı 59,7–67,8; TAKİP ET tıklaması "takip" kelimesinde (plan.json takipTik=65.39).
