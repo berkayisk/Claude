@@ -32,3 +32,12 @@
 - Ses klonlanmadı (başka kanalın sesi). Bunun yerine ElevenLabs Türkçe erkek kütüphanesi (1185 ses) Resemblyzer konuşmacı benzerliğiyle tarandı (referans Demucs ile müzikten ayrıldı).
 - En yakın: **Emrullah Tuna - Deep & Full** (voice_id QftNgZhlSOYKrYbk7WR7) benzerlik 0.921; ikinci 0.858 → referans büyük olasılıkla bu kütüphane sesini kullanıyor.
 - Kullanmak için ElevenLabs ücretli plan (Starter+) gerekli: ücretsiz plan kütüphane seslerini API'de kullandırmıyor.
+
+## v5 — Berkay'ın kendi sesi (kullanıcı onayı: "Sesimi kullanabilirsin")
+- DÜZELTME: v4'te ses.py yaması yarıda kalmış, VO hâlâ Piper (calisma/vo/) okunuyordu → v4 aslında Piper sesiyle çıktı. Kullanıcıya bildirildi.
+- Model: Chatterbox Multilingual (Resemble AI, MIT lisans, ticari kullanım serbest), language_id="tr". XTTS-v2 lisansı ticari kullanıma kapalı olduğu için kullanılmadı.
+- Referans: Ankara reklamı IMG_7287_ses.wav 9.6–17.6 sn (Demucs temiz, akıcı bölüm) → calisma/ref_berkay.wav.
+- Kurulum notları: torch 2.15 + torchaudio 2.11.1 (--no-deps), torchaudio.load/save soundfile ile yamalandı; chatterbox-tts --no-deps + bağımlılıklar elle.
+- calisma/vo_berkay.py: her satır ≤5 deneme, Whisper birebir eşleşene kadar; sonra enerji tabanlı kırpma (son: -42 dB altına 120 ms düşene kadar).
+  Kırpılmış dosyalar da Whisper ile tekrar doğrulanmalı (n13'te baş kırpma "Pe"yi yemişti → yeniden üretildi).
+- Ses benzerliği (Resemblyzer, Berkay'ın başka kaydıyla): ~0.78–0.80.

@@ -40,16 +40,14 @@ def reverb(x, sure=2.2, mix=0.25):
 vo = np.zeros(N)
 PLAN = json.load(open("src/plan.json"))
 VO = [(v["k"], v["bas"]) for v in PLAN["vo"]]
+VO_DIR = "calisma/vo_berkay"   # Berkay'ın kendi sesi (onaylı), Chatterbox ile üretildi
 for k, t in VO:
-    s = oku(f"calisma/vo/{k}.wav")
-    if k.startswith("i"):   # iç ses: biraz daha genç/yakın, kuru, kısık
-        s = subprocess.run(["ffmpeg", "-v", "error", "-i", f"calisma/vo/{k}.wav", "-af",
-                            f"asetrate={SR}*1.07,aresample={SR},atempo=0.935,lowpass=6500,highpass=120,acompressor=threshold=-24dB:ratio=3",
-                            "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True).stdout
-        s = np.frombuffer(s, np.float32).copy() * 0.85
-    else:                   # anlatıcı: sıcaklık + çok hafif oda
-        s = hp(s, 70)
-        s = s + 0.18 * lp(s, 300)
+    s = oku(f"{VO_DIR}/{k}.wav")
+    s = hp(s, 70)
+    if k.startswith("i"):   # iç ses: yakın, yumuşak, biraz kısık
+        s = lp(s, 6500) * 0.8
+    else:
+        s = s + 0.12 * lp(s, 250)
     ekle(vo, s, t)
 vo = vo / (np.abs(vo).max() + 1e-9) * 0.9
 voR = reverb(vo, 0.6, 0.06)
