@@ -49,3 +49,9 @@
 - Kısa klipleri Whisper tek başına uyduruyor (0,9 sn "ne satacak" → "İzlediğiniz için..."): doğrulamayı komşu satırlarla birleştirip yap.
 - Metin kullanıcının okuduğu hale uyarlandı (…bir şey daha var / …mümkün / Peki ya sonra ne olacak? / fark etmişti) + yeni son satır n20 (takip çağrısı).
 - Final kartı 59,7–67,8; TAKİP ET tıklaması "takip" kelimesinde (plan.json takipTik=65.39).
+
+## v7 — kayıt hataları denetimi
+- Kayıt sessizliklerden adacıklara bölünüp her adacık ayrı çözümlendi (Whisper tekrarları birleştiriyordu).
+- Bulunan: n12 başında yarım kalan "Kendi ürününü..." denemesi (28,75–29,5) → atıldı (ELLE n12 30.2'den); n19 iki okuma → ikinci.
+- Senaryodan sapan okumalar (yeniden kayıt istendi): n3 "e-ticaret" "ev ticaret" gibi duyuluyor; n11 "bir şey daha var" (→ vardı);
+  n12 "mümkün" (→ mümkündü); n13 "Peki ya sonra ne olacak?" (→ Peki sonra ne oldu?); n14 "fark etmişti" (→ fark etti).

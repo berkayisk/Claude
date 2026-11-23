@@ -6,7 +6,7 @@ def db(t,w=0.02):
     s=a[max(0,int(t*sr)):int((t+w)*sr)]; return 20*np.log10(np.sqrt((s**2).mean())+1e-9) if len(s) else -99
 SAT=[("n1",0,1),("n2",2,9),("n3",10,17),("n4",18,19),("n5",20,21),("n6",22,24),("n7",25,28),("n8",29,31),("n9",32,37),("i1",38,43),("i2",44,46),
      ("n10",47,52),("n11",53,61),("n12",62,71),("n13",72,76),("n14",77,86),("n15",87,94),("n16",95,98),("n17",99,108),("n18",109,112),("n19",113,115),("n20",116,128)]
-ELLE={"n19":(54.75,56.9),"n20":(56.9,None)}    # n19: ikinci okuma kullanılır
+ELLE={"n12":(30.2,None),"n19":(54.75,56.9),"n20":(56.9,None)}    # n12: yarım kalan "Kendi ürününü..." denemesi atılır; n19: ikinci okuma
 METIN={k:" ".join(W[x]["w"] for x in range(i,j+1)).replace(" -","-").replace(" '","'") for k,i,j in SAT}
 sinir={}
 for (k1,i1,j1),(k2,i2,j2) in zip(SAT,SAT[1:]):
