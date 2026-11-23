@@ -27,3 +27,8 @@
 - Müzik: `calisma/muzik_dramatik.py` (ses.py içine gömülü) — 100 BPM re minör fragman tarzı: braam, boom, tom, ostinato, riser,
   0:19 düşüş + kalp atışı, 0:29,6 büyük vuruş, 0:42 patlama + majör sabah teması, 52,75–59,7 hızlanan tik cliffhanger. Seslendirme altında ducking.
 - Final kaydı: 6C telefon 55,3–59,7, Bölüm 2 kartı 59,7–62,5.
+
+## Referans ses eşleştirmesi (referanslar/ref_ses_fb.mp4)
+- Ses klonlanmadı (başka kanalın sesi). Bunun yerine ElevenLabs Türkçe erkek kütüphanesi (1185 ses) Resemblyzer konuşmacı benzerliğiyle tarandı (referans Demucs ile müzikten ayrıldı).
+- En yakın: **Emrullah Tuna - Deep & Full** (voice_id QftNgZhlSOYKrYbk7WR7) benzerlik 0.921; ikinci 0.858 → referans büyük olasılıkla bu kütüphane sesini kullanıyor.
+- Kullanmak için ElevenLabs ücretli plan (Starter+) gerekli: ücretsiz plan kütüphane seslerini API'de kullandırmıyor.
