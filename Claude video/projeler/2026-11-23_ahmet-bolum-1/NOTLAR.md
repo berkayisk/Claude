@@ -55,3 +55,8 @@
 - Bulunan: n12 başında yarım kalan "Kendi ürününü..." denemesi (28,75–29,5) → atıldı (ELLE n12 30.2'den); n19 iki okuma → ikinci.
 - Senaryodan sapan okumalar (yeniden kayıt istendi): n3 "e-ticaret" "ev ticaret" gibi duyuluyor; n11 "bir şey daha var" (→ vardı);
   n12 "mümkün" (→ mümkündü); n13 "Peki ya sonra ne olacak?" (→ Peki sonra ne oldu?); n14 "fark etmişti" (→ fark etti).
+
+## v8 — Berkay ses klonu (67,5 sn)
+- Kullanıcı: "sesimi klonla, tüm bölümler için bu klonu kullanacağız". Referans artık anlatım kaydından (eski klon Ankara reklamından → 1,5 yarım ton pes/kalın).
+- `araclar/berkay_ses.py` + `calisma/satirlar.json` (senaryonun doğru hali: vardı / mümkündü / Peki sonra ne oldu? / fark etti + n20 takip çağrısı).
+- Gerçek kayda benzerlik 0,88–0,91; perde oranı x1.03. calisma/vo_klon/.

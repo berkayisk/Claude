@@ -86,7 +86,7 @@ def main(girdi, cikti):
         ex = s.get("ex", 0.35 if s.get("ic") else 0.55)
         en = (-1, None, "")
         for i in range(6):
-            torch.manual_seed(7000 + i * 13)
+            torch.manual_seed(int(os.environ.get("TOHUM", 7000)) + i * 13)
             w = m.generate(s.get("yazim", metin), language_id="tr", audio_prompt_path=REF, exaggeration=ex, cfg_weight=0.5).squeeze().numpy()
             w = kirp(w, m.sr)
             _, kel = oku(w, m.sr, kelime=True)

@@ -55,3 +55,12 @@ projeler/<proje>/
 - Stok B-roll: Mixkit (ücretsiz, ticari/reklam kullanımı serbest, anahtar gerekmez; ortamda mixkit.co + assets.mixkit.co izinli). Arama: `https://mixkit.co/free-stock-video/<konu>/`, dosya: `https://assets.mixkit.co/videos/<id>/<id>-720.mp4` (sadece 720p yatay). Şablonda `broll_video` olayı: bulanık arka + keskin çerçeve (top, yukseklik ayarlanır). Dosyalar `girdiler/broll/`.
 - Video konuşma bitince biter; sona sessiz kuyruk ekleme. Kapanış kartı son cümlede başlar, `son: tl + 0.5` ile son karede sönmez.
 - Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).
+
+## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
+- Araç: `araclar/berkay_ses.py satirlar.json cikti/` — Chatterbox Multilingual (MIT, ticari serbest), Türkçe, referans `marka/sifirdan-satisa/berkay_ses_referans.wav`
+  (Berkay'ın kendi anlatım kaydından 10 sn). Her satır Whisper ile birebir doğrulanır (≤6 deneme, TOHUM ortam değişkeni ile farklı denemeler),
+  son kelimeden sonraki sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir, tüm satırların medyan perdesi 176 Hz'e eşitlenir.
+- Perde kaydırma sonrası da bağlam içinde (satırları birleştirerek) yeniden doğrula: bir kez "kaçırmamak" → "kaçınmamak" oldu.
+- Kurulum (yeni oturum): `pip install --no-deps chatterbox-tts torchaudio==2.11.1` + librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0
+  resemble-perth conformer==0.3.2 pyloudnorm omegaconf pykakasi==2.3.0 "setuptools<81"; ilk çalıştırmada HF'den model iner (HF_HUB_DISABLE_XET=1).
+- ElevenLabs anahtarı da ortamda kayıtlı (ücretsiz plan: kütüphane sesleri API'de yok). Başka kişilerin/kanalların sesi klonlanmaz.

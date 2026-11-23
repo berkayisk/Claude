@@ -40,7 +40,7 @@ def reverb(x, sure=2.2, mix=0.25):
 vo = np.zeros(N)
 PLAN = json.load(open("src/plan.json"))
 VO = [(v["k"], v["bas"]) for v in PLAN["vo"]]
-VO_DIR = "calisma/vo_kayit"   # Berkay'ın kendi okuması (girdiler/kayit), Demucs + temizlik, satır satır
+VO_DIR = "calisma/vo_klon"   # Berkay ses klonu (araclar/berkay_ses.py, kullanıcı onaylı)
 for k, t in VO:
     s = oku(f"{VO_DIR}/{k}.wav")
     s = hp(s, 70)
