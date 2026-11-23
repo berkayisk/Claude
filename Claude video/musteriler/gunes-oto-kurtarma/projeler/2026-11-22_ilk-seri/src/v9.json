@@ -192,28 +192,6 @@
    "satir2": "çıkabilecek miyiz?"
   },
   {
-   "tip": "uyari",
-   "s": 2.78,
-   "son": 3.96,
-   "metin": "BİİİP",
-   "boyut": 70
-  },
-  {
-   "tip": "uyari",
-   "renk": "sari",
-   "s": 10.567,
-   "son": 11.383,
-   "metin": "ÇIKIYORUZ!"
-  },
-  {
-   "tip": "uyari",
-   "renk": "sari",
-   "s": 11.967,
-   "son": 12.937,
-   "metin": "KAPTIRMADIK ✓",
-   "boyut": 70
-  },
-  {
    "tip": "kapanis",
    "s": 16.757,
    "son": 18.133333333333333,
@@ -234,5 +212,6 @@
  ],
  "toplamKare": 529,
  "kartY": 1000,
- "altyaziY": 1510
+ "altyaziY": 1510,
+ "sfx": false
 }

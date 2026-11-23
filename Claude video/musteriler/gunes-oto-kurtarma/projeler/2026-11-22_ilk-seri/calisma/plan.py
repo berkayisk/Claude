@@ -160,7 +160,7 @@ def yap(vid):
     broll = [b_ for b_ in broll if b_["son"] - b_["s"] >= 1.2]
     for a in altyazi: a.pop("n"); a.pop("ks")
     veri = {"parcalar": parcalar, "broll": broll, "altyazi": altyazi, "olaylar": olaylar, "vurgu": V["vurgu"],
-            "toplamKare": sum(p["kare"] for p in parcalar), "kartY": 1000, "altyaziY": 1510}
+            "toplamKare": sum(p["kare"] for p in parcalar), "kartY": 1000, "altyaziY": 1510, "sfx": V.get("sfx", True)}
     json.dump(veri, open(f"src/{vid}.json", "w"), ensure_ascii=False, indent=1)
     print(f"{vid}: {tl:.1f} sn, {len(parcalar)} parça")
     print("  " + " ".join(w["w"] for w in altyazi))
@@ -172,12 +172,10 @@ VIDEOLAR = {
         "cekimler": [("IMG_7510", 0.0, 6.0, {"ses": "IMG_7510_ses_bip.wav"}), ("IMG_7510", 10.3, 12.5),
                      ("IMG_7510", 17.0, 20.5, {"dogal": True, "seviye": 1.0}), ("IMG_7510", 25.6, 30.0), ("IMG_7510", 34.3, 39.4)],
         "son_kuyruk": 0.8,
+        "sfx": False,   # kullanıcı: bu videoda kart ve kart sesleri yok
         "vurgu": ["kayar", "kasa", "***", "nasıl", "çıkmam", "çıkıyoruz", "kaptırmadık", "olacak", "toparlarsa", "yokuşu"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("çıkıyoruz") - 0.05, "satir1": "KAYAR KASAYLA YOKUŞ", "boyut": 80, "satir2": "çıkabilecek miyiz?"},
-            {"tip": "uyari", "s": kz("***"), "son": kz("şuradan"), "metin": "BİİİP", "boyut": 70},
-            {"tip": "uyari", "renk": "sari", "s": kz("çıkıyoruz"), "son": kz("aşağıdan") - 0.05, "metin": "ÇIKIYORUZ!"},
-            {"tip": "uyari", "renk": "sari", "s": kz("kaptırmadık"), "son": kz("evet") - 0.05, "metin": "KAPTIRMADIK ✓", "boyut": 70},
             {"tip": "kapanis", "s": ke("çıkacağız", kz("yokuşu")) + 0.05, "son": tl + 0.5, "alt": "ZOR YOL · AĞIR ARAÇ · 7/24"},
         ],
         "broll": lambda kz, ke, tl: [],

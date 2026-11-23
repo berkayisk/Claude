@@ -27,6 +27,7 @@ export type GunesVeri = {
   toplamKare: number;
   kartY?: number;
   altyaziY?: number;
+  sfx?: boolean;   // false: grafik ses efektleri çalmaz
 };
 type Kaynak = { dosya: (ad: string) => string; logo: string; sfx: (ad: string) => string; muzik?: string };
 
@@ -310,7 +311,7 @@ export const GunesReels: React.FC<{ v: GunesVeri; k: Kaynak }> = ({ v, k }) => {
       <Sequence durationInFrames={Math.round(kapanisS * 30)}>
         <Altyazi v={v} />
       </Sequence>
-      {v.olaylar.map((o, i) => <Sesler key={`s${i}`} o={o} k={k} />)}
+      {v.sfx === false ? null : v.olaylar.map((o, i) => <Sesler key={`s${i}`} o={o} k={k} />)}
       {k.muzik ? <Audio src={k.muzik} volume={0.06} /> : null}
     </AbsoluteFill>
   );
