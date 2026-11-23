@@ -137,6 +137,8 @@ def yap(vid):
         for w in altyazi:
             if kucuk(parca) in kucuk(w["w"]) and w["s"] >= sonra: return w["e"]
         raise SystemExit(f"bulunamadı: {parca}")
+    if V.get("son_kuyruk"):   # son kelime kesik duyulmasın: son parçayı kaynakta uzat
+        ek = int(round(V["son_kuyruk"] * FPS)); parcalar[-1]["kare"] += ek; tl += ek / FPS
     olaylar, broll = V["olaylar"](kz, ke, tl), V["broll"](kz, ke, tl)
     for b_ in broll:
         if b_["son"] - b_["s"] < 1.2: print(f"  UYARI kısa/ters B-roll atıldı: {b_}")
@@ -289,13 +291,14 @@ VIDEOLAR = {
     # 6) Güneşimizden Sonra Uzun Yolu Bıraktık — 7524
     "v6": {
         "cekimler": [("IMG_7524", 2.7, 21.3), ("IMG_7524", 37.0, 46.3)],
+        "son_kuyruk": 0.6,   # "hem forklift" sonrası nefes payı (kullanıcı: söz yarım kalıyor)
         "vurgu": ["yıllarca", "tırcılık", "şehirler", "güneş'imiz", "doğunca", "bıraktık", "sebebi", "tekrardan", "tır", "kamyon", "forklift"],
         "olaylar": lambda kz, ke, tl: [
             {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("tabi,") - 0.05, "satir1": "UZUN YOLU", "satir2": "neden bıraktık?"},
             {"tip": "stat", "s": kz("güneş") - 0.05, "son": kz("tek") - 0.05, "ust": "İKİ OĞLANDAN SONRA", "deger": "GÜNEŞ'İMİZ ☀"},
-            {"tip": "liste", "baslik": "ŞİMDİ ŞEHİR İÇİ", "s": kz("hem") - 0.05, "son": tl - 0.6, "ogeler": [
+            {"tip": "liste", "baslik": "ŞİMDİ ŞEHİR İÇİ", "s": kz("hem") - 0.05, "son": ke("forklift") + 0.05, "ogeler": [
                 ["Tır", kz("tır")], ["Kamyon", kz("kamyon")], ["Ufak araç", kz("ufak")], ["Forklift", kz("forklift")]]},
-            {"tip": "kapanis", "s": tl - 0.6, "son": tl + 0.5},
+            {"tip": "kapanis", "s": ke("forklift") + 0.05, "son": tl + 0.5},
         ],
         "broll": lambda kz, ke, tl: [
             {"dosya": "IMG_7503_dikey.mp4", "bas": 0.3, "s": kz("şehir") - 0.05, "son": kz("tabi,") - 0.05},
