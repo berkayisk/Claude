@@ -15,6 +15,7 @@ YAMA = {
     "IMG_7507": {0.82: ("Kurtarıcı", 0.02, 0.8), 1.5: ("ücretleri", 0.8, 2.0), 16.11: None, 16.33: None, 15.43: ("Kurtarıcı", 15.66, 16.10), 9.24: ("ki.", 9.22, 9.38), "ek": [("ücretleri", 16.10, 16.52)]},
     "IMG_7512": {0.0: ("Tırınız,", 1.08, 1.45)},
     "IMG_7524": {6.08: ("içi", 6.08, 6.24), 6.40: ("şehirler", 6.40, 6.84), 9.73: ("Tabi,", 9.73, 9.91), 39.53: ("içine.", 39.53, 39.83)},
+    "IMG_7510": {5.36: ("şimdi?", 5.36, 5.80), 2.82: ("kasa,", 2.80, 3.28), 3.4: ("***", 3.28, 4.40), 3.68: None, 3.96: None, 37.8: ("yokuşu", 37.82, 38.70)},
     "IMG_7497": {31.23: None, 31.99: ("sağlamalısınız.", 31.32, 31.96), 23.6: None, 24.24: ("çağırmalısınız.", 24.30, 25.06), 44.78: ("basıp", 43.52, 43.95), "ek": [("lastiğinizi", 43.95, 46.62)]},
     "IMG_7509": {11.68: ("diferansiyeli", 11.70, 12.18), 12.18: ("dağıtabiliyor.", 12.18, 12.84), 12.54: None},
     "IMG_7511": {2.38: ("Biz", 5.0, 5.58), 10.6: ("4-5", 10.60, 11.52), 11.28: None},
@@ -166,6 +167,22 @@ def yap(vid):
 
 # ---------------- Videolar ----------------
 VIDEOLAR = {
+    # 9) Kayar kasayla yokuş — 7510 (hepsi kameradaki şoför; "ebeğin nikahı" bip)
+    "v9": {
+        "cekimler": [("IMG_7510", 0.0, 6.0, {"ses": "IMG_7510_ses_bip.wav"}), ("IMG_7510", 10.3, 12.5),
+                     ("IMG_7510", 17.0, 20.5, {"dogal": True, "seviye": 1.0}), ("IMG_7510", 25.6, 30.0), ("IMG_7510", 34.3, 39.4)],
+        "son_kuyruk": 0.8,
+        "vurgu": ["kayar", "kasa", "***", "nasıl", "çıkmam", "çıkıyoruz", "kaptırmadık", "olacak", "toparlarsa", "yokuşu"],
+        "olaylar": lambda kz, ke, tl: [
+            {"tip": "kanca", "anlik": True, "s": 0.0, "son": kz("çıkıyoruz") - 0.05, "satir1": "KAYAR KASAYLA YOKUŞ", "boyut": 80, "satir2": "çıkabilecek miyiz?"},
+            {"tip": "uyari", "s": kz("***"), "son": kz("şuradan"), "metin": "BİİİP", "boyut": 70},
+            {"tip": "uyari", "renk": "sari", "s": kz("çıkıyoruz"), "son": kz("aşağıdan") - 0.05, "metin": "ÇIKIYORUZ!"},
+            {"tip": "uyari", "renk": "sari", "s": kz("kaptırmadık"), "son": kz("evet") - 0.05, "metin": "KAPTIRMADIK ✓", "boyut": 70},
+            {"tip": "kapanis", "s": ke("çıkacağız", kz("yokuşu")) + 0.05, "son": tl + 0.5, "alt": "ZOR YOL · AĞIR ARAÇ · 7/24"},
+        ],
+        "broll": lambda kz, ke, tl: [],
+    },
+
     # 1) Tırınız Çamura Saplanırsa — 7497 + 7498 (gaz cümlesinin temiz hali). Mesaj bilerek: "kurtarıcı değil kepçe/ekskavatör"
     "v1": {
         "cekimler": [("IMG_7497", 0.0, 34.3), ("IMG_7498", 8.4, 14.2), ("IMG_7497", 39.7, 64.7)],

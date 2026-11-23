@@ -23,6 +23,8 @@
 - 7 ve 8 de yapılacak.
 - Sözsüz kısımlar B-roll olarak kullanılır.
 
+- [x] 9 Kayar Kasayla Yokuş (7510) — yapıldı
+
 ## Ek öneriler (çekimlerden çıkan, onaylandı)
 - 7 Kamera arkası / bloopers: "Kurtarıcü neydi lan?", "Olmadı burası ya… kapat bir daha düşünelim", "Buraya mı bırakacaktık? Pardon", "Biz niye anlattık, biz çekici değil miyiz ya?" (küfür bip), "Abi beni aramayın, ben de batarım orada"
 - 8 5 tonluk forklifti yüklüyoruz (bir iş günü): 7524 ikinci yarısı (vinç kumandası arızalı, elle çekiyoruz, Berkay ve Onur, Sürat Kargo'ya yola çıkış) + 7526 forkliftin rampadan çıkışı + 7510 kabin içi çıkış anı

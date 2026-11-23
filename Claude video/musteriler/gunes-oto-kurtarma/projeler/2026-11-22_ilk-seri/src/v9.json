@@ -1,0 +1,238 @@
+{
+ "parcalar": [
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses_bip.wav",
+   "bas": 0.3333333333333333,
+   "kare": 59,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses_bip.wav",
+   "bas": 2.466666666666667,
+   "kare": 106,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses.wav",
+   "bas": 10.933333333333334,
+   "kare": 47,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_dogal.wav",
+   "bas": 17.0,
+   "kare": 105,
+   "zoom": false,
+   "sesSeviye": 1.0
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses.wav",
+   "bas": 26.266666666666666,
+   "kare": 26,
+   "zoom": 1.13
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses.wav",
+   "bas": 28.466666666666665,
+   "kare": 42,
+   "zoom": 1.07
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses.wav",
+   "bas": 34.36666666666667,
+   "kare": 37,
+   "zoom": 1.0
+  },
+  {
+   "src": "IMG_7510_dikey.mp4",
+   "ses": "IMG_7510_ses.wav",
+   "bas": 36.5,
+   "kare": 107,
+   "zoom": 1.0
+  }
+ ],
+ "broll": [],
+ "altyazi": [
+  {
+   "w": "Biz",
+   "s": 0.0,
+   "e": 1.107
+  },
+  {
+   "w": "sadece",
+   "s": 1.107,
+   "e": 1.647
+  },
+  {
+   "w": "kayar",
+   "s": 1.967,
+   "e": 2.32
+  },
+  {
+   "w": "kasa,",
+   "s": 2.3,
+   "e": 2.78
+  },
+  {
+   "w": "***",
+   "s": 2.78,
+   "e": 3.9
+  },
+  {
+   "w": "şuradan",
+   "s": 3.96,
+   "e": 4.24
+  },
+  {
+   "w": "nasıl",
+   "s": 4.24,
+   "e": 4.5
+  },
+  {
+   "w": "çıkacağız",
+   "s": 4.5,
+   "e": 4.86
+  },
+  {
+   "w": "şimdi?",
+   "s": 4.86,
+   "e": 5.3
+  },
+  {
+   "w": "Şuraya",
+   "s": 5.5,
+   "e": 6.057
+  },
+  {
+   "w": "bir",
+   "s": 6.057,
+   "e": 6.157
+  },
+  {
+   "w": "çıkmam",
+   "s": 6.157,
+   "e": 6.477
+  },
+  {
+   "w": "lazım.",
+   "s": 6.477,
+   "e": 6.837
+  },
+  {
+   "w": "Çıkıyoruz.",
+   "s": 10.567,
+   "e": 11.08
+  },
+  {
+   "w": "Aşağıdan",
+   "s": 11.433,
+   "e": 11.967
+  },
+  {
+   "w": "kaptırmadık.",
+   "s": 11.967,
+   "e": 12.687
+  },
+  {
+   "w": "Evet",
+   "s": 12.987,
+   "e": 13.127
+  },
+  {
+   "w": "olacak",
+   "s": 13.127,
+   "e": 13.547
+  },
+  {
+   "w": "olacak.",
+   "s": 13.547,
+   "e": 13.867
+  },
+  {
+   "w": "Araba",
+   "s": 14.067,
+   "e": 14.387
+  },
+  {
+   "w": "kendini",
+   "s": 14.387,
+   "e": 14.707
+  },
+  {
+   "w": "toparlarsa",
+   "s": 14.707,
+   "e": 15.367
+  },
+  {
+   "w": "yokuşu",
+   "s": 15.387,
+   "e": 16.267
+  },
+  {
+   "w": "çıkacağız.",
+   "s": 16.267,
+   "e": 16.707
+  }
+ ],
+ "olaylar": [
+  {
+   "tip": "kanca",
+   "anlik": true,
+   "s": 0.0,
+   "son": 10.517,
+   "satir1": "KAYAR KASAYLA YOKUŞ",
+   "boyut": 80,
+   "satir2": "çıkabilecek miyiz?"
+  },
+  {
+   "tip": "uyari",
+   "s": 2.78,
+   "son": 3.96,
+   "metin": "BİİİP",
+   "boyut": 70
+  },
+  {
+   "tip": "uyari",
+   "renk": "sari",
+   "s": 10.567,
+   "son": 11.383,
+   "metin": "ÇIKIYORUZ!"
+  },
+  {
+   "tip": "uyari",
+   "renk": "sari",
+   "s": 11.967,
+   "son": 12.937,
+   "metin": "KAPTIRMADIK ✓",
+   "boyut": 70
+  },
+  {
+   "tip": "kapanis",
+   "s": 16.757,
+   "son": 18.133333333333333,
+   "alt": "ZOR YOL · AĞIR ARAÇ · 7/24"
+  }
+ ],
+ "vurgu": [
+  "kayar",
+  "kasa",
+  "***",
+  "nasıl",
+  "çıkmam",
+  "çıkıyoruz",
+  "kaptırmadık",
+  "olacak",
+  "toparlarsa",
+  "yokuşu"
+ ],
+ "toplamKare": 529,
+ "kartY": 1000,
+ "altyaziY": 1510
+}
