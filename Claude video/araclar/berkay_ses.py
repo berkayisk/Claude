@@ -8,7 +8,8 @@ satirlar.json: [{"k": "n1", "metin": "Bu Ahmet."}, {"k": "i1", "metin": "...", "
   ex: duygu yoğunluğu (0.3 sakin - 0.8 dramatik, varsayılan 0.55)
 
 Her satır için:
-  1. en fazla 6 deneme üretilir; Whisper metni birebir okuyana kadar (kırpılmış hali bağlam içinde doğrulanır)
+  1. en fazla 8 deneme üretilir; Whisper metni birebir okumalı VE her kelimenin telaffuz puanı (araclar/telaffuz.py, GOP) eşiğin üstünde olmalı;
+     seslendirmeye giden yazım araclar/telaffuz_sozluk.json ile düzeltilir (altyazıda asıl yazım kalır)
   2. enerji tabanlı kırpma (baş: ilk -50 dB üstü - 50 ms, son: -42 dB altına 120 ms inene kadar)
   3. son kelimeden sonraki ilk sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir
   5. netlik zinciri (NETLIK) uygulanır: boğukluğu giderir
@@ -57,7 +58,18 @@ def f0(w, sr):
         if c[l] > 0.3 * c[0]: r.append(16000 / l)
     return float(np.median(r)) if r else HEDEF_F0
 
+SOZLUK = os.path.join(KOK, "araclar", "telaffuz_sozluk.json")
+SUPHE = -0.40   # kelime GOP puanı bunun altındaysa satır yeniden üretilir (Berkay'ın gerçek okumasıyla kalibre: 5. yüzdelik -0.67)
+def seslendirme_yazimi(metin):
+    soz = {k: v for k, v in json.load(open(SOZLUK)).items() if not k.startswith("_")} if os.path.exists(SOZLUK) else {}
+    for k, v in soz.items():
+        metin = re.sub(r"(?<![\wçğıöşüÇĞİÖŞÜ])" + re.escape(k) + r"(?![\wçğıöşüÇĞİÖŞÜ])", v, metin, flags=re.IGNORECASE)
+    return metin
+
 def main(girdi, cikti):
+    sys.path.insert(0, os.path.join(KOK, "araclar"))
+    from telaffuz import Denetci
+    dn = Denetci()
     from chatterbox.mtl_tts import ChatterboxMultilingualTTS
     from faster_whisper import WhisperModel
     os.makedirs(cikti, exist_ok=True)
@@ -90,15 +102,21 @@ def main(girdi, cikti):
         if k in d and d[k][2] >= 0.999 and os.path.exists(f"{cikti}/{k}_ham.wav"): continue
         ex = s.get("ex", 0.35 if s.get("ic") else 0.55)
         en = (-1, None, "")
-        for i in range(6):
+        for i in range(8):
             torch.manual_seed(int(os.environ.get("TOHUM", 7000)) + i * 13)
-            w = m.generate(s.get("yazim", metin), language_id="tr", audio_prompt_path=REF, exaggeration=ex, cfg_weight=0.5).squeeze().numpy()
+            w = m.generate(s.get("yazim", seslendirme_yazimi(metin)), language_id="tr", audio_prompt_path=REF, exaggeration=ex, cfg_weight=0.5).squeeze().numpy()
             w = kirp(w, m.sr)
             _, kel = oku(w, m.sr, kelime=True)
             w = kes(w, m.sr, kel)
             tr = oku(w, m.sr); sk = difflib.SequenceMatcher(None, norm(metin), norm(tr)).ratio()
             beklenen = 0.075 * len(metin) + 0.4
             if len(w) / m.sr > beklenen * 1.45: sk -= 0.5; tr += f"  [çok uzun {len(w)/m.sr:.1f}s > {beklenen:.1f}s]"
+            # telaffuz (GOP): her kelime Berkay'ın gerçek okuma düzeyinde mi?
+            w16 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(m.sr), "-ac", "1", "-i", "-", "-ar", "16000", "-f", "f32le", "-"],
+                                 input=w.astype(np.float32).tobytes(), capture_output=True).stdout
+            pu = dn.kelime_puanlari(np.frombuffer(w16, np.float32).copy(), metin)
+            minw = min(o for _, o, _ in pu); kotu = [f"{x}({o:.2f})" for x, o, _ in pu if o < SUPHE]
+            if kotu: sk -= 0.2 + 0.3 * (SUPHE - minw); tr += "  [telaffuz: " + " ".join(kotu) + "]"
             print(f"  {k} deneme {i}: {sk:.3f} | {tr}", flush=True)
             if sk > en[0]: en = (sk, w, tr)
             if sk >= 0.999: break

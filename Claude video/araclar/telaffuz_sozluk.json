@@ -1,0 +1,5 @@
+{
+ "_aciklama": "Ses klonunun yanlış okuduğu kelimeler için seslendirmeye gönderilecek yazım. Altyazıda asıl yazım kalır. Berkay'ın kulak geri bildirimleriyle doldurulur. Biçim: \"asıl kelime\": \"seslendirme yazımı\" (kelime sınırında, büyük/küçük harf duyarsız).",
+ "e-ticaret": "e-ticaret",
+ "e-ticarete": "e-ticarete"
+}
