@@ -134,24 +134,17 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 ### Dil inceliği (stil kuralı)
 - Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.
 
-## Senaryo formatı: Soru–Cevap diyalog (örnek: `kaynak/mursafi_soru_cevap_senaryo.md`, Berkay'ın verdiği)
-**Alınan: FORMAT ve anlatım teknikleri. Ürün adı ve tedavi iddiaları ALINMAZ** (1 numaralı kural + sağlık beyanı kuralları).
-- **İki kişi:** Kişi 1 = şikâyeti olan, merak eden (kendi ağzından somut belirtiler: "midemde yanma, boğazıma acı su, geceleri uyanma…",
-  "hiçbir şey kalıcı olmadı", "biri X'ten olabilir dedi — o ne demek?"). Kişi 2 = bilen, sakin anlatan.
-  Bizim seslerle: Kişi 1 → `elif` (veya `arkadas`), Kişi 2 → `doktor` / `anlatici`.
-- **Akış:** belirti + kafa karışıklığı → "Yani sadece … yetmiyor mu?" → kavramın basit anlatımı → bileşen bileşen merak →
-  Kişi 1'in şaşkın özetleri ("Pektin mi? Reçellerdeki madde değil miydi o?", "Yani hem … hem …?") → büyük resim → akılda kalan kapanış cümlesi.
-- **Kişi 1'in kısa sorularla ritmi kırması** temel teknik: her 2–3 cümlelik açıklamadan sonra kısa soru/şaşkınlık.
-- **Benzetmeler (kullanılabilir):** vagus siniri = "sindirim sisteminin kontrol kulesi", belirtiler "domino gibi", pektin "mide yüzeyinde kalkan gibi",
-  "sindirim aslında bağışıklığın kalbi", tanıdık nesneden bilime geçiş (reçeldeki pektin).
-- **Konu havuzu (bilgi olarak, iddiasız):** vagus siniri ve sindirim, reflü/gastrit zemininde yaşam tarzı, bağırsak–beyin ekseni,
-  acı (bitter) tatlar ve sindirim, pektin, arabinogalaktan (prebiyotik lif), polifenoller, seskiterpen laktonlar, uçucu yağlar.
-- **Örnekteki ALINMAYACAK ifadeler:** ürün adı ("Mürsafi Şurup"), "özel bir karışım var", "reflüyü durdurur", "ülserin iyileşmesine yardım eder",
-  "gastriti önler", "mide çeperini onarır", "otoimmün zeminleri dengeler", "tedavi etmez… aynı zamanda", "sürekli kullanım zararsız",
-  "alkaloid/toksik içermez", "vücudu tarayan yazılım", "doğru frekans", "ilaçlar kalıcı çözüm sunmadı / ilaçlar sadece asidi baskılar"
-  (ilaç karşıtı söylem), "GRAS = güvenli" genellemesi.
-- **Çeviri kalıbı:** "X onarır/durdurur" → "X'in … üzerindeki rolü araştırılıyor"; "ilaçlar yetmez" → "bu konuyu hekiminizle konuşmak önemli;
-  bu arada yaşam tarzı ve beslenme tarafında bilinenler şunlar…"; ürün kapanışı → "Kaydet, serinin devamında …'yı anlatacağız."
+## Bilgi kaynağı: vagus siniri ve sindirim (`kaynak/mursafi_soru_cevap_senaryo.md`)
+**Bu belge format ya da kullanılacak senaryo DEĞİL, sadece BİLGİ kaynağı** (Berkay). Tek format yok; her içeriğin formatı ayrıca belirlenir.
+Kullanılabilecek konu bilgisi (hepsi "araştırılıyor / ilişkilendiriliyor" diliyle, ürünsüz):
+- Vagus siniri sindirimle ilişkili: mide asidi, bağırsak hareketleri, pankreas salgısı ile bağlantısı; "sindirimin kontrol kulesi" benzetmesi.
+- Reflü belirtileri (mide yanması, boğaza acı su gelmesi, gece uyanma) ve sinir sistemi–sindirim bağlantısı; bağırsak–beyin ekseni.
+- Bitkisel bileşen grupları: seskiterpen laktonlar, polifenoller, acı glikozitler / bitter bileşikler (acı tat ve sindirim salgıları),
+  uçucu yağlar, pektin (reçeldeki madde; mide yüzeyinde kalkan gibi davranabileceği inceleniyor, prebiyotik lif), emodin,
+  arabinogalaktan (prebiyotik lif, bağırsak florası–bağışıklık ilişkisi). "Sindirim, bağışıklığın kalbi" bakışı.
+- Belgedeki ürün adı ve iddialar KULLANILMAZ: "reflüyü durdurur", "ülseri iyileştirir", "gastriti önler", "mide çeperini onarır",
+  "otoimmün zemini dengeler", "sürekli kullanım zararsız", "toksik içermez", "vücudu tarayan yazılım", "doğru frekans",
+  "ilaçlar kalıcı çözüm sunmaz / sadece asidi baskılar" (ilaç karşıtı), "GRAS = güvenli" genellemesi.
 
 ## Hedef kitle
 Sedef, egzama, vitiligo gibi kronik cilt sorunları veya şişkinlik/gaz/IBS gibi sindirim şikâyetleri yaşayan, "kök nedeni"
