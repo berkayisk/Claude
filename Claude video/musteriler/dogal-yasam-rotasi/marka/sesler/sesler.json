@@ -1,7 +1,10 @@
 {
  "anlatici": {
   "sure": 8.3,
-  "f0": 201
+  "f0": 201,
+  "netlik": "yok",
+  "kurut": true,
+  "not": "referans WPE ile kurutuldu (yankılı hali: anlatici_referans_yankili.wav)"
  },
  "elif": {
   "sure": 10.5,

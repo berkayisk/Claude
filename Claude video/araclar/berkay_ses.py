@@ -29,6 +29,11 @@ HEDEF_F0 = float(os.environ.get("SES_F0", 176.0))   # Berkay'ın anlatım kaydı
 NETLIK = ("equalizer=f=3000:t=q:w=1:g=1,equalizer=f=5000:t=q:w=1:g=2,equalizer=f=7000:t=q:w=1:g=1,highshelf=f=10000:g=11,"
           "aexciter=amount=8:drive=9:blend=0:freq=11500:ceil=18000,deesser=i=0.3")
 
+# Başka ses için netlik zinciri değiştirilebilir: SES_NETLIK="yok" (sadece yeniden örnekleme) ya da özel ffmpeg zinciri.
+# (NETLIK Berkay'ın kaydına göre ayarlı; exciter yankı kuyruğunu da parlatır → yankılı referanslı seslerde "yok" kullan.)
+_ne = os.environ.get("SES_NETLIK")
+if _ne is not None: NETLIK = "anull" if _ne.strip() in ("", "yok") else _ne
+
 def _load(p, *a, **k):
     x, sr = sf.read(p, dtype="float32", always_2d=True); return torch.from_numpy(x.T.copy()), sr
 def _save(p, w, sr, *a, **k): sf.write(p, w.detach().cpu().numpy().T, sr)
