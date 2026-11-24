@@ -3,7 +3,8 @@
 Ses bandı yalnızca gerçek kayıtlardan kuruldu (real-sound yeteneği). Atıf zorunlu değildir (CC0 / Mixkit lisansları); kayıt tutmak için listelenmiştir.
 
 ## Müzik
-- "Relaxation 05" — Lily J, Mixkit Stock Music Free License (https://mixkit.co/license/#musicFree) — https://mixkit.co/free-stock-music/tag/ambient/ (v13)
+- "New Bass 02" — Lily J, Mixkit Stock Music Free License (https://mixkit.co/license/#musicFree) — https://mixkit.co/free-stock-music/tag/electronic/ (v14)
+- (v13: "Relaxation 05" — Lily J, Mixkit Stock Music Free License)
 - (v12, dramatik sürüm: "We Will Get It" — Eugenio Mininni, Mixkit Stock Music Free License)
 
 ## Ses efektleri — Mixkit (Mixkit Sound Effects Free License, https://mixkit.co/license/#sfxFree)

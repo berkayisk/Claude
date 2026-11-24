@@ -86,3 +86,10 @@
   ses seviyesi düz (std 4 dB), saniyede ~1 vuruş. Filmdeki müzik kanalı %94 sakin/umutlu (v12 müziği %17).
 - Kesintisiz akış (0:19 sert kesme yerine -5 dB yumuşak kısılma), final kartında parçanın kendi bitişi.
 - Müzik tabanı -9 dB, konuşmada ek -9 dB. Vuruşlar, riser, kalp atışı çıkarıldı; saat tiki -4 dB. Eski tasarım: audio/sounddesign_v12_dramatik.json.
+
+## v14 — dinamik, hafif gerilimli, dramatik olmayan müzik
+- Kullanıcı: v13 ambient pad hâlâ "çok fazla ve dramatik"; dinamik + hafif gerilimli + dramatik olmayan istendi.
+- 83 aday (elektronik/hip hop/downtempo/underscore/tech) earshot ile: "New Bass 02" (Lily J) — minimal elektronik, hedefe %94; dramatik/neşeli 0.
+- Ritimsiz gergin giriş 0–29,5; ritim "Ama…" (29,53) anında girer; finalde parçanın kendi sönüşü (82,3–90).
+- Müzik tabanı -13 dB + konuşmada -9 dB → müzik kanalı seslendirmenin ~16 dB altında. Önceki tasarımlar: sounddesign_v12_dramatik.json, sounddesign_v13_sakin.json.
+- Ders: pad ağırlıklı ambient (rüya gibi, eterik) kullanıcıya "dramatik" geliyor; ritmik minimal elektronik daha uygun.

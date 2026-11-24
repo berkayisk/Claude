@@ -590,35 +590,49 @@
   }
  ],
  "music": {
-  "file": "audio/assets/music/mk-749_relaxation-05.mp3",
-  "src_bpm": 107.7,
-  "target_bpm": 107.7,
+  "file": "audio/assets/music/mk-721_new-bass-02.mp3",
+  "src_bpm": 152.0,
+  "target_bpm": 152.0,
   "stretch": "none",
   "gain_db": 0,
   "segments": [
    {
     "src_from": 0.0,
-    "src_to": 60.2,
+    "src_to": 16.28,
     "at": 0.0,
-    "fade_in": 0.02,
-    "fade_out": 1.5,
-    "label": "giriş → kesintisiz akış (gece, keşif, sabah, cliffhanger)",
-    "fade_in_at_start": false
+    "fade_in_at_start": false,
+    "fade_out": 0.6,
+    "label": "ritimsiz gergin giriş (gece)"
    },
    {
-    "src_from": 108.0,
-    "src_to": 118.0,
-    "at": 59.75,
-    "fade_in": 1.2,
-    "tail_fade": 3.0,
-    "label": "parçanın kendi bitişi: final kartı, sessizliğe söner"
+    "src_from": 3.0,
+    "src_to": 16.63,
+    "at": 15.88,
+    "fade_in": 0.6,
+    "fade_out": 0.03,
+    "label": "giriş devam (dip, 'çoğu insan…'); ritim öncesi"
+   },
+   {
+    "src_from": 16.63,
+    "src_to": 47.32,
+    "at": 29.51,
+    "fade_in": 0.01,
+    "fade_out": 0.8,
+    "label": "ritim 'Ama…' anında girer: keşif, sabah, cliffhanger"
+   },
+   {
+    "src_from": 82.3,
+    "src_to": 90.0,
+    "at": 60.25,
+    "fade_in": 0.5,
+    "label": "parçanın kendi sönüşü (82,3-90): final kartı, sessizliğe biter"
    }
   ]
  },
- "_buses_doc": "v13 (sakin): müzik tabanı -9 dB, her seslendirme satırında ek -9 dB; 0:19-0:26 dipte -5 dB yumuşak kısılma (kesme yok), 42 sabah +2, final +2. Vuruşlar/riser/kalp atışı çıkarıldı.",
+ "_buses_doc": "v14 (dinamik, hafif gerilimli, dramatik değil): 'New Bass 02' minimal elektronik; ritim 'Ama…' (29,53) anında girer. Müzik tabanı -13 dB, konuşmada ek -9 dB; dipte -4 dB.",
  "buses": {
   "music": {
-   "gain_db": -9.0,
+   "gain_db": -13.0,
    "auto": [
     [
      0,
@@ -738,59 +752,59 @@
     ],
     [
      19.8,
-     -10.99
+     -9.99
     ],
     [
      20.49,
-     -14.0
+     -13.0
     ],
     [
      20.89,
-     -5.0
+     -4.0
     ],
     [
      21.0,
-     -5.0
+     -4.0
     ],
     [
      21.25,
-     -14.0
+     -13.0
     ],
     [
      23.49,
-     -14.0
+     -13.0
     ],
     [
      23.7,
-     -5.0
+     -4.0
     ],
     [
      23.89,
-     -5.0
+     -4.0
     ],
     [
      23.95,
-     -14.0
+     -13.0
     ],
     [
      25.6,
-     -14.0
+     -13.0
     ],
     [
      25.85,
-     -12.44
+     -11.75
     ],
     [
      25.9,
-     -3.13
+     -2.5
     ],
     [
      26.15,
-     -10.56
+     -10.25
     ],
     [
      26.25,
-     -0.94
+     -0.75
     ],
     [
      26.4,
@@ -798,123 +812,115 @@
     ],
     [
      28.83,
-     -9.0
+     -9.09
     ],
     [
      29.23,
-     0.0
+     -0.11
     ],
     [
      29.3,
-     0.0
+     -0.11
     ],
     [
      29.55,
-     -9.0
+     -9.12
     ],
     [
      32.1,
-     0.0
+     -0.22
     ],
     [
      32.11,
-     -9.0
+     -9.22
     ],
     [
      32.35,
-     -9.0
+     -9.23
     ],
     [
      32.51,
-     0.0
+     -0.23
     ],
     [
      35.03,
-     0.0
+     -0.33
     ],
     [
      35.28,
-     -9.0
+     -9.34
     ],
     [
      35.68,
-     0.0
+     -0.35
     ],
     [
      38.55,
-     0.0
+     -0.46
     ],
     [
      38.56,
-     -9.0
+     -9.46
     ],
     [
      38.8,
-     -9.0
+     -9.47
     ],
     [
      38.96,
-     0.0
+     -0.48
     ],
     [
      40.26,
-     -9.0
+     -9.53
     ],
     [
      40.66,
-     0.0
-    ],
-    [
-     41.5,
-     0.0
+     -0.54
     ],
     [
      42.5,
-     2.0
+     -0.61
     ],
     [
      42.75,
-     -7.03
+     -9.62
     ],
     [
      45.45,
-     1.65
+     -0.72
     ],
     [
      45.7,
-     -7.38
+     -9.73
     ],
     [
      46.1,
-     1.58
+     -0.75
     ],
     [
      47.22,
-     1.44
+     -0.79
     ],
     [
      47.47,
-     -7.58
+     -9.8
     ],
     [
      47.87,
-     1.37
+     -0.81
     ],
     [
      50.73,
-     1.03
+     -0.92
     ],
     [
      50.98,
-     -8.0
-    ],
-    [
-     51,
-     -7.55
+     -9.93
     ],
     [
      51.38,
-     0.57
+     -0.95
     ],
     [
      52.75,
@@ -954,47 +960,47 @@
     ],
     [
      60.07,
-     -0.58
+     -1.0
     ],
     [
      60.32,
-     -8.08
+     -8.72
     ],
     [
      60.5,
-     -2.95
+     -3.95
     ],
     [
      60.72,
-     1.94
+     -1.0
     ],
     [
      64.11,
-     1.03
+     -1.0
     ],
     [
      64.16,
-     -7.99
+     -8.49
     ],
     [
      64.36,
-     -8.04
+     -8.52
     ],
     [
      64.56,
-     0.91
+     -1.0
     ],
     [
      67.42,
-     -8.87
+     -8.93
     ],
     [
      67.82,
-     0.03
+     -1.0
     ],
     [
      67.92,
-     0.0
+     -1.0
     ]
    ]
   },
