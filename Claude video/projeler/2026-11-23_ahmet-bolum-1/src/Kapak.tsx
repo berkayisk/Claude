@@ -19,11 +19,12 @@ export const Kapak: React.FC = () => (
       </div>
     </div>
     {/* başlık (yüzün altında) */}
-    <div style={{ position: "absolute", top: 1110, left: 50, right: 50, textAlign: "center", fontFamily: POP, lineHeight: 1.0, textShadow: "0 8px 30px rgba(0,0,0,0.7)" }}>
+    <div style={{ position: "absolute", top: 1060, left: 50, right: 50, textAlign: "center", fontFamily: POP, lineHeight: 1.0, textShadow: "0 8px 30px rgba(0,0,0,0.7)" }}>
+      <div style={{ fontWeight: 600, fontStyle: "italic", fontSize: 40, color: "rgba(255,255,255,0.85)", marginBottom: 22 }}>“Herkesin bir gece yarısı fikri vardır.”</div>
       <div style={{ fontWeight: 700, fontSize: 52, color: "rgba(255,255,255,0.85)", letterSpacing: 1 }}>AHMET</div>
       <div style={{ fontWeight: 800, fontSize: 118, color: "white", letterSpacing: -3, marginTop: 6 }}>E-TİCARETE</div>
       <div style={{ fontWeight: 800, fontSize: 92, color: "white", letterSpacing: -2 }}>BAŞLAMAK İSTİYOR</div>
-      <div style={{ display: "inline-block", marginTop: 26, background: "#F67102", color: "white", fontWeight: 800, fontStyle: "italic", fontSize: 48, padding: "6px 26px", borderRadius: 14, transform: "rotate(-2deg)" }}>ama nereden?</div>
+      <div style={{ display: "inline-block", marginTop: 26, background: "#F67102", color: "white", fontWeight: 800, fontStyle: "italic", fontSize: 46, padding: "6px 26px", borderRadius: 14, transform: "rotate(-2deg)" }}>ve o mesaj…</div>
     </div>
     <Vinyet guc={0.8} />
     <Gren f={7} guc={0.8} />
