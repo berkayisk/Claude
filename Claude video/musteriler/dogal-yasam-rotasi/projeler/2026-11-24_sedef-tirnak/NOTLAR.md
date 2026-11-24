@@ -1,0 +1,4 @@
+# Sedef — tırnak işareti (24.11.2026)
+- Kanca: basliklar/2026-11-24_sedef.md #1 (30/30). Senaryo: senaryo/SENARYO.md, satırlar senaryo/satirlar.json (16 satır, ~44 sn).
+- Ses: araclar/coklu_ses.py → ses/ (anlatıcı + Elif).
+- Format 1080x1920, 30 fps, örnek video çizim/altyazı stili.
