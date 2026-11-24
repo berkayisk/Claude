@@ -3,7 +3,8 @@
 Ses bandı yalnızca gerçek kayıtlardan kuruldu (real-sound yeteneği). Atıf zorunlu değildir (CC0 / Mixkit lisansları); kayıt tutmak için listelenmiştir.
 
 ## Müzik
-- "We Will Get It" — Eugenio Mininni, Mixkit Stock Music Free License (https://mixkit.co/license/#musicFree) — https://mixkit.co/free-stock-music/tag/cinematic/
+- "Relaxation 05" — Lily J, Mixkit Stock Music Free License (https://mixkit.co/license/#musicFree) — https://mixkit.co/free-stock-music/tag/ambient/ (v13)
+- (v12, dramatik sürüm: "We Will Get It" — Eugenio Mininni, Mixkit Stock Music Free License)
 
 ## Ses efektleri — Mixkit (Mixkit Sound Effects Free License, https://mixkit.co/license/#sfxFree)
 - mk-1210_morning-birds.wav

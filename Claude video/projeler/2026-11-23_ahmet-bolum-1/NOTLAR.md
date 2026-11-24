@@ -79,3 +79,10 @@
 - mix.py → out/audio/soundtrack.wav (-14,0 LUFS, -2,3 dBTP); qa.py: kenar kusuru 0; seslendirme müzik altında (-7 dB ducking) net.
 - Video: v11 görüntüsü + yeni ses (mux) → ciktilar/Ahmet_Bolum1_v12_Gercek_Ses.mp4.
 - Not: qa.py, cue türü "place" olunca serbest yerleştirmelerle karışıyor → tür adı "set".
+
+## v13 — sakin, akıcı, alttan gelen müzik
+- Kullanıcı: v12 "çok dramatik"; akıcı, baskın olmayan, alttan gelen müzik istendi.
+- 110 Mixkit adayı (ambient/chillout/new age/elektronika/sakin film müziği) earshot rank + match ile: "Relaxation 05" (Lily J) — %91 sakin/umutlu,
+  ses seviyesi düz (std 4 dB), saniyede ~1 vuruş. Filmdeki müzik kanalı %94 sakin/umutlu (v12 müziği %17).
+- Kesintisiz akış (0:19 sert kesme yerine -5 dB yumuşak kısılma), final kartında parçanın kendi bitişi.
+- Müzik tabanı -9 dB, konuşmada ek -9 dB. Vuruşlar, riser, kalp atışı çıkarıldı; saat tiki -4 dB. Eski tasarım: audio/sounddesign_v12_dramatik.json.
