@@ -17,5 +17,10 @@ Kural (`/viral` bölüm 0): kanca cesur olabilir, gövde dürüst olmak zorunda.
 | 10 | Antibiyotikten sonra şişkinliğin başladıysa sebebi bağırsağındaki bakteriler olabilir. | Antibiyotiklerin bağırsak mikrobiyotasını değiştirdiği biliniyor | Antibiyotiği hekimin verdiyse bırakma; mikrobiyota zamanla toparlanabilir | ⬜ |
 | 11 | Gözyaşının içinde bakterilerle savaşan bir protein var. | Laktoferrin gözyaşı, tükürük, anne sütünde bulunur (e-kitap) | Olgu videosu; ürün yok | ⬜ |
 | 12 | Anne sütünün ilk 3 gününde neden bu kadar değerli bir şey var? | Kolostrumda laktoferrin en yüksek düzeyde (e-kitap tablosu) | Olgu; "anne sütü almayan hasta olur" genellemesi YOK | ⬜ |
+| 13 | Tırnaklarına bir bak. İğne batmış gibi küçük çukurlar var mı? | Sedefte tırnak bulguları (sedeflilerin ~yarısı) | Her çukur sedef değil; fark ettiysen dermatoloğa göster | ⬜ (sedef #1, 30/30) |
+| 14 | Kolundaki o çizik, sedefin yeni adresi olabilir. | Koebner fenomeni | Çizik sedefe yol açmaz; sedefi olanda o bölgede tetikleyebilir | ⬜ (sedef #2, 29/30) |
+| 15 | Kepeğin geçmiyor mu? Sorun şampuanında olmayabilir. | Saçlı deri sedefi kepekle karışır | Her kepek sedef değil; kalın gümüşi pul + kızarıklık → dermatolog | ⬜ (sedef #3, 29/30) |
+
+Ayrıntılı çalışmalar: `basliklar/`.
 
 Eklenecek her yeni kanca: gerçek bağlantı + "mutlaka söylenecek" sütunu dolmadan senaryoya geçmez.
