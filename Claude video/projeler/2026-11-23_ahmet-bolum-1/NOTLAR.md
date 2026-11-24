@@ -93,3 +93,8 @@
 - Ritimsiz gergin giriş 0–29,5; ritim "Ama…" (29,53) anında girer; finalde parçanın kendi sönüşü (82,3–90).
 - Müzik tabanı -13 dB + konuşmada -9 dB → müzik kanalı seslendirmenin ~16 dB altında. Önceki tasarımlar: sounddesign_v12_dramatik.json, sounddesign_v13_sakin.json.
 - Ders: pad ağırlıklı ambient (rüya gibi, eterik) kullanıcıya "dramatik" geliyor; ritmik minimal elektronik daha uygun.
+
+## v15 — müzik yükseltildi
+- Kullanıcı: v14'te müzik "çok kısık". Müzik bus -13 → -6 dB, konuşma altı ducking -9 → ~-6 dB (otomasyon ×0,65).
+- Müzik kanalı RMS -31,8 → -24,0 dB (seslendirme -16,1) → müzik sesin ~8 dB altında. Whisper dökümü tam doğru.
+- Önceki ayar: audio/sounddesign_v14_kisik.json. Ders: bu dizi için müzik/ses farkı ~8 dB uygun (16 dB fazla kısık).
