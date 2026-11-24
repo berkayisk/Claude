@@ -23,3 +23,5 @@ musteriler/*/projeler/*/calisma/*
 musteriler/**/*.mov
 musteriler/**/*.mp4
 musteriler/**/referanslar/kareler/k_*.jpg
+musteriler/**/ses/_*/
+musteriler/**/ses/uret.log
