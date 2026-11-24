@@ -14,18 +14,18 @@
   "İğne batmış gibi küçük çukurlar var mı?  [vurgu 0.85: tonlama: 'mı/mi' sorusunda zirve ekten önceki hecede değil]"
  ],
  "s03": [
-  "elif",
-  "Bunlar mı? Bir yere çarptım sanmıştım.",
-  3.79,
+  "anlatici",
+  "Çoğu kişi bunu bir yere çarptım sanar.",
+  2.7,
   1.0,
-  "Bunlar mı? Bir yere çarptım sanmıştım.  [vurgu 0.85: hız: çok yavaş]"
+  "Çoğu kişi bunu bir yere çarptım sanar."
  ],
  "s04": [
   "anlatici",
-  "Bu minik çukurlar, sedefle ilişkili olabilen bir işaret.",
-  3.27,
+  "Oysa bu minik çukurlar, sedefle ilişkili olabilen bir işaret.",
+  4.38,
   1.0,
-  "Bu minik çukurlar Sedef'le ilişkili olabilen bir işaret."
+  "Oysa bu minik çukurlar sedefle ilişkili olabilen bir işaret."
  ],
  "s05": [
   "anlatici",
@@ -82,13 +82,6 @@
   4.86,
   1.0,
   "Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor.  [vurgu 0.83: vurgu: daha → 'ha' vurgulu; Berkay 'da' diye vurgular]"
- ],
- "s13": [
-  "anlatici",
-  "Yani bu küçük işaret, sandığından fazlasını anlatabilir.",
-  4.52,
-  1.0,
-  "Yani bu küçük işaret sandığından fazlasını anlatabilir."
  ],
  "s14": [
   "anlatici",

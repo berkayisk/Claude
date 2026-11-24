@@ -1,18 +1,77 @@
 [
- {"k":"s01","ses":"anlatici","metin":"Tırnaklarına bir bak."},
- {"k":"s02","ses":"anlatici","metin":"İğne batmış gibi küçük çukurlar var mı?"},
- {"k":"s03","ses":"elif","metin":"Bunlar mı? Bir yere çarptım sanmıştım.","ex":0.5},
- {"k":"s04","ses":"anlatici","metin":"Bu minik çukurlar, sedefle ilişkili olabilen bir işaret."},
- {"k":"s05","ses":"anlatici","metin":"Sedef sadece cildi değil, tırnakları da etkileyebilir."},
- {"k":"s06","ses":"anlatici","metin":"Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor."},
- {"k":"s07","ses":"anlatici","metin":"Ama tek işaret çukurlar değil."},
- {"k":"s08","ses":"anlatici","metin":"Tırnağın altında yağ damlası gibi sarımsı bir leke."},
- {"k":"s09","ses":"anlatici","metin":"Ucundan kalkıp beyazlayan bir tırnak."},
- {"k":"s10","ses":"anlatici","metin":"Ya da kalınlaşıp ufalanan bir yüzey."},
- {"k":"s11","ses":"anlatici","metin":"Asıl şaşırtıcı olan ise şu."},
- {"k":"s12","ses":"anlatici","metin":"Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor."},
- {"k":"s13","ses":"anlatici","metin":"Yani bu küçük işaret, sandığından fazlasını anlatabilir."},
- {"k":"s14","ses":"anlatici","metin":"Yine de her çukur sedef demek değil."},
- {"k":"s15","ses":"anlatici","metin":"Fark ettiysen, tırnaklarını bir dermatoloğa göster."},
- {"k":"s16","ses":"anlatici","metin":"Bunu, tırnaklarına hiç bakmayan birine gönder."}
+ {
+  "k": "s01",
+  "ses": "anlatici",
+  "metin": "Tırnaklarına bir bak."
+ },
+ {
+  "k": "s02",
+  "ses": "anlatici",
+  "metin": "İğne batmış gibi küçük çukurlar var mı?"
+ },
+ {
+  "k": "s03",
+  "ses": "anlatici",
+  "metin": "Çoğu kişi bunu bir yere çarptım sanar."
+ },
+ {
+  "k": "s04",
+  "ses": "anlatici",
+  "metin": "Oysa bu minik çukurlar, sedefle ilişkili olabilen bir işaret."
+ },
+ {
+  "k": "s05",
+  "ses": "anlatici",
+  "metin": "Sedef sadece cildi değil, tırnakları da etkileyebilir."
+ },
+ {
+  "k": "s06",
+  "ses": "anlatici",
+  "metin": "Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor."
+ },
+ {
+  "k": "s07",
+  "ses": "anlatici",
+  "metin": "Ama tek işaret çukurlar değil."
+ },
+ {
+  "k": "s08",
+  "ses": "anlatici",
+  "metin": "Tırnağın altında yağ damlası gibi sarımsı bir leke."
+ },
+ {
+  "k": "s09",
+  "ses": "anlatici",
+  "metin": "Ucundan kalkıp beyazlayan bir tırnak."
+ },
+ {
+  "k": "s10",
+  "ses": "anlatici",
+  "metin": "Ya da kalınlaşıp ufalanan bir yüzey."
+ },
+ {
+  "k": "s11",
+  "ses": "anlatici",
+  "metin": "Asıl şaşırtıcı olan ise şu."
+ },
+ {
+  "k": "s12",
+  "ses": "anlatici",
+  "metin": "Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor."
+ },
+ {
+  "k": "s14",
+  "ses": "anlatici",
+  "metin": "Yine de her çukur sedef demek değil."
+ },
+ {
+  "k": "s15",
+  "ses": "anlatici",
+  "metin": "Fark ettiysen, tırnaklarını bir dermatoloğa göster."
+ },
+ {
+  "k": "s16",
+  "ses": "anlatici",
+  "metin": "Bunu, tırnaklarına hiç bakmayan birine gönder."
+ }
 ]
