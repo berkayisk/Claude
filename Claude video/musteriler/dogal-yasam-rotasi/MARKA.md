@@ -90,6 +90,29 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 4. Bağırsak–cilt / bağırsak bariyeri bağlantısı → araştırılan doğal bileşen: laktoferrin (+ bütirat)
 5. "Laktoferrin neden araştırılıyor?" → (sitede burada "Hemen İncele!" var; **içeriklerde yok** — onun yerine "Kaydet / takip et, devamı geliyor")
 
+## İçerik stili (örnek: `referanslar/demir-vsl-v3-genel.mov`, transkript `referanslar/demir-vsl-v3-genel_transkript.txt`)
+**FORMAT: aksi söylenmedikçe her video 9:16 dikey (1080×1920, 30 fps).** (Örnek video 16:9 yatay; dikeye uyarlanır:
+karakterler daha büyük/yakın, sahne dikey kurulur, altyazı alt üçte birin üstüne — Reels arayüzü altta ~350 px kapatır.)
+
+- **Tür:** 2D çizgi animasyon, **hikâyeli eğitim videosu** ("VSL" adlı ama içinde ürün/satış yok). İsimli bir karakter (Elif, 32)
+  üzerinden belirti → doktora gidiş → tahlil → klasik çözüm ve zorlukları anlatılıyor. İzleyici kendini karakterde görüyor.
+- **Kanca:** "Bu Elif, 32 yaşında. İşini seviyor, arkadaşlarını seviyor, hayatı yoğun ama güzel. **Ama** son birkaç aydır bir şeyler ters gidiyor."
+  → tanıdık hayat + "ama" kırılması (ilk 10 sn).
+- **Belirtiler somut sahnelerle:** 8 saat uyuyup yorgun uyanmak, merdivende nefesin kesilmesi, tarağa takılan saç tutamları,
+  arkadaşın "Yüzün sapsarı olmuş" demesi. Liste okumak yerine her belirti bir sahne.
+- **Ses:** anlatıcı + karakter diyalogları, farklı seslerle (anlatıcı ~178 Hz, Elif ve iş arkadaşı kadın, doktor yaşlı erkek, eczacı erkek).
+  Konuşma dili, kısa cümleler. Müzik/efekt hafif. Ses seviyesi ortalama ~-19.6 dB, tepe -3.7 dB.
+- **Tempo:** ~85 sn'de ~33 sahne değişimi → ortalama **2.5–3 sn/sahne**; her cümle ya da yarım cümle yeni bir çekim/yakınlaşma.
+  Bölüm geçişlerinde ara kart ("1. AY" — mavi gökyüzü + 3D bulutlar, lacivert kalın yazı `#2F396A`).
+- **Altyazı:** her an ekranda, alt ortada **beyaz hap (pill) kutu**, mor ince kenar, yuvarlak köşeler; yazı **koyu mor `#481A78`**,
+  kalın yuvarlak sans (Fredoka / Baloo 2 benzeri). Kısa parçalar halinde (3–6 kelime), cümle bölünerek akar.
+- **Çizim stili:** düz renk vektör, koyu mor-lacivert dış çizgi, yumuşak gölge, arka planlar bulanık (derinlik). Pastel mint/krem
+  odalar, Elif'in imzası **teal kazak `#2D9D98`** + at kuyruğu. Duygu yüz ifadesiyle (göz altı morluğu, solgun/yeşil yüz, ter damlası).
+  Görsel ipuçları: tahlil ekranında düşen grafik + kırmızı ok, "13" takvim, anneden gelen mesajlar telefonda.
+- **Bilgi dili:** doktor ağzından bile "bununla **ilgili olabilir**". Reçeteli tedavi kötülenmez; yalnızca yaşanan zorluk (mide, kabızlık)
+  gerçekçi aktarılır. Biz de: hekim önerisine karşı çıkan / "ilacı bırak" diyen hiçbir şey yazmayız.
+- **Yapı:** dizi/bölüm mantığı, merak bırakarak bitiyor ("Bir ay, iki ay…" → "1. AY" kartı). Örnek dosya burada kesiliyor (v3, devamı yok).
+
 ## Hedef kitle
 Sedef, egzama, vitiligo gibi kronik cilt sorunları veya şişkinlik/gaz/IBS gibi sindirim şikâyetleri yaşayan, "kök nedeni"
 merak eden, doğal yaklaşımlara ilgi duyan yetişkinler (görsel dil ve yüz olarak ağırlıkla kadın kitle).
