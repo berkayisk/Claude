@@ -21,11 +21,13 @@ description: Doğal Yaşam Rotası (takviye gıda mağazası, dogalyasamrotasii.
 - **Yasak iddialar listesi** MARKA.md'deki tablolardadır (kanser, Alzheimer, %50 azaltır, "mucize", "yan etkisi yok" …) — hiçbiri girmez.
 - Korkutma, utandırma, önce–sonra yok. Merak ve "bunu bilmiyordum" duygusu var.
 - **Format:** aksi söylenmedikçe 9:16 dikey. Görsel stil: 2D düz vektör animasyon (MARKA.md "İçerik stili").
+- **Ton:** sakin ansiklopedi değil, cesur ve şaşırtıcı kanca + dürüst gövde (`/viral` bölüm 0, doğruluk kuralı).
 - Kullanıcı formatı belirtmediyse tek format varsayma: konuya en uygun 2 format öner (aşağıdan), birini seçip yaz.
 
 ## Format kütüphanesi (konuya göre seç)
 | Format | Ne zaman | Sesler |
 |---|---|---|
+| **Gündelik suçlu** (ÖNCELİKLİ): "şu yaraların sebebi yediğin ekmek olabilir" | her konu için ilk tercih; en viral | anlatıcı (+ elif tepki) |
 | **Hikâyeli mini sahne** (karakter + belirti sahneleri + bilgi) | belirti tanıtma, "kendini tanı" | anlatıcı + elif (+ arkadas/doktor) |
 | **Soru–cevap diyalog** | bir kavramı açmak (vagus, ferritin, geçirgen bağırsak) | elif ↔ doktor/anlatıcı |
 | **Bunu biliyor muydun? (3 bilgi)** | ilginç olgular (laktoferrin gözyaşında, 691 amino asit) | anlatıcı |

@@ -13,6 +13,19 @@ Marka kuralları her zaman bu kuralların ÜSTÜNDEDİR: önce `Claude video/mus
 kanal stili (Sıfırdan Satışa) okunur. Viral olmak için yalan, korkutma, tedavi vaadi, abartı, sahte rakam ASLA kullanılmaz.
 Sağlık konularında merak = "bilinmeyen bilgi", korku değil.
 
+## 0. Konu seçimi: "gündelik suçlu" — en güçlü viral kalıp (Berkay'ın yönü)
+Herkesin her gün yaptığı/yediği/gördüğü bir şey ↔ beklenmedik bir sağlık/vücut sonucu. İzleyici "ben de yapıyorum!" der, kaydeder, paylaşır.
+Örnek (Berkay): **"Cildindeki şu yaraların asıl sebebi yediğin ekmek olabilir, biliyor muydun?"**
+- Kalıplar: "[gündelik şey] [beklenmedik sonuç] olabilir" · "[belirti] varsa vücudun sana [şunu] söylüyor olabilir" ·
+  "[sağlıklı sanılan şey] sandığın kadar [işe yaramıyor] olabilir" · "[belirti]in sebebi [yer] değil, [beklenmedik yer] olabilir".
+- Somut ve görsel: "şu yaralar" (ekranda göster), "sabah çayın", "buz çiğneme isteği", "tarağındaki saçlar".
+- Sakin bir bilgi videosu değil, **"vay be" anı** hedeflenir; ton merak ve şaşkınlık, panik değil.
+- **DOĞRULUK KURALI (pazarlıksız):** kanca, en az belirli bir grup için bilimsel olarak bilinen bir bağlantıya dayanır
+  (ör. ekmek → gluten → çölyak hastalığının cilt belirtisi dermatitis herpetiformis). Videonun içinde mutlaka:
+  1) bağlantının kimler için geçerli olduğu ("herkes için değil, çölyağı olanlarda…"), 2) "olabilir" ile kurulan dil,
+  3) neye bakılabileceği ("bunu anlamanın yolu hekimin isteyeceği bir tahlil"). Kanca abartılı olabilir, gövde dürüst olmak zorunda.
+- Uydurma bağlantı, tek çalışmalı zayıf iddia, "herkes ekmeği bıraksın" gibi genelleme, tedavi vaadi YOK.
+
 ## 1. Kanca (0–3 sn) — videonun yarısı burada kazanılır
 - **İlk kare boş olmaz:** 1. karede hem görüntü hem ekran yazısı (kanca metni) var. Logo, selam, "merhaba bugün…" YOK.
 - **İlk cümle ≤ 2,5 sn** (~6 kelime), sesli kanca + ekran kancası aynı fikri farklı kelimeyle söyleyebilir.
@@ -23,6 +36,7 @@ Sağlık konularında merak = "bilinmeyen bilgi", korku değil.
   - **Şaşırtıcı kıyas / rakam (doğru ve kaynaklı):** "İnsülin 51, bu protein 691 amino asit."
   - **Görsel anomali:** beklenmedik bir görüntü + soru (tarağa takılan saç tutamları).
   - **Hikâye eşiği:** "Bu Elif. Ve bir şeyler ters gidiyor."
+  - **Gündelik suçlu (en güçlüsü):** "Cildindeki şu yaraların sebebi yediğin ekmek olabilir." (bkz. 0)
 - Kanca **videonun vaadi**dir: sonunda mutlaka karşılanır (karşılanmayan kanca = düşük izlenme yüzdesi + güven kaybı).
 
 ## 2. Tutma (retention)
