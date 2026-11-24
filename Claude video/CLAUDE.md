@@ -70,7 +70,7 @@ projeler/<proje>/
   son kelimeden sonraki sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir, tüm satırların medyan perdesi 176 Hz'e eşitlenir,
   NETLIK zinciri uygulanır (model 24 kHz → boğuk; Berkay'ın kaydının bant profiline göre EQ + exciter + de-esser). Sadece son işlem: `--son-islem cikti/`.
   Filmde VO'ya ayrıca bas takviyesi EKLEME (boğuklaştırıyor).
-- **Yankı:** klon referansının yankısını taşır, NETLIK exciter'ı ve varsayılan rubberband yankıyı artırır. Başka (müşteri) seslerde referansı
+- **Yankı (araç var, varsayılan değil — Berkay Doğal Yaşam'da işlenmemiş sesi tercih etti):** klon referansının yankısını taşır, NETLIK exciter'ı ve varsayılan rubberband yankıyı artırır. Başka (müşteri) seslerde referansı
   `araclar/ses_temizle.py` / WPE ile kurut, `SES_NETLIK=yok`, çıktıya WPE (coklu_ses: sesler.json `netlik`/`kurut`). Ölçü: WPE'nin çıkardığı enerji (Berkay ref -50 dB = kuru).
 - Perde kaydırma sonrası da bağlam içinde (satırları birleştirerek) yeniden doğrula: bir kez "kaçırmamak" → "kaçınmamak" oldu.
 - Kurulum (yeni oturum): `pip install --no-deps chatterbox-tts torchaudio==2.11.1` + librosa==0.11.0 s3tokenizer transformers==5.2.0 diffusers==0.29.0

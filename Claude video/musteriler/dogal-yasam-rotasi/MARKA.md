@@ -129,9 +129,9 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 | `doktor` | Yaşlı erkek / uzman | 12.8 sn | 118 Hz |
 | `eczaci` | Erkek karakter | 7.5 sn | 140 Hz |
 
-**Yankı:** anlatıcı referansı WPE ile kurutuldu (`araclar/ses_temizle.py`; yankılı hali `anlatici_referans_yankili.wav`), sesler.json'da `netlik: yok` (Berkay'a göre ayarlı exciter yankıyı parlatıyordu) + `kurut: true` (çıktıya WPE). Hızlandırmada rubberband `transients=crisp:detector=compound:phase=independent:window=short` (varsayılan ayar yankı kuyruğunu uzatıyor).
+**Ses işleme (Berkay 24.11):** orijinal ses tercih edildi — yankı giderme (WPE, netlik=yok) ve hızlandırma denendi, Berkay v2'yi (doğal hız, işlenmemiş) seçti. Varsayılan: işlem YOK. Denemeler: projeler/2026-11-24_sedef-tirnak/ses_v5_kuru, ses_hizli.
 
-**Hız:** anlatıcı klonu doğal haliyle yavaş (~2.05 kelime/sn) → üretimden sonra `rubberband=tempo=1.15:pitch=1:formant=preserved`, satır arası 0.12 sn (hedef ~2.3–2.4 kelime/sn). Hızlandırma telaffuzu bozabilir: hızlı dosyalarla `araclar/telaffuz.py denetle` yeniden çalıştırılır, şüpheli satırda tempo 1.12→1.10→1.08 düşürülür. Son mixte loudnorm -14 LUFS.
+**Hız (şu an varsayılan değil, Berkay v2'yi seçti):** anlatıcı klonu doğal haliyle yavaş (~2.05 kelime/sn) → üretimden sonra `rubberband=tempo=1.15:pitch=1:formant=preserved`, satır arası 0.12 sn (hedef ~2.3–2.4 kelime/sn). Hızlandırma telaffuzu bozabilir: hızlı dosyalarla `araclar/telaffuz.py denetle` yeniden çalıştırılır, şüpheli satırda tempo 1.12→1.10→1.08 düşürülür. Son mixte loudnorm -14 LUFS.
 
 Üretim: `SES_REF=marka/sesler/<ad>_referans.wav SES_F0=<perde> python3 araclar/berkay_ses.py satirlar.json cikti/`
 (her ses ayrı çalıştırılır; örnek: `projeler/2026-11-24_ses-testi/uret.sh`). Telaffuz/vurgu denetimi aynı araçla yapılır.

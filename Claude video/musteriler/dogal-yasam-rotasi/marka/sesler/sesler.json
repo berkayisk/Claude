@@ -2,9 +2,7 @@
  "anlatici": {
   "sure": 8.3,
   "f0": 201,
-  "netlik": "yok",
-  "kurut": true,
-  "not": "referans WPE ile kurutuldu (yankılı hali: anlatici_referans_yankili.wav)"
+  "not": "Berkay 24.11: orijinal (yankı giderme öncesi) ses tercih edildi; WPE kurutma ve netlik=yok KULLANILMAZ. Kurutulmuş deneme ses_v5'te."
  },
  "elif": {
   "sure": 10.5,
