@@ -3,6 +3,16 @@
 Kaynak: https://dogalyasamrotasii.com (24.11.2026'da okundu). Sitenin birebir metinleri: `kaynak/site_metinleri.md`.
 Ekran görüntüleri: `marka/site_anasayfa.png`, `marka/site_sedef.png`.
 
+## ⚠️ 1 NUMARALI KURAL: İÇERİKTE ÜRÜN YOK (Berkay, 24.11.2026)
+- İçeriklerde **asla ürün denmez, ürün gösterilmez, satış yapılmaz.** Odak tamamen bilgi/içerik.
+- Yok: ürün adı (Lactofermin vb.), şişe/kutu/etiket görseli, "ürünümüz", "paketimiz", fiyat, indirim, "satın al", "sipariş ver",
+  "linkte", "Hemen İncele", "stoklarda", marka ürünü öven her cümle.
+- Var: konu (sedef, egzama, bağırsak–cilt ekseni, laktoferrin, timokinon, mürrisafi…) hakkında merak uyandıran, öğreten içerik.
+  Bileşenler (laktoferrin, bütirat, çörek otu, mürrisafi, safran…) **konu** olarak anlatılabilir, ama "bizde var / bunu alın" bağlantısı kurulmaz.
+- CTA sadece içerik/takip odaklı: "Kaydet", "Paylaş", "Takip et — serinin devamı geliyor", "Merak ettiğini yorumlara yaz".
+  (WhatsApp/telefon/DM satış çağrısı içerik metnine girmez; profil zaten yönlendiriyor.)
+- Aşağıdaki "Ürün" bölümleri sadece **arka plan bilgisi**: hangi konuların/bileşenlerin işleneceğini bilmek için.
+
 ## Sektör / ne satıyor
 - Takviye gıda mağazası. Site bir "bilgilendirme + yönlendirme" sitesi (Canva ile yapılmış, tek sayfa, kaydırmalı bölümler).
 - Ana fikir: **"Birçok kronik rahatsızlığın kökeni çoğu zaman yalnızca görünen belirtiler değildir."** Geçirgen bağırsak
@@ -34,7 +44,7 @@ tedavi beyanı). İçeriğe şöyle çevrilir:
 | Kaşıntıyı hafifletir (muskat) | (iddia kullanılmaz; sadece içerik listesinde geçer) |
 | Bağırsak florası üzerinden inflamasyonu azaltır (kakule) | Bağırsak–cilt ekseni (sitenin ana anlatısıyla bağlanır) |
 | Karaciğer detoksu (boğa dikeni) | (iddia kullanılmaz) |
-| DNA onarıcı, Treg aktive eder (çörek otu) | Çörek otu yağının etken bileşeni timokinon, üzerinde en çok araştırma yapılan bitkisel bileşenlerden biridir; ürünümüz %27 timokinon içerir |
+| DNA onarıcı, Treg aktive eder (çörek otu) | Çörek otu yağının etken bileşeni timokinon, üzerinde en çok araştırma yapılan bitkisel bileşenlerden biridir (yüzde/ürün bilgisi verilmez) |
 
 Not: belgede muskat için "safrol" bileşeni övgüyle geçiyor; safrol gıdada sınırlandırılmış bir maddedir, içerikte hiç anılmaz.
 Gıda takviyesi onay/bildirim numarası ve ürün adı Berkay'dan alınacak; "%27 timokinon" gibi rakamlar ancak etikette varsa kullanılır.
@@ -78,7 +88,7 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 2. Ciltte / bağırsakta neler olur? → "Peki bağışıklık sistemi bunu nasıl etkileyebilir?"
 3. Bağışıklık sistemi ile ilişki → "Peki bağırsak sağlığı ile bağlantı olabilir mi?"
 4. Bağırsak–cilt / bağırsak bariyeri bağlantısı → araştırılan doğal bileşen: laktoferrin (+ bütirat)
-5. "Laktoferrin neden araştırılıyor?" → **"Hemen İncele!" / "Laktoferrin İçeren Paketi İnceleyin!"**
+5. "Laktoferrin neden araştırılıyor?" → (sitede burada "Hemen İncele!" var; **içeriklerde yok** — onun yerine "Kaydet / takip et, devamı geliyor")
 
 ## Hedef kitle
 Sedef, egzama, vitiligo gibi kronik cilt sorunları veya şişkinlik/gaz/IBS gibi sindirim şikâyetleri yaşayan, "kök nedeni"
@@ -121,5 +131,5 @@ merak eden, doğal yaklaşımlara ilgi duyan yetişkinler (görsel dil ve yüz o
 ## Açık sorular (Berkay'a)
 1. Ürün adları, içerik/gramaj, fiyatlar ve satış linki (Trendyol / Shopier / kendi mağaza?)
 2. Logo ve marka yüzünün adı, videoda kendisi mi konuşacak?
-3. İçerik türü: Reels/Shorts mu, reklam mı, Instagram carousel mı, blog mu?
+3. İçerik türü: Reels/Shorts mu, Instagram carousel mı, blog mu? (örnek içerikler gelecek → `referanslar/`)
 4. Göz altı, kabızlık, eklem için hangi ürünler öneriliyor?
