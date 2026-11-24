@@ -16,6 +16,8 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 
 ## Senaryo
 - Senaryo/metin işleri `/senarist` yeteneğiyle (`/home/user/Claude/.claude/skills/senarist/SKILL.md`); dizi kitapları `seriler/<dizi>/SERI.md`.
+- Doğal Yaşam Rotası senaryoları `/dogal-senarist` (çok sesli JSON → `araclar/coklu_ses.py`).
+- Her senaryo/video tesliminden önce `/viral` puanlaması (kanca, tutma, paylaş/kaydet tetikleyicileri; /20, 16 altı düzeltilir).
 
 ## Kanal stili (sadece Sıfırdan Satışa projeleri)
 Kullanıcının kendi kanal stili: `kanal-referanslari/yunus-emre-kocaoglu/STIL.md`
