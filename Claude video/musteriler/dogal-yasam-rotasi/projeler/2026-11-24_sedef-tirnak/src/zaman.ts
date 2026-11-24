@@ -1,94 +1,94 @@
 export const FPS=30;
-export const TOPLAM=50.65;
+export const TOPLAM=43.21;
 export const SATIRLAR=[
  {
   "k": "s01",
   "metin": "Tırnaklarına bir bak.",
-  "bas": 0.35,
-  "sure": 1.41
+  "bas": 0.3,
+  "sure": 1.226
  },
  {
   "k": "s02",
   "metin": "İğne batmış gibi küçük çukurlar var mı?",
-  "bas": 1.98,
-  "sure": 2.41
+  "bas": 1.646,
+  "sure": 2.231
  },
  {
   "k": "s03",
   "metin": "Çoğu kişi bunu bir yere çarptım sanar.",
-  "bas": 4.61,
-  "sure": 2.7
+  "bas": 3.997,
+  "sure": 2.348
  },
  {
   "k": "s04",
   "metin": "Oysa bu minik çukurlar, sedefle ilişkili olabilen bir işaret.",
-  "bas": 7.53,
-  "sure": 4.38
+  "bas": 6.465,
+  "sure": 3.809
  },
  {
   "k": "s05",
   "metin": "Sedef sadece cildi değil, tırnakları da etkileyebilir.",
-  "bas": 12.13,
-  "sure": 4.26
+  "bas": 10.394,
+  "sure": 3.704
  },
  {
   "k": "s06",
   "metin": "Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor.",
-  "bas": 16.61,
-  "sure": 4.39
+  "bas": 14.218,
+  "sure": 3.817
  },
  {
   "k": "s07",
   "metin": "Ama tek işaret çukurlar değil.",
-  "bas": 21.22,
-  "sure": 2.29
+  "bas": 18.155,
+  "sure": 1.991
  },
  {
   "k": "s08",
   "metin": "Tırnağın altında yağ damlası gibi sarımsı bir leke.",
-  "bas": 23.73,
-  "sure": 3.48
+  "bas": 20.266,
+  "sure": 3.026
  },
  {
   "k": "s09",
   "metin": "Ucundan kalkıp beyazlayan bir tırnak.",
-  "bas": 27.43,
-  "sure": 2.48
+  "bas": 23.412,
+  "sure": 2.156
  },
  {
   "k": "s10",
   "metin": "Ya da kalınlaşıp ufalanan bir yüzey.",
-  "bas": 30.13,
-  "sure": 2.26
+  "bas": 25.688,
+  "sure": 1.965
  },
  {
   "k": "s11",
   "metin": "Asıl şaşırtıcı olan ise şu.",
-  "bas": 32.61,
-  "sure": 2.21
+  "bas": 27.773,
+  "sure": 1.922
  },
  {
   "k": "s12",
   "metin": "Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor.",
-  "bas": 35.04,
-  "sure": 4.86
+  "bas": 29.815,
+  "sure": 4.226
  },
  {
   "k": "s14",
   "metin": "Yine de her çukur sedef demek değil.",
-  "bas": 40.12,
-  "sure": 2.45
+  "bas": 34.161,
+  "sure": 2.187
  },
  {
   "k": "s15",
   "metin": "Fark ettiysen, tırnaklarını bir dermatoloğa göster.",
-  "bas": 42.79,
-  "sure": 4.08
+  "bas": 36.468,
+  "sure": 3.548
  },
  {
   "k": "s16",
   "metin": "Bunu, tırnaklarına hiç bakmayan birine gönder.",
-  "bas": 47.09,
-  "sure": 2.94
+  "bas": 40.136,
+  "sure": 2.556
  }
 ] as const;

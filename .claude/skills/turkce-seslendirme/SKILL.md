@@ -36,6 +36,11 @@ Seslendirmeye giden metne `araclar/telaffuz_sozluk.json` uygulanır (altyazıda 
 3–5 kelimenin zaman kodu → "bunları bir dinler misin" listesi. Asla "hepsi doğru" deme; vurgu/tonlama ölçümü (`/vurgu-tonlama`) yaklaşık bir göstergedir, kulak kontrolü gerekir.
 Denetim: `python3 ../../araclar/telaffuz.py denetle senaryo/satirlar.json calisma/vo_klon`
 
+## 3b. Hız / perde değişikliğinden sonra MUTLAKA yeniden denetle
+Tempo ya da perde değiştirildiyse (ör. "konuşmacı yavaş" → rubberband tempo ×1.15) değişmiş dosyalar `telaffuz.py denetle` ile baştan denetlenir:
+hızlandırma bazı kelimeleri bozabilir (Doğal Yaşam Rotası'nda ×1.15'te "iğne" -0.88, "sedef" -1.04 oldu). Şüpheli satırda tempo adım adım düşürülür
+(1.12 → 1.10 → 1.08), geçen en hızlısı alınır; ardından tüm satırlar birleştirilip Whisper ile bağlam içinde okunur.
+
 ## 4. Kulak geri bildirimi → kalıcı düzeltme
 Berkay "X kelimesi yanlış okunuyor" dediğinde:
 1. `python3 ../../araclar/telaffuz_dene.py "X" "X'in geçtiği cümle." [ek yazım adayları]` — farklı yazımları dener, en iyi GOP'u sözlüğe yazar.

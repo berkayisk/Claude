@@ -129,6 +129,8 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 | `doktor` | Yaşlı erkek / uzman | 12.8 sn | 118 Hz |
 | `eczaci` | Erkek karakter | 7.5 sn | 140 Hz |
 
+**Hız:** anlatıcı klonu doğal haliyle yavaş (~2.05 kelime/sn) → üretimden sonra `rubberband=tempo=1.15:pitch=1:formant=preserved`, satır arası 0.12 sn (hedef ~2.3–2.4 kelime/sn). Hızlandırma telaffuzu bozabilir: hızlı dosyalarla `araclar/telaffuz.py denetle` yeniden çalıştırılır, şüpheli satırda tempo 1.12→1.10→1.08 düşürülür. Son mixte loudnorm -14 LUFS.
+
 Üretim: `SES_REF=marka/sesler/<ad>_referans.wav SES_F0=<perde> python3 araclar/berkay_ses.py satirlar.json cikti/`
 (her ses ayrı çalıştırılır; örnek: `projeler/2026-11-24_ses-testi/uret.sh`). Telaffuz/vurgu denetimi aynı araçla yapılır.
 
