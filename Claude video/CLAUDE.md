@@ -36,7 +36,11 @@ projeler/<proje>/
 ## Komutlar (bu klasörün kökünden)
 - Render: `./scripts/render.sh <proje> [CompositionId] [cikti.mp4]`
 - Studio (önizleme): `./scripts/studio.sh <proje>`
-- FFmpeg: doğrudan `ffmpeg` (kesme, birleştirme, ses ayırma, sıkıştırma, format dönüştürme)
+- FFmpeg: doğrudan `ffmpeg` (kesme, birleştirme, ses ayırma, sıkıştırma, format dönüştürme). Varsayılan ffmpeg **9.0.2**
+  (`/usr/local/bin/ffmpeg` → imageio-ffmpeg; açılış betiği kurar). Sistem ffmpeg 6.1 `/usr/bin/ffmpeg`'te durur; ffprobe 6.1.
+  - İki geçişli loudnorm: `python3 araclar/loudnorm2.py girdi.mp4 cikti.mp4` (ffmpeg 9 JSON'dan sonra özet satırı yazar:
+    "son 13 satırı oku" kalıbı BOZULUR; JSON'u süslü parantez bloğundan ayıkla).
+  - ffmpeg 9 derlemesinde fontconfig yok: `drawtext`'e `fontfile=` ver.
 
 ## Teslim
 - Sohbete dosya gönderme sınırı ~400 MiB; iPad'de sohbetten indirme butonu YOK. Finali kullanıcının Google Drive'ına yükle:
@@ -69,8 +73,8 @@ projeler/<proje>/
 ## Lemo-Opuscar (99 kodla film stili) — /lemo-opuscar yeteneği
 - Kütüphane `~/lemo-opuscar` (her yeni container'da `sh .claude/skills/lemo-opuscar/scripts/setup.sh` ile iner, ~33 MB);
   paketler: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers sh .claude/skills/lemo-opuscar/scripts/setup.sh deps` (~290 MB, hazır Chromium kullanılır).
-- Render ederken `PATH=/root/lemo-bin:$PATH PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers` ver: `/root/lemo-bin/ffmpeg` = imageio-ffmpeg'in ffmpeg 9'u
-  (`core/render/mux.sh` ffmpeg 7+ ister; sistemdeki 6.1'e dokunulmadı). Ortamın açılış betiği bunların hepsini her yeni oturumda kurar.
+- Render ederken `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers` ver (varsayılan ffmpeg 9 olduğu için `core/render/mux.sh`'in ffmpeg 7+ şartı karşılanır).
+  Ortamın açılış betiği bunların hepsini her yeni oturumda kurar.
 - Lisans: yapılan filmler bizim (ticari dahil, atıf gerekmez); stil talimatları kendi filmlerimiz için kullanılabilir, dağıtılamaz.
 
 ## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
