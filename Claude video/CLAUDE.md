@@ -69,7 +69,8 @@ projeler/<proje>/
 ## Lemo-Opuscar (99 kodla film stili) — /lemo-opuscar yeteneği
 - Kütüphane `~/lemo-opuscar` (her yeni container'da `sh .claude/skills/lemo-opuscar/scripts/setup.sh` ile iner, ~33 MB);
   paketler: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers sh .claude/skills/lemo-opuscar/scripts/setup.sh deps` (~290 MB, hazır Chromium kullanılır).
-- Render ederken de `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers` ver. `core/render/mux.sh` ffmpeg 7+ ister (sistemde 6.1 var).
+- Render ederken `PATH=/root/lemo-bin:$PATH PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers` ver: `/root/lemo-bin/ffmpeg` = imageio-ffmpeg'in ffmpeg 9'u
+  (`core/render/mux.sh` ffmpeg 7+ ister; sistemdeki 6.1'e dokunulmadı). Ortamın açılış betiği bunların hepsini her yeni oturumda kurar.
 - Lisans: yapılan filmler bizim (ticari dahil, atıf gerekmez); stil talimatları kendi filmlerimiz için kullanılabilir, dağıtılamaz.
 
 ## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
