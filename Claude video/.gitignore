@@ -18,3 +18,8 @@ musteriler/*/projeler/*/ciktilar/*
 musteriler/*/projeler/*/referanslar/*
 musteriler/*/projeler/*/calisma/*
 !musteriler/**/.gitkeep
+
+# müşteri medya dosyaları (git dışı)
+musteriler/**/*.mov
+musteriler/**/*.mp4
+musteriler/**/referanslar/kareler/k_*.jpg
