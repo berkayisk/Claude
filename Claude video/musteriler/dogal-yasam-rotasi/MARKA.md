@@ -16,6 +16,29 @@ Ekran görüntüleri: `marka/site_anasayfa.png`, `marka/site_sedef.png`.
 - Sitede ürün adı, fiyat, gramaj, içerik listesi YOK; "Hemen İncele!" butonları şu an bir yere bağlanmıyor.
   → Ürün adları, fiyatlar, satış linki Berkay'dan alınacak (bilinmeden uydurulmaz).
 
+## Ürün: Mürrisafi'li bitkisel şurup + soğuk pres çörek otu yağı (cilt kombinasyonu)
+Kaynak: `kaynak/murrisafi_surup.md` (Berkay'ın verdiği belge). Hedef konular: sedef, egzama, rozasea, atopik dermatit.
+İçerik (belgedeki sırayla): Mürrisafi (Commiphora molmol), Zeytin yaprağı, Seylan tarçını, Safran, Besbase/Muskat,
+Kakule, Boğa dikeni, Cedvar (Curcuma zedoaria) + Çörek otu yağı (Nigella sativa, %27 timokinon).
+
+Belge iç bilgi/eğitim notudur; dili ("hastalıkta sebebe yönelik etki eder", "kaşıntıyı hafifletir", "kızarıklığı azaltır",
+"inflamasyonun kökünü baskılar", "DNA onarıcı", "karaciğer detoksu") **reklama/videoya birebir taşınmaz** (hastalık
+tedavi beyanı). İçeriğe şöyle çevrilir:
+
+| Belgedeki ifade | İçerikte kullanılacak |
+|---|---|
+| Otoimmün süreçleri düzenler, sitokinleri baskılar | Mürrisafi geleneksel olarak kullanılan bir reçinedir; bağışıklık sistemiyle ilişkili süreçlerdeki rolü araştırılmaktadır |
+| Histamin/mast hücresini baskılar (zeytin yaprağı) | Zeytin yaprağı oleuropein içerir; antioksidan özellikleri üzerine çalışmalar vardır |
+| Kızarıklığı azaltır (tarçın) | Seylan tarçını geleneksel tarifte yer alan, aromatik bir baharattır |
+| Strese bağlı alevlenmeyi dengeler (safran) | Stres ve cilt arasındaki ilişki son yıllarda sıkça konuşuluyor; safran bu konuda incelenen bitkilerden |
+| Kaşıntıyı hafifletir (muskat) | (iddia kullanılmaz; sadece içerik listesinde geçer) |
+| Bağırsak florası üzerinden inflamasyonu azaltır (kakule) | Bağırsak–cilt ekseni (sitenin ana anlatısıyla bağlanır) |
+| Karaciğer detoksu (boğa dikeni) | (iddia kullanılmaz) |
+| DNA onarıcı, Treg aktive eder (çörek otu) | Çörek otu yağının etken bileşeni timokinon, üzerinde en çok araştırma yapılan bitkisel bileşenlerden biridir; ürünümüz %27 timokinon içerir |
+
+Not: belgede muskat için "safrol" bileşeni övgüyle geçiyor; safrol gıdada sınırlandırılmış bir maddedir, içerikte hiç anılmaz.
+Gıda takviyesi onay/bildirim numarası ve ürün adı Berkay'dan alınacak; "%27 timokinon" gibi rakamlar ancak etikette varsa kullanılır.
+
 ## Sayfa kurgusu (içeriklerde de kullanılabilecek akış)
 Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"** sorusuyla bitiyor:
 1. X nedir? (kısa, sakin tanım) → "Peki X aslında nasıl ortaya çıkar?"
