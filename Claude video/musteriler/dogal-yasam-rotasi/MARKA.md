@@ -117,6 +117,20 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 - Arka planda **çok kısık müzik/ambiyans** (konuşmasız anlarda ~-38 dB, konuşma ~-20 dB → konuşmanın ~18 dB altında). Efektler minimal.
 - Ortalama ses ~-19.6 dB, tepe -3.7 dB (sosyal medya için normal yüksek).
 
+### Sesler (klon — Berkay onayı: sesler firmaya ait / izinli, 24.11.2026)
+Örnek videodan Demucs ile temizlenip ayrılan 5 ses, `marka/sesler/<ad>_referans.wav` (24 kHz), perdeler `marka/sesler/sesler.json`:
+
+| Ses | Rol | Referans | Medyan perde |
+|---|---|---|---|
+| `anlatici` | Ana anlatıcı (sıcak, sakin, orta perde) | 8.3 sn | 201 Hz |
+| `elif` | Genç kadın karakter | 10.5 sn | 216 Hz |
+| `arkadas` | İkinci kadın karakter (referans kısa: 3.7 sn → benzerlik zayıf olabilir) | 3.7 sn | 252 Hz |
+| `doktor` | Yaşlı erkek / uzman | 12.8 sn | 118 Hz |
+| `eczaci` | Erkek karakter | 7.5 sn | 140 Hz |
+
+Üretim: `SES_REF=marka/sesler/<ad>_referans.wav SES_F0=<perde> python3 araclar/berkay_ses.py satirlar.json cikti/`
+(her ses ayrı çalıştırılır; örnek: `projeler/2026-11-24_ses-testi/uret.sh`). Telaffuz/vurgu denetimi aynı araçla yapılır.
+
 ### Dil inceliği (stil kuralı)
 - Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.
 

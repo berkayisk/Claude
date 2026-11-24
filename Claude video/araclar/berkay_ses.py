@@ -15,13 +15,15 @@ Her satır için:
   3. son kelimeden sonraki ilk sessizlikte kesilir (model fazladan ses üretebiliyor), süre metne göre denetlenir
   5. netlik zinciri (NETLIK) uygulanır: boğukluğu giderir
   4. tüm satırların medyan perdesi Berkay'ın kaydına (HEDEF_F0) tek oranla eşitlenir: rubberband, formant korunarak
+Başka izinli ses: SES_REF=... SES_F0=... ortam değişkenleri (müşteri sesleri: musteriler/<firma>/marka/sesler/).
 Çıktı: <k>.wav (48 kHz mono) + sureler.json {k: [metin, süre, skor, whisper]}
 """
 import sys, os, json, re, difflib, subprocess, numpy as np, soundfile as sf, torch, torchaudio as ta
 
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-REF = os.path.join(KOK, "marka/sifirdan-satisa/berkay_ses_referans.wav")
-HEDEF_F0 = 176.0   # Berkay'ın anlatım kaydının medyan perdesi (Hz)
+REF = os.environ.get("SES_REF") or os.path.join(KOK, "marka/sifirdan-satisa/berkay_ses_referans.wav")
+HEDEF_F0 = float(os.environ.get("SES_F0", 176.0))   # Berkay'ın anlatım kaydının medyan perdesi (Hz)
+# Başka (izinli) bir ses: SES_REF=<referans.wav> SES_F0=<o sesin medyan perdesi> — örn. musteriler/<firma>/marka/sesler/sesler.json
 # Netlik: model 24 kHz üretiyor (12 kHz üstü yok) ve 4 kHz üstü zayıf -> "boğuk". Berkay'ın gerçek kaydının bant profiline göre ayarlandı
 # (2–12 kHz arası bantlar ±1.6 dB içinde), exciter ile 12 kHz üstüne doğal harmonik, hafif de-esser.
 NETLIK = ("equalizer=f=3000:t=q:w=1:g=1,equalizer=f=5000:t=q:w=1:g=2,equalizer=f=7000:t=q:w=1:g=1,highshelf=f=10000:g=11,"
