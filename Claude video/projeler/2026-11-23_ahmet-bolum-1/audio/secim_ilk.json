@@ -1,0 +1,352 @@
+{
+ "room_night": {
+  "sorgu": "quiet indoor room tone at night with a distant city hum, no voices",
+  "aday": [
+   [
+    "audio/assets/city/mk-2677_old-subway-train-arrives.wav",
+    2.9,
+    "plausible"
+   ],
+   [
+    "audio/assets/city/mk-2463_urban-park-and-traffic.wav",
+    2.5,
+    "plausible"
+   ],
+   [
+    "audio/assets/city/mk-2465_passing-car-and-urban-ambience.wav",
+    2.3,
+    "weak"
+   ]
+  ]
+ },
+ "birds_morning": {
+  "sorgu": "gentle morning birds chirping outside a window",
+  "aday": [
+   [
+    "audio/assets/birds/mk-1239_jungle-rain-and-birds.wav",
+    4.8,
+    "strong"
+   ],
+   [
+    "audio/assets/birds/mk-1235_wild-raven-bird-calling.wav",
+    4.8,
+    "strong"
+   ],
+   [
+    "audio/assets/birds/mk-1213_short-rooster-crowing.wav",
+    4.5,
+    "strong"
+   ]
+  ]
+ },
+ "chair": {
+  "sorgu": "a person sitting down on an office chair, chair creak",
+  "aday": [
+   [
+    "audio/assets/chair/mk-1016_mixkit-1016.wav",
+    3.4,
+    "strong"
+   ],
+   [
+    "audio/assets/cloth/mk-1898_mixkit-1898.wav",
+    1.9,
+    "no match"
+   ],
+   [
+    "audio/assets/cloth/mk-3167_cloth-slide-out.wav",
+    0.8,
+    "no match"
+   ]
+  ]
+ },
+ "laptop_open": {
+  "sorgu": "opening a laptop lid",
+  "aday": [
+   [
+    "audio/assets/laptop/mk-1389_fast-laptop-keyboard-typing.wav",
+    1.2,
+    "no match"
+   ],
+   [
+    "audio/assets/laptop/mk-1390_typing-on-plastic-keyboard.wav",
+    0.6,
+    "no match"
+   ],
+   [
+    "audio/assets/laptop/mk-1386_mixkit-1386.wav",
+    0.1,
+    "no match"
+   ]
+  ]
+ },
+ "laptop_close": {
+  "sorgu": "closing a laptop lid with a soft thud",
+  "aday": [
+   [
+    "audio/assets/laptop/mk-1390_typing-on-plastic-keyboard.wav",
+    1.0,
+    "no match"
+   ],
+   [
+    "audio/assets/laptop/mk-1392_keyboard-typing.wav",
+    0.4,
+    "no match"
+   ],
+   [
+    "audio/assets/laptop/mk-1389_fast-laptop-keyboard-typing.wav",
+    0.2,
+    "no match"
+   ]
+  ]
+ },
+ "typing": {
+  "sorgu": "close up typing on a laptop keyboard",
+  "aday": [
+   [
+    "audio/assets/keyboard/mk-1386_mixkit-1386.wav",
+    4.7,
+    "strong"
+   ],
+   [
+    "audio/assets/typing/mk-1386_mixkit-1386.wav",
+    4.7,
+    "strong"
+   ],
+   [
+    "audio/assets/keyboard/mk-1387_hard-single-key-press-in-a-laptop.wav",
+    4.3,
+    "strong"
+   ]
+  ]
+ },
+ "click": {
+  "sorgu": "a single soft trackpad or mouse click",
+  "aday": [
+   [
+    "audio/assets/click/mk-1124_old-camera-shutter-click.wav",
+    2.5,
+    "plausible"
+   ],
+   [
+    "audio/assets/click/mk-1120_clear-mouse-clicks.wav",
+    2.0,
+    "weak"
+   ],
+   [
+    "audio/assets/click/mk-1113_cool-interface-click-tone.wav",
+    1.8,
+    "no match"
+   ]
+  ]
+ },
+ "pen": {
+  "sorgu": "writing with a pen on paper, close up",
+  "aday": [
+   [
+    "audio/assets/writing/mk-2366_writing-with-a-pen-on-paper.wav",
+    5.7,
+    "strong"
+   ],
+   [
+    "audio/assets/writing/mk-3194_short-pencil-writing.wav",
+    4.9,
+    "strong"
+   ],
+   [
+    "audio/assets/writing/mk-2369_writing-pencil.wav",
+    3.8,
+    "strong"
+   ]
+  ]
+ },
+ "page": {
+  "sorgu": "turning a single page of a notebook",
+  "aday": [
+   [
+    "audio/assets/paper/mk-1099_signing-on-a-paper.wav",
+    6.2,
+    "strong"
+   ],
+   [
+    "audio/assets/paper/mk-1101_paper-quick-movement.wav",
+    6.0,
+    "strong"
+   ],
+   [
+    "audio/assets/paper/mk-1100_fast-browsing-book-paging.wav",
+    5.6,
+    "strong"
+   ]
+  ]
+ },
+ "heartbeat": {
+  "sorgu": "a slow deep heartbeat",
+  "aday": [
+   [
+    "audio/assets/heartbeat/mk-495_fast-heartbeat.wav",
+    4.2,
+    "strong"
+   ],
+   [
+    "audio/assets/heartbeat/mk-494_human-single-heart-beat.wav",
+    3.9,
+    "strong"
+   ],
+   [
+    "audio/assets/heartbeat/mk-497_cinematic-horror-heartbeat-transition.wav",
+    3.8,
+    "strong"
+   ]
+  ]
+ },
+ "clock": {
+  "sorgu": "a clock ticking steadily",
+  "aday": [
+   [
+    "audio/assets/clock/mk-1049_racing-countdown-timer.wav",
+    2.0,
+    "weak"
+   ],
+   [
+    "audio/assets/clock/mk-1056_bell-tick-tock-timer.wav",
+    1.8,
+    "no match"
+   ],
+   [
+    "audio/assets/clock/mk-1045_tick-tock-clock-close-up.wav",
+    1.7,
+    "no match"
+   ]
+  ]
+ },
+ "vibrate": {
+  "sorgu": "a smartphone vibrating on a wooden table",
+  "aday": [
+   [
+    "audio/assets/phone/mk-2862_toy-telephone-ring.wav",
+    2.1,
+    "weak"
+   ],
+   [
+    "audio/assets/phone/mk-1351_marimba-waiting-ringtone.wav",
+    2.1,
+    "weak"
+   ],
+   [
+    "audio/assets/phone/mk-1350_smartphone-typing.wav",
+    1.6,
+    "no match"
+   ]
+  ]
+ },
+ "notif": {
+  "sorgu": "a short soft smartphone notification sound",
+  "aday": [
+   [
+    "audio/assets/notification/mk-2344_software-interface-remove.wav",
+    2.0,
+    "no match"
+   ],
+   [
+    "audio/assets/phone/mk-1352_dial-phone-tone.wav",
+    1.8,
+    "no match"
+   ],
+   [
+    "audio/assets/phone/mk-1360_on-hold-ringtone.wav",
+    1.6,
+    "no match"
+   ]
+  ]
+ },
+ "boom": {
+  "sorgu": "a deep cinematic boom impact hit",
+  "aday": [
+   [
+    "audio/assets/impact/mk-1686_epic-movie-impact.wav",
+    4.9,
+    "strong"
+   ],
+   [
+    "audio/assets/cinematic/mk-1486_epic-orchestra-transition.wav",
+    4.1,
+    "strong"
+   ],
+   [
+    "audio/assets/impact/mk-1687_deep-heartbeat-impact.wav",
+    4.1,
+    "strong"
+   ]
+  ]
+ },
+ "riser": {
+  "sorgu": "a cinematic riser building tension into a hit",
+  "aday": [
+   [
+    "audio/assets/riser/mk-2283_tech-choir-cinematic-riser.wav",
+    3.9,
+    "strong"
+   ],
+   [
+    "audio/assets/riser/mk-790_mixkit-790.wav",
+    3.7,
+    "strong"
+   ],
+   [
+    "audio/assets/riser/mk-2719_short-space-stutter-intro-riser.wav",
+    3.6,
+    "strong"
+   ]
+  ]
+ },
+ "whoosh": {
+  "sorgu": "a soft fast whoosh transition",
+  "aday": [
+   [
+    "audio/assets/whoosh/mk-1489_mixkit-1489.wav",
+    4.5,
+    "strong"
+   ],
+   [
+    "audio/assets/whoosh/mk-1491_cinematic-whoosh-fast-transition.wav",
+    3.9,
+    "strong"
+   ],
+   [
+    "audio/assets/whoosh/mk-1714_arrow-whoosh.wav",
+    3.0,
+    "plausible"
+   ]
+  ]
+ },
+ "mug": {
+  "sorgu": "putting a ceramic coffee mug down on a table",
+  "aday": [
+   [
+    "audio/assets/ceramic/mk-2835_mixkit-2835.wav",
+    1.8,
+    "no match"
+   ]
+  ]
+ },
+ "scroll": {
+  "sorgu": "a finger swiping on a smartphone touchscreen",
+  "aday": [
+   [
+    "audio/assets/swipe/mk-707_dj-record-swipe.wav",
+    1.8,
+    "no match"
+   ],
+   [
+    "audio/assets/swipe/mk-708_fast-swipe-zoom.wav",
+    1.4,
+    "no match"
+   ],
+   [
+    "audio/assets/click/mk-1113_cool-interface-click-tone.wav",
+    0.9,
+    "no match"
+   ]
+  ]
+ }
+}

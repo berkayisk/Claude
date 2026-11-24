@@ -1,0 +1,326 @@
+{
+ "fps": 24,
+ "total": 1630,
+ "acts": {
+  "gece": {
+   "from": 0,
+   "dur": 456
+  },
+  "dip": {
+   "from": 456,
+   "dur": 172.8
+  },
+  "kesif": {
+   "from": 628.8,
+   "dur": 379.20000000000005
+  },
+  "sabah": {
+   "from": 1008,
+   "dur": 258.0
+  },
+  "cliff": {
+   "from": 1266.0,
+   "dur": 180.0
+  },
+  "final": {
+   "from": 1446.0,
+   "dur": 184.08000000000004
+  }
+ },
+ "cue": {
+  "dip": 456,
+  "ama": 696,
+  "sabah": 1008,
+  "titresim": 1351.1999999999998,
+  "final": 1446.0
+ },
+ "events": [
+  {
+   "f": 9.6,
+   "kind": "hit",
+   "id": "s1:acilis:boom",
+   "weight": 1.4,
+   "pan": 0.0
+  },
+  {
+   "f": 80.4,
+   "kind": "tap",
+   "id": "s1:telefon:kaydir:0",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 94.8,
+   "kind": "tap",
+   "id": "s1:telefon:kaydir:1",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 109.2,
+   "kind": "tap",
+   "id": "s1:telefon:kaydir:2",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 200.4,
+   "kind": "chair",
+   "id": "s2:sandalye:otur",
+   "weight": 0.8,
+   "pan": 0.1
+  },
+  {
+   "f": 201.6,
+   "kind": "lid",
+   "id": "s2:laptop:ac",
+   "weight": 0.8,
+   "pan": 0.0
+  },
+  {
+   "f": 247.2,
+   "kind": "click",
+   "id": "s2:trackpad:0",
+   "weight": 0.5,
+   "pan": 0.2
+  },
+  {
+   "f": 261.6,
+   "kind": "click",
+   "id": "s2:trackpad:1",
+   "weight": 0.5,
+   "pan": 0.2
+  },
+  {
+   "f": 278.4,
+   "kind": "click",
+   "id": "s2:trackpad:2",
+   "weight": 0.5,
+   "pan": 0.2
+  },
+  {
+   "f": 292.8,
+   "kind": "click",
+   "id": "s2:trackpad:3",
+   "weight": 0.5,
+   "pan": 0.2
+  },
+  {
+   "f": 315.6,
+   "kind": "pen",
+   "id": "s2:defter:kalem",
+   "weight": 0.7,
+   "pan": 0.0,
+   "dur": 64.80000000000001
+  },
+  {
+   "f": 391.2,
+   "kind": "type",
+   "id": "s2:klavye",
+   "weight": 0.5,
+   "pan": 0.0,
+   "dur": 48.0
+  },
+  {
+   "f": 456.0,
+   "kind": "drop",
+   "id": "s3:dip:muzik_durur",
+   "weight": 1.2,
+   "pan": 0.0
+  },
+  {
+   "f": 480.0,
+   "kind": "beat",
+   "id": "s3:kalp:0",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 504.0,
+   "kind": "beat",
+   "id": "s3:kalp:1",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 528.0,
+   "kind": "beat",
+   "id": "s3:kalp:2",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 537.6,
+   "kind": "cloth",
+   "id": "s3:eller_yuze",
+   "weight": 0.5,
+   "pan": 0.0
+  },
+  {
+   "f": 552.0,
+   "kind": "beat",
+   "id": "s3:kalp:3",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 576.0,
+   "kind": "beat",
+   "id": "s3:kalp:4",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 600.0,
+   "kind": "beat",
+   "id": "s3:kalp:5",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 644.4,
+   "kind": "lid",
+   "id": "s3:laptop:kapat",
+   "weight": 1.0,
+   "pan": 0.0
+  },
+  {
+   "f": 696.0,
+   "kind": "hit",
+   "id": "s4:ama:vurus",
+   "weight": 1.6,
+   "pan": 0.0
+  },
+  {
+   "f": 716.4,
+   "kind": "tap",
+   "id": "s4:telefon:kilit",
+   "weight": 0.5,
+   "pan": 0.1
+  },
+  {
+   "f": 772.8,
+   "kind": "tap",
+   "id": "s4:telefon:kaydir:0",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 784.8,
+   "kind": "tap",
+   "id": "s4:telefon:kaydir:1",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 796.8,
+   "kind": "tap",
+   "id": "s4:telefon:kaydir:2",
+   "weight": 0.4,
+   "pan": 0.1
+  },
+  {
+   "f": 926.4,
+   "kind": "place",
+   "id": "s4:telefon:birak",
+   "weight": 0.5,
+   "pan": 0.0
+  },
+  {
+   "f": 932.4,
+   "kind": "hit",
+   "id": "s4:peki:vurus",
+   "weight": 1.0,
+   "pan": 0.0
+  },
+  {
+   "f": 933.6,
+   "kind": "lid",
+   "id": "s4:laptop:ac2",
+   "weight": 0.7,
+   "pan": 0.0
+  },
+  {
+   "f": 1008.0,
+   "kind": "riser",
+   "id": "s4:sabaha:riser",
+   "weight": 1.0,
+   "pan": 0.0,
+   "dur": 57.599999999999994
+  },
+  {
+   "f": 1008.0,
+   "kind": "hit",
+   "id": "s5:sabah:patlama",
+   "weight": 1.5,
+   "pan": 0.0
+  },
+  {
+   "f": 1084.8,
+   "kind": "pen",
+   "id": "s5:defter:kalem",
+   "weight": 0.6,
+   "pan": 0.0,
+   "dur": 62.400000000000006
+  },
+  {
+   "f": 1144.8,
+   "kind": "page",
+   "id": "s5:defter:sayfa",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 1161.6,
+   "kind": "type",
+   "id": "s5:klavye",
+   "weight": 0.4,
+   "pan": 0.0,
+   "dur": 52.800000000000004
+  },
+  {
+   "f": 1261.2,
+   "kind": "place",
+   "id": "s5:kupa:birak",
+   "weight": 0.6,
+   "pan": 0.0
+  },
+  {
+   "f": 1266.0,
+   "kind": "whoosh",
+   "id": "s6:uc_gun_sonra",
+   "weight": 0.7,
+   "pan": 0.0,
+   "dur": 14.399999999999999,
+   "apexFrac": 0.5
+  },
+  {
+   "f": 1351.2,
+   "kind": "vibrate",
+   "id": "s6:telefon:titresim",
+   "weight": 1.0,
+   "pan": 0.0
+  },
+  {
+   "f": 1352.4,
+   "kind": "notif",
+   "id": "s6:telefon:bildirim",
+   "weight": 0.8,
+   "pan": 0.0
+  },
+  {
+   "f": 1446.0,
+   "kind": "hit",
+   "id": "s7:final:vurus",
+   "weight": 1.5,
+   "pan": 0.0
+  },
+  {
+   "f": 1595.28,
+   "kind": "click",
+   "id": "s7:takip:tik",
+   "weight": 0.7,
+   "pan": 0.0
+  }
+ ]
+}

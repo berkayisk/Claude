@@ -18,3 +18,9 @@ musteriler/*/projeler/*/ciktilar/*
 musteriler/*/projeler/*/referanslar/*
 musteriler/*/projeler/*/calisma/*
 !musteriler/**/.gitkeep
+
+# real-sound: indirilen kayıtlar repoya girmez
+projeler/*/audio/assets/*
+!projeler/*/audio/assets/manifests/
+projeler/*/out/*
+!projeler/*/out/cues.json
