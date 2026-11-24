@@ -13,7 +13,7 @@ ilişkili olabileceğini, diğer tırnak işaretlerini ve tırnak–eklem bağla
 | 1.6–4.4 | Kanca 2 | s02 anlatıcı: İğne batmış gibi küçük çukurlar var mı? | Büyüteç tırnağın üstüne kayar; büyüteçte tırnakta 5–6 minik nokta çukur | — | büyüteç "whoosh" |
 | 4.4–6.8 | Tanınma | s03 Elif: Bunlar mı? Bir yere çarptım sanmıştım. | Elif (teal kazak) masada, elini kaldırıp şaşkın bakar; arka plan bulanık ofis | — | — |
 | 6.8–10.0 | Bağlantı | s04: Bu minik çukurlar, sedefle ilişkili olabilen bir işaret. | Tırnak yakın plan → çukurlardan ince çizgiyle "SEDEF" etiketi çıkar | sedef? | yumuşak "ding" |
-| 10.0–12.8 | Genişletme | s05: Sedef sadece ciltte değil, tırnakta da görülebilir. | Bölünmüş ekran: üstte dirsekte pullu plak (yumuşak çizim), altta tırnak | CİLT + TIRNAK | — |
+| 10.0–12.8 | Genişletme | s05: Sedef sadece cildi değil, tırnakları da etkileyebilir. | Bölünmüş ekran: üstte dirsekte pullu plak (yumuşak çizim), altta tırnak | CİLT + TIRNAK | — |
 | 12.8–16.2 | Rakam | s06: Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor. | 10 el ikonu, 5'inin tırnağı vurgulanır (sırayla yanar) | **YAKLAŞIK YARISI** | tik tik ×5 |
 | 16.2–18.4 | Açık döngü | s07: Ama tek işaret çukurlar değil. | Elif yakın: kaşlar kalkar; 3 boş kart belirir (1-2-3) | 3 İŞARET DAHA | merak "riser" kısa |
 | 18.4–21.6 | İşaret 1 | s08: Tırnağın altında yağ damlası gibi sarımsı bir leke. | Kart 1: tırnak altında somon/sarı leke + küçük yağ damlası ikonu | YAĞ DAMLASI LEKESİ | — |
@@ -30,7 +30,7 @@ Son 3 sn alt köşede küçük: "Bilgilendirme amaçlıdır, tanı ve tedavi yer
 
 ## Altyazı parçaları (beyaz hap, mor #481A78)
 s01 Tırnaklarına bir bak. · s02 İğne batmış gibi / küçük çukurlar var mı? · s03 Bunlar mı? / Bir yere çarptım sanmıştım. ·
-s04 Bu minik çukurlar, / sedefle ilişkili olabilen / bir işaret. · s05 Sedef sadece ciltte değil, / tırnakta da görülebilir. ·
+s04 Bu minik çukurlar, / sedefle ilişkili olabilen / bir işaret. · s05 Sedef sadece cildi değil, / tırnakları da etkileyebilir. ·
 s06 Sedefi olanların yaklaşık yarısında / tırnak bulguları görülebiliyor. · s07 Ama tek işaret / çukurlar değil. ·
 s08 Tırnağın altında / yağ damlası gibi / sarımsı bir leke. · s09 Ucundan kalkıp / beyazlayan bir tırnak. · s10 Ya da kalınlaşıp / ufalanan bir yüzey. ·
 s11 Asıl şaşırtıcı olan / ise şu. · s12 Tırnağı etkilenen kişilerde / eklemler de daha sık / etkilenebiliyor. ·

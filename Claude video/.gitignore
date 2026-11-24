@@ -25,3 +25,5 @@ musteriler/**/*.mp4
 musteriler/**/referanslar/kareler/k_*.jpg
 musteriler/**/ses/_*/
 musteriler/**/ses/uret.log
+musteriler/**/ses/uret*.log
+musteriler/**/ses/*_ham.wav

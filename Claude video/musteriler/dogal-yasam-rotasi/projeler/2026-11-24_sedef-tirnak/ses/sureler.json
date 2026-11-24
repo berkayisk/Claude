@@ -1,0 +1,114 @@
+{
+ "s01": [
+  "anlatici",
+  "Tırnaklarına bir bak.",
+  1.41,
+  1.0,
+  "Tırnaklarına bir bak."
+ ],
+ "s02": [
+  "anlatici",
+  "İğne batmış gibi küçük çukurlar var mı?",
+  2.41,
+  1.0,
+  "İğne batmış gibi küçük çukurlar var mı?  [vurgu 0.85: tonlama: 'mı/mi' sorusunda zirve ekten önceki hecede değil]"
+ ],
+ "s03": [
+  "elif",
+  "Bunlar mı? Bir yere çarptım sanmıştım.",
+  3.79,
+  1.0,
+  "Bunlar mı? Bir yere çarptım sanmıştım.  [vurgu 0.85: hız: çok yavaş]"
+ ],
+ "s04": [
+  "anlatici",
+  "Bu minik çukurlar, sedefle ilişkili olabilen bir işaret.",
+  3.27,
+  1.0,
+  "Bu minik çukurlar Sedef'le ilişkili olabilen bir işaret."
+ ],
+ "s05": [
+  "anlatici",
+  "Sedef sadece cildi değil, tırnakları da etkileyebilir.",
+  4.26,
+  1.0,
+  "Sedef sadece cildi değil tırnakları da etkileyebilir."
+ ],
+ "s06": [
+  "anlatici",
+  "Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor.",
+  4.39,
+  1.0,
+  "Sedefi olanların yaklaşık yarısında tırnak bulguları görülebiliyor."
+ ],
+ "s07": [
+  "anlatici",
+  "Ama tek işaret çukurlar değil.",
+  2.29,
+  1.0,
+  "Ama tek işaret çukurlar değil."
+ ],
+ "s08": [
+  "anlatici",
+  "Tırnağın altında yağ damlası gibi sarımsı bir leke.",
+  3.48,
+  1.0,
+  "Tırnağın altında yağ damlası gibi sarımsı bir leke."
+ ],
+ "s09": [
+  "anlatici",
+  "Ucundan kalkıp beyazlayan bir tırnak.",
+  2.48,
+  1.0,
+  "Ucundan kalkıp beyazlayan bir tırnak."
+ ],
+ "s10": [
+  "anlatici",
+  "Ya da kalınlaşıp ufalanan bir yüzey.",
+  2.26,
+  1.0,
+  "Ya da kalınlaşıp ufalanan bir yüzey."
+ ],
+ "s11": [
+  "anlatici",
+  "Asıl şaşırtıcı olan ise şu.",
+  2.21,
+  1.0,
+  "Asıl şaşırtıcı olan ise şu."
+ ],
+ "s12": [
+  "anlatici",
+  "Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor.",
+  4.86,
+  1.0,
+  "Tırnağı etkilenen kişilerde eklemler de daha sık etkilenebiliyor.  [vurgu 0.83: vurgu: daha → 'ha' vurgulu; Berkay 'da' diye vurgular]"
+ ],
+ "s13": [
+  "anlatici",
+  "Yani bu küçük işaret, sandığından fazlasını anlatabilir.",
+  4.52,
+  1.0,
+  "Yani bu küçük işaret sandığından fazlasını anlatabilir."
+ ],
+ "s14": [
+  "anlatici",
+  "Yine de her çukur sedef demek değil.",
+  2.45,
+  1.0,
+  "Yine de her çukur sedef demek değil."
+ ],
+ "s15": [
+  "anlatici",
+  "Fark ettiysen, tırnaklarını bir dermatoloğa göster.",
+  4.08,
+  1.0,
+  "Fark ettiysen tırnaklarını bir dermatoloğa göster."
+ ],
+ "s16": [
+  "anlatici",
+  "Bunu, tırnaklarına hiç bakmayan birine gönder.",
+  2.94,
+  1.0,
+  "Bunu tırnaklarına hiç bakmayan birine gönder."
+ ]
+}
