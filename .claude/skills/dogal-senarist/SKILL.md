@@ -22,7 +22,7 @@ description: Doğal Yaşam Rotası (takviye gıda mağazası, dogalyasamrotasii.
 - **Yasak iddialar listesi** MARKA.md'deki tablolardadır (kanser, Alzheimer, %50 azaltır, "mucize", "yan etkisi yok" …) — hiçbiri girmez.
 - Korkutma, utandırma, önce–sonra yok. Merak ve "bunu bilmiyordum" duygusu var.
 - **Format:** aksi söylenmedikçe 9:16 dikey. Görsel stil: 2D düz vektör animasyon (MARKA.md "İçerik stili").
-- **Anlatım varsayılanı (Berkay 24.11):** TEK ANLATICI (`anlatici`), doğrudan izleyiciyle konuşur ("sen" dili). Diyalog/karakter sesleri yalnızca istenirse.
+- **Anlatım varsayılanı (Berkay 24.11):** TEK ANLATICI (`anlatici`), doğrudan izleyiciyle konuşur ("sen" dili). Diyalog/karakter sesleri yalnızca istenirse. **Doktor karakteri yok** (görselde de); hekim mesajı ikon/takvim ile.
 - **Ton:** sakin ansiklopedi değil, cesur ve şaşırtıcı kanca + dürüst gövde (`/viral` bölüm 0, doğruluk kuralı).
 - Kullanıcı formatı belirtmediyse tek format varsayma: konuya en uygun 2 format öner (aşağıdan), birini seçip yaz.
 

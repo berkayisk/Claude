@@ -6,3 +6,4 @@
 - v1 render (24.11): ciktilar/sedef-tirnak-v1.mp4 — 1080x1920, 50.7 sn, -14 LUFS. Kod: src/ (cizim.tsx = yeniden kullanılabilir çizimler: El, Tirnak[normal/cukur/yag/kalkma/kalin],
   Buyutec, ElIkon, Dirsek, Doktor, Telefon, KagitUcak, ArkaPlan). Altyazı Fredoka 600 beyaz hap/mor; üst başlık mor hap. Müzik araclar/arka_muzik.py 78 bpm, volume 0.13.
   Render: npx remotion render <P>/src/index.ts Video <P>/ciktilar/x.mp4 --public-dir <P>/girdiler (~2 dk).
+- v2: doktor sahnesi çıkarıldı (Berkay) → el + büyüteç + randevu takvimi (s15).

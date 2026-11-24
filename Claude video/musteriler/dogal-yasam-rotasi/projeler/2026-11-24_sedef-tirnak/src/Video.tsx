@@ -3,7 +3,7 @@ import "@fontsource/fredoka/600.css";
 import "@fontsource/fredoka/700.css";
 import { AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { SATIRLAR, FPS } from "./zaman";
-import { RENK, El, Tirnak, Buyutec, ElIkon, Dirsek, Doktor, Telefon, KagitUcak, ArkaPlan } from "./cizim";
+import { RENK, El, Tirnak, Buyutec, ElIkon, Dirsek, Telefon, KagitUcak, ArkaPlan } from "./cizim";
 
 const FONT = "Fredoka, sans-serif";
 const fr = (s: number) => Math.round(s * FPS);
@@ -286,16 +286,25 @@ const S14: React.FC<{ dur: number }> = ({ dur }) => {
 const S15: React.FC<{ dur: number }> = ({ dur }) => {
   const f = useCurrentFrame();
   const g = useGiris(0, 13);
-  const konus = Math.max(0, Math.sin(f / 2.6)) * (f < dur - 10 ? 0 : 0); // doktor konuşmuyor (anlatıcı); hafif gülümseme
-  const bx = interpolate(f, [6, 26], [420, 300], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const k = useGiris(8, 12);
+  const tik = interpolate(f, [18, 30], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <Sahne dur={dur} zemin={RENK.mint} vurgu="#FFFFFF" zoom={0.04}>
-      <g transform={`translate(330 ${1250 + (1 - g) * 500})`}><Doktor agiz={konus} goz={f % 90 > 84 ? 0.15 : 1} /></g>
-      <g transform="translate(560 640) scale(0.62)"><El tirnaklar={["cukur", "cukur", "normal", "normal", "normal"]} /></g>
-      <g transform={`translate(${bx + 470} 760)`}>
-        <Buyutec r={120} id="b15">
-          <g transform="translate(-80 -80)"><Tirnak w={160} h={160} tip="cukur" sw={8} /></g>
-        </Buyutec>
+      {/* el: tırnaklar izleyiciye gösteriliyor */}
+      <g transform={`translate(70 ${600 + (1 - g) * 700}) scale(0.72)`}><El tirnaklar={["cukur", "cukur", "normal", "normal", "normal"]} /></g>
+      {/* randevu kartı (takvim) */}
+      <g transform={`translate(790 820) scale(${k}) rotate(4)`}>
+        <rect x={-200} y={-230} width={400} height={440} rx={36} fill="#fff" stroke={RENK.cizgi} strokeWidth={8} />
+        <path d="M-200 -150 L -200 -194 Q -200 -230 -164 -230 L 164 -230 Q 200 -230 200 -194 L 200 -150 Z" fill={RENK.mor} stroke={RENK.cizgi} strokeWidth={8} />
+        {[-110, 110].map((x) => <rect key={x} x={x - 14} y={-262} width={28} height={64} rx={14} fill="#C7BDD9" stroke={RENK.cizgi} strokeWidth={6} />)}
+        {Array.from({ length: 12 }).map((_, i) => (
+          <rect key={i} x={-160 + (i % 4) * 82} y={-110 + Math.floor(i / 4) * 82} width={62} height={58} rx={12} fill={i === 6 ? "#FFE6B8" : "#F2EEF8"} stroke={i === 6 ? RENK.turuncu : "none"} strokeWidth={6} />
+        ))}
+        <path d={`M${-160 + 2 * 82 + 10} ${-110 + 82 + 30} l 16 16 l 30 -34`} fill="none" stroke={RENK.teal} strokeWidth={10} strokeLinecap="round" strokeLinejoin="round" strokeDasharray={90} strokeDashoffset={90 * (1 - tik)} />
+      </g>
+      {/* büyüteç ipucu */}
+      <g transform={`translate(330 640) scale(${g * 0.55})`}>
+        <Buyutec r={120} id="b15"><g transform="translate(-80 -80)"><Tirnak w={160} h={160} tip="cukur" sw={8} /></g></Buyutec>
       </g>
     </Sahne>
   );

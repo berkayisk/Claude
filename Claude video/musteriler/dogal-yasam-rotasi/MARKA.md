@@ -11,6 +11,7 @@ Ekran görüntüleri: `marka/site_anasayfa.png`, `marka/site_sedef.png`.
   Bileşenler (laktoferrin, bütirat, çörek otu, mürrisafi, safran…) **konu** olarak anlatılabilir, ama "bizde var / bunu alın" bağlantısı kurulmaz.
 - CTA sadece içerik/takip odaklı: "Kaydet", "Paylaş", "Takip et — serinin devamı geliyor", "Merak ettiğini yorumlara yaz".
   (WhatsApp/telefon/DM satış çağrısı içerik metnine girmez; profil zaten yönlendiriyor.)
+- **Doktor karakteri kullanılmaz** (Berkay, 24.11). "Hekime / dermatoloğa danış" mesajı ikon, takvim, el gibi görsellerle verilir.
 - Aşağıdaki "Ürün" bölümleri sadece **arka plan bilgisi**: hangi konuların/bileşenlerin işleneceğini bilmek için.
 
 ## Sektör / ne satıyor
