@@ -56,6 +56,8 @@ projeler/<proje>/
 - Kesmeler (kullanıcının kendi kurgusundan ölçüldü): cümle arası boşluk ~0.07 sn (en fazla 0.10). Temiz seste -38 dB altı >=0.12 sn her sessizliği kes, iki yanda 0.035 sn bırak; kelimesiz bölgeleri (nefes, ıı) at; yarıda kalan denemeleri HARIC ile çıkar (whisper bunları birleştirebilir, kelime kelime kontrol et); kare yuvarlama: baş floor, son ceil. Açı değişimi sadece konu değişince. Tempo 1.0 (kullanıcı 1.1x hızı çok hızlı buldu; hızlandırma yapma). `calisma/kesme_kontrol.py` ile doğrula (sadece atılan tarafta ses varsa sorun).
 - Konuşma eşiği çekime uyarlanır: zemin gürültüsü (10. yüzdelik) + 7 dB, en az -38 dB (mekân yankısı olan çekimlerde sabit -38 hiç kesmez). Aynı çekimi tek parça işle; anlam bölümleri sadece grafik zamanlaması için (bölüm sınırı konuşma ortasına düşüp 1 kare ses atlatmasın).
 - Türkçe eşleştirmede `İ`/`I` küçültmesine dikkat (Python lower() 'İ'yi 'i̇' yapar).
+- **Yazı tipi Türkçe denetimi:** yeni bir font kullanmadan önce `fonttools` ile Ç ç Ğ ğ İ ı Ö ö Ş ş Ü ü harflerinin hepsinin olduğunu doğrula
+  (eksikse tarayıcı başka fonttan doldurur, uyumsuz görünür). Fredoka'da Ğ ğ İ Ş ş YOK. Yuvarlak kalın için Baloo 2, Nunito uygun.
 - Kartlarda `backdrop-filter` KULLANMA (render'da titriyor) → düz yarı saydam zemin.
 - Ses efektleri: `marka/sfx/` (araclar/sfx_uret.py), grafik türüne göre giriş/çıkış.
 - Stok B-roll: Mixkit (ücretsiz, ticari/reklam kullanımı serbest, anahtar gerekmez; ortamda mixkit.co + assets.mixkit.co izinli). Arama: `https://mixkit.co/free-stock-video/<konu>/`, dosya: `https://assets.mixkit.co/videos/<id>/<id>-720.mp4` (sadece 720p yatay). Şablonda `broll_video` olayı: bulanık arka + keskin çerçeve (top, yukseklik ayarlanır). Dosyalar `girdiler/broll/`.

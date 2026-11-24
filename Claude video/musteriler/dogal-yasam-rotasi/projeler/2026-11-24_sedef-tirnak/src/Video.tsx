@@ -1,11 +1,12 @@
 import React from "react";
-import "@fontsource/fredoka/600.css";
-import "@fontsource/fredoka/700.css";
+import "@fontsource/baloo-2/700.css";
+import "@fontsource/baloo-2/800.css";
 import { AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, Easing } from "remotion";
 import { SATIRLAR, FPS } from "./zaman";
 import { RENK, El, Tirnak, Buyutec, ElIkon, Dirsek, Telefon, KagitUcak, ArkaPlan } from "./cizim";
 
-const FONT = "Fredoka, sans-serif";
+// Baloo 2: Türkçe karakterlerin tamamı var (Fredoka'da Ğ ğ İ Ş ş YOK — kullanma)
+const FONT = "'Baloo 2', sans-serif";
 const fr = (s: number) => Math.round(s * FPS);
 
 // ---------- ortak ----------
@@ -36,7 +37,7 @@ const Baslik: React.FC<{ metin: string; gecikme?: number; y?: number }> = ({ met
   const g = useGiris(gecikme, 11);
   return (
     <div style={{ position: "absolute", top: y, left: 0, right: 0, display: "flex", justifyContent: "center", transform: `scale(${0.6 + 0.4 * g})`, opacity: Math.min(1, g * 1.5) }}>
-      <div style={{ background: RENK.mor, color: "#fff", fontFamily: FONT, fontWeight: 700, fontSize: 66, padding: "18px 44px", borderRadius: 999, letterSpacing: 1, boxShadow: "0 10px 0 rgba(43,33,64,0.25)", border: "6px solid #fff", textAlign: "center", maxWidth: 940 }}>
+      <div style={{ background: RENK.mor, color: "#fff", fontFamily: FONT, fontWeight: 800, fontSize: 64, padding: "12px 44px 6px", borderRadius: 999, letterSpacing: 1, boxShadow: "0 10px 0 rgba(43,33,64,0.25)", border: "6px solid #fff", textAlign: "center", maxWidth: 940 }}>
         {metin}
       </div>
     </div>
@@ -56,7 +57,7 @@ const Altyazi: React.FC<{ metin: string; dur: number }> = ({ metin, dur }) => {
   }
   return (
     <div style={{ position: "absolute", top: 1330, left: 0, right: 0, display: "flex", justifyContent: "center" }}>
-      <div style={{ background: "#fff", border: `5px solid ${RENK.morAcik}`, color: RENK.mor, fontFamily: FONT, fontWeight: 600, fontSize: 56, padding: "14px 38px", borderRadius: 999, boxShadow: "0 8px 22px rgba(43,33,64,0.18)", textAlign: "center", maxWidth: 960, lineHeight: 1.15 }}>
+      <div style={{ background: "#fff", border: `5px solid ${RENK.morAcik}`, color: RENK.mor, fontFamily: FONT, fontWeight: 700, fontSize: 58, padding: "10px 38px 4px", borderRadius: 999, boxShadow: "0 8px 22px rgba(43,33,64,0.18)", textAlign: "center", maxWidth: 960, lineHeight: 1.15 }}>
         {aktif}
       </div>
     </div>
@@ -121,11 +122,11 @@ const S03: React.FC<{ dur: number }> = ({ dur }) => {
       {f > vurus && (
         <g transform={`translate(565 970) scale(${yildiz})`}>
           <path d="M0 -90 L 22 -30 L 85 -40 L 38 5 L 70 60 L 8 35 L -30 85 L -28 22 L -88 5 L -32 -22 Z" fill="#FFD84D" stroke={RENK.cizgi} strokeWidth={7} strokeLinejoin="round" />
-          <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={44} fill={RENK.cizgi}>TIK</text>
+          <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={44} fill={RENK.cizgi}>TIK</text>
         </g>
       )}
       {f > vurus + 10 && (
-        <text x={330} y={700} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={220} fill={RENK.mor} opacity={Math.min(1, (f - vurus - 10) / 8)}>?</text>
+        <text x={330} y={700} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={220} fill={RENK.mor} opacity={Math.min(1, (f - vurus - 10) / 8)}>?</text>
       )}
     </Sahne>
   );
@@ -141,7 +142,7 @@ const S04: React.FC<{ dur: number }> = ({ dur }) => {
       <path d={`M640 700 L ${640 + 180 * cizgi} ${700 - 160 * cizgi}`} stroke={RENK.mor} strokeWidth={8} strokeDasharray="16 12" strokeLinecap="round" />
       <g transform={`translate(840 520) scale(${g})`}>
         <rect x={-140} y={-62} width={280} height={110} rx={55} fill="#fff" stroke={RENK.mor} strokeWidth={8} />
-        <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={64} fill={RENK.mor}>sedef?</text>
+        <text x={0} y={18} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={64} fill={RENK.mor}>sedef?</text>
       </g>
     </Sahne>
   );
@@ -153,14 +154,14 @@ const S05: React.FC<{ dur: number }> = ({ dur }) => {
   const etiket = (x: number, y: number, m: string) => (
     <g transform={`translate(${x} ${y})`}>
       <rect x={-130} y={-48} width={260} height={84} rx={42} fill={RENK.mor} />
-      <text x={0} y={12} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={46} fill="#fff">{m}</text>
+      <text x={0} y={12} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={46} fill="#fff">{m}</text>
     </g>
   );
   return (
     <Sahne dur={dur} zemin={RENK.mint} vurgu="#FFFFFF" zoom={0.03}>
       <g transform={`translate(560 ${640}) scale(${0.85 * a})`}><Dirsek /></g>
       {etiket(250, 470, "CİLT")}
-      <text x={540} y={1000} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={110} fill={RENK.mor} opacity={b}>+</text>
+      <text x={540} y={1000} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={110} fill={RENK.mor} opacity={b}>+</text>
       <g transform={`translate(${430} ${1040}) scale(${b})`}><Tirnak w={220} h={225} tip="cukur" sw={9} /></g>
       {etiket(830, 1150, "TIRNAK")}
     </Sahne>
@@ -192,7 +193,7 @@ const Kart: React.FC<{ x: number; y: number; w: number; h: number; g: number; ch
     {no && (
       <g transform={`translate(${-w / 2 + 50} ${-h / 2 + 50})`}>
         <circle r={38} fill={RENK.mor} />
-        <text y={16} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={46} fill="#fff">{no}</text>
+        <text y={16} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={46} fill="#fff">{no}</text>
       </g>
     )}
     {children}
@@ -205,7 +206,7 @@ const S07: React.FC<{ dur: number }> = ({ dur }) => {
     <Sahne dur={dur} zemin={RENK.mavi} vurgu="#FFFFFF" zoom={0.02}>
       {[0, 1, 2].map((i) => (
         <Kart key={i} x={200 + i * 340} y={860} w={290} h={400} g={gs[i]} no={`${i + 1}`}>
-          <text y={60} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={170} fill={RENK.morAcik}>?</text>
+          <text y={60} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={170} fill={RENK.morAcik}>?</text>
         </Kart>
       ))}
     </Sahne>
@@ -270,7 +271,7 @@ const S14: React.FC<{ dur: number }> = ({ dur }) => {
   return (
     <Sahne dur={dur} zemin={RENK.krem} vurgu="#FFE2C4" zoom={0.03}>
       <g transform="translate(340 600)"><Tirnak w={400} h={420} tip="cukur" sw={12} /></g>
-      <text x={860} y={760} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={300} fill={RENK.mor} transform={`rotate(${(1 - g) * 30} 860 700)`} opacity={g}>?</text>
+      <text x={860} y={760} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={300} fill={RENK.mor} transform={`rotate(${(1 - g) * 30} 860 700)`} opacity={g}>?</text>
       {/* başka olası sebepler, silik */}
       <g opacity={0.45 * g} transform="translate(200 1130)">
         <rect x={-55} y={-25} width={110} height={50} rx={12} fill="#9AA3B5" stroke={RENK.cizgi} strokeWidth={5} />
@@ -329,7 +330,7 @@ const S16: React.FC<{ dur: number }> = ({ dur }) => {
             <g transform="translate(-60 -110) scale(0.2)"><El tirnaklar={["cukur", "cukur", "normal", "normal", "normal"]} /></g>
           </g>
           <rect x={-170} y={280} width={340} height={80} rx={40} fill={RENK.mor} />
-          <text x={-20} y={334} textAnchor="middle" fontFamily={FONT} fontWeight={700} fontSize={42} fill="#fff">GÖNDER</text>
+          <text x={-20} y={334} textAnchor="middle" fontFamily={FONT} fontWeight={800} fontSize={42} fill="#fff">GÖNDER</text>
           <g transform={`translate(${110 + u * 380} ${320 - u * 520}) scale(0.7) rotate(${-u * 20})`}><KagitUcak /></g>
         </Telefon>
       </g>
@@ -390,7 +391,7 @@ export const Video: React.FC = () => {
       <Audio src={staticFile("muzik.wav")} volume={0.13} />
       {/* bilgilendirme notu: son 3 sn */}
       <Sequence from={durationInFrames - fr(3.2)}>
-        <div style={{ position: "absolute", top: 1490, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 600, fontSize: 28, color: "#5E5470" }}>
+        <div style={{ position: "absolute", top: 1490, left: 0, right: 0, textAlign: "center", fontFamily: FONT, fontWeight: 700, fontSize: 28, color: "#5E5470" }}>
           Bilgilendirme amaçlıdır, tanı ve tedavi yerine geçmez.
         </div>
       </Sequence>

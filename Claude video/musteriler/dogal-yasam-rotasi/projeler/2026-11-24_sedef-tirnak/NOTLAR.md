@@ -8,3 +8,4 @@
   Render: npx remotion render <P>/src/index.ts Video <P>/ciktilar/x.mp4 --public-dir <P>/girdiler (~2 dk).
 - v2: doktor sahnesi çıkarıldı (Berkay) → el + büyüteç + randevu takvimi (s15).
 - v3: Berkay 'konuşmacı çok yavaş' → ses_hizli/: rubberband tempo ×1.15 (s02 ×1.08, s14 ×1.12 — ×1.15'te telaffuz denetimi 'iğne', 'sedef' şüpheli dedi), satır arası 0.12 sn; 43.2 sn, 2.36 kelime/sn; telaffuz.py denetle 15/15 TAMAM; loudnorm -14 LUFS.
+- v4: altyazı/başlık fontu Fredoka → Baloo 2 (Fredoka'da Ğ ğ İ Ş ş yok, fallback fonttan geliyordu).

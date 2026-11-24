@@ -110,7 +110,7 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 
 ### Altyazı
 - Sürekli ekranda; alt ortada **beyaz hap (pill) kutu**, ince mor kenar, tam yuvarlak köşeler, hafif gölge.
-- Yazı **koyu mor `#481A78`**, kalın yuvarlak sans (Fredoka / Baloo 2 benzeri), 3–6 kelimelik parçalar, cümle bölünerek akar, kesik geçiş.
+- Yazı **koyu mor `#481A78`**, kalın yuvarlak sans: **Baloo 2** (altyazı 700, başlık 800; `@fontsource/baloo-2`). Fredoka KULLANILMAZ (Ğ ğ İ Ş ş yok), 3–6 kelimelik parçalar, cümle bölünerek akar, kesik geçiş.
 
 ### Ses tarzı
 - **Anlatıcı + karakter sesleri**, her karakter ayrı ses (kadın genç, kadın arkadaş, yaşlı erkek doktor, erkek eczacı); anlatıcı orta perde (~178 Hz).
