@@ -39,6 +39,39 @@ tedavi beyanı). İçeriğe şöyle çevrilir:
 Not: belgede muskat için "safrol" bileşeni övgüyle geçiyor; safrol gıdada sınırlandırılmış bir maddedir, içerikte hiç anılmaz.
 Gıda takviyesi onay/bildirim numarası ve ürün adı Berkay'dan alınacak; "%27 timokinon" gibi rakamlar ancak etikette varsa kullanılır.
 
+## Ürün: Laktoferrin ("Lactofermin" — e-kitap: "Lactoferrin Hakkında Her Şey")
+Kaynak: `kaynak/Lactofermin_E-Kitap.pdf` (32 sayfa, soru-cevap), düz metin `kaynak/lactofermin_ekitap_metin.txt`.
+Sitedeki "Laktoferrin İçeren Paket"in ana bileşeni. E-kitap renkleri: bakır/kahve `~#B8743A` başlık, yeşil `~#6B8E23` bant
+(bunlar e-kitabın; marka renkleri yukarıdaki site renkleridir). Ürün adı/etiketi teyit edilecek (çinko ve glutamin içeriyor mu? —
+e-kitap "Laktoferrin, glutamin ve çinko sinerjisi" bölümü ve "çinko ile desteklenen ürünler tercih edilebilir" diyor).
+
+### İçerikte rahatça kullanılabilecek bilgi (olgu, hastalık iddiası değil) — "bilgi kartı / merak" içerikleri için altın
+- Laktoferrin sütte doğal olarak bulunan, **demir taşıyan bir proteindir**; en çok anne sütünde, özellikle ilk 3 günün sütünde (kolostrum) bulunur.
+- Vücudumuz da üretir: gözyaşı, tükürük, burun/ağız mukozası, bağırsak mukozası, eklem sıvısı…
+- Takviyelerdeki laktoferrin **sığır sütünden saflaştırılır**; inek sütünde oranı çok düşüktür (~%1 civarı protein payı).
+- Laboratuvarda sentetik olarak üretilemez; sütten / peynir altı suyundan saflaştırılır.
+- 691 amino asitlik büyük bir glikoprotein (insülin 51 amino asit — kıyas görsel olarak çok iyi çalışır).
+- Mide asidine (pH 2.5–3) dayanıklıdır, demiri bağlı tutabilir.
+- Tablo (insan kolostrumu 5–7 mg/mL, anne sütü 1–2 mg/mL, gözyaşı 2.2 mg/mL, inek kolostrumu 0.5–1 mg/mL, inek sütü 20–200 µg/mL).
+- Bilimsel ilgi: Google Scholar'da ~236.000 makalede geçiyor, ~24.500 makalenin başlığında (e-kitaptaki rakam; kullanırken "e-kitaptaki taramaya göre" de ya da güncelini kontrol et).
+- Vücuttaki demirin yalnızca küçük bir kısmı (~%10) emilir → laktoferrinin demir taşınması üzerine araştırılması.
+- **Uyarı her zaman eklenir:** süt alerjisi olanlar kullanmamalı (süt proteinidir). Hamilelik, emzirme, ilaç kullanımı → hekime danışın.
+
+### Uygun dille kullanılabilecek konular ("araştırılıyor / inceleniyor / destek")
+Bağışıklık dengesi, bağırsak bariyeri ve mikrobiyota (prebiyotik benzeri etki), demir metabolizması ve adet dönemi,
+antioksidan (serbest demiri bağlama — Fenton), cilt ve yara iyileşmesi süreçleri. Hepsi "çalışmalarda inceleniyor" kalıbıyla.
+
+### KESİNLİKLE kullanılmayacak iddialar (e-kitapta geçiyor ama reklam/içerikte yasak ve riskli)
+- "Mucize molekül", "yan etkisi yok", "herkes kullanabilir, sebebe gerek yok", "mutlaka kullanılmalı".
+- Kanser (anjiyogenez, apoptoz, "tedaviyi daha etkili yapar"), Alzheimer, Parkinson, MS, ALS, romatoid artrit.
+- COVID-19, hepatit, virüsleri öldürür, H. pylori'de iyileşme.
+- "IBS semptomlarını %50 azaltır", "Candida'yı %70–90 inhibe eder", "Crohn/ülseratif kolit ciddi şekilde iyileşir", "çölyakta mutlaka etkili".
+- Flukonazol/nistatin/antibiyotikle "4 kat daha az doz" vb. ilaçla etkileşim/sinerji iddiaları (insanlar ilacını azaltabilir — tehlikeli).
+- "İlaçlar temel iyileşmeyi sağlamaz, besin destekleri sağlar" (ilaç karşıtı söylem).
+- Kilo verme / yağ yakma (perilipin, lipaz), kan şekeri, kemik yapımı, anti-aging, DNA'ya etki.
+- Hasta hikâyesi (MS + meme kanseri örneği), "anne sütü almayanlar daha çok hastalanır" genellemesi.
+- Doz önerisi ("günde 1–2 tane") → yalnızca etiketteki kullanım önerisi aynen verilir.
+
 ## Sayfa kurgusu (içeriklerde de kullanılabilecek akış)
 Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"** sorusuyla bitiyor:
 1. X nedir? (kısa, sakin tanım) → "Peki X aslında nasıl ortaya çıkar?"
