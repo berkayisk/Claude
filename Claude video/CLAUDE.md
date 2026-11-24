@@ -66,6 +66,12 @@ projeler/<proje>/
 - Denetim: `earshot timeline film.mp4` → bölümler, müzik türü tahmini, kesme–vuruş senkronu, boşluklar; `earshot describe/match/ab`.
 - MCP sunucusu repo kökündeki `.mcp.json`'da (`earshot mcp`).
 
+## Lemo-Opuscar (99 kodla film stili) — /lemo-opuscar yeteneği
+- Kütüphane `~/lemo-opuscar` (her yeni container'da `sh .claude/skills/lemo-opuscar/scripts/setup.sh` ile iner, ~33 MB);
+  paketler: `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers sh .claude/skills/lemo-opuscar/scripts/setup.sh deps` (~290 MB, hazır Chromium kullanılır).
+- Render ederken de `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers` ver. `core/render/mux.sh` ffmpeg 7+ ister (sistemde 6.1 var).
+- Lisans: yapılan filmler bizim (ticari dahil, atıf gerekmez); stil talimatları kendi filmlerimiz için kullanılabilir, dağıtılamaz.
+
 ## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
 - Araç: `araclar/berkay_ses.py satirlar.json cikti/` — Chatterbox Multilingual (MIT, ticari serbest), Türkçe, referans `marka/sifirdan-satisa/berkay_ses_referans.wav`
   (Berkay'ın kendi anlatım kaydından 10 sn). Her satır Whisper ile birebir doğrulanır (≤6 deneme, TOHUM ortam değişkeni ile farklı denemeler),
