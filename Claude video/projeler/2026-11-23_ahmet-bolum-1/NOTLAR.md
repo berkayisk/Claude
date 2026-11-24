@@ -72,3 +72,10 @@
 - Seslendirme yazımları ("yazim" alanı): "Ama, …", "Önce, …" virgülleri vurguyu başa çekmek için.
 - calisma/plan_v2.py zamanlama; telefon titreşimi 56,3 sn ("…titreyene kadar" bitişi), final kartı 60,25 sn.
 - Dinleme listesi: n2 "Ahmet'in" (GOP -0,51, cümle başı ölçüm etkisi olabilir), n10 "Ama" (aMA), n16 "sonra", n8 "cevap", n21 "kaçırmamak".
+
+## v12 — Gerçek kayıtlarla ses bandı (real-sound + earshot)
+- Müzik: "We Will Get It" (Eugenio Mininni, Mixkit) — earshot rank ile 15 adaydan seçildi; 5 segment, bar 117 drop = 42,0 sn (sabah).
+- Efektler: Mixkit + Freesound CC0 (lisanslar sayfalarından doğrulandı) — audio/sounddesign.json, out/cues.json (40 olay), CREDITS.md.
+- mix.py → out/audio/soundtrack.wav (-14,0 LUFS, -2,3 dBTP); qa.py: kenar kusuru 0; seslendirme müzik altında (-7 dB ducking) net.
+- Video: v11 görüntüsü + yeni ses (mux) → ciktilar/Ahmet_Bolum1_v12_Gercek_Ses.mp4.
+- Not: qa.py, cue türü "place" olunca serbest yerleştirmelerle karışıyor → tür adı "set".

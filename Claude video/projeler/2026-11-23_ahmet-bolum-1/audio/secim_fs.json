@@ -1,0 +1,135 @@
+{
+ "vibrate": [
+  [
+   "audio/assets/fs_vibrate/fs-369839.ogg",
+   4.8,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_vibrate/fs-384487.ogg",
+   4.3,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_vibrate/fs-83704.ogg",
+   3.9,
+   "strong"
+  ]
+ ],
+ "notif": [
+  [
+   "audio/assets/fs_notif/fs-638851.ogg",
+   2.5,
+   "weak"
+  ],
+  [
+   "audio/assets/fs_notif/fs-238429.ogg",
+   1.7,
+   "no match"
+  ],
+  [
+   "audio/assets/fs_notif/fs-380482.ogg",
+   1.4,
+   "no match"
+  ]
+ ],
+ "laptop_open": [
+  [
+   "audio/assets/fs_laptop_open/fs-556762.ogg",
+   2.5,
+   "weak"
+  ],
+  [
+   "audio/assets/fs_laptop_open/fs-459241.ogg",
+   2.0,
+   "no match"
+  ],
+  [
+   "audio/assets/fs_laptop_open/fs-609250.ogg",
+   0.2,
+   "no match"
+  ]
+ ],
+ "laptop_close": [
+  [
+   "audio/assets/fs_laptop_close/fs-556762.ogg",
+   2.9,
+   "plausible"
+  ],
+  [
+   "audio/assets/fs_laptop_close/fs-419952.ogg",
+   2.3,
+   "weak"
+  ],
+  [
+   "audio/assets/fs_laptop_close/fs-609250.ogg",
+   -0.7,
+   "no match"
+  ]
+ ],
+ "mug": [
+  [
+   "audio/assets/fs_mug/fs-404922.ogg",
+   4.2,
+   "strong"
+  ]
+ ],
+ "room_night": [
+  [
+   "audio/assets/fs_room_night/fs-635732.ogg",
+   4.4,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_room_night/fs-761486.ogg",
+   3.8,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_room_night/fs-398843.ogg",
+   3.6,
+   "strong"
+  ]
+ ],
+ "clock": [
+  [
+   "audio/assets/fs_clock/fs-434841.ogg",
+   5.0,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_clock/fs-242008.ogg",
+   5.0,
+   "strong"
+  ],
+  [
+   "audio/assets/fs_clock/fs-171043.ogg",
+   4.1,
+   "strong"
+  ]
+ ],
+ "scroll": [
+  [
+   "audio/assets/fs_scroll/fs-777044.ogg",
+   2.3,
+   "weak"
+  ]
+ ],
+ "click": [
+  [
+   "audio/assets/fs_click/fs-332010.ogg",
+   2.1,
+   "weak"
+  ],
+  [
+   "audio/assets/fs_click/fs-118206.ogg",
+   1.9,
+   "no match"
+  ],
+  [
+   "audio/assets/fs_click/fs-854747.ogg",
+   1.3,
+   "no match"
+  ]
+ ]
+}
