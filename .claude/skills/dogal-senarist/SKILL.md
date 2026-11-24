@@ -10,7 +10,8 @@ description: Doğal Yaşam Rotası (takviye gıda mağazası, dogalyasamrotasii.
 2. `Claude video/musteriler/dogal-yasam-rotasi/kaynak/` — konu bilgisi (site metinleri, laktoferrin e-kitabı, mürrisafi/çörek otu,
    vagus/sindirim belgesi). Bilgi yalnızca buradan ya da güvenilir genel bilgiden; rakam uydurulmaz.
 3. `Claude video/musteriler/dogal-yasam-rotasi/ICERIK_OGRENIMLERI.md` varsa — geçmiş videoların verisinden çıkarımlar.
-4. `/viral` yeteneğinin kuralları — senaryo bunlara göre kurulur ve puanlanır.
+4. Kanca seçenekleri `/viral-baslik` süreciyle üretilir (kullanıcı kanca vermediyse).
+5. `/viral` yeteneğinin kuralları — senaryo bunlara göre kurulur ve puanlanır.
 
 ## Değişmez kurallar
 - **İÇERİKTE ÜRÜN YOK.** Ürün adı, paket, şişe, fiyat, "satın al", "linkte", "bizde var" yok. Odak tamamen bilgi.
