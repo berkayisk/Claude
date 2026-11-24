@@ -59,6 +59,13 @@ projeler/<proje>/
 - Video konuşma bitince biter; sona sessiz kuyruk ekleme. Kapanış kartı son cümlede başlar, `son: tl + 0.5` ile son karede sönmez.
 - Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).
 
+## earshot (ses efekti üretimi + sesi dinleme) — github.com/Leonxlnx/earshot
+- Kurulum: `pip install "earshot[mcp,measure] @ git+https://github.com/Leonxlnx/earshot"` (PyPI'deki `earshot` BAŞKA proje). Dinleme modelleri
+  (CLAP + AST, ~2,2 GB) `earshot doctor --fetch` ile `~/.cache/earshot/hf`'e iner; sonra `HF_HUB_OFFLINE=1`.
+- SFX: `earshot make "a phone vibrating" -o x.wav` (922 tasarım, kodla render, telifsiz). Eksikse `earshot build`.
+- Denetim: `earshot timeline film.mp4` → bölümler, müzik türü tahmini, kesme–vuruş senkronu, boşluklar; `earshot describe/match/ab`.
+- MCP sunucusu repo kökündeki `.mcp.json`'da (`earshot mcp`).
+
 ## Berkay ses klonu (tüm bölümler / seslendirmeli içerikler için — kullanıcı onaylı)
 - Araç: `araclar/berkay_ses.py satirlar.json cikti/` — Chatterbox Multilingual (MIT, ticari serbest), Türkçe, referans `marka/sifirdan-satisa/berkay_ses_referans.wav`
   (Berkay'ın kendi anlatım kaydından 10 sn). Her satır Whisper ile birebir doğrulanır (≤6 deneme, TOHUM ortam değişkeni ile farklı denemeler),
