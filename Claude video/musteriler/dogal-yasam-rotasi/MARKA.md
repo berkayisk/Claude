@@ -91,27 +91,34 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 5. "Laktoferrin neden araştırılıyor?" → (sitede burada "Hemen İncele!" var; **içeriklerde yok** — onun yerine "Kaydet / takip et, devamı geliyor")
 
 ## İçerik stili (örnek: `referanslar/demir-vsl-v3-genel.mov`, transkript `referanslar/demir-vsl-v3-genel_transkript.txt`)
-**FORMAT: aksi söylenmedikçe her video 9:16 dikey (1080×1920, 30 fps).** (Örnek video 16:9 yatay; dikeye uyarlanır:
-karakterler daha büyük/yakın, sahne dikey kurulur, altyazı alt üçte birin üstüne — Reels arayüzü altta ~350 px kapatır.)
+**FORMAT: aksi söylenmedikçe her video 9:16 dikey (1080×1920, 30 fps).**
+**Örnekten alınan: SES ve GÖRÜNTÜ TARZI. Hikâyesi/kurgusu önemli değil, kopyalanmaz** (Berkay). Konu ve akış her videoda içeriğe göre yazılır.
+Örnek 16:9 yatay; dikeye uyarlanırken: karakter/nesne kadrajı daha yakın, sahne dikey kurulur, altyazı alt üçte birin üstünde
+(Reels arayüzü altta ~350 px kapatır).
 
-- **Tür:** 2D çizgi animasyon, **hikâyeli eğitim videosu** ("VSL" adlı ama içinde ürün/satış yok). İsimli bir karakter (Elif, 32)
-  üzerinden belirti → doktora gidiş → tahlil → klasik çözüm ve zorlukları anlatılıyor. İzleyici kendini karakterde görüyor.
-- **Kanca:** "Bu Elif, 32 yaşında. İşini seviyor, arkadaşlarını seviyor, hayatı yoğun ama güzel. **Ama** son birkaç aydır bir şeyler ters gidiyor."
-  → tanıdık hayat + "ama" kırılması (ilk 10 sn).
-- **Belirtiler somut sahnelerle:** 8 saat uyuyup yorgun uyanmak, merdivende nefesin kesilmesi, tarağa takılan saç tutamları,
-  arkadaşın "Yüzün sapsarı olmuş" demesi. Liste okumak yerine her belirti bir sahne.
-- **Ses:** anlatıcı + karakter diyalogları, farklı seslerle (anlatıcı ~178 Hz, Elif ve iş arkadaşı kadın, doktor yaşlı erkek, eczacı erkek).
-  Konuşma dili, kısa cümleler. Müzik/efekt hafif. Ses seviyesi ortalama ~-19.6 dB, tepe -3.7 dB.
-- **Tempo:** ~85 sn'de ~33 sahne değişimi → ortalama **2.5–3 sn/sahne**; her cümle ya da yarım cümle yeni bir çekim/yakınlaşma.
-  Bölüm geçişlerinde ara kart ("1. AY" — mavi gökyüzü + 3D bulutlar, lacivert kalın yazı `#2F396A`).
-- **Altyazı:** her an ekranda, alt ortada **beyaz hap (pill) kutu**, mor ince kenar, yuvarlak köşeler; yazı **koyu mor `#481A78`**,
-  kalın yuvarlak sans (Fredoka / Baloo 2 benzeri). Kısa parçalar halinde (3–6 kelime), cümle bölünerek akar.
-- **Çizim stili:** düz renk vektör, koyu mor-lacivert dış çizgi, yumuşak gölge, arka planlar bulanık (derinlik). Pastel mint/krem
-  odalar, Elif'in imzası **teal kazak `#2D9D98`** + at kuyruğu. Duygu yüz ifadesiyle (göz altı morluğu, solgun/yeşil yüz, ter damlası).
-  Görsel ipuçları: tahlil ekranında düşen grafik + kırmızı ok, "13" takvim, anneden gelen mesajlar telefonda.
-- **Bilgi dili:** doktor ağzından bile "bununla **ilgili olabilir**". Reçeteli tedavi kötülenmez; yalnızca yaşanan zorluk (mide, kabızlık)
-  gerçekçi aktarılır. Biz de: hekim önerisine karşı çıkan / "ilacı bırak" diyen hiçbir şey yazmayız.
-- **Yapı:** dizi/bölüm mantığı, merak bırakarak bitiyor ("Bir ay, iki ay…" → "1. AY" kartı). Örnek dosya burada kesiliyor (v3, devamı yok).
+### Görüntü tarzı
+- **2D düz renk vektör çizgi animasyon** (flat cartoon). Kalın, koyu mor-lacivert dış çizgi; hafif yumuşak gölge; doku yok.
+- **Karakterler:** basit, sevimli, büyük yuvarlak gözlü, ince kol-bacaklı; duygu yüz ifadesiyle (göz altı morluğu, solgunluk/yeşil yüz,
+  ter damlası, kaşlar). Ana karakter imzası örnekte teal kazak `#2D9D98` + at kuyruğu.
+- **Arka planlar:** pastel mint `#DFF2EC`, krem, açık mavi, gece sahnelerinde mor-lacivert; **arka plan bulanık** (derinlik), karakter keskin.
+  Bazı sahneler düz zemin + tek nesne (tarak, takvim, monitör) — vurgu/yakın çekim gibi; kenarda yumuşak vinyet.
+- **Bilgi görselleri:** monitörde bar grafik + kırmızı aşağı ok, büyük takvim, telefon mesaj ekranı, ayna çerçevesi (damalı fayans zemin).
+- **Ara kart:** mavi gökyüzü gradyanı `#59A8F3`→açık + 3D yumuşak bulutlar, ortada kalın lacivert yazı `#2F396A` (örn. "1. AY").
+- **Hareket:** sakin. Yavaş zoom/pan, küçük uzuv hareketleri (saç tarama, konuşurken ağız), nesnelerde hafif sallanma; sert efekt yok.
+- **Tempo:** ortalama **2.5–3 sn'de bir sahne/çekim değişimi** (~85 sn'de 33 kesme). Her cümle ya da yarım cümle yeni çekim veya yakınlaşma.
+
+### Altyazı
+- Sürekli ekranda; alt ortada **beyaz hap (pill) kutu**, ince mor kenar, tam yuvarlak köşeler, hafif gölge.
+- Yazı **koyu mor `#481A78`**, kalın yuvarlak sans (Fredoka / Baloo 2 benzeri), 3–6 kelimelik parçalar, cümle bölünerek akar, kesik geçiş.
+
+### Ses tarzı
+- **Anlatıcı + karakter sesleri**, her karakter ayrı ses (kadın genç, kadın arkadaş, yaşlı erkek doktor, erkek eczacı); anlatıcı orta perde (~178 Hz).
+- Doğal, sıcak, sohbet eden ton; kısa cümleler, konuşma dili, cümle arası kısa nefes boşlukları (~0.5 sn).
+- Arka planda **çok kısık müzik/ambiyans** (konuşmasız anlarda ~-38 dB, konuşma ~-20 dB → konuşmanın ~18 dB altında). Efektler minimal.
+- Ortalama ses ~-19.6 dB, tepe -3.7 dB (sosyal medya için normal yüksek).
+
+### Dil inceliği (stil kuralı)
+- Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.
 
 ## Hedef kitle
 Sedef, egzama, vitiligo gibi kronik cilt sorunları veya şişkinlik/gaz/IBS gibi sindirim şikâyetleri yaşayan, "kök nedeni"
