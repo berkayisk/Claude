@@ -70,7 +70,10 @@ def miks():
          ("tick", V["n8"]["bas"], -9), ("tick", V["n8"]["bas"] + 0.25, -9), ("tick", V["n8"]["bas"] + 0.5, -9),
          ("pop", V["n9"]["bas"] + 0.3, -12), ("pop", V["n9"]["bas"] + 0.77, -12), ("ding", V["n9"]["bas"] + 1.24, -16),
          ("pop", V["n10"]["bas"] + 0.64, -10), ("whoosh", V["n11"]["bas"] - 0.15, -12),
-         ("click", P["takipTik"], -6), ("ding", P["takipTik"] + 0.1, -17)]
+         ("whoosh", V["n2"]["bas"] - 0.1, -13), ("pop", V["n2"]["bas"] + 0.98, -9), ("whoosh", V["n4"]["bas"] - 0.08, -13),
+         ("whoosh", V["n4"]["bas"] + 2.28, -13), ("whoosh", V["n6"]["bas"] - 0.08, -14), ("whoosh", V["n8"]["bas"] - 0.08, -13),
+         ("pop", V["n9"]["bas"] - 0.02, -10), ("whoosh", V["n10"]["bas"] - 0.08, -13), ("coin", V["n10"]["bas"] + 0.64, -13),
+         ("whoosh", V["n12"]["bas"] - 0.08, -13), ("click", P["takipTik"], -6), ("ding", P["takipTik"] + 0.1, -17)]
     for n, t, g in E: koy(fx[n], max(0, t), g)
     out[:, 0] += vo_bus * db(2.0); out[:, 1] += vo_bus * db(2.0)
     sf.write("calisma/ham_miks.wav", out, SR)

@@ -18,3 +18,8 @@ Yeni Instagram hesabının ilk deneme videosu: "Fiyatlar neden hep 99,99?" (40 s
 
 ## v3 (hızlı)
 - Kullanıcı: "daha hızlı anlatmalı" → VO atempo 1,18 (calisma/vo_hizli), satır arası boşluk ~0,1–0,22 sn; 40 → 32,6 sn. Sahne/SFX gecikmeleri 1/1,18 ölçeklendi.
+
+## v4 (sahneler)
+- Kullanıcı: "çok hareketsiz, sahneler değişmeli" → Film.tsx 14 çekime bölündü (CEKIMLER): market rafı, dönen madeni para, neon beyin, dev etiket üstünde kamera kaydırma, yeşil/kırmızı bölüm, terazi, aşırı yakın plan + soru işaretleri, araştırma masası, katalog sayfaları, skor tablosu + konfeti, alışveriş sepeti + sarsıntı, tipografi, telefon profil ekranı.
+- Kadraj değişir: yakın plan (BerkayBas), tam boy (BerkayTam), sağ/sol/ayna. Kamera her çekimde yavaş itme; geçişler: kes/kay/kayTers/zoom/flaş. Altyazı konumu çekime göre (yüzü kapatmaz).
+- SFX: her geçişte whoosh/pop. Önceki film: calisma/Film_v3.tsx.bak
