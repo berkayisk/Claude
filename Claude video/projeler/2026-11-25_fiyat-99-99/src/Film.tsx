@@ -170,7 +170,7 @@ const Sahneler: React.FC = () => {
           <Ust top={150}>
             <div style={{ position: "relative", opacity: g }}>
               <Etiket fiyat="99,99" olcek={1.2} />
-              <div style={{ position: "absolute", right: -60, top: 40, transform: `rotate(14deg) scale(${st})`, background: KIRMIZI, color: "white", fontFamily: POP, fontWeight: 900, fontSize: 58, borderRadius: 999, width: 230, height: 230, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", lineHeight: 1, boxShadow: "0 14px 40px rgba(0,0,0,0.4)" }}>İNDİRİM<br />gibi!</div>
+              <div style={{ position: "absolute", right: -150, top: -40, transform: `rotate(14deg) scale(${st})`, background: KIRMIZI, color: "white", fontFamily: POP, fontWeight: 900, fontSize: 58, borderRadius: 999, width: 230, height: 230, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", lineHeight: 1, boxShadow: "0 14px 40px rgba(0,0,0,0.4)" }}>İNDİRİM<br />gibi!</div>
             </div>
           </Ust>
         );

@@ -3,75 +3,77 @@
   {
    "k": "n1",
    "metin": "Fiyatlar neden hep doksan dokuz doksan dokuz?",
-   "bas": 0.3,
-   "son": 2.99
+   "bas": 0.25,
+   "son": 2.88
   },
   {
    "k": "n2",
    "metin": "Bir kuruş için mi? Hayır. Senin beynin için.",
-   "bas": 3.29,
-   "son": 6.37
+   "bas": 3.13,
+   "son": 5.72
   },
   {
    "k": "n3",
    "metin": "Bir fiyatı okurken, soldan başlarız.",
-   "bas": 6.67,
-   "son": 8.59
+   "bas": 5.94,
+   "son": 8.52
   },
   {
    "k": "n4",
    "metin": "Doksan dokuz, doksanlı bir fiyat gibi gelir. Yüz ise yüzlü.",
-   "bas": 8.89,
-   "son": 12.74
+   "bas": 8.74,
+   "son": 12.76
   },
   {
    "k": "n5",
    "metin": "Aradaki fark bir kuruş, ama his çok daha büyük.",
-   "bas": 13.04,
-   "son": 16.5
+   "bas": 12.98,
+   "son": 15.86
   },
   {
    "k": "n6",
    "metin": "Peki, bu gerçekten işe yarıyor mu?",
-   "bas": 16.8,
-   "son": 19.11
+   "bas": 16.31,
+   "son": 18.55
   },
   {
    "k": "n7",
    "metin": "Amerika'da araştırmacılar, bunu bir kıyafet kataloğunda test etti.",
-   "bas": 19.41,
-   "son": 22.48
+   "bas": 18.95,
+   "son": 22.8
   },
   {
    "k": "n8",
    "metin": "Aynı ürünler, farklı fiyatlarla basıldı.",
-   "bas": 22.78,
-   "son": 24.71
+   "bas": 23.02,
+   "son": 25.84
   },
   {
    "k": "n9",
    "metin": "Üç deneyin üçünde de, dokuzla biten fiyat daha çok sattı.",
-   "bas": 25.01,
-   "son": 28.85
+   "bas": 26.14,
+   "son": 29.23
   },
   {
    "k": "n10",
    "metin": "Çünkü dokuzla biten fiyat, indirimdeymiş gibi hissettirir.",
-   "bas": 29.15,
-   "son": 31.85
+   "bas": 29.45,
+   "son": 32.62
   },
   {
    "k": "n11",
    "metin": "Yani fiyat sadece bir sayı değil, bir mesaj.",
-   "bas": 32.15,
-   "son": 35.22
+   "bas": 33.07,
+   "son": 36.0
   },
   {
    "k": "n12",
    "metin": "Alışverişin perde arkasını görmek için takip et.",
-   "bas": 35.52,
-   "son": 38.22
+   "bas": 36.4,
+   "son": 39.17
   }
  ],
- "bitis": 39.02
+ "bitis": 40.07,
+ "ses": "ses.wav",
+ "takipTik": 38.48
 }
