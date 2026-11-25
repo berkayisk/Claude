@@ -24,3 +24,7 @@ projeler/*/audio/assets/*
 !projeler/*/audio/assets/manifests/
 projeler/*/out/*
 !projeler/*/out/cues.json
+
+# proje ses varlıkları (müzik lisansı yeniden dağıtıma izin vermez)
+projeler/*/audio/muzik/
+projeler/*/girdiler/fonts/
