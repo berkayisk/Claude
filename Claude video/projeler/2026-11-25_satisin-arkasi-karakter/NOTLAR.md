@@ -13,3 +13,8 @@ uzun vadede Sıfırdan Satışa'ya trafik. Videolar KODLA (Remotion) üretilir; 
 - Vizemler: X, A, E, I, O, U, M, F (+ gulumse, kocaGulumse, sasir, duz) → ses klonu fonem zamanlarıyla dudak senkronu.
 - SVG id'leri useId ile tekil (aynı karede birden çok karakter).
 - Kart: `npx remotion still src/index.ts Kart ciktilar/kart_v1.png --public-dir <abs>/girdiler`
+
+## Karakter v4 (2026-11-25) — 2. referans fotoğrafından yeniden çizildi (referanslar/berkay_ref2.jpg)
+- Kullanıcı v2'yi beğenmedi ("içime sinmedi"), yüz bu fotodan alındı: yuvarlak dolgun yüz, belirgin kulaklar, çok kısa saç (şakaklar hafif açık),
+  kalın düz kaşlar, dar gözler + göz altı, geniş yuvarlak burun, dolgun alt dudak, bıyık + seyrek kirli sakal (yarı saydam + düzensiz nokta dokusu).
+- Kıyafet aynı (lacivert yarım fermuarlı kazak + beyaz tişört). v2 yedeği: kart_v2.png.
