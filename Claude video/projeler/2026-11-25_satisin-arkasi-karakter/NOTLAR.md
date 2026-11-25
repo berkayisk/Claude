@@ -4,6 +4,7 @@ Yeni Instagram hesabı (çalışma adı "Satışın/Siparişin Arkası"): e-tica
 uzun vadede Sıfırdan Satışa'ya trafik. Videolar KODLA (Remotion) üretilir; ana karakter = Berkay'ın animasyonu (rehber, hikâye kahramanı değil).
 
 ## Karakter v1→v2 (2026-11-25)
+- v3: saç kafatasını takip eder (SAC yolu yüz hattıyla birleşik, yanda taşma yok, üstte kısa hacim), alında hafif gölge, favoriler degrade ile saçtan sakala kesintisiz ("kafa sonradan eklenmiş" görüntüsü giderildi).
 - v2: şakak açıklığı + ortada saç inişi, konik kollar + parmaklı eller (yumruk/işaret/açık), kısa boyun, daha kalın-kısa bacaklar (taban y=1130).
 
 - Referans: referanslar/berkay_ref.png (girdiler/'e de kopyalı).

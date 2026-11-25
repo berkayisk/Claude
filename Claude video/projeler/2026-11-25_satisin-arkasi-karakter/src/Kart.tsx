@@ -22,7 +22,7 @@ export const Kart: React.FC = () => (
   <AbsoluteFill style={{ background: "#0f1320" }}>
     <svg width={2400} height={1500} viewBox="0 0 2400 1500">
       <rect width={2400} height={1500} fill="#0f1320" />
-      <text x={60} y={88} fill="#fff" fontSize={52} fontWeight={800} fontFamily="Poppins, Arial, sans-serif">BERKAY — karakter kartı v2</text>
+      <text x={60} y={88} fill="#fff" fontSize={52} fontWeight={800} fontFamily="Poppins, Arial, sans-serif">BERKAY — karakter kartı v3</text>
       <text x={60} y={130} fill="#8d97ad" fontSize={26} fontFamily="Poppins, Arial, sans-serif">rehber karakter · flat stil · kodla çizildi (Remotion SVG)</text>
       {/* referans */}
       <image href={staticFile("berkay_ref.png")} x={60} y={170} width={300} height={300} />

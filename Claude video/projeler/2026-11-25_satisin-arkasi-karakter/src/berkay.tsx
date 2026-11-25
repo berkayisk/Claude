@@ -45,6 +45,8 @@ export type Ifade = {
   yanak?: number;    // 0..1 kızarma
 };
 
+const SAC_CIZGI = "M325,214 C318,196 312,182 304,172 C298,150 290,132 276,124 C262,126 250,134 238,140 C226,146 214,150 200,152 C186,150 174,146 162,140 C150,134 138,126 124,124 C110,132 102,150 96,172 C88,182 82,196 75,214";
+const SAC = "M75,214 L73,160 C76,96 130,50 200,50 C270,50 324,96 327,160 L325,214 C318,196 312,182 304,172 C298,150 290,132 276,124 C262,126 250,134 238,140 C226,146 214,150 200,152 C186,150 174,146 162,140 C150,134 138,126 124,124 C110,132 102,150 96,172 C88,182 82,196 75,214 Z";
 const YUZ = "M72,206 C72,112 128,66 200,66 C272,66 328,112 328,206 C328,292 314,344 284,374 C258,400 230,410 200,410 C170,410 142,400 116,374 C86,344 72,292 72,206 Z";
 // sakal bölgesi: favoriden çene hattına, yanak çizgisi + bıyık
 const SAKAL = "M78,236 C80,302 98,350 122,378 C148,402 172,414 200,414 C228,414 252,402 278,378 C302,350 320,302 322,236 C316,276 304,306 284,322 C268,332 254,330 246,322 C236,312 222,308 200,308 C178,308 164,312 154,322 C146,330 132,332 116,322 C96,306 84,276 78,236 Z";
@@ -139,6 +141,11 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
     <g>
       <defs>
         <clipPath id={`${k}yuz`}><path d={YUZ} /></clipPath>
+        <linearGradient id={`${k}fav`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={R.sac} />
+          <stop offset="0.55" stopColor={R.sakal} stopOpacity={0.9} />
+          <stop offset="1" stopColor={R.sakal} stopOpacity={0.78} />
+        </linearGradient>
         <radialGradient id={`${k}yan`} cx="0.5" cy="0.5" r="0.5">
           <stop offset="0" stopColor={R.yanak} stopOpacity={0.45} />
           <stop offset="1" stopColor={R.yanak} stopOpacity={0} />
@@ -182,18 +189,21 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
         <Goz cx={250} sag={true} />
         <Kas sol={true} />
         <Kas sol={false} />
-        {/* saç: kısa üst, şakaklarda hafif açıklık, yanlar kısa (fade) */}
-        <path d="M76,214 C74,150 92,108 124,86 C152,66 184,58 210,58 C252,58 292,74 314,104 C330,128 330,170 324,214 C318,196 312,182 304,172 C298,150 290,132 276,124 C262,126 250,134 238,140 C226,146 214,150 200,152 C186,150 174,146 162,140 C150,134 138,126 124,124 C110,132 102,150 96,172 C88,182 82,196 76,214 Z" fill={R.sac} />
-        {/* şakak açıklığı yumuşak geçiş */}
-        <path d="M124,124 C112,132 104,148 98,168" stroke={R.sac} strokeWidth={6} opacity={0.35} fill="none" />
-        <path d="M276,124 C288,132 296,148 302,168" stroke={R.sac} strokeWidth={6} opacity={0.35} fill="none" />
-        {/* üst hacim */}
-        <path d="M110,108 C136,64 196,44 250,52 C290,58 318,82 322,118 C300,92 262,82 230,84 C190,84 150,92 110,108 Z" fill={R.sac} />
-        <path d="M136,90 C170,66 230,60 278,74" stroke={R.sacParlak} strokeWidth={8} fill="none" strokeLinecap="round" />
-        <path d="M160,104 C190,90 236,88 266,96" stroke={R.sacParlak} strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.7} />
-        {/* yan kısa saç (favori) */}
-        <path d="M78,206 C76,222 77,236 80,250 C84,240 86,226 88,212 Z" fill={R.sac} opacity={0.75} />
-        <path d="M322,206 C324,222 323,236 320,250 C316,240 314,226 312,212 Z" fill={R.sac} opacity={0.75} />
+        {/* saç: kafatasını takip eder (yüz hattıyla birleşik, yanlarda taşma yok, üstte kısa hacim) */}
+        <path d={SAC} fill={R.sac} />
+        {/* alın: saç çizgisinin altında yumuşak gölge → saç yüze oturur */}
+        <g clipPath={`url(#${k}yuz)`}>
+          <path d={SAC_CIZGI} stroke={R.tenGolge} strokeWidth={8} fill="none" opacity={0.3} transform="translate(0,5)" />
+          {/* favoriler: saçtan sakala kesintisiz */}
+          <path d="M72,176 L92,176 C89,200 88,224 90,250 L72,256 Z" fill={`url(#${k}fav)`} />
+          <path d="M328,176 L308,176 C311,200 312,224 310,250 L328,256 Z" fill={`url(#${k}fav)`} />
+        </g>
+        {/* yanlar kısa (fade): kulak üstünde daha açık ton */}
+        <path d="M74,196 C72,176 74,160 78,146 L92,150 C88,166 88,182 90,198 Z" fill={R.sacParlak} opacity={0.35} />
+        <path d="M326,196 C328,176 326,160 322,146 L308,150 C312,166 312,182 310,198 Z" fill={R.sacParlak} opacity={0.35} />
+        {/* parlama */}
+        <path d="M128,92 C160,68 236,62 280,82" stroke={R.sacParlak} strokeWidth={8} fill="none" strokeLinecap="round" />
+        <path d="M156,110 C190,96 236,94 266,104" stroke={R.sacParlak} strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.6} />
       </g>
     </g>
   );
