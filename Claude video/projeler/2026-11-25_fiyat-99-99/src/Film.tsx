@@ -128,12 +128,24 @@ const Izgara: React.FC<{ renk?: string }> = ({ renk = "rgba(255,255,255,0.06)" }
 );
 
 // ---------- çekimler ----------
-type Cekim = { bas: number; son: number; gecis: "kes" | "kay" | "kayTers" | "zoom" | "flas"; alt: number; render: (t: number, yerel: number) => React.ReactNode };
+type Kam = [number, number, number, number]; // [çekim içi sn, odak x, odak y, zoom]
+type Cekim = { bas: number; son: number; gecis: "kes" | "kay" | "kayTers" | "zoom" | "flas"; alt: number | ((y: number) => number); kam?: Kam[]; render: (t: number, yerel: number) => React.ReactNode };
+// sanal kamera: anahtar kareler arasında yumuşak geçiş (zoom-in, yana kayıp kalma, geri gelme); kenar taşmaz
+const kamera = (kam: Kam[] | undefined, y: number) => {
+  if (!kam || !kam.length) return { x: 540, y: 960, z: 1 };
+  let a = kam[0], b = kam[0];
+  for (let i = 0; i < kam.length; i++) { if (kam[i][0] <= y) { a = kam[i]; b = kam[Math.min(i + 1, kam.length - 1)]; } }
+  const p = b[0] > a[0] ? Easing.inOut(Easing.cubic)(Math.min(1, Math.max(0, (y - a[0]) / (b[0] - a[0])))) : 0;
+  const z = a[3] + (b[3] - a[3]) * p;
+  let x = a[1] + (b[1] - a[1]) * p, yy = a[2] + (b[2] - a[2]) * p;
+  x = Math.min(1080 - 540 / z, Math.max(540 / z, x)); yy = Math.min(1920 - 960 / z, Math.max(960 / z, yy));
+  return { x, y: yy, z };
+};
 const n = (k: string) => vo(k).bas;
 
 const CEKIMLER: Cekim[] = [
   // 1 — kanca: market rafı, dev etiket düşer, yakın plan Berkay yukarı bakar
-  { bas: 0, son: n("n2") - 0.05, gecis: "kes", alt: 1100, render: (t) => {
+  { bas: 0, son: n("n2") - 0.05, gecis: "kes", alt: (y) => (y < 1.4 ? 880 : 1720), kam: [[0,540,480,1.22],[0.7,540,500,1.22],[1.2,540,960,1],[1.7,700,1450,1.45],[2.5,700,1450,1.45]], render: (t) => {
     const g = sp(t, 0.05, 8), sal = Math.sin(t * 3.4) * 7 * Math.exp(-t * 0.9);
     return (<>
       <Market t={t} />
@@ -142,7 +154,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 2 — "bir kuruş için mi?": dev dönen madeni para, küçük Berkay omuz silker
-  { bas: n("n2") - 0.05, son: n("n2") + 0.98, gecis: "zoom", alt: 1060, render: (t, y) => {
+  { bas: n("n2") - 0.05, son: n("n2") + 0.98, gecis: "zoom", alt: 1060, kam: [[0,540,760,1],[0.55,540,640,1.32],[1.1,540,640,1.32]], render: (t, y) => {
     const g = sp(t, n("n2"), 10), don = Math.cos(y * 7) ;
     return (<>
       <Duz ust="#0f3b3a" alt="#0a2322" /><Bokeh t={t} renk="#ffd166" seed={3} />
@@ -156,7 +168,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 3 — "beynin için": neon beyin, Berkay sağda düşünür
-  { bas: n("n2") + 0.98, son: n("n3"), gecis: "flas", alt: 1720, render: (t) => {
+  { bas: n("n2") + 0.98, son: n("n3"), gecis: "flas", alt: 1720, kam: [[0,540,600,1.45],[0.45,540,760,1],[0.85,790,1300,1.55],[1.4,790,1300,1.55]], render: (t) => {
     const g = sp(t, n("n2") + 0.98, 9);
     return (<>
       <Beyin t={t} g={g} />
@@ -165,7 +177,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 4 — "soldan okuruz": kamera dev etiketin üstünde soldan sağa kayar
-  { bas: n("n3"), son: n("n4"), gecis: "kay", alt: 1080, render: (t, y) => {
+  { bas: n("n3"), son: n("n4"), gecis: "kay", alt: 1080, kam: [[0,540,960,1],[0.3,320,600,1.35],[1.7,780,600,1.35],[2.2,540,960,1]], render: (t, y) => {
     const kay = interpolate(y, [0.2, 2.0], [380, -380], { ...kl, easing: Easing.inOut(Easing.cubic) });
     const ok = interpolate(y, [0.2, 2.0], [0, 1], kl);
     return (<>
@@ -178,7 +190,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 5 — "doksan dokuz → doksanlı": yeşil yarı, Berkay sağda işaret eder
-  { bas: n("n4"), son: n("n4") + 2.32, gecis: "kay", alt: 1000, render: (t) => {
+  { bas: n("n4"), son: n("n4") + 2.32, gecis: "kay", alt: (y) => (y < 1.1 ? 1000 : 1720), kam: [[0,540,480,1.45],[0.7,540,700,1.05],[1.3,840,1260,1.6],[2.4,840,1260,1.6]], render: (t) => {
     const g = sp(t, n("n4"));
     return (<>
       <Duz ust="#0f5c3a" alt="#093a25" /><Bokeh t={t} renk={YESIL} seed={5} />
@@ -188,14 +200,14 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 6 — "yüz ise yüzlü": kırmızı yarı, ters yönden kayar
-  { bas: n("n4") + 2.32, son: n("n5"), gecis: "kayTers", alt: 1000, render: (t) => (<>
+  { bas: n("n4") + 2.32, son: n("n5"), gecis: "kayTers", alt: (y) => (y < 0.45 ? 1720 : 1000), kam: [[0,240,1260,1.6],[0.55,540,820,1.08],[1.3,540,820,1.08]], render: (t) => (<>
       <Duz ust="#6e1a1a" alt="#3d0d0d" /><Bokeh t={t} renk={KIRMIZI} seed={7} />
       <Mutlak y={230}><Etiket fiyat="100" olcek={1.05} /></Mutlak>
       <Mutlak y={760}><Yazi boy={170} renk={KIRMIZI} g={sp(t, n("n4") + 2.55)}>100'LER</Yazi></Mutlak>
       <Kisi t={t} mod="tam" x={240} y={1100} olcek={0.62} poz="goster" ifade={{ bakX: 0.7, bakY: -0.6, kasAci: 0.3 }} bas0={n("n4") + 2.32} />
     </>) },
   // 7 — "fark bir kuruş, his büyük": terazi, yakın plan şaşkın Berkay
-  { bas: n("n5"), son: n("n6"), gecis: "zoom", alt: 1060, render: (t) => {
+  { bas: n("n5"), son: n("n6"), gecis: "zoom", alt: (y) => (y < 2.1 ? 1060 : 300), kam: [[0,540,960,1],[0.85,760,560,1.65],[1.8,760,560,1.65],[2.3,540,1420,1.3],[2.7,540,1420,1.3]], render: (t) => {
     const egil = interpolate(t, [n("n5") + 0.9, n("n5") + 1.5], [0, 18], { ...kl, easing: Easing.out(Easing.back(2)) });
     const kefe = (x: number, dy: number, icerik: React.ReactNode) => (
       <g transform={`translate(${x},${330 + dy})`}>
@@ -218,7 +230,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 8 — "gerçekten işe yarıyor mu?": aşırı yakın plan, uçuşan soru işaretleri
-  { bas: n("n6"), son: n("n7"), gecis: "zoom", alt: 300, render: (t) => (<>
+  { bas: n("n6"), son: n("n7"), gecis: "zoom", alt: 300, kam: [[0,540,960,1],[0.4,540,880,1.28],[1.5,540,880,1.28],[2.0,540,960,1]], render: (t) => (<>
       <Duz ust="#2a1f4d" alt="#120d24" /><Bokeh t={t} renk={MOR} n={18} seed={9} />
       {[0, 1, 2, 3, 4].map((i) => {
         const g = sp(t, n("n6") + i * 0.18, 7);
@@ -227,7 +239,7 @@ const CEKIMLER: Cekim[] = [
       <Kisi t={t} mod="yakin" x={540} y={620} olcek={2.4} ifade={{ kasAci: 0.6, bakX: 0.6, bakY: -0.6, egim: -5 }} />
     </>) },
   // 9 — "Amerika'da araştırmacılar": ofis/araştırma masası, Berkay sağda
-  { bas: n("n7"), son: n("n8"), gecis: "kay", alt: 1720, render: (t) => {
+  { bas: n("n7"), son: n("n8"), gecis: "kay", alt: 1720, kam: [[0,540,960,1],[0.9,400,860,1.55],[2.0,400,860,1.55],[2.5,830,1300,1.6],[3.4,830,1300,1.6]], render: (t) => {
     const k = (i: number) => sp(t, n("n7") + 0.3 + i * 0.15);
     return (<>
       <Duz ust="#e9eef7" alt="#cdd6e6" /><Izgara renk="rgba(30,40,70,0.07)" />
@@ -243,7 +255,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 10 — "aynı ürünler, farklı fiyatlarla": katalog sayfaları açılır
-  { bas: n("n8"), son: n("n9"), gecis: "kay", alt: 1300, render: (t) => (<>
+  { bas: n("n8"), son: n("n9"), gecis: "kay", alt: 1300, kam: [[0,540,660,1.2],[0.9,540,660,1.2],[1.3,560,660,1.85],[2.0,560,660,1.85],[2.5,540,960,1]], render: (t) => (<>
       <Duz ust="#fbe3c8" alt="#f3c99a" />
       <Mutlak y={150}><Yazi boy={84} renk="#3a2410" g={sp(t, n("n8"))}>AYNI ÜRÜN · <span style={{ color: "#d9480f" }}>FARKLI FİYAT</span></Yazi></Mutlak>
       {[0, 1, 2].map((i) => {
@@ -258,7 +270,7 @@ const CEKIMLER: Cekim[] = [
       <Kisi t={t} mod="yakin" x={240} y={1330} olcek={1.15} ifade={{ bakX: 0.6, bakY: -0.8, kas: 0.4 }} />
     </>) },
   // 11 — "üç deneyin üçünde de": skor tablosu, damgalar, konfeti
-  { bas: n("n9"), son: n("n10"), gecis: "flas", alt: 1040, render: (t) => (<>
+  { bas: n("n9"), son: n("n10"), gecis: "flas", alt: 1040, kam: [[0,540,560,1.3],[1.4,540,600,1.3],[1.9,540,960,1],[2.8,540,960,1]], render: (t) => (<>
       <Duz ust="#101a33" alt="#060b18" />
       <svg width={1080} height={1920} style={{ position: "absolute" }}>
         {Array.from({ length: 40 }).map((_, i) => {
@@ -282,7 +294,7 @@ const CEKIMLER: Cekim[] = [
       <Kisi t={t} mod="tam" x={540} y={1200} olcek={0.56} poz="selam" ifade={{ gozGul: 0.6, kas: 0.5 }} bas0={n("n9") + 1.2} />
     </>) },
   // 12 — "indirimdeymiş gibi": alışveriş sepeti + etiket + yapıştırma, kamera sarsıntısı
-  { bas: n("n10"), son: n("n11"), gecis: "kay", alt: 1150, render: (t) => {
+  { bas: n("n10"), son: n("n11"), gecis: "kay", alt: (y) => (y < 2.0 ? 1150 : 1740), kam: [[0,540,960,1],[0.45,540,420,1.45],[0.75,790,320,1.7],[1.6,790,320,1.7],[2.2,820,1500,1.4],[3.0,820,1500,1.4]], render: (t) => {
     const st = sp(t, n("n10") + 0.64, 6);
     const sars = t > n("n10") + 0.64 && t < n("n10") + 0.9 ? Math.sin(t * 90) * 12 : 0;
     return (<div style={{ position: "absolute", inset: 0, transform: `translate(${sars}px,${-sars * 0.6}px)` }}>
@@ -300,7 +312,7 @@ const CEKIMLER: Cekim[] = [
     </div>);
   } },
   // 13 — "fiyat bir mesaj": siyah zemin tipografi, spot ışığı
-  { bas: n("n11"), son: n("n12"), gecis: "zoom", alt: 1060, render: (t) => {
+  { bas: n("n11"), son: n("n12"), gecis: "zoom", alt: 1060, kam: [[0,540,500,1.6],[1.0,540,520,1.6],[1.6,540,960,1],[2.8,540,960,1]], render: (t) => {
     const harfler = "MESAJ".split("");
     return (<>
       <AbsoluteFill style={{ background: "radial-gradient(ellipse at 50% 75%, #2b2f45 0%, #07080d 60%)" }} />
@@ -311,7 +323,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 14 — çağrı: telefon ekranında profil + takip et, Berkay el sallar
-  { bas: n("n12"), son: plan.bitis, gecis: "kay", alt: 1650, render: (t) => {
+  { bas: n("n12"), son: plan.bitis, gecis: "kay", alt: 1650, kam: [[0,540,960,1],[0.8,730,900,1.5],[1.9,730,900,1.5],[2.4,250,1300,1.5],[3.2,250,1300,1.5]], render: (t) => {
     const tik = (plan as any).takipTik as number, basma = interpolate(t, [tik - 0.08, tik, tik + 0.12], [1, 0.9, 1], kl), takip = t >= tik;
     const g = sp(t, n("n12"), 11);
     return (<>
@@ -353,16 +365,20 @@ const CekimKatmani: React.FC<{ c: Cekim; t: number; giris: number; cikis: number
   // giris: 0..1 (yeni çekim giriyor), cikis: 0..1 (bu çekim çıkıyor); kamera: yavaş itme + hafif kayma
   const yerel = t - c.bas, sure = c.son - c.bas;
   const p = Math.min(1, yerel / Math.max(0.5, sure));
-  let tf = `scale(${1 + 0.06 * p}) translateY(${-14 * p}px)`, op = 1, blur = 0;
+  const k = kamera(c.kam, yerel);
+  const nefesKam = 1 + 0.012 * (1 + Math.sin(yerel * 1.7)) / 2;   // el kamerası hissi
+  const z = k.z * nefesKam;
+  let tf = `translate(${540 - k.x * z}px, ${960 - k.y * z}px) scale(${z})`, op = 1, blur = 0;
+  void p;
   const e = 1 - giris;
   if (giris < 1) {
     if (c.gecis === "kay") { tf = `translateX(${e * 1080}px) ` + tf; blur = e * 18; }
     if (c.gecis === "kayTers") { tf = `translateX(${-e * 1080}px) ` + tf; blur = e * 18; }
-    if (c.gecis === "zoom") { tf = `scale(${1 + e * 0.6}) ` + tf; op = giris; blur = e * 10; }
+    if (c.gecis === "zoom") { tf = `translate(540px,960px) scale(${1 + e * 0.6}) translate(-540px,-960px) ` + tf; op = giris; blur = e * 10; }
   }
-  if (cikis > 0) { const g2 = cikis; op *= c.gecis === "zoom" ? 1 : 1; tf = tf + ` scale(${1 + g2 * 0.05})`; }
+  if (cikis > 0) { const g2 = cikis; op *= c.gecis === "zoom" ? 1 : 1; tf = `translate(540px,960px) scale(${1 + g2 * 0.05}) translate(-540px,-960px) ` + tf; }
   return (
-    <AbsoluteFill style={{ transform: tf, opacity: op, filter: blur > 0.5 ? `blur(${blur}px)` : undefined, overflow: "hidden" }}>
+    <AbsoluteFill style={{ transform: tf, transformOrigin: "0 0", opacity: op, filter: blur > 0.5 ? `blur(${blur}px)` : undefined, overflow: "hidden" }}>
       {c.render(t, yerel)}
     </AbsoluteFill>
   );
@@ -382,7 +398,7 @@ export const Film: React.FC = () => {
       {once && giris < 1 ? <CekimKatmani c={once} t={t} giris={1} cikis={giris} /> : null}
       <CekimKatmani c={c} t={t} giris={giris} cikis={0} />
       {flas > 0 ? <AbsoluteFill style={{ background: "white", opacity: flas }} /> : null}
-      <Altyazi t={t} y={c.alt} />
+      <Altyazi t={t} y={typeof c.alt === "number" ? c.alt : c.alt(yerel)} />
       {(plan as any).ses ? <Audio src={staticFile((plan as any).ses)} /> : null}
     </AbsoluteFill>
   );
