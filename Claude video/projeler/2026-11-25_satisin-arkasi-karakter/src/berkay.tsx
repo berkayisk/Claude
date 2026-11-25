@@ -144,11 +144,11 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
           <stop offset="1" stopColor={R.yanak} stopOpacity={0} />
         </radialGradient>
       </defs>
-      {govde ? <g transform="translate(0,-22)"><Gogus /></g> : null}
+      {govde ? <g transform="translate(0,-34)"><Gogus /></g> : null}
       {/* boyun */}
       <path d="M156,360 L156,468 L244,468 L244,360 Z" fill={R.tenGolge} />
       <path d="M156,392 C180,420 220,420 244,392 L244,360 L156,360 Z" fill={R.tenKoyu} opacity={0.55} />
-      {govde ? <g transform="translate(0,-22)"><Yaka /></g> : null}
+      {govde ? <g transform="translate(0,-34)"><Yaka /></g> : null}
       <g transform={`rotate(${egim} 200 300)`}>
         {/* kulaklar */}
         <g>
@@ -183,7 +183,10 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
         <Kas sol={true} />
         <Kas sol={false} />
         {/* saç: kısa üst, şakaklarda hafif açıklık, yanlar kısa (fade) */}
-        <path d="M76,214 C74,150 92,108 124,86 C152,66 184,58 210,58 C252,58 292,74 314,104 C330,128 330,170 324,214 C318,190 312,172 302,160 C300,150 296,140 288,134 C270,140 252,134 236,128 C222,134 210,136 198,132 C184,138 168,138 152,134 C134,140 116,148 108,160 C94,174 82,192 76,214 Z" fill={R.sac} />
+        <path d="M76,214 C74,150 92,108 124,86 C152,66 184,58 210,58 C252,58 292,74 314,104 C330,128 330,170 324,214 C318,196 312,182 304,172 C298,150 290,132 276,124 C262,126 250,134 238,140 C226,146 214,150 200,152 C186,150 174,146 162,140 C150,134 138,126 124,124 C110,132 102,150 96,172 C88,182 82,196 76,214 Z" fill={R.sac} />
+        {/* şakak açıklığı yumuşak geçiş */}
+        <path d="M124,124 C112,132 104,148 98,168" stroke={R.sac} strokeWidth={6} opacity={0.35} fill="none" />
+        <path d="M276,124 C288,132 296,148 302,168" stroke={R.sac} strokeWidth={6} opacity={0.35} fill="none" />
         {/* üst hacim */}
         <path d="M110,108 C136,64 196,44 250,52 C290,58 318,82 322,118 C300,92 262,82 230,84 C190,84 150,92 110,108 Z" fill={R.sac} />
         <path d="M136,90 C170,66 230,60 278,74" stroke={R.sacParlak} strokeWidth={8} fill="none" strokeLinecap="round" />
@@ -222,30 +225,44 @@ const Yaka: React.FC = () => (
   </g>
 );
 
-// Tam boy (rehber pozu). Yerel: genişlik 400, yükseklik ~1180; ayak tabanı y=1180.
+// Tam boy (rehber pozu). Yerel: genişlik 400, yükseklik ~1180; ayak tabanı y=1130.
 export type Poz = "dur" | "goster" | "selam" | "dusun";
 export const BerkayTam: React.FC<{ ifade?: Ifade; poz?: Poz; kirp?: number }> = ({ ifade, poz = "dur", kirp = 1 }) => {
+  const El = ({ tip, ic }: { tip: "acik" | "isaret" | "yumruk"; ic: number }) => {
+    // bilekte başlar, +y yönünde uzanır; ic: başparmağın tarafı (-1/1)
+    const avuc = "M-25,0 C-29,18 -28,40 -20,52 C-12,60 12,60 20,52 C28,40 29,18 25,0 Z";
+    return (
+      <g>
+        {tip === "acik" ? [-17, -6, 5, 16].map((x, i) => (
+          <rect key={i} x={x - 6} y={34} width={12} height={i === 0 || i === 3 ? 34 : 42} rx={6} fill={R.ten}
+            transform={`rotate(${(x) * 0.9} ${x} 40)`} />
+        )) : null}
+        {tip === "isaret" ? <rect x={ic * -8 - 6} y={36} width={12} height={50} rx={6} fill={R.ten} /> : null}
+        <path d={avuc} fill={R.ten} />
+        <path d={avuc} fill="none" stroke={R.tenKoyu} strokeWidth={2.5} opacity={0.5} />
+        <ellipse cx={ic * 24} cy={22} rx={10} ry={20} fill={R.ten} stroke={R.tenKoyu} strokeWidth={2} strokeOpacity={0.45} transform={`rotate(${ic * -28} ${ic * 24} 22)`} />
+        {tip !== "acik" ? <path d={`M-16,46 L-16,54 M-5,49 L-5,57 M6,49 L6,57`} stroke={R.tenKoyu} strokeWidth={2.5} strokeLinecap="round" opacity={0.55} /> : null}
+      </g>
+    );
+  };
   const kol = (sol: boolean) => {
-    const omuzX = sol ? 84 : 316, omuzY = 490;
+    const omuzX = sol ? 92 : 308, omuzY = 478;
     const yon = sol ? -1 : 1;
-    let ust = sol ? 12 : -12, alt = 0; // derece: 0 aşağı sarkık
-    if (poz === "goster" && !sol) { ust = -100; alt = -10; }
-    if (poz === "selam" && !sol) { ust = -150; alt = -30; }
-    if (poz === "dusun" && !sol) { ust = -20; alt = -140; }
+    let ust = sol ? 10 : -10, alt = sol ? 6 : -6, tip: "acik" | "isaret" | "yumruk" = "yumruk";
+    if (poz === "goster" && !sol) { ust = -118; alt = -12; tip = "isaret"; }
+    if (poz === "selam" && !sol) { ust = -148; alt = -22; tip = "acik"; }
+    if (poz === "dusun" && !sol) { ust = -18; alt = -150; tip = "yumruk"; }
+    const UST = 128, ALT = 112;
     return (
       <g transform={`translate(${omuzX},${omuzY}) rotate(${ust})`}>
-        <rect x={-36} y={-20} width={72} height={150} rx={36} fill={R.kazak} />
-        <rect x={yon > 0 ? 4 : -36} y={-20} width={32} height={150} rx={16} fill={R.kazakGolge} opacity={0.55} />
-        <g transform={`translate(0,118) rotate(${alt})`}>
-          <rect x={-32} y={-14} width={64} height={130} rx={32} fill={R.kazak} />
-          <rect x={-33} y={98} width={66} height={20} rx={9} fill={R.kazakGolge} />
-          {/* el */}
-          <g transform="translate(0,124)">
-            <ellipse cx={0} cy={18} rx={30} ry={34} fill={R.ten} />
-            <ellipse cx={yon * -20} cy={8} rx={11} ry={20} fill={R.ten} transform={`rotate(${yon * 25} ${yon * -20} 8)`} />
-            {poz === "goster" && !sol ? <rect x={-7} y={30} width={14} height={46} rx={7} fill={R.ten} /> : null}
-            <path d={`M${-18},${28} Q0,${46} 18,${28}`} stroke={R.tenKoyu} strokeWidth={3} fill="none" opacity={0.6} />
-          </g>
+        {/* üst kol: omuzdan dirseğe incelen kol */}
+        <path d={`M-38,-6 C-40,40 -36,${UST - 20} -32,${UST} L32,${UST} C36,${UST - 20} 40,40 38,-6 C30,-30 -30,-30 -38,-6 Z`} fill={R.kazak} stroke={R.kazakGolge} strokeWidth={3} />
+        <path d={`M${yon * 10},-14 C${yon * 30},10 ${yon * 34},60 ${yon * 30},${UST}`} stroke={R.kazakGolge} strokeWidth={14} fill="none" opacity={0.6} strokeLinecap="round" />
+        <g transform={`translate(0,${UST - 6}) rotate(${alt})`}>
+          <circle cx={0} cy={0} r={32} fill={R.kazak} />
+          <path d={`M-32,0 C-32,40 -30,${ALT - 20} -27,${ALT} L27,${ALT} C30,${ALT - 20} 32,40 32,0 Z`} fill={R.kazak} stroke={R.kazakGolge} strokeWidth={3} />
+          <rect x={-29} y={ALT - 6} width={58} height={18} rx={8} fill={R.kazakGolge} />
+          <g transform={`translate(0,${ALT + 8})`}><El tip={tip} ic={-yon} /></g>
         </g>
       </g>
     );
@@ -253,13 +270,13 @@ export const BerkayTam: React.FC<{ ifade?: Ifade; poz?: Poz; kirp?: number }> = 
   return (
     <g>
       {/* bacaklar */}
-      <path d="M118,780 L114,1130 L194,1130 L200,850 L206,1130 L286,1130 L282,780 Z" fill={R.pantolon} />
-      <path d="M200,850 L206,1130 L286,1130 L282,780 L250,780 Z" fill={R.pantolonGolge} />
+      <path d="M104,780 L104,1080 L196,1080 L200,860 L204,1080 L296,1080 L296,780 Z" fill={R.pantolon} />
+      <path d="M200,860 L204,1080 L296,1080 L296,780 L256,780 Z" fill={R.pantolonGolge} />
       {/* ayakkabılar */}
-      <path d="M100,1124 L196,1124 C204,1124 208,1140 206,1160 L80,1160 C78,1142 86,1124 100,1124 Z" fill={R.ayakkabi} />
-      <rect x={78} y={1158} width={130} height={22} rx={8} fill={R.taban} />
-      <path d="M204,1124 L300,1124 C314,1124 322,1142 320,1160 L194,1160 C192,1140 196,1124 204,1124 Z" fill={R.ayakkabi} />
-      <rect x={192} y={1158} width={130} height={22} rx={8} fill={R.taban} />
+      <path d="M100,1072 L198,1072 C206,1072 210,1090 208,1110 L76,1110 C74,1090 84,1072 100,1072 Z" fill={R.ayakkabi} />
+      <rect x={74} y={1108} width={136} height={22} rx={8} fill={R.taban} />
+      <path d="M202,1072 L300,1072 C316,1072 326,1090 324,1110 L192,1110 C190,1090 194,1072 202,1072 Z" fill={R.ayakkabi} />
+      <rect x={190} y={1108} width={136} height={22} rx={8} fill={R.taban} />
       {/* gövde (kazak) */}
       <path d="M60,520 C56,476 110,454 166,446 L234,446 C290,454 344,476 340,520 L310,800 C266,816 134,816 90,800 Z" fill={R.kazak} />
       <path d="M318,500 C336,560 322,700 310,800 C290,808 270,810 254,812 C280,700 292,580 318,500 Z" fill={R.kazakGolge} />

@@ -22,7 +22,7 @@ export const Kart: React.FC = () => (
   <AbsoluteFill style={{ background: "#0f1320" }}>
     <svg width={2400} height={1500} viewBox="0 0 2400 1500">
       <rect width={2400} height={1500} fill="#0f1320" />
-      <text x={60} y={88} fill="#fff" fontSize={52} fontWeight={800} fontFamily="Poppins, Arial, sans-serif">BERKAY — karakter kartı v1</text>
+      <text x={60} y={88} fill="#fff" fontSize={52} fontWeight={800} fontFamily="Poppins, Arial, sans-serif">BERKAY — karakter kartı v2</text>
       <text x={60} y={130} fill="#8d97ad" fontSize={26} fontFamily="Poppins, Arial, sans-serif">rehber karakter · flat stil · kodla çizildi (Remotion SVG)</text>
       {/* referans */}
       <image href={staticFile("berkay_ref.png")} x={60} y={170} width={300} height={300} />
@@ -35,7 +35,7 @@ export const Kart: React.FC = () => (
       {(["dur", "goster", "selam"] as const).map((p, j) => (
         <g key={p}>
           <rect x={1060 + j * 300} y={170} width={280} height={760} rx={28} fill="#1a2033" />
-          <g transform={`translate(${1060 + j * 300 + 25},200) scale(0.58)`}>
+          <g transform={`translate(${1060 + j * 300 + 50},230) scale(0.52)`}>
             <BerkayTam poz={p} ifade={p === "selam" ? { agiz: "kocaGulumse", gozGul: 0.7, goz: 0.8 } : p === "goster" ? { agiz: "A", kas: 0.3, bakX: 0.7 } : { agiz: "gulumse" }} />
           </g>
           <Etiket x={1060 + j * 300 + 140} y={905} t={{ dur: "Duruş", goster: "Gösteriyor", selam: "Selam" }[p]} />
