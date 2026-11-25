@@ -13,6 +13,9 @@ Ne zaman: video ONAYLANDIKTAN sonra. Onay yoksa önce sor ya da videoyu bitir. V
 (atılmış bir sahneyi, kaldırılmış bir şakayı) kapakta ya da açıklamada kullanma.
 
 ## 1. Kapak karesi
+0. Kullanıcı kapak için kendi fotoğrafını verdiyse (tercih edilen yol) aday karelerle uğraşma: o fotoğrafı `calisma/kapak/` içine kopyala,
+   doğrudan 3. adımla (dekupe) devam et. Yüz konumunu YuNet ile ölç (`cv2.FaceDetectorYN`, model `opencv/face_detection_yunet`).
+   Örnek: es-reels-1'de kullanıcı fotoğrafı, 954 px kesim, yüz (460, 227) → `kisiGenislik 1500, kisiX -183, kisiY 660`.
 1. Proje klasöründen: `bash /home/user/Claude/.claude/skills/es-kapak-aciklama/scripts/kare_adaylari.sh 3 IMG_xxxx IMG_yyyy ...`
    (yalnızca kurguda kullanılan klipler). 4K kaynaktan alınır, video proxy'sinden değil.
 2. `calisma/kapak_adaylar.jpg` şeridine bak ve kareyi seç: gözler açık, ifade güçlü (şaşkın, iddialı, el hareketi),
@@ -38,7 +41,7 @@ const kisi = { arka: staticFile("kapak_arka.png"), kisi: staticFile("kapak_kisi.
 - Başlık dili (hesabın kapakları): 2 satır. Üst satır beyaz bağlam, alt satır sarı ve büyük vurucu cümle. İddialı, merak uyandıran,
   sokak dili. Örnekler: "SOSYAL MEDYACI DİYE GELDİK… FIRÇAYI VERDİLER!", "BU ÜRÜNÜ ALMAYIN!", "TAKİPÇİ SATIN ALDIYSAN HAPI YUTTUN".
   A varyantı: sarı satır + küçük alt başlık (beyaz, siyah şerit). B varyantı: `satir2Kirmizi` (kırmızı fırça üstünde beyaz).
-  Satır 15 karakteri geçiyorsa `boy1` / `boy2` küçült; taşma ve kendiliğinden satır kırılmasına bak.
+  Satır 15 karakteri geçiyorsa `boy1` / `boy2` küçült; taşma ve kendiliğinden satır kırılmasına bak ("BÖYLE SORMA!" 210'da iki satıra kırılıp saça bindi, `boy2={150}` ile tek satır oldu).
 - Render (`Claude video` kökünden):
   `for k in A B; do npx remotion still $P/src/index.ts Kapak-$k $P/ciktilar/kapak_$k.png --public-dir $P/girdiler --log=error; done`
 - İkisini yan yana küçük bir görselde birleştirip kontrol et: yazı taşmıyor, yüze binmiyor, arkada hayalet kişi yok.

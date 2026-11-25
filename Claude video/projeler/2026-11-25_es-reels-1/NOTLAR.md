@@ -29,3 +29,4 @@ Sıra: kanca (6174 2. deneme) → "önüne 2 net seçenek koy, topu tutayım mı
 - TUT/AT: AT gelene kadar alt yarı koyu "?" paneli (yüz yarım görünmesin).
 - v3: üstteki rozet kaldırıldı; takip kartında gerçek profil fotoğrafı (girdiler/profil.png = marka/etkilesim-sihirbazi/profil.png).
 - Kapak (ESKapak, 2 varyant: ciktilar/kapak_A.png / kapak_B.png) + ACIKLAMA.md. Kapak karesi 6176 @3.6 sn (topla), arka plan 6174'ün baş üstü tuğla bölgesi.
+- Kapak v2: kullanıcının verdiği fotoğraf (calisma/kapak/kullanici_kapak.jpg) dekupe edildi; arka plan aynı tuğla duvar. A'da boy2=150 (tek satır).
