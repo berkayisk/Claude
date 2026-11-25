@@ -17,6 +17,10 @@ jenerik ve bitiş ekranı burada aksi söylenmedikçe KULLANILMAZ.
 Öne çıkan: "Eğitimler" (koyu lacivert zemin, mavi-mor neon sihirbaz şapkası + kep ikonu).
 Profil fotoğrafı: ikisi takım elbiseyle yan yana, ellerinde parlayan sosyal medya ikonları (Instagram, YouTube, X, TikTok), sihir teması.
 
+## Kim kim (kullanıcı teyitli)
+- **Onur Altunay**: kıvırcık saçlı (ekran görüntüsünde 1. ve 2. kapak)
+- **Berkay Işık**: düz/kısa saçlı (3. kapak, "HAPI YUTTUN")
+
 ## Reels kapak stili (ekran görüntüsü: `profil-ekran-goruntusu.jpg`)
 - Dikey kapak, kişi altta ortada (göğüs çekimi, mikrofonla), başlık üst yarıda
 - Başlık: **büyük, kalın, condensed büyük harf** (Anton / Bebas tarzı), 2-3 satır, hafif eğik, siyah gölge/kontur
@@ -26,7 +30,6 @@ Profil fotoğrafı: ikisi takım elbiseyle yan yana, ellerinde parlayan sosyal m
 - Ton: **provokatif, merak uyandıran, sokak dili**: "SOSYAL MEDYACI DİYE GELDİK... FIRÇAYI VERDİLER!", "BU ÜRÜNÜ ALMAYIN!", "TAKİPÇİ SATIN ALDIYSAN HAPI YUTTUN"
 
 ## Henüz bilinmeyenler
-- Hangi kapakta kim var (kullanıcıya sorulacak; isimden/görünüşten tahmin etme)
 - Video içi altyazı stili, Reels süresi, kapanış/CTA, müzik
 - Ham çekimler ve logo dosyası
 
