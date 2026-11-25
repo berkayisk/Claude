@@ -9,10 +9,12 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
 4. Sonuçlar → `ciktilar/`
 5. Kararları ve ayarları `NOTLAR.md` dosyasına yaz.
 
-## İki ayrı iş kolu (ÖNEMLİ — karıştırma)
+## Üç ayrı iş kolu (ÖNEMLİ — karıştırma)
 1. **Sıfırdan Satışa kanal işleri** → `projeler/` + aşağıdaki kanal stili
 2. **Firma (müşteri) sosyal medya / reklam işleri** → `musteriler/<firma>/` + o firmanın `MARKA.md`'si. Kanal stili, Berkay Işık
    marka dosyaları ve kanal tonu burada KULLANILMAZ. Ayrıntı: `musteriler/README.md`
+3. **Etkileşim Sihirbazı Instagram hesabı** (Berkay + Onur'un sosyal medya yönetimi içerikleri) → `projeler/YYYY-AA-GG_es-<is>/` +
+   `marka/etkilesim-sihirbazi/MARKA.md`. Sıfırdan Satışa kanal stili burada da aksi söylenmedikçe KULLANILMAZ.
 
 ## Senaryo
 - Senaryo/metin işleri `/senarist` yeteneğiyle (`/home/user/Claude/.claude/skills/senarist/SKILL.md`); dizi kitapları `seriler/<dizi>/SERI.md`.
