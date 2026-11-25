@@ -1,0 +1,62 @@
+[
+ {
+  "k": "n1",
+  "metin": "Fiyatlar neden hep doksan dokuz doksan dokuz?",
+  "ex": 0.6
+ },
+ {
+  "k": "n2",
+  "metin": "Bir kuruş için mi? Hayır. Senin beynin için.",
+  "ex": 0.55
+ },
+ {
+  "k": "n3",
+  "metin": "Bir fiyatı okurken, soldan başlarız.",
+  "ex": 0.5
+ },
+ {
+  "k": "n4",
+  "metin": "Doksan dokuz, doksanlı bir fiyat gibi gelir. Yüz ise yüzlü.",
+  "ex": 0.5
+ },
+ {
+  "k": "n5",
+  "metin": "Aradaki fark bir kuruş, ama his çok daha büyük.",
+  "ex": 0.55
+ },
+ {
+  "k": "n6",
+  "metin": "Peki, bu gerçekten işe yarıyor mu?",
+  "ex": 0.6
+ },
+ {
+  "k": "n7",
+  "metin": "Amerika'da araştırmacılar, bunu bir kıyafet kataloğunda test etti.",
+  "ex": 0.5
+ },
+ {
+  "k": "n8",
+  "metin": "Aynı ürünler, farklı fiyatlarla basıldı.",
+  "ex": 0.45
+ },
+ {
+  "k": "n9",
+  "metin": "Üç deneyin üçünde de, dokuzla biten fiyat daha çok sattı.",
+  "ex": 0.6
+ },
+ {
+  "k": "n10",
+  "metin": "Çünkü dokuzla biten fiyat, indirimdeymiş gibi hissettirir.",
+  "ex": 0.5
+ },
+ {
+  "k": "n11",
+  "metin": "Yani fiyat sadece bir sayı değil, bir mesaj.",
+  "ex": 0.55
+ },
+ {
+  "k": "n12",
+  "metin": "Alışverişin perde arkasını görmek için takip et.",
+  "ex": 0.5
+ }
+]

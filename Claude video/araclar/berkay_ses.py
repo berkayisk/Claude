@@ -32,9 +32,25 @@ def _load(p, *a, **k):
 def _save(p, w, sr, *a, **k): sf.write(p, w.detach().cpu().numpy().T, sr)
 ta.load = _load; ta.save = _save   # torchcodec yok: soundfile ile
 
+_BIR = ["", "bir", "iki", "üç", "dört", "beş", "altı", "yedi", "sekiz", "dokuz"]
+_ON = ["", "on", "yirmi", "otuz", "kırk", "elli", "altmış", "yetmiş", "seksen", "doksan"]
+def sayi_yazi(n):
+    """0-999999 arası tam sayıyı Türkçe yazıya çevirir (Whisper rakam yazınca karşılaştırma için)."""
+    n = int(n)
+    if n == 0: return "sıfır"
+    out = []
+    if n >= 1000:
+        b = n // 1000; out += ([] if b == 1 else sayi_yazi(b).split()) + ["bin"]; n %= 1000
+    if n >= 100:
+        y = n // 100; out += ([] if y == 1 else [_BIR[y]]) + ["yüz"]; n %= 100
+    if n >= 10: out.append(_ON[n // 10]); n %= 10
+    if n: out.append(_BIR[n])
+    return " ".join(out)
+
 def norm(x):
     x = x.replace("İ", "i").replace("I", "ı").lower().replace("-", " ").replace("â", "a").replace("î", "i").replace("û", "u")
-    for r, y in (("3", "üç"), ("2", "iki"), ("1", "bir"), ("4", "dört"), ("5", "beş"), ("6", "altı")): x = re.sub(rf"\b{r}\b", y, x)
+    x = re.sub(r"(\d+)[.,](\d+)", r"\1 \2", x)          # 99.99 / 99,99 -> iki sayı
+    x = re.sub(r"\d+", lambda m: sayi_yazi(m.group()), x)
     return re.sub(r"[^a-zçğıöşü ]", "", x).split()
 def rms(a, sr, t, w=0.01):
     s = a[max(0, int(t * sr)):int((t + w) * sr)]
