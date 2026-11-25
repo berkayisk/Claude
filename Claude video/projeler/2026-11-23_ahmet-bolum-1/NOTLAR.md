@@ -98,3 +98,6 @@
 - Kullanıcı: v14'te müzik "çok kısık". Müzik bus -13 → -6 dB, konuşma altı ducking -9 → ~-6 dB (otomasyon ×0,65).
 - Müzik kanalı RMS -31,8 → -24,0 dB (seslendirme -16,1) → müzik sesin ~8 dB altında. Whisper dökümü tam doğru.
 - Önceki ayar: audio/sounddesign_v14_kisik.json. Ders: bu dizi için müzik/ses farkı ~8 dB uygun (16 dB fazla kısık).
+
+## İPTAL — 2026-11-25
+- Kullanıcı: "Ahmet projesi iptal, hiç izlenmedi." Bölüm 2 yazılmayacak. Son sürüm v15.

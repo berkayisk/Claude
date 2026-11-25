@@ -1,5 +1,7 @@
 # Ahmet E-Ticarete Başlamak İstiyor — Dizi kitabı
 
+> **DURUM: İPTAL (2026-11-25).** Bölüm 1 yayınlandı, izlenmedi; dizi durduruldu. Araçlar (ses klonu, telaffuz, vurgu, real-sound akışı) başka işlerde kullanılmaya devam eder.
+
 **Format:** 60–70 sn, 9:16, stilize sinematik animasyon (Remotion), anlatıcı = Berkay ses klonu (`araclar/berkay_ses.py`).
 **Amaç:** sıfırdan e-ticarete başlamak isteyen izleyici, kendini Ahmet'te görür; her bölüm tek bir gerçek engeli ve onu aşmanın
 doğru yolunu anlatır; her bölüm bir cliffhanger ile biter → takip.
