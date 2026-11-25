@@ -36,15 +36,15 @@ const golge = "0 8px 0 rgba(0,0,0,0.85), 0 14px 30px rgba(0,0,0,0.55)";
 // ---------------- Kamera (yüz takipli, her <=2 sn hareket) ----------------
 const yuzNokta = (p: Parca, t: number) => {
   // ±0.5 sn ağırlıklı ortalama (titreşimsiz takip)
-  let sx = 0, sy = 0, sw = 0;
+  let sx = 0, sy = 0, sh = 0, sw = 0;
   for (const o of p.yuz) {
     const d = Math.abs(o.t - t);
     if (d > 0.6) continue;
     const w = 1 - d / 0.6;
-    sx += o.x * w; sy += o.y * w; sw += w;
+    sx += o.x * w; sy += o.y * w; sh += o.h * w; sw += w;
   }
-  if (!sw) { const o = p.yuz[0]; return o ? { x: o.x, y: o.y } : { x: 540, y: 640 }; }
-  return { x: sx / sw, y: sy / sw };
+  if (!sw) { const o = p.yuz[0]; return o ? { x: o.x, y: o.y, h: o.h } : { x: 540, y: 640, h: 250 }; }
+  return { x: sx / sw, y: sy / sw, h: sh / sw };
 };
 const kameraZ = (km: Kamera[], t: number) => {
   const i = Math.max(0, km.findIndex((k) => t >= k.s && t < k.e));
@@ -74,7 +74,10 @@ const Goruntu: React.FC<{ v: ESVeri }> = ({ v }) => {
           const kt = p.bas + (frame - from) / FPS;
           const f = yuzNokta(p, kt);
           const tx = Math.min(0, Math.max(1080 - 1080 * z, 540 - f.x * z));
-          const ty = Math.min(0, Math.max(1920 - 1920 * z, k.yh - f.y * z));
+          let ty0 = 600 - f.y * z;
+          const ust = (f.y - 0.85 * f.h) * z + ty0;
+          if (ust < 190) ty0 += 190 - ust;
+          const ty = Math.min(0, Math.max(1920 - 1920 * z, ty0));
           // giriş efektleri
           let ek = "", filtre = "";
           if (k.giris === "whip" && gecen < 7) {
@@ -177,10 +180,10 @@ const Kanca: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   return (
     <AbsoluteFill style={{ opacity: out, transform: `scale(${1 + (1 - out) * 0.15}) translateX(${titre}px)` }}>
       <div style={{ position: "absolute", top: 170, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center" }}>
-        <div style={{ fontFamily: ANTON, fontSize: 250, lineHeight: 1, color: "white", ...kontur(16), textShadow: golge, transform: `scale(${interpolate(g1, [0, 1], [2.4, 1])}) rotate(-4deg)`, opacity: Math.min(1, g1 * 3) }}>{o.satir1}</div>
+        <div style={{ fontFamily: ANTON, fontSize: 200, lineHeight: 1, color: "white", ...kontur(14), textShadow: golge, transform: `scale(${interpolate(g1, [0, 1], [2.4, 1])}) rotate(-4deg)`, opacity: Math.min(1, g1 * 3) }}>{o.satir1}</div>
         <div style={{ marginTop: 10, transform: `scale(${interpolate(g2, [0, 1], [2.2, 1])}) rotate(-4deg)`, opacity: Math.min(1, g2 * 3) }}>
           <Firca renk={KIRMIZI}>
-            <div style={{ fontFamily: ANTON, fontSize: 112, color: SARI, ...kontur(10), letterSpacing: 1 }}>{o.satir2}</div>
+            <div style={{ fontFamily: ANTON, fontSize: 80, color: SARI, ...kontur(8), letterSpacing: 1 }}>{o.satir2}</div>
           </Firca>
         </div>
       </div>
@@ -223,7 +226,7 @@ const Secenek: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   const out = cikis(f, sure, 5);
   const nabiz = 1 + Math.max(0, Math.sin((f - 20) / 4)) * 0.04;
   const tus = (h: string, g: number, renk: string, yazi: string, d: number) => (
-    <div style={{ width: 300, height: 300, borderRadius: 50, background: renk, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: ANTON, fontSize: 210, color: yazi, border: "8px solid #000", boxShadow: "0 16px 0 #000, 0 30px 50px rgba(0,0,0,0.5)", transform: `translateY(${interpolate(g, [0, 1], [500, 0])}px) rotate(${d * (1 - g) * 30 + d * 4}deg) scale(${nabiz})` }}>{h}</div>
+    <div style={{ width: 300, height: 300, borderRadius: 50, background: renk, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: ANTON, fontSize: 210, color: yazi, border: "8px solid #000", boxShadow: "0 16px 0 #000, 0 30px 50px rgba(0,0,0,0.5)", transform: `scale(${interpolate(g, [0, 1], [0.1, 1]) * nabiz}) rotate(${d * (1 - g) * 40 + d * 4}deg)`, opacity: Math.min(1, g * 2) }}>{h}</div>
   );
   return (
     <AbsoluteFill style={{ opacity: out }}>
@@ -260,6 +263,11 @@ const TutAt: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   return (
     <AbsoluteFill style={{ opacity: out }}>
       <YariVideo src={sf(o.dosya_tut)} ust g={g1} etiket="TUT 🧤" eg={e1} renk={SARI} bas={0.5} />
+      {f < atK ? (
+        <div style={{ position: "absolute", left: 0, top: 960, width: 1080, height: 960, background: "radial-gradient(ellipse at 50% 40%, #2a2a2a, #050505)", transform: `translateY(${(1 - g1) * 960}px)`, display: "flex", alignItems: "flex-start", justifyContent: "center", paddingTop: 120 }}>
+          <div style={{ fontFamily: `${ANTON}, ${EMOJI}`, fontSize: 200, color: "rgba(255,255,255,0.18)", ...kontur(4, "rgba(255,255,255,0.35)") }}>?</div>
+        </div>
+      ) : null}
       {f >= atK - 5 ? <YariVideo src={sf(o.dosya_at)} ust={false} g={g2} etiket="AT ⚽" eg={e2} renk={KIRMIZI} bas={1.2} /> : null}
       {f >= atK + 5 ? (
         <div style={{ position: "absolute", left: 440, top: 860, width: 200, height: 200, borderRadius: 100, background: "#000", border: `8px solid ${SARI}`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: ANTON, fontSize: 96, color: SARI, transform: `scale(${vs}) rotate(${(1 - vs) * 90}deg)` }}>VS</div>
@@ -377,7 +385,8 @@ const Karsilastir: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
 const BRollYorum: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   const f = useCurrentFrame();
   const g = useG(0, 16, 170);
-  const op = Math.min(interpolate(f, [0, 3], [0, 1], clamp), cikis(f, sure, 4));
+  const op = Math.min(interpolate(f, [0, 3], [0, 1], clamp), cikis(f, sure, 2));
+  const etiketOp = cikis(f, sure - 2, 2);
   const sayi = Math.round(interpolate(f, [3, sure - 3], [12, 248], clamp));
   const W = 1000, H = 563, TOP = 380;
   return (
@@ -387,7 +396,7 @@ const BRollYorum: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
       <div style={{ position: "absolute", left: 40, top: TOP, width: W, height: H, borderRadius: 34, overflow: "hidden", border: `6px solid ${SARI}`, boxShadow: "0 30px 80px rgba(0,0,0,0.6)", transform: `translateY(${interpolate(g, [0, 1], [80, 0])}px) scale(${interpolate(g, [0, 1], [0.85, 1])}) rotate(-1.5deg)` }}>
         <OffthreadVideo src={sf(o.dosya)} startFrom={Math.round(o.bas * FPS)} muted style={{ width: W, height: H, objectFit: "cover", transform: `scale(${1.05 + f * 0.004})` }} />
       </div>
-      <div style={{ position: "absolute", left: 0, right: 0, top: TOP + H + 50, display: "flex", justifyContent: "center", transform: `rotate(-3deg) scale(${interpolate(g, [0, 1], [0.5, 1])})` }}>
+      <div style={{ position: "absolute", left: 0, right: 0, top: TOP + H + 50, display: "flex", justifyContent: "center", opacity: etiketOp, transform: `rotate(-3deg) scale(${interpolate(g, [0, 1], [0.5, 1])})` }}>
         <Firca renk={SARI}><div style={{ fontFamily: `${ANTON}, ${EMOJI}`, fontSize: 120, color: "#000" }}>💬 {sayi} YORUM</div></Firca>
       </div>
     </AbsoluteFill>
@@ -423,7 +432,19 @@ const TakipEt: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
   );
 };
 
+// Kartların tasarım üst sınırı; plan.py yüz kutusunun dışındaki banda o.y / o.olcek ile taşır (yüzün önüne gelmez)
+const TASARIM_UST: Record<string, number> = { kanca: 170, bospost: 880, secenek: 860, karsilastir: 850, takipet: 930 };
 const OlayCiz: React.FC<{ o: Olay }> = ({ o }) => {
+  const ic = <OlayIc o={o} />;
+  const ust = TASARIM_UST[o.tip];
+  if (ust === undefined || o.y === undefined) return ic;
+  return (
+    <AbsoluteFill style={{ transform: `translateY(${o.y - ust}px)` }}>
+      <AbsoluteFill style={{ transformOrigin: `540px ${ust}px`, transform: `scale(${o.olcek ?? 1})` }}>{ic}</AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+const OlayIc: React.FC<{ o: Olay }> = ({ o }) => {
   const sure = Math.max(1, Math.round((o.son - o.s) * FPS));
   const p = { o, sure };
   switch (o.tip) {
@@ -498,7 +519,7 @@ export const ES: React.FC<{ v: ESVeri }> = ({ v }) => {
           <OlayCiz o={o} />
         </Sequence>
       ))}
-      <Altyazi v={v} y={1330} />
+      <Altyazi v={v} y={1345} />
       <Rozet />
       <Ilerleme toplam={v.toplamKare} />
       {sesler.map((x, i) => (

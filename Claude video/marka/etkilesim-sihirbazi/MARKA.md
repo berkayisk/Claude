@@ -40,3 +40,5 @@ Profil fotoğrafı: ikisi takım elbiseyle yan yana, ellerinde parlayan sosyal m
 - Altyazı: Anton büyük harf, 1-3 kelime, beyaz + kalın siyah kontur, vurgu kelime sarı, kelime kelime pop.
 - Kartlar: IG arayüzü taklitleri (gönderi, yorum, anket, takip et) + kapak dilinde fırça şeritli Anton başlıklar.
 - Üstte sarı ilerleme çubuğu, ortada küçük "🪄 etkilesimsihirbazi" rozeti. CTA: takip et kartı (Takip Et → Takiptesin ✓).
+- KURAL: Yüz ekrandayken önüne başlık/kart/emoji GELMEZ. Kartlar yüzün altındaki/üstündeki boş banda (es-reels-1 plan.py yerleşim mantığı).
+- KURAL: Kamera arkasındakiyle konuşulan anlar (şaka, "dur dur", "kapattım kamerayı") hatalı çekim sayılır, kurguya girmez.

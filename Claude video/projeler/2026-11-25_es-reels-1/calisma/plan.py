@@ -43,8 +43,8 @@ def kelime_duzelt(n, w, es):
 BIRIMLER = [
     ("kanca",  "IMG_6174", 9.15, 12.70, "siki"),
     ("secenek", "IMG_6176", 0.00, 4.20, "siki"),
-    ("atis",   "IMG_6176", 4.20, 6.62, "aksiyon"),   # kameraya atma hareketi + "Komple kapattım kamerayı"
-    ("sakin",  "IMG_6178", 0.70, 5.05, "gevsek"),    # 0.0'daki yarım "Atmayacağım" atılır
+    # v2: atış hareketi, "Komple kapattım kamerayı" ve 6178 ("atmayacağım / oğlum dur dur / sakin") ATILDI:
+    # kamera arkasıyla konuşulan hatalı çekimler (kullanıcı kararı)
     ("neden",  "IMG_6179", 0.00, 5.45, "siki"),
     ("cta",    "IMG_6180", 0.00, 3.95, "siki"),
 ]
@@ -119,21 +119,20 @@ for p in parcalar:
 # z = yakınlık (1 = tam kare), giris: "snap" (4 kare yaylı), "whip" (birim değişimi: bulanık savrulma + flaş), "yumusak"
 # Yüz hedef yüksekliği (ekranda) y_hedef. Her aralıkta z0 -> z1 yavaş itme / çekme (asla durağan değil).
 kamera = []
-DESEN = [(1.18, 1.26, "snap"), (1.52, 1.60, "snap"), (1.30, 1.22, "snap"), (1.70, 1.78, "snap")]
-def kamera_ekle(s, e, z0, z1, giris, yh=640):
-    kamera.append({"s": round(s, 3), "e": round(e, 3), "z0": z0, "z1": z1, "giris": giris, "yh": yh})
-
-# Birim başına yüz büyüklüğüne göre ölçek: uzak çekimlerde (yüz küçük) daha yakın
-OLCEK = {"kanca": 1.0, "secenek": 1.0, "atis": 0.95, "sakin": 1.18, "neden": 1.15, "cta": 0.92}
-ozel_vurgu = {}  # birim -> vurgu kelimesi zamanları (punch)
+# Yakınlık birim başına yüz boyuna göre sınırlanır: yüz kutusu (saç dahil ~1.6h) ekranda en fazla 600 px -> kartlara yer kalır
+DESEN = [(0.0, 0.15, "snap"), (0.85, 1.0, "snap"), (0.5, 0.38, "snap"), (1.0, 0.88, "snap")]
+def kamera_ekle(s, e, z0, z1, giris):
+    kamera.append({"s": round(s, 3), "e": round(e, 3), "z0": z0, "z1": z1, "giris": giris, "yh": 600})
+ZSINIR = {}
 for (anahtar, n, a, b, mod) in BIRIMLER:
-    s, e = bz[anahtar]
-    # kesme noktaları (aynı birim içindeki jump cut'lar) her zaman bir kamera değişimi olur
+    h = float(np.median([o["h"] for o in YUZ[n] if a <= o["t"] <= b] or [o["h"] for o in YUZ[n]]))
+    zmax = max(1.08, min(1.85, 600 / (1.6 * h))); zmin = max(1.0, zmax * 0.74)
+    ZSINIR[anahtar] = (zmin, zmax)
+    s_, e = bz[anahtar]
     kesmeler = [p["tl"] for p in parcalar if p["birim"] == anahtar] + [e]
-    noktalar = [s]
+    noktalar = [s_]
     for c in kesmeler[1:-1]:
         if c - noktalar[-1] >= 0.7: noktalar.append(c)
-    # 2 sn'den uzun aralıkları böl
     tam = []
     for i, x in enumerate(noktalar):
         y = noktalar[i + 1] if i + 1 < len(noktalar) else e
@@ -142,9 +141,27 @@ for (anahtar, n, a, b, mod) in BIRIMLER:
         for j in range(1, k): tam.append(x + (y - x) * j / k)
     for i, x in enumerate(tam):
         y = tam[i + 1] if i + 1 < len(tam) else e
-        z0, z1, g = DESEN[i % len(DESEN)]
-        o = OLCEK[anahtar]
-        kamera_ekle(x, y, round(z0 * o, 3), round(z1 * o, 3), "whip" if i == 0 and anahtar != "kanca" else g)
+        f0, f1, g = DESEN[i % len(DESEN)]
+        kamera_ekle(x, y, round(zmin + f0 * (zmax - zmin), 3), round(zmin + f1 * (zmax - zmin), 3), "whip" if i == 0 and anahtar != "kanca" else g)
+
+# ---- Kameranın ekrandaki yüz kutusu (ES.tsx Goruntu ile aynı hesap) ----
+YUZ_HEDEF, YUZ_UST_MIN = 600, 190
+def yuz_ekranda(t):
+    p = next((q for q in parcalar if q["tl"] <= t < q["tl"] + q["kare"] / FPS), parcalar[-1])
+    kt = p["bas"] + (t - p["tl"]); sx = sy = sh = sw = 0
+    for o in p["yuz"]:
+        d = abs(o["t"] - kt)
+        if d > 0.6: continue
+        w = 1 - d / 0.6; sx += o["x"] * w; sy += o["y"] * w; sh += o["h"] * w; sw += w
+    o0 = p["yuz"][0]
+    fx, fy, fh = (sx / sw, sy / sw, sh / sw) if sw else (o0["x"], o0["y"], o0["h"])
+    k = next((c for c in kamera if c["s"] <= t < c["e"]), kamera[-1])
+    z = k["z0"] + (k["z1"] - k["z0"]) * min(1, max(0, (t - k["s"]) / max(1e-6, k["e"] - k["s"])))
+    ty = YUZ_HEDEF - fy * z
+    ust = (fy - 0.85 * fh) * z + ty
+    if ust < YUZ_UST_MIN: ty += YUZ_UST_MIN - ust
+    ty = min(0, max(1920 - 1920 * z, ty))
+    return (fy - 0.85 * fh) * z + ty, (fy + 0.75 * fh) * z + ty
 
 # ---------- grafik olayları ----------
 olaylar = [
@@ -157,14 +174,6 @@ olaylar = [
     # Bölünmüş ekran B-roll: TUT (kaleci) / AT (şut)
     {"tip": "tutat", "s": kz("secenek", "bir"), "son": kz("secenek", "mı?", son=True) + 0.15,
      "tut": kz("secenek", "tutayım"), "at": kz("secenek", "atayım"), "dosya_tut": "broll/43495.mp4", "dosya_at": "broll/43494.mp4"},
-    # Anket çıkartması (atış hareketi sırasında)
-    {"tip": "anket", "s": B("atis") + 0.05, "son": kz("atis", "komple") - 0.05},
-    # Kamera kapandı: glitch + damga
-    {"tip": "kamerakapandi", "s": kz("atis", "komple") - 0.1, "son": E("atis")},
-    # "Atmayacağım..." -> yorumlar yağıyor (taktik çalışıyor)
-    {"tip": "yorumyagmuru", "s": B("sakin") + 0.1, "son": E("sakin"),
-     "yorumlar": [["mert.dgn", "AT AT AT ⚽🔥"], ["elif.sosyal", "tut bence 🧤"], ["kaan_34", "AAAT 😂"], ["zeynep.ig", "kesin at"], ["onur", "atma oğlum 😅"]]},
-    {"tip": "emoji", "s": kz("sakin", "sakin") - 0.15, "son": E("sakin"), "emoji": "😅"},
     # Neden: soru (✕) vs iki seçenek (✓)
     {"tip": "karsilastir", "s": B("neden"), "son": kz("neden", "birini") - 0.05,
      "sol_t": B("neden"), "sag_t": kz("neden", "önüne")},
@@ -174,9 +183,24 @@ olaylar = [
     {"tip": "takipet", "s": B("cta") + 0.05, "son": E("cta"), "tik": kz("cta", "takip") + 0.2},
 ]
 
+# ---- Yerleşim: her kart, olay süresince yüz kutusunun ÜSTÜNDEKİ ya da ALTINDAKİ boş banda konur (yüzün önüne asla gelmez) ----
+YUKSEKLIK = {"kanca": 380, "bospost": 330, "secenek": 540, "karsilastir": 330, "takipet": 200}
+ALTYAZI_UST = 1335
+for o in olaylar:
+    if o["tip"] not in YUKSEKLIK: continue
+    ts = np.arange(o["s"], o["son"], 1 / FPS)
+    kut = [yuz_ekranda(t) for t in ts]
+    ust, alt = min(k[0] for k in kut) - 30, max(k[1] for k in kut) + 30
+    hh = YUKSEKLIK[o["tip"]]
+    asagi = (alt, ALTYAZI_UST - 10); yukari = (175, ust)
+    bant = asagi if asagi[1] - asagi[0] >= min(hh, yukari[1] - yukari[0]) else yukari
+    bh = bant[1] - bant[0]; olcek = min(1.0, bh / hh)
+    o["y"] = round(bant[0] + max(0, (bh - hh * olcek) / 2)); o["olcek"] = round(olcek, 3)
+    print(f"  yerleşim {o['tip']:12s} yüz {ust:5.0f}-{alt:5.0f}  kart {o['y']}-{o['y'] + hh * olcek:.0f}  ölçek {olcek:.2f}")
+
 # Altyazıyı gizle (başlık kendisi yazıyı taşıyorken)
 gizle = [[0.0, kz("kanca", "musun", son=True) + 0.2]]
-vurgu = ["yorum", "bırakma.", "iki", "net", "seçenek", "tutayım", "atayım", "komple", "sakin.", "cevap", "vermez", "zorunda", "takip", "Sihirbazı'nı"]
+vurgu = ["yorum", "bırakma.", "iki", "net", "seçenek", "tutayım", "atayım", "cevap", "vermez", "zorunda", "takip", "Sihirbazı'nı"]
 v = {"fps": FPS, "parcalar": parcalar, "altyazi": altyazi, "olaylar": olaylar, "kamera": kamera, "gizle": gizle, "vurgu": vurgu,
      "birimler": bz, "toplamKare": sum(p["kare"] for p in parcalar)}
 json.dump(v, open("src/es.json", "w"), ensure_ascii=False, indent=1)

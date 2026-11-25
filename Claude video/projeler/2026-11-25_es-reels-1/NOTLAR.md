@@ -20,3 +20,10 @@ Sıra: kanca (6174 2. deneme) → "önüne 2 net seçenek koy, topu tutayım mı
 - Olaylar: kanca başlığı, boş gönderi + 🦗 + "BÖYLE SORMA", A/B tuşları, TUT/AT bölünmüş B-roll (Mixkit 43495/43494), IG anket, "KAMERA GİTTİ" glitch,
   yorum yağmuru + sayaç, 😅, SORU ✕ vs A/B ✓, telefonda yorum B-roll (Mixkit 4915), takip et kartı.
 - Ses: Demucs + temizlik zinciri; müzik araclar/arka_muzik.py 100 bpm, 0.09; SFX marka/sfx + earshot (circir, sihir, whip, glitch, top).
+
+## v2 (13.9 sn) — ciktilar/es_reels1_v2.mp4 (-14 LUFS). Kullanıcı geri bildirimi:
+- "Yüzüm ekrandayken önüne başlık vs gelmemeli" → plan.py her kart için olay süresince ekrandaki yüz kutusunu (saç dahil, 0.85h üst / 0.75h alt)
+  hesaplar, kartı yüzün altındaki (yoksa üstündeki) boş banda koyar ve gerekirse küçültür (o.y, o.olcek). Yakınlık yüz boyuna göre sınırlı
+  (yüz kutusu ≤600 px), saç üstü rozetin altında (≥190). Yüze binen emoji/başlık YOK. B-roll çıkışı 2 kare (yazı yüz üstünde sönmesin).
+- "Kamera arkasıyla konuştuğum yerler hatalı çekim" → atış + "Komple kapattım kamerayı" ve 6178'in tamamı atıldı (anket, kamera gitti, yorum yağmuru, 😅 da gitti).
+- TUT/AT: AT gelene kadar alt yarı koyu "?" paneli (yüz yarım görünmesin).
