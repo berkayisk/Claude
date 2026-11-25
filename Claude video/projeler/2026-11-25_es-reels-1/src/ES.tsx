@@ -1,5 +1,5 @@
 import React from "react";
-import { AbsoluteFill, Audio, OffthreadVideo, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig, Easing, staticFile } from "remotion";
+import { AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig, Easing, staticFile } from "remotion";
 import "@fontsource/anton/400.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/800.css";
@@ -418,8 +418,10 @@ const TakipEt: React.FC<{ o: Olay; sure: number }> = ({ o, sure }) => {
         return <div key={i} style={{ position: "absolute", left: 760 + Math.cos(a) * r, top: 1110 + Math.sin(a) * r, fontSize: 44, fontFamily: EMOJI, opacity: interpolate(f - tikK, [0, 18], [1, 0], clamp) }}>✨</div>;
       }) : null}
       <div style={{ position: "absolute", left: 60, width: 960, top: 930, background: "white", borderRadius: 40, padding: "30px 34px", display: "flex", alignItems: "center", gap: 24, boxShadow: "0 24px 60px rgba(0,0,0,0.5)", transform: `translateY(${interpolate(g, [0, 1], [500, 0])}px) rotate(${interpolate(g, [0, 1], [5, -1.5])}deg)` }}>
-        <div style={{ width: 130, height: 130, borderRadius: 65, flexShrink: 0, padding: 6, background: "linear-gradient(135deg,#FEDA77,#F58529,#DD2A7B,#962FBF)" }}>
-          <div style={{ width: "100%", height: "100%", borderRadius: 65, background: "radial-gradient(circle at 40% 35%, #3b2a8a, #0b0f2a)", border: "5px solid white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 64, fontFamily: EMOJI }}>🪄</div>
+        <div style={{ width: 150, height: 150, borderRadius: 75, flexShrink: 0, padding: 6, background: "linear-gradient(135deg,#FEDA77,#F58529,#DD2A7B,#962FBF)" }}>
+          <div style={{ width: "100%", height: "100%", borderRadius: 75, border: "5px solid white", overflow: "hidden", background: "#000" }}>
+            <Img src={sf("profil.png")} style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.08)" }} />
+          </div>
         </div>
         <div style={{ flex: 1, minWidth: 0 }}>
           <div style={{ fontFamily: INTER, fontWeight: 800, fontSize: 38, color: "#111" }}>etkilesimsihirbazi</div>
@@ -520,7 +522,6 @@ export const ES: React.FC<{ v: ESVeri }> = ({ v }) => {
         </Sequence>
       ))}
       <Altyazi v={v} y={1345} />
-      <Rozet />
       <Ilerleme toplam={v.toplamKare} />
       {sesler.map((x, i) => (
         <Sequence key={`s${i}`} from={Math.max(0, Math.round(x.t * FPS))} durationInFrames={60}>

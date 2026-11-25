@@ -27,3 +27,4 @@ Sıra: kanca (6174 2. deneme) → "önüne 2 net seçenek koy, topu tutayım mı
   (yüz kutusu ≤600 px), saç üstü rozetin altında (≥190). Yüze binen emoji/başlık YOK. B-roll çıkışı 2 kare (yazı yüz üstünde sönmesin).
 - "Kamera arkasıyla konuştuğum yerler hatalı çekim" → atış + "Komple kapattım kamerayı" ve 6178'in tamamı atıldı (anket, kamera gitti, yorum yağmuru, 😅 da gitti).
 - TUT/AT: AT gelene kadar alt yarı koyu "?" paneli (yüz yarım görünmesin).
+- v3: üstteki rozet kaldırıldı; takip kartında gerçek profil fotoğrafı (girdiler/profil.png = marka/etkilesim-sihirbazi/profil.png).
