@@ -3,77 +3,77 @@
   {
    "k": "n1",
    "metin": "Fiyatlar neden hep doksan dokuz doksan dokuz?",
-   "bas": 0.25,
-   "son": 2.88
+   "bas": 0.12,
+   "son": 2.358
   },
   {
    "k": "n2",
    "metin": "Bir kuruş için mi? Hayır. Senin beynin için.",
-   "bas": 3.13,
-   "son": 5.72
+   "bas": 2.478,
+   "son": 4.673
   },
   {
    "k": "n3",
    "metin": "Bir fiyatı okurken, soldan başlarız.",
-   "bas": 5.94,
-   "son": 8.52
+   "bas": 4.773,
+   "son": 6.971
   },
   {
    "k": "n4",
    "metin": "Doksan dokuz, doksanlı bir fiyat gibi gelir. Yüz ise yüzlü.",
-   "bas": 8.74,
-   "son": 12.76
+   "bas": 7.071,
+   "son": 10.479
   },
   {
    "k": "n5",
    "metin": "Aradaki fark bir kuruş, ama his çok daha büyük.",
-   "bas": 12.98,
-   "son": 15.86
+   "bas": 10.579,
+   "son": 13.012
   },
   {
    "k": "n6",
    "metin": "Peki, bu gerçekten işe yarıyor mu?",
-   "bas": 16.31,
-   "son": 18.55
+   "bas": 13.232,
+   "son": 15.137
   },
   {
    "k": "n7",
    "metin": "Amerika'da araştırmacılar, bunu bir kıyafet kataloğunda test etti.",
-   "bas": 18.95,
-   "son": 22.8
+   "bas": 15.317,
+   "son": 18.568
   },
   {
    "k": "n8",
    "metin": "Aynı ürünler, farklı fiyatlarla basıldı.",
-   "bas": 23.02,
-   "son": 25.84
+   "bas": 18.668,
+   "son": 21.066
   },
   {
    "k": "n9",
    "metin": "Üç deneyin üçünde de, dokuzla biten fiyat daha çok sattı.",
-   "bas": 26.14,
-   "son": 29.23
+   "bas": 21.216,
+   "son": 23.839
   },
   {
    "k": "n10",
    "metin": "Çünkü dokuzla biten fiyat, indirimdeymiş gibi hissettirir.",
-   "bas": 29.45,
-   "son": 32.62
+   "bas": 23.939,
+   "son": 26.629
   },
   {
    "k": "n11",
    "metin": "Yani fiyat sadece bir sayı değil, bir mesaj.",
-   "bas": 33.07,
-   "son": 36.0
+   "bas": 26.849,
+   "son": 29.339
   },
   {
    "k": "n12",
    "metin": "Alışverişin perde arkasını görmek için takip et.",
-   "bas": 36.4,
-   "son": 39.17
+   "bas": 29.539,
+   "son": 31.89
   }
  ],
- "bitis": 40.07,
+ "bitis": 32.59,
  "ses": "ses.wav",
- "takipTik": 38.48
+ "takipTik": 31.3
 }

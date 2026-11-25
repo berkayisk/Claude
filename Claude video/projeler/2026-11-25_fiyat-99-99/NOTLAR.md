@@ -15,3 +15,6 @@ Yeni Instagram hesabının ilk deneme videosu: "Fiyatlar neden hep 99,99?" (40 s
 ## Kaynaklar / lisans
 - Müzik: "New Bass 02" — Lily J, Mixkit Stock Music Free License (dosya repoda değil: audio/muzik/ gitignore).
 - Efektler: earshot make (kodla üretilmiş, telifsiz). Yazı tipi: Poppins (OFL).
+
+## v3 (hızlı)
+- Kullanıcı: "daha hızlı anlatmalı" → VO atempo 1,18 (calisma/vo_hizli), satır arası boşluk ~0,1–0,22 sn; 40 → 32,6 sn. Sahne/SFX gecikmeleri 1/1,18 ölçeklendi.

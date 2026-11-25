@@ -3,21 +3,22 @@ Kullanım (proje kökünden): python3 calisma/yap.py [plan|dudak|miks|hepsi]"""
 import sys, os, json, subprocess, numpy as np, soundfile as sf
 
 SR = 48000
-BOSLUK = {"n2": 0.25, "n6": 0.45, "n7": 0.4, "n9": 0.3, "n11": 0.45, "n12": 0.4}  # satırdan önceki boşluk
-VARSAYILAN = 0.22
+BOSLUK = {"n2": 0.12, "n6": 0.22, "n7": 0.18, "n9": 0.15, "n11": 0.22, "n12": 0.2}  # satırdan önceki boşluk
+VARSAYILAN = 0.1
+VO = "calisma/vo_hizli"   # seslendirme 1,18x (kullanıcı: daha hızlı anlatmalı)
 
 def plan():
-    D = json.load(open("calisma/vo/sureler.json")); S = json.load(open("senaryo/satirlar.json"))
-    t, vo = 0.25, []
+    D = json.load(open(f"{VO}/sureler.json")); S = json.load(open("senaryo/satirlar.json"))
+    t, vo = 0.12, []
     for i, s in enumerate(S):
         if i: t += BOSLUK.get(s["k"], VARSAYILAN)
         du = D[s["k"]][1]
         vo.append({"k": s["k"], "metin": s["metin"], "bas": round(t, 3), "son": round(t + du, 3)}); t += du
-    P = {"vo": vo, "bitis": round(t + 0.9, 2), "ses": "ses.wav"}
+    P = {"vo": vo, "bitis": round(t + 0.7, 2), "ses": "ses.wav"}
     # takip tıklaması: n12'de "takip" kelimesi
     try:
         sys.path.insert(0, "../../araclar"); from telaffuz import Denetci, oku16
-        n12 = vo[-1]; hz = Denetci().harf_zamanlari(oku16("calisma/vo/n12.wav"), n12["metin"])
+        n12 = vo[-1]; hz = Denetci().harf_zamanlari(oku16(f"{VO}/n12.wav"), n12["metin"])
         tk = [h[0][1] for w, h in hz if w.startswith("takip") and h]
         P["takipTik"] = round(n12["bas"] + (tk[0] if tk else 2.0), 2)
     except Exception as e:
@@ -27,7 +28,7 @@ def plan():
     print("bitiş", P["bitis"], "takip", P["takipTik"])
 
 def dudak():
-    subprocess.run(["python3", "../../araclar/dudak.py", "src/plan.json", "calisma/vo", "src/vizem.json"], check=True)
+    subprocess.run(["python3", "../../araclar/dudak.py", "src/plan.json", VO, "src/vizem.json"], check=True)
 
 def oku(p, mono=True):
     a = subprocess.run(["ffmpeg", "-v", "error", "-i", p, "-ac", "1" if mono else "2", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True).stdout
@@ -47,7 +48,7 @@ def miks():
     # seslendirme
     vo_bus = np.zeros(N, np.float32)
     for k, v in V.items():
-        s = oku(f"calisma/vo/{k}.wav"); i = int(v["bas"] * SR); s = s[: N - i]; vo_bus[i:i + len(s)] += s
+        s = oku(f"{VO}/{k}.wav"); i = int(v["bas"] * SR); s = s[: N - i]; vo_bus[i:i + len(s)] += s
     # müzik: Mixkit "New Bass 02" (Lily J) ritimli bölüm, konuşmada -5 dB kısılır
     m = oku("audio/muzik/mk-721.mp3", mono=False)[int(16.63 * SR):][:N]
     zarf = np.full(N, db(-17.0), np.float32)
@@ -62,13 +63,13 @@ def miks():
     out[: len(m)] += m * zarf[: len(m), None]
     # efektler
     fx = {n: oku(f"audio/sfx/{n}.wav") for n in ["pop", "whoosh", "click", "coin", "ding", "swoosh_down", "tick"]}
-    E = [("swoosh_down", V["n1"]["bas"] - 0.25, -12), ("coin", V["n2"]["bas"] + 0.1, -14), ("tick", V["n2"]["bas"] + 0.9, -8),
-         ("pop", V["n2"]["bas"] + 1.5, -10), ("whoosh", V["n3"]["bas"] - 0.15, -12), ("pop", V["n4"]["bas"] - 0.1, -11),
-         ("pop", V["n4"]["bas"] + 1.8, -11), ("pop", V["n5"]["bas"], -12), ("whoosh", V["n5"]["bas"] + 1.25, -13),
+    E = [("swoosh_down", V["n1"]["bas"] - 0.25, -12), ("coin", V["n2"]["bas"] + 0.1, -14), ("tick", V["n2"]["bas"] + 0.76, -8),
+         ("pop", V["n2"]["bas"] + 1.27, -10), ("whoosh", V["n3"]["bas"] - 0.15, -12), ("pop", V["n4"]["bas"] - 0.1, -11),
+         ("pop", V["n4"]["bas"] + 1.52, -11), ("pop", V["n5"]["bas"], -12), ("whoosh", V["n5"]["bas"] + 1.06, -13),
          ("pop", V["n6"]["bas"] - 0.15, -10), ("whoosh", V["n7"]["bas"] - 0.15, -12),
          ("tick", V["n8"]["bas"], -9), ("tick", V["n8"]["bas"] + 0.25, -9), ("tick", V["n8"]["bas"] + 0.5, -9),
-         ("pop", V["n9"]["bas"] + 0.35, -12), ("pop", V["n9"]["bas"] + 0.9, -12), ("ding", V["n9"]["bas"] + 1.45, -16),
-         ("pop", V["n10"]["bas"] + 0.75, -10), ("whoosh", V["n11"]["bas"] - 0.15, -12),
+         ("pop", V["n9"]["bas"] + 0.3, -12), ("pop", V["n9"]["bas"] + 0.77, -12), ("ding", V["n9"]["bas"] + 1.24, -16),
+         ("pop", V["n10"]["bas"] + 0.64, -10), ("whoosh", V["n11"]["bas"] - 0.15, -12),
          ("click", P["takipTik"], -6), ("ding", P["takipTik"] + 0.1, -17)]
     for n, t, g in E: koy(fx[n], max(0, t), g)
     out[:, 0] += vo_bus * db(2.0); out[:, 1] += vo_bus * db(2.0)

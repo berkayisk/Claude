@@ -66,8 +66,8 @@ const Sahneler: React.FC = () => {
     <>
       {ic(s1) && (() => {
         const g = giris(t, s1[0], fps, 9), sal = Math.sin((t - s1[0]) * 3.2) * 6 * Math.exp(-(t - s1[0]) * 0.9);
-        const n2 = vo("n2").bas, kurus = giris(t, n2 + 0.1, fps), cizgi = interpolate(t, [n2 + 0.9, n2 + 1.2], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-        const beyin = giris(t, n2 + 1.5, fps);
+        const n2 = vo("n2").bas, kurus = giris(t, n2 + 0.1, fps), cizgi = interpolate(t, [n2 + 0.76, n2 + 1.0], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+        const beyin = giris(t, n2 + 1.27, fps);
         return (
           <Ust top={90}>
             <div style={{ transform: `translateY(${(1 - g) * -700}px)` }}><Etiket fiyat="99,99" aci={sal} olcek={1.3} /></div>
@@ -82,7 +82,7 @@ const Sahneler: React.FC = () => {
         );
       })()}
       {ic(s3) && (() => {
-        const g = giris(t, s3[0], fps), tar = interpolate(t, [s3[0] + 0.5, s3[0] + 1.6], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
+        const g = giris(t, s3[0], fps), tar = interpolate(t, [s3[0] + 0.42, s3[0] + 1.35], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
         return (
           <Ust top={120}>
             <Baslik s1="FİYATI" s2="SOLDAN OKURUZ" t={t} bas={s3[0]} son={s3[1]} fps={fps} boy={90} />
@@ -95,7 +95,7 @@ const Sahneler: React.FC = () => {
         );
       })()}
       {ic(s4) && (() => {
-        const a = giris(t, s4[0], fps), b = giris(t, s4[0] + 1.9, fps);
+        const a = giris(t, s4[0], fps), b = giris(t, s4[0] + 1.6, fps);
         const kart = (fiyat: string, et: string, renk: string, g: number) => (
           <div style={{ opacity: g, transform: `translateY(${(1 - g) * 80}px)`, display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
             <Etiket fiyat={fiyat} olcek={0.72} vurgu={fiyat.startsWith("1") ? -1 : 0} />
@@ -112,7 +112,7 @@ const Sahneler: React.FC = () => {
         );
       })()}
       {ic(s5) && (() => {
-        const g1 = giris(t, s5[0] + 0.1, fps), g2 = interpolate(t, [s5[0] + 1.3, s5[0] + 2.3], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+        const g1 = giris(t, s5[0] + 0.1, fps), g2 = interpolate(t, [s5[0] + 1.1, s5[0] + 1.95], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
         const cubuk = (ad: string, w: number, renk: string, g: number, deger: string) => (
           <div style={{ width: 900, opacity: g > 0 ? 1 : 0 }}>
             <div style={{ fontFamily: POP, fontWeight: 700, fontSize: 58, color: "white", marginBottom: 12 }}>{ad}</div>
@@ -154,7 +154,7 @@ const Sahneler: React.FC = () => {
       {ic(s9) && (() => (
         <Ust top={260}>
           {[0, 1, 2].map((i) => {
-            const g = giris(t, s9[0] + 0.5 + i * 0.55, fps);
+            const g = giris(t, s9[0] + 0.42 + i * 0.47, fps);
             return (
               <div key={i} style={{ opacity: g, transform: `translateX(${(1 - g) * -120}px)`, width: 820, display: "flex", justifyContent: "space-between", alignItems: "center", background: "#1f2740", borderRadius: 26, padding: "30px 44px", border: `4px solid ${YESIL}` }}>
                 <div style={{ fontFamily: POP, fontWeight: 800, fontSize: 56, color: "white" }}>Deney {i + 1}</div>
@@ -165,7 +165,7 @@ const Sahneler: React.FC = () => {
         </Ust>
       ))()}
       {ic(s10) && (() => {
-        const g = giris(t, s10[0], fps), st = giris(t, s10[0] + 0.9, fps, 7);
+        const g = giris(t, s10[0], fps), st = giris(t, s10[0] + 0.75, fps, 7);
         return (
           <Ust top={150}>
             <div style={{ position: "relative", opacity: g }}>
