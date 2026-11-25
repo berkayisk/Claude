@@ -28,3 +28,4 @@ Sıra: kanca (6174 2. deneme) → "önüne 2 net seçenek koy, topu tutayım mı
 - "Kamera arkasıyla konuştuğum yerler hatalı çekim" → atış + "Komple kapattım kamerayı" ve 6178'in tamamı atıldı (anket, kamera gitti, yorum yağmuru, 😅 da gitti).
 - TUT/AT: AT gelene kadar alt yarı koyu "?" paneli (yüz yarım görünmesin).
 - v3: üstteki rozet kaldırıldı; takip kartında gerçek profil fotoğrafı (girdiler/profil.png = marka/etkilesim-sihirbazi/profil.png).
+- Kapak (ESKapak, 2 varyant: ciktilar/kapak_A.png / kapak_B.png) + ACIKLAMA.md. Kapak karesi 6176 @3.6 sn (topla), arka plan 6174'ün baş üstü tuğla bölgesi.

@@ -15,6 +15,7 @@ Bu klasör sadece kodla video üretmek içindir (Remotion + FFmpeg).
    marka dosyaları ve kanal tonu burada KULLANILMAZ. Ayrıntı: `musteriler/README.md`
 3. **Etkileşim Sihirbazı Instagram hesabı** (Berkay + Onur'un sosyal medya yönetimi içerikleri) → `projeler/YYYY-AA-GG_es-<is>/` +
    `marka/etkilesim-sihirbazi/MARKA.md`. Sıfırdan Satışa kanal stili burada da aksi söylenmedikçe KULLANILMAZ.
+   Reels şablonu `projeler/2026-11-25_es-reels-1/src/ES.tsx`. Bir Reels ONAYLANINCA kapak + açıklama için `/es-kapak-aciklama` yeteneği.
 
 ## Senaryo
 - Senaryo/metin işleri `/senarist` yeteneğiyle (`/home/user/Claude/.claude/skills/senarist/SKILL.md`); dizi kitapları `seriler/<dizi>/SERI.md`.
