@@ -328,12 +328,16 @@ const CEKIMLER: Cekim[] = [
     const g = sp(t, n("n12"), 11);
     return (<>
       <Duz ust="#ff8a1f" alt="#ff5a1f" /><Izgara renk="rgba(255,255,255,0.1)" />
-      <div style={{ position: "absolute", left: 470, top: 260, width: 520, height: 1040, background: "#0f1320", borderRadius: 70, border: "14px solid #1b1f2e", boxShadow: "0 40px 90px rgba(0,0,0,0.45)", transform: `translateY(${(1 - g) * 900}px) rotate(4deg)`, overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 110 }}>
+      <div style={{ position: "absolute", left: 470, top: 300, width: 520, height: 1040, background: "#0f1320", borderRadius: 70, border: "14px solid #1b1f2e", boxShadow: "0 40px 90px rgba(0,0,0,0.45)", transform: `translateY(${(1 - g) * 900}px) rotate(4deg)`, overflow: "hidden", display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 110 }}>
         <div style={{ width: 200, height: 200, borderRadius: "50%", background: "linear-gradient(135deg,#ff8a1f,#b45aff)", padding: 8 }}><div style={{ width: "100%", height: "100%", borderRadius: "50%", background: "#232c4f", overflow: "hidden" }}>
           <svg width={184} height={184} viewBox="60 40 280 280"><BerkayBas ifade={{ agiz: "gulumse", gozGul: 0.3 }} govde={false} /></svg></div></div>
-        <div style={{ fontFamily: POP, fontWeight: 800, fontSize: 40, color: "white", marginTop: 26, textAlign: "center", lineHeight: 1.15 }}>Alışverişin<br /><span style={{ color: TURUNCU }}>perde arkası</span></div>
+        <div style={{ fontFamily: POP, fontWeight: 800, fontSize: 30, color: "white", marginTop: 22 }}>eticaretteperdearkasi</div>
+        <div style={{ fontFamily: POP, fontWeight: 700, fontSize: 30, color: "#aab3c8", marginTop: 4, textAlign: "center", lineHeight: 1.2 }}>E-ticarette<br /><span style={{ color: TURUNCU, fontWeight: 900, fontSize: 40 }}>perde arkası</span></div>
         <div style={{ transform: `scale(${basma})`, marginTop: 40, fontFamily: POP, fontWeight: 900, fontSize: 44, color: takip ? "white" : "#1b1f2e", background: takip ? "#2a3350" : "white", borderRadius: 20, padding: "18px 60px" }}>{takip ? "✓ Takip" : "Takip et"}</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 150px)", gap: 8, marginTop: 44 }}>{Array.from({ length: 6 }).map((_, i) => <div key={i} style={{ height: 150, background: ["#3c2752", "#0f5c3a", "#6e1a1a", "#123c55", "#2a1f4d", "#ff6a1f"][i], borderRadius: 8 }} />)}</div>
+      </div>
+      <div style={{ position: "absolute", left: 40, top: 150, width: 1000, display: "flex", justifyContent: "center", transform: `scale(${sp(t, n("n12") + 0.3)})` }}>
+        <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 56, color: "#1b1f2e", background: "white", borderRadius: 999, padding: "14px 40px", boxShadow: "0 16px 40px rgba(0,0,0,0.25)" }}>@eticaretteperdearkasi</div>
       </div>
       <Kisi t={t} mod="tam" x={250} y={1140} olcek={0.6} poz="selam" ifade={{ gozGul: 0.5, kas: 0.4 }} bas0={n("n12")} />
     </>);
