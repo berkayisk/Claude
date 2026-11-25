@@ -45,15 +45,14 @@ export type Ifade = {
   yanak?: number;    // 0..1 kızarma
 };
 
-// v4 yüz (2. referans fotoğrafı): yuvarlak, dolgun yanaklar, yumuşak geniş çene
-const YUZ = "M72,196 C72,108 128,62 200,62 C272,62 328,108 328,196 C330,258 330,312 312,350 C292,392 248,418 200,418 C152,418 108,392 88,350 C70,312 70,258 72,196 Z";
-// kirli sakal bölgesi (yanaklarda seyrek, çenede yoğun)
-const SAKAL = "M76,236 C76,300 84,340 102,368 C124,400 162,420 200,420 C238,420 276,400 298,368 C316,340 324,300 324,236 C318,286 304,318 284,334 C270,344 254,348 238,346 C226,338 214,336 200,336 C186,336 174,338 162,346 C146,348 130,344 116,334 C96,318 82,286 76,236 Z";
-const CENE = "M150,372 C164,392 182,402 200,402 C218,402 236,392 250,372 C254,392 236,414 200,416 C164,414 146,392 150,372 Z";
-const BIYIK = "M156,336 C168,322 186,318 200,322 C214,318 232,322 244,336 C236,341 222,340 212,337 C206,336 203,338 200,339 C197,338 194,336 188,337 C178,340 164,341 156,336 Z";
+const YUZ = "M72,206 C72,112 128,66 200,66 C272,66 328,112 328,206 C328,292 314,344 284,374 C258,400 230,410 200,410 C170,410 142,400 116,374 C86,344 72,292 72,206 Z";
+// sakal bölgesi: favoriden çene hattına, yanak çizgisi + bıyık
+const SAKAL = "M78,236 C80,302 98,350 122,378 C148,402 172,414 200,414 C228,414 252,402 278,378 C302,350 320,302 322,236 C316,276 304,306 284,322 C268,332 254,330 246,322 C236,312 222,308 200,308 C178,308 164,312 154,322 C146,330 132,332 116,322 C96,306 84,276 78,236 Z";
+// bıyık ve dudak altı
+const BIYIK = "M160,322 C172,310 188,308 200,312 C212,308 228,310 240,322 C232,326 222,326 212,324 C206,323 202,325 200,326 C198,325 194,323 188,324 C178,326 168,326 160,322 Z";
 
 const Agiz: React.FC<{ v: Vizem; k: string }> = ({ v, k }) => {
-  const y = 356;
+  const y = 338;
   const ic = (d: string, dis = true, dil = false) => (
     <g>
       <clipPath id={`${k}agz`}><path d={d} /></clipPath>
@@ -105,9 +104,9 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
   const { kas = 0, kasAci = 0, goz = 1, gozGul = 0, bakX = 0, bakY = 0, agiz = "gulumse", egim = 0, yanak = 0 } = ifade;
   const k = React.useId().replace(/[^a-zA-Z0-9]/g, "");
   const ac = Math.max(0.05, goz * kirp);
-  const gozY = 240;
+  const gozY = 236;
   const Goz = ({ cx, sag }: { cx: number; sag: boolean }) => {
-    const ry = 11 * ac, rx = 20;
+    const ry = 14 * ac, rx = 21;
     const alt = gozY + ry - gozGul * ry * 1.1;
     const kid = `${k}gz${sag ? "s" : "l"}`;
     const ix = cx + bakX * 7, iy = gozY + bakY * 5;
@@ -131,7 +130,7 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
     );
   };
   const Kas = ({ sol }: { sol: boolean }) => {
-    const y = 207 - kas * 12;
+    const y = 196 - kas * 12;
     const ic = sol ? 178 : 222, dis = sol ? 118 : 282;
     const icY = y + 4 + kasAci * 9, disY = y + 2 - kasAci * 3;
     return <path d={`M${ic},${icY} C${(ic * 2 + dis) / 3},${y - 6 + kasAci * 4} ${(ic + dis * 2) / 3},${y - 10} ${dis},${disY + 4} L${dis + (sol ? 2 : -2)},${disY - 6} C${(ic + dis * 2) / 3},${y - 22} ${(ic * 2 + dis) / 3},${y - 18 + kasAci * 4} ${ic},${icY - 12} Z`} fill={R.kas} strokeLinejoin="round" stroke={R.kas} strokeWidth={2} />;
@@ -140,12 +139,6 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
     <g>
       <defs>
         <clipPath id={`${k}yuz`}><path d={YUZ} /></clipPath>
-        <pattern id={`${k}kil`} width={13} height={11} patternUnits="userSpaceOnUse" patternTransform="rotate(17)">
-          <circle cx={2} cy={3} r={0.9} fill={R.sakal} opacity={0.5} />
-          <circle cx={7.5} cy={1.5} r={0.7} fill={R.sakal} opacity={0.4} />
-          <circle cx={10.5} cy={7} r={1} fill={R.sakal} opacity={0.45} />
-          <circle cx={4.5} cy={8.5} r={0.8} fill={R.sakal} opacity={0.4} />
-        </pattern>
         <radialGradient id={`${k}yan`} cx="0.5" cy="0.5" r="0.5">
           <stop offset="0" stopColor={R.yanak} stopOpacity={0.45} />
           <stop offset="1" stopColor={R.yanak} stopOpacity={0} />
@@ -153,42 +146,35 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
       </defs>
       {govde ? <g transform="translate(0,-34)"><Gogus /></g> : null}
       {/* boyun */}
-      <path d="M152,370 L152,468 L248,468 L248,370 Z" fill={R.tenGolge} />
-      <path d="M152,400 C178,432 222,432 248,400 L248,370 L152,370 Z" fill={R.tenKoyu} opacity={0.55} />
+      <path d="M156,360 L156,468 L244,468 L244,360 Z" fill={R.tenGolge} />
+      <path d="M156,392 C180,420 220,420 244,392 L244,360 L156,360 Z" fill={R.tenKoyu} opacity={0.55} />
       {govde ? <g transform="translate(0,-34)"><Yaka /></g> : null}
       <g transform={`rotate(${egim} 200 300)`}>
-        {/* kulaklar: belirgin, hafif dışa açık */}
+        {/* kulaklar */}
         <g>
-          <path d="M80,214 C58,206 48,226 50,250 C52,276 62,292 82,294 Z" fill={R.ten} />
-          <path d="M72,230 C62,238 62,262 72,276" stroke={R.tenKoyu} strokeWidth={4} fill="none" strokeLinecap="round" />
-          <path d="M320,214 C342,206 352,226 350,250 C348,276 338,292 318,294 Z" fill={R.tenGolge} />
-          <path d="M328,230 C338,238 338,262 328,276" stroke={R.tenKoyu} strokeWidth={4} fill="none" strokeLinecap="round" />
+          <ellipse cx={74} cy={246} rx={20} ry={34} fill={R.ten} />
+          <path d="M70,228 C62,240 64,258 72,266" stroke={R.tenKoyu} strokeWidth={4} fill="none" strokeLinecap="round" />
+          <ellipse cx={326} cy={246} rx={20} ry={34} fill={R.ten} />
+          <path d="M330,228 C338,240 336,258 328,266" stroke={R.tenKoyu} strokeWidth={4} fill="none" strokeLinecap="round" />
         </g>
         {/* yüz */}
         <path d={YUZ} fill={R.ten} />
+        {/* düz gölge: sağ yan */}
         <g clipPath={`url(#${k}yuz)`}>
-          {/* düz gölge: sağ yan + çene altı */}
-          <path d="M304,80 C342,180 340,310 296,388 L360,430 L360,60 Z" fill={R.tenGolge} opacity={0.7} />
-          <ellipse cx={132} cy={300} rx={40} ry={24} fill={`url(#${k}yan)`} opacity={0.55 + yanak} />
-          <ellipse cx={268} cy={300} rx={40} ry={24} fill={`url(#${k}yan)`} opacity={0.55 + yanak} />
-          {/* göz altı hafif gölge */}
-          <path d="M126,262 Q150,272 172,262" stroke={R.tenGolge} strokeWidth={4} fill="none" opacity={0.6} strokeLinecap="round" />
-          <path d="M228,262 Q250,272 274,262" stroke={R.tenGolge} strokeWidth={4} fill="none" opacity={0.6} strokeLinecap="round" />
-          {/* kirli sakal: yarı saydam + nokta dokusu */}
-          <path d={SAKAL} fill={R.sakal} opacity={0.4} />
-          <path d={SAKAL} fill="none" stroke={R.sakal} strokeWidth={14} opacity={0.12} />
-          <path d={SAKAL} fill={`url(#${k}kil)`} />
-          <path d={CENE} fill={R.sakal} opacity={0.3} />
-          <path d={BIYIK} fill={R.sakal} opacity={0.78} />
-          {/* dudak çevresi: sakalın arasında ten */}
-          <path d="M170,344 Q200,338 230,344 Q228,372 214,380 Q200,384 186,380 Q172,372 170,344 Z" fill={R.ten} opacity={0.55} />
-          {/* dolgun alt dudak */}
-          <path d="M178,362 Q200,358 222,362 Q218,378 200,380 Q182,378 178,362 Z" fill={R.dudak} opacity={0.5} />
+          <path d="M300,80 C340,180 336,300 290,380 L360,420 L360,60 Z" fill={R.tenGolge} opacity={0.75} />
+          <ellipse cx={138} cy={290} rx={34} ry={20} fill={`url(#${k}yan)`} opacity={0.6 + yanak} />
+          <ellipse cx={262} cy={290} rx={34} ry={20} fill={`url(#${k}yan)`} opacity={0.6 + yanak} />
+          {/* sakal */}
+          <path d={SAKAL} fill={R.sakal} opacity={0.78} />
+          <path d={SAKAL} fill="none" stroke={R.sakal} strokeWidth={12} opacity={0.18} />
+          <path d={BIYIK} fill={R.sakal} opacity={0.9} />
+          {/* dudak alanı: sakal içinde ten rengi, ağız okunur */}
+          <path d="M168,330 Q200,322 232,330 Q230,356 214,364 Q200,368 186,364 Q170,356 168,330 Z" fill={R.tenGolge} opacity={0.55} />
+          <path d="M178,346 Q200,340 222,346 Q218,360 200,362 Q182,360 178,346 Z" fill={R.dudak} opacity={0.35} />
         </g>
-        {/* burun: geniş, yuvarlak uç */}
-        <path d="M204,256 C204,276 202,292 200,302" stroke={R.tenKoyu} strokeWidth={3.5} fill="none" strokeLinecap="round" opacity={0.7} />
-        <path d="M178,306 C174,316 182,326 192,322 C196,328 204,328 208,322 C218,326 226,316 222,306" stroke={R.tenKoyu} strokeWidth={4.5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <ellipse cx={200} cy={312} rx={13} ry={9} fill="#fff" opacity={0.12} />
+        {/* burun */}
+        <path d="M202,262 C200,276 192,288 190,294 C195,301 206,302 213,296" stroke={R.tenKoyu} strokeWidth={4.5} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M182,294 C185,300 190,302 194,301 M207,301 C212,302 217,300 220,294" stroke={R.tenKoyu} strokeWidth={3.5} fill="none" strokeLinecap="round" />
         {/* ağız */}
         <Agiz v={agiz} k={k} />
         {/* gözler + kaşlar */}
@@ -196,15 +182,15 @@ export const BerkayBas: React.FC<{ ifade?: Ifade; kirp?: number; govde?: boolean
         <Goz cx={250} sag={true} />
         <Kas sol={true} />
         <Kas sol={false} />
-        {/* saç: çok kısa kesim (kafaya yakın), şakaklar hafif açık, yanlar daha kısa */}
-        <path d="M74,206 C70,128 118,58 200,56 C282,58 330,128 326,206 C322,190 316,178 308,170 C304,152 296,138 284,130 C266,134 246,136 226,136 C214,138 206,140 200,140 C194,140 186,138 174,136 C154,136 134,134 116,130 C104,138 96,152 92,170 C84,178 78,190 74,206 Z" fill={R.sac} stroke={R.sac} strokeWidth={9} strokeLinejoin="round" />
-        {/* ön çizgi: yumuşak geçiş (kısa kesim) */}
-        <path d="M116,130 C134,134 154,136 174,136 C186,138 194,140 200,140 C206,140 214,138 226,136 C246,136 266,134 284,130" stroke={R.sac} strokeWidth={5} fill="none" opacity={0.45} transform="translate(0,3)" />
-        {/* yanlar: kısa (fade) */}
-        <path d="M74,206 C72,192 74,176 80,160 L94,168 C88,182 84,196 84,212 Z" fill={R.sacParlak} opacity={0.5} />
-        <path d="M326,206 C328,192 326,176 320,160 L306,168 C312,182 316,196 316,212 Z" fill={R.sacParlak} opacity={0.5} />
-        {/* parlama */}
-        <path d="M140,84 C176,66 228,64 266,78" stroke={R.sacParlak} strokeWidth={7} fill="none" strokeLinecap="round" opacity={0.8} />
+        {/* saç: kısa üst, şakaklarda hafif açıklık, yanlar kısa (fade) */}
+        <path d="M76,214 C74,150 92,108 124,86 C152,66 184,58 210,58 C252,58 292,74 314,104 C330,128 330,170 324,214 C318,196 312,182 304,172 C298,150 290,132 276,124 C262,126 250,134 238,140 C226,146 214,150 200,152 C186,150 174,146 162,140 C150,134 138,126 124,124 C110,132 102,150 96,172 C88,182 82,196 76,214 Z" fill={R.sac} stroke={R.sac} strokeWidth={8} strokeLinejoin="round" />
+        {/* üst hacim */}
+        <path d="M110,108 C136,64 196,44 250,52 C290,58 318,82 322,118 C300,92 262,82 230,84 C190,84 150,92 110,108 Z" fill={R.sac} />
+        <path d="M136,90 C170,66 230,60 278,74" stroke={R.sacParlak} strokeWidth={8} fill="none" strokeLinecap="round" />
+        <path d="M160,104 C190,90 236,88 266,96" stroke={R.sacParlak} strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.7} />
+        {/* yan kısa saç (favori) */}
+        <path d="M72,176 C70,210 74,238 80,252 C86,240 92,214 104,172 Z" fill={R.sac} />
+        <path d="M328,176 C330,210 326,238 320,252 C314,240 308,214 296,172 Z" fill={R.sac} />
       </g>
     </g>
   );

@@ -14,7 +14,10 @@ uzun vadede Sıfırdan Satışa'ya trafik. Videolar KODLA (Remotion) üretilir; 
 - SVG id'leri useId ile tekil (aynı karede birden çok karakter).
 - Kart: `npx remotion still src/index.ts Kart ciktilar/kart_v1.png --public-dir <abs>/girdiler`
 
-## Karakter v4 (2026-11-25) — 2. referans fotoğrafından yeniden çizildi (referanslar/berkay_ref2.jpg)
+## Karakter v5 (2026-11-25) = v2 yüzü + alın düzeltmesi
+- v4 (2. fotoğraf) beğenilmedi → v2 yüzüne dönüldü. Alındaki "birleştirme çizgisi": şakaklardaki yarı saydam saç geçiş çizgileri kaldırıldı; saç yoluna aynı renkte 8 px kontur (yüz kenarı taşmasın); favoriler opak ve saça kesintisiz bağlı.
+
+## Karakter v4 (beğenilmedi) — 2. referans fotoğrafından yeniden çizildi (referanslar/berkay_ref2.jpg)
 - Kullanıcı v2'yi beğenmedi ("içime sinmedi"), yüz bu fotodan alındı: yuvarlak dolgun yüz, belirgin kulaklar, çok kısa saç (şakaklar hafif açık),
   kalın düz kaşlar, dar gözler + göz altı, geniş yuvarlak burun, dolgun alt dudak, bıyık + seyrek kirli sakal (yarı saydam + düzensiz nokta dokusu).
 - Kıyafet aynı (lacivert yarım fermuarlı kazak + beyaz tişört). v2 yedeği: kart_v2.png.
