@@ -30,8 +30,13 @@ Profil fotoğrafı: ikisi takım elbiseyle yan yana, ellerinde parlayan sosyal m
 - Ton: **provokatif, merak uyandıran, sokak dili**: "SOSYAL MEDYACI DİYE GELDİK... FIRÇAYI VERDİLER!", "BU ÜRÜNÜ ALMAYIN!", "TAKİPÇİ SATIN ALDIYSAN HAPI YUTTUN"
 
 ## Henüz bilinmeyenler
-- Video içi altyazı stili, Reels süresi, kapanış/CTA, müzik
 - Ham çekimler ve logo dosyası
 
 ## Ses
 - Berkay ses klonu bu hesapta da kullanılabilir (Berkay'ın kendi sesi). Onur'un sesi kendi izni olmadan KLONLANMAZ.
+
+## Video içi stil (ilk Reels'te kuruldu: projeler/2026-11-25_es-reels-1, şablon src/ES.tsx)
+- Kullanıcı isteği: DİNAMİK. Her ~2 sn bir hareket (zoom-in/out, whip geçiş, B-roll, kart). Durağan video istemiyor.
+- Altyazı: Anton büyük harf, 1-3 kelime, beyaz + kalın siyah kontur, vurgu kelime sarı, kelime kelime pop.
+- Kartlar: IG arayüzü taklitleri (gönderi, yorum, anket, takip et) + kapak dilinde fırça şeritli Anton başlıklar.
+- Üstte sarı ilerleme çubuğu, ortada küçük "🪄 etkilesimsihirbazi" rozeti. CTA: takip et kartı (Takip Et → Takiptesin ✓).

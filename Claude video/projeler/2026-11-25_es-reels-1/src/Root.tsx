@@ -1,15 +1,9 @@
 import { Composition } from "remotion";
-import { Video } from "./Video";
+import veri from "./es.json";
+import { ES, ESVeri } from "./ES";
 
-export const RemotionRoot: React.FC = () => {
-  return (
-    <Composition
-      id="Video"
-      component={Video}
-      durationInFrames={150}
-      fps={30}
-      width={1920}
-      height={1080}
-    />
-  );
-};
+const v = veri as unknown as ESVeri;
+const Komp: React.FC = () => <ES v={v} />;
+export const RemotionRoot: React.FC = () => (
+  <Composition id="ESReels1" component={Komp} durationInFrames={v.toplamKare} fps={30} width={1080} height={1920} />
+);
