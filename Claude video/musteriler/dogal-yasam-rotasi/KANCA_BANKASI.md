@@ -20,6 +20,13 @@ Kural (`/viral` bölüm 0): kanca cesur olabilir, gövde dürüst olmak zorunda.
 | 13 | Tırnaklarına bir bak. İğne batmış gibi küçük çukurlar var mı? | Sedefte tırnak bulguları (sedeflilerin ~yarısı) | Her çukur sedef değil; fark ettiysen dermatoloğa göster | ⬜ (sedef #1, 30/30) |
 | 14 | Kolundaki o çizik, sedefin yeni adresi olabilir. | Koebner fenomeni | Çizik sedefe yol açmaz; sedefi olanda o bölgede tetikleyebilir | ⬜ (sedef #2, 29/30) |
 | 15 | Kepeğin geçmiyor mu? Sorun şampuanında olmayabilir. | Saçlı deri sedefi kepekle karışır | Her kepek sedef değil; kalın gümüşi pul + kızarıklık → dermatolog | ⬜ (sedef #3, 29/30) |
+| 16 | Sakız çiğnemek şişkinliğini artırıyor olabilir. | Çiğnerken yutulan hava + şekersiz sakızlardaki sorbitol/ksilitol gaz yapabilir (IBS'de sık tetikleyici) | Herkeste değil; hassas bağırsakta belirgin olabilir | ⬜ |
+| 17 | Her gün sıcak duş egzamanı kötüleştiriyor olabilir. | Sıcak su cilt bariyerindeki yağları azaltıp kuruluğu artırır; dermatoloji önerisi ılık ve kısa duş | Tek sebep değil; ılık su + duş sonrası nemlendirme önerilir | ⬜ |
+| 18 | Parmaklarını çıtlatmak artrit yapar mı? | Çalışmalarda parmak çıtlatma ile artrit arasında ilişki bulunmadı; ses eklem sıvısındaki gaz kabarcığından | Ağrı/şişlik varsa ayrı bir durum, hekime | ⬜ |
+| 19 | Tuvalette oturuş şeklin kabızlığını zorlaştırıyor olabilir. | Ayak altına tabure (dizler kalçadan yüksek) ıkınmayı azaltabilir — çalışmalar var | Herkes için çözüm değil; uzun süren kabızlıkta hekime | ⬜ |
+| 20 | Göz altı morlukların sadece uykusuzluktan olmayabilir. | Demir eksikliği göz altı koyuluğuyla ilişkilendirilen sebeplerden biri; genetik ve uyku da rol oynar | Birçok sebep var; ısrarlıysa tahlil | ⬜ |
+| 21 | Antibiyotikten sonra ağzında beyaz lekeler mi çıktı? | Antibiyotik floraları değiştirir; Candida (pamukçuk) çoğalabilir — bilinen yan etki | Antibiyotiği bırakma; hekime söyle | ⬜ |
+| 22 | Salatana sıktığın limon, demirin dostu olabilir. | C vitamini bitkisel demirin emilimini artırır (çay videosunun devamı / seri) | Demir eksikliği tanısı tahlille konur | ⬜ |
 
 Ayrıntılı çalışmalar: `basliklar/`.
 
