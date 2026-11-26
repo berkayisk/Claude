@@ -28,7 +28,7 @@ Uzun vadede trafiği Sıfırdan Satışa'ya taşır (biyografi linki + her 5–6
 | # | Konu | Dosya | Durum |
 |---|---|---|---|
 | 1 | Fiyatlar neden hep 99,99? | `projeler/2026-11-25_fiyat-99-99/ciktilar/fiyat_99_99_v6.mp4` + kapak `kapak_99_99.png` | hazır |
-| 2 | Black Friday nedir? (köken, veriler, indirimler gerçek mi) | `projeler/2026-11-26_black-friday/ciktilar/black_friday_v1.mp4` (49,6 sn); senaryo + kaynaklar `senaryo/SENARYO.md` | hazır (27 Kasım öncesi paylaş) |
+| 2 | Black Friday nedir? (köken, veriler, indirimler gerçek mi) | `projeler/2026-11-26_black-friday/ciktilar/black_friday_v2.mp4` (49,1 sn) + kapak `kapak_black_friday.png`; senaryo + kaynaklar `senaryo/SENARYO.md` | hazır (27 Kasım öncesi paylaş) |
 
 ### 1 — açıklama
 ```
@@ -63,3 +63,5 @@ Alışverişin perde arkası için takip et → @eticaretteperdearkasi
 
 #blackfriday #efsanecuma #kasımindirimleri #eticaret #alışveriş #indirim #tüketicihakları #onlinealışveriş
 ```
+
+Sabitlenmiş yorum (2): Sen bu Efsane Cuma'da ne almayı düşünüyorsun? Yaz, fiyat geçmişine birlikte bakalım 👇

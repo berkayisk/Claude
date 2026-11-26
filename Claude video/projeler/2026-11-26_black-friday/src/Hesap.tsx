@@ -45,3 +45,20 @@ export const Kapak: React.FC<{ s1: string; s2: string }> = ({ s1, s2 }) => (
     </div>
   </AbsoluteFill>
 );
+
+// Black Friday Reels kapağı (3:4 ızgara kırpması y 240–1680 içinde: başlık + yüz)
+export const KapakBF: React.FC = () => (
+  <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 35%, #2a0d0d 0%, #000 70%)" }}>
+    <Font />
+    <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute" }}>
+      <g transform="translate(540,800) scale(2.0) translate(-200,0)"><BerkayBas ifade={{ agiz: "sasir", kas: 0.9, goz: 1.1, bakY: -0.8 }} /></g>
+    </svg>
+    <div style={{ position: "absolute", top: 255, width: 1080, textAlign: "center" }}>
+      <span style={{ fontFamily: POP, fontWeight: 800, fontSize: 40, color: "#1b1f2e", background: "#FF8A1F", borderRadius: 999, padding: "10px 32px" }}>@eticaretteperdearkasi</span>
+    </div>
+    <div style={{ position: "absolute", top: 350, width: 1080, textAlign: "center", fontFamily: POP, fontWeight: 900, lineHeight: 1.0 }}>
+      <div style={{ fontSize: 132, color: "white", textShadow: "0 0 30px #ff3b3b, 0 0 70px #ff3b3b", whiteSpace: "nowrap" }}>BLACK FRIDAY</div>
+      <div style={{ display: "inline-block", marginTop: 34, background: "#FFF6E8", borderRadius: 28, padding: "18px 44px", fontSize: 92, color: "#1b1f2e", transform: "rotate(-3deg)", boxShadow: "0 24px 60px rgba(0,0,0,0.6)" }}>NEDEN <span style={{ color: "#e0262f" }}>"KARA"?</span></div>
+    </div>
+  </AbsoluteFill>
+);
