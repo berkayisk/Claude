@@ -1,0 +1,17 @@
+[
+ {"k":"n1","metin":"Bu cuma Black Friday. Peki neden kara cuma?","yazim":"Bu cuma Blek Fraydey. Peki neden kara cuma?","ex":0.6},
+ {"k":"n2","metin":"Çoğu kişi, mağazaların zarardan kâra geçtiği gün sanır.","ex":0.5},
+ {"k":"n3","metin":"Ama bu açıklama ilk kez seksenli yıllarda ortaya çıktı.","ex":0.5},
+ {"k":"n4","metin":"Asıl isim, altmışlı yıllarda Philadelphia polisinden geliyor.","yazim":"Asıl isim, altmışlı yıllarda Filadelfiya polisinden geliyor.","ex":0.55},
+ {"k":"n5","metin":"Şükran Günü'nden sonraki trafik ve kalabalık kaosuna, kara cuma dediler.","ex":0.55},
+ {"k":"n6","metin":"Bugün ise dev bir ekonomi.","ex":0.55},
+ {"k":"n7","metin":"Geçen yıl Amerika'da sadece o gün, internetten on bir virgül sekiz milyar dolar harcandı.","ex":0.6},
+ {"k":"n8","metin":"Peki, indirimler gerçek mi?","ex":0.6},
+ {"k":"n9","metin":"İngiltere'de bir tüketici örgütü, Black Friday'deki yüz yetmiş beş ürünü inceledi.","yazim":"İngiltere'de bir tüketici örgütü, Blek Fraydey'deki yüz yetmiş beş ürünü inceledi.","ex":0.5},
+ {"k":"n10","metin":"Hepsi, yılın başka bir zamanında aynı fiyata ya da daha ucuza satılmıştı.","ex":0.6},
+ {"k":"n11","metin":"İsveç'te ise izlenen ürünlerin yaklaşık yüzde otuzunun fiyatı, kampanyadan önce yükseldi.","ex":0.55},
+ {"k":"n12","metin":"Türkiye'de adı Efsane Cuma. Kuralı da belli.","ex":0.5},
+ {"k":"n13","metin":"İndirimden önceki fiyat, son on günün en düşük fiyatı olmalı.","ex":0.5},
+ {"k":"n14","metin":"Yani taktik basit: istediğin ürünün fiyatını şimdiden takip et.","ex":0.55},
+ {"k":"n15","metin":"Alışverişin perde arkası için, beni de takip et.","ex":0.5}
+]
