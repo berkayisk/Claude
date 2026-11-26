@@ -27,6 +27,12 @@ Kural (`/viral` bölüm 0): kanca cesur olabilir, gövde dürüst olmak zorunda.
 | 20 | Göz altı morlukların sadece uykusuzluktan olmayabilir. | Demir eksikliği göz altı koyuluğuyla ilişkilendirilen sebeplerden biri; genetik ve uyku da rol oynar | Birçok sebep var; ısrarlıysa tahlil | ⬜ |
 | 21 | Antibiyotikten sonra ağzında beyaz lekeler mi çıktı? | Antibiyotik floraları değiştirir; Candida (pamukçuk) çoğalabilir — bilinen yan etki | Antibiyotiği bırakma; hekime söyle | ⬜ |
 | 22 | Salatana sıktığın limon, demirin dostu olabilir. | C vitamini bitkisel demirin emilimini artırır (çay videosunun devamı / seri) | Demir eksikliği tanısı tahlille konur | ⬜ |
+| 23 | Boğazın ağrıdıktan birkaç hafta sonra cildinde damla damla lekeler mi çıktı? | Streptokok boğaz enfeksiyonundan sonra ortaya çıkabilen guttat (damla) sedef | Her döküntü sedef değil; dermatolog ayırt eder | ⬜ (sedef 28/30) |
+| 24 | Cildin normalde yaklaşık bir ayda yenilenir. Sedefte birkaç günde. | Sedefte deri hücre döngüsü hızlanır, hücreler yüzeyde birikip plak yapar | Mekanizma anlatımı; tedavi vaadi yok | ⬜ (sedef 27/30) |
+| 25 | Sedefin en çok saklandığı 3 yer. | Saçlı deri/kulak arkası, göbek deliği, kıvrım bölgeleri (ters sedef) sık gözden kaçar | Liste; fark edersen dermatoloğa göster | ⬜ (sedef 28/30) |
+| 26 | Sedefin kışın neden kötüleştiğini biliyor musun? | Kuru-soğuk hava ve az güneş birçok kişide alevlenmeyle ilişkili; nem ve güneş çoğunda iyi gelir | Güneşte yanmak da tetikler (Koebner); kişiden kişiye değişir | ⬜ (sedef 26/30) |
+| 27 | Sedef bulaşıcı mı? | Bulaşıcı değildir; bağışıklıkla ilişkili bir durum | Mit kırma + damgalanmaya karşı; paylaşım odaklı | ⬜ (sedef 24/30) |
+| 28 | Dövme yaptırmayı düşünen sedefliler bunu bilmeli. | Koebner: deri hasarı olan yerde yeni plak çıkabilir | Karar hekimle; korkutma yok | ⬜ (sedef 26/30) |
 
 Ayrıntılı çalışmalar: `basliklar/`.
 
