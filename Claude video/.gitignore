@@ -33,3 +33,4 @@ musteriler/**/ses_hizli/
 
 __pycache__/
 *.pyc
+musteriler/**/ses_anlatici/

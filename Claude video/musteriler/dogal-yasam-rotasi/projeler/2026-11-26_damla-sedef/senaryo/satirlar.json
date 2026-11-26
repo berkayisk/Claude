@@ -1,15 +1,67 @@
 [
- {"k":"s01","ses":"anlatici","metin":"Birkaç hafta önce boğazın ağrıdı mı?"},
- {"k":"s02","ses":"anlatici","metin":"Şimdi cildinde damla damla küçük lekeler mi var?"},
- {"k":"s03","ses":"anlatici","metin":"Bunun bir adı var: damla sedef."},
- {"k":"s04","ses":"anlatici","metin":"Boğaz enfeksiyonundan bir ila üç hafta sonra çıkabiliyor."},
- {"k":"s05","ses":"anlatici","metin":"Bir araştırmada hastaların yüzde elli sekizinde,"},
- {"k":"s06","ses":"anlatici","metin":"yakın zamanda geçirilmiş boğaz enfeksiyonu izi bulundu."},
- {"k":"s07","ses":"anlatici","metin":"Peki neden boğaz?"},
- {"k":"s08","ses":"anlatici","metin":"Araştırmacılara göre bağışıklığın mikroba verdiği tepki, cildi de etkileyebiliyor."},
- {"k":"s09","ses":"anlatici","metin":"En sık otuz yaşın altında görülüyor."},
- {"k":"s10","ses":"anlatici","metin":"İyi haber: Çoğu kişide haftalar ya da aylar içinde geçebiliyor."},
- {"k":"s11","ses":"anlatici","metin":"Ama bir takip çalışmasında, yaklaşık üç kişiden birinde kalıcı sedef gelişti."},
- {"k":"s12","ses":"anlatici","metin":"Bulaşıcı değil. Fark ettiysen bir dermatoloğa göster."},
- {"k":"s13","ses":"anlatici","metin":"Bunu, boğaz ağrısından sonra cildi değişen birine gönder."}
+ {
+  "k": "s01",
+  "ses": "elif",
+  "metin": "Birkaç hafta önce boğazın ağrıdı mı?"
+ },
+ {
+  "k": "s02",
+  "ses": "elif",
+  "metin": "Şimdi cildinde damla damla küçük lekeler mi var?"
+ },
+ {
+  "k": "s03",
+  "ses": "elif",
+  "metin": "Bunun bir adı var: damla sedef."
+ },
+ {
+  "k": "s04",
+  "ses": "elif",
+  "metin": "Boğaz enfeksiyonundan bir ila üç hafta sonra çıkabiliyor."
+ },
+ {
+  "k": "s05",
+  "ses": "elif",
+  "metin": "Bir araştırmada hastaların yüzde elli sekizinde,"
+ },
+ {
+  "k": "s06",
+  "ses": "elif",
+  "metin": "yakın zamanda geçirilmiş boğaz enfeksiyonu izi bulundu."
+ },
+ {
+  "k": "s07",
+  "ses": "elif",
+  "metin": "Peki neden boğaz?"
+ },
+ {
+  "k": "s08",
+  "ses": "elif",
+  "metin": "Araştırmacılara göre bağışıklığın mikroba verdiği tepki, cildi de etkileyebiliyor."
+ },
+ {
+  "k": "s09",
+  "ses": "elif",
+  "metin": "En sık otuz yaşın altında görülüyor."
+ },
+ {
+  "k": "s10",
+  "ses": "elif",
+  "metin": "İyi haber: Çoğu kişide haftalar ya da aylar içinde geçebiliyor."
+ },
+ {
+  "k": "s11",
+  "ses": "elif",
+  "metin": "Ama bir takip çalışmasında, yaklaşık üç kişiden birinde kalıcı sedef gelişti."
+ },
+ {
+  "k": "s12",
+  "ses": "elif",
+  "metin": "Bulaşıcı değil. Fark ettiysen bir dermatoloğa göster."
+ },
+ {
+  "k": "s13",
+  "ses": "elif",
+  "metin": "Bunu, boğaz ağrısından sonra cildi değişen birine gönder."
+ }
 ]
