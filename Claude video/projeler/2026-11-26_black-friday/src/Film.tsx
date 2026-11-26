@@ -156,7 +156,7 @@ const KALEM = ["#FF6B6B", "#4ECDC4", "#FFD93D", "#6C5CE7", "#FF9F43", "#54A0FF",
 
 const CEKIMLER: Cekim[] = [
   // 1 — kanca: takvim yaprağı düşer, neon BLACK FRIDAY
-  { bas: 0, son: n("n2") - 0.05, gecis: "kes", alt: (y) => (y < 1.3 ? 1000 : 1720), kam: [[0,540,520,1.35],[0.9,540,560,1.35],[1.4,540,960,1],[2.0,540,1450,1.4],[3,540,1450,1.4]], render: (t) => {
+  { bas: 0, son: n("n2") - 0.05, gecis: "kes", alt: (y) => (y < 1.5 ? 1110 : 1720), kam: [[0,540,620,1.1],[0.9,540,640,1.1],[1.4,540,960,1],[2.0,540,1450,1.4],[3,540,1450,1.4]], render: (t) => {
     const g = sp(t, 0.05, 9), neon = 0.75 + 0.25 * Math.abs(Math.sin(t * 9)) * (t > 0.6 ? 1 : 0);
     return (<>
       <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 30%, #1c1c1c 0%, #000 70%)" }} />
@@ -166,7 +166,7 @@ const CEKIMLER: Cekim[] = [
           <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 230, color: "#111", textAlign: "center", lineHeight: 1.05 }}>27</div>
           <div style={{ fontFamily: POP, fontWeight: 800, fontSize: 52, color: "#111", textAlign: "center", paddingBottom: 20 }}>CUMA</div>
         </div>
-        <div style={{ marginTop: 60, fontFamily: POP, fontWeight: 900, fontSize: 130, color: "white", opacity: sp(t, 0.6), textShadow: `0 0 ${30 * neon}px #ff3b3b, 0 0 ${70 * neon}px #ff3b3b`, letterSpacing: 4 }}>BLACK FRIDAY</div>
+        <div style={{ marginTop: 60, fontFamily: POP, fontWeight: 900, fontSize: 112, color: "white", opacity: sp(t, 0.6), textShadow: `0 0 ${30 * neon}px #ff3b3b, 0 0 ${70 * neon}px #ff3b3b`, letterSpacing: 0, whiteSpace: "nowrap" }}>BLACK FRIDAY</div>
       </Mutlak>
       <Kisi t={t} mod="yakin" x={540} y={1240} olcek={1.45} ifade={{ kas: 0.6, bakY: -0.9, kasAci: 0.2 }} />
     </>);
@@ -189,7 +189,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 3 — mit çöker: MİT damgası, 1981
-  { bas: n("n3"), son: n("n4"), gecis: "flas", alt: 300, kam: [[0,540,800,1.25],[1.2,540,820,1.25],[1.7,540,1350,1.35],[3,540,1350,1.35]], render: (t) => {
+  { bas: n("n3"), son: n("n4"), gecis: "flas", alt: (y) => (y < 1.6 ? 1100 : 1720), kam: [[0,540,800,1.25],[1.2,540,820,1.25],[1.7,540,1350,1.35],[3,540,1350,1.35]], render: (t) => {
     const d = sp(t, n("n3") + 0.15, 6);
     return (<>
       <Duz ust="#e4d6b8" alt="#cdb88e" />
@@ -255,7 +255,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 7 — 11,8 milyar $ sayacı
-  { bas: n("n7"), son: n("n8"), gecis: "kay", alt: 1100, kam: [[0,540,960,1],[1.2,540,560,1.45],[3.0,540,560,1.45],[3.6,540,1450,1.3],[4.5,540,1450,1.3]], render: (t) => {
+  { bas: n("n7"), son: n("n8"), gecis: "kay", alt: 1290, kam: [[0,540,960,1],[1.2,540,600,1.35],[3.0,540,600,1.35],[3.5,540,1500,1.25],[4.5,540,1500,1.25]], render: (t) => {
     const v = interpolate(t, [n("n7") + 0.6, n("n7") + 2.6], [0, 11.8], { ...kl, easing: Easing.out(Easing.cubic) });
     return (<>
       <Duz ust="#0b3d2e" alt="#04170f" /><Izgara renk="rgba(46,212,122,0.08)" />
@@ -265,7 +265,7 @@ const CEKIMLER: Cekim[] = [
         <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 110, color: "white", marginTop: -10 }}>MİLYAR</div>
         <div style={{ fontFamily: POP, fontWeight: 600, fontSize: 30, color: "#8fcfb4", marginTop: 20 }}>Kaynak: Adobe Analytics</div>
       </Mutlak>
-      <Kisi t={t} mod="yakin" x={540} y={1300} olcek={1.2} ifade={{ kas: 0.9, goz: 1.1, bakY: -0.8 }} />
+      <Kisi t={t} mod="yakin" x={540} y={1430} olcek={1.15} ifade={{ kas: 0.9, goz: 1.1, bakY: -0.8 }} />
     </>);
   } },
   // 8 — "indirimler gerçek mi?": aşırı yakın plan + soru işaretleri
@@ -291,7 +291,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 10 — hepsi aynı ya da daha ucuz
-  { bas: n("n10"), son: n("n11"), gecis: "kayTers", alt: (y) => (y < 2.0 ? 1100 : 300), kam: [[0,540,700,1.3],[1.6,540,700,1.3],[2.1,540,1380,1.35],[3.2,540,1380,1.35]], render: (t) => {
+  { bas: n("n10"), son: n("n11"), gecis: "kayTers", alt: (y) => (y < 2.0 ? 1180 : 300), kam: [[0,540,700,1.3],[1.6,540,700,1.3],[2.1,540,1380,1.35],[3.2,540,1380,1.35]], render: (t) => {
     const don = interpolate(t, [n("n10") + 0.2, n("n10") + 1.6], [0, 175], kl);
     return (<>
       <Duz ust="#13213f" alt="#0a1224" />
@@ -323,7 +323,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 12 — Türkiye: KARA → EFSANE
-  { bas: n("n12"), son: n("n13"), gecis: "flas", alt: 1080, kam: [[0,540,620,1.4],[1.6,540,620,1.4],[2.1,540,960,1]], render: (t) => {
+  { bas: n("n12"), son: n("n13"), gecis: "flas", alt: 1740, kam: [[0,540,620,1.4],[1.6,540,620,1.4],[2.1,540,960,1]], render: (t) => {
     const cz = interpolate(t, [n("n12") + 0.5, n("n12") + 0.85], [0, 1], kl), ef = sp(t, n("n12") + 0.85, 8);
     return (<>
       <Duz ust="#c8102e" alt="#7a0a1c" /><Bokeh t={t} renk="#ffffff" seed={13} />
@@ -337,12 +337,12 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 13 — kural: son 10 günün en düşük fiyatı
-  { bas: n("n13"), son: n("n14"), gecis: "kay", alt: 1720, kam: [[0,540,960,1],[0.6,540,640,1.35],[2.6,540,640,1.35],[3.1,830,1280,1.5],[4,830,1280,1.5]], render: (t) => {
+  { bas: n("n13"), son: n("n14"), gecis: "kay", alt: 1720, kam: [[0,540,960,1],[0.6,540,720,1.12],[2.6,540,720,1.12],[3.1,830,1280,1.5],[4,830,1280,1.5]], render: (t) => {
     const f = [1249, 1199, 1229, 1179, 1199, 1259, 1239, 1189, 1219, 1209];
     const enk = Math.min(...f), isaret = sp(t, n("n13") + 1.6, 8);
     return (<>
       <Duz ust="#f2f5fb" alt="#d7deec" />
-      <Mutlak y={190}><Yazi boy={60} renk="#1b2a4a" g={sp(t, n("n13"))}>İNDİRİM ÖNCESİ FİYAT =</Yazi><Yazi boy={80} renk={KIRMIZI} g={sp(t, n("n13") + 0.3)}>SON 10 GÜNÜN EN DÜŞÜĞÜ</Yazi></Mutlak>
+      <Mutlak y={190}><Yazi boy={54} renk="#1b2a4a" g={sp(t, n("n13"))}>İNDİRİM ÖNCESİ FİYAT =</Yazi><Yazi boy={66} renk={KIRMIZI} g={sp(t, n("n13") + 0.3)}>SON 10 GÜNÜN EN DÜŞÜĞÜ</Yazi></Mutlak>
       <div style={{ position: "absolute", left: 60, top: 470, width: 960, display: "grid", gridTemplateColumns: "repeat(5, 180px)", gap: 15 }}>
         {f.map((v, i) => {
           const g = sp(t, n("n13") + 0.4 + i * 0.08), en = v === enk;
@@ -357,11 +357,11 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 14 — taktik: fiyat takibi alarmı
-  { bas: n("n14"), son: n("n15"), gecis: "zoom", alt: 1720, kam: [[0,540,960,1],[0.7,560,700,1.4],[2.4,560,700,1.4],[2.9,540,960,1]], render: (t) => {
+  { bas: n("n14"), son: n("n15"), gecis: "zoom", alt: 1720, kam: [[0,540,960,1],[0.7,560,860,1.3],[2.4,560,860,1.3],[2.9,540,960,1]], render: (t) => {
     const g = sp(t, n("n14"), 11), zil = Math.sin(t * 30) * 12 * (t > n("n14") + 1.2 && t < n("n14") + 2 ? 1 : 0);
     return (<>
       <Duz ust="#ff8a1f" alt="#ff5a1f" />
-      <div style={{ position: "absolute", left: 280, top: 230, width: 520, height: 920, background: "#0f1320", borderRadius: 70, border: "14px solid #1b1f2e", transform: `translateY(${(1 - g) * 900}px)`, padding: 40, boxShadow: "0 40px 90px rgba(0,0,0,0.4)" }}>
+      <div style={{ position: "absolute", left: 280, top: 400, width: 520, height: 900, background: "#0f1320", borderRadius: 70, border: "14px solid #1b1f2e", transform: `translateY(${(1 - g) * 900}px)`, padding: 40, boxShadow: "0 40px 90px rgba(0,0,0,0.4)" }}>
         <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 40, color: "white" }}>Fiyat takibi</div>
         <svg width={420} height={260} style={{ marginTop: 30 }}><path d="M0,120 L60,110 L120,140 L180,90 L240,100 L300,60 L360,150 L420,200" stroke={SARI} strokeWidth={10} fill="none" strokeLinejoin="round" /><circle cx={420} cy={200} r={14} fill={YESIL} /></svg>
         <div style={{ marginTop: 30, background: "#1f2a44", borderRadius: 24, padding: 24, display: "flex", gap: 20, alignItems: "center", transform: `rotate(${zil * 0.2}deg)` }}>
@@ -369,8 +369,8 @@ const CEKIMLER: Cekim[] = [
           <div style={{ fontFamily: POP, fontWeight: 800, fontSize: 32, color: "white", lineHeight: 1.2 }}>Gerçek indirim!<br /><span style={{ color: YESIL }}>Takip ettiğin en düşük fiyat</span></div>
         </div>
       </div>
-      <Mutlak y={1200}><Yazi boy={80} g={sp(t, n("n14") + 0.8)}>FİYATI <span style={{ color: "#1b1f2e" }}>ŞİMDİDEN</span> TAKİP ET</Yazi></Mutlak>
-      <Kisi t={t} mod="yakin" x={200} y={1420} olcek={0.95} ifade={{ gozGul: 0.5, kas: 0.3 }} />
+      <Mutlak y={150}><Yazi boy={76} g={sp(t, n("n14") + 0.3)}>FİYATI <span style={{ color: "#1b1f2e" }}>ŞİMDİDEN</span><br />TAKİP ET</Yazi></Mutlak>
+      <Kisi t={t} mod="yakin" x={190} y={1300} olcek={0.9} ifade={{ gozGul: 0.5, kas: 0.3 }} />
     </>);
   } },
   // 15 — çağrı: telefon ekranında profil + takip et, Berkay el sallar

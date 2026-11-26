@@ -28,6 +28,7 @@ Uzun vadede trafiği Sıfırdan Satışa'ya taşır (biyografi linki + her 5–6
 | # | Konu | Dosya | Durum |
 |---|---|---|---|
 | 1 | Fiyatlar neden hep 99,99? | `projeler/2026-11-25_fiyat-99-99/ciktilar/fiyat_99_99_v6.mp4` + kapak `kapak_99_99.png` | hazır |
+| 2 | Black Friday nedir? (köken, veriler, indirimler gerçek mi) | `projeler/2026-11-26_black-friday/ciktilar/black_friday_v1.mp4` (49,6 sn); senaryo + kaynaklar `senaryo/SENARYO.md` | hazır (27 Kasım öncesi paylaş) |
 
 ### 1 — açıklama
 ```
@@ -45,3 +46,20 @@ Kaynak: Anderson & Simester (2003), Quantitative Marketing and Economics
 #eticaret #alışveriş #fiyat #pazarlama #tüketicipsikolojisi #onlinealışveriş #indirim #girişimcilik
 ```
 Not: ses klonu gerçekçi olduğu için Instagram'da paylaşırken "Yapay zeka bilgisi / AI etiketi" seçeneğini açmak Meta kuralları açısından güvenli olan.
+
+### 2 — açıklama
+```
+Black Friday neden "kara" cuma? 🖤
+Mağazaların zarardan kâra geçtiği gün değil, o açıklama 1981'de ortaya çıktı.
+Asıl isim: 1960'larda Philadelphia polisi, Şükran Günü sonrası trafik ve kalabalık kaosuna "kara cuma" dedi.
+
+📊 Geçen yıl ABD'de sadece Black Friday günü internetten 11,8 milyar $ harcandı (Adobe Analytics).
+🔍 İngiltere'de Which? 175 Black Friday ürününü inceledi: hepsi yılın başka zamanında aynı fiyat ya da daha ucuzdu.
+📈 İsveç'te izlenen ürünlerin ~%30'unun fiyatı kampanyadan önce yükseldi (Prisjakt).
+🇹🇷 Türkiye'de kural: indirim öncesi fiyat = son 10 günün en düşük fiyatı.
+
+Bu Efsane Cuma'da istediğin ürünün fiyatını şimdiden takip et 👀
+Alışverişin perde arkası için takip et → @eticaretteperdearkasi
+
+#blackfriday #efsanecuma #kasımindirimleri #eticaret #alışveriş #indirim #tüketicihakları #onlinealışveriş
+```
