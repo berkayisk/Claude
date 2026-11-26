@@ -125,10 +125,12 @@ type SP = { dur: number };
 const S01: React.FC<SP> = ({ dur }) => {
   const f = useCurrentFrame();
   const g = useYay(0, 11);
-  const agri = 0.5 + 0.5 * Math.sin(f / 4);
+  // "Boğazın geçti": ağrı nabzı söner, yüz rahatlar
+  const agri = (0.5 + 0.5 * Math.sin(f / 4)) * interpolate(f, [0, dur * 0.75], [1, 0], clamp);
+  const yuz = f < dur * 0.55 ? "agri" : "rahat";
   return (
     <Sahne dur={dur} zemin={RENK.lila} vurgu="#FFFFFF" zoom={0.08}>
-      <g transform={`translate(540 ${1290 + (1 - g) * 600}) scale(1.35)`}><Elif bogazTut agri={agri} yuz="agri" goz={f % 70 > 64 ? 0.15 : 1} /></g>
+      <g transform={`translate(540 ${1290 + (1 - g) * 600}) scale(1.35)`}><Elif bogazTut={f < dur * 0.6} agri={agri} yuz={yuz} goz={f % 70 > 64 ? 0.15 : 1} /></g>
       {/* ağrı çizgileri */}
       {[0, 1, 2].map((i) => (
         <path key={i} d={`M${640 + i * 30} ${980 - i * 30} l 40 -20`} stroke="#FF5A5A" strokeWidth={10} strokeLinecap="round" opacity={(Math.sin(f / 3 + i) + 1) / 2} />
@@ -161,7 +163,7 @@ const S03: React.FC<SP> = ({ dur }) => {
   return (
     <Sahne dur={dur} zemin="#2A2150" vurgu="#4B3A8C" koyu zoom={0.05}>
       {harfler.map((h, i) => {
-        const s = spring({ frame: f - 4 - i * 2, fps, config: { damping: 7, stiffness: 160 } });
+        const s = spring({ frame: f - 2 - i * 1, fps, config: { damping: 11, stiffness: 260 } });
         const satir = i < 5 ? 0 : 1;
         const x = satir === 0 ? 540 + (i - 2) * 150 : 540 + (i - 8) * 145;
         const y = satir === 0 ? 760 : 960;
@@ -171,7 +173,7 @@ const S03: React.FC<SP> = ({ dur }) => {
       })}
       {/* sıçrayan damlalar */}
       {Array.from({ length: 10 }).map((_, i) => {
-        const t = f - 18 - i * 2;
+        const t = f - 12 - i * 2;
         if (t < 0) return null;
         const x = 540 + Math.cos(i * 0.63) * (90 + t * 12);
         const y = 1080 - Math.sin(0.4 + (i % 5) * 0.5) * t * 14 + t * t * 0.9;

@@ -143,7 +143,7 @@ K1 Gökçe Deniz `oPC5I9GKjMReiaM29gjY` · K2 Derya `NNn9dv8zq2kUo7d3JSGG` · K3
 K5 Duygu Eriş `MzfWWOj9g3sIKex1YFMV` · E1 Fatih Yıldırım `7VqWGAWwo2HMrylfKrcm` · E2 Doğa `IuRRIAcbQK5AQk1XevPj` · E3 Emrullah Uzun `DpEiQMnL9WxMsymCsjPY` ·
 E4 Kadir Kayışçı `j82ax9yhzfYwq9lDvRWL`. Berkay'ın istediği: ~40 yaş, haber spikeri tarzı, zarif, düzgün, dinamik kadın sesi. Spiker adayları (`marka/sesler/elevenlabs_spiker_kadin_karsilastirma.mp3`):
 S1 Nazlı `I8PntRGWO35zIGM4lnWO` · S2 Sıla Özalp `r3deco0KTo6o0Kb5inro` · S3 İrem `uvU9jrgGLWNPeNA4NgNT` · S4 Gizem `YHK57o4iMmVGSTo059Sj` ·
-S5 Nuray `WgkQ6iX2TeKqW6ww3mEZ` · S6 Burcu Başyiğit `DqkEc6nlvKNIUjWfMgVg` · S7 Mia `PdYVUd1CAGSXsTvZZTNn` · S8 Sultan `gyxPK6bLXQAkBSCeAKvk`. Seçilen ses: (Berkay seçecek)
+S5 Nuray `WgkQ6iX2TeKqW6ww3mEZ` · S6 Burcu Başyiğit `DqkEc6nlvKNIUjWfMgVg` · S7 Mia `PdYVUd1CAGSXsTvZZTNn` · S8 Sultan `gyxPK6bLXQAkBSCeAKvk`. **Seçilen ses (Berkay 26.11): S3 İrem `uvU9jrgGLWNPeNA4NgNT`** — gövde `eleven_multilingual_v2`; soru/kanca cümleleri `eleven_v3` ile de denenir (soru tonu daha güçlü, telaffuz daha riskli → telaffuz + vurgu/soru tonu ölçülür, en iyisi seçilir). Araç: `araclar/eleven_ses.py satirlar.json cikti/ --ses uvU9jrgGLWNPeNA4NgNT`.
 
 ### Dil inceliği (stil kuralı)
 - Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.

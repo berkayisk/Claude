@@ -28,7 +28,7 @@ Kullanılmayan: "sedeflilerin %X'i damla sedef" (kaynaklar %2–30 arası çeli�
 | s08 …bağışıklığın mikroba verdiği tepki cildi de etkileyebiliyor. | Antikorlar bakteriyi sarar → ok → cilt kesitinde leke büyür | yukarıdan kayma |
 | s09 En sık otuz yaşın altında görülüyor. | Yaş cetveli 0–60, 0–30 dolar, "EN SIK" etiketi (dağılım verisi uydurulmadı) | kaydır sola |
 | s10 İyi haber: …haftalar ya da aylar içinde geçebiliyor. | Lekeler tek tek kaybolur, takvim hafta→ay, yeşil onay | daire açılış |
-| s11 …yaklaşık üç kişiden birinde kalıcı sedef gelişti. | 3 kişi, 1'i turuncu; "1 / 3"; "Martin ve ark., 1996" kartı | çapraz silme |
+| s11 …yaklaşık üç kişiden birinde sedef kalıcı hale geldi. | 3 kişi, 1'i turuncu; "1 / 3"; "Martin ve ark., 1996" kartı | çapraz silme |
 | s12 Bulaşıcı değil. Fark ettiysen bir dermatoloğa göster. | "BULAŞICI DEĞİL" damgası (sarsıntı), randevu takvimi ✓ (doktor yok) | yakınlaşma |
 | s13 Bunu… birine gönder. | Telefonda gönder, kâğıt uçak; son kare açılışa döner (döngü) | kaydır sola |
 
