@@ -141,7 +141,9 @@ Starter: 40.000 karakter/ay, ticari lisans, hızlı ses klonlama, 10 ses hakkı.
 Model: `eleven_multilingual_v2`, `language_code: "tr"`. Aday Türkçe sesler (karşılaştırma: `marka/sesler/elevenlabs_turkce_ses_karsilastirma.mp3`):
 K1 Gökçe Deniz `oPC5I9GKjMReiaM29gjY` · K2 Derya `NNn9dv8zq2kUo7d3JSGG` · K3 Belma `KbaseEXyT9EE0CQLEfbB` · K4 Eda Atlas `mBUB5zYuPwfVE6DTcEjf` ·
 K5 Duygu Eriş `MzfWWOj9g3sIKex1YFMV` · E1 Fatih Yıldırım `7VqWGAWwo2HMrylfKrcm` · E2 Doğa `IuRRIAcbQK5AQk1XevPj` · E3 Emrullah Uzun `DpEiQMnL9WxMsymCsjPY` ·
-E4 Kadir Kayışçı `j82ax9yhzfYwq9lDvRWL`. Seçilen ses: (Berkay seçecek)
+E4 Kadir Kayışçı `j82ax9yhzfYwq9lDvRWL`. Berkay'ın istediği: ~40 yaş, haber spikeri tarzı, zarif, düzgün, dinamik kadın sesi. Spiker adayları (`marka/sesler/elevenlabs_spiker_kadin_karsilastirma.mp3`):
+S1 Nazlı `I8PntRGWO35zIGM4lnWO` · S2 Sıla Özalp `r3deco0KTo6o0Kb5inro` · S3 İrem `uvU9jrgGLWNPeNA4NgNT` · S4 Gizem `YHK57o4iMmVGSTo059Sj` ·
+S5 Nuray `WgkQ6iX2TeKqW6ww3mEZ` · S6 Burcu Başyiğit `DqkEc6nlvKNIUjWfMgVg` · S7 Mia `PdYVUd1CAGSXsTvZZTNn` · S8 Sultan `gyxPK6bLXQAkBSCeAKvk`. Seçilen ses: (Berkay seçecek)
 
 ### Dil inceliği (stil kuralı)
 - Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.
