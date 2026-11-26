@@ -5,6 +5,9 @@ Referans: marka/sifirdan-satisa/berkay_ses_referans.wav (Berkay'ın kendi anlat�
 Kullanım:
   python3 araclar/berkay_ses.py satirlar.json cikti_klasoru
 satirlar.json: [{"k": "n1", "metin": "Bu Ahmet."}, {"k": "i1", "metin": "...", "ic": true, "ex": 0.4}, ...]
+  bitisik: [["kara", "cuma"], ["bu", "cuma"]] — tamlamalar; arada duraklama ölçülür, bölünmüş okuma elenir.
+  ÖNEMLİ: tamlamanın içine "..." ya da virgül koyma (dramatik duraklama tamlamayı böler).
+  yabanci: ["black", "friday"] — Türkçe telaffuz puanından muaf kelimeler (küçük harf, metindeki haliyle).
   ex: duygu yoğunluğu (0.3 sakin - 0.8 dramatik, varsayılan 0.55)
 
 Her satır için:
@@ -22,6 +25,7 @@ import sys, os, json, re, difflib, subprocess, numpy as np, soundfile as sf, tor
 KOK = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF = os.path.join(KOK, "marka/sifirdan-satisa/berkay_ses_referans.wav")
 HEDEF_F0 = 176.0   # Berkay'ın anlatım kaydının medyan perdesi (Hz)
+TAMLAMA_BOSLUK = 0.12   # "bitisik" çiftler arasında izin verilen en uzun sessizlik (sn); daha uzunu "cuma kara, cuma" gibi bölünmüş duyulur
 # Netlik: model 24 kHz üretiyor (12 kHz üstü yok) ve 4 kHz üstü zayıf -> "boğuk". Berkay'ın gerçek kaydının bant profiline göre ayarlandı
 # (2–12 kHz arası bantlar ±1.6 dB içinde), exciter ile 12 kHz üstüne doğal harmonik, hafif de-esser.
 NETLIK = ("equalizer=f=3000:t=q:w=1:g=1,equalizer=f=5000:t=q:w=1:g=2,equalizer=f=7000:t=q:w=1:g=1,highshelf=f=10000:g=11,"
@@ -128,14 +132,26 @@ def main(girdi, cikti):
             _, kel = oku(w, m.sr, kelime=True)
             w = kes(w, m.sr, kel)
             tr = oku(w, m.sr); sk = difflib.SequenceMatcher(None, norm(metin), norm(tr)).ratio()
+            if s.get("bitisik"):   # Whisper tamlamayı bitişik yazabilir ("karacuma"): boşluksuz karşılaştırma da geçerli
+                sk = max(sk, difflib.SequenceMatcher(None, "".join(norm(metin)), "".join(norm(tr))).ratio())
             beklenen = 0.075 * len(metin) + 0.4
             if len(w) / m.sr > beklenen * 1.45: sk -= 0.5; tr += f"  [çok uzun {len(w)/m.sr:.1f}s > {beklenen:.1f}s]"
             # telaffuz (GOP): her kelime Berkay'ın gerçek okuma düzeyinde mi?
             w16 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(m.sr), "-ac", "1", "-i", "-", "-af", f"aresample=48000,{NETLIK}", "-ar", "16000", "-f", "f32le", "-"],
                                  input=w.astype(np.float32).tobytes(), capture_output=True).stdout   # son işlenmiş hali denetlenir
             pu = dn.kelime_puanlari(np.frombuffer(w16, np.float32).copy(), metin)
+            yab = set(s.get("yabanci", []))   # İngilizce vb. kelimeler Türkçe GOP ile puanlanmaz (hep düşük çıkar)
+            pu = [q for q in pu if q[0] not in yab] or [("-", 0.0, 0.0)]
             minw = min(o for _, o, _ in pu); kotu = [f"{x}({o:.2f})" for x, o, _ in pu if o < SUPHE]
             if kotu: sk -= 0.2 + 0.3 * (SUPHE - minw); tr += "  [telaffuz: " + " ".join(kotu) + "]"
+            # tamlama: birlikte okunması gereken kelimeler ("bu cuma", "kara cuma") arasında duraklama olmamalı
+            if s.get("bitisik"):
+                hz = dn.harf_zamanlari(np.frombuffer(w16, np.float32).copy(), metin)
+                for a_, b_ in s["bitisik"]:
+                    for j in range(len(hz) - 1):
+                        if hz[j][0] == a_ and hz[j + 1][0].startswith(b_) and hz[j][1] and hz[j + 1][1]:
+                            bos = hz[j + 1][1][0][1] - hz[j][1][-1][2]
+                            if bos > TAMLAMA_BOSLUK: sk -= 0.4; tr += f"  [tamlama bölündü: {a_} {b_} arası {bos:.2f} sn]"
             print(f"  {k} deneme {i}: {sk:.3f} | {tr}", flush=True)
             # vurgu/tonlama: Berkay'ın okuma alışkanlığına uygunluk (araclar/vurgu.py) — metni doğru okuyan adaylar arasında seçim ölçütü
             vp = ol.olc(np.frombuffer(w16, np.float32).copy(), metin) if sk >= 0.999 else {"puan": 0.0, "sorunlar": []}

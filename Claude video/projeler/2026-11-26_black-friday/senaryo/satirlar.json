@@ -1,9 +1,23 @@
 [
  {
   "k": "n1",
-  "metin": "Bu cuma Black Friday. Peki, neden kara cuma?",
+  "metin": "Bu cuma Black Friday. Peki neden kara cuma?",
   "yazim": "Bu cuma Blek Fraydey. Peki neden kara cuma?",
-  "ex": 0.6
+  "ex": 0.6,
+  "bitisik": [
+   [
+    "bu",
+    "cuma"
+   ],
+   [
+    "kara",
+    "cuma"
+   ]
+  ],
+  "yabanci": [
+   "black",
+   "friday"
+  ]
  },
  {
   "k": "n2",
@@ -19,12 +33,21 @@
   "k": "n4",
   "metin": "Asıl isim, altmışlı yıllarda Philadelphia polisinden geliyor.",
   "yazim": "Asıl isim, altmışlı yıllarda Filadelfiya polisinden geliyor.",
-  "ex": 0.55
+  "ex": 0.55,
+  "yabanci": [
+   "philadelphia"
+  ]
  },
  {
   "k": "n5",
   "metin": "Şükran Günü'nden sonraki trafik ve kalabalık kaosuna, kara cuma dediler.",
-  "ex": 0.55
+  "ex": 0.55,
+  "bitisik": [
+   [
+    "kara",
+    "cuma"
+   ]
+  ]
  },
  {
   "k": "n6",
@@ -45,7 +68,12 @@
   "k": "n9",
   "metin": "İngiltere'de bir tüketici örgütü, Black Friday'deki yüz yetmiş beş ürünü inceledi.",
   "yazim": "İngiltere'de bir tüketici örgütü, Blek Fraydey'deki yüz yetmiş beş ürünü inceledi.",
-  "ex": 0.5
+  "ex": 0.5,
+  "yabanci": [
+   "black",
+   "friday",
+   "friday'deki"
+  ]
  },
  {
   "k": "n10",
@@ -60,7 +88,13 @@
  {
   "k": "n12",
   "metin": "Türkiye'de adı Efsane Cuma. Kuralı da belli.",
-  "ex": 0.5
+  "ex": 0.5,
+  "bitisik": [
+   [
+    "efsane",
+    "cuma"
+   ]
+  ]
  },
  {
   "k": "n13",

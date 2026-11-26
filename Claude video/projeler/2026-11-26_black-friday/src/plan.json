@@ -2,96 +2,96 @@
  "vo": [
   {
    "k": "n1",
-   "metin": "Bu cuma Black Friday. Peki, neden kara cuma?",
+   "metin": "Bu cuma Black Friday. Peki neden kara cuma?",
    "bas": 0.12,
-   "son": 2.999
+   "son": 2.464
   },
   {
    "k": "n2",
    "metin": "Çoğu kişi, mağazaların zarardan kâra geçtiği gün sanır.",
-   "bas": 3.149,
-   "son": 6.126
+   "bas": 2.614,
+   "son": 5.591
   },
   {
    "k": "n3",
    "metin": "Ama bu açıklama ilk kez seksenli yıllarda ortaya çıktı.",
-   "bas": 6.226,
-   "son": 9.067
+   "bas": 5.691,
+   "son": 8.532
   },
   {
    "k": "n4",
    "metin": "Asıl isim, altmışlı yıllarda Philadelphia polisinden geliyor.",
-   "bas": 9.247,
-   "son": 12.386
+   "bas": 8.712,
+   "son": 11.851
   },
   {
    "k": "n5",
    "metin": "Şükran Günü'nden sonraki trafik ve kalabalık kaosuna, kara cuma dediler.",
-   "bas": 12.486,
-   "son": 16.28
+   "bas": 11.951,
+   "son": 15.745
   },
   {
    "k": "n6",
    "metin": "Bugün ise dev bir ekonomi.",
-   "bas": 16.48,
-   "son": 18.016
+   "bas": 15.945,
+   "son": 17.481
   },
   {
    "k": "n7",
    "metin": "Geçen yıl Amerika'da sadece o gün, internetten on bir virgül sekiz milyar dolar harcandı.",
-   "bas": 18.116,
-   "son": 21.964
+   "bas": 17.581,
+   "son": 21.429
   },
   {
    "k": "n8",
    "metin": "Peki, indirimler gerçek mi?",
-   "bas": 22.184,
-   "son": 23.739
+   "bas": 21.649,
+   "son": 23.204
   },
   {
    "k": "n9",
    "metin": "İngiltere'de bir tüketici örgütü, Black Friday'deki yüz yetmiş beş ürünü inceledi.",
-   "bas": 23.889,
-   "son": 28.204
+   "bas": 23.354,
+   "son": 27.669
   },
   {
    "k": "n10",
    "metin": "Hepsi, yılın başka bir zamanında aynı fiyata ya da daha ucuza satılmıştı.",
-   "bas": 28.304,
-   "son": 32.237
+   "bas": 27.769,
+   "son": 31.702
   },
   {
    "k": "n11",
    "metin": "İsveç'te ise izlenen ürünlerin yaklaşık yüzde otuzunun fiyatı, kampanyadan önce yükseldi.",
-   "bas": 32.337,
-   "son": 37.008
+   "bas": 31.802,
+   "son": 36.473
   },
   {
    "k": "n12",
    "metin": "Türkiye'de adı Efsane Cuma. Kuralı da belli.",
-   "bas": 37.228,
-   "son": 39.692
+   "bas": 36.693,
+   "son": 39.157
   },
   {
    "k": "n13",
    "metin": "İndirimden önceki fiyat, son on günün en düşük fiyatı olmalı.",
-   "bas": 39.792,
-   "son": 43.001
+   "bas": 39.257,
+   "son": 42.466
   },
   {
    "k": "n14",
    "metin": "Yani taktik basit: istediğin ürünün fiyatını şimdiden takip et.",
-   "bas": 43.201,
-   "son": 46.342
+   "bas": 42.666,
+   "son": 45.807
   },
   {
    "k": "n15",
    "metin": "Alışverişin perde arkası için, beni de takip et.",
-   "bas": 46.542,
-   "son": 48.918
+   "bas": 46.007,
+   "son": 48.383
   }
  ],
- "bitis": 49.62,
+ "bitis": 49.08,
  "ses": "ses.wav",
- "takipTik": 48.38
+ "takipTik": 47.85
 }

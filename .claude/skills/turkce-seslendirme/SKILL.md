@@ -15,6 +15,10 @@ bazı kelimelerde ünlüleri kaydırıyor, yumuşak g'yi ve vurguyu bozabiliyor.
 - Yabancı kelimeler: altyazıda asıl yazım, seslendirmede Türkçe okunuşu (sözlüğe ekle): ör. "dropshipping" → "dropşiping".
 - Özel isim ekleri kesme işaretiyle: "Ahmet'in". Tireli kelimeler tireli: "e-ticaret".
 - Bir kelime sürekli bozuluyorsa cümle içindeki yerini değiştir (cümle sonuna almak vurguyu düzeltebilir) ya da cümleyi böl.
+- **Tamlamalar tek parça okunur** ("bu cuma", "kara cuma", "Efsane Cuma", "Şükran Günü"): içine ASLA "..." ya da virgül koyma
+  (kullanıcı: "kara... cuma" → "cuma kara, cuma" gibi duyuldu). Satıra `"bitisik": [["kara","cuma"],["bu","cuma"]]` ekle:
+  araç kelimeler arası sessizliği ölçer (wav2vec2 harf zamanları), 0,12 sn'den uzunsa adayı eler. Doğal okumada bu boşluk 0,04–0,08 sn.
+- İngilizce kelimelerde (Black Friday, Philadelphia) telaffuz puanı (Türkçe GOP) hep düşük çıkar: yanlış alarm. Whisper doğru duyuyorsa sorun yok.
 
 ## 2. Üret (otomatik denetimle)
 ```
