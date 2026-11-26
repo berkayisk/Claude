@@ -136,6 +136,13 @@ Her konu sayfası aynı merak zinciriyle ilerliyor, her blok bir **"Peki …?"**
 Üretim: `SES_REF=marka/sesler/<ad>_referans.wav SES_F0=<perde> python3 araclar/berkay_ses.py satirlar.json cikti/`
 (her ses ayrı çalıştırılır; örnek: `projeler/2026-11-24_ses-testi/uret.sh`). Telaffuz/vurgu denetimi aynı araçla yapılır.
 
+### ElevenLabs (26.11.2026 — Berkay Starter aldı; ortamdaki anahtar 19.01.2025 açılmış Starter hesabın)
+Starter: 40.000 karakter/ay, ticari lisans, hızlı ses klonlama, 10 ses hakkı. Kütüphane sesleri API'de doğrudan kullanılabiliyor (voice_id ile).
+Model: `eleven_multilingual_v2`, `language_code: "tr"`. Aday Türkçe sesler (karşılaştırma: `marka/sesler/elevenlabs_turkce_ses_karsilastirma.mp3`):
+K1 Gökçe Deniz `oPC5I9GKjMReiaM29gjY` · K2 Derya `NNn9dv8zq2kUo7d3JSGG` · K3 Belma `KbaseEXyT9EE0CQLEfbB` · K4 Eda Atlas `mBUB5zYuPwfVE6DTcEjf` ·
+K5 Duygu Eriş `MzfWWOj9g3sIKex1YFMV` · E1 Fatih Yıldırım `7VqWGAWwo2HMrylfKrcm` · E2 Doğa `IuRRIAcbQK5AQk1XevPj` · E3 Emrullah Uzun `DpEiQMnL9WxMsymCsjPY` ·
+E4 Kadir Kayışçı `j82ax9yhzfYwq9lDvRWL`. Seçilen ses: (Berkay seçecek)
+
 ### Dil inceliği (stil kuralı)
 - Uzman ağzından bile kesin değil: "…ile **ilgili olabilir**". Reçeteli tedavi kötülenmez; "ilacı bırak" mesajı verilmez.
 
