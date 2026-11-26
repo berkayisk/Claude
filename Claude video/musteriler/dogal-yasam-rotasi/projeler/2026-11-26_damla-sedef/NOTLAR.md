@@ -3,3 +3,4 @@
 - Kod: src/Video.tsx (geçiş sistemi: kaydırSol/kaydırYukarı/daire/zoom/sil/dönüş, GECIS=10 kare; harf harf başlık; sayaç; parçacıklar), src/cizim2.tsx (Elif, Govde+damlalar, Bakteri, Antikor, CiltKesit, Kisi, Takvim, Halka, KaynakKarti, Bogaz).
 - Zamanlama: python3 zaman_uret.py [ara_sn] (ses/*.wav → src/zaman.ts).
 - v1 (26.11): ciktilar/damla-sedef-v1.mp4, 50.3 sn, -14 LUFS. Ses: 13/13 telaffuz TAMAM; s13 'cildi' şüpheli → yeniden (TOHUM 8300); s03 bağlamda 'damla serif' duyuldu → yeniden (TOHUM 9100), bağlam kontrolü 2/2 'damla sedef'. Perde oranı x1.10.
+- v2 (26.11): Berkay 'Elif sesini kullanalım' → tüm satırlar ses=elif; 13/13 telaffuz TAMAM, bağlam kontrolü (0.18/0.3 sn) birebir; perde x0.958; ciktilar/damla-sedef-v2-elif.mp4, 49.1 sn. Anlatıcı sürümü ses_anlatici/ (git dışı).
