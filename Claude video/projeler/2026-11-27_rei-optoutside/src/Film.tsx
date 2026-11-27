@@ -359,12 +359,17 @@ const CEKIMLER: Cekim[] = [
 
 // ---------- altyazı (çekime göre konum; yüzü kapatmaz) ----------
 const VURGU = ["kapattı", "rei", "kooperatif", "black", "friday", "on", "yüz", "hepsi", "ücretli", "indirim", "dışarı", "neye", "otuz", "dokuz", "rekor", "cannes", "onuncu", "kapalı", "zarar", "milyon", "kurtarmaz", "hikâye", "takip"];
+// Instagram Reels güvenli bölgesi (1080x1920): üstte 250 px (profil/başlık), altta 420 px (açıklama, kullanıcı adı, müzik),
+// sağda 130 px (beğen/yorum/paylaş düğmeleri). Altyazı ve önemli yazılar bu kutunun içinde kalır: x 60–950, y 250–1500.
+export const GUVENLI = { ust: 250, alt: 1500, sol: 60, sag: 950 };
 const Altyazi: React.FC<{ t: number; y: number }> = ({ t, y }) => {
   const v = VOS.find((x) => t >= x.bas - 0.05 && t < x.son + 0.2);
   if (!v) return null;
   const ws = v.metin.split(" "), ilerleme = (t - v.bas) / Math.max(0.1, v.son - v.bas);
+  // istenen konum güvenli bölgeye kırpılır; alt yarıda ise blok alttan 1500'e hizalanır (satır sayısı ne olursa olsun taşmaz)
+  const konum: React.CSSProperties = y > 1250 ? { bottom: 1920 - GUVENLI.alt } : { top: Math.max(GUVENLI.ust, y) };
   return (
-    <div style={{ position: "absolute", top: y, left: 50, width: 980, textAlign: "center", lineHeight: 1.2 }}>
+    <div style={{ position: "absolute", ...konum, left: GUVENLI.sol, width: GUVENLI.sag - GUVENLI.sol, textAlign: "center", lineHeight: 1.2 }}>
       <span style={{ background: "rgba(10,12,22,0.55)", borderRadius: 18, padding: "6px 18px", boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }}>
         {ws.map((w, i) => {
           const yak = i / ws.length <= ilerleme + 0.02, temiz = w.toLocaleLowerCase("tr").replace(/[^a-zçğıöşü]/g, "");

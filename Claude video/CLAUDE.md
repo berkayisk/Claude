@@ -62,6 +62,7 @@ projeler/<proje>/
 - Stok B-roll: Mixkit (ücretsiz, ticari/reklam kullanımı serbest, anahtar gerekmez; ortamda mixkit.co + assets.mixkit.co izinli). Arama: `https://mixkit.co/free-stock-video/<konu>/`, dosya: `https://assets.mixkit.co/videos/<id>/<id>-720.mp4` (sadece 720p yatay). Şablonda `broll_video` olayı: bulanık arka + keskin çerçeve (top, yukseklik ayarlanır). Dosyalar `girdiler/broll/`.
 - Video konuşma bitince biter; sona sessiz kuyruk ekleme. Kapanış kartı son cümlede başlar, `son: tl + 0.5` ile son karede sönmez.
 - Yüzü yukarıda olan çekimlerde veri `kartY: 1060, altyaziY: 1440` ile kartlar göğüs hizasına alınır (ağız/yüz kapanmaz).
+- **Instagram güvenli bölgesi (1080x1920):** altyazı ve önemli yazılar x 60–950, y 250–1500 içinde kalır (üst 250 px profil/başlık, alt 420 px açıklama/kullanıcı adı/müzik, sağ 130 px düğmeler). Şablonda `GUVENLI` sabiti + `Altyazi` otomatik kırpar (alt yarıda istenirse blok alttan 1500'e hizalanır). Karakterin yüzünü altyazı bandına (≈1250–1500) koyma; yüz yakın planlarında karakteri yukarı al ya da altyazıyı üst bölgeye ver.
 
 ## earshot (ses efekti üretimi + sesi dinleme) — github.com/Leonxlnx/earshot
 - Kurulum: `pip install "earshot[mcp,measure] @ git+https://github.com/Leonxlnx/earshot"` (PyPI'deki `earshot` BAŞKA proje). Dinleme modelleri

@@ -5,7 +5,8 @@
 Uzun vadede trafiği Sıfırdan Satışa'ya taşır (biyografi linki + her 5–6 videoda bir yumuşak anma).
 **Üretim:** tamamen kodla (Remotion) + Berkay ses klonu. Rehber karakter = Berkay animasyonu (v5, `projeler/2026-11-25_satisin-arkasi-karakter/src/berkay.tsx`).
 **Format:** 25–35 sn, 9:16, hızlı anlatım (VO 1,18x), her satırda sahne değişimi + sanal kamera (zoom/kayma/dönüş), altyazı yüzü kapatmaz.
-Şablon proje: `projeler/2026-11-25_fiyat-99-99` (Film.tsx: CEKIMLER + kam; calisma/yap.py: plan + dudak + miks).
+Şablon proje: en güncel = `projeler/2026-11-27_rei-optoutside` (Film.tsx: CEKIMLER + kam + GUVENLI; calisma/yap.py: hizli + plan + dudak + miks).
+- **Instagram güvenli bölgesi (1080x1920):** altyazı ve önemli yazılar x 60–950, y 250–1500 içinde kalır (üst 250 px profil/başlık, alt 420 px açıklama/kullanıcı adı/müzik, sağ 130 px düğmeler). Şablonda `GUVENLI` sabiti + `Altyazi` otomatik kırpar (alt yarıda istenirse blok alttan 1500'e hizalanır). Karakterin yüzünü altyazı bandına (≈1250–1500) koyma; yüz yakın planlarında karakteri yukarı al ya da altyazıyı üst bölgeye ver.
 
 ## Profil
 - **Kullanıcı adı:** eticaretteperdearkasi

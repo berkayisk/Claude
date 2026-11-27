@@ -73,3 +73,5 @@ Bu dosya @sifirdansatisa içindir. Perde arkası hesabında kurallar farklı; o 
 - İçerik: alışverişin/e-ticaretin perde arkası, değer veren bilgi, **satış yok**; uzun vadede Sıfırdan Satışa'ya trafik.
 - Kalıp: soruyla kanca ("Fiyatlar neden hep doksan dokuz doksan dokuz?", "Peki neden kara cuma?") → yaygın inanış → kaynaklı gerçek/araştırma → pratik sonuç → kapanış "Alışverişin perde arkası için (beni de) takip et."
 - Her rakamın doğrulanmış kaynağı olur (bkz. black-friday `senaryo/SENARYO.md`). Sayılar seslendirmede yazıyla.
+- Kitle: SATAN taraf (satıcılar / satıcı olmak isteyenler); gerçek şirket hikâyeleri + sayısal veri.
+- **Instagram güvenli bölgesi (1080x1920):** altyazı ve önemli yazılar x 60–950, y 250–1500 içinde kalır (üst 250 px profil/başlık, alt 420 px açıklama/kullanıcı adı/müzik, sağ 130 px düğmeler). Şablonda `GUVENLI` sabiti + `Altyazi` otomatik kırpar (alt yarıda istenirse blok alttan 1500'e hizalanır). Karakterin yüzünü altyazı bandına (≈1250–1500) koyma; yüz yakın planlarında karakteri yukarı al ya da altyazıyı üst bölgeye ver.
