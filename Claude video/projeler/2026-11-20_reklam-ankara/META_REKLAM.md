@@ -1,54 +1,55 @@
-# Reklam ve paylaşım metinleri: Mağazanolsun Ankara (6 Aralık 2026)
+# Reklam ve paylaşım metinleri: Ankara yeni nesil e-ticaret etkinliği (6 Aralık 2026)
 
-Kaynak: kullanıcının etkinlik metni (NOTLAR.md). Metinde olmayan vaat eklenmedi (ücretsiz eğitim, mentor vb. Eskişehir'e aitti).
-Kayıt yöntemi netleşmedi → çağrılar "kayıt linki / mesaj" iki seçenekli yazıldı; kullanılacak olanı bırak.
+Kaynak: kullanıcının etkinlik metni (NOTLAR.md). Kurallar: `marka/sifirdan-satisa/instagram/voice.md`
+→ marka/firma adı YOK (platform = "yeni nesil model", "tek panelden yönetilen sistem"), "sen" hitabı, 3 hashtag,
+etkinlik çağrısı "Yerini ayırtmak için mesaj at", kişisel rakam yok, satış klişesi yok. Metinde olmayan vaat eklenmedi.
 
-## Metin A: Problemle açılan (önerilen)
-Dijital dünyada kendi yerini almak istiyor ama nereden başlayacağını bilmiyor musun? 🤔
+## Metin A: Problemle açılan (önerilen, Meta reklam ana metni)
+E-ticarete başlamak istiyorsun ama nereden başlayacağını bilmiyor musun? 🤔
 
-Mağazanolsun yeniden Ankara'da! 6 Aralık'ta yeni nesil e-ticareti birlikte keşfediyoruz.
+Ankara, yeniden buluşuyoruz! 6 Aralık'ta yeni nesil e-ticareti yüz yüze anlatıyoruz:
 
-✅ Geleneksel ve yeni nesil e-ticaret modellerini karşılaştır
-✅ Sosyal medyanın gücünü işine nasıl taşıyacağını öğren
-✅ Kendi alan adınla dijital dünyada yerini almanın yollarını gör
-✅ Mağazanolsun ekosisteminin sunduğu imkânları yakından tanı
+1️⃣ Geleneksel model ile yeni nesil modelin farkı
+2️⃣ Sosyal medyanın gücünü işine nasıl taşırsın
+3️⃣ Kendi alan adınla kendi mağazanı kurmanın yolu
+4️⃣ Tek panelden yönetilen sistemin sana sunduğu imkânlar
 
 📅 6 Aralık 2026 Pazar
 🕑 14.00 – 17.00
 📍 COZONE ODTÜ Teknokent İnovasyon Merkezi, Çankaya
 
-🎟️ Kontenjan sadece 100 kişi · Katılım 250 TL
-👉 Yerini ayırtmak için hemen kaydol! [kayıt linki / "Mesaj gönder"]
+🎟️ Kontenjan 100 kişi · Katılım 250 TL
+👇 Yerini ayırtmak için mesaj at.
 
-## Metin B: Kısa (Reels / Story)
-Ankara, Mağazanolsun yeniden sizinle! 🚀
+## Metin B: Kısa (Reels / Story reklamı)
+Ankara, yeniden seninleyiz 📍
 
-Geleneksel e-ticaret mi, yeni nesil e-ticaret mi? Farkı 6 Aralık'ta ODTÜ Teknokent'te anlatıyoruz.
+Geleneksel e-ticaret mi, yeni nesil e-ticaret mi? Farkını 6 Aralık'ta ODTÜ Teknokent'te babalar gibi anlatıyoruz.
 
 📅 6 Aralık Pazar · 14.00–17.00
 🎟️ 100 kişilik kontenjan · 250 TL
 
-Kaydını şimdi oluştur 👇
+Yerini ayırtmak için mesaj at 👇
 
-## Metin C: Aciliyet / kontenjan açısı
-Sadece 100 kişi. ⏳
+## Metin C: Kontenjan açısı
+100 kişi. Fazlası yok. ⏳
 
-6 Aralık'ta Ankara'da, yeni nesil e-ticaretin sunduğu fırsatları konuşuyoruz: geleneksel modelle farkı, sosyal medyanın gücü, kendi alan adınla dijital mağaza ve Mağazanolsun ekosistemi.
+6 Aralık'ta Ankara'dayız. Geleneksel modelle yeni nesil modelin farkını, sosyal medyayla nasıl satış yapılacağını ve kendi alan adınla mağaza kurmanın yolunu konuşacağız. Sorularını getir, cevabını yerinde al.
 
-Ankara'da daha önce yaptığımız buluşmanın ardından yeniden sizinleyiz. Bu kez kontenjan sınırlı.
+Ankara'daki ilk buluşmadan sonra yeniden geliyoruz, bu kez kontenjan sınırlı.
 
 📅 6 Aralık 2026 Pazar, 14.00 – 17.00
 📍 COZONE ODTÜ Teknokent İnovasyon Merkezi
 🎟️ Katılım 250 TL
 
-Yerin dolmadan kaydını oluştur 👉
+Yerini ayırtmak için mesaj at 💬
 
-## Metin D: Organik paylaşım (Instagram / LinkedIn, "siz" dili, tam bilgi)
-📢 ANKARA, MAĞAZANOLSUN YENİDEN SİZİNLE!
+## Metin D: Organik Instagram paylaşımı (açıklama)
+Ankara, yeniden buluşuyoruz! 📢
 
-Dijital dünyada kendi yerinizi almak istiyor ama nereden başlayacağınızı bilmiyor musunuz?
+Dijital dünyada kendi yerini almak istiyor ama nereden başlayacağını bilmiyorsan, bu buluşma senin için.
 
-Mağazanolsun Yeni Nesil E-Ticaret Etkinliği'nde geleneksel ve yeni nesil e-ticaret modellerini karşılaştıracak, sosyal medyanın gücünü işinize taşımanın ve kendi alan adınızla dijital dünyada yerinizi almanın yollarını konuşacağız. Mağazanolsun ekosisteminin sunduğu imkânları da yakından tanıyacaksınız.
+Geleneksel ve yeni nesil e-ticaret modellerini yan yana koyacağız. Sosyal medyanın gücünü işine nasıl taşıyacağını, kendi alan adınla kendi yolunu nasıl çizeceğini adım adım konuşacağız.
 
 📅 6 Aralık 2026 Pazar
 🕑 14.00 – 17.00
@@ -56,31 +57,30 @@ Mağazanolsun Yeni Nesil E-Ticaret Etkinliği'nde geleneksel ve yeni nesil e-tic
 📌 Mustafa Kemal Mah., Bilişim İnovasyon Merkezi, ODTÜ Teknokent 280, D:G, 06510 Çankaya/Ankara
 
 🎟️ Kontenjan 100 kişiyle sınırlı · Katılım 250 TL
-👉 Yerinizi almak için kaydınızı hemen oluşturun: [kayıt linki]
+👇 Yerini ayırtmak için mesaj at.
 
-Ankara'da görüşmek üzere! 👋
+Ankara'da görüşmek üzere 👋
 
-#ankara #eticaret #yenineslieticaret #mağazanolsun #sıfırdansatışa #girişimcilik #odtüteknokent #etkinlik
+#eticaret #girişimcilik #sıfırdansatışa
 
-## Story metinleri (3 kare)
-1. ANKARA, YENİDEN SİZİNLEYİZ 📍 / 6 Aralık · ODTÜ Teknokent
-2. Geleneksel mi, yeni nesil mi? / E-ticarette farkı yerinde öğren
-3. 100 kişilik kontenjan · 250 TL / 👉 [Bağlantı çıkartması: Kaydol]
+## Story (3 kare)
+1. ANKARA, YENİDEN BURADAYIZ 📍 / 6 Aralık · ODTÜ Teknokent
+2. Geleneksel mi, yeni nesil mi? / Farkı yerinde öğren
+3. 100 kişilik kontenjan · 250 TL / 👉 Yerini ayırtmak için mesaj at (DM çıkartması)
 
 ## WhatsApp / DM duyurusu
-Merhaba! 👋 Mağazanolsun 6 Aralık Pazar günü yeniden Ankara'da.
-Yeni nesil e-ticareti, geleneksel modelle farkını ve kendi alan adınla dijital mağazanın yollarını konuşacağız.
+Merhaba! 👋 6 Aralık Pazar günü yeniden Ankara'dayız.
+Geleneksel model ile yeni nesil e-ticaretin farkını, sosyal medyayla satışı ve kendi alan adınla mağaza kurmayı konuşacağız.
 🕑 14.00–17.00 · 📍 COZONE ODTÜ Teknokent İnovasyon Merkezi
 🎟️ 100 kişilik kontenjan, katılım 250 TL.
-Kayıt için: [link]
+Yer ayırtmak için bu mesaja yanıt vermen yeterli.
 
 ## Meta reklam alanları
 **Başlık (40 karakter altı):**
 - Ankara E-Ticaret Buluşması · 6 Aralık
 - Yeni Nesil E-Ticaret · ODTÜ Teknokent
-- 100 Kişilik Kontenjan · Hemen Kaydol
+- 100 Kişilik Kontenjan · 250 TL
 
 **Açıklama:** 6 Aralık Pazar · 14.00 · COZONE ODTÜ Teknokent
-
-**Buton:** Kayıt linki varsa "Kaydol" (amaç: Trafik/Dönüşüm); mesajla kayıt alınacaksa "Mesaj Gönder" (amaç: Mesajlar); form için "Potansiyel Müşteri + Kaydol".
-**Hedefleme önerisi:** Ankara + 40 km, 20–45 yaş, ilgi: e-ticaret, girişimcilik, online satış, küçük işletme, Shopify/Trendyol satıcılığı.
+**Buton:** Mesaj Gönder (amaç: Mesajlar). Form kullanılacaksa: Potansiyel Müşteri + Kaydol.
+**Hedefleme önerisi:** Ankara + 40 km, 20–45 yaş; ilgi: e-ticaret, girişimcilik, online satış, küçük işletme.
