@@ -1,0 +1,2285 @@
+{
+ "a": [
+  {
+   "start": 0.11,
+   "end": 1.79,
+   "text": "Merhabalar, Berk Ayşık ben.",
+   "words": [
+    {
+     "w": " Merhabalar,",
+     "s": 0.11,
+     "e": 0.91
+    },
+    {
+     "w": " Berk",
+     "s": 1.09,
+     "e": 1.35
+    },
+    {
+     "w": " Ayşık",
+     "s": 1.35,
+     "e": 1.61
+    },
+    {
+     "w": " ben.",
+     "s": 1.61,
+     "e": 1.79
+    }
+   ]
+  },
+  {
+   "start": 2.35,
+   "end": 4.53,
+   "text": "Öğrenciyim, Atılım Hukuk 4. sınıf öğrencisiyim.",
+   "words": [
+    {
+     "w": " Öğrenciyim,",
+     "s": 2.35,
+     "e": 2.75
+    },
+    {
+     "w": " Atılım",
+     "s": 2.89,
+     "e": 3.15
+    },
+    {
+     "w": " Hukuk",
+     "s": 3.15,
+     "e": 3.37
+    },
+    {
+     "w": " 4.",
+     "s": 3.37,
+     "e": 3.51
+    },
+    {
+     "w": " sınıf",
+     "s": 3.71,
+     "e": 3.95
+    },
+    {
+     "w": " öğrencisiyim.",
+     "s": 3.95,
+     "e": 4.53
+    }
+   ]
+  },
+  {
+   "start": 4.91,
+   "end": 8.63,
+   "text": "Yaklaşık bir senedir Mağazan Olsun içerisinde aktif olarak bulunuyorum.",
+   "words": [
+    {
+     "w": " Yaklaşık",
+     "s": 4.91,
+     "e": 5.51
+    },
+    {
+     "w": " bir",
+     "s": 5.51,
+     "e": 5.63
+    },
+    {
+     "w": " senedir",
+     "s": 5.63,
+     "e": 6.15
+    },
+    {
+     "w": " Mağazan",
+     "s": 6.15,
+     "e": 6.83
+    },
+    {
+     "w": " Olsun",
+     "s": 6.83,
+     "e": 7.03
+    },
+    {
+     "w": " içerisinde",
+     "s": 7.03,
+     "e": 7.55
+    },
+    {
+     "w": " aktif",
+     "s": 7.55,
+     "e": 7.85
+    },
+    {
+     "w": " olarak",
+     "s": 7.85,
+     "e": 8.09
+    },
+    {
+     "w": " bulunuyorum.",
+     "s": 8.09,
+     "e": 8.63
+    }
+   ]
+  },
+  {
+   "start": 9.15,
+   "end": 10.45,
+   "text": "Aktif bir mağaza sahibiyim.",
+   "words": [
+    {
+     "w": " Aktif",
+     "s": 9.15,
+     "e": 9.51
+    },
+    {
+     "w": " bir",
+     "s": 9.51,
+     "e": 9.61
+    },
+    {
+     "w": " mağaza",
+     "s": 9.61,
+     "e": 9.93
+    },
+    {
+     "w": " sahibiyim.",
+     "s": 9.93,
+     "e": 10.45
+    }
+   ]
+  },
+  {
+   "start": 10.65,
+   "end": 14.11,
+   "text": "Burada hem mağaza sahibi, hem partner hem de tedarikçi olarak bulunuyorum.",
+   "words": [
+    {
+     "w": " Burada",
+     "s": 10.65,
+     "e": 10.81
+    },
+    {
+     "w": " hem",
+     "s": 10.81,
+     "e": 10.95
+    },
+    {
+     "w": " mağaza",
+     "s": 10.95,
+     "e": 11.23
+    },
+    {
+     "w": " sahibi,",
+     "s": 11.23,
+     "e": 11.67
+    },
+    {
+     "w": " hem",
+     "s": 11.83,
+     "e": 11.93
+    },
+    {
+     "w": " partner",
+     "s": 11.93,
+     "e": 12.31
+    },
+    {
+     "w": " hem",
+     "s": 12.31,
+     "e": 12.81
+    },
+    {
+     "w": " de",
+     "s": 12.81,
+     "e": 12.95
+    },
+    {
+     "w": " tedarikçi",
+     "s": 12.95,
+     "e": 13.45
+    },
+    {
+     "w": " olarak",
+     "s": 13.45,
+     "e": 13.67
+    },
+    {
+     "w": " bulunuyorum.",
+     "s": 13.67,
+     "e": 14.11
+    }
+   ]
+  },
+  {
+   "start": 14.21,
+   "end": 18.95,
+   "text": "Mağazan Olsun'un sağladığı her fırsattan elimizden geldiğince yararlanmaya çalışıyoruz.",
+   "words": [
+    {
+     "w": " Mağazan",
+     "s": 14.21,
+     "e": 14.51
+    },
+    {
+     "w": " Olsun",
+     "s": 14.51,
+     "e": 14.73
+    },
+    {
+     "w": "'un",
+     "s": 14.73,
+     "e": 14.87
+    },
+    {
+     "w": " sağladığı",
+     "s": 14.87,
+     "e": 15.35
+    },
+    {
+     "w": " her",
+     "s": 15.35,
+     "e": 15.55
+    },
+    {
+     "w": " fırsattan",
+     "s": 15.55,
+     "e": 16.07
+    },
+    {
+     "w": " elimizden",
+     "s": 16.07,
+     "e": 17.43
+    },
+    {
+     "w": " geldiğince",
+     "s": 17.43,
+     "e": 17.87
+    },
+    {
+     "w": " yararlanmaya",
+     "s": 17.87,
+     "e": 18.41
+    },
+    {
+     "w": " çalışıyoruz.",
+     "s": 18.41,
+     "e": 18.95
+    }
+   ]
+  },
+  {
+   "start": 19.53,
+   "end": 24.09,
+   "text": "Mağazan Olsun'la tanışmadan önce stabil olarak öğrencilik hayatıma devam ediyordum.",
+   "words": [
+    {
+     "w": " Mağazan",
+     "s": 19.53,
+     "e": 20.13
+    },
+    {
+     "w": " Olsun",
+     "s": 20.13,
+     "e": 20.37
+    },
+    {
+     "w": "'la",
+     "s": 20.37,
+     "e": 20.47
+    },
+    {
+     "w": " tanışmadan",
+     "s": 20.47,
+     "e": 20.97
+    },
+    {
+     "w": " önce",
+     "s": 20.97,
+     "e": 21.25
+    },
+    {
+     "w": " stabil",
+     "s": 21.25,
+     "e": 22.11
+    },
+    {
+     "w": " olarak",
+     "s": 22.11,
+     "e": 22.35
+    },
+    {
+     "w": " öğrencilik",
+     "s": 22.35,
+     "e": 22.93
+    },
+    {
+     "w": " hayatıma",
+     "s": 22.93,
+     "e": 23.39
+    },
+    {
+     "w": " devam",
+     "s": 23.39,
+     "e": 23.71
+    },
+    {
+     "w": " ediyordum.",
+     "s": 23.71,
+     "e": 24.09
+    }
+   ]
+  },
+  {
+   "start": 24.25,
+   "end": 28.37,
+   "text": "Tabii bu özel bir üniversite öğrencisi olmanın da gerçekten zorlukları var.",
+   "words": [
+    {
+     "w": " Tabii",
+     "s": 24.25,
+     "e": 24.39
+    },
+    {
+     "w": " bu",
+     "s": 24.39,
+     "e": 24.59
+    },
+    {
+     "w": " özel",
+     "s": 24.59,
+     "e": 25.13
+    },
+    {
+     "w": " bir",
+     "s": 25.13,
+     "e": 25.35
+    },
+    {
+     "w": " üniversite",
+     "s": 25.35,
+     "e": 25.95
+    },
+    {
+     "w": " öğrencisi",
+     "s": 25.95,
+     "e": 26.35
+    },
+    {
+     "w": " olmanın",
+     "s": 26.35,
+     "e": 26.79
+    },
+    {
+     "w": " da",
+     "s": 26.79,
+     "e": 26.89
+    },
+    {
+     "w": " gerçekten",
+     "s": 26.89,
+     "e": 27.57
+    },
+    {
+     "w": " zorlukları",
+     "s": 27.57,
+     "e": 28.19
+    },
+    {
+     "w": " var.",
+     "s": 28.19,
+     "e": 28.37
+    }
+   ]
+  },
+  {
+   "start": 28.37,
+   "end": 35.65,
+   "text": "Ve aslında buradaki temel sebep bir mağaza sahibi olmamda ve burada satıcı olmak istememdeki temel sebep başlangıçta buydu.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 28.37,
+     "e": 28.71
+    },
+    {
+     "w": " aslında",
+     "s": 28.71,
+     "e": 29.29
+    },
+    {
+     "w": " buradaki",
+     "s": 29.29,
+     "e": 29.65
+    },
+    {
+     "w": " temel",
+     "s": 29.65,
+     "e": 30.03
+    },
+    {
+     "w": " sebep",
+     "s": 30.03,
+     "e": 30.39
+    },
+    {
+     "w": " bir",
+     "s": 30.39,
+     "e": 31.09
+    },
+    {
+     "w": " mağaza",
+     "s": 31.09,
+     "e": 31.37
+    },
+    {
+     "w": " sahibi",
+     "s": 31.37,
+     "e": 31.73
+    },
+    {
+     "w": " olmamda",
+     "s": 31.73,
+     "e": 32.11
+    },
+    {
+     "w": " ve",
+     "s": 32.11,
+     "e": 32.23
+    },
+    {
+     "w": " burada",
+     "s": 32.23,
+     "e": 32.47
+    },
+    {
+     "w": " satıcı",
+     "s": 32.47,
+     "e": 33.15
+    },
+    {
+     "w": " olmak",
+     "s": 33.15,
+     "e": 33.35
+    },
+    {
+     "w": " istememdeki",
+     "s": 33.35,
+     "e": 33.93
+    },
+    {
+     "w": " temel",
+     "s": 33.93,
+     "e": 34.35
+    },
+    {
+     "w": " sebep",
+     "s": 34.35,
+     "e": 34.65
+    },
+    {
+     "w": " başlangıçta",
+     "s": 34.65,
+     "e": 35.31
+    },
+    {
+     "w": " buydu.",
+     "s": 35.31,
+     "e": 35.65
+    }
+   ]
+  },
+  {
+   "start": 36.03,
+   "end": 40.41,
+   "text": "Ama daha sonrasında çok başka yerlere gidebileceğini de gördüm bu işin.",
+   "words": [
+    {
+     "w": " Ama",
+     "s": 36.03,
+     "e": 36.67
+    },
+    {
+     "w": " daha",
+     "s": 36.67,
+     "e": 36.85
+    },
+    {
+     "w": " sonrasında",
+     "s": 36.85,
+     "e": 37.37
+    },
+    {
+     "w": " çok",
+     "s": 37.37,
+     "e": 37.73
+    },
+    {
+     "w": " başka",
+     "s": 37.73,
+     "e": 38.09
+    },
+    {
+     "w": " yerlere",
+     "s": 38.09,
+     "e": 38.57
+    },
+    {
+     "w": " gidebileceğini",
+     "s": 38.57,
+     "e": 39.21
+    },
+    {
+     "w": " de",
+     "s": 39.21,
+     "e": 39.31
+    },
+    {
+     "w": " gördüm",
+     "s": 39.31,
+     "e": 40.03
+    },
+    {
+     "w": " bu",
+     "s": 40.03,
+     "e": 40.17
+    },
+    {
+     "w": " işin.",
+     "s": 40.17,
+     "e": 40.41
+    }
+   ]
+  },
+  {
+   "start": 40.55,
+   "end": 43.19,
+   "text": "Yani bir açlık düşüncesiyle girdim bu işte.",
+   "words": [
+    {
+     "w": " Yani",
+     "s": 40.55,
+     "e": 40.79
+    },
+    {
+     "w": " bir",
+     "s": 40.79,
+     "e": 40.99
+    },
+    {
+     "w": " açlık",
+     "s": 40.99,
+     "e": 41.57
+    },
+    {
+     "w": " düşüncesiyle",
+     "s": 41.57,
+     "e": 42.29
+    },
+    {
+     "w": " girdim",
+     "s": 42.29,
+     "e": 42.81
+    },
+    {
+     "w": " bu",
+     "s": 42.81,
+     "e": 42.95
+    },
+    {
+     "w": " işte.",
+     "s": 42.95,
+     "e": 43.19
+    }
+   ]
+  },
+  {
+   "start": 43.67,
+   "end": 47.97,
+   "text": "Şimdi artık hem tedarikçilik yapıyoruz, hem partnerlik yapıyoruz, hem de mağaza sahibiyiz.",
+   "words": [
+    {
+     "w": " Şimdi",
+     "s": 43.67,
+     "e": 43.79
+    },
+    {
+     "w": " artık",
+     "s": 43.79,
+     "e": 44.03
+    },
+    {
+     "w": " hem",
+     "s": 44.03,
+     "e": 44.27
+    },
+    {
+     "w": " tedarikçilik",
+     "s": 44.27,
+     "e": 44.93
+    },
+    {
+     "w": " yapıyoruz,",
+     "s": 44.93,
+     "e": 45.35
+    },
+    {
+     "w": " hem",
+     "s": 45.49,
+     "e": 45.67
+    },
+    {
+     "w": " partnerlik",
+     "s": 45.67,
+     "e": 46.21
+    },
+    {
+     "w": " yapıyoruz,",
+     "s": 46.21,
+     "e": 46.67
+    },
+    {
+     "w": " hem",
+     "s": 46.85,
+     "e": 47.05
+    },
+    {
+     "w": " de",
+     "s": 47.05,
+     "e": 47.19
+    },
+    {
+     "w": " mağaza",
+     "s": 47.19,
+     "e": 47.49
+    },
+    {
+     "w": " sahibiyiz.",
+     "s": 47.49,
+     "e": 47.97
+    }
+   ]
+  },
+  {
+   "start": 48.05,
+   "end": 50.21,
+   "text": "Burada artık bu ailenin bir ferdi olarak bulunuyoruz.",
+   "words": [
+    {
+     "w": " Burada",
+     "s": 48.05,
+     "e": 48.15
+    },
+    {
+     "w": " artık",
+     "s": 48.15,
+     "e": 48.37
+    },
+    {
+     "w": " bu",
+     "s": 48.37,
+     "e": 48.53
+    },
+    {
+     "w": " ailenin",
+     "s": 48.53,
+     "e": 48.91
+    },
+    {
+     "w": " bir",
+     "s": 48.91,
+     "e": 49.07
+    },
+    {
+     "w": " ferdi",
+     "s": 49.07,
+     "e": 49.39
+    },
+    {
+     "w": " olarak",
+     "s": 49.39,
+     "e": 49.65
+    },
+    {
+     "w": " bulunuyoruz.",
+     "s": 49.65,
+     "e": 50.21
+    }
+   ]
+  },
+  {
+   "start": 50.77,
+   "end": 52.95,
+   "text": "Bir yıllık bir sürede bu noktaya geldi.",
+   "words": [
+    {
+     "w": " Bir",
+     "s": 50.77,
+     "e": 51.07
+    },
+    {
+     "w": " yıllık",
+     "s": 51.07,
+     "e": 51.43
+    },
+    {
+     "w": " bir",
+     "s": 51.43,
+     "e": 51.61
+    },
+    {
+     "w": " sürede",
+     "s": 51.61,
+     "e": 51.99
+    },
+    {
+     "w": " bu",
+     "s": 51.99,
+     "e": 52.23
+    },
+    {
+     "w": " noktaya",
+     "s": 52.23,
+     "e": 52.63
+    },
+    {
+     "w": " geldi.",
+     "s": 52.63,
+     "e": 52.95
+    }
+   ]
+  },
+  {
+   "start": 53.17,
+   "end": 56.87,
+   "text": "Bu bir yıl içerisinde ilk üç ayı hazırlık süreci olarak geçirdim.",
+   "words": [
+    {
+     "w": " Bu",
+     "s": 53.17,
+     "e": 53.29
+    },
+    {
+     "w": " bir",
+     "s": 53.29,
+     "e": 53.45
+    },
+    {
+     "w": " yıl",
+     "s": 53.45,
+     "e": 53.61
+    },
+    {
+     "w": " içerisinde",
+     "s": 53.61,
+     "e": 54.23
+    },
+    {
+     "w": " ilk",
+     "s": 54.23,
+     "e": 54.73
+    },
+    {
+     "w": " üç",
+     "s": 54.73,
+     "e": 54.93
+    },
+    {
+     "w": " ayı",
+     "s": 54.93,
+     "e": 55.29
+    },
+    {
+     "w": " hazırlık",
+     "s": 55.29,
+     "e": 55.85
+    },
+    {
+     "w": " süreci",
+     "s": 55.85,
+     "e": 56.15
+    },
+    {
+     "w": " olarak",
+     "s": 56.15,
+     "e": 56.39
+    },
+    {
+     "w": " geçirdim.",
+     "s": 56.39,
+     "e": 56.87
+    }
+   ]
+  },
+  {
+   "start": 56.87,
+   "end": 58.93,
+   "text": "Ve gerçekten ciddi bir hazırlık yaptım.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 56.87,
+     "e": 57.03
+    },
+    {
+     "w": " gerçekten",
+     "s": 57.03,
+     "e": 57.51
+    },
+    {
+     "w": " ciddi",
+     "s": 57.51,
+     "e": 57.95
+    },
+    {
+     "w": " bir",
+     "s": 57.95,
+     "e": 58.09
+    },
+    {
+     "w": " hazırlık",
+     "s": 58.09,
+     "e": 58.53
+    },
+    {
+     "w": " yaptım.",
+     "s": 58.53,
+     "e": 58.93
+    }
+   ]
+  },
+  {
+   "start": 59.11,
+   "end": 60.37,
+   "text": "İyi bir şekilde hazırlandım.",
+   "words": [
+    {
+     "w": " İyi",
+     "s": 59.11,
+     "e": 59.41
+    },
+    {
+     "w": " bir",
+     "s": 59.41,
+     "e": 59.51
+    },
+    {
+     "w": " şekilde",
+     "s": 59.51,
+     "e": 59.81
+    },
+    {
+     "w": " hazırlandım.",
+     "s": 59.81,
+     "e": 60.37
+    }
+   ]
+  },
+  {
+   "start": 60.47,
+   "end": 64.59,
+   "text": "Bu üç ay sonrasında artık aktif olarak hem müşterilerle iletişim arttırdım,",
+   "words": [
+    {
+     "w": " Bu",
+     "s": 60.47,
+     "e": 60.63
+    },
+    {
+     "w": " üç",
+     "s": 60.63,
+     "e": 60.79
+    },
+    {
+     "w": " ay",
+     "s": 60.79,
+     "e": 60.93
+    },
+    {
+     "w": " sonrasında",
+     "s": 60.93,
+     "e": 61.59
+    },
+    {
+     "w": " artık",
+     "s": 61.59,
+     "e": 62.05
+    },
+    {
+     "w": " aktif",
+     "s": 62.05,
+     "e": 62.49
+    },
+    {
+     "w": " olarak",
+     "s": 62.49,
+     "e": 62.73
+    },
+    {
+     "w": " hem",
+     "s": 62.73,
+     "e": 63.05
+    },
+    {
+     "w": " müşterilerle",
+     "s": 63.05,
+     "e": 63.65
+    },
+    {
+     "w": " iletişim",
+     "s": 63.65,
+     "e": 64.03
+    },
+    {
+     "w": " arttırdım,",
+     "s": 64.03,
+     "e": 64.59
+    }
+   ]
+  },
+  {
+   "start": 64.67,
+   "end": 71.13,
+   "text": "hem de buradaki arkadaşlarımızla paslaşarak, birbirimizle daha çok fikir alışverişi yaparak bu işi bu noktaya getirdik.",
+   "words": [
+    {
+     "w": " hem",
+     "s": 64.67,
+     "e": 65.35
+    },
+    {
+     "w": " de",
+     "s": 65.35,
+     "e": 65.49
+    },
+    {
+     "w": " buradaki",
+     "s": 65.49,
+     "e": 65.89
+    },
+    {
+     "w": " arkadaşlarımızla",
+     "s": 65.89,
+     "e": 66.79
+    },
+    {
+     "w": " paslaşarak,",
+     "s": 66.79,
+     "e": 67.51
+    },
+    {
+     "w": " birbirimizle",
+     "s": 67.67,
+     "e": 68.33
+    },
+    {
+     "w": " daha",
+     "s": 68.33,
+     "e": 68.47
+    },
+    {
+     "w": " çok",
+     "s": 68.47,
+     "e": 68.69
+    },
+    {
+     "w": " fikir",
+     "s": 68.69,
+     "e": 69.29
+    },
+    {
+     "w": " alışverişi",
+     "s": 69.29,
+     "e": 69.77
+    },
+    {
+     "w": " yaparak",
+     "s": 69.77,
+     "e": 70.07
+    },
+    {
+     "w": " bu",
+     "s": 70.07,
+     "e": 70.23
+    },
+    {
+     "w": " işi",
+     "s": 70.23,
+     "e": 70.35
+    },
+    {
+     "w": " bu",
+     "s": 70.35,
+     "e": 70.45
+    },
+    {
+     "w": " noktaya",
+     "s": 70.45,
+     "e": 70.81
+    },
+    {
+     "w": " getirdik.",
+     "s": 70.81,
+     "e": 71.13
+    }
+   ]
+  },
+  {
+   "start": 72.43,
+   "end": 79.01,
+   "text": "Mağazan Olsun'a adım atmaya az önce de söylediğim gibi bu öğrencilik hayatında hem kendimi daha rahatlatabilmek adına,",
+   "words": [
+    {
+     "w": " Mağazan",
+     "s": 72.43,
+     "e": 72.87
+    },
+    {
+     "w": " Olsun",
+     "s": 72.87,
+     "e": 73.11
+    },
+    {
+     "w": "'a",
+     "s": 73.11,
+     "e": 73.21
+    },
+    {
+     "w": " adım",
+     "s": 73.21,
+     "e": 73.43
+    },
+    {
+     "w": " atmaya",
+     "s": 73.43,
+     "e": 73.85
+    },
+    {
+     "w": " az",
+     "s": 73.85,
+     "e": 74.19
+    },
+    {
+     "w": " önce",
+     "s": 74.19,
+     "e": 74.33
+    },
+    {
+     "w": " de",
+     "s": 74.33,
+     "e": 74.47
+    },
+    {
+     "w": " söylediğim",
+     "s": 74.47,
+     "e": 74.95
+    },
+    {
+     "w": " gibi",
+     "s": 74.95,
+     "e": 75.09
+    },
+    {
+     "w": " bu",
+     "s": 75.09,
+     "e": 75.29
+    },
+    {
+     "w": " öğrencilik",
+     "s": 75.29,
+     "e": 76.39
+    },
+    {
+     "w": " hayatında",
+     "s": 76.39,
+     "e": 77.07
+    },
+    {
+     "w": " hem",
+     "s": 77.07,
+     "e": 77.25
+    },
+    {
+     "w": " kendimi",
+     "s": 77.25,
+     "e": 77.75
+    },
+    {
+     "w": " daha",
+     "s": 77.75,
+     "e": 77.93
+    },
+    {
+     "w": " rahatlatabilmek",
+     "s": 77.93,
+     "e": 78.73
+    },
+    {
+     "w": " adına,",
+     "s": 78.73,
+     "e": 79.01
+    }
+   ]
+  },
+  {
+   "start": 79.15,
+   "end": 81.47,
+   "text": "hem bir harçlık çıkarmak adına karar vermiştim.",
+   "words": [
+    {
+     "w": " hem",
+     "s": 79.15,
+     "e": 79.33
+    },
+    {
+     "w": " bir",
+     "s": 79.33,
+     "e": 79.49
+    },
+    {
+     "w": " harçlık",
+     "s": 79.49,
+     "e": 79.81
+    },
+    {
+     "w": " çıkarmak",
+     "s": 79.81,
+     "e": 80.31
+    },
+    {
+     "w": " adına",
+     "s": 80.31,
+     "e": 80.61
+    },
+    {
+     "w": " karar",
+     "s": 80.61,
+     "e": 81.01
+    },
+    {
+     "w": " vermiştim.",
+     "s": 81.01,
+     "e": 81.47
+    }
+   ]
+  },
+  {
+   "start": 81.47,
+   "end": 85.65,
+   "text": "Ve özel bir okulda okuduğunuzda gerçekten orada şey çoktur.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 81.47,
+     "e": 82.17
+    },
+    {
+     "w": " özel",
+     "s": 82.17,
+     "e": 82.69
+    },
+    {
+     "w": " bir",
+     "s": 82.69,
+     "e": 82.79
+    },
+    {
+     "w": " okulda",
+     "s": 82.79,
+     "e": 83.09
+    },
+    {
+     "w": " okuduğunuzda",
+     "s": 83.09,
+     "e": 83.61
+    },
+    {
+     "w": " gerçekten",
+     "s": 83.61,
+     "e": 84.15
+    },
+    {
+     "w": " orada",
+     "s": 84.15,
+     "e": 85.05
+    },
+    {
+     "w": " şey",
+     "s": 85.05,
+     "e": 85.25
+    },
+    {
+     "w": " çoktur.",
+     "s": 85.25,
+     "e": 85.65
+    }
+   ]
+  },
+  {
+   "start": 85.85,
+   "end": 89.93,
+   "text": "Özel okullarda babasının parasıyla, güzel arabalarla geliyorlar gerçekten.",
+   "words": [
+    {
+     "w": " Özel",
+     "s": 85.85,
+     "e": 86.01
+    },
+    {
+     "w": " okullarda",
+     "s": 86.01,
+     "e": 86.47
+    },
+    {
+     "w": " babasının",
+     "s": 86.47,
+     "e": 87.17
+    },
+    {
+     "w": " parasıyla,",
+     "s": 87.17,
+     "e": 88.15
+    },
+    {
+     "w": " güzel",
+     "s": 88.29,
+     "e": 88.73
+    },
+    {
+     "w": " arabalarla",
+     "s": 88.73,
+     "e": 89.21
+    },
+    {
+     "w": " geliyorlar",
+     "s": 89.21,
+     "e": 89.63
+    },
+    {
+     "w": " gerçekten.",
+     "s": 89.63,
+     "e": 89.93
+    }
+   ]
+  }
+ ],
+ "b": [
+  {
+   "start": 0.0,
+   "end": 4.48,
+   "text": "Ve siz de orada artık kendi ayaklarınızın üzerinde durmak istiyorsunuz.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 0.0,
+     "e": 0.66
+    },
+    {
+     "w": " siz",
+     "s": 0.66,
+     "e": 0.94
+    },
+    {
+     "w": " de",
+     "s": 0.94,
+     "e": 1.08
+    },
+    {
+     "w": " orada",
+     "s": 1.08,
+     "e": 1.24
+    },
+    {
+     "w": " artık",
+     "s": 1.24,
+     "e": 1.52
+    },
+    {
+     "w": " kendi",
+     "s": 1.52,
+     "e": 1.78
+    },
+    {
+     "w": " ayaklarınızın",
+     "s": 1.78,
+     "e": 2.34
+    },
+    {
+     "w": " üzerinde",
+     "s": 2.34,
+     "e": 2.9
+    },
+    {
+     "w": " durmak",
+     "s": 2.9,
+     "e": 3.78
+    },
+    {
+     "w": " istiyorsunuz.",
+     "s": 3.78,
+     "e": 4.48
+    }
+   ]
+  },
+  {
+   "start": 4.62,
+   "end": 6.14,
+   "text": "Aslında temel sebep buydu.",
+   "words": [
+    {
+     "w": " Aslında",
+     "s": 4.62,
+     "e": 5.16
+    },
+    {
+     "w": " temel",
+     "s": 5.16,
+     "e": 5.52
+    },
+    {
+     "w": " sebep",
+     "s": 5.52,
+     "e": 5.82
+    },
+    {
+     "w": " buydu.",
+     "s": 5.82,
+     "e": 6.14
+    }
+   ]
+  },
+  {
+   "start": 6.61,
+   "end": 10.62,
+   "text": "Ve aslında daha öncesinde de bir e-ticaret gelişimim olmuştu.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 6.61,
+     "e": 6.98
+    },
+    {
+     "w": " aslında",
+     "s": 6.98,
+     "e": 7.38
+    },
+    {
+     "w": " daha",
+     "s": 7.38,
+     "e": 7.9
+    },
+    {
+     "w": " öncesinde",
+     "s": 7.9,
+     "e": 8.48
+    },
+    {
+     "w": " de",
+     "s": 8.48,
+     "e": 8.64
+    },
+    {
+     "w": " bir",
+     "s": 8.64,
+     "e": 9.18
+    },
+    {
+     "w": " e",
+     "s": 9.18,
+     "e": 9.32
+    },
+    {
+     "w": "-ticaret",
+     "s": 9.32,
+     "e": 9.68
+    },
+    {
+     "w": " gelişimim",
+     "s": 9.68,
+     "e": 10.12
+    },
+    {
+     "w": " olmuştu.",
+     "s": 10.12,
+     "e": 10.62
+    }
+   ]
+  },
+  {
+   "start": 10.8,
+   "end": 14.4,
+   "text": "Ancak tabii geleneksel bir e-ticaret modeliyle ilerlemiştim.",
+   "words": [
+    {
+     "w": " Ancak",
+     "s": 10.8,
+     "e": 11.18
+    },
+    {
+     "w": " tabii",
+     "s": 11.18,
+     "e": 11.68
+    },
+    {
+     "w": " geleneksel",
+     "s": 11.68,
+     "e": 12.56
+    },
+    {
+     "w": " bir",
+     "s": 12.56,
+     "e": 12.84
+    },
+    {
+     "w": " e",
+     "s": 12.84,
+     "e": 13.12
+    },
+    {
+     "w": "-ticaret",
+     "s": 13.12,
+     "e": 13.4
+    },
+    {
+     "w": " modeliyle",
+     "s": 13.4,
+     "e": 13.8
+    },
+    {
+     "w": " ilerlemiştim.",
+     "s": 13.8,
+     "e": 14.4
+    }
+   ]
+  },
+  {
+   "start": 14.58,
+   "end": 23.92,
+   "text": "Ama burada gerçekten yeni nesil e-ticaret dediğimiz hem stoksuz, hem şirketsiz, hem risksiz bir modelle ilerleyebilmek gerçekten müthişti.",
+   "words": [
+    {
+     "w": " Ama",
+     "s": 14.58,
+     "e": 14.96
+    },
+    {
+     "w": " burada",
+     "s": 14.96,
+     "e": 15.28
+    },
+    {
+     "w": " gerçekten",
+     "s": 15.28,
+     "e": 15.92
+    },
+    {
+     "w": " yeni",
+     "s": 15.92,
+     "e": 16.54
+    },
+    {
+     "w": " nesil",
+     "s": 16.54,
+     "e": 16.94
+    },
+    {
+     "w": " e",
+     "s": 16.94,
+     "e": 17.28
+    },
+    {
+     "w": "-ticaret",
+     "s": 17.28,
+     "e": 17.62
+    },
+    {
+     "w": " dediğimiz",
+     "s": 17.62,
+     "e": 18.06
+    },
+    {
+     "w": " hem",
+     "s": 18.06,
+     "e": 18.4
+    },
+    {
+     "w": " stoksuz,",
+     "s": 18.4,
+     "e": 19.02
+    },
+    {
+     "w": " hem",
+     "s": 19.2,
+     "e": 19.32
+    },
+    {
+     "w": " şirketsiz,",
+     "s": 19.32,
+     "e": 20.14
+    },
+    {
+     "w": " hem",
+     "s": 20.28,
+     "e": 20.48
+    },
+    {
+     "w": " risksiz",
+     "s": 20.48,
+     "e": 21.22
+    },
+    {
+     "w": " bir",
+     "s": 21.22,
+     "e": 21.82
+    },
+    {
+     "w": " modelle",
+     "s": 21.82,
+     "e": 22.22
+    },
+    {
+     "w": " ilerleyebilmek",
+     "s": 22.22,
+     "e": 22.92
+    },
+    {
+     "w": " gerçekten",
+     "s": 22.92,
+     "e": 23.4
+    },
+    {
+     "w": " müthişti.",
+     "s": 23.4,
+     "e": 23.92
+    }
+   ]
+  },
+  {
+   "start": 24.3,
+   "end": 27.66,
+   "text": "Zaten bunu duyduğumda karar vermek için hiç düşünmeden bir adım attım.",
+   "words": [
+    {
+     "w": " Zaten",
+     "s": 24.3,
+     "e": 24.94
+    },
+    {
+     "w": " bunu",
+     "s": 24.94,
+     "e": 25.16
+    },
+    {
+     "w": " duyduğumda",
+     "s": 25.16,
+     "e": 25.66
+    },
+    {
+     "w": " karar",
+     "s": 25.66,
+     "e": 25.96
+    },
+    {
+     "w": " vermek",
+     "s": 25.96,
+     "e": 26.28
+    },
+    {
+     "w": " için",
+     "s": 26.28,
+     "e": 26.44
+    },
+    {
+     "w": " hiç",
+     "s": 26.44,
+     "e": 26.58
+    },
+    {
+     "w": " düşünmeden",
+     "s": 26.58,
+     "e": 27.0
+    },
+    {
+     "w": " bir",
+     "s": 27.0,
+     "e": 27.22
+    },
+    {
+     "w": " adım",
+     "s": 27.22,
+     "e": 27.4
+    },
+    {
+     "w": " attım.",
+     "s": 27.4,
+     "e": 27.66
+    }
+   ]
+  },
+  {
+   "start": 28.42,
+   "end": 32.7,
+   "text": "Evet bu işi yapmaya ekonomik olarak karar verdik ilk etapta.",
+   "words": [
+    {
+     "w": " Evet",
+     "s": 28.42,
+     "e": 29.08
+    },
+    {
+     "w": " bu",
+     "s": 29.08,
+     "e": 29.3
+    },
+    {
+     "w": " işi",
+     "s": 29.3,
+     "e": 29.48
+    },
+    {
+     "w": " yapmaya",
+     "s": 29.48,
+     "e": 29.94
+    },
+    {
+     "w": " ekonomik",
+     "s": 29.94,
+     "e": 30.86
+    },
+    {
+     "w": " olarak",
+     "s": 30.86,
+     "e": 31.16
+    },
+    {
+     "w": " karar",
+     "s": 31.16,
+     "e": 31.72
+    },
+    {
+     "w": " verdik",
+     "s": 31.72,
+     "e": 32.04
+    },
+    {
+     "w": " ilk",
+     "s": 32.04,
+     "e": 32.24
+    },
+    {
+     "w": " etapta.",
+     "s": 32.24,
+     "e": 32.7
+    }
+   ]
+  },
+  {
+   "start": 32.86,
+   "end": 35.84,
+   "text": "Ve gerçekten de memnun olduğumuz bir kazanç durumumuz var.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 32.86,
+     "e": 32.92
+    },
+    {
+     "w": " gerçekten",
+     "s": 32.92,
+     "e": 33.36
+    },
+    {
+     "w": " de",
+     "s": 33.36,
+     "e": 33.54
+    },
+    {
+     "w": " memnun",
+     "s": 33.54,
+     "e": 33.86
+    },
+    {
+     "w": " olduğumuz",
+     "s": 33.86,
+     "e": 34.22
+    },
+    {
+     "w": " bir",
+     "s": 34.22,
+     "e": 34.38
+    },
+    {
+     "w": " kazanç",
+     "s": 34.38,
+     "e": 35.22
+    },
+    {
+     "w": " durumumuz",
+     "s": 35.22,
+     "e": 35.6
+    },
+    {
+     "w": " var.",
+     "s": 35.6,
+     "e": 35.84
+    }
+   ]
+  },
+  {
+   "start": 36.02,
+   "end": 38.34,
+   "text": "Yani iyi bir kazanç sağlıyoruz bu işi yaparak.",
+   "words": [
+    {
+     "w": " Yani",
+     "s": 36.02,
+     "e": 36.18
+    },
+    {
+     "w": " iyi",
+     "s": 36.18,
+     "e": 36.54
+    },
+    {
+     "w": " bir",
+     "s": 36.54,
+     "e": 36.66
+    },
+    {
+     "w": " kazanç",
+     "s": 36.66,
+     "e": 37.02
+    },
+    {
+     "w": " sağlıyoruz",
+     "s": 37.02,
+     "e": 37.54
+    },
+    {
+     "w": " bu",
+     "s": 37.54,
+     "e": 37.84
+    },
+    {
+     "w": " işi",
+     "s": 37.84,
+     "e": 38.0
+    },
+    {
+     "w": " yaparak.",
+     "s": 38.0,
+     "e": 38.34
+    }
+   ]
+  },
+  {
+   "start": 38.52,
+   "end": 42.54,
+   "text": "Ama bu ekonomik kazancın dışında burada sağladığımız birçok fayda var.",
+   "words": [
+    {
+     "w": " Ama",
+     "s": 38.52,
+     "e": 38.74
+    },
+    {
+     "w": " bu",
+     "s": 38.74,
+     "e": 38.98
+    },
+    {
+     "w": " ekonomik",
+     "s": 38.98,
+     "e": 39.46
+    },
+    {
+     "w": " kazancın",
+     "s": 39.46,
+     "e": 40.0
+    },
+    {
+     "w": " dışında",
+     "s": 40.0,
+     "e": 40.84
+    },
+    {
+     "w": " burada",
+     "s": 40.84,
+     "e": 41.1
+    },
+    {
+     "w": " sağladığımız",
+     "s": 41.1,
+     "e": 41.7
+    },
+    {
+     "w": " birçok",
+     "s": 41.7,
+     "e": 42.1
+    },
+    {
+     "w": " fayda",
+     "s": 42.1,
+     "e": 42.4
+    },
+    {
+     "w": " var.",
+     "s": 42.4,
+     "e": 42.54
+    }
+   ]
+  },
+  {
+   "start": 42.68,
+   "end": 45.16,
+   "text": "Burada gerçekten inanılmaz bir girişimci topluluğu var.",
+   "words": [
+    {
+     "w": " Burada",
+     "s": 42.68,
+     "e": 42.94
+    },
+    {
+     "w": " gerçekten",
+     "s": 42.94,
+     "e": 43.46
+    },
+    {
+     "w": " inanılmaz",
+     "s": 43.46,
+     "e": 44.1
+    },
+    {
+     "w": " bir",
+     "s": 44.1,
+     "e": 44.2
+    },
+    {
+     "w": " girişimci",
+     "s": 44.2,
+     "e": 44.6
+    },
+    {
+     "w": " topluluğu",
+     "s": 44.6,
+     "e": 45.02
+    },
+    {
+     "w": " var.",
+     "s": 45.02,
+     "e": 45.16
+    }
+   ]
+  },
+  {
+   "start": 45.24,
+   "end": 47.1,
+   "text": "Gerçekten çok ciddi başarılı insanlar.",
+   "words": [
+    {
+     "w": " Gerçekten",
+     "s": 45.24,
+     "e": 45.7
+    },
+    {
+     "w": " çok",
+     "s": 45.7,
+     "e": 45.92
+    },
+    {
+     "w": " ciddi",
+     "s": 45.92,
+     "e": 46.26
+    },
+    {
+     "w": " başarılı",
+     "s": 46.26,
+     "e": 46.64
+    },
+    {
+     "w": " insanlar.",
+     "s": 46.64,
+     "e": 47.1
+    }
+   ]
+  },
+  {
+   "start": 47.78,
+   "end": 51.02,
+   "text": "Hepsiyle sürekli olarak fikir alışverişinde bulunabiliyorsunuz.",
+   "words": [
+    {
+     "w": " Hepsiyle",
+     "s": 47.78,
+     "e": 48.44
+    },
+    {
+     "w": " sürekli",
+     "s": 48.44,
+     "e": 48.98
+    },
+    {
+     "w": " olarak",
+     "s": 48.98,
+     "e": 49.18
+    },
+    {
+     "w": " fikir",
+     "s": 49.18,
+     "e": 49.52
+    },
+    {
+     "w": " alışverişinde",
+     "s": 49.52,
+     "e": 50.1
+    },
+    {
+     "w": " bulunabiliyorsunuz.",
+     "s": 50.1,
+     "e": 51.02
+    }
+   ]
+  },
+  {
+   "start": 51.18,
+   "end": 55.94,
+   "text": "Ve size sağladıkları katkı, size sağladıkları fayda paradan çok çok daha fazlası.",
+   "words": [
+    {
+     "w": " Ve",
+     "s": 51.18,
+     "e": 51.26
+    },
+    {
+     "w": " size",
+     "s": 51.26,
+     "e": 51.72
+    },
+    {
+     "w": " sağladıkları",
+     "s": 51.72,
+     "e": 52.56
+    },
+    {
+     "w": " katkı,",
+     "s": 52.56,
+     "e": 53.0
+    },
+    {
+     "w": " size",
+     "s": 53.1,
+     "e": 53.24
+    },
+    {
+     "w": " sağladıkları",
+     "s": 53.24,
+     "e": 53.86
+    },
+    {
+     "w": " fayda",
+     "s": 53.86,
+     "e": 54.28
+    },
+    {
+     "w": " paradan",
+     "s": 54.28,
+     "e": 54.74
+    },
+    {
+     "w": " çok",
+     "s": 54.74,
+     "e": 54.98
+    },
+    {
+     "w": " çok",
+     "s": 54.98,
+     "e": 55.14
+    },
+    {
+     "w": " daha",
+     "s": 55.14,
+     "e": 55.38
+    },
+    {
+     "w": " fazlası.",
+     "s": 55.38,
+     "e": 55.94
+    }
+   ]
+  },
+  {
+   "start": 55.94,
+   "end": 59.14,
+   "text": "Yani burada sadece mağazan olsun olarak düşünmeyebilirsiniz.",
+   "words": [
+    {
+     "w": " Yani",
+     "s": 55.94,
+     "e": 56.28
+    },
+    {
+     "w": " burada",
+     "s": 56.28,
+     "e": 56.58
+    },
+    {
+     "w": " sadece",
+     "s": 56.58,
+     "e": 57.26
+    },
+    {
+     "w": " mağazan",
+     "s": 57.26,
+     "e": 57.68
+    },
+    {
+     "w": " olsun",
+     "s": 57.68,
+     "e": 57.88
+    },
+    {
+     "w": " olarak",
+     "s": 57.88,
+     "e": 58.22
+    },
+    {
+     "w": " düşünmeyebilirsiniz.",
+     "s": 58.22,
+     "e": 59.14
+    }
+   ]
+  },
+  {
+   "start": 59.38,
+   "end": 65.38,
+   "text": "Ne zaman bir girişim yapmak isteseniz, ne zaman bir işle uğraşmak isteseniz size çok iyi fikirler verecek.",
+   "words": [
+    {
+     "w": " Ne",
+     "s": 59.38,
+     "e": 59.54
+    },
+    {
+     "w": " zaman",
+     "s": 59.54,
+     "e": 59.82
+    },
+    {
+     "w": " bir",
+     "s": 59.82,
+     "e": 60.0
+    },
+    {
+     "w": " girişim",
+     "s": 60.0,
+     "e": 60.4
+    },
+    {
+     "w": " yapmak",
+     "s": 60.4,
+     "e": 60.72
+    },
+    {
+     "w": " isteseniz,",
+     "s": 60.72,
+     "e": 61.24
+    },
+    {
+     "w": " ne",
+     "s": 61.32,
+     "e": 61.5
+    },
+    {
+     "w": " zaman",
+     "s": 61.5,
+     "e": 61.82
+    },
+    {
+     "w": " bir",
+     "s": 61.82,
+     "e": 62.1
+    },
+    {
+     "w": " işle",
+     "s": 62.1,
+     "e": 62.52
+    },
+    {
+     "w": " uğraşmak",
+     "s": 62.52,
+     "e": 62.98
+    },
+    {
+     "w": " isteseniz",
+     "s": 62.98,
+     "e": 63.6
+    },
+    {
+     "w": " size",
+     "s": 63.6,
+     "e": 64.14
+    },
+    {
+     "w": " çok",
+     "s": 64.14,
+     "e": 64.46
+    },
+    {
+     "w": " iyi",
+     "s": 64.46,
+     "e": 64.64
+    },
+    {
+     "w": " fikirler",
+     "s": 64.64,
+     "e": 65.02
+    },
+    {
+     "w": " verecek.",
+     "s": 65.02,
+     "e": 65.38
+    }
+   ]
+  },
+  {
+   "start": 65.58,
+   "end": 68.6,
+   "text": "Birlikte yol yürüyebileceğiniz mükemmel girişimciler var.",
+   "words": [
+    {
+     "w": " Birlikte",
+     "s": 65.58,
+     "e": 66.14
+    },
+    {
+     "w": " yol",
+     "s": 66.14,
+     "e": 66.42
+    },
+    {
+     "w": " yürüyebileceğiniz",
+     "s": 66.42,
+     "e": 67.14
+    },
+    {
+     "w": " mükemmel",
+     "s": 67.14,
+     "e": 67.9
+    },
+    {
+     "w": " girişimciler",
+     "s": 67.9,
+     "e": 68.44
+    },
+    {
+     "w": " var.",
+     "s": 68.44,
+     "e": 68.6
+    }
+   ]
+  },
+  {
+   "start": 69.68,
+   "end": 76.34,
+   "text": "Ekonomik kısmının, ekonomik tarafının dışında burada gerçekten sağlayabileceğiniz müthiş bir ortam var.",
+   "words": [
+    {
+     "w": " Ekonomik",
+     "s": 69.68,
+     "e": 70.34
+    },
+    {
+     "w": " kısmının,",
+     "s": 70.34,
+     "e": 70.8
+    },
+    {
+     "w": " ekonomik",
+     "s": 70.9,
+     "e": 71.28
+    },
+    {
+     "w": " tarafının",
+     "s": 71.28,
+     "e": 71.64
+    },
+    {
+     "w": " dışında",
+     "s": 71.64,
+     "e": 72.1
+    },
+    {
+     "w": " burada",
+     "s": 72.1,
+     "e": 72.96
+    },
+    {
+     "w": " gerçekten",
+     "s": 72.96,
+     "e": 73.52
+    },
+    {
+     "w": " sağlayabileceğiniz",
+     "s": 73.52,
+     "e": 74.74
+    },
+    {
+     "w": " müthiş",
+     "s": 74.74,
+     "e": 75.78
+    },
+    {
+     "w": " bir",
+     "s": 75.78,
+     "e": 75.92
+    },
+    {
+     "w": " ortam",
+     "s": 75.92,
+     "e": 76.2
+    },
+    {
+     "w": " var.",
+     "s": 76.2,
+     "e": 76.34
+    }
+   ]
+  },
+  {
+   "start": 76.46,
+   "end": 79.1,
+   "text": "Müthiş bir, yine söylüyorum, girişimci topluluğu var.",
+   "words": [
+    {
+     "w": " Müthiş",
+     "s": 76.46,
+     "e": 76.68
+    },
+    {
+     "w": " bir,",
+     "s": 76.68,
+     "e": 76.9
+    },
+    {
+     "w": " yine",
+     "s": 76.94,
+     "e": 77.62
+    },
+    {
+     "w": " söylüyorum,",
+     "s": 77.62,
+     "e": 78.1
+    },
+    {
+     "w": " girişimci",
+     "s": 78.22,
+     "e": 78.54
+    },
+    {
+     "w": " topluluğu",
+     "s": 78.54,
+     "e": 78.94
+    },
+    {
+     "w": " var.",
+     "s": 78.94,
+     "e": 79.1
+    }
+   ]
+  }
+ ]
+}
