@@ -1,0 +1,86 @@
+{
+ "s01": [
+  "Egzaman neden hep gece kaşınır?",
+  2.03,
+  1.0,
+  -0.53,
+  "Egzaman neden hep gece kaşınır?"
+ ],
+ "s02": [
+  "Bu senin hayal gücün değil.",
+  1.4,
+  1.0,
+  -0.0,
+  "Bu senin hayal gücün değil."
+ ],
+ "s03": [
+  "İki yüz kırk bir yetişkinle yapılan bir araştırmada,",
+  2.69,
+  0.857,
+  -0.39,
+  "241 yetişkinle yapılan bir araştırmada"
+ ],
+ "s04": [
+  "kaşıntı en çok akşam sekiz ile gece yarısı arasında zirve yaptı.",
+  3.96,
+  0.952,
+  -0.09,
+  "Kaşıntı en çok akşam 8 ile gece yarısı arasında zirve yaptı."
+ ],
+ "s05": [
+  "Peki neden gece?",
+  0.97,
+  1.0,
+  -0.02,
+  "Peki neden gece?"
+ ],
+ "s06": [
+  "Birinci sebep: kortizol.",
+  1.92,
+  1.0,
+  -0.2,
+  "Birinci sebep, kortizol."
+ ],
+ "s07": [
+  "Vücudun doğal iltihap freni olan bu hormon, akşam ve gece en düşük seviyesine iniyor.",
+  5.14,
+  1.0,
+  -0.06,
+  "Vücudun doğal iltihap freni olan bu hormon akşam ve gece en düşük seviyesine iniyor."
+ ],
+ "s08": [
+  "İkinci sebep: ısı.",
+  1.5,
+  1.0,
+  -0.0,
+  "İkinci sebep ısı."
+ ],
+ "s09": [
+  "Uykuda vücut ısısını cilt yoluyla atar; cilt ısınır ve kaşıntı artabilir.",
+  4.53,
+  1.0,
+  -0.33,
+  "Uykuda vücut ısısını cilt yoluyla atar, cilt ısınır ve kaşıntı artabilir."
+ ],
+ "s10": [
+  "Sonuç? Egzaması olanların yaklaşık yüzde kırk üçünde uyku sorunu görülüyor.",
+  4.57,
+  0.8,
+  -0.05,
+  "Sonuç, egzaması olanların yaklaşık %43'ünde uyku sorunu görülüyor."
+ ],
+ "s11": [
+  "Gece kaşıntısı uykunu bölüyorsa, bunu dermatoloğuna mutlaka anlat.",
+  3.95,
+  1.0,
+  -0.06,
+  "Gece kaşıntısı uykunu bölüyorsa bunu dermatoloğuna mutlaka anlat."
+ ],
+ "s12": [
+  "Senin kaşıntın hangi saatlerde artıyor? Yorumlara yaz.",
+  3.36,
+  1.0,
+  -0.19,
+  "Senin kaşıntın hangi saatlerde artıyor? Yorumlara yaz."
+ ]
+}
