@@ -1,0 +1,17 @@
+[
+ {"k":"n1","metin":"Yılın en çok satılan günlerinden birinde, bir şirket bütün mağazalarını kapattı.","ex":0.6},
+ {"k":"n2","metin":"Adı REI. Amerika'da doğa sporları malzemesi satan dev bir kooperatif.","yazim":"Adı Ar İ Ay. Amerika'da doğa sporları malzemesi satan dev bir kooperatif.","ex":0.5,"yabanci":["rei"]},
+ {"k":"n3","metin":"Yıl iki bin on beş. Black Friday, onlar için yılın en büyük on gününden biri.","yazim":"Yıl iki bin on beş. Blek Fraydey, onlar için yılın en büyük on gününden biri.","ex":0.5,"yabanci":["black","friday"],"bitisik":[["iki","bin"],["on","beş"]]},
+ {"k":"n4","metin":"Ama yüz kırk üç mağazanın hepsi kapandı, on iki bin çalışan ücretli izne çıktı.","ex":0.55},
+ {"k":"n5","metin":"İndirim yok. İnternet siparişleri bile ertesi güne kaldı.","ex":0.55},
+ {"k":"n6","metin":"Tek bir mesaj vardı: alışveriş yapma, dışarı çık.","ex":0.6},
+ {"k":"n7","metin":"Peki, yılın en büyük gününü kaçırmak şirkete neye mal oldu?","ex":0.6},
+ {"k":"n8","metin":"Kampanya, otuz üç gün boyunca haberlerden düşmedi.","ex":0.55},
+ {"k":"n9","metin":"O yıl satışlar yüzde dokuz arttı, üye sayısı rekor kırdı.","ex":0.6},
+ {"k":"n10","metin":"Kampanya, reklamcılığın en prestijli festivali Cannes'da büyük ödülü kazandı.","yazim":"Kampanya, reklamcılığın en prestijli festivali Kan'da büyük ödülü kazandı.","ex":0.55,"yabanci":["cannes'da"]},
+ {"k":"n11","metin":"Ve bugün, onuncu yılında, mağazalar yine kapalı.","ex":0.55},
+ {"k":"n12","metin":"Ama bir gerçek daha var: şirket iki bin yirmi üçte, üç yüz on bir milyon dolar zarar etti.","ex":0.55,"bitisik":[["iki","bin"]]},
+ {"k":"n13","metin":"Yani cesur bir kampanya dikkat çeker, ama işi tek başına kurtarmaz.","ex":0.5},
+ {"k":"n14","metin":"Satıcı olarak ders şu: herkes indirim diye bağırırken, farklı bir hikâye anlatan duyulur.","ex":0.55},
+ {"k":"n15","metin":"E-ticaretin perde arkası için, beni de takip et.","ex":0.5}
+]

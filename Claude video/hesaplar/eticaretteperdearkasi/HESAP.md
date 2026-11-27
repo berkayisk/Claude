@@ -1,6 +1,7 @@
 # @eticaretteperdearkasi — Instagram hesabı
 
-**Amaç:** e-ticaretin ve online alışverişin perde arkasını 30 saniyede anlatan, değer veren içerik. Satış/müşteri dili YOK.
+**Amaç:** e-ticaretin perde arkasını anlatan, değer veren içerik. Satış/müşteri dili YOK.
+**Kitle (2026-11-27, kullanıcı):** ALAN taraf değil, SATAN taraf — satıcılar ve satıcı olmak isteyenler. Konular satıcı gözünden: strateji, gerçek şirket hikâyeleri, sayısal veriler, olay/hikâye anlatımı.
 Uzun vadede trafiği Sıfırdan Satışa'ya taşır (biyografi linki + her 5–6 videoda bir yumuşak anma).
 **Üretim:** tamamen kodla (Remotion) + Berkay ses klonu. Rehber karakter = Berkay animasyonu (v5, `projeler/2026-11-25_satisin-arkasi-karakter/src/berkay.tsx`).
 **Format:** 25–35 sn, 9:16, hızlı anlatım (VO 1,18x), her satırda sahne değişimi + sanal kamera (zoom/kayma/dönüş), altyazı yüzü kapatmaz.
@@ -28,6 +29,7 @@ Uzun vadede trafiği Sıfırdan Satışa'ya taşır (biyografi linki + her 5–6
 | # | Konu | Dosya | Durum |
 |---|---|---|---|
 | 1 | Fiyatlar neden hep 99,99? | `projeler/2026-11-25_fiyat-99-99/ciktilar/fiyat_99_99_v6.mp4` + kapak `kapak_99_99.png` | hazır |
+| 3 | Black Friday'de mağazalarını kapatan şirket (REI #OptOutside) | `projeler/2026-11-27_rei-optoutside` | üretimde |
 | 2 | Black Friday nedir? (köken, veriler, indirimler gerçek mi) | `projeler/2026-11-26_black-friday/ciktilar/black_friday_v2.mp4` (49,1 sn) + kapak `kapak_black_friday.png`; senaryo + kaynaklar `senaryo/SENARYO.md` | hazır (27 Kasım öncesi paylaş) |
 
 ### 1 — açıklama
