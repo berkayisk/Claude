@@ -29,3 +29,6 @@ Kullanıcı: v1 akışı beğenilmedi, kronolojik olsun; "babasının parası / 
 ## Açık
 - Videoda "4. sınıf öğrencisiyim" diyor; profil biyografisinde "mezunuyum". Eski kayıt olduğu belirtilmeli mi / başlık değişmeli mi?
 - "attım → Bu bir yıl" geçişi sıkı; kulakla kontrol.
+
+## Açıklama ve kapak
+- `ACIKLAMA.md` (ig-caption ile yazıldı, linter + ig-human), `ciktilar/Tanisma_Kapak.png` (`src/Kapak.tsx`).
