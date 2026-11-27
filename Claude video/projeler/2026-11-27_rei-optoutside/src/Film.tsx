@@ -218,7 +218,7 @@ const CEKIMLER: Cekim[] = [
       <svg width={1080} height={1920} style={{ position: "absolute" }}>
         {Array.from({ length: 143 }).map((_, i) => <Magaza key={i} x={60 + (i % 13) * 74} y={180 + Math.floor(i / 13) * 66} s={0.9} acik={i < son ? 0 : 1} />)}
       </svg>
-      <Mutlak y={940}><Yazi boy={140} renk={KIRMIZI} g={sp(t, n("n4") + 0.3)}>{Math.round(son)} MAĞAZA</Yazi><Yazi boy={60} renk={YESIL} g={sp(t, n("n4") + 1.8)} style={{ marginTop: 10 }}>12.000 ÇALIŞAN · ÜCRETLİ İZİN</Yazi></Mutlak>
+      <Mutlak y={940}><Yazi boy={110} renk={KIRMIZI} g={sp(t, n("n4") + 0.3)} style={{ whiteSpace: "nowrap" }}>{Math.round(son)} MAĞAZA</Yazi><Yazi boy={50} renk={YESIL} g={sp(t, n("n4") + 1.8)} style={{ marginTop: 10 }}>12.000 ÇALIŞAN · ÜCRETLİ İZİN</Yazi></Mutlak>
       <Kisi t={t} mod="yakin" x={540} y={1380} olcek={1.05} ifade={{ kas: 0.8, goz: 1.1 }} />
     </>);
   } },
@@ -232,7 +232,7 @@ const CEKIMLER: Cekim[] = [
         <div style={{ marginTop: 40, background: "#1f2a44", borderRadius: 22, padding: 26, fontFamily: POP, fontWeight: 800, fontSize: 34, color: "white", lineHeight: 1.3 }}>⏸️ Beklemede<br /><span style={{ color: SARI }}>28 Kasım'da işlenecek</span></div>
         <div style={{ marginTop: 30, background: "#1f2a44", borderRadius: 22, padding: 26, fontFamily: POP, fontWeight: 800, fontSize: 34, color: "#8fa0bf" }}>Kampanya: —</div>
       </div>
-      <div style={{ position: "absolute", left: 140, top: 520, fontFamily: POP, fontWeight: 900, fontSize: 120, color: KIRMIZI, border: `12px solid ${KIRMIZI}`, borderRadius: 26, padding: "0 30px", transform: `rotate(-14deg) scale(${2 - d})`, opacity: Math.min(1, d * 1.4), background: "rgba(255,255,255,0.85)" }}>İNDİRİM YOK</div>
+      <div style={{ position: "absolute", left: 190, top: 560, fontFamily: POP, fontWeight: 900, fontSize: 80, color: KIRMIZI, border: `12px solid ${KIRMIZI}`, borderRadius: 26, padding: "0 30px", transform: `rotate(-14deg) scale(${2 - d})`, opacity: Math.min(1, d * 1.4), background: "rgba(255,255,255,0.85)" }}>İNDİRİM YOK</div>
       <Kisi t={t} mod="tam" x={880} y={1180} olcek={0.5} poz="anlat" ayna ifade={{ kas: 0.4 }} bas0={n("n5")} />
     </>);
   } },
@@ -258,12 +258,12 @@ const CEKIMLER: Cekim[] = [
       <Duz ust="#efe4c9" alt="#d9c89e" />
       {mans.map((m, i) => { const g = sp(t, n("n8") + i * 0.25);
         return <div key={i} style={{ position: "absolute", left: 70 + (i % 2) * 70, top: 260 + i * 120, width: 700, background: "#fbf6e8", boxShadow: "0 12px 30px rgba(90,60,10,0.25)", padding: "20px 30px", transform: `rotate(${(i % 2 ? 3 : -3)}deg) translateY(${(1 - g) * -600}px)`, fontFamily: "serif", fontWeight: 900, fontSize: 44, color: "#2a2418" }}>{m}</div>; })}
-      <Mutlak y={950}><Yazi boy={200} renk="#b8232f" g={sp(t, n("n8") + 0.2)}>{gun}</Yazi><Yazi boy={60} renk="#2a2418" g={sp(t, n("n8") + 0.4)}>GÜN BOYUNCA HABERLERDE</Yazi></Mutlak>
+      <Mutlak y={950}><Yazi boy={200} renk="#b8232f" g={sp(t, n("n8") + 0.2)}>{gun}</Yazi><Yazi boy={50} renk="#2a2418" g={sp(t, n("n8") + 0.4)}>GÜN BOYUNCA HABERLERDE</Yazi></Mutlak>
       <Kisi t={t} mod="tam" x={880} y={1180} olcek={0.5} poz="goster" ayna ifade={{ bakX: -0.7, bakY: -0.6, kas: 0.4 }} bas0={n("n8")} />
     </>);
   } },
   // 9 — satış +%9, rekor üye
-  { bas: n("n9"), son: n("n10"), gecis: "kay", alt: 1300, kam: [[0,540,960,1],[0.6,540,640,1.3],[2.4,540,640,1.3],[2.9,540,1500,1.25],[3.8,540,1500,1.25]], render: (t) => {
+  { bas: n("n9"), son: n("n10"), gecis: "kay", alt: 1130, kam: [[0,540,960,1],[0.6,540,640,1.3],[2.4,540,640,1.3],[2.9,540,1500,1.25],[3.8,540,1500,1.25]], render: (t) => {
     const c = interpolate(t, [n("n9") + 0.2, n("n9") + 1.6], [0, 1], { ...kl, easing: Easing.out(Easing.cubic) });
     return (<>
       <Duz ust="#0b3d2e" alt="#04170f" /><Izgara renk="rgba(46,212,122,0.08)" />
@@ -272,12 +272,12 @@ const CEKIMLER: Cekim[] = [
         {c > 0.95 ? <path d="M540,640 l-60,0 l60,-60 l0,60" fill={YESIL} /> : null}
       </svg>
       <Mutlak y={230}><Yazi boy={170} renk={YESIL} g={sp(t, n("n9") + 0.3)}>+%9</Yazi><Yazi boy={56} g={sp(t, n("n9") + 0.5)}>SATIŞ · 2,4 MİLYAR $</Yazi></Mutlak>
-      <Mutlak y={960}><div style={{ fontFamily: POP, fontWeight: 900, fontSize: 70, color: SARI, transform: `scale(${sp(t, n("n9") + 1.4, 8)})` }}>🏆 REKOR ÜYE BÜYÜMESİ</div></Mutlak>
+      <Mutlak y={960}><div style={{ fontFamily: POP, fontWeight: 900, fontSize: 54, color: SARI, transform: `scale(${sp(t, n("n9") + 1.4, 8)})` }}>🏆 REKOR ÜYE BÜYÜMESİ</div></Mutlak>
       <Kisi t={t} mod="yakin" x={540} y={1430} olcek={1.1} ifade={{ gozGul: 0.6, kas: 0.5 }} />
     </>);
   } },
   // 10 — Cannes büyük ödül
-  { bas: n("n10"), son: n("n11"), gecis: "flas", alt: 1060, kam: [[0,540,620,1.4],[1.8,540,620,1.4],[2.4,540,960,1],[3.6,540,960,1]], render: (t) => (<>
+  { bas: n("n10"), son: n("n11"), gecis: "flas", alt: 1730, kam: [[0,540,620,1.4],[1.8,540,620,1.4],[2.4,540,960,1],[3.6,540,960,1]], render: (t) => (<>
       <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 35%, #3a2a00 0%, #0b0800 70%)" }} />
       <svg width={1080} height={1920} style={{ position: "absolute" }}>
         {Array.from({ length: 40 }).map((_, i) => { const d = Math.max(0, t - n("n10") - 0.5); if (d <= 0) return null;
@@ -288,7 +288,7 @@ const CEKIMLER: Cekim[] = [
           <text y={-60} textAnchor="middle" fontFamily="PoppinsF" fontWeight={900} fontSize={60} fill="#5a4508">🦁</text>
         </g>
       </svg>
-      <Mutlak y={800}><Yazi boy={110} renk={SARI} g={sp(t, n("n10") + 0.6)}>CANNES LIONS</Yazi><Yazi boy={60} g={sp(t, n("n10") + 0.9)}>GRAND PRIX · 2016</Yazi></Mutlak>
+      <Mutlak y={800}><Yazi boy={92} renk={SARI} g={sp(t, n("n10") + 0.6)} style={{ whiteSpace: "nowrap" }}>CANNES LIONS</Yazi><Yazi boy={60} g={sp(t, n("n10") + 0.9)}>GRAND PRIX · 2016</Yazi></Mutlak>
       <Kisi t={t} mod="tam" x={540} y={1180} olcek={0.5} poz="selam" ifade={{ gozGul: 0.6, kas: 0.5 }} bas0={n("n10") + 0.5} />
     </>) },
   // 11 — bugün 10. yıl, yine kapalı
@@ -303,7 +303,7 @@ const CEKIMLER: Cekim[] = [
     </>);
   } },
   // 12 — dönüş: 2023'te 311 milyon $ zarar
-  { bas: n("n12"), son: n("n13"), gecis: "flas", alt: (y) => (y < 2.6 ? 1300 : 300), kam: [[0,540,960,1],[1.4,540,640,1.4],[2.6,540,640,1.4],[3.1,540,1480,1.3],[4.2,540,1480,1.3]], render: (t) => {
+  { bas: n("n12"), son: n("n13"), gecis: "flas", alt: (y) => (y < 2.6 ? 1250 : 1760), kam: [[0,540,960,1],[1.4,540,640,1.4],[2.6,540,640,1.4],[3.1,540,1480,1.3],[4.2,540,1480,1.3]], render: (t) => {
     const v = Math.round(interpolate(t, [n("n12") + 1.3, n("n12") + 2.8], [0, 311], { ...kl, easing: Easing.out(Easing.cubic) }));
     return (<>
       <Duz ust="#3d0d0d" alt="#120303" />
@@ -311,7 +311,7 @@ const CEKIMLER: Cekim[] = [
         <path d={`M120,520 L320,560 L520,700 L${520 + 360 * interpolate(t, [n("n12") + 1, n("n12") + 2.2], [0, 1], kl)},${700 + 330 * interpolate(t, [n("n12") + 1, n("n12") + 2.2], [0, 1], kl)}`} stroke={KIRMIZI} strokeWidth={18} fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <Mutlak y={260}><Yazi boy={80} g={sp(t, n("n12") + 0.9)}>2023</Yazi></Mutlak>
-      <Mutlak y={980}><Yazi boy={150} renk={KIRMIZI} g={sp(t, n("n12") + 1.3)}>-{v} MİLYON $</Yazi><Yazi boy={44} renk="#ffb3b3" g={sp(t, n("n12") + 1.6)}>net zarar · REI 2023 finansalları</Yazi></Mutlak>
+      <Mutlak y={980}><Yazi boy={104} renk={KIRMIZI} g={sp(t, n("n12") + 1.3)} style={{ whiteSpace: "nowrap" }}>-{v} MİLYON $</Yazi><Yazi boy={44} renk="#ffb3b3" g={sp(t, n("n12") + 1.6)}>net zarar · REI 2023 finansalları</Yazi></Mutlak>
       <Kisi t={t} mod="yakin" x={540} y={1440} olcek={1.05} ifade={{ kasAci: -1, kas: 0.4, bakX: -0.4 }} />
     </>);
   } },
@@ -326,7 +326,7 @@ const CEKIMLER: Cekim[] = [
       <Kisi t={t} mod="tam" x={830} y={1150} olcek={0.5} poz="dusun" ayna ifade={{ kasAci: 0.5, bakX: -0.6, bakY: -0.6 }} bas0={n("n13")} />
     </>) },
   // 14 — herkes indirim diye bağırırken farklı hikâye anlatan duyulur
-  { bas: n("n14"), son: n("n15"), gecis: "zoom", alt: 1740, kam: [[0,540,960,1],[0.8,540,760,1.3],[2.6,700,700,1.45],[3.2,540,960,1],[4.4,540,960,1]], render: (t) => {
+  { bas: n("n14"), son: n("n15"), gecis: "zoom", alt: 1740, kam: [[0,540,960,1],[0.8,540,760,1.25],[2.6,540,700,1.4],[3.2,540,960,1],[4.4,540,960,1]], render: (t) => {
     const g = sp(t, n("n14") + 1.6, 7);
     return (<>
       <Duz ust="#2b1d3f" alt="#141a2e" />

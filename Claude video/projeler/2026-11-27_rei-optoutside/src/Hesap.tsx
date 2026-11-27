@@ -62,3 +62,21 @@ export const KapakBF: React.FC = () => (
     </div>
   </AbsoluteFill>
 );
+
+// REI #OptOutside Reels kapağı
+export const KapakREI: React.FC = () => (
+  <AbsoluteFill style={{ background: "radial-gradient(circle at 50% 30%, #1d2a44 0%, #070a12 70%)" }}>
+    <Font />
+    <svg width={1080} height={1920} viewBox="0 0 1080 1920" style={{ position: "absolute" }}>
+      <g transform="translate(540,830) scale(2.0) translate(-200,0)"><BerkayBas ifade={{ agiz: "sasir", kas: 0.9, goz: 1.1, bakY: -0.8 }} /></g>
+    </svg>
+    <div style={{ position: "absolute", top: 255, width: 1080, textAlign: "center" }}>
+      <span style={{ fontFamily: POP, fontWeight: 800, fontSize: 40, color: "#1b1f2e", background: "#FF8A1F", borderRadius: 999, padding: "10px 32px" }}>@eticaretteperdearkasi</span>
+    </div>
+    <div style={{ position: "absolute", top: 345, width: 1080, textAlign: "center", fontFamily: POP, fontWeight: 900, lineHeight: 1.0 }}>
+      <div style={{ fontSize: 76, color: "white", textShadow: "0 8px 30px rgba(0,0,0,0.6)" }}>BLACK FRIDAY'DE</div>
+      <div style={{ display: "inline-block", marginTop: 26, background: "#f4efe6", border: "12px solid #7a4a1f", borderRadius: 24, padding: "14px 46px", fontSize: 120, color: "#e0262f", transform: "rotate(-3deg)", boxShadow: "0 24px 60px rgba(0,0,0,0.6)" }}>KAPATTI</div>
+      <div style={{ fontSize: 50, color: "#2ED47A", marginTop: 26 }}>sonra ne oldu?</div>
+    </div>
+  </AbsoluteFill>
+);

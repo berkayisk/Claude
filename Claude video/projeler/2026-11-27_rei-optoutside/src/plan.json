@@ -1,0 +1,97 @@
+{
+ "vo": [
+  {
+   "k": "n1",
+   "metin": "Yılın en çok satılan günlerinden birinde, bir şirket bütün mağazalarını kapattı.",
+   "bas": 0.12,
+   "son": 4.236
+  },
+  {
+   "k": "n2",
+   "metin": "Adı REI. Amerika'da doğa sporları malzemesi satan büyük bir kooperatif.",
+   "bas": 4.386,
+   "son": 8.301
+  },
+  {
+   "k": "n3",
+   "metin": "Yıl iki bin on beş. Black Friday, onlar için yılın en büyük on gününden biri.",
+   "bas": 8.401,
+   "son": 12.013
+  },
+  {
+   "k": "n4",
+   "metin": "Ama yüz kırk üç mağazanın hepsi kapandı, on iki bin çalışan ücretli izne çıktı.",
+   "bas": 12.193,
+   "son": 16.008
+  },
+  {
+   "k": "n5",
+   "metin": "İndirim yok. İnternet siparişleri bile ertesi güne kaldı.",
+   "bas": 16.108,
+   "son": 18.835
+  },
+  {
+   "k": "n6",
+   "metin": "Tek bir mesaj vardı: alışveriş yapma, dışarı çık.",
+   "bas": 19.035,
+   "son": 21.96
+  },
+  {
+   "k": "n7",
+   "metin": "Peki, yılın en büyük gününü kaçırmak şirkete neye mal oldu?",
+   "bas": 22.06,
+   "son": 25.172
+  },
+  {
+   "k": "n8",
+   "metin": "Kampanya, otuz üç gün boyunca haberlerden düşmedi.",
+   "bas": 25.392,
+   "son": 28.069
+  },
+  {
+   "k": "n9",
+   "metin": "O yıl satışlar yüzde dokuz arttı, üye sayısı rekor kırdı.",
+   "bas": 28.219,
+   "son": 31.597
+  },
+  {
+   "k": "n10",
+   "metin": "Kampanya, reklamcılığın en prestijli festivali Cannes'da büyük ödülü kazandı.",
+   "bas": 31.697,
+   "son": 35.573
+  },
+  {
+   "k": "n11",
+   "metin": "Ve bugün, onuncu yılında, mağazalar yine kapalı.",
+   "bas": 35.673,
+   "son": 38.507
+  },
+  {
+   "k": "n12",
+   "metin": "Ama bir gerçek daha var: şirket iki bin yirmi üçte, üç yüz on bir milyon dolar zarar etti.",
+   "bas": 38.727,
+   "son": 42.899
+  },
+  {
+   "k": "n13",
+   "metin": "Yani cesur bir kampanya dikkat çeker, ama işi tek başına kurtarmaz.",
+   "bas": 42.999,
+   "son": 46.164
+  },
+  {
+   "k": "n14",
+   "metin": "Satıcı olarak ders şu: herkes indirim diye bağırırken, farklı bir hikâye anlatan duyulur.",
+   "bas": 46.364,
+   "son": 50.843
+  },
+  {
+   "k": "n15",
+   "metin": "E-ticaretin perde arkası için, beni de takip et.",
+   "bas": 51.043,
+   "son": 53.678
+  }
+ ],
+ "bitis": 54.38,
+ "ses": "ses.wav",
+ "takipTik": 53.14
+}

@@ -140,7 +140,7 @@ def main(girdi, cikti):
             w16 = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(m.sr), "-ac", "1", "-i", "-", "-af", f"aresample=48000,{NETLIK}", "-ar", "16000", "-f", "f32le", "-"],
                                  input=w.astype(np.float32).tobytes(), capture_output=True).stdout   # son işlenmiş hali denetlenir
             pu = dn.kelime_puanlari(np.frombuffer(w16, np.float32).copy(), metin)
-            yab = set(s.get("yabanci", []))   # İngilizce vb. kelimeler Türkçe GOP ile puanlanmaz (hep düşük çıkar)
+            yab = {w.replace("İ", "i").replace("I", "ı").lower() for w in s.get("yabanci", [])} | {w.lower() for w in s.get("yabanci", [])}   # İngilizce vb. kelimeler Türkçe GOP ile puanlanmaz; "REI" -> "reı" (Türkçe küçültme) de yakalanır
             pu = [q for q in pu if q[0] not in yab] or [("-", 0.0, 0.0)]
             minw = min(o for _, o, _ in pu); kotu = [f"{x}({o:.2f})" for x, o, _ in pu if o < SUPHE]
             if kotu: sk -= 0.2 + 0.3 * (SUPHE - minw); tr += "  [telaffuz: " + " ".join(kotu) + "]"
