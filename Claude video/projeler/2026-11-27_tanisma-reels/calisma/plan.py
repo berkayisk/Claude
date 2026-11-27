@@ -14,7 +14,7 @@ for n in T:
             if m and (w["w"].startswith("-") or w["w"].startswith("'")): m[-1] = {"w": m[-1]["w"] + w["w"], "s": m[-1]["s"], "e": w["e"]}
             else: m.append(w)
     KEL[n] = m
-DUZELT = {"Berk": "Berkay", "Ayşık": "Işık", "gelişimim": "girişimim", "işte.": "işe."}
+DUZELT = {"Berk": "Berkay", "Ayşık": "Işık", "gelişimim": "girişimim", "işte.": "işe.", "açlık": "harçlık", "stabil": "Stabil"}
 
 S = {}
 def ses(n):
@@ -59,12 +59,12 @@ def alt_araliklar(n, a, b, ks):
         else: out.append((x2, y2))
     return [(x, y) for x, y in out if y - x >= 0.15]
 
-# (birim, çekim, başlangıç, bitiş): sırayla kurgu
+# (birim, çekim, başlangıç, bitiş): kronolojik kurgu (v2). "babasının parası / güzel arabalar" kullanılmaz (kullanıcı).
 CEKIMLER = [
-    ("kanca", "a", 85.75, 90.05), ("kanca", "b", 0.0, 4.56),
-    ("tanisma", "a", 0.0, 1.88), ("tanisma", "a", 2.13, 4.62), ("tanisma", "a", 24.18, 28.42), ("tanisma", "a", 40.48, 43.26),
-    ("gecmis", "b", 6.55, 14.47), ("yeni", "b", 14.52, 23.98), ("karar", "b", 24.24, 27.72),
-    ("hazirlik", "a", 52.97, 58.98), ("kapanis", "a", 35.96, 40.48),
+    ("tanisma", "a", 0.0, 1.88), ("tanisma", "a", 2.13, 4.62),
+    ("ogrenci", "a", 21.42, 24.14), ("ogrenci", "a", 24.18, 28.42), ("ogrenci", "b", 0.0, 4.56),
+    ("gecmis", "b", 6.55, 14.47), ("yeni", "b", 14.52, 23.98), ("karar", "b", 24.24, 27.72), ("karar", "a", 40.48, 43.26),
+    ("hazirlik", "a", 52.97, 58.98), ("aktif", "a", 60.49, 71.30), ("ufuk", "a", 35.96, 40.48), ("simdi", "a", 43.62, 47.99),
 ]
 parcalar, altyazi, tl, zs = [], [], 0.0, 0
 for (birim, n, a, b) in CEKIMLER:
@@ -98,16 +98,21 @@ def ke(birim, parca):
         if w["birim"] == birim and kucuk(parca) in kucuk(w["w"]): return w["e"]
     raise SystemExit(f"bulunamadı: {birim} {parca}")
 
+BR = {"top": 420, "yukseklik": 563}
 olaylar = [
-    {"tip": "baslik", "s": 0.0, "son": BZ["kanca"][1] + 0.05, "satir1": "HUKUK ÖĞRENCİSİ", "satir2": "e-ticarete nasıl başladı?", "anlik": True},
-    {"tip": "stat", "s": kz("tanisma", "atılım") - 0.05, "son": ke("tanisma", "var.") + 0.05, "ust": "ATILIM HUKUK", "deger": "4. sınıf öğrencisi"},
-    {"tip": "liste", "isaret": "carpi", "s": kz("gecmis", "geleneksel") - 0.1, "son": BZ["gecmis"][1] + 0.05, "ogeler": [["Geleneksel model", kz("gecmis", "geleneksel")]]},
-    {"tip": "liste", "isaret": "tik", "s": kz("yeni", "yeni") - 0.05, "son": BZ["yeni"][1] + 0.05, "ogeler": [["Stoksuz", kz("yeni", "stoksuz")], ["Şirketsiz", kz("yeni", "şirketsiz")]]},
+    {"tip": "baslik", "s": 0.0, "son": BZ["tanisma"][1] + 0.05, "satir1": "HUKUK ÖĞRENCİSİ", "satir2": "e-ticarete nasıl başladı?", "anlik": True},
+    {"tip": "broll_video", "s": kz("ogrenci", "stabil") - 0.05, "son": ke("ogrenci", "ediyordum") + 0.05, "dosya": "broll/4503.mp4", "bas": 2.0, **BR},
+    {"tip": "stat", "s": kz("ogrenci", "tabii") - 0.05, "son": ke("ogrenci", "var.") + 0.05, "ust": "ATILIM HUKUK", "deger": "4. sınıf öğrencisi"},
+    {"tip": "broll_video", "s": kz("gecmis", "geleneksel") - 0.1, "son": BZ["gecmis"][1] + 0.05, "dosya": "broll/4705.mp4", "bas": 3.0, **BR},
+    {"tip": "broll_video", "s": kz("yeni", "yeni") - 0.05, "son": kz("yeni", "stoksuz") - 0.1, "dosya": "broll/42123.mp4", "bas": 2.0, **BR},
+    {"tip": "liste", "isaret": "tik", "s": kz("yeni", "stoksuz") - 0.1, "son": BZ["yeni"][1] + 0.05, "ogeler": [["Stoksuz", kz("yeni", "stoksuz")], ["Şirketsiz", kz("yeni", "şirketsiz")]]},
     {"tip": "stat", "s": kz("hazirlik", "ilk") - 0.05, "son": BZ["hazirlik"][1] + 0.05, "ust": "İLK", "deger": "3 ay hazırlık"},
-    {"tip": "takipet", "s": BZ["kapanis"][0], "son": tl + 0.5, "tik": ke("kapanis", "gördüm")},
+    {"tip": "broll_video", "s": kz("aktif", "müşterilerle") - 0.1, "son": ke("aktif", "arttırdım") + 0.1, "dosya": "broll/4915.mp4", "bas": 3.0, **BR},
+    {"tip": "liste", "isaret": "tik", "s": kz("simdi", "tedarikçilik") - 0.1, "son": kz("simdi", "sahibiyiz") - 0.05, "ogeler": [["Tedarikçi", kz("simdi", "tedarikçilik")], ["Partner", kz("simdi", "partnerlik")], ["Mağaza sahibi", kz("simdi", "mağaza")]]},
+    {"tip": "takipet", "s": kz("simdi", "sahibiyiz") - 0.05, "son": tl + 0.5, "tik": ke("simdi", "sahibiyiz") - 0.1},
 ]
-vurgu = ["özel", "babasının", "kendi", "ayaklarınızın", "hukuk", "zorlukları", "açlık", "geleneksel", "yeni", "nesil", "stoksuz,", "şirketsiz,",
-         "müthişti.", "düşünmeden", "üç", "hazırlık", "başka", "yerlere"]
+vurgu = ["stabil", "özel", "kendi", "ayaklarınızın", "hukuk", "zorlukları", "harçlık", "geleneksel", "yeni", "nesil", "stoksuz,", "şirketsiz,",
+         "müthişti.", "düşünmeden", "üç", "hazırlık", "müşterilerle", "fikir", "başka", "yerlere", "tedarikçilik", "partnerlik", "sahibiyiz."]
 json.dump({"fps": FPS, "kartY": 1100, "altyaziY": 1450, "parcalar": parcalar, "altyazi": altyazi, "olaylar": olaylar, "vurgu": vurgu,
            "toplamKare": sum(p["kare"] for p in parcalar)}, open("src/reels.json", "w"), ensure_ascii=False, indent=1)
 print(f"toplam {tl:.1f} sn, {len(parcalar)} parça")

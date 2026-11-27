@@ -6,34 +6,6 @@
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
-   "bas": 85.73333333333333,
-   "kare": 25,
-   "zoom": false
-  },
-  {
-   "src": "a_dikey.mp4",
-   "ses": "a_ses.wav",
-   "bas": 86.63333333333334,
-   "kare": 103,
-   "zoom": true
-  },
-  {
-   "src": "b_dikey.mp4",
-   "ses": "b_ses.wav",
-   "bas": 0.13333333333333333,
-   "kare": 109,
-   "zoom": false
-  },
-  {
-   "src": "b_dikey.mp4",
-   "ses": "b_ses.wav",
-   "bas": 3.8333333333333335,
-   "kare": 20,
-   "zoom": true
-  },
-  {
-   "src": "a_dikey.mp4",
-   "ses": "a_ses.wav",
    "bas": 0.43333333333333335,
    "kare": 19,
    "zoom": false
@@ -55,36 +27,36 @@
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
+   "bas": 21.433333333333334,
+   "kare": 82,
+   "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
    "bas": 24.233333333333334,
    "kare": 14,
-   "zoom": true
+   "zoom": false
   },
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
    "bas": 24.766666666666666,
    "kare": 110,
-   "zoom": false
-  },
-  {
-   "src": "a_dikey.mp4",
-   "ses": "a_ses.wav",
-   "bas": 40.53333333333333,
-   "kare": 17,
    "zoom": true
   },
   {
-   "src": "a_dikey.mp4",
-   "ses": "a_ses.wav",
-   "bas": 41.233333333333334,
-   "kare": 34,
+   "src": "b_dikey.mp4",
+   "ses": "b_ses.wav",
+   "bas": 0.13333333333333333,
+   "kare": 109,
    "zoom": false
   },
   {
-   "src": "a_dikey.mp4",
-   "ses": "a_ses.wav",
-   "bas": 42.46666666666667,
-   "kare": 24,
+   "src": "b_dikey.mp4",
+   "ses": "b_ses.wav",
+   "bas": 3.8333333333333335,
+   "kare": 20,
    "zoom": true
   },
   {
@@ -146,36 +118,92 @@
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
+   "bas": 40.53333333333333,
+   "kare": 17,
+   "zoom": false
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 41.233333333333334,
+   "kare": 34,
+   "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 42.46666666666667,
+   "kare": 24,
+   "zoom": false
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
    "bas": 52.96666666666667,
    "kare": 74,
-   "zoom": false
+   "zoom": true
   },
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
    "bas": 55.46666666666667,
    "kare": 51,
-   "zoom": true
+   "zoom": false
   },
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
    "bas": 57.2,
    "kare": 19,
-   "zoom": false
+   "zoom": true
   },
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
    "bas": 57.86666666666667,
    "kare": 26,
-   "zoom": true
+   "zoom": false
   },
   {
    "src": "a_dikey.mp4",
    "ses": "a_ses.wav",
    "bas": 58.8,
    "kare": 6,
+   "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 60.46666666666667,
+   "kare": 71,
+   "zoom": false
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 62.9,
+   "kare": 52,
+   "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 64.93333333333334,
+   "kare": 58,
+   "zoom": false
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 66.93333333333334,
+   "kare": 54,
+   "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 69.06666666666666,
+   "kare": 67,
    "zoom": false
   },
   {
@@ -184,790 +212,1070 @@
    "bas": 36.233333333333334,
    "kare": 127,
    "zoom": true
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 43.63333333333333,
+   "kare": 22,
+   "zoom": false
+  },
+  {
+   "src": "a_dikey.mp4",
+   "ses": "a_ses.wav",
+   "bas": 44.4,
+   "kare": 108,
+   "zoom": true
   }
  ],
  "altyazi": [
   {
-   "w": "Özel",
-   "s": 0.117,
-   "e": 0.277,
-   "birim": "kanca"
-  },
-  {
-   "w": "okullarda",
-   "s": 0.277,
-   "e": 0.737,
-   "birim": "kanca"
-  },
-  {
-   "w": "babasının",
-   "s": 0.833,
-   "e": 1.37,
-   "birim": "kanca"
-  },
-  {
-   "w": "parasıyla,",
-   "s": 1.37,
-   "e": 2.35,
-   "birim": "kanca"
-  },
-  {
-   "w": "güzel",
-   "s": 2.49,
-   "e": 2.93,
-   "birim": "kanca"
-  },
-  {
-   "w": "arabalarla",
-   "s": 2.93,
-   "e": 3.41,
-   "birim": "kanca"
-  },
-  {
-   "w": "geliyorlar",
-   "s": 3.41,
-   "e": 3.83,
-   "birim": "kanca"
-  },
-  {
-   "w": "gerçekten.",
-   "s": 3.83,
-   "e": 4.13,
-   "birim": "kanca"
-  },
-  {
-   "w": "Ve",
-   "s": 4.267,
-   "e": 4.793,
-   "birim": "kanca"
-  },
-  {
-   "w": "siz",
-   "s": 4.793,
-   "e": 5.073,
-   "birim": "kanca"
-  },
-  {
-   "w": "de",
-   "s": 5.073,
-   "e": 5.213,
-   "birim": "kanca"
-  },
-  {
-   "w": "orada",
-   "s": 5.213,
-   "e": 5.373,
-   "birim": "kanca"
-  },
-  {
-   "w": "artık",
-   "s": 5.373,
-   "e": 5.653,
-   "birim": "kanca"
-  },
-  {
-   "w": "kendi",
-   "s": 5.653,
-   "e": 5.913,
-   "birim": "kanca"
-  },
-  {
-   "w": "ayaklarınızın",
-   "s": 5.913,
-   "e": 6.473,
-   "birim": "kanca"
-  },
-  {
-   "w": "üzerinde",
-   "s": 6.473,
-   "e": 7.033,
-   "birim": "kanca"
-  },
-  {
-   "w": "durmak",
-   "s": 7.033,
-   "e": 7.9,
-   "birim": "kanca"
-  },
-  {
-   "w": "istiyorsunuz.",
-   "s": 7.9,
-   "e": 8.547,
-   "birim": "kanca"
-  },
-  {
    "w": "Merhabalar,",
-   "s": 8.567,
-   "e": 9.043,
+   "s": 0.0,
+   "e": 0.477,
    "birim": "tanisma"
   },
   {
    "w": "Berkay",
-   "s": 9.223,
-   "e": 9.483,
+   "s": 0.657,
+   "e": 0.917,
    "birim": "tanisma"
   },
   {
    "w": "Işık",
-   "s": 9.483,
-   "e": 9.743,
+   "s": 0.917,
+   "e": 1.177,
    "birim": "tanisma"
   },
   {
    "w": "ben.",
-   "s": 9.743,
-   "e": 9.923,
+   "s": 1.177,
+   "e": 1.357,
    "birim": "tanisma"
   },
   {
    "w": "Öğrenciyim,",
-   "s": 10.183,
-   "e": 10.583,
+   "s": 1.617,
+   "e": 2.017,
    "birim": "tanisma"
   },
   {
    "w": "Atılım",
-   "s": 10.723,
-   "e": 10.983,
+   "s": 2.157,
+   "e": 2.417,
    "birim": "tanisma"
   },
   {
    "w": "Hukuk",
-   "s": 10.983,
-   "e": 11.203,
+   "s": 2.417,
+   "e": 2.637,
    "birim": "tanisma"
   },
   {
    "w": "4.",
-   "s": 11.203,
-   "e": 11.343,
+   "s": 2.637,
+   "e": 2.777,
    "birim": "tanisma"
   },
   {
    "w": "sınıf",
-   "s": 11.543,
-   "e": 11.783,
+   "s": 2.977,
+   "e": 3.217,
    "birim": "tanisma"
   },
   {
    "w": "öğrencisiyim.",
-   "s": 11.783,
-   "e": 12.363,
+   "s": 3.217,
+   "e": 3.797,
    "birim": "tanisma"
+  },
+  {
+   "w": "Stabil",
+   "s": 3.867,
+   "e": 4.543,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "olarak",
+   "s": 4.543,
+   "e": 4.783,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "öğrencilik",
+   "s": 4.783,
+   "e": 5.363,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "hayatıma",
+   "s": 5.363,
+   "e": 5.823,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "devam",
+   "s": 5.823,
+   "e": 6.143,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "ediyordum.",
+   "s": 6.143,
+   "e": 6.523,
+   "birim": "ogrenci"
   },
   {
    "w": "Tabii",
-   "s": 12.45,
-   "e": 12.59,
-   "birim": "tanisma"
+   "s": 6.617,
+   "e": 6.757,
+   "birim": "ogrenci"
   },
   {
    "w": "bu",
-   "s": 12.59,
-   "e": 12.79,
-   "birim": "tanisma"
+   "s": 6.757,
+   "e": 6.957,
+   "birim": "ogrenci"
   },
   {
    "w": "özel",
-   "s": 12.9,
-   "e": 13.263,
-   "birim": "tanisma"
+   "s": 7.067,
+   "e": 7.43,
+   "birim": "ogrenci"
   },
   {
    "w": "bir",
-   "s": 13.263,
-   "e": 13.483,
-   "birim": "tanisma"
+   "s": 7.43,
+   "e": 7.65,
+   "birim": "ogrenci"
   },
   {
    "w": "üniversite",
-   "s": 13.483,
-   "e": 14.083,
-   "birim": "tanisma"
+   "s": 7.65,
+   "e": 8.25,
+   "birim": "ogrenci"
   },
   {
    "w": "öğrencisi",
-   "s": 14.083,
-   "e": 14.483,
-   "birim": "tanisma"
+   "s": 8.25,
+   "e": 8.65,
+   "birim": "ogrenci"
   },
   {
    "w": "olmanın",
-   "s": 14.483,
-   "e": 14.923,
-   "birim": "tanisma"
+   "s": 8.65,
+   "e": 9.09,
+   "birim": "ogrenci"
   },
   {
    "w": "da",
-   "s": 14.923,
-   "e": 15.023,
-   "birim": "tanisma"
+   "s": 9.09,
+   "e": 9.19,
+   "birim": "ogrenci"
   },
   {
    "w": "gerçekten",
-   "s": 15.023,
-   "e": 15.703,
-   "birim": "tanisma"
+   "s": 9.19,
+   "e": 9.87,
+   "birim": "ogrenci"
   },
   {
    "w": "zorlukları",
-   "s": 15.703,
-   "e": 16.323,
-   "birim": "tanisma"
+   "s": 9.87,
+   "e": 10.49,
+   "birim": "ogrenci"
   },
   {
    "w": "var.",
-   "s": 16.323,
-   "e": 16.503,
-   "birim": "tanisma"
-  },
-  {
-   "w": "Yani",
-   "s": 16.583,
-   "e": 16.823,
-   "birim": "tanisma"
-  },
-  {
-   "w": "bir",
-   "s": 16.823,
-   "e": 17.023,
-   "birim": "tanisma"
-  },
-  {
-   "w": "açlık",
-   "s": 17.133,
-   "e": 17.47,
-   "birim": "tanisma"
-  },
-  {
-   "w": "düşüncesiyle",
-   "s": 17.47,
-   "e": 18.19,
-   "birim": "tanisma"
-  },
-  {
-   "w": "girdim",
-   "s": 18.267,
-   "e": 18.61,
-   "birim": "tanisma"
-  },
-  {
-   "w": "bu",
-   "s": 18.61,
-   "e": 18.75,
-   "birim": "tanisma"
-  },
-  {
-   "w": "işe.",
-   "s": 18.75,
-   "e": 18.99,
-   "birim": "tanisma"
+   "s": 10.49,
+   "e": 10.67,
+   "birim": "ogrenci"
   },
   {
    "w": "Ve",
-   "s": 19.143,
-   "e": 19.513,
+   "s": 10.733,
+   "e": 11.26,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "siz",
+   "s": 11.26,
+   "e": 11.54,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "de",
+   "s": 11.54,
+   "e": 11.68,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "orada",
+   "s": 11.68,
+   "e": 11.84,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "artık",
+   "s": 11.84,
+   "e": 12.12,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "kendi",
+   "s": 12.12,
+   "e": 12.38,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "ayaklarınızın",
+   "s": 12.38,
+   "e": 12.94,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "üzerinde",
+   "s": 12.94,
+   "e": 13.5,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "durmak",
+   "s": 13.5,
+   "e": 14.367,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "istiyorsunuz.",
+   "s": 14.367,
+   "e": 15.013,
+   "birim": "ogrenci"
+  },
+  {
+   "w": "Ve",
+   "s": 15.11,
+   "e": 15.48,
    "birim": "gecmis"
   },
   {
    "w": "aslında",
-   "s": 19.513,
-   "e": 19.913,
+   "s": 15.48,
+   "e": 15.88,
    "birim": "gecmis"
   },
   {
    "w": "daha",
-   "s": 19.913,
-   "e": 20.433,
+   "s": 15.88,
+   "e": 16.4,
    "birim": "gecmis"
   },
   {
    "w": "öncesinde",
-   "s": 20.433,
-   "e": 21.013,
+   "s": 16.4,
+   "e": 16.98,
    "birim": "gecmis"
   },
   {
    "w": "de",
-   "s": 21.013,
-   "e": 21.173,
+   "s": 16.98,
+   "e": 17.14,
    "birim": "gecmis"
   },
   {
    "w": "bir",
-   "s": 21.267,
-   "e": 21.647,
+   "s": 17.233,
+   "e": 17.613,
    "birim": "gecmis"
   },
   {
    "w": "e-ticaret",
-   "s": 21.647,
-   "e": 22.147,
+   "s": 17.613,
+   "e": 18.113,
    "birim": "gecmis"
   },
   {
    "w": "girişimim",
-   "s": 22.147,
-   "e": 22.587,
+   "s": 18.113,
+   "e": 18.553,
    "birim": "gecmis"
   },
   {
    "w": "olmuştu.",
-   "s": 22.587,
-   "e": 23.087,
+   "s": 18.553,
+   "e": 19.053,
    "birim": "gecmis"
   },
   {
    "w": "Ancak",
-   "s": 23.267,
-   "e": 23.633,
+   "s": 19.233,
+   "e": 19.6,
    "birim": "gecmis"
   },
   {
    "w": "tabii",
-   "s": 23.633,
-   "e": 23.78,
+   "s": 19.6,
+   "e": 19.747,
    "birim": "gecmis"
   },
   {
    "w": "geleneksel",
-   "s": 23.78,
-   "e": 24.66,
+   "s": 19.747,
+   "e": 20.627,
    "birim": "gecmis"
   },
   {
    "w": "bir",
-   "s": 24.66,
-   "e": 24.94,
+   "s": 20.627,
+   "e": 20.907,
    "birim": "gecmis"
   },
   {
    "w": "e-ticaret",
-   "s": 24.94,
-   "e": 25.5,
+   "s": 20.907,
+   "e": 21.467,
    "birim": "gecmis"
   },
   {
    "w": "modeliyle",
-   "s": 25.5,
-   "e": 25.9,
+   "s": 21.467,
+   "e": 21.867,
    "birim": "gecmis"
   },
   {
    "w": "ilerlemiştim.",
-   "s": 25.9,
-   "e": 26.5,
+   "s": 21.867,
+   "e": 22.467,
    "birim": "gecmis"
   },
   {
    "w": "Ama",
-   "s": 26.6,
-   "e": 26.793,
+   "s": 22.567,
+   "e": 22.76,
    "birim": "yeni"
   },
   {
    "w": "burada",
-   "s": 26.793,
-   "e": 27.113,
+   "s": 22.76,
+   "e": 23.08,
    "birim": "yeni"
   },
   {
    "w": "gerçekten",
-   "s": 27.113,
-   "e": 27.753,
+   "s": 23.08,
+   "e": 23.72,
    "birim": "yeni"
   },
   {
    "w": "yeni",
-   "s": 27.753,
-   "e": 28.373,
+   "s": 23.72,
+   "e": 24.34,
    "birim": "yeni"
   },
   {
    "w": "nesil",
-   "s": 28.373,
-   "e": 28.773,
+   "s": 24.34,
+   "e": 24.74,
    "birim": "yeni"
   },
   {
    "w": "e-ticaret",
-   "s": 28.833,
-   "e": 29.42,
+   "s": 24.8,
+   "e": 25.387,
    "birim": "yeni"
   },
   {
    "w": "dediğimiz",
-   "s": 29.42,
-   "e": 29.86,
+   "s": 25.387,
+   "e": 25.827,
    "birim": "yeni"
   },
   {
    "w": "hem",
-   "s": 29.967,
-   "e": 30.167,
+   "s": 25.933,
+   "e": 26.133,
    "birim": "yeni"
   },
   {
    "w": "stoksuz,",
-   "s": 30.167,
-   "e": 30.787,
+   "s": 26.133,
+   "e": 26.753,
    "birim": "yeni"
   },
   {
    "w": "hem",
-   "s": 30.967,
-   "e": 31.087,
+   "s": 26.933,
+   "e": 27.053,
    "birim": "yeni"
   },
   {
    "w": "şirketsiz,",
-   "s": 31.087,
-   "e": 31.907,
+   "s": 27.053,
+   "e": 27.873,
    "birim": "yeni"
   },
   {
    "w": "hem",
-   "s": 32.047,
-   "e": 32.247,
+   "s": 28.013,
+   "e": 28.213,
    "birim": "yeni"
   },
   {
    "w": "risksiz",
-   "s": 32.247,
-   "e": 32.987,
+   "s": 28.213,
+   "e": 28.953,
    "birim": "yeni"
   },
   {
    "w": "bir",
-   "s": 33.1,
-   "e": 33.253,
+   "s": 29.067,
+   "e": 29.22,
    "birim": "yeni"
   },
   {
    "w": "modelle",
-   "s": 33.253,
-   "e": 33.653,
+   "s": 29.22,
+   "e": 29.62,
    "birim": "yeni"
   },
   {
    "w": "ilerleyebilmek",
-   "s": 33.653,
-   "e": 34.353,
+   "s": 29.62,
+   "e": 30.32,
    "birim": "yeni"
   },
   {
    "w": "gerçekten",
-   "s": 34.353,
-   "e": 34.833,
+   "s": 30.32,
+   "e": 30.8,
    "birim": "yeni"
   },
   {
    "w": "müthişti.",
-   "s": 34.833,
-   "e": 35.353,
+   "s": 30.8,
+   "e": 31.32,
    "birim": "yeni"
   },
   {
    "w": "Zaten",
-   "s": 35.433,
-   "e": 36.04,
+   "s": 31.4,
+   "e": 32.007,
    "birim": "karar"
   },
   {
    "w": "bunu",
-   "s": 36.04,
-   "e": 36.26,
+   "s": 32.007,
+   "e": 32.227,
    "birim": "karar"
   },
   {
    "w": "duyduğumda",
-   "s": 36.26,
-   "e": 36.76,
+   "s": 32.227,
+   "e": 32.727,
    "birim": "karar"
   },
   {
    "w": "karar",
-   "s": 36.76,
-   "e": 37.06,
+   "s": 32.727,
+   "e": 33.027,
    "birim": "karar"
   },
   {
    "w": "vermek",
-   "s": 37.06,
-   "e": 37.38,
+   "s": 33.027,
+   "e": 33.347,
    "birim": "karar"
   },
   {
    "w": "için",
-   "s": 37.38,
-   "e": 37.54,
+   "s": 33.347,
+   "e": 33.507,
    "birim": "karar"
   },
   {
    "w": "hiç",
-   "s": 37.54,
-   "e": 37.68,
+   "s": 33.507,
+   "e": 33.647,
    "birim": "karar"
   },
   {
    "w": "düşünmeden",
-   "s": 37.68,
-   "e": 38.1,
+   "s": 33.647,
+   "e": 34.067,
    "birim": "karar"
   },
   {
    "w": "bir",
-   "s": 38.1,
-   "e": 38.32,
+   "s": 34.067,
+   "e": 34.287,
    "birim": "karar"
   },
   {
    "w": "adım",
-   "s": 38.32,
-   "e": 38.5,
+   "s": 34.287,
+   "e": 34.467,
    "birim": "karar"
   },
   {
    "w": "attım.",
-   "s": 38.5,
-   "e": 38.733,
+   "s": 34.467,
+   "e": 34.7,
+   "birim": "karar"
+  },
+  {
+   "w": "Yani",
+   "s": 34.717,
+   "e": 34.957,
+   "birim": "karar"
+  },
+  {
+   "w": "bir",
+   "s": 34.957,
+   "e": 35.157,
+   "birim": "karar"
+  },
+  {
+   "w": "harçlık",
+   "s": 35.267,
+   "e": 35.603,
+   "birim": "karar"
+  },
+  {
+   "w": "düşüncesiyle",
+   "s": 35.603,
+   "e": 36.323,
+   "birim": "karar"
+  },
+  {
+   "w": "girdim",
+   "s": 36.4,
+   "e": 36.743,
+   "birim": "karar"
+  },
+  {
+   "w": "bu",
+   "s": 36.743,
+   "e": 36.883,
+   "birim": "karar"
+  },
+  {
+   "w": "işe.",
+   "s": 36.883,
+   "e": 37.123,
    "birim": "karar"
   },
   {
    "w": "Bu",
-   "s": 38.937,
-   "e": 39.057,
+   "s": 37.403,
+   "e": 37.523,
    "birim": "hazirlik"
   },
   {
    "w": "bir",
-   "s": 39.057,
-   "e": 39.217,
+   "s": 37.523,
+   "e": 37.683,
    "birim": "hazirlik"
   },
   {
    "w": "yıl",
-   "s": 39.217,
-   "e": 39.377,
+   "s": 37.683,
+   "e": 37.843,
    "birim": "hazirlik"
   },
   {
    "w": "içerisinde",
-   "s": 39.377,
-   "e": 39.997,
+   "s": 37.843,
+   "e": 38.463,
    "birim": "hazirlik"
   },
   {
    "w": "ilk",
-   "s": 39.997,
-   "e": 40.497,
+   "s": 38.463,
+   "e": 38.963,
    "birim": "hazirlik"
   },
   {
    "w": "üç",
-   "s": 40.497,
-   "e": 40.697,
+   "s": 38.963,
+   "e": 39.163,
    "birim": "hazirlik"
   },
   {
    "w": "ayı",
-   "s": 40.697,
-   "e": 41.057,
+   "s": 39.163,
+   "e": 39.523,
    "birim": "hazirlik"
   },
   {
    "w": "hazırlık",
-   "s": 41.2,
-   "e": 41.583,
+   "s": 39.667,
+   "e": 40.05,
    "birim": "hazirlik"
   },
   {
    "w": "süreci",
-   "s": 41.583,
-   "e": 41.883,
+   "s": 40.05,
+   "e": 40.35,
    "birim": "hazirlik"
   },
   {
    "w": "olarak",
-   "s": 41.883,
-   "e": 42.123,
+   "s": 40.35,
+   "e": 40.59,
    "birim": "hazirlik"
   },
   {
    "w": "geçirdim.",
-   "s": 42.123,
-   "e": 42.603,
+   "s": 40.59,
+   "e": 41.07,
    "birim": "hazirlik"
   },
   {
    "w": "Ve",
-   "s": 42.603,
-   "e": 42.763,
+   "s": 41.07,
+   "e": 41.23,
    "birim": "hazirlik"
   },
   {
    "w": "gerçekten",
-   "s": 42.9,
-   "e": 43.21,
+   "s": 41.367,
+   "e": 41.677,
    "birim": "hazirlik"
   },
   {
    "w": "ciddi",
-   "s": 43.21,
-   "e": 43.533,
+   "s": 41.677,
+   "e": 42.0,
    "birim": "hazirlik"
   },
   {
    "w": "bir",
-   "s": 43.617,
-   "e": 43.757,
+   "s": 42.083,
+   "e": 42.223,
    "birim": "hazirlik"
   },
   {
    "w": "hazırlık",
-   "s": 43.757,
-   "e": 44.197,
+   "s": 42.223,
+   "e": 42.663,
    "birim": "hazirlik"
   },
   {
    "w": "yaptım.",
-   "s": 44.197,
-   "e": 44.4,
+   "s": 42.663,
+   "e": 42.867,
    "birim": "hazirlik"
   },
   {
-   "w": "Ama",
-   "s": 44.6,
-   "e": 45.037,
-   "birim": "kapanis"
+   "w": "Bu",
+   "s": 43.07,
+   "e": 43.23,
+   "birim": "aktif"
   },
   {
-   "w": "daha",
-   "s": 45.037,
-   "e": 45.217,
-   "birim": "kapanis"
+   "w": "üç",
+   "s": 43.23,
+   "e": 43.39,
+   "birim": "aktif"
+  },
+  {
+   "w": "ay",
+   "s": 43.39,
+   "e": 43.53,
+   "birim": "aktif"
   },
   {
    "w": "sonrasında",
-   "s": 45.217,
-   "e": 45.737,
-   "birim": "kapanis"
+   "s": 43.53,
+   "e": 44.19,
+   "birim": "aktif"
   },
   {
-   "w": "çok",
-   "s": 45.737,
-   "e": 46.097,
-   "birim": "kapanis"
+   "w": "artık",
+   "s": 44.19,
+   "e": 44.65,
+   "birim": "aktif"
   },
   {
-   "w": "başka",
-   "s": 46.097,
-   "e": 46.457,
-   "birim": "kapanis"
+   "w": "aktif",
+   "s": 44.65,
+   "e": 45.09,
+   "birim": "aktif"
   },
   {
-   "w": "yerlere",
-   "s": 46.457,
-   "e": 46.937,
-   "birim": "kapanis"
+   "w": "olarak",
+   "s": 45.09,
+   "e": 45.33,
+   "birim": "aktif"
   },
   {
-   "w": "gidebileceğini",
-   "s": 46.937,
-   "e": 47.577,
-   "birim": "kapanis"
+   "w": "hem",
+   "s": 45.433,
+   "e": 45.583,
+   "birim": "aktif"
+  },
+  {
+   "w": "müşterilerle",
+   "s": 45.583,
+   "e": 46.183,
+   "birim": "aktif"
+  },
+  {
+   "w": "iletişim",
+   "s": 46.183,
+   "e": 46.563,
+   "birim": "aktif"
+  },
+  {
+   "w": "arttırdım,",
+   "s": 46.563,
+   "e": 47.123,
+   "birim": "aktif"
+  },
+  {
+   "w": "hem",
+   "s": 47.167,
+   "e": 47.583,
+   "birim": "aktif"
   },
   {
    "w": "de",
-   "s": 47.577,
-   "e": 47.677,
-   "birim": "kapanis"
+   "s": 47.583,
+   "e": 47.723,
+   "birim": "aktif"
   },
   {
-   "w": "gördüm",
-   "s": 47.677,
-   "e": 48.397,
-   "birim": "kapanis"
+   "w": "buradaki",
+   "s": 47.723,
+   "e": 48.123,
+   "birim": "aktif"
+  },
+  {
+   "w": "arkadaşlarımızla",
+   "s": 48.123,
+   "e": 49.023,
+   "birim": "aktif"
+  },
+  {
+   "w": "paslaşarak,",
+   "s": 49.1,
+   "e": 49.677,
+   "birim": "aktif"
+  },
+  {
+   "w": "birbirimizle",
+   "s": 49.837,
+   "e": 50.497,
+   "birim": "aktif"
+  },
+  {
+   "w": "daha",
+   "s": 50.497,
+   "e": 50.637,
+   "birim": "aktif"
+  },
+  {
+   "w": "çok",
+   "s": 50.637,
+   "e": 50.857,
+   "birim": "aktif"
+  },
+  {
+   "w": "fikir",
+   "s": 50.9,
+   "e": 51.123,
+   "birim": "aktif"
+  },
+  {
+   "w": "alışverişi",
+   "s": 51.123,
+   "e": 51.603,
+   "birim": "aktif"
+  },
+  {
+   "w": "yaparak",
+   "s": 51.603,
+   "e": 51.903,
+   "birim": "aktif"
   },
   {
    "w": "bu",
-   "s": 48.397,
-   "e": 48.537,
-   "birim": "kapanis"
+   "s": 51.903,
+   "e": 52.063,
+   "birim": "aktif"
+  },
+  {
+   "w": "işi",
+   "s": 52.063,
+   "e": 52.183,
+   "birim": "aktif"
+  },
+  {
+   "w": "bu",
+   "s": 52.183,
+   "e": 52.283,
+   "birim": "aktif"
+  },
+  {
+   "w": "noktaya",
+   "s": 52.283,
+   "e": 52.643,
+   "birim": "aktif"
+  },
+  {
+   "w": "getirdik.",
+   "s": 52.643,
+   "e": 52.963,
+   "birim": "aktif"
+  },
+  {
+   "w": "Ama",
+   "s": 53.133,
+   "e": 53.57,
+   "birim": "ufuk"
+  },
+  {
+   "w": "daha",
+   "s": 53.57,
+   "e": 53.75,
+   "birim": "ufuk"
+  },
+  {
+   "w": "sonrasında",
+   "s": 53.75,
+   "e": 54.27,
+   "birim": "ufuk"
+  },
+  {
+   "w": "çok",
+   "s": 54.27,
+   "e": 54.63,
+   "birim": "ufuk"
+  },
+  {
+   "w": "başka",
+   "s": 54.63,
+   "e": 54.99,
+   "birim": "ufuk"
+  },
+  {
+   "w": "yerlere",
+   "s": 54.99,
+   "e": 55.47,
+   "birim": "ufuk"
+  },
+  {
+   "w": "gidebileceğini",
+   "s": 55.47,
+   "e": 56.11,
+   "birim": "ufuk"
+  },
+  {
+   "w": "de",
+   "s": 56.11,
+   "e": 56.21,
+   "birim": "ufuk"
+  },
+  {
+   "w": "gördüm",
+   "s": 56.21,
+   "e": 56.93,
+   "birim": "ufuk"
+  },
+  {
+   "w": "bu",
+   "s": 56.93,
+   "e": 57.07,
+   "birim": "ufuk"
   },
   {
    "w": "işin.",
-   "s": 48.537,
-   "e": 48.777,
-   "birim": "kapanis"
+   "s": 57.07,
+   "e": 57.31,
+   "birim": "ufuk"
+  },
+  {
+   "w": "Şimdi",
+   "s": 57.403,
+   "e": 57.523,
+   "birim": "simdi"
+  },
+  {
+   "w": "artık",
+   "s": 57.523,
+   "e": 57.763,
+   "birim": "simdi"
+  },
+  {
+   "w": "hem",
+   "s": 57.763,
+   "e": 58.003,
+   "birim": "simdi"
+  },
+  {
+   "w": "tedarikçilik",
+   "s": 58.1,
+   "e": 58.63,
+   "birim": "simdi"
+  },
+  {
+   "w": "yapıyoruz,",
+   "s": 58.63,
+   "e": 59.05,
+   "birim": "simdi"
+  },
+  {
+   "w": "hem",
+   "s": 59.19,
+   "e": 59.37,
+   "birim": "simdi"
+  },
+  {
+   "w": "partnerlik",
+   "s": 59.37,
+   "e": 59.91,
+   "birim": "simdi"
+  },
+  {
+   "w": "yapıyoruz,",
+   "s": 59.91,
+   "e": 60.37,
+   "birim": "simdi"
+  },
+  {
+   "w": "hem",
+   "s": 60.55,
+   "e": 60.75,
+   "birim": "simdi"
+  },
+  {
+   "w": "de",
+   "s": 60.75,
+   "e": 60.89,
+   "birim": "simdi"
+  },
+  {
+   "w": "mağaza",
+   "s": 60.89,
+   "e": 61.19,
+   "birim": "simdi"
+  },
+  {
+   "w": "sahibiyiz.",
+   "s": 61.19,
+   "e": 61.67,
+   "birim": "simdi"
   }
  ],
  "olaylar": [
   {
    "tip": "baslik",
    "s": 0.0,
-   "son": 8.597000000000001,
+   "son": 3.847,
    "satir1": "HUKUK ÖĞRENCİSİ",
    "satir2": "e-ticarete nasıl başladı?",
    "anlik": true
   },
   {
+   "tip": "broll_video",
+   "s": 3.817,
+   "son": 6.5729999999999995,
+   "dosya": "broll/4503.mp4",
+   "bas": 2.0,
+   "top": 420,
+   "yukseklik": 563
+  },
+  {
    "tip": "stat",
-   "s": 10.673,
-   "son": 16.553,
+   "s": 6.567,
+   "son": 10.72,
    "ust": "ATILIM HUKUK",
    "deger": "4. sınıf öğrencisi"
   },
   {
-   "tip": "liste",
-   "isaret": "carpi",
-   "s": 23.68,
-   "son": 26.55,
-   "ogeler": [
-    [
-     "Geleneksel model",
-     23.78
-    ]
-   ]
+   "tip": "broll_video",
+   "s": 19.647,
+   "son": 22.517,
+   "dosya": "broll/4705.mp4",
+   "bas": 3.0,
+   "top": 420,
+   "yukseklik": 563
+  },
+  {
+   "tip": "broll_video",
+   "s": 23.669999999999998,
+   "son": 26.032999999999998,
+   "dosya": "broll/42123.mp4",
+   "bas": 2.0,
+   "top": 420,
+   "yukseklik": 563
   },
   {
    "tip": "liste",
    "isaret": "tik",
-   "s": 27.703,
-   "son": 35.403,
+   "s": 26.032999999999998,
+   "son": 31.37,
    "ogeler": [
     [
      "Stoksuz",
-     30.167
+     26.133
     ],
     [
      "Şirketsiz",
-     31.087
+     27.053
     ]
    ]
   },
   {
    "tip": "stat",
-   "s": 39.947,
-   "son": 44.449999999999996,
+   "s": 38.413000000000004,
+   "son": 42.916999999999994,
    "ust": "İLK",
    "deger": "3 ay hazırlık"
   },
   {
+   "tip": "broll_video",
+   "s": 45.483,
+   "son": 47.223,
+   "dosya": "broll/4915.mp4",
+   "bas": 3.0,
+   "top": 420,
+   "yukseklik": 563
+  },
+  {
+   "tip": "liste",
+   "isaret": "tik",
+   "s": 58.0,
+   "son": 61.14,
+   "ogeler": [
+    [
+     "Tedarikçi",
+     58.1
+    ],
+    [
+     "Partner",
+     59.37
+    ],
+    [
+     "Mağaza sahibi",
+     60.89
+    ]
+   ]
+  },
+  {
    "tip": "takipet",
-   "s": 44.6,
-   "son": 49.33333333333334,
-   "tik": 48.397
+   "s": 61.14,
+   "son": 62.2,
+   "tik": 61.57
   }
  ],
  "vurgu": [
+  "stabil",
   "özel",
-  "babasının",
   "kendi",
   "ayaklarınızın",
   "hukuk",
   "zorlukları",
-  "açlık",
+  "harçlık",
   "geleneksel",
   "yeni",
   "nesil",
@@ -977,8 +1285,13 @@
   "düşünmeden",
   "üç",
   "hazırlık",
+  "müşterilerle",
+  "fikir",
   "başka",
-  "yerlere"
+  "yerlere",
+  "tedarikçilik",
+  "partnerlik",
+  "sahibiyiz."
  ],
- "toplamKare": 1465
+ "toplamKare": 1851
 }
