@@ -1,67 +1,75 @@
-# voice.md
+# voice.md: Sıfırdan Satışa (@sifirdansatisa)
 
-Copy this to `~/.claude/instagram/voice.md` and fill it in. Every skill in the
-pack reads it. Ten minutes here is the difference between scripts you shoot and
-scripts you rewrite.
-
-If you would rather not fill it in by hand, send Claude three of your own reels
-or captions and say "write my voice.md from these". That works better than
-guessing at the answers.
-
-This file matters more on Instagram than anywhere else, because you have to say
-the words out loud. A line you would never say is not a draft, it is a retake.
+Instagram skillerinin (ig-reel, ig-caption, ig-plan…) hepsi bu dosyayı okur.
+Kaynak: önceki projeler (reels-1 "Babalar Gibi E-Ticaret #1" transkripti ve açıklaması, Eskişehir/Ankara reklamları,
+İlk Ağızdan bölümü, REELS_STIL.md) ve Berkay'ın cevapları (2026-11-27).
 
 ---
 
-## Who I am
+## Ben kimim
 
-- **Name:**
-- **Handle:**
-- **What I do, in one sentence:**
-- **Who I am talking to:** (be specific: "photographers charging under $2,000",
-  not "creatives")
-- **What I sell:**
+- **Ad:** Berkay Işık
+- **Hesap:** @sifirdansatisa (YouTube: Sıfırdan Satışa) · link: linktr.ee/sifirdansatisa
+- **Tek cümleyle ne yapıyorum:** E-ticarete sıfırdan nasıl başlanır, "babalar gibi" anlatıyorum; bilgi kirliliği yerine doğruyu uzmanların ağzından ("İlk Ağızdan") getiriyorum.
+- **Kime konuşuyorum:** E-ticarete başlamak isteyen ama 500 bin – 1 milyon sermayesi olmayan, nereden başlayacağını, ne satacağını, müşteriyi nereden bulacağını bilmeyen yeni başlayanlar; ek gelir arayanlar, işinde mutlu olmayanlar.
+- **Ne satıyorum:** Doğrudan ürün satmıyorum. "Yeni nesil e-ticaret" modelini (şirketsiz, stoksuz, tek panel) ve bu modelin etkinliklerini anlatıyorum.
+- **Marka adı:** Paylaşımlarda (reels metni, ekran yazısı, açıklama, hashtag) **hiçbir marka/firma adı verilmez**; platformu "yeni nesil model", "tek panelden yönetilen sistem" gibi tarif et. İş birliği etiketi şart değil.
 
-## What I sound like
+## Nasıl konuşuyorum
 
-- **Three of my own reels or captions that sound most like me:** (paste them)
-- **On camera I am:** (fast and loud / dry / calm / funny / deadpan)
-- **Words I actually use:**
-- **Words I would never say out loud:**
-- **Do I swear:** (yes / mild / no)
-- **Emoji in captions:** (never / one, rarely / freely)
-- **Face on camera:** (always / sometimes / faceless)
-- **Voiceover or to-camera:**
-- **Pace:** (words per minute, if you have timed yourself reading a script.
-  `beats.py --wpm` uses this. Most people are between 150 and 200.)
+- **Kendi ağzımdan örnekler** (reels-1 transkriptinden, Whisper hataları temizlendi):
+  1. "Yoruma e-ticaret yazana hiçbir şey göndermiyorum. E-ticarete nasıl başlanır, babalar gibi anlatıyorum."
+  2. "Elinde hazır ürün yoksa gideyim ürün alayım, onu da yüz elli, iki yüz bine mal edeyim. Yok efendim, öyle e-ticaret."
+  3. "Hepsi herkese uymaz. Sana uygun olan modeli yine senin durumuna göre seçeceksin. Bir dahaki videoda doğru ürün seçimini anlatacağım. E-ticarete nasıl başlayacağını babalar gibi öğrenmek istiyorsan beni takip etmeyi unutma."
+- **Kamerada:** Samimi, net, biraz meydan okuyan; abi gibi doğrudan anlatan. Esprili ama dalga geçmeyen. İlk cümle iddialı ya da provokatif.
+- **Kullandığım kelimeler:** "babalar gibi", "yok efendim", "önünde … net seçenek var", "yeni nesil model", "stoksuz", "tek panelden", "adım adım", "kendi markanı", "sermaye", "bilgi kirliliği", "ilk ağızdan", "sen" diye hitap.
+- **Ağzıma almayacağım:** "10 günde zengin ol", "pasif gelir garantisi", "hayatını değiştirecek", "kaçırılmayacak fırsat", "Hadi gelin birlikte bakalım" ve benzeri yapay zekâ / satış klişeleri (bkz. humanizer `turkce.md`).
+- **Küfür:** Hayır.
+- **Açıklamada emoji:** Bolca, ama işlevli: madde numarası (1️⃣2️⃣3️⃣), 👇, 📌 kaydet, 🔜 sıradaki video, 🔔 takip, 🎯. Konuşma metninde emoji yok.
+- **Hashtag:** ig-caption skill'inin kuralı geçerli (3 hashtag). Havuz: #eticaret #babalargibieticaret #stoksuzeticaret #dropshipping #girişimcilik #ekgelir #sıfırdansatışa; içeriğe en uygun 3'ü seç.
+- **Yüz kamerada:** Evet, kameraya konuşma (talking head, dikey). Seri: "Babalar Gibi E-Ticaret #N".
+- **Seslendirme mi, kameraya mı:** Kameraya. Kesme az; hareketi grafikler veriyor (her 3-6 sn'de bir görsel olay: sahte yorum kartları, veri grafiği, 3D emoji). Altyazı sade/premium: beyaz, küçük harf düzeni, anahtar kelime kalın.
+- **Hız:** ~143 kelime/dk (reels-1 kayıtlarından ölçüldü; Türkçe kelimeler uzun olduğu için İngilizce ölçeklerden düşük görünür). `beats.py --wpm 143`
 
-## My positions
+## Savunduğum fikirler
 
-Three to five things I believe that some of my audience does not. These are
-where the good reels come from.
+Kitlenin bir kısmının katılmadığı, iyi reels'in çıktığı yerler (önceki içeriklerden çıkarıldı):
 
-1.
-2.
-3.
+1. E-ticarete başlamak için 500 bin – 1 milyon sermaye şart değil; geleneksel model ve klasik dropshipping yeni başlayana göre değil, yeni nesil (stoksuz, şirketsiz, tek panel) model daha uygun.
+2. "Dropshipping öldü", "e-ticaret bitti", "bu saatten sonra e-ticarete başlanmaz" söylemleri bilgi kirliliği; doğruyu işi yapanın ağzından öğrenmek gerekir.
+3. Her model herkese uymaz; kendi durumuna göre seçmelisin (tek doğru yol satmıyorum).
+4. Satış bir eğitim ve tecrübe işidir; insanlar duygularıyla satın alır (İlk Ağızdan, Kamer Değer bölümünden; konuğun görüşü olarak an).
 
-## Off limits
+## Yasak alanlar
 
-- **Topics I do not post about:**
-- **Clients, numbers or names I cannot say publicly:**
-- **Claims I am not allowed to make:** (regulated industry, employer policy, NDA)
+- **Paylaşmadığım konular:** Özel bir yasak yok (genel kurallar geçerli).
+- **Söyleyemeyeceğim isim:** Marka/firma adları (yukarıdaki "Marka adı" kuralı).
+- **Yapamayacağım iddialar:** Kazanç garantisi, "kesin satarsın", doğrulanmamış rakamlar. Başka kişilerin/kanalların sesi klonlanmaz (proje kuralı).
 
-## Proof I can use
+## Kullanabileceğim kanıtlar
 
-Real numbers, outcomes and stories I am happy to put my name on. The skills will
-never invent one, so if this section is empty, every draft comes back with
-`{{your number}}` in it.
+**Kişisel rakam yok** (satış, öğrenci, takipçi, kazanç). Taslaklarda `{{rakamın}}` yer tutucusu bırakma ve rakam uydurma;
+kişisel sonuç cümlesi kurma. Onun yerine:
 
--
--
--
+- Herkese açık, kaynağı gösterilebilen genel bilgi ve araştırmalar (kaynağıyla).
+- Modellerin karşılaştırması (sermaye ihtiyacı, yönetim yükü gibi niteliksel farklar).
+- Uzman görüşü: İlk Ağızdan röportaj serisindeki konukların söyledikleri, konuğun görüşü olarak ve kurum adı vermeden.
+- Etkinliklerin kendisi (şehir, tarih, ücretsiz/ücretli), marka adı vermeden.
 
-## The ask
+## Çağrı (CTA)
 
-- **My keyword CTA, if I use one:** (one word, sayable, no spaces)
-- **What the keyword sends them:**
-- **Where my link goes:**
+- **Anahtar kelime CTA'sı:** Kullanmıyorum; hatta kancada dalgasını geçtim ("Yoruma e-ticaret yazana hiçbir şey göndermiyorum").
+- **Standart kapanış:** "…babalar gibi öğrenmek istiyorsan beni takip etmeyi unutma." + "Bir dahaki videoda …" (seri köprüsü). Açıklamada: "📌 Videoyu kaydet, başlarken tekrar izle."
+- **Etkinlik reklamlarında:** "Yerini ayırtmak için mesaj at" (DM).
+- **Link:** linktr.ee/sifirdansatisa
+
+---
+
+## Diğer hesap: @eticaretteperdearkasi (ayrı ses)
+
+Bu dosya @sifirdansatisa içindir. Perde arkası hesabında kurallar farklı; o hesap için yazarken bunları uygula:
+
+- Format: Remotion ile kodla üretilen animasyon; Berkay'ın çizgi karakteri rehber olarak anlatır, ses klonu seslendirir (VO 1,18x).
+- İçerik: alışverişin/e-ticaretin perde arkası, değer veren bilgi, **satış yok**; uzun vadede Sıfırdan Satışa'ya trafik.
+- Kalıp: soruyla kanca ("Fiyatlar neden hep doksan dokuz doksan dokuz?", "Peki neden kara cuma?") → yaygın inanış → kaynaklı gerçek/araştırma → pratik sonuç → kapanış "Alışverişin perde arkası için (beni de) takip et."
+- Her rakamın doğrulanmış kaynağı olur (bkz. black-friday `senaryo/SENARYO.md`). Sayılar seslendirmede yazıyla.
