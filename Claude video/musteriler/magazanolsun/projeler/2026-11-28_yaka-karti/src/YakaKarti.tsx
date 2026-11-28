@@ -301,7 +301,7 @@ export const YakaKartiD3: React.FC<{ ad: string; unvan: string; foto: string }> 
 };
 
 // D3 v2 — açık zemin, fotoğraf ortada, isim altında, unvan + "Mağazanolsun Partner"; desen: halka | dalga | capraz
-export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; ek?: string; desen?: "halka" | "dalga" | "capraz" }> = ({ ad, unvan, foto, ek = "Mağazanolsun Partner", desen = "halka" }) => {
+export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; ek?: string; desen?: "halka" | "dalga" | "capraz" | "topo" | "zikzak" | "isin" }> = ({ ad, unvan, foto, ek = "Mağazanolsun Partner", desen = "halka" }) => {
   const W = 1252, H = 1724, D = 560, cx = W / 2, cy = 640;
   const cizgi = AH.zemin;
   return (
@@ -318,6 +318,25 @@ export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; 
         {desen === "capraz" ? (
           <g stroke={cizgi} strokeOpacity={0.06} strokeWidth={26}>
             {Array.from({ length: 22 }).map((_, i) => <line key={i} x1={-900 + i * 140} y1={H + 100} x2={-900 + i * 140 + 1900} y2={-100} />)}
+          </g>) : null}
+        {desen === "topo" ? (
+          <g fill="none" stroke={cizgi} strokeOpacity={0.07} strokeWidth={8}>
+            {Array.from({ length: 26 }).map((_, i) => {
+              const pts = Array.from({ length: 73 }).map((__, k) => { const a = (k / 72) * Math.PI * 2;
+                const r = 60 + i * 62 + 26 * Math.sin(3 * a + i * 0.35) + 16 * Math.sin(5 * a - i * 0.2);
+                return `${(160 + Math.cos(a) * r * 1.05).toFixed(1)},${(1350 + Math.sin(a) * r).toFixed(1)}`; });
+              return <polygon key={i} points={pts.join(" ")} />; })}
+          </g>) : null}
+        {desen === "zikzak" ? (
+          <g fill="none" stroke={cizgi} strokeOpacity={0.065} strokeWidth={12} strokeLinejoin="round" strokeLinecap="round">
+            {Array.from({ length: 22 }).map((_, i) => { const y = -60 + i * 84;
+              const d = Array.from({ length: 9 }).map((__, k) => `${k ? "L" : "M"}${-60 + k * 170},${y + (k % 2 ? 70 : 0)}`).join(" ");
+              return <path key={i} d={d} />; })}
+          </g>) : null}
+        {desen === "isin" ? (
+          <g stroke={cizgi} strokeOpacity={0.07} strokeWidth={10} strokeLinecap="round">
+            {Array.from({ length: 48 }).map((_, i) => { const a = (i / 48) * Math.PI * 2;
+              return <line key={i} x1={cx + Math.cos(a) * (D / 2 + 50)} y1={cy + Math.sin(a) * (D / 2 + 50)} x2={cx + Math.cos(a) * 1800} y2={cy + Math.sin(a) * 1800} />; })}
           </g>) : null}
         <circle cx={cx} cy={cy} r={D / 2 + 12} fill={AH.zemin} />
         <circle cx={cx} cy={cy} r={D / 2} fill={AH.halka} />
