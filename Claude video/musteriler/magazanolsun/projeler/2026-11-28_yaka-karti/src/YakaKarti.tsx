@@ -218,3 +218,84 @@ export const YakaKartiA4: React.FC<{ ad: string; unvan: string; foto: string }> 
     </AbsoluteFill>
   );
 };
+
+// ---- Basılı karttan esinli (koyu ahududu zemin + eş merkezli halkalar, sola dayalı beyaz isim, sağ altta logo) ----
+const AH = { zemin: "#9B1E4E", halka: "#B5406C", acik: "#F9EEF1", yazi: "#FFFFFF", soluk: "#F6C9D7" };
+const Halkalar: React.FC<{ cx: number; cy: number; renk: string; n?: number; adim?: number; r0?: number; kalin?: number; op?: number }> = ({ cx, cy, renk, n = 14, adim = 70, r0 = 60, kalin = 22, op = 0.55 }) => (
+  <g fill="none" stroke={renk} strokeWidth={kalin} strokeOpacity={op}>
+    {Array.from({ length: n }).map((_, i) => <circle key={i} cx={cx} cy={cy} r={r0 + i * adim} />)}
+  </g>
+);
+const Delik = () => null; // askı deliği matbaada delinir; üst orta (x 626, y 60–200) boş bırakıldı
+
+// D1 — halkalar fotoğraftan yayılır
+export const YakaKartiD1: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724, D = 560, cx = W / 2, cy = 640;
+  const [ilk, ...son] = ad.split(" ");
+  return (
+    <AbsoluteFill style={{ background: AH.zemin }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs><clipPath id="d1foto"><path d={`M${cx - D / 2},${cy} A${D / 2},${D / 2} 0 0 0 ${cx + D / 2},${cy} L${cx + D / 2},0 L${cx - D / 2},0 Z`} /></clipPath></defs>
+        <Halkalar cx={cx} cy={cy} renk={AH.halka} r0={D / 2 + 70} adim={92} n={11} kalin={26} op={0.32} />
+        <circle cx={cx} cy={cy} r={D / 2 + 14} fill="#ffffff" />
+        <circle cx={cx} cy={cy} r={D / 2} fill={AH.halka} />
+        <g clipPath="url(#d1foto)"><image href={staticFile(foto)} x={cx - D * 0.5625} y={cy - D / 2 - D * 0.156} width={D * 1.125} height={D * 1.32} preserveAspectRatio="xMidYMid meet" /></g>
+      </svg>
+      <div style={{ position: "absolute", top: cy + D / 2 + 110, left: 120, fontFamily: POP, color: AH.yazi, lineHeight: 1.02 }}>
+        <div style={{ fontWeight: 800, fontSize: 108 }}>{ilk}</div>
+        <div style={{ fontWeight: 800, fontSize: 108 }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 22, fontWeight: 600, fontSize: 44, color: AH.soluk }}>{unvan}</div>
+      </div>
+      <div style={{ position: "absolute", right: 110, bottom: 120 }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 400 }} /></div>
+    </AbsoluteFill>
+  );
+};
+
+// D2 — orijinal yerleşim: halkalar soldan, isim sol üstte, kişi sağ alttan yükselir
+export const YakaKartiD2: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724;
+  const [ilk, ...son] = ad.split(" ");
+  return (
+    <AbsoluteFill style={{ background: AH.zemin }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs><linearGradient id="d2sol" x1="0" y1="0" x2="0" y2="1"><stop offset="0.82" stopColor="#000" stopOpacity={0} /><stop offset="1" stopColor="#000" stopOpacity={0.25} /></linearGradient></defs>
+        <Halkalar cx={-40} cy={1040} renk={AH.halka} r0={80} adim={92} n={12} kalin={28} op={0.32} />
+        <image href={staticFile(foto)} x={400} y={800} width={940} height={1103} preserveAspectRatio="xMidYMid meet" />
+        <rect x={0} y={0} width={W} height={H} fill="url(#d2sol)" />
+      </svg>
+      <div style={{ position: "absolute", top: 300, left: 120, fontFamily: POP, color: AH.yazi, lineHeight: 1.02 }}>
+        <div style={{ fontWeight: 800, fontSize: 120 }}>{ilk}</div>
+        <div style={{ fontWeight: 800, fontSize: 120 }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 26, display: "inline-block", border: `4px solid ${AH.soluk}`, color: AH.soluk, fontWeight: 600, fontSize: 42, borderRadius: 999, padding: "8px 34px" }}>{unvan}</div>
+      </div>
+      <div style={{ position: "absolute", left: 120, bottom: 120 }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 380 }} /></div>
+    </AbsoluteFill>
+  );
+};
+
+// D3 — açık versiyon: krem zemin, ahududu halkalar, ahududu isim
+export const YakaKartiD3: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724, D = 520, cx = 820, cy = 1060;
+  const [ilk, ...son] = ad.split(" ");
+  return (
+    <AbsoluteFill style={{ background: AH.acik }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs><clipPath id="d3foto"><path d={`M${cx - D / 2},${cy} A${D / 2},${D / 2} 0 0 0 ${cx + D / 2},${cy} L${cx + D / 2},0 L${cx - D / 2},0 Z`} /></clipPath></defs>
+        <Halkalar cx={cx} cy={cy} renk={AH.zemin} r0={D / 2 + 60} adim={86} n={12} kalin={22} op={0.07} />
+        <circle cx={cx} cy={cy} r={D / 2 + 12} fill={AH.zemin} />
+        <circle cx={cx} cy={cy} r={D / 2} fill={AH.halka} />
+        <g clipPath="url(#d3foto)"><image href={staticFile(foto)} x={cx - D * 0.5625} y={cy - D / 2 - D * 0.156} width={D * 1.125} height={D * 1.32} preserveAspectRatio="xMidYMid meet" /></g>
+        <rect x={0} y={H - 150} width={W} height={150} fill={AH.zemin} />
+      </svg>
+      <div style={{ position: "absolute", top: 300, left: 120, fontFamily: POP, lineHeight: 1.02 }}>
+        <div style={{ fontWeight: 800, fontSize: 118, color: AH.zemin }}>{ilk}</div>
+        <div style={{ fontWeight: 800, fontSize: 118, color: "#2a1420" }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 22, fontWeight: 600, fontSize: 44, color: "#7a4a5c" }}>{unvan}</div>
+      </div>
+      <div style={{ position: "absolute", right: 110, bottom: 38 }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 330 }} /></div>
+    </AbsoluteFill>
+  );
+};
