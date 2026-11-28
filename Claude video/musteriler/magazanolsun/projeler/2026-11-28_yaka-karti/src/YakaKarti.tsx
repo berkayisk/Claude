@@ -55,3 +55,73 @@ export const YakaKarti: React.FC<{ ad: string; unvan: string; foto: string }> = 
     </AbsoluteFill>
   );
 };
+
+// B — Koyu, iddialı: tam degrade zemin, dev M filigranı, kemer çerçeve, sola dayalı iki satır isim
+export const YakaKartiB: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724;
+  const [ilk, ...son] = ad.split(" ");
+  const ax = 186, ay = 470, aw = 880, ah = 760; // kemer çerçeve
+  const kemer = `M${ax},${ay + ah} L${ax},${ay + aw / 2} A${aw / 2},${aw / 2} 0 0 1 ${ax + aw},${ay + aw / 2} L${ax + aw},${ay + ah} Z`;
+  return (
+    <AbsoluteFill style={{ background: `linear-gradient(160deg, ${R.mor} 0%, ${R.magenta} 55%, ${R.pembe} 100%)` }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id="bHalka" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={R.turkuaz} /><stop offset="1" stopColor={R.lila} /></linearGradient>
+          <clipPath id="bKemer"><rect x={ax} y={0} width={aw} height={ay + ah} /></clipPath>
+        </defs>
+        {/* dev M filigranı (logodaki M çizgisinden esinli, çizgi) */}
+        <path d="M120,1650 L120,980 C120,860 260,830 330,920 L626,1250 L922,920 C992,830 1132,860 1132,980 L1132,1650" fill="none" stroke="#ffffff" strokeOpacity={0.08} strokeWidth={120} strokeLinecap="round" strokeLinejoin="round" />
+        <path d={kemer} fill="#ffffff" fillOpacity={0.12} />
+        <path d={kemer} fill="none" stroke="url(#bHalka)" strokeWidth={14} transform="translate(-22,22)" />
+        <g clipPath="url(#bKemer)"><image href={staticFile(foto)} x={ax + aw / 2 - 470} y={ay - 150} width={940} height={1103} preserveAspectRatio="xMidYMid meet" /></g>
+        <rect x={ax} y={ay + ah} width={aw} height={6} fill="#ffffff" fillOpacity={0.5} />
+      </svg>
+      <div style={{ position: "absolute", top: 120, left: 120 }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 560 }} /></div>
+      <div style={{ position: "absolute", top: ay + ah + 70, left: ax, fontFamily: POP, color: "white", lineHeight: 0.98 }}>
+        <div style={{ fontWeight: 600, fontSize: 70, letterSpacing: 6, opacity: 0.92 }}>{ilk}</div>
+        <div style={{ fontWeight: 900, fontSize: 128, letterSpacing: 1 }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 26, display: "flex", alignItems: "center", gap: 18 }}>
+          <div style={{ width: 70, height: 8, borderRadius: 4, background: R.turkuaz }} />
+          <div style={{ fontWeight: 600, fontSize: 46, color: "#d9fbff" }}>{unvan}</div>
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// C — Ferah, oyunbaz: beyaz zemin, solda dikey renk şeridi + dikey logo, organik leke önünde kişi, renkli şekiller
+export const YakaKartiC: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724;
+  const [ilk, ...son] = ad.split(" ");
+  return (
+    <AbsoluteFill style={{ background: "#ffffff" }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs>
+          <linearGradient id="cSerit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={R.mor} /><stop offset="0.6" stopColor={R.magenta} /><stop offset="1" stopColor={R.pembe} /></linearGradient>
+          <linearGradient id="cLeke" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={R.pembe} /><stop offset="1" stopColor={R.magenta} /></linearGradient>
+          <clipPath id="cAlt"><rect x={0} y={0} width={W} height={1170} /></clipPath>
+        </defs>
+        <rect x={0} y={0} width={210} height={H} fill="url(#cSerit)" />
+        {/* organik leke */}
+        <path d="M720,330 C930,300 1150,430 1140,650 C1132,860 1010,1060 800,1120 C560,1190 330,1100 300,880 C270,660 420,370 720,330 Z" fill="url(#cLeke)" />
+        {/* oyunbaz şekiller */}
+        <circle cx={1110} cy={300} r={58} fill={R.turkuaz} />
+        <circle cx={330} cy={430} r={26} fill={R.lila} />
+        <rect x={1060} y={1030} width={90} height={90} rx={20} fill={R.lila} transform="rotate(18 1105 1075)" />
+        <path d="M300,1110 l40,-70 l40,70 Z" fill={R.turkuaz} />
+        {Array.from({ length: 16 }).map((_, i) => <circle key={i} cx={980 + (i % 4) * 34} cy={470 + Math.floor(i / 4) * 34} r={7} fill="#ffffff" fillOpacity={0.7} />)}
+        <g clipPath="url(#cAlt)"><image href={staticFile(foto)} x={300} y={270} width={840} height={986} preserveAspectRatio="xMidYMid meet" /></g>
+        <rect x={300} y={1166} width={850} height={8} rx={4} fill={R.metin} />
+      </svg>
+      {/* dikey logo */}
+      <div style={{ position: "absolute", left: 105, top: H / 2, transform: "translate(-50%,-50%) rotate(-90deg)", transformOrigin: "50% 50%" }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 1100 }} /></div>
+      <div style={{ position: "absolute", top: 1230, left: 300, right: 90, fontFamily: POP, lineHeight: 0.95 }}>
+        <div style={{ fontWeight: 900, fontSize: 132, color: R.magenta }}>{ilk}</div>
+        <div style={{ fontWeight: 900, fontSize: 132, color: R.metin }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 26, fontWeight: 600, fontSize: 48, color: "#5b5370", letterSpacing: 1 }}>{unvan} <span style={{ color: R.turkuaz }}>●</span></div>
+      </div>
+    </AbsoluteFill>
+  );
+};
