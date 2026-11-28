@@ -19,5 +19,8 @@ export const RemotionRoot: React.FC = () => (
     <Still id="YakaKartiD3Topo" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "topo" as const }} />
     <Still id="YakaKartiD3Zikzak" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "zikzak" as const }} />
     <Still id="YakaKartiD3Isin" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "isin" as const }} />
+    <Still id="YakaKartiD3MSag" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "m" as const, mKonum: "sag" as const }} />
+    <Still id="YakaKartiD3MSol" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "m" as const, mKonum: "sol" as const }} />
+    <Still id="YakaKartiD3MAlt" component={YakaKartiD3v2} width={1252} height={1724} defaultProps={{ ad: "ONUR ALTUNAY", unvan: "E-ticaret Danışmanı", foto: "kisi_dekupe.png", ek: "Mağazanolsun Partner", desen: "m" as const, mKonum: "alt" as const }} />
   </>
 );

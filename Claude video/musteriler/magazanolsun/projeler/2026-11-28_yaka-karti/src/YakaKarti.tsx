@@ -301,7 +301,7 @@ export const YakaKartiD3: React.FC<{ ad: string; unvan: string; foto: string }> 
 };
 
 // D3 v2 — açık zemin, fotoğraf ortada, isim altında, unvan + "Mağazanolsun Partner"; desen: halka | dalga | capraz
-export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; ek?: string; desen?: "halka" | "dalga" | "capraz" | "topo" | "zikzak" | "isin" }> = ({ ad, unvan, foto, ek = "Mağazanolsun Partner", desen = "halka" }) => {
+export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; ek?: string; desen?: "halka" | "dalga" | "capraz" | "topo" | "zikzak" | "isin" | "m"; mKonum?: "sag" | "sol" | "alt"; mOp?: number }> = ({ ad, unvan, foto, ek = "Mağazanolsun Partner", desen = "halka", mKonum = "sag", mOp = 0.07 }) => {
   const W = 1252, H = 1724, D = 560, cx = W / 2, cy = 640;
   const cizgi = AH.zemin;
   return (
@@ -319,6 +319,11 @@ export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; 
           <g stroke={cizgi} strokeOpacity={0.06} strokeWidth={26}>
             {Array.from({ length: 22 }).map((_, i) => <line key={i} x1={-900 + i * 140} y1={H + 100} x2={-900 + i * 140 + 1900} y2={-100} />)}
           </g>) : null}
+        {desen === "m" ? (() => {
+          // logodaki M (girdiler/m_harf.png, 1728x1740); dörtte biri kartın dışında
+          const k = { sag: { w: 1500, x: W - 1125, y: 120 }, sol: { w: 1500, x: -375, y: 120 }, alt: { w: 1250, x: 1, y: H - 944 } }[mKonum];
+          return <image href={staticFile("m_harf.png")} x={k.x} y={k.y} width={k.w} height={k.w * 1740 / 1728} opacity={mOp} />;
+        })() : null}
         {desen === "topo" ? (
           <g fill="none" stroke={cizgi} strokeOpacity={0.07} strokeWidth={8}>
             {Array.from({ length: 26 }).map((_, i) => {
