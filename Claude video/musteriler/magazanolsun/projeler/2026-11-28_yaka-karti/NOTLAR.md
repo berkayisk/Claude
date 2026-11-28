@@ -7,3 +7,4 @@
 - 3 seçenek: A sade (beyaz + dalgalı bantlar), B koyu/iddialı (tam degrade, M filigranı, kemer çerçeve), C ferah/oyunbaz (dikey şerit + dikey logo, organik leke). Still: YakaKarti, YakaKartiB, YakaKartiC. Karşılaştırma: ciktilar/yaka_karti_secenekler.png
 - B ve C beğenilmedi ("rezalet"). A dili korunarak yerleşim seçenekleri: A2 asimetrik, A3 fotoğraf üst banda biner + logo altta, A4 isim üstte + fotoğraf alt banttan yükselir. Karşılaştırma: ciktilar/yaka_karti_A_yerlesimler.png
 - Basılı karttan (referanslar/yaka_karti_basili_emel.jpg: koyu ahududu + eş merkezli halkalar, sol isim, sağ alt logo) esinli D1/D2/D3. Halka opaklığı düşük tutuldu (orijinal gibi sakin).
+- D3 v2 (kullanıcı): fotoğraf ortada, isim altında, unvan + "Mağazanolsun Partner" hapı, halkalar daha saydam (op 0.045). Desen seçenekleri: halka / dalga / çapraz (Still YakaKartiD3Halka|Dalga|Capraz, prop desen).

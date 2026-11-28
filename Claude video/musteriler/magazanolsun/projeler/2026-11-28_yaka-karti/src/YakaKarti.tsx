@@ -299,3 +299,37 @@ export const YakaKartiD3: React.FC<{ ad: string; unvan: string; foto: string }> 
     </AbsoluteFill>
   );
 };
+
+// D3 v2 — açık zemin, fotoğraf ortada, isim altında, unvan + "Mağazanolsun Partner"; desen: halka | dalga | capraz
+export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; ek?: string; desen?: "halka" | "dalga" | "capraz" }> = ({ ad, unvan, foto, ek = "Mağazanolsun Partner", desen = "halka" }) => {
+  const W = 1252, H = 1724, D = 560, cx = W / 2, cy = 640;
+  const cizgi = AH.zemin;
+  return (
+    <AbsoluteFill style={{ background: AH.acik }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <defs><clipPath id={`d3v2${desen}`}><path d={`M${cx - D / 2},${cy} A${D / 2},${D / 2} 0 0 0 ${cx + D / 2},${cy} L${cx + D / 2},0 L${cx - D / 2},0 Z`} /></clipPath></defs>
+        {desen === "halka" ? <Halkalar cx={cx} cy={cy} renk={cizgi} r0={D / 2 + 60} adim={86} n={13} kalin={20} op={0.045} /> : null}
+        {desen === "dalga" ? (
+          <g fill="none" stroke={cizgi} strokeOpacity={0.07} strokeWidth={10}>
+            {Array.from({ length: 30 }).map((_, i) => { const y = -120 + i * 66;
+              return <path key={i} d={`M-50,${y} C200,${y - 90} 420,${y + 110} 640,${y} S1060,${y - 100} 1320,${y + 20}`} />; })}
+          </g>) : null}
+        {desen === "capraz" ? (
+          <g stroke={cizgi} strokeOpacity={0.06} strokeWidth={26}>
+            {Array.from({ length: 22 }).map((_, i) => <line key={i} x1={-900 + i * 140} y1={H + 100} x2={-900 + i * 140 + 1900} y2={-100} />)}
+          </g>) : null}
+        <circle cx={cx} cy={cy} r={D / 2 + 12} fill={AH.zemin} />
+        <circle cx={cx} cy={cy} r={D / 2} fill={AH.halka} />
+        <g clipPath={`url(#d3v2${desen})`}><image href={staticFile(foto)} x={cx - D * 0.5625} y={cy - D / 2 - D * 0.156} width={D * 1.125} height={D * 1.32} preserveAspectRatio="xMidYMid meet" /></g>
+        <rect x={0} y={H - 150} width={W} height={150} fill={AH.zemin} />
+      </svg>
+      <div style={{ position: "absolute", top: cy + D / 2 + 70, width: W, textAlign: "center", fontFamily: POP }}>
+        <div style={{ fontWeight: 800, fontSize: 104, lineHeight: 1, letterSpacing: 1 }}><span style={{ color: AH.zemin }}>{ad.split(" ")[0]}</span> <span style={{ color: "#2a1420" }}>{ad.split(" ").slice(1).join(" ")}</span></div>
+        <div style={{ marginTop: 26, fontWeight: 600, fontSize: 46, color: "#7a4a5c" }}>{unvan}</div>
+        <div style={{ marginTop: 22, display: "inline-block", background: AH.zemin, color: "white", fontWeight: 700, fontSize: 40, borderRadius: 999, padding: "10px 38px", letterSpacing: 1 }}>{ek}</div>
+      </div>
+      <div style={{ position: "absolute", width: W, bottom: 38, display: "flex", justifyContent: "center" }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 330 }} /></div>
+    </AbsoluteFill>
+  );
+};
