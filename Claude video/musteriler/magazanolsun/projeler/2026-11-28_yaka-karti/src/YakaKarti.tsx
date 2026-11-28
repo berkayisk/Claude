@@ -125,3 +125,96 @@ export const YakaKartiC: React.FC<{ ad: string; unvan: string; foto: string }> =
     </AbsoluteFill>
   );
 };
+
+// ---- A'nın görsel dili, farklı yerleşimler ----
+const Tanimlar: React.FC<{ p: string; cx: number; cy: number; D: number }> = ({ p, cx, cy, D }) => (
+  <defs>
+    <linearGradient id={`${p}bant`} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={R.mor} /><stop offset="0.55" stopColor={R.magenta} /><stop offset="1" stopColor={R.pembe} /></linearGradient>
+    <linearGradient id={`${p}halka`} x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor={R.turkuaz} /><stop offset="0.5" stopColor={R.lila} /><stop offset="1" stopColor={R.magenta} /></linearGradient>
+    <radialGradient id={`${p}daire`} cx="0.5" cy="0.35" r="0.75"><stop offset="0" stopColor={R.pembe} /><stop offset="1" stopColor={R.koyu} /></radialGradient>
+    <clipPath id={`${p}foto`}><path d={`M${cx - D / 2},${cy} A${D / 2},${D / 2} 0 0 0 ${cx + D / 2},${cy} L${cx + D / 2},0 L${cx - D / 2},0 Z`} /></clipPath>
+  </defs>
+);
+const FotoDaire: React.FC<{ p: string; cx: number; cy: number; D: number; foto: string; halkaBeyaz?: boolean }> = ({ p, cx, cy, D, foto, halkaBeyaz }) => (
+  <>
+    <circle cx={cx} cy={cy} r={D / 2 + 22} fill={`url(#${p}halka)`} />
+    <circle cx={cx} cy={cy} r={D / 2 + 8} fill="#ffffff" />
+    <circle cx={cx} cy={cy} r={D / 2} fill={`url(#${p}daire)`} />
+    <g clipPath={`url(#${p}foto)`}><image href={staticFile(foto)} x={cx - D * 0.5625} y={cy - D / 2 - D * 0.156} width={D * 1.125} height={D * 1.32} preserveAspectRatio="xMidYMid meet" /></g>
+    {halkaBeyaz ? null : null}
+  </>
+);
+const Hap: React.FC<{ unvan: string; boy?: number }> = ({ unvan, boy = 46 }) => (
+  <div style={{ display: "inline-block", background: R.magenta, color: "white", fontFamily: POP, fontWeight: 600, fontSize: boy, borderRadius: 999, padding: "12px 44px", letterSpacing: 1 }}>{unvan}</div>
+);
+
+// A2 — asimetrik: fotoğraf sağda üst banda biner, logo sol üstte, isim sola dayalı
+export const YakaKartiA2: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724, D = 600, cx = 800, cy = 700;
+  const [ilk, ...son] = ad.split(" ");
+  return (
+    <AbsoluteFill style={{ background: "#ffffff" }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <Tanimlar p="a2" cx={cx} cy={cy} D={D} />
+        <path d={`M0,0 L${W},0 L${W},360 C${W * 0.75},430 ${W * 0.35},620 0,600 Z`} fill="url(#a2bant)" />
+        <circle cx={1130} cy={1090} r={52} fill={R.turkuaz} fillOpacity={0.9} />
+        <circle cx={1035} cy={1165} r={20} fill={R.lila} />
+        <FotoDaire p="a2" cx={cx} cy={cy} D={D} foto={foto} />
+        <path d={`M0,${H} L${W},${H} L${W},${H - 230} C${W * 0.6},${H - 120} ${W * 0.3},${H - 70} 0,${H - 140} Z`} fill="url(#a2bant)" />
+      </svg>
+      <div style={{ position: "absolute", top: 120, left: 90 }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 600 }} /></div>
+      <div style={{ position: "absolute", top: 1110, left: 110, fontFamily: POP, lineHeight: 1 }}>
+        <div style={{ fontWeight: 600, fontSize: 70, color: R.magenta, letterSpacing: 6 }}>{ilk}</div>
+        <div style={{ fontWeight: 900, fontSize: 124, color: R.metin }}>{son.join(" ")}</div>
+        <div style={{ marginTop: 30 }}><Hap unvan={unvan} /></div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// A3 — fotoğraf üst banda biner (kafa bandın içinde), isim ortada, logo alt bantta
+export const YakaKartiA3: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724, D = 660, cx = W / 2, cy = 600;
+  return (
+    <AbsoluteFill style={{ background: "#ffffff" }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <Tanimlar p="a3" cx={cx} cy={cy} D={D} />
+        <path d={`M0,0 L${W},0 L${W},560 C${W * 0.7},640 ${W * 0.3},480 0,580 Z`} fill="url(#a3bant)" />
+        <circle cx={W - 110} cy={120} r={170} fill="none" stroke="#fff" strokeOpacity={0.12} strokeWidth={32} />
+        <circle cx={90} cy={150} r={90} fill="#fff" fillOpacity={0.07} />
+        <FotoDaire p="a3" cx={cx} cy={cy} D={D} foto={foto} />
+        <path d={`M0,${H} L${W},${H} L${W},${H - 330} C${W * 0.7},${H - 250} ${W * 0.3},${H - 400} 0,${H - 300} Z`} fill="url(#a3bant)" />
+      </svg>
+      <div style={{ position: "absolute", top: cy + D / 2 + 60, width: W, textAlign: "center" }}>
+        <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 100, color: R.metin, letterSpacing: 2, lineHeight: 1 }}>{ad}</div>
+        <div style={{ marginTop: 28 }}><Hap unvan={unvan} /></div>
+      </div>
+      <div style={{ position: "absolute", bottom: 120, width: W, display: "flex", justifyContent: "center" }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 640 }} /></div>
+    </AbsoluteFill>
+  );
+};
+
+// A4 — logo + isim üstte, fotoğraf alt banda gömülü (kişi banttan yükselir)
+export const YakaKartiA4: React.FC<{ ad: string; unvan: string; foto: string }> = ({ ad, unvan, foto }) => {
+  const W = 1252, H = 1724, D = 730, cx = W / 2, cy = 1265;
+  return (
+    <AbsoluteFill style={{ background: "#ffffff" }}>
+      <Font />
+      <svg width={W} height={H} style={{ position: "absolute" }}>
+        <Tanimlar p="a4" cx={cx} cy={cy} D={D} />
+        <path d={`M0,0 L${W},0 L${W},330 C${W * 0.7},400 ${W * 0.3},280 0,360 Z`} fill="url(#a4bant)" />
+        <path d={`M0,${H} L${W},${H} L${W},${H - 560} C${W * 0.72},${H - 470} ${W * 0.3},${H - 640} 0,${H - 520} Z`} fill="url(#a4bant)" />
+        <circle cx={150} cy={H - 190} r={110} fill="#fff" fillOpacity={0.08} />
+        <circle cx={W - 120} cy={H - 120} r={60} fill={R.turkuaz} fillOpacity={0.85} />
+        <FotoDaire p="a4" cx={cx} cy={cy} D={D} foto={foto} />
+      </svg>
+      <div style={{ position: "absolute", top: 105, width: W, display: "flex", justifyContent: "center" }}><Img src={staticFile("logo_beyaz.png")} style={{ width: 700 }} /></div>
+      <div style={{ position: "absolute", top: 430, width: W, textAlign: "center" }}>
+        <div style={{ fontFamily: POP, fontWeight: 900, fontSize: 104, color: R.metin, letterSpacing: 2, lineHeight: 1 }}>{ad}</div>
+        <div style={{ marginTop: 28 }}><Hap unvan={unvan} /></div>
+      </div>
+    </AbsoluteFill>
+  );
+};
