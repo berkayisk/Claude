@@ -321,7 +321,7 @@ export const YakaKartiD3v2: React.FC<{ ad: string; unvan: string; foto: string; 
           </g>) : null}
         {desen === "m" ? (() => {
           // logodaki M (girdiler/m_harf.png, 1728x1740); dörtte biri kartın dışında
-          const k = { sag: { w: 1500, x: W - 1125, y: 120 }, sol: { w: 1500, x: -375, y: 120 }, alt: { w: 1250, x: 1, y: H - 944 } }[mKonum];
+          const k = { sag: { w: 1500, x: W - 1125, y: 120 }, sol: { w: 1500, x: -300, y: 120 }, alt: { w: 1250, x: 1, y: H - 944 } }[mKonum];
           return <image href={staticFile("m_harf.png")} x={k.x} y={k.y} width={k.w} height={k.w * 1740 / 1728} opacity={mOp} />;
         })() : null}
         {desen === "topo" ? (

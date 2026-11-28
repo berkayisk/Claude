@@ -10,3 +10,4 @@
 - D3 v2 (kullanıcı): fotoğraf ortada, isim altında, unvan + "Mağazanolsun Partner" hapı, halkalar daha saydam (op 0.045). Desen seçenekleri: halka / dalga / çapraz (Still YakaKartiD3Halka|Dalga|Capraz, prop desen).
 - D3 ek desenler: topo (kontur), zikzak (M esinli), isin (fotoğraftan yayılan). Karşılaştırma: ciktilar/yaka_karti_D3_desenler2.png
 - D3 + dev saydam M (logodaki M, girdiler/m_harf.png: ikon karesindeki boşluk taşkın dolgu ile ayrıştırıldı, 4x büyütülüp pürüzsüzleştirildi). Dörtte biri dışarıda: sağ / sol / alt (prop mKonum, mOp=0.07).
+- SEÇİLEN: D3 + soldan taşan M, taşma 1/5 (x=-300, genişlik 1500). Final: ciktilar/yaka_karti_onur_altunay_final.png + _baski.pdf. Still: YakaKartiD3MSol
