@@ -11,3 +11,4 @@
 - D3 ek desenler: topo (kontur), zikzak (M esinli), isin (fotoğraftan yayılan). Karşılaştırma: ciktilar/yaka_karti_D3_desenler2.png
 - D3 + dev saydam M (logodaki M, girdiler/m_harf.png: ikon karesindeki boşluk taşkın dolgu ile ayrıştırıldı, 4x büyütülüp pürüzsüzleştirildi). Dörtte biri dışarıda: sağ / sol / alt (prop mKonum, mOp=0.07).
 - SEÇİLEN: D3 + soldan taşan M, taşma 1/4 (x=-375, genişlik 1500; 1/5 denendi, 1/4 daha iyi bulundu). Final: ciktilar/yaka_karti_onur_altunay_final.png + _baski.pdf. Still: YakaKartiD3MSol
+- Berkay Işık kartı: referanslar/berkay_isik_foto.jpg (2. foto) → toz temizliği (medyan; koyu alanlarda ek geçiş), kontrast %6, renk %5, hafif keskinlik, BiRefNet dekupe; kadraj Onur ile aynı oran, alt kenar daire tabanına yetecek (Hc=2776). Unvan şimdilik Onur ile aynı (onay bekliyor).
