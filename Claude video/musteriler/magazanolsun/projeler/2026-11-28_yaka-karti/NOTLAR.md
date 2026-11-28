@@ -1,0 +1,6 @@
+# Mağazanolsun yaka kartı (2026-11-28)
+- Referans: referanslar/yaka_karti_eski.jpg (Onur Altunay, E-ticaret Danışmanı). İstek: daha profesyonel, net, sade, canlı.
+- Ölçü: 100x140 mm + 3 mm taşma payı → 1252x1724 px @300 dpi (106x146 mm). Kesim çizgisi kenardan 3 mm içeride.
+- Logo: referanstan beyaz kısımlar ayrıştırıldı (girdiler/logo_beyaz.png). Baskı için firmadan vektör logo (SVG/PDF) istenmeli.
+- Fotoğraf: BiRefNet ile dekupe (girdiler/kisi_dekupe.png); alt yarı daireye kırpılır, baş dairenin üstüne taşar.
+- Yeni kişi: `npx remotion still src/index.ts YakaKarti ciktilar/<ad>.png --public-dir <abs>/girdiler --props='{"ad":"…","unvan":"…","foto":"…png"}'`
